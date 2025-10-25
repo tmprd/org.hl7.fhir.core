@@ -37,7 +37,7 @@
   fhir:gender [ fhir:v "male"] ; # 
   fhir:birthDate [ fhir:v "1982-01-23"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2015-02-14T13:42:00+10:00"^^xsd:dateTime
   ] ; # 
   fhir:managingOrganization [

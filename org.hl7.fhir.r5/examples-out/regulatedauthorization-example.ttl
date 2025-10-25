@@ -73,7 +73,7 @@
          ] )
        ] ;
        fhir:date [
-         a fhir:dateTime ;
+         a fhir:DateTime ;
          fhir:v "2015-08-01"^^xsd:date
        ]
      ] [
@@ -88,7 +88,7 @@
          ] )
        ] ;
        fhir:date [
-         a fhir:dateTime ;
+         a fhir:DateTime ;
          fhir:v "2014-09-01"^^xsd:date
        ]
      ] )

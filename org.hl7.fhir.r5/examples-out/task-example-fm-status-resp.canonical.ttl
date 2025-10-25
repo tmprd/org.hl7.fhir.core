@@ -58,7 +58,7 @@
        ] )
      ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "complete"
      ]
   ] ) . # 

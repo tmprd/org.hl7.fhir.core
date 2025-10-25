@@ -62,7 +62,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "cds"
      ]
   ] ) ; # 

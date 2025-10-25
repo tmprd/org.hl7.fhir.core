@@ -72,7 +72,7 @@
        ] )
      ] ;
      fhir:timing [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2012-04-07"^^xsd:date
      ] ;
      fhir:reason [
@@ -96,7 +96,7 @@
        ] )
      ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "Happy Valley Community College"
      ]
   ] ) ; # 
@@ -127,7 +127,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:unitPrice [
@@ -148,7 +148,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:unitPrice [
@@ -185,7 +185,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:unitPrice [

@@ -43,12 +43,12 @@
      ] )
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://hl7.org/fhir/ValueSet/address-type"^^xsd:anyURI ;
      fhir:link <http://hl7.org/fhir/ValueSet/address-type>
   ] ; # 
   fhir:targetScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://terminology.hl7.org/ValueSet/v3-AddressUse"^^xsd:anyURI ;
      fhir:link <http://terminology.hl7.org/ValueSet/v3-AddressUse>
   ] ; # 

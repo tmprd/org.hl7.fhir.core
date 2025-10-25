@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -44,7 +44,7 @@
      fhir:type [ fhir:v "string" ]
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://snomed.info/sct?fhir_vs"^^xsd:anyURI
   ] ; # 
   fhir:group ( [
@@ -64,13 +64,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "priority" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "1"
            ]
          ] [
            fhir:code [ fhir:v "mapAdvice" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ADDITIONAL CODE POSSIBLE"
            ]
          ] )
@@ -80,13 +80,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "priority" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "3"
            ]
          ] [
            fhir:code [ fhir:v "mapAdvice" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ADDITIONAL CODE POSSIBLE"
            ]
          ] )
@@ -96,13 +96,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "priority" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "2"
            ]
          ] [
            fhir:code [ fhir:v "mapAdvice" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ADDITIONAL CODE POSSIBLE"
            ]
          ] )

@@ -109,7 +109,7 @@
        ] )
      ] ;
      fhir:timing [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2001-04-07"^^xsd:date
      ]
   ] ) ; # 
@@ -141,7 +141,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:location [
@@ -183,7 +183,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:location [
@@ -228,7 +228,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:location [

@@ -68,7 +68,7 @@
        ] ) #   authorization reference  
      ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "BR12345"
      ]
   ] [
@@ -79,7 +79,7 @@
        ] ) #   line item sequence number to reprocess  
      ] ;
      fhir:value [
-       a fhir:positiveInt ;
+       a fhir:PositiveInt ;
        fhir:v "2"^^xsd:positiveInteger
      ]
   ] [
@@ -90,7 +90,7 @@
        ] ) #   line item sequence number to reprocess  
      ] ;
      fhir:value [
-       a fhir:positiveInt ;
+       a fhir:PositiveInt ;
        fhir:v "3"^^xsd:positiveInteger
      ]
   ] ) . # 

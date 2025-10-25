@@ -30,7 +30,7 @@
      fhir:display [ fhir:v "P. van de Heuvel" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2015-02-19T09:30:35+01:00"^^xsd:dateTime
   ] ; # 
   fhir:performer ( [

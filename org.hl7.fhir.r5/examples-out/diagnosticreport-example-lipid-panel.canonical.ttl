@@ -44,7 +44,7 @@
        fhir:reference [ fhir:v "Patient/pat2" ]
      ] ;
      fhir:effective [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2011-03-04T08:30:00+11:00"^^xsd:dateTime
      ] ;
      fhir:performer ( [
@@ -103,7 +103,7 @@
        fhir:reference [ fhir:v "Patient/pat2" ]
      ] ;
      fhir:effective [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2011-03-04T08:30:00+11:00"^^xsd:dateTime
      ] ;
      fhir:performer ( [
@@ -159,7 +159,7 @@
        fhir:reference [ fhir:v "Patient/pat2" ]
      ] ;
      fhir:effective [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2011-03-04T08:30:00+11:00"^^xsd:dateTime
      ] ;
      fhir:performer ( [
@@ -215,7 +215,7 @@
        fhir:reference [ fhir:v "Patient/pat2" ]
      ] ;
      fhir:effective [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2011-03-04T08:30:00+11:00"^^xsd:dateTime
      ] ;
      fhir:performer ( [
@@ -274,7 +274,7 @@
      fhir:display [ fhir:v "Wile E. Coyote" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2011-03-04T08:30:00+11:00"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2013-01-27T11:45:33+11:00"^^xsd:dateTime] ; # 

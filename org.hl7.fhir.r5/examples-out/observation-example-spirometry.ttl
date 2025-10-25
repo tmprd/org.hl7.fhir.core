@@ -38,7 +38,7 @@
      fhir:reference [ fhir:v "Patient/PatientId-patientId" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2017-05-03T15:54:26-04:00"^^xsd:dateTime
   ] ; # 
   fhir:performer ( [

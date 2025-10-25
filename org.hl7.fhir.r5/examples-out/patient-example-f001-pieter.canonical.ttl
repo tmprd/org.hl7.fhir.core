@@ -36,7 +36,7 @@
   fhir:gender [ fhir:v "male"] ; # 
   fhir:birthDate [ fhir:v "1944-11-17"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] ; # 
   fhir:address ( [
@@ -55,7 +55,7 @@
      fhir:text [ fhir:v "Getrouwd" ]
   ] ; # 
   fhir:multipleBirth [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v true
   ] ; # 
   fhir:contact ( [

@@ -56,7 +56,7 @@
        fhir:reference [ fhir:v "Practitioner/example" ] #   in practice, collecter is almost always recorded  
      ] ;
      fhir:collected [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2011-05-30T06:15:00Z"^^xsd:dateTime
      ] ; #   the time of collection is usually required. Usually a point in time, but can be a period\n      (collectedPeriod) if it's a timed collection (e.g. a 24 hour urine)  
      fhir:quantity [

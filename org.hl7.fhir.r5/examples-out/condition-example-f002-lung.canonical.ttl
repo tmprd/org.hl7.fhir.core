@@ -64,7 +64,7 @@
      fhir:reference [ fhir:v "Encounter/f002" ]
   ] ; # 
   fhir:onset [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2011-05-05"^^xsd:date
   ] ; # 
   fhir:recordedDate [ fhir:v "2012-06-03"^^xsd:date] ; # 

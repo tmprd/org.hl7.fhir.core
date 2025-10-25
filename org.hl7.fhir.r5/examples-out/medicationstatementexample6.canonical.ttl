@@ -27,7 +27,7 @@
      fhir:display [ fhir:v "Donald Duck" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2014-02-01"^^xsd:date
   ] ; # 
   fhir:dateAsserted [ fhir:v "2014-02-22"^^xsd:date] ; # 

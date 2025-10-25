@@ -42,7 +42,7 @@
   ] ; # 
   fhir:source [
      fhir:endpoint [
-       a fhir:url ;
+       a fhir:Url ;
        fhir:v "http://acme.com/ehr/fhir"^^xsd:anyURI
      ]
   ] ; # 

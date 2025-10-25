@@ -28,7 +28,7 @@
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2008-06-17"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2008-06-18T09:23:00+10:00"^^xsd:dateTime] ; # 

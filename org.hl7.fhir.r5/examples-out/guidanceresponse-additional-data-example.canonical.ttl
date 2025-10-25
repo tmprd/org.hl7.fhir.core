@@ -19,7 +19,7 @@
      fhir:value [ fhir:v "guidanceResponse2" ]
   ] ) ; # 
   fhir:module [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://someguidelineprovider.org/diabetes-guidelines.html"^^xsd:anyURI
   ] ; # 
   fhir:status [ fhir:v "data-required"] ; # 

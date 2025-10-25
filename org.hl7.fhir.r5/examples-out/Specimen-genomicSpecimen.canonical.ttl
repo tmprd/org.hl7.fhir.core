@@ -43,7 +43,7 @@
        fhir:reference [ fhir:v "Practitioner/practitioner01" ]
      ] ;
      fhir:collected [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2019-03-01T01:01:00Z"^^xsd:dateTime
      ] ;
      fhir:quantity [

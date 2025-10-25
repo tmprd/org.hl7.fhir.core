@@ -54,7 +54,7 @@
      ] ;
      fhir:policy ( [ fhir:v "http://consent.com/yes"^^xsd:anyURI ] ) ;
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "custodian.net"
      ]
   ] [
@@ -72,7 +72,7 @@
      ] ;
      fhir:requestor [ fhir:v false ] ;
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "marketing.land"
      ] ;
      fhir:authorization ( [

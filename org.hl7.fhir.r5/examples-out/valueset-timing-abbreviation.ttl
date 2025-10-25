@@ -23,7 +23,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] ) ; # 
@@ -71,7 +71,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Two times a day at institution specified time"
            ]
          ] ) ;
@@ -81,7 +81,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Three times a day at institution specified time"
            ]
          ] ) ;
@@ -91,7 +91,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Four times a day at institution specified time"
            ]
          ] ) ;
@@ -101,7 +101,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every morning at institution specified times"
            ]
          ] ) ;
@@ -111,7 +111,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every afternoon at institution specified times"
            ]
          ] ) ;
@@ -121,7 +121,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every Day at institution specified times"
            ]
          ] ) ;
@@ -131,7 +131,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every Other Day at institution specified times"
            ]
          ] ) ;
@@ -141,7 +141,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every hour at institution specified times"
            ]
          ] ) ;
@@ -151,7 +151,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every 2 hours at institution specified times"
            ]
          ] ) ;
@@ -161,7 +161,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every 3 hours at institution specified times"
            ]
          ] ) ;
@@ -171,7 +171,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every 4 hours at institution specified times"
            ]
          ] ) ;
@@ -181,7 +181,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every 6 Hours  at institution specified times"
            ]
          ] ) ;
@@ -191,7 +191,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Every 8 hours at institution specified times"
            ]
          ] ) ;
@@ -201,7 +201,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "At bedtime (institution specified time)"
            ]
          ] ) ;
@@ -211,7 +211,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Weekly at institution specified time"
            ]
          ] ) ;
@@ -221,7 +221,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Monthly at institution specified time"
            ]
          ] ) ;

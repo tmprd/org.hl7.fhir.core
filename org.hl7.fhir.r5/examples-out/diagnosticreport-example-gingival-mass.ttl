@@ -37,7 +37,7 @@
      fhir:display [ fhir:v "Max Jones" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2017-03-02"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2017-03-15T08:13:08Z"^^xsd:dateTime] ; # 

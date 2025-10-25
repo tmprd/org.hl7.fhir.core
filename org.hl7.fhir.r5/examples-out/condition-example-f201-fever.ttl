@@ -70,11 +70,11 @@
      fhir:reference [ fhir:v "Encounter/f201" ]
   ] ; # 
   fhir:onset [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2013-04-02"^^xsd:date
   ] ; # 
   fhir:abatement [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "around April 9, 2013"
   ] ; # 
   fhir:recordedDate [ fhir:v "2013-04-04"^^xsd:date] ; # 

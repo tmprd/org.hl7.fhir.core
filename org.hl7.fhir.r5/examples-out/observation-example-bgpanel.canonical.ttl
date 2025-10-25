@@ -33,7 +33,7 @@
      fhir:reference [ fhir:v "Patient/infant" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2018-03-11T16:07:54+00:00"^^xsd:dateTime
   ] ; # 
   fhir:hasMember ( [

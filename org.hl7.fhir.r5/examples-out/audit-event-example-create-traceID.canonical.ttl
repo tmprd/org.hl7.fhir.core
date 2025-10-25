@@ -58,7 +58,7 @@
      ] ;
      fhir:requestor [ fhir:v false ] ;
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "Workstation1.ehr.familyclinic.com"
      ]
   ] ) ; # 

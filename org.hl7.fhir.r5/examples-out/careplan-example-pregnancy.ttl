@@ -204,7 +204,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://example.org/fhir/StructureDefinition/careplan#lmp"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2013-01-01"^^xsd:date
      ]
   ] ) ; #   an extension to record the LMP, which is required at the plan level...  
@@ -239,7 +239,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://example.org/fhir/StructureDefinition/careplan#andetails"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:uri ;
+         a fhir:Uri ;
          fhir:v "http://orionhealth.com/fhir/careplan/1andetails"^^xsd:anyURI
        ]
      ] ) ; #   This will be the first antenatal encounter  ,   a link to further details about the first antenatal details  

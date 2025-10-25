@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -55,12 +55,12 @@
      fhir:type [ fhir:v "code" ]
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://terminology.hl7.org/ValueSet/v2-0487"^^xsd:anyURI ;
      fhir:link <http://terminology.hl7.org/ValueSet/v2-0487>
   ] ; # 
   fhir:targetScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://snomed.info/sct?fhir_vs"^^xsd:anyURI ;
      fhir:link <http://snomed.info/sct?fhir_vs>
   ] ; # 
@@ -88,7 +88,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "47002008"
            ]
          ] )
@@ -107,7 +107,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "7970006"
            ]
          ] )
@@ -120,7 +120,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "81723002"
            ]
          ] )
@@ -150,7 +150,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] )
@@ -184,7 +184,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "339008"
            ]
          ] )
@@ -197,7 +197,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "339008"
            ]
          ] )
@@ -210,13 +210,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "59843005"
            ]
          ] [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] )
@@ -250,7 +250,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "439336003"
            ]
          ] )
@@ -269,7 +269,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "80657008"
            ]
          ] )
@@ -282,13 +282,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "11585000"
            ]
          ] [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] )
@@ -301,7 +301,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "339008"
            ]
          ] )
@@ -314,7 +314,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "86273004"
            ]
          ] )
@@ -333,7 +333,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "41570003"
            ]
          ] )
@@ -386,13 +386,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "54535009"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "71252005"
            ]
          ] )
@@ -412,13 +412,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "386144009"
            ]
          ] [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "285570007"
            ]
          ] )
@@ -460,7 +460,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "445085009"
            ]
          ] )
@@ -473,7 +473,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "27925004"
            ]
          ] )
@@ -522,7 +522,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "31113003"
            ]
          ] )
@@ -542,7 +542,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] )
@@ -556,7 +556,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] )
@@ -575,13 +575,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "36213007"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "32849002"
            ]
          ] )
@@ -639,13 +639,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "321667001"
            ]
          ] )
@@ -665,13 +665,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "321667001"
            ]
          ] )
@@ -705,7 +705,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "303112003"
            ]
          ] )
@@ -718,7 +718,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "83670000"
            ]
          ] )
@@ -766,7 +766,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "272626006"
            ]
          ] )
@@ -779,7 +779,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "41695006"
            ]
          ] )
@@ -793,7 +793,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "59843005"
            ]
          ] )
@@ -812,13 +812,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -831,7 +831,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "66051006"
            ]
          ] )
@@ -844,13 +844,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "235157009"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -864,13 +864,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -901,7 +901,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "45647009"
            ]
          ] )
@@ -924,13 +924,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "79121003"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -947,19 +947,19 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "127490009"
            ]
          ] [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -975,7 +975,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "303113008"
            ]
          ] )
@@ -1015,7 +1015,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "445085009"
            ]
          ] )
@@ -1028,7 +1028,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "55434001"
            ]
          ] )
@@ -1064,7 +1064,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "419954003"
            ]
          ] )
@@ -1118,7 +1118,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "255560000"
            ]
          ] )
@@ -1144,13 +1144,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "21306003"
            ]
          ] )
@@ -1170,7 +1170,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] )
@@ -1183,7 +1183,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "67889009"
            ]
          ] )
@@ -1196,7 +1196,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "64033007"
            ]
          ] )
@@ -1209,7 +1209,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "397394009"
            ]
          ] )
@@ -1222,13 +1222,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "173830003"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -1247,13 +1247,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "67889009"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "44567001"
            ]
          ] )
@@ -1292,7 +1292,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "303949008"
            ]
          ] )
@@ -1312,7 +1312,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "4147007"
            ]
          ] )
@@ -1331,7 +1331,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "414781009"
            ]
          ] )
@@ -1351,13 +1351,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "2095001"
            ]
          ] )
@@ -1379,13 +1379,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "6853008"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -1399,19 +1399,19 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "127492001"
            ]
          ] [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "69695003"
            ]
          ] )
@@ -1472,7 +1472,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "12921003"
            ]
          ] )
@@ -1488,7 +1488,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "397158004"
            ]
          ] )
@@ -1537,7 +1537,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "255587001"
            ]
          ] )
@@ -1551,13 +1551,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "13648007"
            ]
          ] )
@@ -1570,7 +1570,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "41329004"
            ]
          ] )
@@ -1583,7 +1583,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "6902008"
            ]
          ] )
@@ -1596,7 +1596,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "6902008"
            ]
          ] )
@@ -1643,7 +1643,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "129300006"
            ]
          ] )
@@ -1662,7 +1662,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "47002008"
            ]
          ] )
@@ -1675,7 +1675,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "47002008"
            ]
          ] )
@@ -1701,13 +1701,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "34402009"
            ]
          ] )
@@ -1720,7 +1720,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "34402009"
            ]
          ] )
@@ -1733,7 +1733,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "64033007"
            ]
          ] )
@@ -1746,7 +1746,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "64033007"
            ]
          ] )
@@ -1778,7 +1778,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "9454009"
            ]
          ] )
@@ -1791,7 +1791,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "20233005"
            ]
          ] )
@@ -1817,13 +1817,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "257351008"
            ]
          ] [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "14766002"
            ]
          ] )
@@ -1836,13 +1836,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "446860008"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "279107003"
            ]
          ] )
@@ -1861,7 +1861,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "240977001"
            ]
          ] )
@@ -1880,7 +1880,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "4147007"
            ]
          ] )
@@ -1964,7 +1964,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "64033007"
            ]
          ] )
@@ -1977,7 +1977,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "5713008"
            ]
          ] )
@@ -1990,7 +1990,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "4335006"
            ]
          ] )
@@ -2004,7 +2004,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] )
@@ -2017,7 +2017,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "58088002"
            ]
          ] )
@@ -2040,13 +2040,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "129112001"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "44567001"
            ]
          ] )
@@ -2090,7 +2090,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "type-mod" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "255588006"
            ]
          ] )
@@ -2103,7 +2103,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "279572002"
            ]
          ] )
@@ -2116,7 +2116,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "129112001"
            ]
          ] )
@@ -2162,7 +2162,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "78533007"
            ]
          ] )
@@ -2181,13 +2181,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "225271002"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "431938005"
            ]
          ] )
@@ -2200,13 +2200,13 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "225109005"
            ]
          ] [
            fhir:attribute [ fhir:v "spec-src" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "25990002"
            ]
          ] )
@@ -2305,7 +2305,7 @@
          fhir:product ( [
            fhir:attribute [ fhir:v "coll-method" ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "122462000"
            ]
          ] )

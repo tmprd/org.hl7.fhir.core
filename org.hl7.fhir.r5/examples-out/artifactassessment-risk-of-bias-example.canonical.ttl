@@ -20,7 +20,7 @@
      ]
   ] ) ; # 
   fhir:artifact [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://fevir.net/resources/Evidence/7637"^^xsd:anyURI ;
      fhir:link <http://fevir.net/resources/Evidence/7637>
   ] ; # 

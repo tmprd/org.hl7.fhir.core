@@ -33,7 +33,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "4"^^xsd:decimal
            ] #    from Element: extension   
          ] ) ; #     This example has the extension which maps a numeric score to the code this may already be known and unecessary in the Observation resource   ,    0..1 Value of extension   
@@ -50,7 +50,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "5"^^xsd:decimal
            ] #    from Element: extension   
          ] ) ; #     This example has the extension which maps a numeric score to the code this may already be known and unecessary in the Observation resource   ,    0..1 Value of extension   
@@ -67,7 +67,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "4"^^xsd:decimal
            ] #    from Element: extension   
          ] ) ; #     This example has the extension which maps a numeric score to the code this may already be known and unecessary in the Observation resource   ,    0..1 Value of extension   

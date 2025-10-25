@@ -33,7 +33,7 @@
      fhir:display [ fhir:v "Peter James Chalmers" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2014-12-11T04:44:16Z"^^xsd:dateTime
   ] ; # 
   fhir:component ( [

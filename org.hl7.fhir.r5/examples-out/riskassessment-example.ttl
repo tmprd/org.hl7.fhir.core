@@ -24,7 +24,7 @@
      fhir:reference [ fhir:v "Patient/b248b1b2-1686-4b94-9936-37d7a5f94b51" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2006-01-13T23:01:00Z"^^xsd:dateTime
   ] ; # 
   fhir:basis ( [
@@ -36,7 +36,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.000168
      ] ;
      fhir:when [
@@ -53,7 +53,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.000368
      ] ;
      fhir:when [
@@ -76,7 +76,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.000594
      ] ;
      fhir:when [
@@ -99,7 +99,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.000838
      ] ;
      fhir:when [
@@ -122,7 +122,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.001089
      ] ;
      fhir:when [
@@ -145,7 +145,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.001327
      ] ;
      fhir:when [
@@ -168,7 +168,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.001530
      ] ;
      fhir:when [
@@ -191,7 +191,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.001663
      ] ;
      fhir:when [

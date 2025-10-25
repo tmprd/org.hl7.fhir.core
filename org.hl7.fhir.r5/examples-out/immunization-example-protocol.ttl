@@ -41,7 +41,7 @@
      fhir:reference [ fhir:v "Encounter/example" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2018-06-18"^^xsd:date
   ] ; # 
   fhir:primarySource [ fhir:v true] ; # 

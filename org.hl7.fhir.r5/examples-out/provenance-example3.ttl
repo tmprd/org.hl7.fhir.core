@@ -14,7 +14,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/targetPath"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Procedure.followUp.text"
        ]
      ] ) ;

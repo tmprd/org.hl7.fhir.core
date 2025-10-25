@@ -34,7 +34,7 @@
   fhir:gender [ fhir:v "female"] ; # 
   fhir:birthDate [ fhir:v "1966-04-04"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] . # 
 

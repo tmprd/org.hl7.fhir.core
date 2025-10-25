@@ -178,7 +178,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resolve-as-version-specific"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v true
        ]
      ] ) ;
@@ -188,7 +188,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resolve-as-version-specific"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v true
        ]
      ] ) ;

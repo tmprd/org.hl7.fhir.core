@@ -99,7 +99,7 @@
 
 <http://hl7.org/fhir/Organization/f203> a fhir:Organization .
 
-<http://hl7.org/fhir/uv/saner/Measure/CDCHealthcareSupplyPathway> a fhir:uv .
+<http://hl7.org/fhir/uv/saner/Measure/CDCHealthcareSupplyPathway> a fhir:Uv .
 
 # -------------------------------------------------------------------------------------
 

@@ -12,7 +12,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] ) ; # 
@@ -73,7 +73,7 @@
        fhir:question [ fhir:v "1" ] ;
        fhir:operator [ fhir:v "=" ] ;
        fhir:answer [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v false
        ]
      ] )
@@ -89,7 +89,7 @@
        fhir:question [ fhir:v "2" ] ;
        fhir:operator [ fhir:v "=" ] ;
        fhir:answer [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v true
        ]
      ] )
@@ -113,7 +113,7 @@
        fhir:question [ fhir:v "2" ] ;
        fhir:operator [ fhir:v "=" ] ;
        fhir:answer [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v false
        ]
      ] )
@@ -129,7 +129,7 @@
        fhir:question [ fhir:v "4" ] ;
        fhir:operator [ fhir:v "=" ] ;
        fhir:answer [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v true
        ]
      ] )
@@ -153,7 +153,7 @@
        fhir:question [ fhir:v "4" ] ;
        fhir:operator [ fhir:v "=" ] ;
        fhir:answer [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v false
        ]
      ] )

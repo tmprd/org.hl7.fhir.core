@@ -273,7 +273,7 @@
      fhir:reference [ fhir:v "http://fhir.healthintersections.com.au/open/Encounter/doc-example" ]
   ] ; # 
   fhir:value [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "Acute Asthmatic attack. Was wheezing for days prior to admission."
   ] . # 
 

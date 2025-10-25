@@ -136,7 +136,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-15"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T18:14:35Z"^^xsd:dateTime] ; # 
@@ -247,7 +247,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -342,7 +342,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -437,7 +437,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -532,7 +532,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -627,7 +627,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -693,7 +693,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -759,7 +759,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -825,7 +825,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -896,7 +896,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -967,7 +967,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -1038,7 +1038,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -1109,7 +1109,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -1170,7 +1170,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -1241,7 +1241,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -1314,7 +1314,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 
@@ -1405,7 +1405,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-08-18"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2016-08-18T23:06:32Z"^^xsd:dateTime] ; # 

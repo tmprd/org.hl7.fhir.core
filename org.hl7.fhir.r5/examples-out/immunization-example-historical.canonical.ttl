@@ -26,7 +26,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "January 2012"
   ] ; # 
   fhir:primarySource [ fhir:v false] ; # 

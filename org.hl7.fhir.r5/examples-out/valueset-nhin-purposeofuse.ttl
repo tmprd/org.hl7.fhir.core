@@ -152,13 +152,13 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-map"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:canonical ;
+       a fhir:Canonical ;
        fhir:v "#map"^^xsd:anyURI
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 

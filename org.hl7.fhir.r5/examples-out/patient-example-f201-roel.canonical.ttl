@@ -46,7 +46,7 @@
   fhir:gender [ fhir:v "male"] ; # 
   fhir:birthDate [ fhir:v "1960-03-13"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] ; # 
   fhir:address ( [
@@ -68,7 +68,7 @@
      ] )
   ] ; # 
   fhir:multipleBirth [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] ; # 
   fhir:photo ( [

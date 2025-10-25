@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -39,12 +39,12 @@
   ] ) ; # 
   fhir:description [ fhir:v "Mapping between CDS Hooks Indicator and Request Priority"] ; # 
   fhir:sourceScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://cds-hooks.hl7.org/ValueSet/indicator"^^xsd:anyURI ;
      fhir:link <http://cds-hooks.hl7.org/ValueSet/indicator>
   ] ; # 
   fhir:targetScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://hl7.org/fhir/ValueSet/request-priority"^^xsd:anyURI ;
      fhir:link <http://hl7.org/fhir/ValueSet/request-priority>
   ] ; # 

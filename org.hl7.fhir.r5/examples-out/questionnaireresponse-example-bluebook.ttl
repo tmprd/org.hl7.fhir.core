@@ -40,7 +40,7 @@
          fhir:text [ fhir:v "Name of child" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Cathy Jones"
            ]
          ] )
@@ -62,7 +62,7 @@
          fhir:text [ fhir:v "Birth weight (kg)" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v 3.25
            ]
          ] )
@@ -71,7 +71,7 @@
          fhir:text [ fhir:v "Birth length (cm)" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v 44.3
            ]
          ] )
@@ -90,7 +90,7 @@
                fhir:text [ fhir:v "1st dose" ] ;
                fhir:answer ( [
                  fhir:value [
-                   a fhir:dateTime ;
+                   a fhir:DateTime ;
                    fhir:v "1972-11-30"^^xsd:date
                  ]
                ] )
@@ -99,7 +99,7 @@
                fhir:text [ fhir:v "2nd dose" ] ;
                fhir:answer ( [
                  fhir:value [
-                   a fhir:dateTime ;
+                   a fhir:DateTime ;
                    fhir:v "1972-12-11"^^xsd:date
                  ]
                ] )
@@ -111,7 +111,7 @@
          fhir:text [ fhir:v "Hep B given y / n" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:boolean ;
+             a fhir:Boolean ;
              fhir:v true
            ] ;
            fhir:item ( [
@@ -119,7 +119,7 @@
              fhir:text [ fhir:v "Date given" ] ;
              fhir:answer ( [
                fhir:value [
-                 a fhir:date ;
+                 a fhir:Date ;
                  fhir:v "1972-12-04"^^xsd:date
                ]
              ] )
@@ -130,7 +130,7 @@
          fhir:text [ fhir:v "Abnormalities noted at birth" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Already able to speak Chinese"
            ]
          ] )

@@ -27,7 +27,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://nema.org/fhir/extensions#0002-0010"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:uri ;
+       a fhir:Uri ;
        fhir:v "urn:oid:1.2.840.10008.1.2.1"^^xsd:anyURI
      ]
   ] ) ; #  

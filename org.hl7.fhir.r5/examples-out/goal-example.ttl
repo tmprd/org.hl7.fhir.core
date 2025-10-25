@@ -42,7 +42,7 @@
      fhir:display [ fhir:v "Peter James Chalmers" ]
   ] ; # 
   fhir:start [
-     a fhir:date ;
+     a fhir:Date ;
      fhir:v "2015-04-05"^^xsd:date
   ] ; # 
   fhir:target ( [
@@ -70,7 +70,7 @@
        ]
      ] ;
      fhir:due [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2016-04-05"^^xsd:date
      ]
   ] ) ; # 

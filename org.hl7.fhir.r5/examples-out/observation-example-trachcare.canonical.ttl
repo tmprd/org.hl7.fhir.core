@@ -36,11 +36,11 @@
      fhir:reference [ fhir:v "Patient/infant-mom" ]
   ] ) ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2018-03-11T16:07:54+00:00"^^xsd:dateTime
   ] ; # 
   fhir:value [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "Mother is trained to change her child's tracheostomy tube"
   ] . # 
 

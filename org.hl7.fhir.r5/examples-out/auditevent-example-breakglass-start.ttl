@@ -43,7 +43,7 @@
        fhir:reference [ fhir:v "Location/1" ]
      ] ; #   where was the break-glass emergency declared  
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "custodian.net"
      ]
   ] ) ; # 

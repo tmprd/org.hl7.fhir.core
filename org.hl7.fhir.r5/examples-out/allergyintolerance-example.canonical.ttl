@@ -50,7 +50,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:onset [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004"^^xsd:gYear
   ] ; # 
   fhir:recordedDate [ fhir:v "2014-10-09T14:58:00+11:00"^^xsd:dateTime] ; # 

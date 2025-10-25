@@ -34,7 +34,7 @@
      ] ;
      fhir:requestor [ fhir:v true ] ;
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "127.0.0.1"
      ]
   ] [
@@ -63,7 +63,7 @@
      ] ;
      fhir:requestor [ fhir:v false ] ;
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "Workstation1.ehr.familyclinic.com"
      ]
   ] ) ; # 

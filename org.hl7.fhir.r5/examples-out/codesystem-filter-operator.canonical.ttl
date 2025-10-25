@@ -23,25 +23,25 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "normative"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "4.0.0"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:integer ;
+       a fhir:Integer ;
        fhir:v 5
      ]
   ] ) ; # 
@@ -99,7 +99,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "comments" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "The definition of is-a is that all the properties of the value are true for the specified property of the code, which means that a code has an is-a relationship with itself. To exclude the root code, use descendent-of"
        ]
      ] )
@@ -110,7 +110,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "comments" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "The definition of is-a is that all the properties of the value are true for the specified property of the code. \n\nSpelling note: \"descendant\" is a more correct spelling, but the spelling \"descendent\" is maintained in the code for backwards compatibility reasons"
        ]
      ] )
@@ -137,7 +137,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "comments" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "The definition of is-a is that all the properties of the value are true for the specified property of the code, which means that a code has an is-a relationship with itself. To exclude the root code, add it explicitly to as an exclude"
        ]
      ] )

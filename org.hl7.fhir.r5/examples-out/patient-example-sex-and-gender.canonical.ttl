@@ -33,7 +33,7 @@
      ] [
        fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Patient transitioned from male to female in 2001."
        ]
      ] )
@@ -59,7 +59,7 @@
      ] [
        fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Patient transitioned from male to female in 2001."
        ]
      ] )
@@ -95,7 +95,7 @@
      ] [
        fhir:url [ fhir:v "acquisitionDate"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:dateTime ;
+         a fhir:DateTime ;
          fhir:v "2005-12-06"^^xsd:date
        ]
      ] [
@@ -108,7 +108,7 @@
      ] [
        fhir:url [ fhir:v "sourceField"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "SEX"
        ]
      ] [
@@ -124,7 +124,7 @@
      ] [
        fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Patient transitioned from male to female in 2001, but their birth certificate still indicates male."
        ]
      ] )
@@ -159,7 +159,7 @@
      ] [
        fhir:url [ fhir:v "acquisitionDate"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:dateTime ;
+         a fhir:DateTime ;
          fhir:v "2021-06-06"^^xsd:date
        ]
      ] [
@@ -172,7 +172,7 @@
      ] [
        fhir:url [ fhir:v "sourceField"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "SEX"
        ]
      ] [
@@ -188,7 +188,7 @@
      ] [
        fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Patient transitioned from male to female in 2001, but their insurance card still indicates male."
        ]
      ] )
@@ -223,7 +223,7 @@
      ] [
        fhir:url [ fhir:v "acquisitionDate"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:dateTime ;
+         a fhir:DateTime ;
          fhir:v "2005-12-06"^^xsd:date
        ]
      ] [
@@ -246,7 +246,7 @@
      ] [
        fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Patient transitioned from male to female in 2001, but their driver's license still indicates male."
        ]
      ] )
@@ -271,7 +271,7 @@
      ] [
        fhir:url [ fhir:v "comment"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "Patient transitioned from male to female in 2001."
        ]
      ] [
@@ -317,7 +317,7 @@
   fhir:gender [ fhir:v "male"] ; # 
   fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] ; # 
   fhir:managingOrganization [

@@ -32,7 +32,7 @@
   ] [
      fhir:url [ fhir:v "http://example.org/do-not-use/fhir-extensions/referral#notes"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "The patient had fever peaks over the last couple of days. He is worried about these peaks."
      ]
   ] [
@@ -64,7 +64,7 @@
   ] [
      fhir:url [ fhir:v "http://example.org/do-not-use/fhir-extensions/referral#status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "complete"
      ]
   ] ) ; # 

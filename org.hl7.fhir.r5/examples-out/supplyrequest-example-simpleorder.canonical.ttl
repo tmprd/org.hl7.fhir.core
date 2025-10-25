@@ -32,7 +32,7 @@
      fhir:value [ fhir:v "10"^^xsd:decimal ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-12-31"^^xsd:date
   ] ; # 
   fhir:authoredOn [ fhir:v "2016-12-31"^^xsd:date] ; # 

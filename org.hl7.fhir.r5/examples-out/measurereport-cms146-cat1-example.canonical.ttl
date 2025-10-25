@@ -85,7 +85,7 @@
        ] ;
        fhir:stratum ( [
          fhir:value [
-           a fhir:boolean ;
+           a fhir:Boolean ;
            fhir:v true
          ] ;
          fhir:population ( [
@@ -119,7 +119,7 @@
          ] )
        ] [
          fhir:value [
-           a fhir:boolean ;
+           a fhir:Boolean ;
            fhir:v false
          ] ;
          fhir:population ( [
@@ -159,7 +159,7 @@
        ] ;
        fhir:stratum ( [
          fhir:value [
-           a fhir:boolean ;
+           a fhir:Boolean ;
            fhir:v true
          ] ;
          fhir:population ( [
@@ -193,7 +193,7 @@
          ] )
        ] [
          fhir:value [
-           a fhir:boolean ;
+           a fhir:Boolean ;
            fhir:v true
          ] ;
          fhir:population ( [

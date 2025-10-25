@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] ) ; # 
@@ -56,7 +56,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -65,7 +65,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -111,7 +111,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -124,7 +124,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -137,7 +137,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -157,7 +157,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -166,7 +166,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -212,7 +212,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -225,7 +225,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -245,7 +245,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -254,7 +254,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;
@@ -300,7 +300,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:code ;
+             a fhir:Code ;
              fhir:v "SHALL"
            ]
          ] ) ;

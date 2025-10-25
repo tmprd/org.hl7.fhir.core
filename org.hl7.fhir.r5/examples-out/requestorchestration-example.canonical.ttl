@@ -79,7 +79,7 @@
      fhir:description [ fhir:v "Administer medications at the appropriate time" ] ;
      fhir:textEquivalent [ fhir:v "Administer medication 1, followed an hour later by medication 2" ] ;
      fhir:timing [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2017-03-06T19:00:00Z"^^xsd:dateTime
      ] ;
      fhir:participant ( [

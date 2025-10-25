@@ -174,7 +174,7 @@
            ] )
          ] ;
          fhir:allowed [
-           a fhir:unsignedInt ;
+           a fhir:UnsignedInt ;
            fhir:v "20"^^xsd:nonNegativeInteger
          ]
        ] )

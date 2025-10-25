@@ -49,7 +49,7 @@
   ] ; # 
   fhir:source [
      fhir:endpoint [
-       a fhir:url ;
+       a fhir:Url ;
        fhir:v "http://example.org/clients/ehr-lite"^^xsd:anyURI
      ]
   ] ; # 

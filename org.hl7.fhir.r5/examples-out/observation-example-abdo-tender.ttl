@@ -41,7 +41,7 @@
   ] ; # 
   fhir:issued [ fhir:v "2018-04-03T15:30:10+01:00"^^xsd:dateTime] ; # 
   fhir:value [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v true
   ] ; # 
   fhir:interpretation ( [

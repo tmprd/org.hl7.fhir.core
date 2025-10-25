@@ -47,7 +47,7 @@
      fhir:display [ fhir:v "Roel" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2012-12-01T12:00:00+01:00"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2012-12-01T12:00:00+01:00"^^xsd:dateTime] ; # 

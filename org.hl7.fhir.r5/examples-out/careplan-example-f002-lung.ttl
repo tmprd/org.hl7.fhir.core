@@ -64,7 +64,7 @@
        fhir:display [ fhir:v "P. van de Heuvel" ]
      ] ;
      fhir:occurrence [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2011-07-07T09:30:10+01:00"^^xsd:dateTime
      ] ;
      fhir:performer ( [

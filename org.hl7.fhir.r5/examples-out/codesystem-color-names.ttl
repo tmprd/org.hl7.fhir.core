@@ -23,7 +23,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] ) ; # 
@@ -66,7 +66,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F0F8FF"
        ]
      ] )
@@ -76,7 +76,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FAEBD7"
        ]
      ] )
@@ -86,7 +86,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00FFFF"
        ]
      ] )
@@ -96,7 +96,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#7FFFD4"
        ]
      ] )
@@ -106,7 +106,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F0FFFF"
        ]
      ] )
@@ -116,7 +116,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F5F5DC"
        ]
      ] )
@@ -126,7 +126,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFE4C4"
        ]
      ] )
@@ -136,7 +136,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#000000"
        ]
      ] )
@@ -146,7 +146,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFEBCD"
        ]
      ] )
@@ -156,7 +156,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#0000FF"
        ]
      ] )
@@ -166,7 +166,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#8A2BE2"
        ]
      ] )
@@ -176,7 +176,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#A52A2A"
        ]
      ] )
@@ -186,7 +186,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DEB887"
        ]
      ] )
@@ -196,7 +196,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#5F9EA0"
        ]
      ] )
@@ -206,7 +206,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#7FFF00"
        ]
      ] )
@@ -216,7 +216,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#D2691E"
        ]
      ] )
@@ -226,7 +226,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF7F50"
        ]
      ] )
@@ -236,7 +236,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#6495ED"
        ]
      ] )
@@ -246,7 +246,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFF8DC"
        ]
      ] )
@@ -256,7 +256,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DC143C"
        ]
      ] )
@@ -266,7 +266,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00FFFF"
        ]
      ] )
@@ -276,7 +276,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00008B"
        ]
      ] )
@@ -286,7 +286,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#008B8B"
        ]
      ] )
@@ -296,7 +296,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#B8860B"
        ]
      ] )
@@ -306,7 +306,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#A9A9A9"
        ]
      ] )
@@ -316,7 +316,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#006400"
        ]
      ] )
@@ -326,7 +326,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#A9A9A9"
        ]
      ] )
@@ -336,7 +336,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#BDB76B"
        ]
      ] )
@@ -346,7 +346,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#8B008B"
        ]
      ] )
@@ -356,7 +356,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#556B2F"
        ]
      ] )
@@ -366,7 +366,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF8C00"
        ]
      ] )
@@ -376,7 +376,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#9932CC"
        ]
      ] )
@@ -386,7 +386,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#8B0000"
        ]
      ] )
@@ -396,7 +396,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#E9967A"
        ]
      ] )
@@ -406,7 +406,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#8FBC8F"
        ]
      ] )
@@ -416,7 +416,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#483D8B"
        ]
      ] )
@@ -426,7 +426,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#2F4F4F"
        ]
      ] )
@@ -436,7 +436,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#2F4F4F"
        ]
      ] )
@@ -446,7 +446,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00CED1"
        ]
      ] )
@@ -456,7 +456,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#9400D3"
        ]
      ] )
@@ -466,7 +466,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF1493"
        ]
      ] )
@@ -476,7 +476,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00BFFF"
        ]
      ] )
@@ -486,7 +486,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#696969"
        ]
      ] )
@@ -496,7 +496,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#696969"
        ]
      ] )
@@ -506,7 +506,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#1E90FF"
        ]
      ] )
@@ -516,7 +516,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#B22222"
        ]
      ] )
@@ -526,7 +526,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFAF0"
        ]
      ] )
@@ -536,7 +536,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#228B22"
        ]
      ] )
@@ -546,7 +546,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF00FF"
        ]
      ] )
@@ -556,7 +556,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DCDCDC"
        ]
      ] )
@@ -566,7 +566,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F8F8FF"
        ]
      ] )
@@ -576,7 +576,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFD700"
        ]
      ] )
@@ -586,7 +586,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DAA520"
        ]
      ] )
@@ -596,7 +596,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#808080"
        ]
      ] )
@@ -606,7 +606,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#008000"
        ]
      ] )
@@ -616,7 +616,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#ADFF2F"
        ]
      ] )
@@ -626,7 +626,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#808080"
        ]
      ] )
@@ -636,7 +636,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F0FFF0"
        ]
      ] )
@@ -646,7 +646,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF69B4"
        ]
      ] )
@@ -656,7 +656,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#CD5C5C"
        ]
      ] )
@@ -666,7 +666,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#4B0082"
        ]
      ] )
@@ -676,7 +676,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFFF0"
        ]
      ] )
@@ -686,7 +686,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F0E68C"
        ]
      ] )
@@ -696,7 +696,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#E6E6FA"
        ]
      ] )
@@ -706,7 +706,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFF0F5"
        ]
      ] )
@@ -716,7 +716,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#7CFC00"
        ]
      ] )
@@ -726,7 +726,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFACD"
        ]
      ] )
@@ -736,7 +736,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#ADD8E6"
        ]
      ] )
@@ -746,7 +746,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F08080"
        ]
      ] )
@@ -756,7 +756,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#E0FFFF"
        ]
      ] )
@@ -766,7 +766,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FAFAD2"
        ]
      ] )
@@ -776,7 +776,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#D3D3D3"
        ]
      ] )
@@ -786,7 +786,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#90EE90"
        ]
      ] )
@@ -796,7 +796,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#D3D3D3"
        ]
      ] )
@@ -806,7 +806,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFB6C1"
        ]
      ] )
@@ -816,7 +816,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFA07A"
        ]
      ] )
@@ -826,7 +826,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#20B2AA"
        ]
      ] )
@@ -836,7 +836,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#87CEFA"
        ]
      ] )
@@ -846,7 +846,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#778899"
        ]
      ] )
@@ -856,7 +856,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#778899"
        ]
      ] )
@@ -866,7 +866,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#B0C4DE"
        ]
      ] )
@@ -876,7 +876,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFFE0"
        ]
      ] )
@@ -886,7 +886,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00FF00"
        ]
      ] )
@@ -896,7 +896,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#32CD32"
        ]
      ] )
@@ -906,7 +906,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FAF0E6"
        ]
      ] )
@@ -916,7 +916,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF00FF"
        ]
      ] )
@@ -926,7 +926,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#800000"
        ]
      ] )
@@ -936,7 +936,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#66CDAA"
        ]
      ] )
@@ -946,7 +946,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#0000CD"
        ]
      ] )
@@ -956,7 +956,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#BA55D3"
        ]
      ] )
@@ -966,7 +966,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#9370DB"
        ]
      ] )
@@ -976,7 +976,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#3CB371"
        ]
      ] )
@@ -986,7 +986,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#7B68EE"
        ]
      ] )
@@ -996,7 +996,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00FA9A"
        ]
      ] )
@@ -1006,7 +1006,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#48D1CC"
        ]
      ] )
@@ -1016,7 +1016,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#C71585"
        ]
      ] )
@@ -1026,7 +1026,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#191970"
        ]
      ] )
@@ -1036,7 +1036,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F5FFFA"
        ]
      ] )
@@ -1046,7 +1046,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFE4E1"
        ]
      ] )
@@ -1056,7 +1056,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFE4B5"
        ]
      ] )
@@ -1066,7 +1066,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFDEAD"
        ]
      ] )
@@ -1076,7 +1076,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#000080"
        ]
      ] )
@@ -1086,7 +1086,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FDF5E6"
        ]
      ] )
@@ -1096,7 +1096,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#808000"
        ]
      ] )
@@ -1106,7 +1106,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#6B8E23"
        ]
      ] )
@@ -1116,7 +1116,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFA500"
        ]
      ] )
@@ -1126,7 +1126,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF4500"
        ]
      ] )
@@ -1136,7 +1136,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DA70D6"
        ]
      ] )
@@ -1146,7 +1146,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#EEE8AA"
        ]
      ] )
@@ -1156,7 +1156,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#98FB98"
        ]
      ] )
@@ -1166,7 +1166,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#AFEEEE"
        ]
      ] )
@@ -1176,7 +1176,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DB7093"
        ]
      ] )
@@ -1186,7 +1186,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFEFD5"
        ]
      ] )
@@ -1196,7 +1196,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFDAB9"
        ]
      ] )
@@ -1206,7 +1206,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#CD853F"
        ]
      ] )
@@ -1216,7 +1216,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFC0CB"
        ]
      ] )
@@ -1226,7 +1226,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#DDA0DD"
        ]
      ] )
@@ -1236,7 +1236,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#B0E0E6"
        ]
      ] )
@@ -1246,7 +1246,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#800080"
        ]
      ] )
@@ -1256,7 +1256,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#663399"
        ]
      ] )
@@ -1266,7 +1266,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF0000"
        ]
      ] )
@@ -1276,7 +1276,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#BC8F8F"
        ]
      ] )
@@ -1286,7 +1286,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#4169E1"
        ]
      ] )
@@ -1296,7 +1296,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#8B4513"
        ]
      ] )
@@ -1306,7 +1306,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FA8072"
        ]
      ] )
@@ -1316,7 +1316,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F4A460"
        ]
      ] )
@@ -1326,7 +1326,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#2E8B57"
        ]
      ] )
@@ -1336,7 +1336,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFF5EE"
        ]
      ] )
@@ -1346,7 +1346,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#A0522D"
        ]
      ] )
@@ -1356,7 +1356,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#C0C0C0"
        ]
      ] )
@@ -1366,7 +1366,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#87CEEB"
        ]
      ] )
@@ -1376,7 +1376,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#6A5ACD"
        ]
      ] )
@@ -1386,7 +1386,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#708090"
        ]
      ] )
@@ -1396,7 +1396,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#708090"
        ]
      ] )
@@ -1406,7 +1406,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFAFA"
        ]
      ] )
@@ -1416,7 +1416,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#00FF7F"
        ]
      ] )
@@ -1426,7 +1426,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#4682B4"
        ]
      ] )
@@ -1436,7 +1436,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#D2B48C"
        ]
      ] )
@@ -1446,7 +1446,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#008080"
        ]
      ] )
@@ -1456,7 +1456,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#D8BFD8"
        ]
      ] )
@@ -1466,7 +1466,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FF6347"
        ]
      ] )
@@ -1476,7 +1476,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#40E0D0"
        ]
      ] )
@@ -1486,7 +1486,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#EE82EE"
        ]
      ] )
@@ -1496,7 +1496,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F5DEB3"
        ]
      ] )
@@ -1506,7 +1506,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFFFF"
        ]
      ] )
@@ -1516,7 +1516,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#F5F5F5"
        ]
      ] )
@@ -1526,7 +1526,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#FFFF00"
        ]
      ] )
@@ -1536,7 +1536,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "rgb" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "#9ACD32"
        ]
      ] )

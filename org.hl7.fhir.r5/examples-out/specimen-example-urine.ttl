@@ -53,7 +53,7 @@
        fhir:reference [ fhir:v "Practitioner/f202" ] #   in practice, collecter is almost always recorded  
      ] ;
      fhir:collected [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2015-08-18T07:03:00Z"^^xsd:dateTime
      ] #   the time of collection is usually required. Usually a point in time, but can be a period \n      (collectedPeriod) if it's a timed collection (e.g. a 24 hour urine)  
   ] ; #   method is usually implied by type  
@@ -67,7 +67,7 @@
      ] ;
      fhir:additive ( [ ] ) ;
      fhir:time [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2015-08-18T08:10:00Z"^^xsd:dateTime
      ]
   ] ) ; # 

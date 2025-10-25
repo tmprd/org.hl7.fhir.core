@@ -178,7 +178,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resolve-as-version-specific"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v true
        ]
      ] ) ; #   the client doesn't and can't know what versions will be assigned, nor can \n             it know what id will be assigned to the first two of these resources, so it \n             cannot provide version specific references. What it can do is ask for these\n             references to be made version specific by the server \n           
@@ -188,7 +188,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resolve-as-version-specific"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:boolean ;
+         a fhir:Boolean ;
          fhir:v true
        ]
      ] ) ;

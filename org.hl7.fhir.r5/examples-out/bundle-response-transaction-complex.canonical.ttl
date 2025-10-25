@@ -136,7 +136,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "Lolita963 Batz141"
      ]
   ] [
@@ -209,13 +209,13 @@
        fhir:extension ( [
          fhir:url [ fhir:v "latitude"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:decimal ;
+           a fhir:Decimal ;
            fhir:v 42.38579955468066
          ]
        ] [
          fhir:url [ fhir:v "longitude"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:decimal ;
+           a fhir:Decimal ;
            fhir:v -71.05781519988905
          ]
        ] )
@@ -235,7 +235,7 @@
      fhir:text [ fhir:v "Married" ]
   ] ; # 
   fhir:multipleBirth [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] ; # 
   fhir:communication ( [
@@ -355,7 +355,7 @@
      fhir:reference [ fhir:v "Encounter/eb4e8e54-2412-4386-b8a4-f3cf3c45f9f2" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2015-09-05T21:57:47+00:00"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2015-09-05T21:57:47.809+00:00"^^xsd:dateTime] ; # 

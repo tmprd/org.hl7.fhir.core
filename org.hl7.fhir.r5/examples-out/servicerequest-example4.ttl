@@ -38,7 +38,7 @@
   ] ; # 
   fhir:patientInstruction ( [
      fhir:instruction [
-       a fhir:markdown ;
+       a fhir:Markdown ;
        fhir:v "Start with 30kg 10-15 repetitions for three sets and increase in increments of 5kg when you feel ready"
      ]
   ] ) . # 

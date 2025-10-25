@@ -24,7 +24,7 @@
        fhir:text [ fhir:v "Collect information" ] #  \n      <coding>\n        <system value=\"http:\/\/hl7.org\/fhir\/uv\/cpg\/CodeSystem\/cpg-activity-type\"\/>\n        <code value=\"collect-information\"\/>\n        <display value=\"Collect information\"\/>\n      <\/coding>\n       
      ] ;
      fhir:value [
-       a fhir:canonical ;
+       a fhir:Canonical ;
        fhir:v "http://hl7.org/fhir/Questionnaire/f201"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/Questionnaire/f201>
      ] #  <valueCanonical value=\"http:\/\/hl7.org\/fhir\/uv\/cpg\/Questionnaire\/activity-example-collectinformation\"\/> 

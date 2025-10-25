@@ -25,7 +25,7 @@
   ] ; # 
   fhir:creation [ fhir:v "2017-01-25T08:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:period [
-     a fhir:date ;
+     a fhir:Date ;
      fhir:v "2017-01-25"^^xsd:date
   ] ; # 
   fhir:participant ( [

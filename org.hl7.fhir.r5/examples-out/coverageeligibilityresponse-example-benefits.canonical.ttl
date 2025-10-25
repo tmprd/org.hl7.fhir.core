@@ -24,7 +24,7 @@
      fhir:reference [ fhir:v "Patient/pat1" ]
   ] ; # 
   fhir:serviced [
-     a fhir:date ;
+     a fhir:Date ;
      fhir:v "2014-09-17"^^xsd:date
   ] ; # 
   fhir:created [ fhir:v "2014-08-16"^^xsd:date] ; # 
@@ -99,7 +99,7 @@
            ] )
          ] ;
          fhir:allowed [
-           a fhir:unsignedInt ;
+           a fhir:UnsignedInt ;
            fhir:v "20"^^xsd:nonNegativeInteger
          ]
        ] )
@@ -250,7 +250,7 @@
            ] )
          ] ;
          fhir:allowed [
-           a fhir:string ;
+           a fhir:String ;
            fhir:v "shared"
          ]
        ] [

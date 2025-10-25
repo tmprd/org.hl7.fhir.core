@@ -44,7 +44,7 @@
      ] ;
      fhir:requestor [ fhir:v false ] ;
      fhir:network [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "Workstation1.ehr.familyclinic.com"
      ]
   ] [
@@ -97,7 +97,7 @@
          ] )
        ] ;
        fhir:value [
-         a fhir:base64Binary ;
+         a fhir:Base64Binary ;
          fhir:v "MS4yLjg0MC4xMTQzNTAuMS4xMy4wLjEuNy4xLjE="^^xsd:base64Binary
        ]
      ] )

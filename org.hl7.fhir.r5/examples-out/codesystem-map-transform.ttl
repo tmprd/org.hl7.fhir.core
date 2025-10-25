@@ -23,19 +23,19 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "trial-use"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:integer ;
+       a fhir:Integer ;
        fhir:v 2
      ]
   ] ) ; # 
@@ -84,7 +84,7 @@
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/rendered-value"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:string ;
+           a fhir:String ;
            fhir:v "FHIRPath Equivalent"
          ]
        ] )
@@ -99,7 +99,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -110,7 +110,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -121,7 +121,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "substring"
        ]
      ] )
@@ -132,7 +132,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -143,7 +143,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -154,7 +154,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "& (String concatenation)"
        ]
      ] )
@@ -165,7 +165,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "%terminologies.translate()"
        ]
      ] )
@@ -176,7 +176,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "related to resolve() but returns the string pointer"
        ]
      ] )
@@ -187,7 +187,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -198,7 +198,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -209,7 +209,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -220,7 +220,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -231,7 +231,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -242,7 +242,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -253,7 +253,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -264,7 +264,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )
@@ -275,7 +275,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "fhirpath" ] ;
        fhir:value [
-         a fhir:string ;
+         a fhir:String ;
          fhir:v "n/a"
        ]
      ] )

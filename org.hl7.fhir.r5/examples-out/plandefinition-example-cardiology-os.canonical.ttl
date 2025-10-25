@@ -444,7 +444,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "cds"
      ]
   ] ) ; # 
@@ -600,7 +600,7 @@
        fhir:action ( [
          fhir:textEquivalent [ fhir:v "Referral to cardiology to evaluate chest pain (routine)" ] ;
          fhir:definition [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "#referralToCardiologyConsult"^^xsd:anyURI
          ] ;
          fhir:dynamicValue ( [
@@ -649,13 +649,13 @@
        ] [
          fhir:title [ fhir:v "Reason for cardiology consultation" ] ;
          fhir:definition [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "#CollectReferralReason"^^xsd:anyURI
          ]
        ] [
          fhir:title [ fhir:v "Goal of cardiology consultation" ] ;
          fhir:definition [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "#CardiologyConsultationGoal"^^xsd:anyURI
          ]
        ] )
@@ -672,7 +672,7 @@
          fhir:action ( [
            fhir:textEquivalent [ fhir:v "metoprolol tartrate 25 mg tablet 1 tablet oral 2 time daily" ] ;
            fhir:definition [
-             a fhir:canonical ;
+             a fhir:Canonical ;
              fhir:v "#metoprololTartrate25Prescription"^^xsd:anyURI
            ] ;
            fhir:dynamicValue ( [
@@ -697,7 +697,7 @@
          ] [
            fhir:textEquivalent [ fhir:v "metoprolol tartrate 50 mg tablet 1 tablet oral 2 time daily" ] ;
            fhir:definition [
-             a fhir:canonical ;
+             a fhir:Canonical ;
              fhir:v "#metoprololTartrate50Prescription"^^xsd:anyURI
            ] ;
            fhir:dynamicValue ( [
@@ -722,7 +722,7 @@
          ] [
            fhir:textEquivalent [ fhir:v "amlodipine 5  tablet 1 tablet oral  daily" ] ;
            fhir:definition [
-             a fhir:canonical ;
+             a fhir:Canonical ;
              fhir:v "#amlodipinePrescription"^^xsd:anyURI
            ] ;
            fhir:dynamicValue ( [
@@ -752,7 +752,7 @@
          fhir:action ( [
            fhir:textEquivalent [ fhir:v "nitroglycerin 0.4 mg tablet sub-lingual every 5 minutes as needed for chest pain; maximum 3 tablets" ] ;
            fhir:definition [
-             a fhir:canonical ;
+             a fhir:Canonical ;
              fhir:v "#nitroglycerinPrescription"^^xsd:anyURI
            ] ;
            fhir:dynamicValue ( [

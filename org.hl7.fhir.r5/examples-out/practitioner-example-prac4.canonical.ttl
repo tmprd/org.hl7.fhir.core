@@ -18,7 +18,7 @@
   fhir:gender [ fhir:v "female"] ; # 
   fhir:birthDate [ fhir:v "1982-08-02"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2021-12-12"^^xsd:date
   ] . # 
 

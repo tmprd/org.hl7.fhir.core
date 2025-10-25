@@ -23,19 +23,19 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "trial-use"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:integer ;
+       a fhir:Integer ;
        fhir:v 0
      ]
   ] ) ; # 
@@ -86,7 +86,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "patient-list"
        ]
      ] )
@@ -97,7 +97,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "patient-list"
        ]
      ] )
@@ -108,7 +108,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "patient-list"
        ]
      ] )
@@ -119,19 +119,19 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "family"
        ]
      ] [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "workplace"
        ]
      ] )
@@ -142,7 +142,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] )
@@ -153,7 +153,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] )
@@ -164,7 +164,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] )
@@ -175,13 +175,13 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "workplace"
        ]
      ] )
@@ -192,7 +192,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] )
@@ -203,13 +203,13 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "famkily"
        ]
      ] [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "household"
        ]
      ] )
@@ -220,7 +220,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "workplace"
        ]
      ] )
@@ -231,7 +231,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "workplace"
        ]
      ] )
@@ -242,7 +242,7 @@
      fhir:property ( [
        fhir:code [ fhir:v "group-type" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "workplace"
        ]
      ] )

@@ -180,7 +180,7 @@
      fhir:reference [ fhir:v "Patient/1" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2005-01-27T06:40:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-01-27T06:40:01Z"^^xsd:dateTime] ; # 
@@ -1484,7 +1484,7 @@
      fhir:reference [ fhir:v "Patient/2" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-08T07:45:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -2765,7 +2765,7 @@
      fhir:reference [ fhir:v "Patient/3" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-15T07:20:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -4034,7 +4034,7 @@
      fhir:reference [ fhir:v "Patient/4" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-22T07:45:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2004-12-21T00:00:01Z"^^xsd:dateTime] ; # 
@@ -5294,7 +5294,7 @@
      fhir:reference [ fhir:v "Patient/5" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-03T09:45:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2004-12-03T00:00:01Z"^^xsd:dateTime] ; # 
@@ -6527,7 +6527,7 @@
      fhir:reference [ fhir:v "Patient/6" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-03T20:30:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -7766,7 +7766,7 @@
      fhir:reference [ fhir:v "Patient/7" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-05T07:15:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -9008,7 +9008,7 @@
      fhir:reference [ fhir:v "Patient/8" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2005-01-27T06:40:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -10263,7 +10263,7 @@
      fhir:reference [ fhir:v "Patient/9" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-08T07:45:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -11544,7 +11544,7 @@
      fhir:reference [ fhir:v "Patient/10" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-15T07:20:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -12813,7 +12813,7 @@
      fhir:reference [ fhir:v "Patient/1" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-22T07:45:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -14071,7 +14071,7 @@
      fhir:reference [ fhir:v "Patient/2" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-03T09:45:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -15302,7 +15302,7 @@
      fhir:reference [ fhir:v "Patient/3" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-03T20:30:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -16539,7 +16539,7 @@
      fhir:reference [ fhir:v "Patient/4" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004-12-05T07:15:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-02-23T10:04:01Z"^^xsd:dateTime] ; # 
@@ -17763,7 +17763,7 @@
      fhir:reference [ fhir:v "Patient/5" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2005-11-07T21:44:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-11-07T23:38:01Z"^^xsd:dateTime] ; # 
@@ -18461,7 +18461,7 @@
      fhir:reference [ fhir:v "Patient/6" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2005-03-07T14:02:17Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2005-03-07T14:02:01Z"^^xsd:dateTime] ; # 
@@ -18498,7 +18498,7 @@
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
   fhir:value [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "Non-reactive"
   ] . # 
 
@@ -18539,7 +18539,7 @@
      fhir:reference [ fhir:v "Patient/1" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2012-05-21T10:45:00Z"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2012-05-23T14:27:01Z"^^xsd:dateTime] ; # 

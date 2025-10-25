@@ -82,7 +82,7 @@
   ] ) ; # 
   fhir:note ( [
      fhir:author [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "Serena Shrink"
      ] ;
      fhir:time [ fhir:v "2014-02-14"^^xsd:date ] ;

@@ -33,11 +33,11 @@
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-01-24"^^xsd:date
   ] ; # 
   fhir:value [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-12-30"^^xsd:date
   ] . # 
 

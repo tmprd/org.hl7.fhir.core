@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -52,7 +52,7 @@
   fhir:purpose [ fhir:v "Show example rule based mappings"] ; # 
   fhir:copyright [ fhir:v "Creative Commons 0"] ; # 
   fhir:sourceScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://snomed.info/sct?fhir_vs"^^xsd:anyURI ;
      fhir:link <http://snomed.info/sct?fhir_vs>
   ] ; # 

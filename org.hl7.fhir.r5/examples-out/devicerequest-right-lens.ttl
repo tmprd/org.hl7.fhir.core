@@ -85,7 +85,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2014-06-15"^^xsd:date
   ] ; # 
   fhir:requester [

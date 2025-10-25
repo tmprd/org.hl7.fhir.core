@@ -18,11 +18,11 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2016-05-18"^^xsd:date
   ] ; # 
   fhir:value [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "blue"
   ] . # 
 

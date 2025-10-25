@@ -49,7 +49,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:onset [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "approximately November 2012"
   ] . # 
 

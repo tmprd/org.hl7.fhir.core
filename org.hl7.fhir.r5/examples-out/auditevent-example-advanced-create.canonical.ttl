@@ -12,7 +12,7 @@
   fhir:action [ fhir:v "C"] ; # 
   fhir:severity [ fhir:v "informational"] ; # 
   fhir:occurred [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2020-04-29T09:49:00.000Z"^^xsd:dateTime
   ] ; # 
   fhir:recorded [ fhir:v "2020-04-29T09:49:00.000Z"^^xsd:dateTime] ; # 
@@ -54,7 +54,7 @@
      ] ;
      fhir:requestor [ fhir:v false ] ;
      fhir:network [
-       a fhir:uri ;
+       a fhir:Uri ;
        fhir:v "urn:ipv6:2001:0db8:85a3:0000:0000:8a2e:0370:7334"^^xsd:anyURI
      ]
   ] [
@@ -71,7 +71,7 @@
      ] ;
      fhir:requestor [ fhir:v false ] ;
      fhir:network [
-       a fhir:uri ;
+       a fhir:Uri ;
        fhir:v "http://server.example.com/fhir"^^xsd:anyURI
      ]
   ] [

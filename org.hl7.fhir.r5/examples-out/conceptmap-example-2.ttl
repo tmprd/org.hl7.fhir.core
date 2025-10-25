@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -46,11 +46,11 @@
      fhir:type [ fhir:v "Coding" ]
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://example.org/fhir/example1"^^xsd:anyURI
   ] ; # 
   fhir:targetScope [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://example.org/fhir/example2"^^xsd:anyURI
   ] ; # 
   fhir:group ( [

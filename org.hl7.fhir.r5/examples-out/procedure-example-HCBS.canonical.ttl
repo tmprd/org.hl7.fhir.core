@@ -31,7 +31,7 @@
      fhir:display [ fhir:v "Peter James" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2018-04-05"^^xsd:date
   ] ; # 
   fhir:performer ( [

@@ -31,7 +31,7 @@
      fhir:reference [ fhir:v "Encounter/f203" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2014-01-23"^^xsd:date
   ] ; # 
   fhir:dateAsserted [ fhir:v "2015-02-22"^^xsd:date] ; # 

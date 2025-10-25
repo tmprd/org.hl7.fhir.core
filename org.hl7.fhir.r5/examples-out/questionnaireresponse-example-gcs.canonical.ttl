@@ -33,7 +33,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "4"^^xsd:decimal
            ]
          ] ) ;
@@ -50,7 +50,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "5"^^xsd:decimal
            ]
          ] ) ;
@@ -67,7 +67,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "4"^^xsd:decimal
            ]
          ] ) ;

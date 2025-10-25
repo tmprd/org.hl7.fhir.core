@@ -61,7 +61,7 @@
      fhir:display [ fhir:v "Sonoma oyster farm" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2017-10-12"^^xsd:date
   ] ; # 
   fhir:issued [ fhir:v "2017-10-14T23:11:24Z"^^xsd:dateTime] ; # 

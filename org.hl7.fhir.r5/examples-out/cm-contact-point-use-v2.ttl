@@ -43,12 +43,12 @@
      ] )
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://hl7.org/fhir/ValueSet/contact-point-use"^^xsd:anyURI ;
      fhir:link <http://hl7.org/fhir/ValueSet/contact-point-use>
   ] ; # 
   fhir:targetScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://terminology.hl7.org/ValueSet/v2-0201"^^xsd:anyURI ;
      fhir:link <http://terminology.hl7.org/ValueSet/v2-0201>
   ] ; # 

@@ -44,7 +44,7 @@
      fhir:display [ fhir:v "Encounter with patient @example" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2017-10-10"^^xsd:date
   ] ; # 
   fhir:condition [
@@ -67,7 +67,7 @@
        fhir:text [ fhir:v "Breast Cancer" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.000368
      ] ;
      fhir:when [

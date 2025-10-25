@@ -49,7 +49,7 @@
   fhir:gender [ fhir:v "male"] ; # 
   fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] ; # 
   fhir:deceased [
-     a fhir:boolean ;
+     a fhir:Boolean ;
      fhir:v false
   ] ; # 
   fhir:address ( [

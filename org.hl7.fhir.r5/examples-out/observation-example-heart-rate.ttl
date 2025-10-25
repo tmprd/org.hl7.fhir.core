@@ -39,7 +39,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "1999-07-02"^^xsd:date
   ] ; # 
   fhir:value [

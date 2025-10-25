@@ -55,7 +55,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; #   the patient that actually has the risk of adverse reaction  
   fhir:onset [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2004"^^xsd:gYear
   ] ; #   when the allergy was first noted (in this case the same as reaction.onset of the first occurrence)  
   fhir:recordedDate [ fhir:v "2014-10-09T14:58:00+11:00"^^xsd:dateTime] ; #   the date that this entry was recorded  

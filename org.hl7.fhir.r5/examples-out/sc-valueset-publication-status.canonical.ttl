@@ -36,12 +36,12 @@
      ] )
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://hl7.org/fhir/ValueSet/publication-status"^^xsd:anyURI ;
      fhir:link <http://hl7.org/fhir/ValueSet/publication-status>
   ] ; # 
   fhir:targetScope [
-     a fhir:canonical ;
+     a fhir:Canonical ;
      fhir:v "http://hl7.org/fhir/ValueSet/resource-status"^^xsd:anyURI ;
      fhir:link <http://hl7.org/fhir/ValueSet/resource-status>
   ] ; # 

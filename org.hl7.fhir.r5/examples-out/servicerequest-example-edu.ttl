@@ -36,7 +36,7 @@
      fhir:display [ fhir:v "Jane Doe" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2014-08-16"^^xsd:date
   ] ; # 
   fhir:authoredOn [ fhir:v "2016-08-16"^^xsd:date] ; # 

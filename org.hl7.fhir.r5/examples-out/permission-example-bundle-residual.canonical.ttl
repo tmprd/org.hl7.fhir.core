@@ -68,7 +68,7 @@
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2022-06-13"^^xsd:date
   ] ; # 
   fhir:performer ( [

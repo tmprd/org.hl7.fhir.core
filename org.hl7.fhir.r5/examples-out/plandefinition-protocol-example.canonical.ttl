@@ -43,7 +43,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "cds"
      ]
   ] ) ; # 
@@ -166,7 +166,7 @@
      fhir:requiredBehavior [ fhir:v "must-unless-documented" ] ;
      fhir:cardinalityBehavior [ fhir:v "single" ] ;
      fhir:definition [
-       a fhir:canonical ;
+       a fhir:Canonical ;
        fhir:v "#procedure"^^xsd:anyURI
      ]
   ] ) . # 

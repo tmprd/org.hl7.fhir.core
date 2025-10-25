@@ -14,7 +14,7 @@
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/targetElement"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:uri ;
+         a fhir:Uri ;
          fhir:v "n1"^^xsd:anyURI
        ]
      ] ) ;

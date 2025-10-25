@@ -15,7 +15,7 @@
      fhir:parameter ( [
        fhir:name [ fhir:v "score" ] ;
        fhir:value [
-         a fhir:decimal ;
+         a fhir:Decimal ;
          fhir:v "7"^^xsd:decimal
        ]
      ] [
@@ -38,7 +38,7 @@
      ] [
        fhir:name [ fhir:v "guideline-followed" ] ;
        fhir:value [
-         a fhir:uri ;
+         a fhir:Uri ;
          fhir:v "http://someguidelineprovider.org/radiology-appropriateness-guidelines.html"^^xsd:anyURI
        ]
      ] )
@@ -52,7 +52,7 @@
      fhir:value [ fhir:v "guidanceResponse1" ]
   ] ) ; # 
   fhir:module [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://someguidelineprovider.org/radiology-appropriateness-guidelines.html"^^xsd:anyURI
   ] ; # 
   fhir:status [ fhir:v "success"] ; # 

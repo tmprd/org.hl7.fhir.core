@@ -183,7 +183,7 @@
      fhir:reference [ fhir:v "Patient/anon0" ] #   patient as anon0 id  
   ] ; # 
   fhir:onset [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2012-05-01"^^xsd:date
   ] . #   dates aligned to first of month  
 

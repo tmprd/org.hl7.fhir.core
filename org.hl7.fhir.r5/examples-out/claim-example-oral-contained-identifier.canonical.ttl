@@ -106,7 +106,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2014-08-16"^^xsd:date
      ] ;
      fhir:unitPrice [

@@ -41,7 +41,7 @@
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:string ;
+           a fhir:String ;
            fhir:v "VV"
          ]
        ] ) #    the \"du\" part is a family name prefix (VV in iso 21090)   

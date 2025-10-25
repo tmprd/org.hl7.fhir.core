@@ -150,7 +150,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "cds"
      ]
   ] ) ; # 
@@ -337,7 +337,7 @@
        fhir:action ( [
          fhir:textEquivalent [ fhir:v "Refer to outpatient mental health program for evaluation and treatment of mental health conditions now" ] ;
          fhir:definition [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "#referralToMentalHealthCare"^^xsd:anyURI
          ] ;
          fhir:dynamicValue ( [
@@ -426,7 +426,7 @@
            fhir:action ( [
              fhir:textEquivalent [ fhir:v "citalopram 20 mg tablet 1 tablet oral 1 time daily now (30 table; 3 refills)" ] ;
              fhir:definition [
-               a fhir:canonical ;
+               a fhir:Canonical ;
                fhir:v "#citalopramPrescription"^^xsd:anyURI
              ] ;
              fhir:dynamicValue ( [

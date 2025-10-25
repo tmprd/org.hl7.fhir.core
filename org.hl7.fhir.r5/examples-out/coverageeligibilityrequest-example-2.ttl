@@ -29,7 +29,7 @@
      fhir:reference [ fhir:v "Patient/pat1" ]
   ] ; # 
   fhir:serviced [
-     a fhir:date ;
+     a fhir:Date ;
      fhir:v "2014-09-17"^^xsd:date
   ] ; # 
   fhir:created [ fhir:v "2014-08-16"^^xsd:date] ; #   Anticipated service date  

@@ -35,7 +35,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "cds"
      ]
   ] ) ; # 
@@ -61,7 +61,7 @@
        fhir:id [ fhir:v "medication-action-1" ] ;
        fhir:title [ fhir:v "Administer Medication 1" ] ;
        fhir:definition [
-         a fhir:canonical ;
+         a fhir:Canonical ;
          fhir:v "#activitydefinition-medicationrequest-1"^^xsd:anyURI
        ]
      ] [
@@ -77,7 +77,7 @@
          ]
        ] ) ;
        fhir:definition [
-         a fhir:canonical ;
+         a fhir:Canonical ;
          fhir:v "#activitydefinition-medicationrequest-2"^^xsd:anyURI
        ]
      ] )

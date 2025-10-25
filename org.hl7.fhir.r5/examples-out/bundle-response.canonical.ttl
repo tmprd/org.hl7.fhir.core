@@ -104,7 +104,7 @@
   fhir:parameter ( [
      fhir:name [ fhir:v "name" ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "LOINC"
      ]
   ] ) . # 

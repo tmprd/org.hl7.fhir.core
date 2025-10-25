@@ -12,7 +12,7 @@
   fhir:parameter ( [
      fhir:name [ fhir:v "exact" ] ;
      fhir:value [
-       a fhir:boolean ;
+       a fhir:Boolean ;
        fhir:v true
      ]
   ] [
@@ -20,13 +20,13 @@
      fhir:part ( [
        fhir:name [ fhir:v "code" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "focus"
        ]
      ] [
        fhir:name [ fhir:v "value" ] ;
        fhir:value [
-         a fhir:code ;
+         a fhir:Code ;
          fhir:v "top"
        ]
      ] )

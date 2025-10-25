@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -73,7 +73,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "MSH[Bundle]"
            ]
          ] )
@@ -88,7 +88,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "MSH[MessageHeader]"
            ]
          ] )
@@ -103,13 +103,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "MSH[Provenance]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
            ]
          ] )
@@ -124,7 +124,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "SFT[MessageHeader]"
            ]
          ] )
@@ -139,13 +139,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "EVN[Provenance]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
            ]
          ] )
@@ -160,7 +160,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "PID[Patient]"
            ]
          ] )
@@ -175,7 +175,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "PD1[Patient]"
            ]
          ] )
@@ -190,19 +190,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ARV[Patient]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Resource=Patient[1]"
            ]
          ] [
            fhir:code [ fhir:v "antlr" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IF ARV-1 IN (\"PID\", \"PD1\") AND ARV-3 NOT VALUED"
            ]
          ] )
@@ -217,19 +217,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ROL[Patient-PractitionerRole]"
            ]
          ] [
            fhir:code [ fhir:v "antlr" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IF ROL-3.1 EQUALS \"PP\" AND ROL-3.3 EQUALS \"HL70443\""
            ]
          ] [
            fhir:code [ fhir:v "fhirpath" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "(element(\"3.1\")=\"PP\")and(element(\"3.3\")=\"HL70443\")"
            ]
          ] )
@@ -244,31 +244,31 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ROL[RelatedPerson]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "RelatedPerson[1].patient.reference=Patient[1].id"
            ]
          ] [
            fhir:code [ fhir:v "antlr" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IF ROL-3.1 NOT EQUALS  \"PP\" OR ROL-3.3 NOT EQUALS \"HL70443\""
            ]
          ] [
            fhir:code [ fhir:v "fhirpath" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "(element(\"3.1\")!=\"PP\")or(element(\"3.3\")!=\"HL70443\")"
            ]
          ] [
            fhir:code [ fhir:v "narrative" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "While most likely all other HL70443 values go to RelatedPerson, the implementation needs to determine whether that is fully accurate."
            ]
          ] )
@@ -283,19 +283,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "NK1[RelatedPerson]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "RelatedPerson[2].patient.reference=Patient[1].id"
            ]
          ] [
            fhir:code [ fhir:v "narrative" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
            ]
          ] )
@@ -310,13 +310,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "NK1[Patient]"
            ]
          ] [
            fhir:code [ fhir:v "narrative" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
            ]
          ] )
@@ -331,13 +331,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "PV1[Encounter]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Encounter[1].subject.reference=Patient[1].id"
            ]
          ] )
@@ -352,7 +352,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "PV1[Patient]"
            ]
          ] )
@@ -367,7 +367,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "PV2[Encounter]"
            ]
          ] )
@@ -382,19 +382,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ARV[Encounter]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Resource=Encounter[1]"
            ]
          ] [
            fhir:code [ fhir:v "antlr" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IF ARV-1 IN (\"PV1\", \"PV2\") AND ARV-3 NOT VALUED"
            ]
          ] )
@@ -409,7 +409,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "ROL[Encounter-PractitionerRole]"
            ]
          ] )
@@ -424,13 +424,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "OBX[Observation]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Observation.subject.reference=Patient[1].id"
            ]
          ] )
@@ -445,13 +445,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "OBX[Observation-Component]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Observation.subject.reference=Patient[1].id"
            ]
          ] )
@@ -466,13 +466,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "AL1[AllergyIntolerance]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "AllergyIntolerance.patient.reference=Patient[1].id"
            ]
          ] )
@@ -487,19 +487,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "DG1[Condition]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Condition.subject.reference=Patient[1].id"
            ]
          ] [
            fhir:code [ fhir:v "narrative" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "If in context of the patient"
            ]
          ] )
@@ -514,19 +514,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "DG1[Encounter]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Encounter[1].diagnosis.reference=Condition[1].id"
            ]
          ] [
            fhir:code [ fhir:v "antlr" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IF DG1-6 EQUALS \"admitting\""
            ]
          ] )
@@ -541,19 +541,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "DG1[Encounter]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Encounter[1].diagnosis.reference=Condition[1].id"
            ]
          ] [
            fhir:code [ fhir:v "narrative" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "If in context of an encounter"
            ]
          ] )
@@ -568,19 +568,19 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "DG1[EpisodeOfCare]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "EpisodeOfCare.diagnosis.reference=Condition[1].id"
            ]
          ] [
            fhir:code [ fhir:v "narrative" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "If in context of an episode of care"
            ]
          ] )
@@ -595,13 +595,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "PR1[Procedure]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Procedure.subject.reference=Patient[1].id"
            ]
          ] )
@@ -616,13 +616,13 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IN1[Coverage]"
            ]
          ] [
            fhir:code [ fhir:v "references" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Coverage.subscriber.reference=Patient[1].id"
            ]
          ] )
@@ -637,7 +637,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IN2[Coverage]"
            ]
          ] )
@@ -652,7 +652,7 @@
          fhir:property ( [
            fhir:code [ fhir:v "segment-map" ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "IN3[Coverage]"
            ]
          ] )

@@ -23,25 +23,25 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "normative"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "4.0.0"
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:integer ;
+       a fhir:Integer ;
        fhir:v 5
      ]
   ] ) ; # 
@@ -89,7 +89,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] before the hour of sleep (or trying to)"
            ]
          ] ) ;
@@ -98,7 +98,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] after waking"
            ]
          ] ) ;
@@ -107,7 +107,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs at a meal (from the Latin cibus)"
            ]
          ] ) ;
@@ -116,7 +116,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs at breakfast (from the Latin cibus matutinus)"
            ]
          ] ) ;
@@ -125,7 +125,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs at lunch (from the Latin cibus diurnus)"
            ]
          ] ) ;
@@ -134,7 +134,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs at dinner (from the Latin ante cibus vespertinus)"
            ]
          ] ) ;
@@ -143,7 +143,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] before a meal (from the Latin ante cibus)"
            ]
          ] ) ;
@@ -152,7 +152,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] before breakfast (from the Latin ante cibus matutinus)"
            ]
          ] ) ;
@@ -161,7 +161,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] before lunch (from the Latin ante cibus diurnus)"
            ]
          ] ) ;
@@ -170,7 +170,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] before dinner (from the Latin ante cibus vespertinus)"
            ]
          ] ) ;
@@ -179,7 +179,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] after a meal (from the Latin post cibus)"
            ]
          ] ) ;
@@ -188,7 +188,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] after breakfast (from the Latin post cibus matutinus)"
            ]
          ] ) ;
@@ -197,7 +197,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] after lunch (from the Latin post cibus diurnus)"
            ]
          ] ) ;
@@ -206,7 +206,7 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "event occurs [offset] after dinner (from the Latin post cibus vespertinus)"
            ]
          ] ) ;

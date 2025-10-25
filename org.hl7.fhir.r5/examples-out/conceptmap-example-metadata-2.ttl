@@ -22,7 +22,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "vocab"
      ]
   ] ) ; # 
@@ -100,11 +100,11 @@
      ]
   ] ) ; # 
   fhir:sourceScope [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://hl7.org/fhir/ValueSet/address-use"^^xsd:anyURI
   ] ; # 
   fhir:targetScope [
-     a fhir:uri ;
+     a fhir:Uri ;
      fhir:v "http://terminology.hl7.org/ValueSet/v3-AddressUse"^^xsd:anyURI
   ] ; # 
   fhir:group ( [

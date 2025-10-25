@@ -16,7 +16,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "fhir"
      ]
   ] ) ; # 
@@ -74,7 +74,7 @@
          fhir:transform [ fhir:v "evaluate" ] ;
          fhir:parameter ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "'draft'"
            ]
          ] )
@@ -92,7 +92,7 @@
          fhir:transform [ fhir:v "evaluate" ] ;
          fhir:parameter ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "'non-stock'"
            ]
          ] )
@@ -110,7 +110,7 @@
          fhir:transform [ fhir:v "evaluate" ] ;
          fhir:parameter ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "'routine'"
            ]
          ] )
@@ -157,7 +157,7 @@
          fhir:transform [ fhir:v "evaluate" ] ;
          fhir:parameter ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "now()"
            ]
          ] )
@@ -175,7 +175,7 @@
          fhir:transform [ fhir:v "evaluate" ] ;
          fhir:parameter ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "now()"
            ]
          ] )

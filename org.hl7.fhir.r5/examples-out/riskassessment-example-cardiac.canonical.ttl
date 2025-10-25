@@ -28,7 +28,7 @@
      fhir:reference [ fhir:v "Encounter/example" ]
   ] ; # 
   fhir:occurrence [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2014-07-19T16:04:00Z"^^xsd:dateTime
   ] ; # 
   fhir:performer [
@@ -49,7 +49,7 @@
        fhir:text [ fhir:v "Heart Attack" ]
      ] ;
      fhir:probability [
-       a fhir:decimal ;
+       a fhir:Decimal ;
        fhir:v 0.02
      ] ;
      fhir:when [

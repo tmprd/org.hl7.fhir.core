@@ -57,7 +57,7 @@
          fhir:display [ fhir:v "Patient" ] #     in practice, collecter is almost always recorded    
        ] ;
        fhir:collected [
-         a fhir:dateTime ;
+         a fhir:DateTime ;
          fhir:v "2011-08-16T06:15:00Z"^^xsd:dateTime
        ] ; #     the time of collection is usually required. Usually a point in time, but can be a period \n      (collectedPeriod) if it's a timed collection (e.g. a 24 hour urine)    
        fhir:method [
@@ -123,7 +123,7 @@
        fhir:reference [ fhir:v "Practitioner/f202" ] #     in practice, collecter is almost always recorded    
      ] ;
      fhir:collected [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2015-08-16T07:03:00Z"^^xsd:dateTime
      ] ; #     the time of collection is usually required. Usually a point in time, but can be a period \n      (collectedPeriod) if it's a timed collection (e.g. a 24 hour urine)    
      fhir:method [

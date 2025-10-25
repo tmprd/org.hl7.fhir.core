@@ -806,7 +806,7 @@
      fhir:display [ fhir:v "Todd Ashby" ]
   ] ) ; # 
   fhir:value [
-     a fhir:string ;
+     a fhir:String ;
      fhir:v "D-Test:  Negative - This isolate does not demonstrate inducible clindamycin resistance in vitro."
   ] . # 
 

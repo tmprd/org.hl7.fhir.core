@@ -233,7 +233,7 @@
        ] )
      ] ;
      fhir:serviced [
-       a fhir:date ;
+       a fhir:Date ;
        fhir:v "2015-10-13"^^xsd:date
      ] ;
      fhir:location [

@@ -14,7 +14,7 @@
      fhir:reference [ fhir:v "List/example" ]
   ] ) ; # 
   fhir:occurred [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2020-04-29T09:49:00.000Z"^^xsd:dateTime
   ] ; # 
   fhir:recorded [ fhir:v "2020-04-29T09:49:00.000Z"^^xsd:dateTime] ; # 

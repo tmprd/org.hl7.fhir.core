@@ -114,7 +114,7 @@
   ] ; # 
   fhir:substitution [
      fhir:allowed [
-       a fhir:boolean ;
+       a fhir:Boolean ;
        fhir:v false
      ] ;
      fhir:reason [

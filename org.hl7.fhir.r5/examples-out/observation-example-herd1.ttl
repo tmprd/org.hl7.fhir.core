@@ -50,7 +50,7 @@
      fhir:display [ fhir:v "part of a health assurance program" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2017-11-20"^^xsd:date
   ] ; # 
   fhir:value [

@@ -20,7 +20,7 @@
   ] ; # 
   fhir:destination ( [
      fhir:endpoint [
-       a fhir:url ;
+       a fhir:Url ;
        fhir:v "llp:10.11.12.14:5432"^^xsd:anyURI
      ] ;
      fhir:name [ fhir:v "Acme Message Gateway" ] ;
@@ -31,7 +31,7 @@
   ] ) ; # 
   fhir:source [
      fhir:endpoint [
-       a fhir:url ;
+       a fhir:Url ;
        fhir:v "llp:10.11.12.13:5432"^^xsd:anyURI
      ] ;
      fhir:name [ fhir:v "Acme Central Patient Registry" ] ;

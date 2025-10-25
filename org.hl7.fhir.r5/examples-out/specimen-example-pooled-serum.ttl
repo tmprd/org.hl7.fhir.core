@@ -56,7 +56,7 @@
        fhir:display [ fhir:v "James Herriot, FRCVS" ]
      ] ;
      fhir:collected [
-       a fhir:dateTime ;
+       a fhir:DateTime ;
        fhir:v "2017-11-14"^^xsd:date
      ]
   ] ; # 

@@ -37,7 +37,7 @@
      fhir:reference [ fhir:v "Encounter/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2018-02-01"^^xsd:date
   ] ; # 
   fhir:performer ( [

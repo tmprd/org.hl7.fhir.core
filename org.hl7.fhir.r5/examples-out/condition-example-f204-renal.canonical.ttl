@@ -68,11 +68,11 @@
      fhir:display [ fhir:v "Roel's encounter on March elevanth" ]
   ] ; # 
   fhir:onset [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2013-03-11"^^xsd:date
   ] ; # 
   fhir:abatement [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2013-03-20"^^xsd:date
   ] ; # 
   fhir:recordedDate [ fhir:v "2013-03-11"^^xsd:date] ; # 

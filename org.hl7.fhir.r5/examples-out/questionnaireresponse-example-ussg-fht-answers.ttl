@@ -28,7 +28,7 @@
        fhir:text [ fhir:v "Date Done" ] ;
        fhir:answer ( [
          fhir:value [
-           a fhir:date ;
+           a fhir:Date ;
            fhir:v "2008-01-17"^^xsd:date
          ]
        ] )
@@ -45,7 +45,7 @@
          fhir:text [ fhir:v "Name" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Annie Proband"
            ]
          ] )
@@ -67,7 +67,7 @@
          fhir:text [ fhir:v "Date of Birth" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:date ;
+             a fhir:Date ;
              fhir:v "1966-04-04"^^xsd:date
            ]
          ] )
@@ -113,7 +113,7 @@
          fhir:text [ fhir:v "Height" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "63"^^xsd:decimal
            ] ;
            fhir:item ( [
@@ -138,7 +138,7 @@
          fhir:text [ fhir:v "Weight" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v "127"^^xsd:decimal
            ] ;
            fhir:item ( [
@@ -163,7 +163,7 @@
          fhir:text [ fhir:v "Body mass index (BMI) [Ratio]" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:decimal ;
+             a fhir:Decimal ;
              fhir:v 22.5
            ]
          ] )
@@ -224,7 +224,7 @@
          fhir:text [ fhir:v "Name" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:string ;
+             a fhir:String ;
              fhir:v "Susan"
            ]
          ] )
@@ -259,7 +259,7 @@
                fhir:text [ fhir:v "Age" ] ;
                fhir:answer ( [
                  fhir:value [
-                   a fhir:decimal ;
+                   a fhir:Decimal ;
                    fhir:v "17"^^xsd:decimal
                  ]
                ] )
@@ -313,7 +313,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Brian"
              ]
            ] )
@@ -348,7 +348,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "32"^^xsd:decimal
                    ]
                  ] )
@@ -429,7 +429,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Janet"
              ]
            ] )
@@ -464,7 +464,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "36"^^xsd:decimal
                    ]
                  ] )
@@ -545,7 +545,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Ian"
              ]
            ] )
@@ -580,7 +580,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "16"^^xsd:decimal
                    ]
                  ] )
@@ -635,7 +635,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Helen"
              ]
            ] )
@@ -670,7 +670,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "15"^^xsd:decimal
                    ]
                  ] )
@@ -725,7 +725,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Donald"
              ]
            ] )
@@ -760,7 +760,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "52"^^xsd:decimal
                    ]
                  ] )
@@ -815,7 +815,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Eric"
              ]
            ] )
@@ -850,7 +850,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "56"^^xsd:decimal
                    ]
                  ] )
@@ -905,7 +905,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Fiona"
              ]
            ] )
@@ -940,7 +940,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "57"^^xsd:decimal
                    ]
                  ] )
@@ -1010,7 +1010,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Bob"
              ]
            ] )
@@ -1140,7 +1140,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Claire"
              ]
            ] )
@@ -1185,7 +1185,7 @@
                      fhir:text [ fhir:v "Please specify" ] ;
                      fhir:answer ( [
                        fhir:value [
-                         a fhir:string ;
+                         a fhir:String ;
                          fhir:v "Lou Gehrigs"
                        ]
                      ] )
@@ -1254,7 +1254,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Harriet"
              ]
            ] )
@@ -1384,7 +1384,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Rudy"
              ]
            ] )
@@ -1419,7 +1419,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "60"^^xsd:decimal
                    ]
                  ] )
@@ -1474,7 +1474,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Julie"
              ]
            ] )
@@ -1509,7 +1509,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "57"^^xsd:decimal
                    ]
                  ] )
@@ -1564,7 +1564,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Ian"
              ]
            ] )
@@ -1668,7 +1668,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Gladys"
              ]
            ] )
@@ -1824,7 +1824,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Karren"
              ]
            ] )
@@ -1859,7 +1859,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "30"^^xsd:decimal
                    ]
                  ] )
@@ -1940,7 +1940,7 @@
            fhir:text [ fhir:v "Name" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:string ;
+               a fhir:String ;
                fhir:v "Mary"
              ]
            ] )
@@ -1975,7 +1975,7 @@
                  fhir:text [ fhir:v "Age" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:decimal ;
+                     a fhir:Decimal ;
                      fhir:v "31"^^xsd:decimal
                    ]
                  ] )

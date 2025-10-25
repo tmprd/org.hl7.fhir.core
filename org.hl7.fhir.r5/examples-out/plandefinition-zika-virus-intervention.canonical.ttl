@@ -17,7 +17,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "cds"
      ]
   ] ) ; # 
@@ -110,7 +110,7 @@
          ]
        ] ) ;
        fhir:definition [
-         a fhir:canonical ;
+         a fhir:Canonical ;
          fhir:v "http://example.org/fhir/ActivityDefinition/administer-zika-virus-exposure-assessment"^^xsd:anyURI ;
          fhir:link <http://example.org/fhir/ActivityDefinition/administer-zika-virus-exposure-assessment>
        ]
@@ -123,7 +123,7 @@
          ]
        ] ) ;
        fhir:definition [
-         a fhir:canonical ;
+         a fhir:Canonical ;
          fhir:v "http://example.org/fhir/ActivityDefinition/order-serum-urine-rrt-pcr-test"^^xsd:anyURI ;
          fhir:link <http://example.org/fhir/ActivityDefinition/order-serum-urine-rrt-pcr-test>
        ]
@@ -136,7 +136,7 @@
          ]
        ] ) ;
        fhir:definition [
-         a fhir:canonical ;
+         a fhir:Canonical ;
          fhir:v "http://example.org/fhir/ActivityDefinition/order-serum-zika-dengue-virus-igm"^^xsd:anyURI ;
          fhir:link <http://example.org/fhir/ActivityDefinition/order-serum-zika-dengue-virus-igm>
        ]
@@ -149,7 +149,7 @@
          ]
        ] ) ;
        fhir:definition [
-         a fhir:canonical ;
+         a fhir:Canonical ;
          fhir:v "http://example.org/fhir/ActivityDefinition/consider-igm-antibody-testing"^^xsd:anyURI ;
          fhir:link <http://example.org/fhir/ActivityDefinition/consider-igm-antibody-testing>
        ]
@@ -163,13 +163,13 @@
        ] ) ;
        fhir:action ( [
          fhir:definition [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "http://example.org/fhir/ActivityDefinition/provide-mosquito-prevention-advice"^^xsd:anyURI ;
            fhir:link <http://example.org/fhir/ActivityDefinition/provide-mosquito-prevention-advice>
          ]
        ] [
          fhir:definition [
-           a fhir:canonical ;
+           a fhir:Canonical ;
            fhir:v "http://example.org/fhir/ActivityDefinition/provide-contraception-advice"^^xsd:anyURI ;
            fhir:link <http://example.org/fhir/ActivityDefinition/provide-contraception-advice>
          ]

@@ -112,7 +112,7 @@
      fhir:reference [ fhir:v "Encounter/example" ]
   ] ; # 
   fhir:effective [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2011-03-04T08:30:00+11:00"^^xsd:dateTime
   ] ; # 
   fhir:issued [ fhir:v "2011-03-04T11:45:33+11:00"^^xsd:dateTime] ; #      all this report is final     

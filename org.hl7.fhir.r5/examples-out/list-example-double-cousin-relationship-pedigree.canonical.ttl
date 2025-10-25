@@ -30,7 +30,7 @@
        fhir:text [ fhir:v "natural mother" ]
      ] ;
      fhir:deceased [
-       a fhir:boolean ;
+       a fhir:Boolean ;
        fhir:v true
      ] ;
      fhir:condition ( [

@@ -19,7 +19,7 @@
   fhir:extension ( [
      fhir:url [ fhir:v "http://example.org/StructureDefinition/trials"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
+       a fhir:Code ;
        fhir:v "renal"
      ]
   ] ) ; # 

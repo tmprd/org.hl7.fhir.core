@@ -31,7 +31,7 @@
      fhir:reference [ fhir:v "Patient/dicom" ]
   ] ; # 
   fhir:identified [
-     a fhir:dateTime ;
+     a fhir:DateTime ;
      fhir:v "2013-05-08"^^xsd:date
   ] ; # 
   fhir:author [
