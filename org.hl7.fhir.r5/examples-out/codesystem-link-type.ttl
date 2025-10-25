@@ -1,0 +1,126 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/link-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "link-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem link-type</b>\n      </p>\n      <a name=\"link-type\"> </a>\n      <a name=\"hclink-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/link-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n          <td>\n            <b>Nederlands (Dutch, nl)</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">replaced-by\n            <a name=\"link-type-replaced-by\"> </a>\n          </td>\n          <td>Replaced-by</td>\n          <td>The patient resource containing this link must no longer be used. The link points forward to another patient resource that must be used in lieu of the patient resource that contains this link.</td>\n          <td>Vervangen door</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">replaces\n            <a name=\"link-type-replaces\"> </a>\n          </td>\n          <td>Replaces</td>\n          <td>The patient resource containing this link is the current active patient record. The link points back to an inactive patient resource that has been merged into this resource, and should be consulted to retrieve additional referenced information.</td>\n          <td>Vervangt</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">refer\n            <a name=\"link-type-refer\"> </a>\n          </td>\n          <td>Refer</td>\n          <td>The patient resource containing this link is in use and valid but not considered the main source of information about a patient. The link points forward to another patient resource that should be consulted to retrieve additional patient information.</td>\n          <td>Verwijzing</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">seealso\n            <a name=\"link-type-seealso\"> </a>\n          </td>\n          <td>See also</td>\n          <td>The patient resource containing this link is in use and valid, but points to another Patient or RelatedPerson resource that is known to contain data about the same person. Data in this resource might overlap or contradict information found in the other Patient/RelatedPerson resource. This link does not indicate any relative importance of the resources concerned, and both should be regarded as equally valid.</td>\n          <td>Zie ook</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pa"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.0"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/link-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.424" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.413" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.234" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "LinkType"] ; # 
+  fhir:title [ fhir:v "Link Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of link between this Patient resource and other Patient/RelatedPerson resource(s)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/link-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/link-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "replaced-by" ] ;
+     fhir:display [ fhir:v "Replaced-by" ] ;
+     fhir:definition [ fhir:v "The patient resource containing this link must no longer be used. The link points forward to another patient resource that must be used in lieu of the patient resource that contains this link." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "nl" ] ;
+       fhir:value [ fhir:v "Vervangen door" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "replaces" ] ;
+     fhir:display [ fhir:v "Replaces" ] ;
+     fhir:definition [ fhir:v "The patient resource containing this link is the current active patient record. The link points back to an inactive patient resource that has been merged into this resource, and should be consulted to retrieve additional referenced information." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "nl" ] ;
+       fhir:value [ fhir:v "Vervangt" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "refer" ] ;
+     fhir:display [ fhir:v "Refer" ] ;
+     fhir:definition [ fhir:v "The patient resource containing this link is in use and valid but not considered the main source of information about a patient. The link points forward to another patient resource that should be consulted to retrieve additional patient information." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "nl" ] ;
+       fhir:value [ fhir:v "Verwijzing" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "seealso" ] ;
+     fhir:display [ fhir:v "See also" ] ;
+     fhir:definition [ fhir:v "The patient resource containing this link is in use and valid, but points to another Patient or RelatedPerson resource that is known to contain data about the same person. Data in this resource might overlap or contradict information found in the other Patient/RelatedPerson resource. This link does not indicate any relative importance of the resources concerned, and both should be regarded as equally valid." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "nl" ] ;
+       fhir:value [ fhir:v "Zie ook" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

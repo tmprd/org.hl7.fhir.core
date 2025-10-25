@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+#   insert contents here  
+
+<http://hl7.org/fhir/DeviceAssociation/example> a fhir:DeviceAssociation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:device [
+     fhir:link <http://hl7.org/fhir/Device/prod1> ;
+     fhir:reference [ fhir:v "Device/prod1" ]
+  ] ; # 
+  fhir:status [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/deviceassociation-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "implanted" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/pat1> ;
+     fhir:reference [ fhir:v "Patient/pat1" ] ;
+     fhir:display [ fhir:v "Donald Duck" ]
+  ] . # 
+
+<http://hl7.org/fhir/Device/prod1> a fhir:Device .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

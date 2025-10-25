@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OperationDefinition/Resource-meta-add> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Resource-meta-add"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: OperationDefinition Resource-meta-add</b>\n      </p>\n      <a name=\"Resource-meta-add\"> </a>\n      <a name=\"hcResource-meta-add\"> </a>\n      <p>URL: [base]/Resource/[id]/$meta-add</p>\n      <h3>Parameters</h3>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Use</b>\n          </td>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Scope</b>\n          </td>\n          <td>\n            <b>Cardinality</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Binding</b>\n          </td>\n          <td>\n            <b>Documentation</b>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>meta</td>\n          <td/>\n          <td>1..1</td>\n          <td>\n            <a href=\"resource.html#Meta\">Meta</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>Profiles, tags, and security labels to add to the existing resource. Note that profiles, tags, and security labels are sets, and duplicates are not created.  The identity of a tag or security label is the system+code. When matching existing tags during adding, version and display are ignored. For profiles, matching is based on the full URL</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>OUT</td>\n          <td>return</td>\n          <td/>\n          <td>1..1</td>\n          <td>\n            <a href=\"resource.html#Meta\">Meta</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>Resulting meta for the resource</p>\n\n            </div>\n          </td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/OperationDefinition/Resource-meta-add"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "MetaAdd"] ; # 
+  fhir:title [ fhir:v "Add profiles, tags, and security labels to a resource"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This operation takes a meta, and adds the profiles, tags, and security labels found in it to the nominated resource"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:affectsState [ fhir:v true] ; # 
+  fhir:code [ fhir:v "meta-add"] ; # 
+  fhir:resource ( [ fhir:v "Resource"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v false] ; # 
+  fhir:instance [ fhir:v true] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "meta" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Profiles, tags, and security labels to add to the existing resource. Note that profiles, tags, and security labels are sets, and duplicates are not created.  The identity of a tag or security label is the system+code. When matching existing tags during adding, version and display are ignored. For profiles, matching is based on the full URL" ] ;
+     fhir:type [ fhir:v "Meta" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Resulting meta for the resource" ] ;
+     fhir:type [ fhir:v "Meta" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

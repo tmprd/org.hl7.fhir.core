@@ -1,0 +1,351 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Citation/example-dataset-citation> a fhir:Citation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-dataset-citation"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "5" ] ;
+     fhir:lastUpdated [ fhir:v "2023-12-02T22:30:09.159Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ebm/StructureDefinition/dataset-citation"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ebm/StructureDefinition/dataset-citation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n		\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: Citation 179559</b>\n      </p>\n      <a name=\"179559\"> </a>\n      <a name=\"hc179559\"> </a>\n      <a name=\"179559-en-US\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">version: 5; Last updated: 2023-12-02 22:30:09+0000</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"StructureDefinition-dataset-citation.html\">DatasetCitation</a>\n        </p>\n      </div>\n      <p>\n        <b>url</b>: \n        <a href=\"Citation-179559.html\">Citation DatasetCitation: Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes</a>\n      </p>\n      <p>\n        <b>identifier</b>: FEvIR Object Identifier/179559\n      </p>\n      <p>\n        <b>version</b>: 1.0.0-ballot2\n      </p>\n      <p>\n        <b>title</b>: DatasetCitation: Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes\n      </p>\n      <p>\n        <b>status</b>: Active\n      </p>\n      <p>\n        <b>date</b>: 2025-02-24 19:37:10+0000\n      </p>\n      <p>\n        <b>publisher</b>: HL7 International / Clinical Decision Support\n      </p>\n      <p>\n        <b>contact</b>: HL7 International / Clinical Decision Support: \n        <a href=\"http://www.hl7.org/Special/committees/dss\">http://www.hl7.org/Special/committees/dss</a>\n      </p>\n      <p>\n        <b>description</b>: \n      </p>\n      <div>\n        <p>This Citation Resource is referenced in an example for the EBMonFHIR Implementation Guide.</p>\n		\n      </div>\n      <p>\n        <b>jurisdiction</b>: \n        <span title=\"Codes:{http://unstats.un.org/unsd/methods/m49/m49.htm 001}\">World</span>\n      </p>\n      <p>\n        <b>copyright</b>: \n      </p>\n      <div>\n        <p>https://creativecommons.org/licenses/by-nc-sa/4.0/</p>\n		\n      </div>\n      <p>\n        <b>author</b>: Brian S. Alper: \n      </p>\n      <h3>Summaries</h3>\n      <table class=\"grid\">\n        <tr>\n          <td style=\"display: none\">-</td>\n          <td>\n            <b>Style</b>\n          </td>\n          <td>\n            <b>Text</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"display: none\">*</td>\n          <td>\n            <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/citation-summary-style comppub}\">Computable Publishing</span>\n          </td>\n          <td>\n            <div>\n              <p>Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes [Dataset]. Contributors:  Anish Thomas,  Lorinc S. Pongor,  Rajesh Kumar,  Parth Desai [Authors]. In: database of Genotypes and Phenotypes, Accession Number phs003190.v1.p1. Published October 16, 2023. Available at: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003190.v1.p1.</p>\n		\n            </div>\n          </td>\n        </tr>\n      </table>\n      <blockquote>\n        <p>\n          <b>citedArtifact</b>\n        </p>\n        <p>\n          <b>identifier</b>: dbGaP Study Accession/phs003190.v1.p1\n        </p>\n        <h3>Titles</h3>\n        <table class=\"grid\">\n          <tr>\n            <td style=\"display: none\">-</td>\n            <td>\n              <b>Type</b>\n            </td>\n            <td>\n              <b>Language</b>\n            </td>\n            <td>\n              <b>Text</b>\n            </td>\n          </tr>\n          <tr>\n            <td style=\"display: none\">*</td>\n            <td>\n              <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/title-type primary}\">Primary title</span>\n            </td>\n            <td>\n              <span title=\"Codes:{urn:ietf:bcp:47 en}\">English</span>\n            </td>\n            <td>\n              <div>\n                <p>Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes</p>\n		\n              </div>\n            </td>\n          </tr>\n        </table>\n        <h3>Abstracts</h3>\n        <table class=\"grid\">\n          <tr>\n            <td style=\"display: none\">-</td>\n            <td>\n              <b>Type</b>\n            </td>\n            <td>\n              <b>Language</b>\n            </td>\n            <td>\n              <b>Text</b>\n            </td>\n          </tr>\n          <tr>\n            <td style=\"display: none\">*</td>\n            <td>\n              <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 description}\">Study Description</span>\n            </td>\n            <td>\n              <span title=\"Codes:{urn:ietf:bcp:47 en}\">English</span>\n            </td>\n            <td>\n              <div>\n                <p>Small-cell lung cancer (SCLC) is a very aggressive neuroendocrine lung cancer often associated with oncogenic MYC amplifications, which are known to drive SCLC heterogeneity marked by neuroendocrine (NE) and non-neuroendocrine (non-NE) cell states. The genetic mechanisms of MYC amplification and phenotypic plasticity between cell states is not known. Using data from cell-lines and a few patient-derived samples along with integrated whole-genome sequencing, long-range optical mapping, single-cell DNA sequencing, and fluorescence in situ hybridization, we have attempted to successfully characterize extrachromosomal DNA (ecDNA) as the primary source of MYC amplifications and driver fusions in SCLC.</p>\n		\n                <p>Study Design:\n		Cross-Sectional\n		Study Type:\n		Observational\n		Total number of consented subjects: 5</p>\n		\n              </div>\n            </td>\n          </tr>\n        </table>\n        <blockquote>\n          <p>\n            <b>publicationForm</b>\n          </p>\n          <h3>PublishedIns</h3>\n          <table class=\"grid\">\n            <tr>\n              <td style=\"display: none\">-</td>\n              <td>\n                <b>Type</b>\n              </td>\n              <td>\n                <b>Identifier</b>\n              </td>\n              <td>\n                <b>Title</b>\n              </td>\n              <td>\n                <b>Publisher</b>\n              </td>\n              <td>\n                <b>PublisherLocation</b>\n              </td>\n            </tr>\n            <tr>\n              <td style=\"display: none\">*</td>\n              <td>\n                <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/published-in-type D019991}\">Database</span>\n              </td>\n              <td>Abbreviation/dbGaP</td>\n              <td>database of Genotypes and Phenotypes</td>\n              <td>NLM</td>\n              <td>Bethesda, MD, USA</td>\n            </tr>\n          </table>\n          <p>\n            <b>citedMedium</b>: \n            <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/cited-medium internet}\">Internet</span>\n          </p>\n          <p>\n            <b>articleDate</b>: 2023-10-16\n          </p>\n          <p>\n            <b>accessionNumber</b>: phs003190.v1.p1\n          </p>\n          <p>\n            <b>pageCount</b>: Total number of consented subjects: 5\n          </p>\n          <p>\n            <b>copyright</b>: \n          </p>\n          <div>\n            <p>Data access provided by: dbGaP Authorized Access. For publicly available data (public ftp), Connect to the public download site. The site contains release notes and manifests. The site also contains data dictionaries, variable summaries, documents, and truncated analyses, whenever available.</p>\n		\n          </div>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>webLocation</b>\n          </p>\n          <p>\n            <b>classifier</b>: \n            <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/artifact-url-classifier webpage}\">Webpage</span>\n          </p>\n          <p>\n            <b>url</b>: \n            <a href=\"https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003190.v1.p1\">https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003190.v1.p1</a>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>webLocation</b>\n          </p>\n          <p>\n            <b>classifier</b>: \n            <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 defined-in-text}\">public download site</span>\n          </p>\n          <p>\n            <b>url</b>: \n            <a href=\"https://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs003190/phs003190.v1.p1\">https://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs003190/phs003190.v1.p1</a>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>classification</b>\n          </p>\n          <p>\n            <b>type</b>: \n            <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type knowledge-artifact-type}\">Knowledge Artifact Type</span>\n          </p>\n          <p>\n            <b>classifier</b>: \n            <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/citation-artifact-classifier D064886}\">Dataset</span>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>classification</b>\n          </p>\n          <p>\n            <b>type</b>: \n            <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 study-design}\">Study Design</span>\n          </p>\n          <p>\n            <b>classifier</b>: \n            <span title=\"Codes:{https://fevir.net/resources/CodeSystem/181513 SEVCO:01027}\">Cross-Sectional</span>, \n            <span title=\"Codes:{https://fevir.net/resources/CodeSystem/181513 SEVCO:01002}\">Observational Research</span>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>classification</b>\n          </p>\n          <p>\n            <b>type</b>: \n            <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 defined-in-text}\">Primary Phenotype</span>\n          </p>\n          <p>\n            <b>classifier</b>: \n            <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 defined-in-text}\">Small Cell Lung Carcinoma</span>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>contributorship</b>\n          </p>\n          <p>\n            <b>complete</b>: true\n          </p>\n          <blockquote>\n            <p>\n              <b>entry</b>\n            </p>\n            <p>\n              <b>contributor</b>: \n              <a href=\"#hc179559/contributor0\">Practitioner Anish Thomas </a>\n            </p>\n            <p>\n              <b>affiliation</b>: Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA\n            </p>\n            <p>\n              <b>contributionType</b>: \n              <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 principal-investigator}\">Principal Investigator</span>\n            </p>\n            <p>\n              <b>role</b>: \n              <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contributor-role author}\">Author/Creator</span>\n            </p>\n          </blockquote>\n          <blockquote>\n            <p>\n              <b>entry</b>\n            </p>\n            <p>\n              <b>contributor</b>: \n              <a href=\"#hc179559/contributor1\">Practitioner Lorinc S. Pongor </a>\n            </p>\n            <p>\n              <b>affiliation</b>: Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA\n            </p>\n            <p>\n              <b>contributionType</b>: \n              <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 co-investigator}\">Co-Investigator</span>\n            </p>\n            <p>\n              <b>role</b>: \n              <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contributor-role author}\">Author/Creator</span>\n            </p>\n          </blockquote>\n          <blockquote>\n            <p>\n              <b>entry</b>\n            </p>\n            <p>\n              <b>contributor</b>: \n              <a href=\"#hc179559/contributor2\">Practitioner Rajesh Kumar </a>\n            </p>\n            <p>\n              <b>affiliation</b>: Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA\n            </p>\n            <p>\n              <b>contributionType</b>: \n              <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 co-investigator}\">Co-Investigator</span>\n            </p>\n            <p>\n              <b>role</b>: \n              <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contributor-role author}\">Author/Creator</span>\n            </p>\n          </blockquote>\n          <blockquote>\n            <p>\n              <b>entry</b>\n            </p>\n            <p>\n              <b>contributor</b>: \n              <a href=\"#hc179559/contributor3\">Practitioner Parth Desai </a>\n            </p>\n            <p>\n              <b>affiliation</b>: Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA\n            </p>\n            <p>\n              <b>contributionType</b>: \n              <span title=\"Codes:{https://fevir.net/resources/CodeSystem/179423 co-investigator}\">Co-Investigator</span>\n            </p>\n            <p>\n              <b>role</b>: \n              <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contributor-role author}\">Author/Creator</span>\n            </p>\n          </blockquote>\n        </blockquote>\n      </blockquote>\n      <hr/>\n      <blockquote>\n        <p class=\"res-header-id\">\n          <b>Generated Narrative: Practitioner #contributor0</b>\n        </p>\n        <a name=\"179559/contributor0\"> </a>\n        <a name=\"hc179559/contributor0\"> </a>\n        <a name=\"179559/contributor0-en-US\"> </a>\n        <p>\n          <b>name</b>: Anish Thomas \n        </p>\n      </blockquote>\n      <hr/>\n      <blockquote>\n        <p class=\"res-header-id\">\n          <b>Generated Narrative: Practitioner #contributor1</b>\n        </p>\n        <a name=\"179559/contributor1\"> </a>\n        <a name=\"hc179559/contributor1\"> </a>\n        <a name=\"179559/contributor1-en-US\"> </a>\n        <p>\n          <b>name</b>: Lorinc S. Pongor \n        </p>\n      </blockquote>\n      <hr/>\n      <blockquote>\n        <p class=\"res-header-id\">\n          <b>Generated Narrative: Practitioner #contributor2</b>\n        </p>\n        <a name=\"179559/contributor2\"> </a>\n        <a name=\"hc179559/contributor2\"> </a>\n        <a name=\"179559/contributor2-en-US\"> </a>\n        <p>\n          <b>name</b>: Rajesh Kumar \n        </p>\n      </blockquote>\n      <hr/>\n      <blockquote>\n        <p class=\"res-header-id\">\n          <b>Generated Narrative: Practitioner #contributor3</b>\n        </p>\n        <a name=\"179559/contributor3\"> </a>\n        <a name=\"hc179559/contributor3\"> </a>\n        <a name=\"179559/contributor3-en-US\"> </a>\n        <p>\n          <b>name</b>: Parth Desai \n        </p>\n      </blockquote>\n	\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor0" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Thomas" ] ;
+       fhir:given ( [ fhir:v "Anish" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor1" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Pongor" ] ;
+       fhir:given ( [ fhir:v "Lorinc S." ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor2" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Kumar" ] ;
+       fhir:given ( [ fhir:v "Rajesh" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor3" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Desai" ] ;
+       fhir:given ( [ fhir:v "Parth" ] )
+     ] )
+  ] ) ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/Citation/example-dataset-citation"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] ) ;
+       fhir:text [ fhir:v "FEvIR Object Identifier" ]
+     ] ;
+     fhir:system [ fhir:v "https://fevir.net"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "179559" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Computable Publishing LLC" ]
+     ]
+  ] ) ; # 
+  fhir:version [ fhir:v "1.0.0-ballot2"] ; # 
+  fhir:title [ fhir:v "DatasetCitation: Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-02-24T19:37:10+00:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:name [ fhir:v "Brian S. Alper" ]
+  ] ) ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This Citation Resource is referenced in an example for the EBMonFHIR Implementation Guide."] ; # 
+  fhir:copyright [ fhir:v "https://creativecommons.org/licenses/by-nc-sa/4.0/"] ; # 
+  fhir:summary ( [
+     fhir:style [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-summary-style"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "comppub" ] ;
+         fhir:display [ fhir:v "Computable Publishing" ]
+       ] )
+     ] ;
+     fhir:text [ fhir:v "Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes [Dataset]. Contributors:  Anish Thomas,  Lorinc S. Pongor,  Rajesh Kumar,  Parth Desai [Authors]. In: database of Genotypes and Phenotypes, Accession Number phs003190.v1.p1. Published October 16, 2023. Available at: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003190.v1.p1." ]
+  ] ) ; # 
+  fhir:citedArtifact [
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ACSN" ] ;
+           fhir:display [ fhir:v "Accession ID" ]
+         ] ) ;
+         fhir:text [ fhir:v "dbGaP Study Accession" ]
+       ] ;
+       fhir:value [ fhir:v "phs003190.v1.p1" ]
+     ] ) ;
+     fhir:title ( [
+       fhir:type ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/title-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "primary" ] ;
+           fhir:display [ fhir:v "Primary title" ]
+         ] )
+       ] ) ;
+       fhir:language [ ] ;
+       fhir:text [ fhir:v "Extrachromosomal DNA Amplification Contributes to Small Cell Lung Cancer Heterogeneity and is Associated with Worse Outcomes" ]
+     ] ) ;
+     fhir:abstract ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "description" ] ;
+           fhir:display [ fhir:v "Description" ]
+         ] ) ;
+         fhir:text [ fhir:v "Study Description" ]
+       ] ;
+       fhir:language [ ] ;
+       fhir:text [ fhir:v "Small-cell lung cancer (SCLC) is a very aggressive neuroendocrine lung cancer often associated with oncogenic MYC amplifications, which are known to drive SCLC heterogeneity marked by neuroendocrine (NE) and non-neuroendocrine (non-NE) cell states. The genetic mechanisms of MYC amplification and phenotypic plasticity between cell states is not known. Using data from cell-lines and a few patient-derived samples along with integrated whole-genome sequencing, long-range optical mapping, single-cell DNA sequencing, and fluorescence in situ hybridization, we have attempted to successfully characterize extrachromosomal DNA (ecDNA) as the primary source of MYC amplifications and driver fusions in SCLC.\n\nStudy Design:\nCross-Sectional\nStudy Type:\nObservational\nTotal number of consented subjects: 5" ]
+     ] ) ;
+     fhir:publicationForm ( [
+       fhir:publishedIn [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/published-in-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "D019991" ] ;
+             fhir:display [ fhir:v "Database" ]
+           ] )
+         ] ;
+         fhir:identifier ( [
+           fhir:type [
+             fhir:coding ( [
+               fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "XX" ] ;
+               fhir:display [ fhir:v "Organization identifier" ]
+             ] ) ;
+             fhir:text [ fhir:v "Abbreviation" ]
+           ] ;
+           fhir:value [ fhir:v "dbGaP" ]
+         ] ) ;
+         fhir:title [ fhir:v "database of Genotypes and Phenotypes" ] ;
+         fhir:publisher [
+           fhir:display [ fhir:v "NLM" ]
+         ] ;
+         fhir:publisherLocation [ fhir:v "Bethesda, MD, USA" ]
+       ] ;
+       fhir:citedMedium [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-medium"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "internet" ] ;
+           fhir:display [ fhir:v "Internet" ]
+         ] )
+       ] ;
+       fhir:articleDate [ fhir:v "2023-10-16"^^xsd:date ] ;
+       fhir:accessionNumber [ fhir:v "phs003190.v1.p1" ] ;
+       fhir:pageCount [ fhir:v "Total number of consented subjects: 5" ] ;
+       fhir:copyright [ fhir:v "Data access provided by: dbGaP Authorized Access. For publicly available data (public ftp), Connect to the public download site. The site contains release notes and manifests. The site also contains data dictionaries, variable summaries, documents, and truncated analyses, whenever available." ]
+     ] ) ;
+     fhir:webLocation ( [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "webpage" ] ;
+           fhir:display [ fhir:v "Webpage" ]
+         ] )
+       ] ) ;
+       fhir:url [ fhir:v "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003190.v1.p1"^^xsd:anyURI ]
+     ] [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "defined-in-text" ] ;
+           fhir:display [ fhir:v "Defined in text" ]
+         ] ) ;
+         fhir:text [ fhir:v "public download site" ]
+       ] ) ;
+       fhir:url [ fhir:v "https://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs003190/phs003190.v1.p1"^^xsd:anyURI ]
+     ] ) ;
+     fhir:classification ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "knowledge-artifact-type" ] ;
+           fhir:display [ fhir:v "Knowledge Artifact Type" ]
+         ] )
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D064886" ] ;
+           fhir:display [ fhir:v "Dataset" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "study-design" ] ;
+           fhir:display [ fhir:v "Study Design" ]
+         ] ) ;
+         fhir:text [ fhir:v "Study Design" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/181513"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "SEVCO:01027" ] ;
+           fhir:display [ fhir:v "Cross sectional data collection" ]
+         ] ) ;
+         fhir:text [ fhir:v "Cross-Sectional" ]
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/181513"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "SEVCO:01002" ] ;
+           fhir:display [ fhir:v "observational research" ]
+         ] ) ;
+         fhir:text [ fhir:v "Observational Research" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "defined-in-text" ] ;
+           fhir:display [ fhir:v "Defined in text" ]
+         ] ) ;
+         fhir:text [ fhir:v "Primary Phenotype" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "defined-in-text" ] ;
+           fhir:display [ fhir:v "Defined in text" ]
+         ] ) ;
+         fhir:text [ fhir:v "Small Cell Lung Carcinoma" ]
+       ] )
+     ] ) ;
+     fhir:contributorship [
+       fhir:complete [ fhir:v true ] ;
+       fhir:entry ( [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor0" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+         ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA" ]
+         ] ) ;
+         fhir:contributionType ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "principal-investigator" ] ;
+             fhir:display [ fhir:v "Principal Investigator" ]
+           ] ) ;
+           fhir:text [ fhir:v "Principal Investigator" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contributor-role"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "author" ] ;
+             fhir:display [ fhir:v "Author/Creator" ]
+           ] )
+         ]
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor1" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+         ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA" ]
+         ] ) ;
+         fhir:contributionType ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "co-investigator" ] ;
+             fhir:display [ fhir:v "Co-Investigator" ]
+           ] ) ;
+           fhir:text [ fhir:v "Co-Investigator" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contributor-role"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "author" ] ;
+             fhir:display [ fhir:v "Author/Creator" ]
+           ] )
+         ]
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor2" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+         ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA" ]
+         ] ) ;
+         fhir:contributionType ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "co-investigator" ] ;
+             fhir:display [ fhir:v "Co-Investigator" ]
+           ] ) ;
+           fhir:text [ fhir:v "Co-Investigator" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contributor-role"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "author" ] ;
+             fhir:display [ fhir:v "Author/Creator" ]
+           ] )
+         ]
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor3" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+         ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Developmental Therapeutics Branch, Center for Cancer Research, National Cancer Institute, Bethesda, MD, USA" ]
+         ] ) ;
+         fhir:contributionType ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://fevir.net/resources/CodeSystem/179423"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "co-investigator" ] ;
+             fhir:display [ fhir:v "Co-Investigator" ]
+           ] ) ;
+           fhir:text [ fhir:v "Co-Investigator" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contributor-role"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "author" ] ;
+             fhir:display [ fhir:v "Author/Creator" ]
+           ] )
+         ]
+       ] )
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

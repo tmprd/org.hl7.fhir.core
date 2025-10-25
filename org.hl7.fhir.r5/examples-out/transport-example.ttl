@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+#  
+#This is the corresponding supply delivery from the supplye request example
+# 
+
+<http://hl7.org/fhir/Transport/simpledelivery> a fhir:Transport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "simpledelivery"] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "Transport1234" ]
+  ] ) ; #  
+#business identifier - in this case the same as the request id
+# 
+  fhir:basedOn ( [
+     fhir:link <http://hl7.org/fhir/SupplyRequest/simpleorder> ;
+     fhir:reference [ fhir:v "SupplyRequest/simpleorder" ]
+  ] ) ; # 
+  fhir:partOf ( [
+     fhir:display [ fhir:v "Central Supply Restock" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] . # 
+
+<http://hl7.org/fhir/SupplyRequest/simpleorder> a fhir:SupplyRequest .
+
+# -------------------------------------------------------------------------------------
+

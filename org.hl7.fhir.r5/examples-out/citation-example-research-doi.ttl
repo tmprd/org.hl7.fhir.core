@@ -1,0 +1,368 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Citation/citation-example-research-doi> a fhir:Citation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "citation-example-research-doi"] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:text [ fhir:v "FEvIR Object Identifier" ]
+     ] ;
+     fhir:system [ fhir:v "https://fevir.net"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "60" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Computable Publishing LLC" ]
+     ]
+  ] [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.8.6" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "NInFEACitation"] ; # 
+  fhir:title [ fhir:v "NInFEA Citation"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2021-09-24T10:41:01.740Z"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A citation of a dataset"] ; # 
+  fhir:copyright [ fhir:v "https://creativecommons.org/licenses/by-nc-sa/4.0/"] ; # 
+  fhir:summary ( [
+     fhir:style [
+       fhir:text [ fhir:v "as reported on PhysioNet" ]
+     ] ;
+     fhir:text [ fhir:v "Pani, D., Sulas, E., Urru, M., Sameni, R., Raffo, L., & Tumbarello, R. (2020). NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research (version 1.0.0). PhysioNet. https://doi.org/10.13026/c4n5-3b04." ]
+  ] [
+     fhir:style [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-summary-style"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "comppub" ] ;
+         fhir:display [ fhir:v "Computable Publishing" ]
+       ] )
+     ] ;
+     fhir:text [ fhir:v "NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research [Dataset], version 1.0.0. Contributors: Danilo Pani, Eleonora Sulas, Monica Urru, Reza Sameni, Luigi Raffo, Roberto Tumbarello. In: PhysioNet, DOI 10.13026/c4n5-3b04. Published November 12, 2020. Accessed March 17, 2021. Available at: https://physionet.org/content/ninfea/1.0.0/." ]
+  ] ) ; # 
+  fhir:citedArtifact [
+     fhir:identifier ( [
+       fhir:system [ fhir:v "https://doi.org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "10.13026/c4n5-3b04" ]
+     ] ) ;
+     fhir:relatedIdentifier ( [
+       fhir:system [ fhir:v "https://doi.org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "10.1038/s41597-021-00811-3" ]
+     ] ) ;
+     fhir:dateAccessed [ fhir:v "2021-03-17"^^xsd:date ] ;
+     fhir:version [ ] ;
+     fhir:title ( [
+       fhir:type ( [
+         fhir:text [ fhir:v "primary-human-use" ]
+       ] ) ;
+       fhir:language [ ] ;
+       fhir:text [ fhir:v "NInFEA: Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research" ]
+     ] ) ;
+     fhir:abstract ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-abstract-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "primary-human-use" ] ;
+           fhir:display [ fhir:v "Primary human use" ]
+         ] )
+       ] ;
+       fhir:language [ ] ;
+       fhir:text [ fhir:v "The development of algorithms for the extraction of the foetal ECG (fECG) from non-invasive recordings is hampered by the lack of publicly-available reference datasets, which could be used to benchmark different algorithms while providing a ground truth on the foetal heart activity when an invasive scalp lead is unavailable. By enriching the electrophysiological recordings with simultaneous multimodal signals, these datasets could also help the investigation of the foetal cardiac physiology, providing ground truth for the analysis in early pregnancy, when the fECG is not directly accessible.  The Non-Invasive Multimodal Foetal ECG-Doppler Dataset for Antenatal Cardiology Research (NInFEA) is the first open-access dataset featuring simultaneous non-invasive electrophysiological recordings, fetal pulsed-wave Doppler (PWD) and maternal respiration signals. The dataset includes 60 entries from 39 voluntary pregnant women, between the 21st and the 27th week of gestation. Every entry is composed of 27 electrophysiological channels (2048 Hz, 22 bits, acquired by means of the TMSi Porti7 system), maternal respiration signal (through a resistive thoracic belt), synchronised foetal trans-abdominal PWD and clinical annotations provided by expert clinicians at the time of the signal collection." ]
+     ] ) ;
+     fhir:relatesTo ( [
+       fhir:type [ fhir:v "derived-from" ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "original publication" ]
+       ] ) ;
+       fhir:citation [ fhir:v "Sulas, E., Urru, M., Tumbarello, R., Raffo, L., Sameni, R., Pani, D., A non-invasive multimodal foetal ECG–Doppler dataset for antenatal cardiology research. Sci Data 8, 30 (2021). https://doi.org/10.1038/s41597-021-00811-3" ]
+     ] [
+       fhir:type [ fhir:v "depends-on" ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "ontology" ]
+       ] ) ;
+       fhir:display [ fhir:v "Experimental Factor Ontology" ]
+     ] ) ;
+     fhir:publicationForm ( [
+       fhir:publishedIn [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/published-in-type"^^xsd:anyURI ] ;
+             fhir:version [ fhir:v "1.0.0" ] ;
+             fhir:code [ fhir:v "D019991" ] ;
+             fhir:display [ fhir:v "Database" ]
+           ] )
+         ] ;
+         fhir:title [ fhir:v "PhysioNet" ] ;
+         fhir:publisher [
+           fhir:display [ fhir:v "MIT Laboratory for Computational Physiology" ]
+         ]
+       ] ;
+       fhir:articleDate [ fhir:v "2020-11-12"^^xsd:date ] ;
+       fhir:language ( [ ] ) ;
+       fhir:copyright [ fhir:v "https://physionet.org/content/ninfea/view-license/1.0.0/ and https://physionet.org/content/ninfea/1.0.0/LICENSE.txt" ]
+     ] ) ;
+     fhir:webLocation ( [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:version [ fhir:v "1.0.0" ] ;
+           fhir:code [ fhir:v "webpage" ] ;
+           fhir:display [ fhir:v "Webpage" ]
+         ] )
+       ] ) ;
+       fhir:url [ fhir:v "https://physionet.org/content/ninfea/1.0.0/"^^xsd:anyURI ]
+     ] [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:version [ fhir:v "1.0.0" ] ;
+           fhir:code [ fhir:v "doi-based" ] ;
+           fhir:display [ fhir:v "DOI Based" ]
+         ] )
+       ] ) ;
+       fhir:url [ fhir:v "https://doi.org/10.13026/c4n5-3b04"^^xsd:anyURI ]
+     ] [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:version [ fhir:v "1.0.0" ] ;
+           fhir:code [ fhir:v "doi-based" ] ;
+           fhir:display [ fhir:v "DOI Based" ]
+         ] ) ;
+         fhir:text [ fhir:v "original publication" ]
+       ] ) ;
+       fhir:url [ fhir:v "https://doi.org/10.1038/s41597-021-00811-3"^^xsd:anyURI ]
+     ] [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:version [ fhir:v "1.0.0" ] ;
+           fhir:code [ fhir:v "compressed-file" ] ;
+           fhir:display [ fhir:v "Compressed file" ]
+         ] )
+       ] ) ;
+       fhir:url [ fhir:v "https://physionet.org/static/published-projects/ninfea/ninfea-non-invasive-multimodal-foetal-ecg-doppler-dataset-for-antenatal-cardiology-research-1.0.0.zip"^^xsd:anyURI ]
+     ] [
+       fhir:classifier ( [
+         fhir:text [ fhir:v "DOI-for-metadata" ]
+       ] ) ;
+       fhir:url [ fhir:v "https://doi.org/10.6084/m9.figshare.13283492"^^xsd:anyURI ]
+     ] ) ;
+     fhir:classification ( [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "knowledge-artifact-type" ] ;
+           fhir:display [ fhir:v "Knowledge Artifact Type" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:version [ fhir:v "6.0.0" ] ;
+           fhir:code [ fhir:v "D064886" ] ;
+           fhir:display [ fhir:v "Dataset" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://www.ebi.ac.uk/efo"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "EFO_0004327" ] ;
+           fhir:display [ fhir:v "electrocardiography" ]
+         ] ) ;
+         fhir:text [ fhir:v "ecg" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://purl.obolibrary.org/obo"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "FMA_63919" ] ;
+           fhir:display [ fhir:v "foetus" ]
+         ] ) ;
+         fhir:text [ fhir:v "foetus" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "pwd" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "doppler" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "foetal ecg" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "maternal ecg" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "pwd envelope" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "non-invasive" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           a sct:394579002 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "394579002" ] ;
+           fhir:display [ fhir:v "Cardiology (qualifier value)" ]
+         ] ) ;
+         fhir:text [ fhir:v "cardiology" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           a sct:314204000 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "314204000" ] ;
+           fhir:display [ fhir:v "Early stage of pregnancy (finding)" ]
+         ] ) ;
+         fhir:text [ fhir:v "early pregnancy" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:text [ fhir:v "antenatal" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "topic" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           a sct:75444003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "75444003" ] ;
+           fhir:display [ fhir:v "Fetal electrocardiogram (procedure)" ]
+         ] ) ;
+         fhir:text [ fhir:v "fecg" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "subject type" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://purl.bioontology.org/ontology/NCBITAXON"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "9606" ] ;
+           fhir:display [ fhir:v "Homo sapiens" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "use context" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://www.ebi.ac.uk/efo"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "EFO_0005112" ] ;
+           fhir:display [ fhir:v "gestational age" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "use context" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://www.ebi.ac.uk/efo"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "EFO_0004327" ] ;
+           fhir:display [ fhir:v "electrocardiography" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:text [ fhir:v "use context" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://purl.obolibrary.org/obo"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "VT_2000017" ] ;
+           fhir:display [ fhir:v "heart electrical impulse conduction trait" ]
+         ] )
+       ] )
+     ] ) ;
+     fhir:contributorship [
+       fhir:summary ( [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contributor-summary-type"^^xsd:anyURI ] ;
+             fhir:version [ fhir:v "1.0.0" ] ;
+             fhir:code [ fhir:v "author-string" ] ;
+             fhir:display [ fhir:v "Author string" ]
+           ] )
+         ] ;
+         fhir:source [
+           fhir:text [ fhir:v "copied-from-article" ]
+         ] ;
+         fhir:value [ fhir:v "Danilo Pani, Eleonora Sulas, Monica Urru, Reza Sameni, Luigi Raffo, Roberto Tumbarello" ]
+       ] [
+         fhir:type [
+           fhir:text [ fhir:v "acknowledgements" ]
+         ] ;
+         fhir:source [
+           fhir:text [ fhir:v "copied-from-article" ]
+         ] ;
+         fhir:value [ fhir:v "The authors wish to thank the Pediatric Cardiology and Congenital Heart Disease Unit, Brotzu Hospital (Cagliari, Italy), where the dataset was collected, and all the voluntary pregnant women for their kindness in giving their signals for this research. The authors gratefully thank Alessandra Cadoni, Graziella Secchi, Luisa Aru, Elisa Farris, Chiara Fenu, Elisa Gusai, Giulia Baldazzi, Giulia Pili for their support in the recording of the signals included in this dataset.  Part of this research was supported by the Italian Government—Progetti di InteresseNazionale (PRIN) under the grant agreement 2017RR5EW3 - ICT4MOMs project.  Eleonora Sulas is grateful to Sardinia Regional Government for supporting her PhD scholarship (P.O.R.F.S.E., European Social Fund 2014-2020).  Reza Sameni acknowledges the funding from the European Research Council Advanced Grant Number 320684, on Challenges in the Extraction and Separation of Sources (CHESS) for his contribution in this research, provided during his appointment at GIPSA-lab, Grenoble Alpes University, Grenoble, France." ]
+       ] )
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

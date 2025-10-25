@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/transport-status-reason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "transport-status-reason"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem transport-status-reason</b></p><a name=\"transport-status-reason\"> </a><a name=\"hctransport-status-reason\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/transport-status-reason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">declined-by-patient<a name=\"transport-status-reason-declined-by-patient\"> </a></td><td>Declined by patient</td><td>Patient declined transport.</td></tr><tr><td style=\"white-space:nowrap\">refused-by-recipient<a name=\"transport-status-reason-refused-by-recipient\"> </a></td><td>Refused by recipient</td><td>Transport was refused by recipient.</td></tr><tr><td style=\"white-space:nowrap\">patient-not-available<a name=\"transport-status-reason-patient-not-available\"> </a></td><td>Patient not available</td><td>The patient was not available for transport.</td></tr><tr><td style=\"white-space:nowrap\">specimen-not-available<a name=\"transport-status-reason-specimen-not-available\"> </a></td><td>Specimen not available</td><td>The specimen was not available for transport.</td></tr><tr><td style=\"white-space:nowrap\">wrong-request-data<a name=\"transport-status-reason-wrong-request-data\"> </a></td><td>Wrong request data</td><td>Wrong data in the transport request.</td></tr><tr><td style=\"white-space:nowrap\">in-route-accident<a name=\"transport-status-reason-in-route-accident\"> </a></td><td>In route accident</td><td>An accident has occurred in route.</td></tr><tr><td style=\"white-space:nowrap\">request-not-acknowledged<a name=\"transport-status-reason-request-not-acknowledged\"> </a></td><td>Request not acknowledged</td><td>The transport request was not acknowledged.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/transport-status-reason"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1930" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "TransportStatusReason"] ; # 
+  fhir:title [ fhir:v "Transport Status Reason"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Status of transport."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/transport-status-reason"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/transport-status-reason>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "declined-by-patient" ] ;
+     fhir:display [ fhir:v "Declined by patient" ] ;
+     fhir:definition [ fhir:v "Patient declined transport." ]
+  ] [
+     fhir:code [ fhir:v "refused-by-recipient" ] ;
+     fhir:display [ fhir:v "Refused by recipient" ] ;
+     fhir:definition [ fhir:v "Transport was refused by recipient." ]
+  ] [
+     fhir:code [ fhir:v "patient-not-available" ] ;
+     fhir:display [ fhir:v "Patient not available" ] ;
+     fhir:definition [ fhir:v "The patient was not available for transport." ]
+  ] [
+     fhir:code [ fhir:v "specimen-not-available" ] ;
+     fhir:display [ fhir:v "Specimen not available" ] ;
+     fhir:definition [ fhir:v "The specimen was not available for transport." ]
+  ] [
+     fhir:code [ fhir:v "wrong-request-data" ] ;
+     fhir:display [ fhir:v "Wrong request data" ] ;
+     fhir:definition [ fhir:v "Wrong data in the transport request." ]
+  ] [
+     fhir:code [ fhir:v "in-route-accident" ] ;
+     fhir:display [ fhir:v "In route accident" ] ;
+     fhir:definition [ fhir:v "An accident has occurred in route." ]
+  ] [
+     fhir:code [ fhir:v "request-not-acknowledged" ] ;
+     fhir:display [ fhir:v "Request not acknowledged" ] ;
+     fhir:definition [ fhir:v "The transport request was not acknowledged." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

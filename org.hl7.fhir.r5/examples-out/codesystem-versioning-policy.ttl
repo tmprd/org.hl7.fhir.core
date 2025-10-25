@@ -1,0 +1,106 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/versioning-policy> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "versioning-policy"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem versioning-policy</b>\n      </p>\n      <a name=\"versioning-policy\"> </a>\n      <a name=\"hcversioning-policy\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/versioning-policy</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">no-version\n            <a name=\"versioning-policy-no-version\"> </a>\n          </td>\n          <td>No VersionId Support</td>\n          <td>VersionId meta-property is not supported (server) or used (client).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">versioned\n            <a name=\"versioning-policy-versioned\"> </a>\n          </td>\n          <td>Versioned</td>\n          <td>VersionId meta-property is supported (server) or used (client).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">versioned-update\n            <a name=\"versioning-policy-versioned-update\"> </a>\n          </td>\n          <td>VersionId tracked fully</td>\n          <td>Supports version-aware updates (server) or will be specified (If-match header) for updates (client).</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.0"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/versioning-policy"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.191" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.181" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.89" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ResourceVersionPolicy"] ; # 
+  fhir:title [ fhir:v "Resource Version Policy"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "How the system supports versioning for a resource."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/versioning-policy"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/versioning-policy>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "no-version" ] ;
+     fhir:display [ fhir:v "No VersionId Support" ] ;
+     fhir:definition [ fhir:v "VersionId meta-property is not supported (server) or used (client)." ]
+  ] [
+     fhir:code [ fhir:v "versioned" ] ;
+     fhir:display [ fhir:v "Versioned" ] ;
+     fhir:definition [ fhir:v "VersionId meta-property is supported (server) or used (client)." ]
+  ] [
+     fhir:code [ fhir:v "versioned-update" ] ;
+     fhir:display [ fhir:v "VersionId tracked fully" ] ;
+     fhir:definition [ fhir:v "Supports version-aware updates (server) or will be specified (If-match header) for updates (client)." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "biologicallyderivedproductdispense-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem biologicallyderivedproductdispense-status</b>\n      </p>\n      <a name=\"biologicallyderivedproductdispense-status\"> </a>\n      <a name=\"hcbiologicallyderivedproductdispense-status\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/biologicallyderivedproductdispense-status</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">preparation\n            <a name=\"biologicallyderivedproductdispense-status-preparation\"> </a>\n          </td>\n          <td>Preparation</td>\n          <td>The dispense process has started but not yet completed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">in-progress\n            <a name=\"biologicallyderivedproductdispense-status-in-progress\"> </a>\n          </td>\n          <td>In Progress</td>\n          <td>The dispense process is in progress.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">allocated\n            <a name=\"biologicallyderivedproductdispense-status-allocated\"> </a>\n          </td>\n          <td>Allocated</td>\n          <td>The requested product has been allocated and is ready for transport.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">issued\n            <a name=\"biologicallyderivedproductdispense-status-issued\"> </a>\n          </td>\n          <td>Issued</td>\n          <td>The dispensed product has been picked up.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">unfulfilled\n            <a name=\"biologicallyderivedproductdispense-status-unfulfilled\"> </a>\n          </td>\n          <td>Unfulfilled</td>\n          <td>The dispense could not be completed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">returned\n            <a name=\"biologicallyderivedproductdispense-status-returned\"> </a>\n          </td>\n          <td>Returned</td>\n          <td>The dispensed product was returned.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">entered-in-error\n            <a name=\"biologicallyderivedproductdispense-status-entered-in-error\"> </a>\n          </td>\n          <td>Entered in Error</td>\n          <td>The dispense was entered in error and therefore nullified.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">unknown\n            <a name=\"biologicallyderivedproductdispense-status-unknown\"> </a>\n          </td>\n          <td>Unknown</td>\n          <td>The authoring system does not know which of the status values applies for this dispense. Note: this concept is not to be used for other - one of the listed statuses is presumed to apply, it's just not known which one.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "informative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/biologicallyderivedproductdispense-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "BiologicallyDerivedProductDispenseStatus"] ; # 
+  fhir:title [ fhir:v "Biologically Derived Product Dispense Status Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Biologically Derived Product Dispense Status Codes"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-status>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "preparation" ] ;
+     fhir:display [ fhir:v "Preparation" ] ;
+     fhir:definition [ fhir:v "The dispense process has started but not yet completed." ]
+  ] [
+     fhir:code [ fhir:v "in-progress" ] ;
+     fhir:display [ fhir:v "In Progress" ] ;
+     fhir:definition [ fhir:v "The dispense process is in progress." ]
+  ] [
+     fhir:code [ fhir:v "allocated" ] ;
+     fhir:display [ fhir:v "Allocated" ] ;
+     fhir:definition [ fhir:v "The requested product has been allocated and is ready for transport." ]
+  ] [
+     fhir:code [ fhir:v "issued" ] ;
+     fhir:display [ fhir:v "Issued" ] ;
+     fhir:definition [ fhir:v "The dispensed product has been picked up." ]
+  ] [
+     fhir:code [ fhir:v "unfulfilled" ] ;
+     fhir:display [ fhir:v "Unfulfilled" ] ;
+     fhir:definition [ fhir:v "The dispense could not be completed." ]
+  ] [
+     fhir:code [ fhir:v "returned" ] ;
+     fhir:display [ fhir:v "Returned" ] ;
+     fhir:definition [ fhir:v "The dispensed product was returned." ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The dispense was entered in error and therefore nullified." ]
+  ] [
+     fhir:code [ fhir:v "unknown" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "The authoring system does not know which of the status values applies for this dispense. Note: this concept is not to be used for other - one of the listed statuses is presumed to apply, it's just not known which one." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/udi-entry-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "udi-entry-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem udi-entry-type</b>\n      </p>\n      <a name=\"udi-entry-type\"> </a>\n      <a name=\"hcudi-entry-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/udi-entry-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">barcode\n            <a name=\"udi-entry-type-barcode\"> </a>\n          </td>\n          <td>Barcode</td>\n          <td>a barcodescanner captured the data from the device label.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rfid\n            <a name=\"udi-entry-type-rfid\"> </a>\n          </td>\n          <td>RFID</td>\n          <td>An RFID chip reader captured the data from the device label.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">manual\n            <a name=\"udi-entry-type-manual\"> </a>\n          </td>\n          <td>Manual</td>\n          <td>The data was read from the label by a person and manually entered. (e.g.  via a keyboard).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">card\n            <a name=\"udi-entry-type-card\"> </a>\n          </td>\n          <td>Card</td>\n          <td>The data originated from a patient's implant card and was read by an operator.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">self-reported\n            <a name=\"udi-entry-type-self-reported\"> </a>\n          </td>\n          <td>Self Reported</td>\n          <td>The data originated from a patient source and was not directly scanned or read from a label or card.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">electronic-transmission\n            <a name=\"udi-entry-type-electronic-transmission\"> </a>\n          </td>\n          <td>Electronic Transmission</td>\n          <td>The UDI information was received electronically from the device through a communication protocol, such as the IEEE 11073 20601 version 4 exchange protocol over Bluetooth or USB.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">unknown\n            <a name=\"udi-entry-type-unknown\"> </a>\n          </td>\n          <td>Unknown</td>\n          <td>The method of data capture has not been determined.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/udi-entry-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.212" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.202" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "UDIEntryType"] ; # 
+  fhir:title [ fhir:v "UDI Entry Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes to identify how UDI data was entered."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/udi-entry-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/udi-entry-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "barcode" ] ;
+     fhir:display [ fhir:v "Barcode" ] ;
+     fhir:definition [ fhir:v "a barcodescanner captured the data from the device label." ]
+  ] [
+     fhir:code [ fhir:v "rfid" ] ;
+     fhir:display [ fhir:v "RFID" ] ;
+     fhir:definition [ fhir:v "An RFID chip reader captured the data from the device label." ]
+  ] [
+     fhir:code [ fhir:v "manual" ] ;
+     fhir:display [ fhir:v "Manual" ] ;
+     fhir:definition [ fhir:v "The data was read from the label by a person and manually entered. (e.g.  via a keyboard)." ]
+  ] [
+     fhir:code [ fhir:v "card" ] ;
+     fhir:display [ fhir:v "Card" ] ;
+     fhir:definition [ fhir:v "The data originated from a patient's implant card and was read by an operator." ]
+  ] [
+     fhir:code [ fhir:v "self-reported" ] ;
+     fhir:display [ fhir:v "Self Reported" ] ;
+     fhir:definition [ fhir:v "The data originated from a patient source and was not directly scanned or read from a label or card." ]
+  ] [
+     fhir:code [ fhir:v "electronic-transmission" ] ;
+     fhir:display [ fhir:v "Electronic Transmission" ] ;
+     fhir:definition [ fhir:v "The UDI information was received electronically from the device through a communication protocol, such as the IEEE 11073 20601 version 4 exchange protocol over Bluetooth or USB." ]
+  ] [
+     fhir:code [ fhir:v "unknown" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "The method of data capture has not been determined." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,188 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/citation-status-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "citation-status-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem citation-status-type</b>\n      </p>\n      <a name=\"citation-status-type\"> </a>\n      <a name=\"hccitation-status-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/citation-status-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-received\n            <a name=\"citation-status-type-pubmed-pubstatus-received\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Received</td>\n          <td>PubMed Pubstatus of Received</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-accepted\n            <a name=\"citation-status-type-pubmed-pubstatus-accepted\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Accepted</td>\n          <td>PubMed Pubstatus of Accepted</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-epublish\n            <a name=\"citation-status-type-pubmed-pubstatus-epublish\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Epublish</td>\n          <td>PubMed Pubstatus of Epublish</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-ppublish\n            <a name=\"citation-status-type-pubmed-pubstatus-ppublish\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Ppublish</td>\n          <td>PubMed Pubstatus of Ppublish</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-revised\n            <a name=\"citation-status-type-pubmed-pubstatus-revised\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Revised</td>\n          <td>PubMed Pubstatus of Revised</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-aheadofprint\n            <a name=\"citation-status-type-pubmed-pubstatus-aheadofprint\"> </a>\n          </td>\n          <td>PubMed Pubstatus of aheadofprint</td>\n          <td>PubMed Pubstatus of aheadofprint</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-retracted\n            <a name=\"citation-status-type-pubmed-pubstatus-retracted\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Retracted</td>\n          <td>PubMed Pubstatus of Retracted</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-ecollection\n            <a name=\"citation-status-type-pubmed-pubstatus-ecollection\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Ecollection</td>\n          <td>PubMed Pubstatus of Ecollection</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-pmc\n            <a name=\"citation-status-type-pubmed-pubstatus-pmc\"> </a>\n          </td>\n          <td>PubMed Pubstatus of PMC</td>\n          <td>PubMed Pubstatus of PMC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-pmcr\n            <a name=\"citation-status-type-pubmed-pubstatus-pmcr\"> </a>\n          </td>\n          <td>PubMed Pubstatus of PMCr</td>\n          <td>PubMed Pubstatus of PMCr</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-pubmed\n            <a name=\"citation-status-type-pubmed-pubstatus-pubmed\"> </a>\n          </td>\n          <td>PubMed Pubstatus of PubMed</td>\n          <td>PubMed Pubstatus of PubMed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-pubmedr\n            <a name=\"citation-status-type-pubmed-pubstatus-pubmedr\"> </a>\n          </td>\n          <td>PubMed Pubstatus of PubMedr</td>\n          <td>PubMed Pubstatus of PubMedr</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-premedline\n            <a name=\"citation-status-type-pubmed-pubstatus-premedline\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Premedline</td>\n          <td>PubMed Pubstatus of Premedline</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-medline\n            <a name=\"citation-status-type-pubmed-pubstatus-medline\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Medline</td>\n          <td>PubMed Pubstatus of Medline</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-medliner\n            <a name=\"citation-status-type-pubmed-pubstatus-medliner\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Medliner</td>\n          <td>PubMed Pubstatus of Medliner</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-entrez\n            <a name=\"citation-status-type-pubmed-pubstatus-entrez\"> </a>\n          </td>\n          <td>PubMed Pubstatus of Entrez</td>\n          <td>PubMed Pubstatus of Entrez</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-pubstatus-pmc-release\n            <a name=\"citation-status-type-pubmed-pubstatus-pmc-release\"> </a>\n          </td>\n          <td>PubMed Pubstatus of PMC release</td>\n          <td>PubMed Pubstatus of PMC release</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-completed\n            <a name=\"citation-status-type-medline-completed\"> </a>\n          </td>\n          <td>Medline Citation Status of Completed</td>\n          <td>Medline Citation Status of Completed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-in-process\n            <a name=\"citation-status-type-medline-in-process\"> </a>\n          </td>\n          <td>Medline Citation Status of In-Process</td>\n          <td>Medline Citation Status of In-Process</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-pubmed-not-medline\n            <a name=\"citation-status-type-medline-pubmed-not-medline\"> </a>\n          </td>\n          <td>Medline Citation Status of PubMed-not-MEDLINE</td>\n          <td>Medline Citation Status of PubMed-not-MEDLINE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-in-data-review\n            <a name=\"citation-status-type-medline-in-data-review\"> </a>\n          </td>\n          <td>Medline Citation Status of In-Data-Review</td>\n          <td>Medline Citation Status of In-Data-Review</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-publisher\n            <a name=\"citation-status-type-medline-publisher\"> </a>\n          </td>\n          <td>Medline Citation Status of Publisher</td>\n          <td>Medline Citation Status of Publisher</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-medline\n            <a name=\"citation-status-type-medline-medline\"> </a>\n          </td>\n          <td>Medline Citation Status of MEDLINE</td>\n          <td>Medline Citation Status of MEDLINE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medline-oldmedline\n            <a name=\"citation-status-type-medline-oldmedline\"> </a>\n          </td>\n          <td>Medline Citation Status of OLDMEDLINE</td>\n          <td>Medline Citation Status of OLDMEDLINE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-publication-status-ppublish\n            <a name=\"citation-status-type-pubmed-publication-status-ppublish\"> </a>\n          </td>\n          <td>PubMed PublicationStatus of ppublish</td>\n          <td>published in print</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-publication-status-epublish\n            <a name=\"citation-status-type-pubmed-publication-status-epublish\"> </a>\n          </td>\n          <td>PubMed PublicationStatus of epublish</td>\n          <td>electronically published only, never published in print</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pubmed-publication-status-aheadofprint\n            <a name=\"citation-status-type-pubmed-publication-status-aheadofprint\"> </a>\n          </td>\n          <td>PubMed PublicationStatus of aheadofprint</td>\n          <td>electronically published, but followed by print</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1878" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "CitationStatusType"] ; # 
+  fhir:title [ fhir:v "Citation Status Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-03-11T10:55:11.085+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Citation status type"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/citation-status-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/citation-status-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "pubmed-pubstatus-received" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Received" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Received" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-accepted" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Accepted" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Accepted" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-epublish" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Epublish" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Epublish" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-ppublish" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Ppublish" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Ppublish" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-revised" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Revised" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Revised" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-aheadofprint" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of aheadofprint" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of aheadofprint" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-retracted" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Retracted" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Retracted" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-ecollection" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Ecollection" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Ecollection" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-pmc" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of PMC" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of PMC" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-pmcr" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of PMCr" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of PMCr" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-pubmed" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of PubMed" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of PubMed" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-pubmedr" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of PubMedr" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of PubMedr" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-premedline" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Premedline" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Premedline" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-medline" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Medline" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Medline" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-medliner" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Medliner" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Medliner" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-entrez" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of Entrez" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of Entrez" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-pubstatus-pmc-release" ] ;
+     fhir:display [ fhir:v "PubMed Pubstatus of PMC release" ] ;
+     fhir:definition [ fhir:v "PubMed Pubstatus of PMC release" ]
+  ] [
+     fhir:code [ fhir:v "medline-completed" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of Completed" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of Completed" ]
+  ] [
+     fhir:code [ fhir:v "medline-in-process" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of In-Process" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of In-Process" ]
+  ] [
+     fhir:code [ fhir:v "medline-pubmed-not-medline" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of PubMed-not-MEDLINE" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of PubMed-not-MEDLINE" ]
+  ] [
+     fhir:code [ fhir:v "medline-in-data-review" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of In-Data-Review" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of In-Data-Review" ]
+  ] [
+     fhir:code [ fhir:v "medline-publisher" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of Publisher" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of Publisher" ]
+  ] [
+     fhir:code [ fhir:v "medline-medline" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of MEDLINE" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of MEDLINE" ]
+  ] [
+     fhir:code [ fhir:v "medline-oldmedline" ] ;
+     fhir:display [ fhir:v "Medline Citation Status of OLDMEDLINE" ] ;
+     fhir:definition [ fhir:v "Medline Citation Status of OLDMEDLINE" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-publication-status-ppublish" ] ;
+     fhir:display [ fhir:v "PubMed PublicationStatus of ppublish" ] ;
+     fhir:definition [ fhir:v "published in print" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-publication-status-epublish" ] ;
+     fhir:display [ fhir:v "PubMed PublicationStatus of epublish" ] ;
+     fhir:definition [ fhir:v "electronically published only, never published in print" ]
+  ] [
+     fhir:code [ fhir:v "pubmed-publication-status-aheadofprint" ] ;
+     fhir:display [ fhir:v "PubMed PublicationStatus of aheadofprint" ] ;
+     fhir:definition [ fhir:v "electronically published, but followed by print" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

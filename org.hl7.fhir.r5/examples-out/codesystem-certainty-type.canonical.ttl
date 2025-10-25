@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/certainty-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "certainty-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem certainty-type</b></p><a name=\"certainty-type\"> </a><a name=\"hccertainty-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/certainty-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Overall<a name=\"certainty-type-Overall\"> </a></td><td>Overall certainty</td><td>Overall certainty of evidence (quality of evidence).</td></tr><tr><td style=\"white-space:nowrap\">RiskOfBias<a name=\"certainty-type-RiskOfBias\"> </a></td><td>Risk of bias</td><td>methodologic concerns reducing internal validity.</td></tr><tr><td style=\"white-space:nowrap\">Inconsistency<a name=\"certainty-type-Inconsistency\"> </a></td><td>Inconsistency</td><td>concerns that findings are not similar enough to support certainty.</td></tr><tr><td style=\"white-space:nowrap\">Indirectness<a name=\"certainty-type-Indirectness\"> </a></td><td>Indirectness</td><td>concerns reducing external validity.</td></tr><tr><td style=\"white-space:nowrap\">Imprecision<a name=\"certainty-type-Imprecision\"> </a></td><td>Imprecision</td><td>fuzzy or wide variability.</td></tr><tr><td style=\"white-space:nowrap\">PublicationBias<a name=\"certainty-type-PublicationBias\"> </a></td><td>Publication bias</td><td>likelihood that what is published misrepresents what is available to publish.</td></tr><tr><td style=\"white-space:nowrap\">DoseResponseGradient<a name=\"certainty-type-DoseResponseGradient\"> </a></td><td>Dose response gradient</td><td>higher certainty due to dose response relationship.</td></tr><tr><td style=\"white-space:nowrap\">PlausibleConfounding<a name=\"certainty-type-PlausibleConfounding\"> </a></td><td>Plausible confounding</td><td>higher certainty due to risk of bias in opposite direction.</td></tr><tr><td style=\"white-space:nowrap\">LargeEffect<a name=\"certainty-type-LargeEffect\"> </a></td><td>Large effect</td><td>higher certainty due to large effect size.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/certainty-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1939" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "EvidenceCertaintyType"] ; # 
+  fhir:title [ fhir:v "Evidence Certainty Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The aspect of quality, confidence, or certainty."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/certainty-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/certainty-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Overall" ] ;
+     fhir:display [ fhir:v "Overall certainty" ] ;
+     fhir:definition [ fhir:v "Overall certainty of evidence (quality of evidence)." ]
+  ] [
+     fhir:code [ fhir:v "RiskOfBias" ] ;
+     fhir:display [ fhir:v "Risk of bias" ] ;
+     fhir:definition [ fhir:v "methodologic concerns reducing internal validity." ]
+  ] [
+     fhir:code [ fhir:v "Inconsistency" ] ;
+     fhir:display [ fhir:v "Inconsistency" ] ;
+     fhir:definition [ fhir:v "concerns that findings are not similar enough to support certainty." ]
+  ] [
+     fhir:code [ fhir:v "Indirectness" ] ;
+     fhir:display [ fhir:v "Indirectness" ] ;
+     fhir:definition [ fhir:v "concerns reducing external validity." ]
+  ] [
+     fhir:code [ fhir:v "Imprecision" ] ;
+     fhir:display [ fhir:v "Imprecision" ] ;
+     fhir:definition [ fhir:v "fuzzy or wide variability." ]
+  ] [
+     fhir:code [ fhir:v "PublicationBias" ] ;
+     fhir:display [ fhir:v "Publication bias" ] ;
+     fhir:definition [ fhir:v "likelihood that what is published misrepresents what is available to publish." ]
+  ] [
+     fhir:code [ fhir:v "DoseResponseGradient" ] ;
+     fhir:display [ fhir:v "Dose response gradient" ] ;
+     fhir:definition [ fhir:v "higher certainty due to dose response relationship." ]
+  ] [
+     fhir:code [ fhir:v "PlausibleConfounding" ] ;
+     fhir:display [ fhir:v "Plausible confounding" ] ;
+     fhir:definition [ fhir:v "higher certainty due to risk of bias in opposite direction." ]
+  ] [
+     fhir:code [ fhir:v "LargeEffect" ] ;
+     fhir:display [ fhir:v "Large effect" ] ;
+     fhir:definition [ fhir:v "higher certainty due to large effect size." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

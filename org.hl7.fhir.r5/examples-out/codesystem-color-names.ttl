@@ -1,0 +1,1546 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/color-names> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "color-names"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem color-names</b>\n      </p>\n      <a name=\"color-names\"> </a>\n      <a name=\"hccolor-names\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>\n        <b>Properties</b>\n      </p>\n      <p>\n        <b>This code system defines the following properties for its concepts</b>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Description</b>\n          </td>\n        </tr>\n        <tr>\n          <td>rgb</td>\n          <td>rgb</td>\n          <td>string</td>\n          <td>The RGB color that matches the named color (as defined in CSS4 specification)</td>\n        </tr>\n      </table>\n      <p>\n        <b>Concepts</b>\n      </p>\n      <p>This case-insensitive code system \n        <code>http://hl7.org/fhir/color-names</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>rgb</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">aliceblue\n            <a name=\"color-names-aliceblue\"> </a>\n          </td>\n          <td>#F0F8FF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">antiquewhite\n            <a name=\"color-names-antiquewhite\"> </a>\n          </td>\n          <td>#FAEBD7</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">aqua\n            <a name=\"color-names-aqua\"> </a>\n          </td>\n          <td>#00FFFF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">aquamarine\n            <a name=\"color-names-aquamarine\"> </a>\n          </td>\n          <td>#7FFFD4</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">azure\n            <a name=\"color-names-azure\"> </a>\n          </td>\n          <td>#F0FFFF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">beige\n            <a name=\"color-names-beige\"> </a>\n          </td>\n          <td>#F5F5DC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">bisque\n            <a name=\"color-names-bisque\"> </a>\n          </td>\n          <td>#FFE4C4</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">black\n            <a name=\"color-names-black\"> </a>\n          </td>\n          <td>#000000</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">blanchedalmond\n            <a name=\"color-names-blanchedalmond\"> </a>\n          </td>\n          <td>#FFEBCD</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">blue\n            <a name=\"color-names-blue\"> </a>\n          </td>\n          <td>#0000FF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">blueviolet\n            <a name=\"color-names-blueviolet\"> </a>\n          </td>\n          <td>#8A2BE2</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">brown\n            <a name=\"color-names-brown\"> </a>\n          </td>\n          <td>#A52A2A</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">burlywood\n            <a name=\"color-names-burlywood\"> </a>\n          </td>\n          <td>#DEB887</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cadetblue\n            <a name=\"color-names-cadetblue\"> </a>\n          </td>\n          <td>#5F9EA0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chartreuse\n            <a name=\"color-names-chartreuse\"> </a>\n          </td>\n          <td>#7FFF00</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chocolate\n            <a name=\"color-names-chocolate\"> </a>\n          </td>\n          <td>#D2691E</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">coral\n            <a name=\"color-names-coral\"> </a>\n          </td>\n          <td>#FF7F50</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cornflowerblue\n            <a name=\"color-names-cornflowerblue\"> </a>\n          </td>\n          <td>#6495ED</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cornsilk\n            <a name=\"color-names-cornsilk\"> </a>\n          </td>\n          <td>#FFF8DC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">crimson\n            <a name=\"color-names-crimson\"> </a>\n          </td>\n          <td>#DC143C</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cyan\n            <a name=\"color-names-cyan\"> </a>\n          </td>\n          <td>#00FFFF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkblue\n            <a name=\"color-names-darkblue\"> </a>\n          </td>\n          <td>#00008B</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkcyan\n            <a name=\"color-names-darkcyan\"> </a>\n          </td>\n          <td>#008B8B</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkgoldenrod\n            <a name=\"color-names-darkgoldenrod\"> </a>\n          </td>\n          <td>#B8860B</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkgray\n            <a name=\"color-names-darkgray\"> </a>\n          </td>\n          <td>#A9A9A9</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkgreen\n            <a name=\"color-names-darkgreen\"> </a>\n          </td>\n          <td>#006400</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkgrey\n            <a name=\"color-names-darkgrey\"> </a>\n          </td>\n          <td>#A9A9A9</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkkhaki\n            <a name=\"color-names-darkkhaki\"> </a>\n          </td>\n          <td>#BDB76B</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkmagenta\n            <a name=\"color-names-darkmagenta\"> </a>\n          </td>\n          <td>#8B008B</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkolivegreen\n            <a name=\"color-names-darkolivegreen\"> </a>\n          </td>\n          <td>#556B2F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkorange\n            <a name=\"color-names-darkorange\"> </a>\n          </td>\n          <td>#FF8C00</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkorchid\n            <a name=\"color-names-darkorchid\"> </a>\n          </td>\n          <td>#9932CC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkred\n            <a name=\"color-names-darkred\"> </a>\n          </td>\n          <td>#8B0000</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darksalmon\n            <a name=\"color-names-darksalmon\"> </a>\n          </td>\n          <td>#E9967A</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkseagreen\n            <a name=\"color-names-darkseagreen\"> </a>\n          </td>\n          <td>#8FBC8F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkslateblue\n            <a name=\"color-names-darkslateblue\"> </a>\n          </td>\n          <td>#483D8B</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkslategray\n            <a name=\"color-names-darkslategray\"> </a>\n          </td>\n          <td>#2F4F4F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkslategrey\n            <a name=\"color-names-darkslategrey\"> </a>\n          </td>\n          <td>#2F4F4F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkturquoise\n            <a name=\"color-names-darkturquoise\"> </a>\n          </td>\n          <td>#00CED1</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">darkviolet\n            <a name=\"color-names-darkviolet\"> </a>\n          </td>\n          <td>#9400D3</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">deeppink\n            <a name=\"color-names-deeppink\"> </a>\n          </td>\n          <td>#FF1493</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">deepskyblue\n            <a name=\"color-names-deepskyblue\"> </a>\n          </td>\n          <td>#00BFFF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">dimgray\n            <a name=\"color-names-dimgray\"> </a>\n          </td>\n          <td>#696969</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">dimgrey\n            <a name=\"color-names-dimgrey\"> </a>\n          </td>\n          <td>#696969</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">dodgerblue\n            <a name=\"color-names-dodgerblue\"> </a>\n          </td>\n          <td>#1E90FF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">firebrick\n            <a name=\"color-names-firebrick\"> </a>\n          </td>\n          <td>#B22222</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">floralwhite\n            <a name=\"color-names-floralwhite\"> </a>\n          </td>\n          <td>#FFFAF0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">forestgreen\n            <a name=\"color-names-forestgreen\"> </a>\n          </td>\n          <td>#228B22</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fuchsia\n            <a name=\"color-names-fuchsia\"> </a>\n          </td>\n          <td>#FF00FF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gainsboro\n            <a name=\"color-names-gainsboro\"> </a>\n          </td>\n          <td>#DCDCDC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ghostwhite\n            <a name=\"color-names-ghostwhite\"> </a>\n          </td>\n          <td>#F8F8FF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gold\n            <a name=\"color-names-gold\"> </a>\n          </td>\n          <td>#FFD700</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">goldenrod\n            <a name=\"color-names-goldenrod\"> </a>\n          </td>\n          <td>#DAA520</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gray\n            <a name=\"color-names-gray\"> </a>\n          </td>\n          <td>#808080</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">green\n            <a name=\"color-names-green\"> </a>\n          </td>\n          <td>#008000</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">greenyellow\n            <a name=\"color-names-greenyellow\"> </a>\n          </td>\n          <td>#ADFF2F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">grey\n            <a name=\"color-names-grey\"> </a>\n          </td>\n          <td>#808080</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">honeydew\n            <a name=\"color-names-honeydew\"> </a>\n          </td>\n          <td>#F0FFF0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">hotpink\n            <a name=\"color-names-hotpink\"> </a>\n          </td>\n          <td>#FF69B4</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">indianred\n            <a name=\"color-names-indianred\"> </a>\n          </td>\n          <td>#CD5C5C</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">indigo\n            <a name=\"color-names-indigo\"> </a>\n          </td>\n          <td>#4B0082</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ivory\n            <a name=\"color-names-ivory\"> </a>\n          </td>\n          <td>#FFFFF0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">khaki\n            <a name=\"color-names-khaki\"> </a>\n          </td>\n          <td>#F0E68C</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lavender\n            <a name=\"color-names-lavender\"> </a>\n          </td>\n          <td>#E6E6FA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lavenderblush\n            <a name=\"color-names-lavenderblush\"> </a>\n          </td>\n          <td>#FFF0F5</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lawngreen\n            <a name=\"color-names-lawngreen\"> </a>\n          </td>\n          <td>#7CFC00</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lemonchiffon\n            <a name=\"color-names-lemonchiffon\"> </a>\n          </td>\n          <td>#FFFACD</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightblue\n            <a name=\"color-names-lightblue\"> </a>\n          </td>\n          <td>#ADD8E6</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightcoral\n            <a name=\"color-names-lightcoral\"> </a>\n          </td>\n          <td>#F08080</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightcyan\n            <a name=\"color-names-lightcyan\"> </a>\n          </td>\n          <td>#E0FFFF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightgoldenrodyellow\n            <a name=\"color-names-lightgoldenrodyellow\"> </a>\n          </td>\n          <td>#FAFAD2</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightgray\n            <a name=\"color-names-lightgray\"> </a>\n          </td>\n          <td>#D3D3D3</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightgreen\n            <a name=\"color-names-lightgreen\"> </a>\n          </td>\n          <td>#90EE90</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightgrey\n            <a name=\"color-names-lightgrey\"> </a>\n          </td>\n          <td>#D3D3D3</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightpink\n            <a name=\"color-names-lightpink\"> </a>\n          </td>\n          <td>#FFB6C1</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightsalmon\n            <a name=\"color-names-lightsalmon\"> </a>\n          </td>\n          <td>#FFA07A</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightseagreen\n            <a name=\"color-names-lightseagreen\"> </a>\n          </td>\n          <td>#20B2AA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightskyblue\n            <a name=\"color-names-lightskyblue\"> </a>\n          </td>\n          <td>#87CEFA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightslategray\n            <a name=\"color-names-lightslategray\"> </a>\n          </td>\n          <td>#778899</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightslategrey\n            <a name=\"color-names-lightslategrey\"> </a>\n          </td>\n          <td>#778899</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightsteelblue\n            <a name=\"color-names-lightsteelblue\"> </a>\n          </td>\n          <td>#B0C4DE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lightyellow\n            <a name=\"color-names-lightyellow\"> </a>\n          </td>\n          <td>#FFFFE0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lime\n            <a name=\"color-names-lime\"> </a>\n          </td>\n          <td>#00FF00</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">limegreen\n            <a name=\"color-names-limegreen\"> </a>\n          </td>\n          <td>#32CD32</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">linen\n            <a name=\"color-names-linen\"> </a>\n          </td>\n          <td>#FAF0E6</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">magenta\n            <a name=\"color-names-magenta\"> </a>\n          </td>\n          <td>#FF00FF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">maroon\n            <a name=\"color-names-maroon\"> </a>\n          </td>\n          <td>#800000</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumaquamarine\n            <a name=\"color-names-mediumaquamarine\"> </a>\n          </td>\n          <td>#66CDAA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumblue\n            <a name=\"color-names-mediumblue\"> </a>\n          </td>\n          <td>#0000CD</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumorchid\n            <a name=\"color-names-mediumorchid\"> </a>\n          </td>\n          <td>#BA55D3</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumpurple\n            <a name=\"color-names-mediumpurple\"> </a>\n          </td>\n          <td>#9370DB</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumseagreen\n            <a name=\"color-names-mediumseagreen\"> </a>\n          </td>\n          <td>#3CB371</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumslateblue\n            <a name=\"color-names-mediumslateblue\"> </a>\n          </td>\n          <td>#7B68EE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumspringgreen\n            <a name=\"color-names-mediumspringgreen\"> </a>\n          </td>\n          <td>#00FA9A</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumturquoise\n            <a name=\"color-names-mediumturquoise\"> </a>\n          </td>\n          <td>#48D1CC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mediumvioletred\n            <a name=\"color-names-mediumvioletred\"> </a>\n          </td>\n          <td>#C71585</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">midnightblue\n            <a name=\"color-names-midnightblue\"> </a>\n          </td>\n          <td>#191970</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mintcream\n            <a name=\"color-names-mintcream\"> </a>\n          </td>\n          <td>#F5FFFA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mistyrose\n            <a name=\"color-names-mistyrose\"> </a>\n          </td>\n          <td>#FFE4E1</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">moccasin\n            <a name=\"color-names-moccasin\"> </a>\n          </td>\n          <td>#FFE4B5</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">navajowhite\n            <a name=\"color-names-navajowhite\"> </a>\n          </td>\n          <td>#FFDEAD</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">navy\n            <a name=\"color-names-navy\"> </a>\n          </td>\n          <td>#000080</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">oldlace\n            <a name=\"color-names-oldlace\"> </a>\n          </td>\n          <td>#FDF5E6</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">olive\n            <a name=\"color-names-olive\"> </a>\n          </td>\n          <td>#808000</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">olivedrab\n            <a name=\"color-names-olivedrab\"> </a>\n          </td>\n          <td>#6B8E23</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">orange\n            <a name=\"color-names-orange\"> </a>\n          </td>\n          <td>#FFA500</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">orangered\n            <a name=\"color-names-orangered\"> </a>\n          </td>\n          <td>#FF4500</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">orchid\n            <a name=\"color-names-orchid\"> </a>\n          </td>\n          <td>#DA70D6</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">palegoldenrod\n            <a name=\"color-names-palegoldenrod\"> </a>\n          </td>\n          <td>#EEE8AA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">palegreen\n            <a name=\"color-names-palegreen\"> </a>\n          </td>\n          <td>#98FB98</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">paleturquoise\n            <a name=\"color-names-paleturquoise\"> </a>\n          </td>\n          <td>#AFEEEE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">palevioletred\n            <a name=\"color-names-palevioletred\"> </a>\n          </td>\n          <td>#DB7093</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">papayawhip\n            <a name=\"color-names-papayawhip\"> </a>\n          </td>\n          <td>#FFEFD5</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">peachpuff\n            <a name=\"color-names-peachpuff\"> </a>\n          </td>\n          <td>#FFDAB9</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">peru\n            <a name=\"color-names-peru\"> </a>\n          </td>\n          <td>#CD853F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pink\n            <a name=\"color-names-pink\"> </a>\n          </td>\n          <td>#FFC0CB</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">plum\n            <a name=\"color-names-plum\"> </a>\n          </td>\n          <td>#DDA0DD</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">powderblue\n            <a name=\"color-names-powderblue\"> </a>\n          </td>\n          <td>#B0E0E6</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">purple\n            <a name=\"color-names-purple\"> </a>\n          </td>\n          <td>#800080</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rebeccapurple\n            <a name=\"color-names-rebeccapurple\"> </a>\n          </td>\n          <td>#663399</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">red\n            <a name=\"color-names-red\"> </a>\n          </td>\n          <td>#FF0000</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rosybrown\n            <a name=\"color-names-rosybrown\"> </a>\n          </td>\n          <td>#BC8F8F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">royalblue\n            <a name=\"color-names-royalblue\"> </a>\n          </td>\n          <td>#4169E1</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">saddlebrown\n            <a name=\"color-names-saddlebrown\"> </a>\n          </td>\n          <td>#8B4513</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">salmon\n            <a name=\"color-names-salmon\"> </a>\n          </td>\n          <td>#FA8072</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sandybrown\n            <a name=\"color-names-sandybrown\"> </a>\n          </td>\n          <td>#F4A460</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">seagreen\n            <a name=\"color-names-seagreen\"> </a>\n          </td>\n          <td>#2E8B57</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">seashell\n            <a name=\"color-names-seashell\"> </a>\n          </td>\n          <td>#FFF5EE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sienna\n            <a name=\"color-names-sienna\"> </a>\n          </td>\n          <td>#A0522D</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">silver\n            <a name=\"color-names-silver\"> </a>\n          </td>\n          <td>#C0C0C0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">skyblue\n            <a name=\"color-names-skyblue\"> </a>\n          </td>\n          <td>#87CEEB</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">slateblue\n            <a name=\"color-names-slateblue\"> </a>\n          </td>\n          <td>#6A5ACD</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">slategray\n            <a name=\"color-names-slategray\"> </a>\n          </td>\n          <td>#708090</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">slategrey\n            <a name=\"color-names-slategrey\"> </a>\n          </td>\n          <td>#708090</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">snow\n            <a name=\"color-names-snow\"> </a>\n          </td>\n          <td>#FFFAFA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">springgreen\n            <a name=\"color-names-springgreen\"> </a>\n          </td>\n          <td>#00FF7F</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">steelblue\n            <a name=\"color-names-steelblue\"> </a>\n          </td>\n          <td>#4682B4</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tan\n            <a name=\"color-names-tan\"> </a>\n          </td>\n          <td>#D2B48C</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">teal\n            <a name=\"color-names-teal\"> </a>\n          </td>\n          <td>#008080</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">thistle\n            <a name=\"color-names-thistle\"> </a>\n          </td>\n          <td>#D8BFD8</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tomato\n            <a name=\"color-names-tomato\"> </a>\n          </td>\n          <td>#FF6347</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">turquoise\n            <a name=\"color-names-turquoise\"> </a>\n          </td>\n          <td>#40E0D0</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">violet\n            <a name=\"color-names-violet\"> </a>\n          </td>\n          <td>#EE82EE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">wheat\n            <a name=\"color-names-wheat\"> </a>\n          </td>\n          <td>#F5DEB3</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">white\n            <a name=\"color-names-white\"> </a>\n          </td>\n          <td>#FFFFFF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">whitesmoke\n            <a name=\"color-names-whitesmoke\"> </a>\n          </td>\n          <td>#F5F5F5</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">yellow\n            <a name=\"color-names-yellow\"> </a>\n          </td>\n          <td>#FFFF00</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">yellowgreen\n            <a name=\"color-names-yellowgreen\"> </a>\n          </td>\n          <td>#9ACD32</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/color-names"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2120" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ColorCodes"] ; # 
+  fhir:title [ fhir:v "Codes for Colors"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This code system represents that named RGB colors found in the [CSS4 specification](https://www.w3.org/TR/css-color-4/). The names are not case sensitive and different cases are encountered in common use (e.g. AliceBlue vs aliceblue."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "[Copyright](https://www.w3.org/Consortium/Legal/ipr-notice) ©2022 World Wide Web Consortium. All Rights Reserved. This work is distributed under the [W3C® Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."] ; # 
+  fhir:caseSensitive [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "rgb" ] ;
+     fhir:description [ fhir:v "The RGB color that matches the named color (as defined in CSS4 specification)" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "aliceblue" ] ;
+     fhir:display [ fhir:v "aliceblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F0F8FF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "antiquewhite" ] ;
+     fhir:display [ fhir:v "antiquewhite" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FAEBD7"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "aqua" ] ;
+     fhir:display [ fhir:v "aqua" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00FFFF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "aquamarine" ] ;
+     fhir:display [ fhir:v "aquamarine" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#7FFFD4"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "azure" ] ;
+     fhir:display [ fhir:v "azure" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F0FFFF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "beige" ] ;
+     fhir:display [ fhir:v "beige" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F5F5DC"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "bisque" ] ;
+     fhir:display [ fhir:v "bisque" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFE4C4"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "black" ] ;
+     fhir:display [ fhir:v "black" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#000000"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "blanchedalmond" ] ;
+     fhir:display [ fhir:v "blanchedalmond" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFEBCD"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "blue" ] ;
+     fhir:display [ fhir:v "blue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#0000FF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "blueviolet" ] ;
+     fhir:display [ fhir:v "blueviolet" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#8A2BE2"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "brown" ] ;
+     fhir:display [ fhir:v "brown" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#A52A2A"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "burlywood" ] ;
+     fhir:display [ fhir:v "burlywood" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DEB887"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "cadetblue" ] ;
+     fhir:display [ fhir:v "cadetblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#5F9EA0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "chartreuse" ] ;
+     fhir:display [ fhir:v "chartreuse" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#7FFF00"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "chocolate" ] ;
+     fhir:display [ fhir:v "chocolate" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#D2691E"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "coral" ] ;
+     fhir:display [ fhir:v "coral" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF7F50"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "cornflowerblue" ] ;
+     fhir:display [ fhir:v "cornflowerblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#6495ED"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "cornsilk" ] ;
+     fhir:display [ fhir:v "cornsilk" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFF8DC"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "crimson" ] ;
+     fhir:display [ fhir:v "crimson" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DC143C"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "cyan" ] ;
+     fhir:display [ fhir:v "cyan" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00FFFF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkblue" ] ;
+     fhir:display [ fhir:v "darkblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00008B"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkcyan" ] ;
+     fhir:display [ fhir:v "darkcyan" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#008B8B"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkgoldenrod" ] ;
+     fhir:display [ fhir:v "darkgoldenrod" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#B8860B"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkgray" ] ;
+     fhir:display [ fhir:v "darkgray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#A9A9A9"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkgreen" ] ;
+     fhir:display [ fhir:v "darkgreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#006400"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkgrey" ] ;
+     fhir:display [ fhir:v "darkgrey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#A9A9A9"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkkhaki" ] ;
+     fhir:display [ fhir:v "darkkhaki" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#BDB76B"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkmagenta" ] ;
+     fhir:display [ fhir:v "darkmagenta" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#8B008B"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkolivegreen" ] ;
+     fhir:display [ fhir:v "darkolivegreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#556B2F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkorange" ] ;
+     fhir:display [ fhir:v "darkorange" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF8C00"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkorchid" ] ;
+     fhir:display [ fhir:v "darkorchid" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#9932CC"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkred" ] ;
+     fhir:display [ fhir:v "darkred" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#8B0000"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darksalmon" ] ;
+     fhir:display [ fhir:v "darksalmon" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#E9967A"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkseagreen" ] ;
+     fhir:display [ fhir:v "darkseagreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#8FBC8F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkslateblue" ] ;
+     fhir:display [ fhir:v "darkslateblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#483D8B"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkslategray" ] ;
+     fhir:display [ fhir:v "darkslategray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#2F4F4F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkslategrey" ] ;
+     fhir:display [ fhir:v "darkslategrey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#2F4F4F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkturquoise" ] ;
+     fhir:display [ fhir:v "darkturquoise" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00CED1"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "darkviolet" ] ;
+     fhir:display [ fhir:v "darkviolet" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#9400D3"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "deeppink" ] ;
+     fhir:display [ fhir:v "deeppink" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF1493"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "deepskyblue" ] ;
+     fhir:display [ fhir:v "deepskyblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00BFFF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "dimgray" ] ;
+     fhir:display [ fhir:v "dimgray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#696969"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "dimgrey" ] ;
+     fhir:display [ fhir:v "dimgrey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#696969"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "dodgerblue" ] ;
+     fhir:display [ fhir:v "dodgerblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#1E90FF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "firebrick" ] ;
+     fhir:display [ fhir:v "firebrick" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#B22222"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "floralwhite" ] ;
+     fhir:display [ fhir:v "floralwhite" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFAF0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "forestgreen" ] ;
+     fhir:display [ fhir:v "forestgreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#228B22"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "fuchsia" ] ;
+     fhir:display [ fhir:v "fuchsia" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF00FF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "gainsboro" ] ;
+     fhir:display [ fhir:v "gainsboro" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DCDCDC"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "ghostwhite" ] ;
+     fhir:display [ fhir:v "ghostwhite" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F8F8FF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "gold" ] ;
+     fhir:display [ fhir:v "gold" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFD700"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "goldenrod" ] ;
+     fhir:display [ fhir:v "goldenrod" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DAA520"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "gray" ] ;
+     fhir:display [ fhir:v "gray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#808080"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "green" ] ;
+     fhir:display [ fhir:v "green" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#008000"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "greenyellow" ] ;
+     fhir:display [ fhir:v "greenyellow" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#ADFF2F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "grey" ] ;
+     fhir:display [ fhir:v "grey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#808080"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "honeydew" ] ;
+     fhir:display [ fhir:v "honeydew" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F0FFF0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "hotpink" ] ;
+     fhir:display [ fhir:v "hotpink" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF69B4"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "indianred" ] ;
+     fhir:display [ fhir:v "indianred" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#CD5C5C"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "indigo" ] ;
+     fhir:display [ fhir:v "indigo" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#4B0082"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "ivory" ] ;
+     fhir:display [ fhir:v "ivory" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFFF0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "khaki" ] ;
+     fhir:display [ fhir:v "khaki" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F0E68C"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lavender" ] ;
+     fhir:display [ fhir:v "lavender" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#E6E6FA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lavenderblush" ] ;
+     fhir:display [ fhir:v "lavenderblush" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFF0F5"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lawngreen" ] ;
+     fhir:display [ fhir:v "lawngreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#7CFC00"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lemonchiffon" ] ;
+     fhir:display [ fhir:v "lemonchiffon" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFACD"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightblue" ] ;
+     fhir:display [ fhir:v "lightblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#ADD8E6"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightcoral" ] ;
+     fhir:display [ fhir:v "lightcoral" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F08080"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightcyan" ] ;
+     fhir:display [ fhir:v "lightcyan" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#E0FFFF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightgoldenrodyellow" ] ;
+     fhir:display [ fhir:v "lightgoldenrodyellow" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FAFAD2"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightgray" ] ;
+     fhir:display [ fhir:v "lightgray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#D3D3D3"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightgreen" ] ;
+     fhir:display [ fhir:v "lightgreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#90EE90"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightgrey" ] ;
+     fhir:display [ fhir:v "lightgrey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#D3D3D3"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightpink" ] ;
+     fhir:display [ fhir:v "lightpink" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFB6C1"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightsalmon" ] ;
+     fhir:display [ fhir:v "lightsalmon" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFA07A"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightseagreen" ] ;
+     fhir:display [ fhir:v "lightseagreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#20B2AA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightskyblue" ] ;
+     fhir:display [ fhir:v "lightskyblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#87CEFA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightslategray" ] ;
+     fhir:display [ fhir:v "lightslategray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#778899"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightslategrey" ] ;
+     fhir:display [ fhir:v "lightslategrey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#778899"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightsteelblue" ] ;
+     fhir:display [ fhir:v "lightsteelblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#B0C4DE"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lightyellow" ] ;
+     fhir:display [ fhir:v "lightyellow" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFFE0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "lime" ] ;
+     fhir:display [ fhir:v "lime" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00FF00"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "limegreen" ] ;
+     fhir:display [ fhir:v "limegreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#32CD32"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "linen" ] ;
+     fhir:display [ fhir:v "linen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FAF0E6"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "magenta" ] ;
+     fhir:display [ fhir:v "magenta" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF00FF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "maroon" ] ;
+     fhir:display [ fhir:v "maroon" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#800000"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumaquamarine" ] ;
+     fhir:display [ fhir:v "mediumaquamarine" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#66CDAA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumblue" ] ;
+     fhir:display [ fhir:v "mediumblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#0000CD"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumorchid" ] ;
+     fhir:display [ fhir:v "mediumorchid" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#BA55D3"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumpurple" ] ;
+     fhir:display [ fhir:v "mediumpurple" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#9370DB"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumseagreen" ] ;
+     fhir:display [ fhir:v "mediumseagreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#3CB371"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumslateblue" ] ;
+     fhir:display [ fhir:v "mediumslateblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#7B68EE"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumspringgreen" ] ;
+     fhir:display [ fhir:v "mediumspringgreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00FA9A"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumturquoise" ] ;
+     fhir:display [ fhir:v "mediumturquoise" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#48D1CC"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mediumvioletred" ] ;
+     fhir:display [ fhir:v "mediumvioletred" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#C71585"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "midnightblue" ] ;
+     fhir:display [ fhir:v "midnightblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#191970"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mintcream" ] ;
+     fhir:display [ fhir:v "mintcream" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F5FFFA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "mistyrose" ] ;
+     fhir:display [ fhir:v "mistyrose" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFE4E1"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "moccasin" ] ;
+     fhir:display [ fhir:v "moccasin" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFE4B5"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "navajowhite" ] ;
+     fhir:display [ fhir:v "navajowhite" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFDEAD"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "navy" ] ;
+     fhir:display [ fhir:v "navy" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#000080"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "oldlace" ] ;
+     fhir:display [ fhir:v "oldlace" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FDF5E6"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "olive" ] ;
+     fhir:display [ fhir:v "olive" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#808000"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "olivedrab" ] ;
+     fhir:display [ fhir:v "olivedrab" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#6B8E23"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "orange" ] ;
+     fhir:display [ fhir:v "orange" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFA500"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "orangered" ] ;
+     fhir:display [ fhir:v "orangered" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF4500"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "orchid" ] ;
+     fhir:display [ fhir:v "orchid" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DA70D6"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "palegoldenrod" ] ;
+     fhir:display [ fhir:v "palegoldenrod" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#EEE8AA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "palegreen" ] ;
+     fhir:display [ fhir:v "palegreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#98FB98"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "paleturquoise" ] ;
+     fhir:display [ fhir:v "paleturquoise" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#AFEEEE"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "palevioletred" ] ;
+     fhir:display [ fhir:v "palevioletred" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DB7093"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "papayawhip" ] ;
+     fhir:display [ fhir:v "papayawhip" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFEFD5"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "peachpuff" ] ;
+     fhir:display [ fhir:v "peachpuff" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFDAB9"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "peru" ] ;
+     fhir:display [ fhir:v "peru" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#CD853F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "pink" ] ;
+     fhir:display [ fhir:v "pink" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFC0CB"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "plum" ] ;
+     fhir:display [ fhir:v "plum" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#DDA0DD"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "powderblue" ] ;
+     fhir:display [ fhir:v "powderblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#B0E0E6"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "purple" ] ;
+     fhir:display [ fhir:v "purple" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#800080"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "rebeccapurple" ] ;
+     fhir:display [ fhir:v "rebeccapurple" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#663399"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "red" ] ;
+     fhir:display [ fhir:v "red" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF0000"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "rosybrown" ] ;
+     fhir:display [ fhir:v "rosybrown" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#BC8F8F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "royalblue" ] ;
+     fhir:display [ fhir:v "royalblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#4169E1"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "saddlebrown" ] ;
+     fhir:display [ fhir:v "saddlebrown" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#8B4513"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "salmon" ] ;
+     fhir:display [ fhir:v "salmon" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FA8072"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "sandybrown" ] ;
+     fhir:display [ fhir:v "sandybrown" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F4A460"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "seagreen" ] ;
+     fhir:display [ fhir:v "seagreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#2E8B57"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "seashell" ] ;
+     fhir:display [ fhir:v "seashell" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFF5EE"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "sienna" ] ;
+     fhir:display [ fhir:v "sienna" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#A0522D"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "silver" ] ;
+     fhir:display [ fhir:v "silver" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#C0C0C0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "skyblue" ] ;
+     fhir:display [ fhir:v "skyblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#87CEEB"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "slateblue" ] ;
+     fhir:display [ fhir:v "slateblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#6A5ACD"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "slategray" ] ;
+     fhir:display [ fhir:v "slategray" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#708090"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "slategrey" ] ;
+     fhir:display [ fhir:v "slategrey" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#708090"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "snow" ] ;
+     fhir:display [ fhir:v "snow" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFAFA"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "springgreen" ] ;
+     fhir:display [ fhir:v "springgreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#00FF7F"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "steelblue" ] ;
+     fhir:display [ fhir:v "steelblue" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#4682B4"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "tan" ] ;
+     fhir:display [ fhir:v "tan" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#D2B48C"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "teal" ] ;
+     fhir:display [ fhir:v "teal" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#008080"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "thistle" ] ;
+     fhir:display [ fhir:v "thistle" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#D8BFD8"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "tomato" ] ;
+     fhir:display [ fhir:v "tomato" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FF6347"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "turquoise" ] ;
+     fhir:display [ fhir:v "turquoise" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#40E0D0"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "violet" ] ;
+     fhir:display [ fhir:v "violet" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#EE82EE"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "wheat" ] ;
+     fhir:display [ fhir:v "wheat" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F5DEB3"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "white" ] ;
+     fhir:display [ fhir:v "white" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFFFF"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "whitesmoke" ] ;
+     fhir:display [ fhir:v "whitesmoke" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#F5F5F5"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "yellow" ] ;
+     fhir:display [ fhir:v "yellow" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#FFFF00"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "yellowgreen" ] ;
+     fhir:display [ fhir:v "yellowgreen" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "rgb" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "#9ACD32"
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

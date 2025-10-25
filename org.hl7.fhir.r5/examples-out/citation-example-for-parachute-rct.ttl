@@ -1,0 +1,1173 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Citation/example-for-parachute-rct> a fhir:Citation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-for-parachute-rct"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-02-06T18:03:52.258Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ebm/StructureDefinition/journal-article-citation"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ebm/StructureDefinition/journal-article-citation>
+     ] )
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor0" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Yeh" ] ;
+       fhir:given ( [ fhir:v "Robert W" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor1" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Valsdottir" ] ;
+       fhir:given ( [ fhir:v "Linda R" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor2" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Yeh" ] ;
+       fhir:given ( [ fhir:v "Michael W" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor3" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Shen" ] ;
+       fhir:given ( [ fhir:v "Changyu" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor4" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Kramer" ] ;
+       fhir:given ( [ fhir:v "Daniel B" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor5" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Strom" ] ;
+       fhir:given ( [ fhir:v "Jordan B" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor6" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Secemsky" ] ;
+       fhir:given ( [ fhir:v "Eric A" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor7" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Healy" ] ;
+       fhir:given ( [ fhir:v "Joanne L" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor8" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Domeier" ] ;
+       fhir:given ( [ fhir:v "Robert M" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor9" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Kazi" ] ;
+       fhir:given ( [ fhir:v "Dhruv S" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "contributor10" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Nallamothu" ] ;
+       fhir:given ( [ fhir:v "Brahmajee K" ] )
+     ] )
+  ] [
+     a fhir:Organization ;
+     fhir:id [ fhir:v "contributor11" ] ;
+     fhir:name [ fhir:v "PARACHUTE Investigators" ]
+  ] [
+     a fhir:ArtifactAssessment ;
+     fhir:id [ fhir:v "meshHeading0" ] ;
+     fhir:artifact [
+       a fhir:Reference ;
+       fhir:reference [ fhir:v "#" ] ;
+       fhir:type [ fhir:v "Citation"^^xsd:anyURI ]
+     ] ;
+     fhir:content ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D000060" ] ;
+           fhir:display [ fhir:v "Accidents, Aviation" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "Q000517" ] ;
+             fhir:display [ fhir:v "prevention & control" ]
+           ] )
+         ] ) ;
+         fhir:component ( [
+           fhir:type [
+             fhir:text [ fhir:v "is Major topic" ]
+           ] ;
+           fhir:classifier ( [
+             fhir:coding ( [
+               fhir:code [ fhir:v "N" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D000328" ] ;
+           fhir:display [ fhir:v "Adult" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D000337" ] ;
+           fhir:display [ fhir:v "Aerospace Medicine" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "Q000379" ] ;
+             fhir:display [ fhir:v "methods" ]
+           ] )
+         ] ) ;
+         fhir:component ( [
+           fhir:type [
+             fhir:text [ fhir:v "is Major topic" ]
+           ] ;
+           fhir:classifier ( [
+             fhir:coding ( [
+               fhir:code [ fhir:v "Y" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D000401" ] ;
+           fhir:display [ fhir:v "Aircraft" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D003645" ] ;
+           fhir:display [ fhir:v "Death, Sudden" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "Q000517" ] ;
+             fhir:display [ fhir:v "prevention & control" ]
+           ] )
+         ] ) ;
+         fhir:component ( [
+           fhir:type [
+             fhir:text [ fhir:v "is Major topic" ]
+           ] ;
+           fhir:classifier ( [
+             fhir:coding ( [
+               fhir:code [ fhir:v "Y" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D005260" ] ;
+           fhir:display [ fhir:v "Female" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D006801" ] ;
+           fhir:display [ fhir:v "Humans" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D015601" ] ;
+           fhir:display [ fhir:v "Injury Severity Score" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D008297" ] ;
+           fhir:display [ fhir:v "Male" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D008875" ] ;
+           fhir:display [ fhir:v "Middle Aged" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D011482" ] ;
+           fhir:display [ fhir:v "Protective Devices" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is Major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D014925" ] ;
+           fhir:display [ fhir:v "Wit and Humor as Topic" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] ) ;
+         fhir:text [ fhir:v "components (if present) include qualifier codings" ]
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D014947" ] ;
+           fhir:display [ fhir:v "Wounds and Injuries" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:freeToShare [ fhir:v true ] ;
+       fhir:component ( [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:text [ fhir:v "is not a major topic" ]
+         ] )
+       ] [
+         fhir:type [
+           fhir:text [ fhir:v "qualifier" ]
+         ] ;
+         fhir:classifier ( [
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "Q000517" ] ;
+             fhir:display [ fhir:v "prevention & control" ]
+           ] )
+         ] ) ;
+         fhir:component ( [
+           fhir:type [
+             fhir:text [ fhir:v "is Major topic" ]
+           ] ;
+           fhir:classifier ( [
+             fhir:coding ( [
+               fhir:code [ fhir:v "Y" ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/Citation/example-for-parachute-rct"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:text [ fhir:v "FEvIR Object Identifier" ]
+     ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "https://fevir.net/FOI/306957" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Computable Publishing LLC" ]
+     ]
+  ] [
+     fhir:system [ fhir:v "https://pubmed.ncbi.nlm.nih.gov"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "30545967" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "30545967 Parachute use to prevent death and major trauma when jumping from aircraft: randomized controlled trial."] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:author ( [
+     fhir:name [ fhir:v "Computable Publishing®: MEDLINE-to-FEvIR Converter" ]
+  ] ) ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:useContext ( [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-classification-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "fevir-platform-use" ] ;
+       fhir:display [ fhir:v "FEvIR Platform Use" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "medline-base" ] ;
+         fhir:display [ fhir:v "Medline Base" ] ;
+         fhir:userSelected [ fhir:v false ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:copyright [ fhir:v "https://creativecommons.org/licenses/by-nc-sa/4.0/"] ; # 
+  fhir:approvalDate [ fhir:v "2019-04-09"^^xsd:date] ; # 
+  fhir:lastReviewDate [ fhir:v "2020-02-25"^^xsd:date] ; # 
+  fhir:classification ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-classification-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "citation-source" ] ;
+         fhir:display [ fhir:v "Citation Source" ]
+       ] )
+     ] ;
+     fhir:classifier ( [
+       fhir:text [ fhir:v "MEDLINE" ]
+     ] )
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-classification-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "medline-owner" ] ;
+         fhir:display [ fhir:v "MEDLINE Citation Owner" ]
+       ] )
+     ] ;
+     fhir:classifier ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.nlm.nih.gov/bsd/licensee/elements_descriptions.html#owner_value"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NLM" ] ;
+         fhir:display [ fhir:v "National Library of Medicine, Index Section" ] ;
+         fhir:userSelected [ fhir:v false ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:currentState ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "medline-medline" ] ;
+       fhir:display [ fhir:v "Medline Citation Status of Medline" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "pubmed-publication-status-epublish" ] ;
+       fhir:display [ fhir:v "PubMed PublicationStatus of epublish" ]
+     ] )
+  ] ) ; # 
+  fhir:statusDate ( [
+     fhir:activity [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pubmed-pubstatus-entrez" ] ;
+         fhir:display [ fhir:v "PubMed Pubstatus of Entrez" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:end [ fhir:v "2018-12-15T06:00:00.000Z"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:activity [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pubmed-pubstatus-pubmed" ] ;
+         fhir:display [ fhir:v "PubMed Pubstatus of Pubmed" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:end [ fhir:v "2018-12-14T06:00:00.000Z"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:activity [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pubmed-pubstatus-medline" ] ;
+         fhir:display [ fhir:v "PubMed Pubstatus of Medline" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:end [ fhir:v "2019-04-10T06:00:00.000Z"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:activity [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/citation-status-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pubmed-pubstatus-pmc-release" ] ;
+         fhir:display [ fhir:v "PubMed Pubstatus of PMC release" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:end [ fhir:v "2018-01-01"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:citedArtifact [
+     fhir:identifier ( [
+       fhir:system [ fhir:v "https://pubmed.ncbi.nlm.nih.gov"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "30545967" ]
+     ] [
+       fhir:system [ fhir:v "https://www.ncbi.nlm.nih.gov/pmc/"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "PMC6298200" ]
+     ] [
+       fhir:system [ fhir:v "https://doi.org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "10.1136/bmj.k5094" ]
+     ] ) ;
+     fhir:title ( [
+       fhir:type ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/title-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "primary" ] ;
+           fhir:display [ fhir:v "Primary title" ]
+         ] )
+       ] ) ;
+       fhir:language [ ] ;
+       fhir:text [ fhir:v "PARACHUTE Trial Citation Parachute use to prevent death and major trauma when jumping from aircraft: randomized controlled trial." ]
+     ] ) ;
+     fhir:abstract ( [
+       fhir:text [ fhir:v "<AbstractText Label=\"OBJECTIVE\" NlmCategory=\"OBJECTIVE\">To determine if using a parachute prevents death or major traumatic injury when jumping from an aircraft.</AbstractText><AbstractText Label=\"DESIGN\" NlmCategory=\"METHODS\">Randomized controlled trial.</AbstractText><AbstractText Label=\"SETTING\" NlmCategory=\"METHODS\">Private or commercial aircraft between September 2017 and August 2018.</AbstractText><AbstractText Label=\"PARTICIPANTS\" NlmCategory=\"METHODS\">92 aircraft passengers aged 18 and over were screened for participation. 23 agreed to be enrolled and were randomized.</AbstractText><AbstractText Label=\"INTERVENTION\" NlmCategory=\"METHODS\">Jumping from an aircraft (airplane or helicopter) with a parachute versus an empty backpack (unblinded).</AbstractText><AbstractText Label=\"MAIN OUTCOME MEASURES\" NlmCategory=\"METHODS\">Composite of death or major traumatic injury (defined by an Injury Severity Score over 15) upon impact with the ground measured immediately after landing.</AbstractText><AbstractText Label=\"RESULTS\" NlmCategory=\"RESULTS\">Parachute use did not significantly reduce death or major injury (0% for parachute <i>v</i> 0% for control; P>0.9). This finding was consistent across multiple subgroups. Compared with individuals screened but not enrolled, participants included in the study were on aircraft at significantly lower altitude (mean of 0.6 m for participants <i>v</i> mean of 9146 m for non-participants; P<0.001) and lower velocity (mean of 0 km/h <i>v</i> mean of 800 km/h; P<0.001).</AbstractText><AbstractText Label=\"CONCLUSIONS\" NlmCategory=\"CONCLUSIONS\">Parachute use did not reduce death or major traumatic injury when jumping from aircraft in the first randomized evaluation of this intervention. However, the trial was only able to enroll participants on small stationary aircraft on the ground, suggesting cautious extrapolation to high altitude jumps. When beliefs regarding the effectiveness of an intervention exist in the community, randomized trials might selectively enroll individuals with a lower perceived likelihood of benefit, thus diminishing the applicability of the results to clinical practice.</AbstractText>" ] ;
+       fhir:copyright [ fhir:v "Published by the BMJ Publishing Group Limited. For permission to use (where not already granted under a licence) please go to http://group.bmj.com/group/rights-licensing/permissions." ]
+     ] ) ;
+     fhir:relatesTo ( [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Smith GC, Pell JP. Parachute use to prevent death and major trauma related to gravitational challenge: systematic review of randomised controlled trials. BMJ 2003;327:1459-61. 10.1136/bmj.327.7429.1459 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:citation [ fhir:v "United States Parachute Association. Skydiver's Information Manual, 2018. https://uspa.org/Portals/0/files/Man_SIM_2018.pdf" ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Knapik J, Steelman R. Risk factors for injuries during military static-line airborne operations: a systematic review and meta-analysis. J Athl Train 2016;51:962-80. 10.4085/1062-6050-51.9.10 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Ellitsgaard N. Parachuting injuries: a study of 110,000 sports jumps. Br J Sports Med 1987;21:13-7. 10.1136/bjsm.21.1.13 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:citation [ fhir:v "ICD-10-CM Code V97.2. Parachutist Accident. https://icd.codes/icd10cm/V972" ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Echt DS, Liebson PR, Mitchell LB, et al. Mortality and morbidity in patients receiving encainide, flecainide, or placebo. The Cardiac Arrhythmia Suppression Trial. N Engl J Med 1991;324:781-8. 10.1056/NEJM199103213241201 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Rossouw JE, Anderson GL, Prentice RL, et al. Writing Group for the Women’s Health Initiative Investigators Risks and benefits of estrogen plus progestin in healthy postmenopausal women: principal results From the Women’s Health Initiative randomized controlled trial. JAMA 2002;288:321-33. 10.1001/jama.288.3.321 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:citation [ fhir:v "QuickTapSurvey [program]: TabbleDabble Inc., Toronto, Canada. https://www.quicktapsurvey.com" ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Baker SP, O’Neill B, Haddon W, Jr, Long WB. The injury severity score: a method for describing patients with multiple injuries and evaluating emergency care. J Trauma 1974;14:187-96. 10.1097/00005373-197403000-00001 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Ware J, Jr, Kosinski M, Keller SD. A 12-Item Short-Form Health Survey: construction of scales and preliminary tests of reliability and validity. Med Care 1996;34:220-33. 10.1097/00005650-199603000-00003 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Schwartz AL, Landon BE, Elshaug AG, Chernew ME, McWilliams JM. Measuring low-value care in Medicare. JAMA Intern Med 2014;174:1067-76. 10.1001/jamainternmed.2014.1541 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Kunz R, Oxman AD. The unpredictability paradox: review of empirical comparisons of randomised and non--randomised clinical trials. BMJ 1998;317:1185-90. 10.1136/bmj.317.7167.1185 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Nallamothu BK, Hayward RA, Bates ER. Beyond the randomized clinical trial: the role of effectiveness studies in evaluating cardiovascular therapies. Circulation 2008;118:1294-303. 10.1161/CIRCULATIONAHA.107.703579 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Kennedy-Martin T, Curtis S, Faries D, Robinson S, Johnston J. A literature review on the representativeness of randomized controlled trial samples and implications for the external validity of trial results. Trials 2015;16:495. 10.1186/s13063-015-1023-4 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Hayes MJ, Kaestner V, Mailankody S, Prasad V. Most medical practices are not parachutes: a citation analysis of practices felt by biomedical authors to be analogous to parachutes. CMAJ Open 2018;6:E31-8. 10.9778/cmajo.20170088 " ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:citation [ fhir:v "Newton SI. Law of Universal Gravitation. Philosophiæ Naturalis Principia Mathematica, 1687." ]
+     ] [
+       fhir:type [ fhir:v "cites" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Al-Lamee R, Thompson D, Dehbi H-M, et al. ORBITA investigators Percutaneous coronary intervention in stable angina (ORBITA): a double-blind, randomised controlled trial. Lancet 2018;391:31-40. 10.1016/S0140-6736(17)32714-9 " ]
+     ] [
+       fhir:type [ fhir:v "correction-in" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016425" ] ;
+           fhir:display [ fhir:v "Published Erratum" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "BMJ. 2018 Dec 18;363:k5343. doi: 10.1136/bmj.k5343" ]
+     ] [
+       fhir:type [ fhir:v "comment-in" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016420" ] ;
+           fhir:display [ fhir:v "Comment" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "Catheter Cardiovasc Interv. 2019 Apr 1;93(5):944-945. doi: 10.1002/ccd.28151" ]
+     ] [
+       fhir:type [ fhir:v "comment-in" ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016420" ] ;
+           fhir:display [ fhir:v "Comment" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:citation [ fhir:v "MMW Fortschr Med. 2019 Feb;161(3):26. doi: 10.1007/s15006-019-0173-9" ]
+     ] ) ;
+     fhir:publicationForm ( [
+       fhir:publishedIn [
+         fhir:type [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/published-in-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "D020492" ] ;
+             fhir:display [ fhir:v "Periodical" ]
+           ] )
+         ] ;
+         fhir:identifier ( [
+           fhir:type [
+             fhir:coding ( [
+               fhir:system [ fhir:v "https://www.nlm.nih.gov/bsd/licensee/elements_descriptions.html#issn"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "Electronic" ] ;
+               fhir:display [ fhir:v "Electronic" ]
+             ] ) ;
+             fhir:text [ fhir:v "Electronic ISSN Type" ]
+           ] ;
+           fhir:system [ fhir:v "https://portal.issn.org"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "1756-1833" ]
+         ] [
+           fhir:type [
+             fhir:text [ fhir:v "ISOAbbreviation" ]
+           ] ;
+           fhir:system [ fhir:v "https://www.issn.org/services/online-services/access-to-the-ltwa/"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "BMJ" ]
+         ] [
+           fhir:type [
+             fhir:text [ fhir:v "ISSN Linking" ]
+           ] ;
+           fhir:system [ fhir:v "https://www.issn.org/understanding-the-issn/assignment-rules/the-issn-l-for-publications-on-multiple-media/"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "0959-8138" ]
+         ] [
+           fhir:type [
+             fhir:text [ fhir:v "Medline Title Abbreviation" ]
+           ] ;
+           fhir:system [ fhir:v "https://www.nlm.nih.gov/tsd/cataloging/contructitleabbre.html"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "BMJ" ]
+         ] [
+           fhir:type [
+             fhir:text [ fhir:v "NLM Unique ID" ]
+           ] ;
+           fhir:system [ fhir:v "https://locatorplus.gov/cgi-bin/Pwebrecon.cgi?DB=local"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "8900488" ]
+         ] ) ;
+         fhir:title [ fhir:v "BMJ (Clinical research ed.)" ] ;
+         fhir:publisherLocation [ fhir:v "England" ]
+       ] ;
+       fhir:citedMedium [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-medium"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "internet" ] ;
+           fhir:display [ fhir:v "Internet" ]
+         ] )
+       ] ;
+       fhir:volume [ fhir:v "363" ] ;
+       fhir:articleDate [ fhir:v "2018-12-13"^^xsd:date ] ;
+       fhir:pageString [ fhir:v "k5094" ]
+     ] [
+       fhir:citedMedium [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-medium"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "internet-without-issue" ] ;
+           fhir:display [ fhir:v "Internet without issue" ]
+         ] )
+       ] ;
+       fhir:articleDate [ fhir:v "2018-12-13"^^xsd:date ]
+     ] ) ;
+     fhir:webLocation ( [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "abstract" ] ;
+           fhir:display [ fhir:v "Abstract" ]
+         ] )
+       ] ) ;
+       fhir:url [ fhir:v "https://pubmed.ncbi.nlm.nih.gov/30545967/"^^xsd:anyURI ]
+     ] [
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/artifact-url-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "doi-based" ] ;
+           fhir:display [ fhir:v "DOI Based" ]
+         ] )
+       ] ) ;
+       fhir:url [ fhir:v "https://doi.org/10.1136/bmj.k5094"^^xsd:anyURI ]
+     ] ) ;
+     fhir:classification ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "publishing-model" ] ;
+           fhir:display [ fhir:v "Publishing Model" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "Electronic" ] ;
+           fhir:display [ fhir:v "Electronic" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mesh-heading" ] ;
+           fhir:display [ fhir:v "MeSH heading" ]
+         ] )
+       ] ;
+       fhir:artifactAssessment ( [
+         fhir:reference [ fhir:v "#meshHeading0" ] ;
+         fhir:type [ fhir:v "ArtifactAssessment"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "publication-type" ] ;
+           fhir:display [ fhir:v "Publication type" ]
+         ] )
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://meshb.nlm.nih.gov/"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016449" ] ;
+           fhir:display [ fhir:v "Randomized Controlled Trial" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "knowledge-artifact-type" ] ;
+           fhir:display [ fhir:v "Knowledge Artifact Type" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/citation-artifact-classifier"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D016428" ] ;
+           fhir:display [ fhir:v "Journal Article" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ) ;
+       fhir:artifactAssessment ( [
+         fhir:display [ fhir:v "Classifier added by Computable Publishing LLC" ]
+       ] )
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/cited-artifact-classification-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "citation-subset" ] ;
+           fhir:display [ fhir:v "Citation subset" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] ;
+       fhir:classifier ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://www.nlm.nih.gov/bsd/licensee/elements_descriptions.html#citationsubset"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "IM" ] ;
+           fhir:display [ fhir:v "IM" ] ;
+           fhir:userSelected [ fhir:v false ]
+         ] )
+       ] )
+     ] ) ;
+     fhir:contributorship [
+       fhir:complete [ fhir:v true ] ;
+       fhir:entry ( [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor0" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Yeh RW" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "RW" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA ryeh@bidmc.harvard.edu." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor1" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Valsdottir LR" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "LR" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor2" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Yeh MW" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "MW" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "David Geffen School of Medicine, University of California, Los Angeles, CA, USA ryeh@bidmc.harvard.edu." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor3" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Shen C" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "C" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor4" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Kramer DB" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "DB" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor5" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Strom JB" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "JB" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor6" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Secemsky EA" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "EA" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor7" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Healy JL" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "JL" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor8" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Domeier RM" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "RM" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Department of Emergency Medicine, University of Michigan and Saint Joseph Hospital, Ann Arbor, MI, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor9" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Kazi DS" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "DS" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Richard A and Susan F Smith Center for Outcomes Research in Cardiology, Beth Israel Deaconess Medical Center, Harvard Medical School, 375 Longwood Avenue, Boston, MA 02215, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor10" ] ;
+           fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "Nallamothu BK" ]
+         ] ;
+         fhir:forenameInitials [ fhir:v "BK" ] ;
+         fhir:affiliation ( [
+           fhir:display [ fhir:v "Michigan Integrated Center for Health Analytics and Medical Prediction, Department of Internal Medicine and Institute for Healthcare Policy and Innovation, University of Michigan, Ann Arbor, MI, USA." ]
+         ] )
+       ] [
+         fhir:contributor [
+           fhir:reference [ fhir:v "#contributor11" ] ;
+           fhir:type [ fhir:v "Organization"^^xsd:anyURI ] ;
+           fhir:display [ fhir:v "PARACHUTE Investigators" ]
+         ]
+       ] )
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/contributor-summary-source> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "contributor-summary-source"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem contributor-summary-source</b></p><a name=\"contributor-summary-source\"> </a><a name=\"hccontributor-summary-source\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/contributor-summary-source</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">publisher-data<a name=\"contributor-summary-source-publisher-data\"> </a></td><td>Publisher provided</td><td>Data copied by machine from publisher data.</td></tr><tr><td style=\"white-space:nowrap\">article-copy<a name=\"contributor-summary-source-article-copy\"> </a></td><td>Copied from article</td><td>Data copied by human from article text.</td></tr><tr><td style=\"white-space:nowrap\">citation-manager<a name=\"contributor-summary-source-citation-manager\"> </a></td><td>Reported by citation manager</td><td>Data copied by machine from citation manager data.</td></tr><tr><td style=\"white-space:nowrap\">custom<a name=\"contributor-summary-source-custom\"> </a></td><td>custom format</td><td>Custom format (may be described in text note).</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/contributor-summary-source"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1886" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "ContributorSummarySource"] ; # 
+  fhir:title [ fhir:v "Contributor Summary Source"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Used to code the producer or rule for creating the display string."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/contributor-summary-source"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/contributor-summary-source>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "publisher-data" ] ;
+     fhir:display [ fhir:v "Publisher provided" ] ;
+     fhir:definition [ fhir:v "Data copied by machine from publisher data." ]
+  ] [
+     fhir:code [ fhir:v "article-copy" ] ;
+     fhir:display [ fhir:v "Copied from article" ] ;
+     fhir:definition [ fhir:v "Data copied by human from article text." ]
+  ] [
+     fhir:code [ fhir:v "citation-manager" ] ;
+     fhir:display [ fhir:v "Reported by citation manager" ] ;
+     fhir:definition [ fhir:v "Data copied by machine from citation manager data." ]
+  ] [
+     fhir:code [ fhir:v "custom" ] ;
+     fhir:display [ fhir:v "custom format" ] ;
+     fhir:definition [ fhir:v "Custom format (may be described in text note)." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

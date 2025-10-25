@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/eligibilityrequest-purpose> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eligibilityrequest-purpose"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem eligibilityrequest-purpose</b>\n      </p>\n      <a name=\"eligibilityrequest-purpose\"> </a>\n      <a name=\"hceligibilityrequest-purpose\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/eligibilityrequest-purpose</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">auth-requirements\n            <a name=\"eligibilityrequest-purpose-auth-requirements\"> </a>\n          </td>\n          <td>Coverage auth-requirements</td>\n          <td>The prior authorization requirements for the listed, or discovered if specified, converages for the categories of service and/or specifed biling codes are requested.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">benefits\n            <a name=\"eligibilityrequest-purpose-benefits\"> </a>\n          </td>\n          <td>Coverage benefits</td>\n          <td>The plan benefits and optionally benefits consumed  for the listed, or discovered if specified, converages are requested.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">discovery\n            <a name=\"eligibilityrequest-purpose-discovery\"> </a>\n          </td>\n          <td>Coverage Discovery</td>\n          <td>The insurer is requested to report on any coverages which they are aware of in addition to any specifed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">validation\n            <a name=\"eligibilityrequest-purpose-validation\"> </a>\n          </td>\n          <td>Coverage Validation</td>\n          <td>A check that the specified coverages are in-force is requested.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fm"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/eligibilityrequest-purpose"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1183" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "EligibilityRequestPurpose"] ; # 
+  fhir:title [ fhir:v "Eligibility Request Purpose"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A code specifying the types of information being requested."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/eligibilityrequest-purpose"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/eligibilityrequest-purpose>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "auth-requirements" ] ;
+     fhir:display [ fhir:v "Coverage auth-requirements" ] ;
+     fhir:definition [ fhir:v "The prior authorization requirements for the listed, or discovered if specified, converages for the categories of service and/or specifed biling codes are requested." ]
+  ] [
+     fhir:code [ fhir:v "benefits" ] ;
+     fhir:display [ fhir:v "Coverage benefits" ] ;
+     fhir:definition [ fhir:v "The plan benefits and optionally benefits consumed  for the listed, or discovered if specified, converages are requested." ]
+  ] [
+     fhir:code [ fhir:v "discovery" ] ;
+     fhir:display [ fhir:v "Coverage Discovery" ] ;
+     fhir:definition [ fhir:v "The insurer is requested to report on any coverages which they are aware of in addition to any specifed." ]
+  ] [
+     fhir:code [ fhir:v "validation" ] ;
+     fhir:display [ fhir:v "Coverage Validation" ] ;
+     fhir:definition [ fhir:v "A check that the specified coverages are in-force is requested." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

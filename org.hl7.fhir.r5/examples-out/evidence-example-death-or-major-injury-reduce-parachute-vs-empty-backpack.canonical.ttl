@@ -1,0 +1,130 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Evidence/example-death-or-major-injury-reduce-parachute-vs-empty-backpack> a fhir:Evidence ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-death-or-major-injury-reduce-parachute-vs-empty-backpack"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "6" ] ;
+     fhir:lastUpdated [ fhir:v "2025-02-17T13:56:56.719Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ebm/StructureDefinition/comparative-evidence"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ebm/StructureDefinition/comparative-evidence>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/ebm/StructureDefinition/single-study-evidence"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ebm/StructureDefinition/single-study-evidence>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/Evidence/example-death-or-major-injury-reduce-parachute-vs-empty-backpack"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:text [ fhir:v "FEvIR Object Identifier" ]
+     ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "https://fevir.net/FOI/318273" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Computable Publishing LLC" ]
+     ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Death or Major Traumatic Injury on Impact comparing intervention vs. comparator"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:author ( [
+     fhir:name [ fhir:v "Joanne Dehnbostel" ]
+  ] ) ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "https://creativecommons.org/licenses/by-nc-sa/4.0/"] ; # 
+  fhir:description [ fhir:v "Example Evidence Resource for EBMonFHIR IG using SingleStudyEvidence and ComparativeEvidence Profiles"] ; # 
+  fhir:variableDefinition ( [
+     fhir:variableRole [ ] ;
+     fhir:observed [
+       fhir:link <http://hl7.org/fhir/Group/292955> ;
+       fhir:reference [ fhir:v "Group/292955" ] ;
+       fhir:type [ fhir:v "Group"^^xsd:anyURI ] ;
+       fhir:display [ fhir:v "PARACHUTE Trial Participants" ]
+     ]
+  ] [
+     fhir:variableRole [ ] ;
+     fhir:observed [
+       fhir:link <http://hl7.org/fhir/EvidenceVariable/297490> ;
+       fhir:reference [ fhir:v "EvidenceVariable/297490" ] ;
+       fhir:type [ fhir:v "EvidenceVariable"^^xsd:anyURI ] ;
+       fhir:display [ fhir:v "GroupAssignment: Jumping from aircraft with parachute vs. Jumping from aircraft with empty backpack" ]
+     ]
+  ] [
+     fhir:variableRole [ ] ;
+     fhir:observed [
+       fhir:link <http://hl7.org/fhir/EvidenceVariable/297743> ;
+       fhir:reference [ fhir:v "EvidenceVariable/297743" ] ;
+       fhir:type [ fhir:v "EvidenceVariable"^^xsd:anyURI ] ;
+       fhir:display [ fhir:v "Death or Major Traumatic Injury on Impact" ]
+     ]
+  ] ) ; # 
+  fhir:synthesisType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/synthesis-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NotApplicable" ] ;
+       fhir:display [ fhir:v "not applicable" ]
+     ] )
+  ] ; # 
+  fhir:studyDesign ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://fevir.net/sevco"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SEVCO:01003" ] ;
+       fhir:display [ fhir:v "randomized assignment" ]
+     ] )
+  ] ) ; # 
+  fhir:statistic ( [
+     fhir:statisticType [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fevir.net/sevco"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "STATO:0000614" ] ;
+         fhir:display [ fhir:v "absolute difference" ]
+       ] )
+     ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "0"^^xsd:decimal ]
+     ] ;
+     fhir:sampleSize [
+       fhir:knownDataCount [ fhir:v "23"^^xsd:nonNegativeInteger ]
+     ] ;
+     fhir:attributeEstimate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fevir.net/sevco"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "STATO:0000700" ] ;
+           fhir:display [ fhir:v "p-value" ]
+         ] )
+       ] ;
+       fhir:quantity [
+         fhir:value [ fhir:v 0.9 ] ;
+         fhir:comparator [ fhir:v ">" ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Group/292955> a fhir:Group .
+
+<http://hl7.org/fhir/EvidenceVariable/297490> a fhir:EvidenceVariable .
+
+<http://hl7.org/fhir/EvidenceVariable/297743> a fhir:EvidenceVariable .
+
+# -------------------------------------------------------------------------------------
+

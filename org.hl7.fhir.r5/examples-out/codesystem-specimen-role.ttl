@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/specimen-role> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "specimen-role"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem specimen-role</b>\n      </p>\n      <a name=\"specimen-role\"> </a>\n      <a name=\"hcspecimen-role\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/specimen-role</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">b\n            <a name=\"specimen-role-b\"> </a>\n          </td>\n          <td>Blind Sample</td>\n          <td>Used to test the validity of the measurement process, where the composition of the sample is unknown except to the person submitting it.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">c\n            <a name=\"specimen-role-c\"> </a>\n          </td>\n          <td>Calibrator</td>\n          <td>Used for initial setting of calibration of the instrument.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">e\n            <a name=\"specimen-role-e\"> </a>\n          </td>\n          <td>Electronic QC</td>\n          <td>Used with manufactured reference providing signals that simulate QC results.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">f\n            <a name=\"specimen-role-f\"> </a>\n          </td>\n          <td>Filler Organization Proficiency</td>\n          <td>Specimen used for testing proficiency of the organization performing the testing (Filler).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">o\n            <a name=\"specimen-role-o\"> </a>\n          </td>\n          <td>Operator Proficiency</td>\n          <td>Specimen used for testing Operator Proficiency.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">p\n            <a name=\"specimen-role-p\"> </a>\n          </td>\n          <td>Patient</td>\n          <td>Used for any patient sample.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">q\n            <a name=\"specimen-role-q\"> </a>\n          </td>\n          <td>Control specimen</td>\n          <td>Used when specimen is the control specimen (either positive or negative).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">r\n            <a name=\"specimen-role-r\"> </a>\n          </td>\n          <td>Replicate (of patient sample as a control)</td>\n          <td>Used when a patient sample is re-run as a control for a repeat test.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">v\n            <a name=\"specimen-role-v\"> </a>\n          </td>\n          <td>Verifying Calibrator</td>\n          <td>Used for periodic calibration checks.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/specimen-role"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2060" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "SpecimenRole"] ; # 
+  fhir:title [ fhir:v "Specimen Role"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes providing the combined status of the specimen."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/specimen-role"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/specimen-role>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "b" ] ;
+     fhir:display [ fhir:v "Blind Sample" ] ;
+     fhir:definition [ fhir:v "Used to test the validity of the measurement process, where the composition of the sample is unknown except to the person submitting it." ]
+  ] [
+     fhir:code [ fhir:v "c" ] ;
+     fhir:display [ fhir:v "Calibrator" ] ;
+     fhir:definition [ fhir:v "Used for initial setting of calibration of the instrument." ]
+  ] [
+     fhir:code [ fhir:v "e" ] ;
+     fhir:display [ fhir:v "Electronic QC" ] ;
+     fhir:definition [ fhir:v "Used with manufactured reference providing signals that simulate QC results." ]
+  ] [
+     fhir:code [ fhir:v "f" ] ;
+     fhir:display [ fhir:v "Filler Organization Proficiency" ] ;
+     fhir:definition [ fhir:v "Specimen used for testing proficiency of the organization performing the testing (Filler)." ]
+  ] [
+     fhir:code [ fhir:v "o" ] ;
+     fhir:display [ fhir:v "Operator Proficiency" ] ;
+     fhir:definition [ fhir:v "Specimen used for testing Operator Proficiency." ]
+  ] [
+     fhir:code [ fhir:v "p" ] ;
+     fhir:display [ fhir:v "Patient" ] ;
+     fhir:definition [ fhir:v "Used for any patient sample." ]
+  ] [
+     fhir:code [ fhir:v "q" ] ;
+     fhir:display [ fhir:v "Control specimen" ] ;
+     fhir:definition [ fhir:v "Used when specimen is the control specimen (either positive or negative)." ]
+  ] [
+     fhir:code [ fhir:v "r" ] ;
+     fhir:display [ fhir:v "Replicate (of patient sample as a control)" ] ;
+     fhir:definition [ fhir:v "Used when a patient sample is re-run as a control for a repeat test." ]
+  ] [
+     fhir:code [ fhir:v "v" ] ;
+     fhir:display [ fhir:v "Verifying Calibrator" ] ;
+     fhir:definition [ fhir:v "Used for periodic calibration checks." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

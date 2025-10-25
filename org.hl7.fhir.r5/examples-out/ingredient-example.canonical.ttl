@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Ingredient/example> a fhir:Ingredient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:role [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://ema.europa.eu/example/ingredientRole"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ActiveBase" ]
+     ] )
+  ] ; # 
+  fhir:manufacturer ( [
+     fhir:manufacturer [
+       fhir:link <http://hl7.org/fhir/Organization/example> ;
+       fhir:reference [ fhir:v "Organization/example" ]
+     ]
+  ] ) ; # 
+  fhir:substance [
+     fhir:code [
+       fhir:concept [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://ema.europa.eu/example/substance"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "EQUIXABAN" ]
+         ] )
+       ]
+     ] ;
+     fhir:strength ( [
+       fhir:presentation [
+         a fhir:Ratio ;
+         fhir:numerator [
+           fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mg" ]
+         ] ;
+         fhir:denominator [
+           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "tablet" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "{tablet}" ]
+         ]
+       ] ;
+       fhir:concentration [
+         a fhir:Ratio ;
+         fhir:numerator [
+           fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mg" ]
+         ] ;
+         fhir:denominator [
+           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "mg" ]
+         ]
+       ] ;
+       fhir:referenceStrength ( [
+         fhir:substance [
+           fhir:concept [
+             fhir:coding ( [
+               fhir:system [ fhir:v "http://ema.europa.eu/example/substance"^^xsd:anyURI ] ;
+               fhir:code [ fhir:v "EQUIXABAN-SULPHATE" ]
+             ] )
+           ]
+         ] ;
+         fhir:strength [
+           a fhir:Ratio ;
+           fhir:numerator [
+             fhir:value [ fhir:v 5.03 ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ] ;
+           fhir:denominator [
+             fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+             fhir:unit [ fhir:v "mg" ] ;
+             fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "mg" ]
+           ]
+         ]
+       ] )
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/Organization/example> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

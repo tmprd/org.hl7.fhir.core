@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/immunization-status> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "immunization-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet immunization-status</b>\n      </p>\n      <a name=\"immunization-status\"> </a>\n      <a name=\"hcimmunization-status\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"codesystem-event-status.html\">\n            <code>http://hl7.org/fhir/event-status</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?6.0.0-ballot3</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n              <td>\n                <b>\n                  <a href=\"valueset-resource-status.html\">Canonical Mapping for \"Immunization Status Codes\"</a>\n                </b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-event-status.html#event-status-completed\">completed</a>\n              </td>\n              <td style=\"color: #cccccc\">Completed</td>\n              <td>The event has now concluded.</td>\n              <td>\n                <span title=\"EQUIVALENT\">~</span>\n                <a href=\"codesystem-resource-status.html#resource-status-complete\">complete</a>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-event-status.html#event-status-entered-in-error\">entered-in-error</a>\n              </td>\n              <td style=\"color: #cccccc\">Entered in Error</td>\n              <td>This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be \"stopped\" rather than \"entered-in-error\".).</td>\n              <td>\n                <span title=\"EQUIVALENT\">~</span>\n                <a href=\"codesystem-resource-status.html#resource-status-error\">error</a>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-event-status.html#event-status-not-done\">not-done</a>\n              </td>\n              <td style=\"color: #cccccc\">Not Done</td>\n              <td>The event was terminated prior to any activity beyond preparation.  I.e. The 'main' activity has not yet begun.  The boundary between preparatory and the 'main' activity is context-specific.</td>\n              <td>\n                <span title=\"EQUIVALENT\">~</span>\n                <a href=\"codesystem-resource-status.html#resource-status-abandoned\">abandoned</a>\n              </td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pher"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/immunization-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.295" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.292" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ImmunizationStatusCodes"] ; # 
+  fhir:title [ fhir:v "Immunization Status Codes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR Project team"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/event-status"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "completed" ]
+       ] [
+         fhir:code [ fhir:v "entered-in-error" ]
+       ] [
+         fhir:code [ fhir:v "not-done" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

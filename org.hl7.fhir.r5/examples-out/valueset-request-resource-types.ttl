@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/request-resource-types> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "request-resource-types"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet request-resource-types</b>\n      </p>\n      <a name=\"request-resource-types\"> </a>\n      <a name=\"hcrequest-resource-types\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"codesystem-fhir-types.html\">\n            <code>http://hl7.org/fhir/fhir-types</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?6.0.0-ballot3</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Appointment\">Appointment</a>\n              </td>\n              <td style=\"color: #cccccc\">Appointment</td>\n              <td>A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-CarePlan\">CarePlan</a>\n              </td>\n              <td style=\"color: #cccccc\">CarePlan</td>\n              <td>Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Claim\">Claim</a>\n              </td>\n              <td style=\"color: #cccccc\">Claim</td>\n              <td>A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-CommunicationRequest\">CommunicationRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">CommunicationRequest</td>\n              <td>A request to convey information from a sender to a recipient.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-CoverageEligibilityRequest\">CoverageEligibilityRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">CoverageEligibilityRequest</td>\n              <td>The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-DeviceRequest\">DeviceRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">DeviceRequest</td>\n              <td>Represents a request a device to be provided to a specific patient. The device may be an implantable device to be subsequently implanted, or an external assistive device, such as a walker, to be delivered and subsequently be used.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-EnrollmentRequest\">EnrollmentRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">EnrollmentRequest</td>\n              <td>This resource provides the insurance enrollment details to the insurer regarding a specified coverage.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-ImmunizationRecommendation\">ImmunizationRecommendation</a>\n              </td>\n              <td style=\"color: #cccccc\">ImmunizationRecommendation</td>\n              <td>A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-MedicationRequest\">MedicationRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">MedicationRequest</td>\n              <td>An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called \"MedicationRequest\" rather than \"MedicationPrescription\" or \"MedicationOrder\" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-NutritionOrder\">NutritionOrder</a>\n              </td>\n              <td style=\"color: #cccccc\">NutritionOrder</td>\n              <td>A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to an individual or group.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-RequestOrchestration\">RequestOrchestration</a>\n              </td>\n              <td style=\"color: #cccccc\">RequestOrchestration</td>\n              <td>A set of related requests that can be used to capture intended activities that have inter-dependencies such as \"give this medication after that one\".</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-ServiceRequest\">ServiceRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">ServiceRequest</td>\n              <td>A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-SupplyRequest\">SupplyRequest</a>\n              </td>\n              <td style=\"color: #cccccc\">SupplyRequest</td>\n              <td>A record of a non-patient specific request for a medication, substance, device, certain types of biologically derived product, and nutrition product used in the healthcare setting.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Task\">Task</a>\n              </td>\n              <td style=\"color: #cccccc\">Task</td>\n              <td>A task to be performed as a part of a workflow and the related information like inputs, outputs and execution progress.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Transport\">Transport</a>\n              </td>\n              <td style=\"color: #cccccc\">Transport</td>\n              <td>Record of transport.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-VisionPrescription\">VisionPrescription</a>\n              </td>\n              <td style=\"color: #cccccc\">VisionPrescription</td>\n              <td>An authorization for the provision of glasses and/or contact lenses to a patient.</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/request-resource-types"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.1058" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "RequestResourceTypes"] ; # 
+  fhir:title [ fhir:v "Request Resource Types"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "All Resource Types that represent request resources"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v true] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/fhir-types"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "Appointment" ]
+       ] [
+         fhir:code [ fhir:v "CarePlan" ]
+       ] [
+         fhir:code [ fhir:v "Claim" ]
+       ] [
+         fhir:code [ fhir:v "CommunicationRequest" ]
+       ] [
+         fhir:code [ fhir:v "CoverageEligibilityRequest" ]
+       ] [
+         fhir:code [ fhir:v "DeviceRequest" ]
+       ] [
+         fhir:code [ fhir:v "EnrollmentRequest" ]
+       ] [
+         fhir:code [ fhir:v "ImmunizationRecommendation" ]
+       ] [
+         fhir:code [ fhir:v "MedicationRequest" ]
+       ] [
+         fhir:code [ fhir:v "NutritionOrder" ]
+       ] [
+         fhir:code [ fhir:v "RequestOrchestration" ]
+       ] [
+         fhir:code [ fhir:v "ServiceRequest" ]
+       ] [
+         fhir:code [ fhir:v "SupplyRequest" ]
+       ] [
+         fhir:code [ fhir:v "Task" ]
+       ] [
+         fhir:code [ fhir:v "Transport" ]
+       ] [
+         fhir:code [ fhir:v "VisionPrescription" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

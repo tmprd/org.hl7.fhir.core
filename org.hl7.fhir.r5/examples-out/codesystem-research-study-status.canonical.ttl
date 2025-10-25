@@ -1,0 +1,152 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/research-study-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "research-study-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T05:27:59+05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem research-study-status</b></p><a name=\"research-study-status\"> </a><a name=\"hcresearch-study-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2022-02-10T16:15:00+05:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/research-study-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">overall-study<a name=\"research-study-status-overall-study\"> </a></td><td>Overall study</td><td>Used for documenting the start and end of the overall study, distinct from progress states.</td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"research-study-status-active\"> </a></td><td>Active</td><td>Study is opened for accrual.</td></tr><tr><td style=\"white-space:nowrap\">active-but-not-recruiting<a name=\"research-study-status-active-but-not-recruiting\"> </a></td><td>Active, not recruiting</td><td>The study is ongoing, and participants are receiving an intervention or being examined, but potential participants are not currently being recruited or enrolled.</td></tr><tr><td style=\"white-space:nowrap\">administratively-completed<a name=\"research-study-status-administratively-completed\"> </a></td><td>Administratively Completed</td><td>Study is completed prematurely and will not resume; patients are no longer examined nor treated.</td></tr><tr><td style=\"white-space:nowrap\">approved<a name=\"research-study-status-approved\"> </a></td><td>Approved</td><td>Protocol is approved by the review board.</td></tr><tr><td style=\"white-space:nowrap\">closed-to-accrual<a name=\"research-study-status-closed-to-accrual\"> </a></td><td>Closed to Accrual</td><td>Study is closed for accrual; patients can be examined and treated.</td></tr><tr><td style=\"white-space:nowrap\">closed-to-accrual-and-intervention<a name=\"research-study-status-closed-to-accrual-and-intervention\"> </a></td><td>Closed to Accrual and Intervention</td><td>Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study.</td></tr><tr><td style=\"white-space:nowrap\">completed<a name=\"research-study-status-completed\"> </a></td><td>Completed</td><td>The study closed according to the study plan. There will be no further treatments, interventions or data collection.</td></tr><tr><td style=\"white-space:nowrap\">disapproved<a name=\"research-study-status-disapproved\"> </a></td><td>Disapproved</td><td>Protocol was disapproved by the review board.</td></tr><tr><td style=\"white-space:nowrap\">enrolling-by-invitation<a name=\"research-study-status-enrolling-by-invitation\"> </a></td><td>Enrolling by invitation</td><td>The study is selecting its participants from a population, or group of people, decided on by the researchers in advance. These studies are not open to everyone who meets the eligibility criteria but only to people in that particular population, who are specifically invited to participate.</td></tr><tr><td style=\"white-space:nowrap\">in-review<a name=\"research-study-status-in-review\"> </a></td><td>In Review</td><td>Protocol is submitted to the review board for approval.</td></tr><tr><td style=\"white-space:nowrap\">not-yet-recruiting<a name=\"research-study-status-not-yet-recruiting\"> </a></td><td>Not yet recruiting</td><td>The study has not started recruiting participants.</td></tr><tr><td style=\"white-space:nowrap\">recruiting<a name=\"research-study-status-recruiting\"> </a></td><td>Recruiting</td><td>The study is currently recruiting participants.</td></tr><tr><td style=\"white-space:nowrap\">temporarily-closed-to-accrual<a name=\"research-study-status-temporarily-closed-to-accrual\"> </a></td><td>Temporarily Closed to Accrual</td><td>Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated.</td></tr><tr><td style=\"white-space:nowrap\">temporarily-closed-to-accrual-and-intervention<a name=\"research-study-status-temporarily-closed-to-accrual-and-intervention\"> </a></td><td>Temporarily Closed to Accrual and Intervention</td><td>Study is temporarily closed for accrual and intervention and potentially can be resumed in the future.</td></tr><tr><td style=\"white-space:nowrap\">terminated<a name=\"research-study-status-terminated\"> </a></td><td>Terminated</td><td>The study has stopped early and will not start again. Participants are no longer being examined or treated.</td></tr><tr><td style=\"white-space:nowrap\">withdrawn<a name=\"research-study-status-withdrawn\"> </a></td><td>Withdrawn</td><td>Protocol was withdrawn by the lead organization.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/research-study-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.820" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.803" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ResearchStudyStatus"] ; # 
+  fhir:title [ fhir:v "Research Study Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes that convey the current status of the research study."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/research-study-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/research-study-status>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "overall-study" ] ;
+     fhir:display [ fhir:v "Overall study" ] ;
+     fhir:definition [ fhir:v "Used for documenting the start and end of the overall study, distinct from progress states." ]
+  ] [
+     fhir:code [ fhir:v "active" ] ;
+     fhir:display [ fhir:v "Active" ] ;
+     fhir:definition [ fhir:v "Study is opened for accrual." ]
+  ] [
+     fhir:code [ fhir:v "active-but-not-recruiting" ] ;
+     fhir:display [ fhir:v "Active, not recruiting" ] ;
+     fhir:definition [ fhir:v "The study is ongoing, and participants are receiving an intervention or being examined, but potential participants are not currently being recruited or enrolled." ]
+  ] [
+     fhir:code [ fhir:v "administratively-completed" ] ;
+     fhir:display [ fhir:v "Administratively Completed" ] ;
+     fhir:definition [ fhir:v "Study is completed prematurely and will not resume; patients are no longer examined nor treated." ]
+  ] [
+     fhir:code [ fhir:v "approved" ] ;
+     fhir:display [ fhir:v "Approved" ] ;
+     fhir:definition [ fhir:v "Protocol is approved by the review board." ]
+  ] [
+     fhir:code [ fhir:v "closed-to-accrual" ] ;
+     fhir:display [ fhir:v "Closed to Accrual" ] ;
+     fhir:definition [ fhir:v "Study is closed for accrual; patients can be examined and treated." ]
+  ] [
+     fhir:code [ fhir:v "closed-to-accrual-and-intervention" ] ;
+     fhir:display [ fhir:v "Closed to Accrual and Intervention" ] ;
+     fhir:definition [ fhir:v "Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study." ]
+  ] [
+     fhir:code [ fhir:v "completed" ] ;
+     fhir:display [ fhir:v "Completed" ] ;
+     fhir:definition [ fhir:v "The study closed according to the study plan. There will be no further treatments, interventions or data collection." ]
+  ] [
+     fhir:code [ fhir:v "disapproved" ] ;
+     fhir:display [ fhir:v "Disapproved" ] ;
+     fhir:definition [ fhir:v "Protocol was disapproved by the review board." ]
+  ] [
+     fhir:code [ fhir:v "enrolling-by-invitation" ] ;
+     fhir:display [ fhir:v "Enrolling by invitation" ] ;
+     fhir:definition [ fhir:v "The study is selecting its participants from a population, or group of people, decided on by the researchers in advance. These studies are not open to everyone who meets the eligibility criteria but only to people in that particular population, who are specifically invited to participate." ]
+  ] [
+     fhir:code [ fhir:v "in-review" ] ;
+     fhir:display [ fhir:v "In Review" ] ;
+     fhir:definition [ fhir:v "Protocol is submitted to the review board for approval." ]
+  ] [
+     fhir:code [ fhir:v "not-yet-recruiting" ] ;
+     fhir:display [ fhir:v "Not yet recruiting" ] ;
+     fhir:definition [ fhir:v "The study has not started recruiting participants." ]
+  ] [
+     fhir:code [ fhir:v "recruiting" ] ;
+     fhir:display [ fhir:v "Recruiting" ] ;
+     fhir:definition [ fhir:v "The study is currently recruiting participants." ]
+  ] [
+     fhir:code [ fhir:v "temporarily-closed-to-accrual" ] ;
+     fhir:display [ fhir:v "Temporarily Closed to Accrual" ] ;
+     fhir:definition [ fhir:v "Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated." ]
+  ] [
+     fhir:code [ fhir:v "temporarily-closed-to-accrual-and-intervention" ] ;
+     fhir:display [ fhir:v "Temporarily Closed to Accrual and Intervention" ] ;
+     fhir:definition [ fhir:v "Study is temporarily closed for accrual and intervention and potentially can be resumed in the future." ]
+  ] [
+     fhir:code [ fhir:v "terminated" ] ;
+     fhir:display [ fhir:v "Terminated" ] ;
+     fhir:definition [ fhir:v "The study has stopped early and will not start again. Participants are no longer being examined or treated." ]
+  ] [
+     fhir:code [ fhir:v "withdrawn" ] ;
+     fhir:display [ fhir:v "Withdrawn" ] ;
+     fhir:definition [ fhir:v "Protocol was withdrawn by the lead organization." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

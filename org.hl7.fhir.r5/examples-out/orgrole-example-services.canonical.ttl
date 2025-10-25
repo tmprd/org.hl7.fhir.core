@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OrganizationAffiliation/orgrole1> a fhir:OrganizationAffiliation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "orgrole1"] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:system [ fhir:v "http://example.org/www.foundingfathersmemorial.com"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "service002" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Founding Fathers Memorial Hospital" ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2018-02-09"^^xsd:date ] ;
+     fhir:end [ fhir:v "2022-02-01"^^xsd:date ]
+  ] ; # 
+  fhir:organization [
+     fhir:display [ fhir:v "Founding Fathers Memorial Hospital" ]
+  ] ; # 
+  fhir:participatingOrganization [
+     fhir:display [ fhir:v "Independence Rehabilitation Services, Inc." ]
+  ] ; # 
+  fhir:network ( [
+     fhir:display [ fhir:v "Patriot Preferred Provider Network" ]
+  ] ) ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/organization-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "provider" ] ;
+       fhir:display [ fhir:v "Provider" ] ;
+       fhir:userSelected [ fhir:v true ]
+     ] ) ;
+     fhir:text [ fhir:v "Provider of rehabilitation services" ]
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394602003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394602003" ] ;
+       fhir:display [ fhir:v "Rehabilitation specialty" ]
+     ] ) ;
+     fhir:text [ fhir:v "Rehabilitation" ]
+  ] ) ; # 
+  fhir:location ( [
+     fhir:display [ fhir:v "Founding Fathers Memorial Hospital" ]
+  ] ) ; # 
+  fhir:healthcareService ( [
+     fhir:display [ fhir:v "Inpatient rehabilitation services" ]
+  ] [
+     fhir:display [ fhir:v "Outpatient rehabilitation services" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "202-109-8765" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

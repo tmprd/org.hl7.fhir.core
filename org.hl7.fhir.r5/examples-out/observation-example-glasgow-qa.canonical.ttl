@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Observation/gcs-qa> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "gcs-qa"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:9269-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "9269-2" ] ;
+       fhir:display [ fhir:v "Glasgow coma score total" ]
+     ] ) ;
+     fhir:text [ fhir:v "Glasgow Coma Scale , (GCS)" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter James Chalmers" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2014-12-11T04:44:16Z"^^xsd:dateTime
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "13"^^xsd:decimal ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "{score}" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:high [
+       fhir:value [ fhir:v "8"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{score}" ]
+     ] ;
+     fhir:type [
+       fhir:text [ fhir:v "Severe TBI" ]
+     ]
+  ] [
+     fhir:low [
+       fhir:value [ fhir:v "9"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{score}" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "12"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{score}" ]
+     ] ;
+     fhir:type [
+       fhir:text [ fhir:v "Moderate TBI" ]
+     ]
+  ] [
+     fhir:low [
+       fhir:value [ fhir:v "13"^^xsd:decimal ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{score}" ]
+     ] ;
+     fhir:type [
+       fhir:text [ fhir:v "Mild TBI" ]
+     ]
+  ] ) ; # 
+  fhir:derivedFrom ( [
+     fhir:link <http://hl7.org/fhir/QuestionnaireResponse/gcs> ;
+     fhir:reference [ fhir:v "QuestionnaireResponse/gcs" ] ;
+     fhir:display [ fhir:v "GCS form results" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/QuestionnaireResponse/gcs> a fhir:QuestionnaireResponse .
+
+# -------------------------------------------------------------------------------------
+

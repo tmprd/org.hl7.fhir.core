@@ -1,0 +1,127 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/expression-language> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "expression-language"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet expression-language</b>\n      </p>\n      <a name=\"expression-language\"> </a>\n      <a name=\"hcexpression-language\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <code>urn:ietf:bcp:13</code> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>text/cql</td>\n              <td>CQL</td>\n              <td>Clinical Quality Language</td>\n            </tr>\n            <tr>\n              <td>text/fhirpath</td>\n              <td>FHIRPath</td>\n              <td>FHIRPath</td>\n            </tr>\n            <tr>\n              <td>text/x-fhir-query</td>\n              <td>FHIR Query</td>\n              <td>FHIR's RESTful query syntax - typically independent of base URL</td>\n            </tr>\n            <tr>\n              <td>text/cql-identifier</td>\n              <td>CQL Identifier</td>\n              <td>A Clinical Quality Language identifier, typically the name of a top-level definition within a library</td>\n            </tr>\n            <tr>\n              <td>text/cql-expression</td>\n              <td>CQL Expression</td>\n              <td>A Clinical Quality Language expression,</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/expression-language"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.105" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ExpressionLanguage"] ; # 
+  fhir:title [ fhir:v "Expression Language"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The media type of the expression language."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v true] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "urn:ietf:bcp:13"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "Clinical Quality Language"
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "text/cql" ] ;
+         fhir:display [ fhir:v "CQL" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "FHIRPath"
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "text/fhirpath" ] ;
+         fhir:display [ fhir:v "FHIRPath" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "FHIR's RESTful query syntax - typically independent of base URL"
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "text/x-fhir-query" ] ;
+         fhir:display [ fhir:v "FHIR Query" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "A Clinical Quality Language identifier, typically the name of a top-level definition within a library"
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "text/cql-identifier" ] ;
+         fhir:display [ fhir:v "CQL Identifier" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:string ;
+             fhir:v "A Clinical Quality Language expression,"
+           ]
+         ] ) ;
+         fhir:code [ fhir:v "text/cql-expression" ] ;
+         fhir:display [ fhir:v "CQL Expression" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

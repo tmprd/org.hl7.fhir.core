@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/reason-medication-not-given-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "reason-medication-not-given-codes"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem reason-medication-not-given-codes</b></p><a name=\"reason-medication-not-given-codes\"> </a><a name=\"hcreason-medication-not-given-codes\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/reason-medication-not-given</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">a<a name=\"reason-medication-not-given-codes-a\"> </a></td><td>None</td><td>No reason known.</td></tr><tr><td style=\"white-space:nowrap\">b<a name=\"reason-medication-not-given-codes-b\"> </a></td><td>Away</td><td>The patient was not available when the dose was scheduled.</td></tr><tr><td style=\"white-space:nowrap\">c<a name=\"reason-medication-not-given-codes-c\"> </a></td><td>Asleep</td><td>The patient was asleep when the dose was scheduled.</td></tr><tr><td style=\"white-space:nowrap\">d<a name=\"reason-medication-not-given-codes-d\"> </a></td><td>Vomit</td><td>The patient was given the medication and immediately vomited it back.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "phx"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/reason-medication-not-given"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.343" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.333" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.187" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ReasonMedicationNotGivenCodes"] ; # 
+  fhir:title [ fhir:v "Reason Medication Not Given Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "a" ] ;
+     fhir:display [ fhir:v "None" ] ;
+     fhir:definition [ fhir:v "No reason known." ]
+  ] [
+     fhir:code [ fhir:v "b" ] ;
+     fhir:display [ fhir:v "Away" ] ;
+     fhir:definition [ fhir:v "The patient was not available when the dose was scheduled." ]
+  ] [
+     fhir:code [ fhir:v "c" ] ;
+     fhir:display [ fhir:v "Asleep" ] ;
+     fhir:definition [ fhir:v "The patient was asleep when the dose was scheduled." ]
+  ] [
+     fhir:code [ fhir:v "d" ] ;
+     fhir:display [ fhir:v "Vomit" ] ;
+     fhir:definition [ fhir:v "The patient was given the medication and immediately vomited it back." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

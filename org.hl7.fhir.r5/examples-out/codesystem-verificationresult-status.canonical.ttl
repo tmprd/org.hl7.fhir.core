@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/verificationresult-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "verificationresult-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem verificationresult-status</b></p><a name=\"verificationresult-status\"> </a><a name=\"hcverificationresult-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/CodeSystem/verificationresult-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">attested<a name=\"verificationresult-status-attested\"> </a></td><td>Attested</td><td>***TODO***</td></tr><tr><td style=\"white-space:nowrap\">validated<a name=\"verificationresult-status-validated\"> </a></td><td>Validated</td><td>***TODO***</td></tr><tr><td style=\"white-space:nowrap\">in-process<a name=\"verificationresult-status-in-process\"> </a></td><td>In process</td><td>***TODO***</td></tr><tr><td style=\"white-space:nowrap\">req-revalid<a name=\"verificationresult-status-req-revalid\"> </a></td><td>Requires revalidation</td><td>***TODO***</td></tr><tr><td style=\"white-space:nowrap\">val-fail<a name=\"verificationresult-status-val-fail\"> </a></td><td>Validation failed</td><td>***TODO***</td></tr><tr><td style=\"white-space:nowrap\">reval-fail<a name=\"verificationresult-status-reval-fail\"> </a></td><td>Re-Validation failed</td><td>***TODO***</td></tr><tr><td style=\"white-space:nowrap\">entered-in-error<a name=\"verificationresult-status-entered-in-error\"> </a></td><td>Entered in Error</td><td>The VerificationResult record was created erroneously and is not appropriated for use.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pa"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/CodeSystem/verificationresult-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2069" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "Status"] ; # 
+  fhir:title [ fhir:v "status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2018-06-05T14:06:02+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The validation status of the target"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/status>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "attested" ] ;
+     fhir:display [ fhir:v "Attested" ] ;
+     fhir:definition [ fhir:v "***TODO***" ]
+  ] [
+     fhir:code [ fhir:v "validated" ] ;
+     fhir:display [ fhir:v "Validated" ] ;
+     fhir:definition [ fhir:v "***TODO***" ]
+  ] [
+     fhir:code [ fhir:v "in-process" ] ;
+     fhir:display [ fhir:v "In process" ] ;
+     fhir:definition [ fhir:v "***TODO***" ]
+  ] [
+     fhir:code [ fhir:v "req-revalid" ] ;
+     fhir:display [ fhir:v "Requires revalidation" ] ;
+     fhir:definition [ fhir:v "***TODO***" ]
+  ] [
+     fhir:code [ fhir:v "val-fail" ] ;
+     fhir:display [ fhir:v "Validation failed" ] ;
+     fhir:definition [ fhir:v "***TODO***" ]
+  ] [
+     fhir:code [ fhir:v "reval-fail" ] ;
+     fhir:display [ fhir:v "Re-Validation failed" ] ;
+     fhir:definition [ fhir:v "***TODO***" ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The VerificationResult record was created erroneously and is not appropriated for use." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

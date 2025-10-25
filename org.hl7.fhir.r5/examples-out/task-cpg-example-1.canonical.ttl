@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Task/cpg-example-1> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cpg-example-1"] ; # 
+  fhir:status [ fhir:v "ready"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:doNotPerform [ fhir:v true] ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Collect information" ]
+  ] ; # 
+  fhir:for [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:input ( [
+     fhir:type [
+       fhir:text [ fhir:v "Collect information" ]
+     ] ;
+     fhir:value [
+       a fhir:canonical ;
+       fhir:v "http://hl7.org/fhir/Questionnaire/f201"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/Questionnaire/f201>
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

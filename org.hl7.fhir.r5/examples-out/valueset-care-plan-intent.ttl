@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/care-plan-intent> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "care-plan-intent"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet care-plan-intent</b>\n      </p>\n      <a name=\"care-plan-intent\"> </a>\n      <a name=\"hccare-plan-intent\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"codesystem-request-intent.html\">\n            <code>http://hl7.org/fhir/request-intent</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?6.0.0-ballot3</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-request-intent.html#request-intent-proposal\">proposal</a>\n              </td>\n              <td style=\"color: #cccccc\">Proposal</td>\n              <td>The request is a suggestion made by someone/something that does not have an intention to ensure it occurs and without providing an authorization to act.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-request-intent.html#request-intent-plan\">plan</a>\n              </td>\n              <td style=\"color: #cccccc\">Plan</td>\n              <td>The request represents an intention to ensure something occurs without providing an authorization for others to act.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-request-intent.html#request-intent-order\">order</a>\n              </td>\n              <td style=\"color: #cccccc\">Order</td>\n              <td>The request represents a request/demand and authorization for action by the requestor.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-request-intent.html#request-intent-option\">option</a>\n              </td>\n              <td style=\"color: #cccccc\">Option</td>\n              <td>The request represents a component or option for a RequestOrchestration that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to [[[RequestOrchestration]]] for additional information on how this status is used.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-request-intent.html#request-intent-directive\">directive</a>\n              </td>\n              <td style=\"color: #cccccc\">Directive</td>\n              <td>The request represents a legally binding instruction authored by a Patient or RelatedPerson.</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pc"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/care-plan-intent"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.150" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.141" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "CarePlanIntent"] ; # 
+  fhir:title [ fhir:v "Care Plan Intent"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International - Patient Care WG"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes indicating the degree of authority/intentionality associated with a care plan."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/request-intent"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "proposal" ]
+       ] [
+         fhir:code [ fhir:v "plan" ]
+       ] [
+         fhir:code [ fhir:v "order" ]
+       ] [
+         fhir:code [ fhir:v "option" ]
+       ] [
+         fhir:code [ fhir:v "directive" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

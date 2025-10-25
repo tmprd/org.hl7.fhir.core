@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0325> a fhir:MedicationDispense ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "meddisp0325"] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0406-9025-76" ] ;
+         fhir:display [ fhir:v "FENTANYL TRANSDERMAL, 5 POUCH in 1 CARTON (0406-9025-76) > 1 PATCH in 1 POUCH > 72 h in 1 PATCH (package)" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/pat1> ;
+     fhir:reference [ fhir:v "Patient/pat1" ] ;
+     fhir:display [ fhir:v "Donald Duck" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <http://hl7.org/fhir/Practitioner/f006> ;
+       fhir:reference [ fhir:v "Practitioner/f006" ]
+     ]
+  ] ) ; # 
+  fhir:authorizingPrescription ( [
+     fhir:link <http://hl7.org/fhir/MedicationRequest/medrx0327> ;
+     fhir:reference [ fhir:v "MedicationRequest/medrx0327" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "EM" ] ;
+       fhir:display [ fhir:v "Emergency Supply" ]
+     ] )
+  ] ; # 
+  fhir:quantity [
+     fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "PATCH" ]
+  ] ; # 
+  fhir:daysSupply [
+     fhir:value [ fhir:v "14"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "Day" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "d" ]
+  ] ; # 
+  fhir:whenPrepared [ fhir:v "2015-01-15T10:20:00Z"^^xsd:dateTime] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v 1 ] ;
+     fhir:text [ fhir:v "apply one patch three times per week" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "3"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "wk" ]
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/dose-rate-type"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ordered" ] ;
+           fhir:display [ fhir:v "Ordered" ]
+         ] )
+       ] ;
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "patch" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PATCH" ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f006> a fhir:Practitioner .
+
+<http://hl7.org/fhir/MedicationRequest/medrx0327> a fhir:MedicationRequest .
+
+# -------------------------------------------------------------------------------------
+

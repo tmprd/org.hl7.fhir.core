@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Observation/satO2> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "satO2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/vitalsigns"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/vitalsigns>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://goodcare.org/observation/id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "o1223435-10" ]
+  ] ) ; # 
+  fhir:partOf ( [
+     fhir:link <http://hl7.org/fhir/Procedure/ob> ;
+     fhir:reference [ fhir:v "Procedure/ob" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] ) ;
+     fhir:text [ fhir:v "Vital Signs" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:2708-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2708-6" ] ;
+       fhir:display [ fhir:v "Oxygen saturation in Arterial blood" ]
+     ] [
+       a loinc:59408-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "59408-5" ] ;
+       fhir:display [ fhir:v "Oxygen saturation in Arterial blood by Pulse oximetry" ]
+     ] [
+       fhir:system [ fhir:v "urn:iso:std:iso:11073:10101"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150456" ] ;
+       fhir:display [ fhir:v "MDC_PULS_OXIM_SAT_O2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2014-12-05T09:30:10+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "95"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "%" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "%" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] ) ;
+     fhir:text [ fhir:v "Normal (applies to non-numeric results)" ]
+  ] ) ; # 
+  fhir:device [
+     fhir:link <http://hl7.org/fhir/DeviceMetric/example> ;
+     fhir:reference [ fhir:v "DeviceMetric/example" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "90"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "%" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "99"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "%" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Procedure/ob> a fhir:Procedure .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/DeviceMetric/example> a fhir:DeviceMetric .
+
+# -------------------------------------------------------------------------------------
+

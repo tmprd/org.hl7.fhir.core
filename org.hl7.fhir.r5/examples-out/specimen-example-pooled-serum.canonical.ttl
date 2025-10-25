@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Specimen/pooled-serum> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pooled-serum"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://vetmed.iastate.edu/vdl"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "20171120-1234" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://vetmed.iastate.edu/vdl"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "20171120-1234" ]
+  ] ) ; # 
+  fhir:accessionIdentifier [
+     fhir:system [ fhir:v "https://vetmed.iastate.edu/vdl"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "20171120-1234" ]
+  ] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://vetmed.iastate.edu/vdl"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Serum sample, pooled" ] ;
+       fhir:display [ fhir:v "Serum sample, pooled" ]
+     ] ) ;
+     fhir:text [ fhir:v "Pooled serum sample" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Group/herd1> ;
+     fhir:reference [ fhir:v "Group/herd1" ]
+  ] ; # 
+  fhir:combined [ fhir:v "pooled"] ; # 
+  fhir:collection [
+     fhir:collector [
+       fhir:display [ fhir:v "James Herriot, FRCVS" ]
+     ] ;
+     fhir:collected [
+       a fhir:dateTime ;
+       fhir:v "2017-11-14"^^xsd:date
+     ]
+  ] ; # 
+  fhir:container ( [
+     fhir:device [
+       fhir:reference [ ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Pooled serum sample from 30 individuals" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Group/herd1> a fhir:Group .
+
+# -------------------------------------------------------------------------------------
+

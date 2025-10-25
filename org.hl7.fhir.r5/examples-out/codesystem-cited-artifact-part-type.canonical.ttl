@@ -1,0 +1,120 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/cited-artifact-part-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cited-artifact-part-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cited-artifact-part-type</b></p><a name=\"cited-artifact-part-type\"> </a><a name=\"hccited-artifact-part-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/cited-artifact-part-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">chapters<a name=\"cited-artifact-part-type-chapters\"> </a></td><td>chapters</td><td>Denotes specific chapter or chapters of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">pages<a name=\"cited-artifact-part-type-pages\"> </a></td><td>pages</td><td>Denotes specific page or pages of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">sections<a name=\"cited-artifact-part-type-sections\"> </a></td><td>sections</td><td>Denotes specific section or sections of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">paragraphs<a name=\"cited-artifact-part-type-paragraphs\"> </a></td><td>paragraphs</td><td>Denotes specific paragraph or paragraphs of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">lines<a name=\"cited-artifact-part-type-lines\"> </a></td><td>lines</td><td>Denotes specific line or lines of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">tables<a name=\"cited-artifact-part-type-tables\"> </a></td><td>tables</td><td>Denotes specific table or tables of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">figures<a name=\"cited-artifact-part-type-figures\"> </a></td><td>figures</td><td>Denotes specific figure or figures of an article or artifact.</td></tr><tr><td style=\"white-space:nowrap\">supplement<a name=\"cited-artifact-part-type-supplement\"> </a></td><td>Supplement or Appendix</td><td>Used to denote a supplementary file, appendix, or additional part that is not a subpart of the primary article.</td></tr><tr><td style=\"white-space:nowrap\">supplement-subpart<a name=\"cited-artifact-part-type-supplement-subpart\"> </a></td><td>Supplement or Appendix Subpart</td><td>Used to denote a subpart within a supplementary file or appendix.</td></tr><tr><td style=\"white-space:nowrap\">article-set<a name=\"cited-artifact-part-type-article-set\"> </a></td><td>Part of an article set</td><td>Used to distinguish an individual article within an article set where the article set is a base citation.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/cited-artifact-part-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1877" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "CitedArtifactPartType"] ; # 
+  fhir:title [ fhir:v "Cited Artifact Part Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "To describe the reason for the variant citation, such as version number or subpart specification."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/cited-artifact-part-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/cited-artifact-part-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "chapters" ] ;
+     fhir:display [ fhir:v "chapters" ] ;
+     fhir:definition [ fhir:v "Denotes specific chapter or chapters of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "pages" ] ;
+     fhir:display [ fhir:v "pages" ] ;
+     fhir:definition [ fhir:v "Denotes specific page or pages of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "sections" ] ;
+     fhir:display [ fhir:v "sections" ] ;
+     fhir:definition [ fhir:v "Denotes specific section or sections of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "paragraphs" ] ;
+     fhir:display [ fhir:v "paragraphs" ] ;
+     fhir:definition [ fhir:v "Denotes specific paragraph or paragraphs of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "lines" ] ;
+     fhir:display [ fhir:v "lines" ] ;
+     fhir:definition [ fhir:v "Denotes specific line or lines of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "tables" ] ;
+     fhir:display [ fhir:v "tables" ] ;
+     fhir:definition [ fhir:v "Denotes specific table or tables of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "figures" ] ;
+     fhir:display [ fhir:v "figures" ] ;
+     fhir:definition [ fhir:v "Denotes specific figure or figures of an article or artifact." ]
+  ] [
+     fhir:code [ fhir:v "supplement" ] ;
+     fhir:display [ fhir:v "Supplement or Appendix" ] ;
+     fhir:definition [ fhir:v "Used to denote a supplementary file, appendix, or additional part that is not a subpart of the primary article." ]
+  ] [
+     fhir:code [ fhir:v "supplement-subpart" ] ;
+     fhir:display [ fhir:v "Supplement or Appendix Subpart" ] ;
+     fhir:definition [ fhir:v "Used to denote a subpart within a supplementary file or appendix." ]
+  ] [
+     fhir:code [ fhir:v "article-set" ] ;
+     fhir:display [ fhir:v "Part of an article set" ] ;
+     fhir:definition [ fhir:v "Used to distinguish an individual article within an article set where the article set is a base citation." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

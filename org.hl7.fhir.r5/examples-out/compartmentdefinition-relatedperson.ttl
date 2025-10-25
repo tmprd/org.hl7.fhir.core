@@ -1,0 +1,376 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CompartmentDefinition/relatedPerson> a fhir:CompartmentDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "relatedPerson"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CompartmentDefinition relatedPerson</b>\n      </p>\n      <a name=\"relatedPerson\"> </a>\n      <a name=\"hcrelatedPerson\"> </a>\n      <p>\nThe following resources may be in this compartment:\n</p>\n\n      <table class=\"grid\">\n \n        <tr>\n          <td>\n            <b>Resource</b>\n          </td>\n          <td>\n            <b>Inclusion Criteria</b>\n          </td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"adverseevent.html\">AdverseEvent</a>\n          </td>\n          <td>recorder</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"allergyintolerance.html\">AllergyIntolerance</a>\n          </td>\n          <td>asserter</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"appointment.html\">Appointment</a>\n          </td>\n          <td>actor</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"appointmentresponse.html\">AppointmentResponse</a>\n          </td>\n          <td>actor</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"basic.html\">Basic</a>\n          </td>\n          <td>author</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"careteam.html\">CareTeam</a>\n          </td>\n          <td>participant</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"chargeitem.html\">ChargeItem</a>\n          </td>\n          <td>enterer, performer-actor</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"claim.html\">Claim</a>\n          </td>\n          <td>payee</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"communication.html\">Communication</a>\n          </td>\n          <td>sender, recipient</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"communicationrequest.html\">CommunicationRequest</a>\n          </td>\n          <td>information-provider, recipient, requester</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"composition.html\">Composition</a>\n          </td>\n          <td>author</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"condition.html\">Condition</a>\n          </td>\n          <td>asserter</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"coverage.html\">Coverage</a>\n          </td>\n          <td>policy-holder, subscriber, paymentby-party</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"deviceassociation.html\">DeviceAssociation</a>\n          </td>\n          <td>subject, operator</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"documentreference.html\">DocumentReference</a>\n          </td>\n          <td>author</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"encounter.html\">Encounter</a>\n          </td>\n          <td>participant</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"explanationofbenefit.html\">ExplanationOfBenefit</a>\n          </td>\n          <td>payee</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"invoice.html\">Invoice</a>\n          </td>\n          <td>recipient</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"medicationstatement.html\">MedicationStatement</a>\n          </td>\n          <td>source</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"nutritionintake.html\">NutritionIntake</a>\n          </td>\n          <td>source</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"observation.html\">Observation</a>\n          </td>\n          <td>performer</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"patient.html\">Patient</a>\n          </td>\n          <td>link</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"person.html\">Person</a>\n          </td>\n          <td>link</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"personalrelationship.html\">PersonalRelationship</a>\n          </td>\n          <td>source, target</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"procedure.html\">Procedure</a>\n          </td>\n          <td>performer</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"provenance.html\">Provenance</a>\n          </td>\n          <td>agent</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"questionnaireresponse.html\">QuestionnaireResponse</a>\n          </td>\n          <td>author, source</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"relatedperson.html\">RelatedPerson</a>\n          </td>\n          <td>{def}</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"requestorchestration.html\">RequestOrchestration</a>\n          </td>\n          <td>participant</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"schedule.html\">Schedule</a>\n          </td>\n          <td>actor</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"servicerequest.html\">ServiceRequest</a>\n          </td>\n          <td>performer</td>\n        </tr>\n \n        <tr>\n          <td>\n            <a href=\"supplyrequest.html\">SupplyRequest</a>\n          </td>\n          <td>requester</td>\n        </tr>\n\n      </table>\n\n      <p>\nA resource is in this compartment if the nominated search parameter (or chain) refers to the patient resource that defines the compartment.\n</p>\n\n      <p>\n\n</p>\n\n      <p>\nThe following resources are never in this compartment:\n</p>\n\n      <ul>\n \n        <li>\n          <a href=\"account.html\">Account</a>\n        </li>\n \n        <li>\n          <a href=\"activitydefinition.html\">ActivityDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"actordefinition.html\">ActorDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"administrableproductdefinition.html\">AdministrableProductDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"artifactassessment.html\">ArtifactAssessment</a>\n        </li>\n \n        <li>\n          <a href=\"auditevent.html\">AuditEvent</a>\n        </li>\n \n        <li>\n          <a href=\"binary.html\">Binary</a>\n        </li>\n \n        <li>\n          <a href=\"biologicallyderivedproduct.html\">BiologicallyDerivedProduct</a>\n        </li>\n \n        <li>\n          <a href=\"biologicallyderivedproductdispense.html\">BiologicallyDerivedProductDispense</a>\n        </li>\n \n        <li>\n          <a href=\"bodystructure.html\">BodyStructure</a>\n        </li>\n \n        <li>\n          <a href=\"bundle.html\">Bundle</a>\n        </li>\n \n        <li>\n          <a href=\"capabilitystatement.html\">CapabilityStatement</a>\n        </li>\n \n        <li>\n          <a href=\"careplan.html\">CarePlan</a>\n        </li>\n \n        <li>\n          <a href=\"chargeitemdefinition.html\">ChargeItemDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"citation.html\">Citation</a>\n        </li>\n \n        <li>\n          <a href=\"claimresponse.html\">ClaimResponse</a>\n        </li>\n \n        <li>\n          <a href=\"clinicalassessment.html\">ClinicalAssessment</a>\n        </li>\n \n        <li>\n          <a href=\"clinicalusedefinition.html\">ClinicalUseDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"codesystem.html\">CodeSystem</a>\n        </li>\n \n        <li>\n          <a href=\"compartmentdefinition.html\">CompartmentDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"conceptmap.html\">ConceptMap</a>\n        </li>\n \n        <li>\n          <a href=\"conditiondefinition.html\">ConditionDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"consent.html\">Consent</a>\n        </li>\n \n        <li>\n          <a href=\"contract.html\">Contract</a>\n        </li>\n \n        <li>\n          <a href=\"coverageeligibilityrequest.html\">CoverageEligibilityRequest</a>\n        </li>\n \n        <li>\n          <a href=\"coverageeligibilityresponse.html\">CoverageEligibilityResponse</a>\n        </li>\n \n        <li>\n          <a href=\"detectedissue.html\">DetectedIssue</a>\n        </li>\n \n        <li>\n          <a href=\"device.html\">Device</a>\n        </li>\n \n        <li>\n          <a href=\"devicealert.html\">DeviceAlert</a>\n        </li>\n \n        <li>\n          <a href=\"devicedefinition.html\">DeviceDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"devicedispense.html\">DeviceDispense</a>\n        </li>\n \n        <li>\n          <a href=\"devicemetric.html\">DeviceMetric</a>\n        </li>\n \n        <li>\n          <a href=\"devicerequest.html\">DeviceRequest</a>\n        </li>\n \n        <li>\n          <a href=\"deviceusage.html\">DeviceUsage</a>\n        </li>\n \n        <li>\n          <a href=\"diagnosticreport.html\">DiagnosticReport</a>\n        </li>\n \n        <li>\n          <a href=\"encounterhistory.html\">EncounterHistory</a>\n        </li>\n \n        <li>\n          <a href=\"endpoint.html\">Endpoint</a>\n        </li>\n \n        <li>\n          <a href=\"enrollmentrequest.html\">EnrollmentRequest</a>\n        </li>\n \n        <li>\n          <a href=\"enrollmentresponse.html\">EnrollmentResponse</a>\n        </li>\n \n        <li>\n          <a href=\"episodeofcare.html\">EpisodeOfCare</a>\n        </li>\n \n        <li>\n          <a href=\"eventdefinition.html\">EventDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"evidence.html\">Evidence</a>\n        </li>\n \n        <li>\n          <a href=\"evidencevariable.html\">EvidenceVariable</a>\n        </li>\n \n        <li>\n          <a href=\"examplescenario.html\">ExampleScenario</a>\n        </li>\n \n        <li>\n          <a href=\"familymemberhistory.html\">FamilyMemberHistory</a>\n        </li>\n \n        <li>\n          <a href=\"flag.html\">Flag</a>\n        </li>\n \n        <li>\n          <a href=\"formularyitem.html\">FormularyItem</a>\n        </li>\n \n        <li>\n          <a href=\"genomicstudy.html\">GenomicStudy</a>\n        </li>\n \n        <li>\n          <a href=\"goal.html\">Goal</a>\n        </li>\n \n        <li>\n          <a href=\"graphdefinition.html\">GraphDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"group.html\">Group</a>\n        </li>\n \n        <li>\n          <a href=\"guidanceresponse.html\">GuidanceResponse</a>\n        </li>\n \n        <li>\n          <a href=\"healthcareservice.html\">HealthcareService</a>\n        </li>\n \n        <li>\n          <a href=\"imagingselection.html\">ImagingSelection</a>\n        </li>\n \n        <li>\n          <a href=\"imagingstudy.html\">ImagingStudy</a>\n        </li>\n \n        <li>\n          <a href=\"immunization.html\">Immunization</a>\n        </li>\n \n        <li>\n          <a href=\"immunizationevaluation.html\">ImmunizationEvaluation</a>\n        </li>\n \n        <li>\n          <a href=\"immunizationrecommendation.html\">ImmunizationRecommendation</a>\n        </li>\n \n        <li>\n          <a href=\"implementationguide.html\">ImplementationGuide</a>\n        </li>\n \n        <li>\n          <a href=\"ingredient.html\">Ingredient</a>\n        </li>\n \n        <li>\n          <a href=\"insuranceplan.html\">InsurancePlan</a>\n        </li>\n \n        <li>\n          <a href=\"insuranceproduct.html\">InsuranceProduct</a>\n        </li>\n \n        <li>\n          <a href=\"inventoryitem.html\">InventoryItem</a>\n        </li>\n \n        <li>\n          <a href=\"inventoryreport.html\">InventoryReport</a>\n        </li>\n \n        <li>\n          <a href=\"library.html\">Library</a>\n        </li>\n \n        <li>\n          <a href=\"linkage.html\">Linkage</a>\n        </li>\n \n        <li>\n          <a href=\"list.html\">List</a>\n        </li>\n \n        <li>\n          <a href=\"location.html\">Location</a>\n        </li>\n \n        <li>\n          <a href=\"manufactureditemdefinition.html\">ManufacturedItemDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"measure.html\">Measure</a>\n        </li>\n \n        <li>\n          <a href=\"measurereport.html\">MeasureReport</a>\n        </li>\n \n        <li>\n          <a href=\"medication.html\">Medication</a>\n        </li>\n \n        <li>\n          <a href=\"medicationadministration.html\">MedicationAdministration</a>\n        </li>\n \n        <li>\n          <a href=\"medicationdispense.html\">MedicationDispense</a>\n        </li>\n \n        <li>\n          <a href=\"medicationknowledge.html\">MedicationKnowledge</a>\n        </li>\n \n        <li>\n          <a href=\"medicationrequest.html\">MedicationRequest</a>\n        </li>\n \n        <li>\n          <a href=\"medicinalproductdefinition.html\">MedicinalProductDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"messagedefinition.html\">MessageDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"messageheader.html\">MessageHeader</a>\n        </li>\n \n        <li>\n          <a href=\"moleculardefinition.html\">MolecularDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"namingsystem.html\">NamingSystem</a>\n        </li>\n \n        <li>\n          <a href=\"nutritionorder.html\">NutritionOrder</a>\n        </li>\n \n        <li>\n          <a href=\"nutritionproduct.html\">NutritionProduct</a>\n        </li>\n \n        <li>\n          <a href=\"observationdefinition.html\">ObservationDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"operationdefinition.html\">OperationDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"operationoutcome.html\">OperationOutcome</a>\n        </li>\n \n        <li>\n          <a href=\"organization.html\">Organization</a>\n        </li>\n \n        <li>\n          <a href=\"organizationaffiliation.html\">OrganizationAffiliation</a>\n        </li>\n \n        <li>\n          <a href=\"packagedproductdefinition.html\">PackagedProductDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"paymentnotice.html\">PaymentNotice</a>\n        </li>\n \n        <li>\n          <a href=\"paymentreconciliation.html\">PaymentReconciliation</a>\n        </li>\n \n        <li>\n          <a href=\"permission.html\">Permission</a>\n        </li>\n \n        <li>\n          <a href=\"plandefinition.html\">PlanDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"practitioner.html\">Practitioner</a>\n        </li>\n \n        <li>\n          <a href=\"practitionerrole.html\">PractitionerRole</a>\n        </li>\n \n        <li>\n          <a href=\"questionnaire.html\">Questionnaire</a>\n        </li>\n \n        <li>\n          <a href=\"regulatedauthorization.html\">RegulatedAuthorization</a>\n        </li>\n \n        <li>\n          <a href=\"requirements.html\">Requirements</a>\n        </li>\n \n        <li>\n          <a href=\"researchstudy.html\">ResearchStudy</a>\n        </li>\n \n        <li>\n          <a href=\"researchsubject.html\">ResearchSubject</a>\n        </li>\n \n        <li>\n          <a href=\"riskassessment.html\">RiskAssessment</a>\n        </li>\n \n        <li>\n          <a href=\"searchparameter.html\">SearchParameter</a>\n        </li>\n \n        <li>\n          <a href=\"slot.html\">Slot</a>\n        </li>\n \n        <li>\n          <a href=\"specimen.html\">Specimen</a>\n        </li>\n \n        <li>\n          <a href=\"specimendefinition.html\">SpecimenDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"structuredefinition.html\">StructureDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"structuremap.html\">StructureMap</a>\n        </li>\n \n        <li>\n          <a href=\"subscription.html\">Subscription</a>\n        </li>\n \n        <li>\n          <a href=\"subscriptionstatus.html\">SubscriptionStatus</a>\n        </li>\n \n        <li>\n          <a href=\"subscriptiontopic.html\">SubscriptionTopic</a>\n        </li>\n \n        <li>\n          <a href=\"substance.html\">Substance</a>\n        </li>\n \n        <li>\n          <a href=\"substancedefinition.html\">SubstanceDefinition</a>\n        </li>\n \n        <li>\n          <a href=\"supplydelivery.html\">SupplyDelivery</a>\n        </li>\n \n        <li>\n          <a href=\"task.html\">Task</a>\n        </li>\n \n        <li>\n          <a href=\"terminologycapabilities.html\">TerminologyCapabilities</a>\n        </li>\n \n        <li>\n          <a href=\"transport.html\">Transport</a>\n        </li>\n \n        <li>\n          <a href=\"valueset.html\">ValueSet</a>\n        </li>\n \n        <li>\n          <a href=\"verificationresult.html\">VerificationResult</a>\n        </li>\n \n        <li>\n          <a href=\"visionprescription.html\">VisionPrescription</a>\n        </li>\n\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/CompartmentDefinition/relatedPerson"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "Base FHIR compartment definition for RelatedPerson"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "There is an instance of the relatedPerson compartment for each relatedPerson resource, and the identity of the compartment is the same as the relatedPerson. The set of resources associated with a particular 'related person'"] ; # 
+  fhir:code [ fhir:v "RelatedPerson"] ; # 
+  fhir:search [ fhir:v true] ; # 
+  fhir:resource ( [
+     fhir:code [ fhir:v "Account" ]
+  ] [
+     fhir:code [ fhir:v "ActivityDefinition" ]
+  ] [
+     fhir:code [ fhir:v "ActorDefinition" ]
+  ] [
+     fhir:code [ fhir:v "AdministrableProductDefinition" ]
+  ] [
+     fhir:code [ fhir:v "AdverseEvent" ] ;
+     fhir:param ( [ fhir:v "recorder" ] )
+  ] [
+     fhir:code [ fhir:v "AllergyIntolerance" ] ;
+     fhir:param ( [ fhir:v "asserter" ] )
+  ] [
+     fhir:code [ fhir:v "Appointment" ] ;
+     fhir:param ( [ fhir:v "actor" ] )
+  ] [
+     fhir:code [ fhir:v "AppointmentResponse" ] ;
+     fhir:param ( [ fhir:v "actor" ] )
+  ] [
+     fhir:code [ fhir:v "ArtifactAssessment" ]
+  ] [
+     fhir:code [ fhir:v "AuditEvent" ]
+  ] [
+     fhir:code [ fhir:v "Basic" ] ;
+     fhir:param ( [ fhir:v "author" ] )
+  ] [
+     fhir:code [ fhir:v "Binary" ]
+  ] [
+     fhir:code [ fhir:v "BiologicallyDerivedProduct" ]
+  ] [
+     fhir:code [ fhir:v "BiologicallyDerivedProductDispense" ]
+  ] [
+     fhir:code [ fhir:v "BodyStructure" ]
+  ] [
+     fhir:code [ fhir:v "Bundle" ]
+  ] [
+     fhir:code [ fhir:v "CapabilityStatement" ]
+  ] [
+     fhir:code [ fhir:v "CarePlan" ]
+  ] [
+     fhir:code [ fhir:v "CareTeam" ] ;
+     fhir:param ( [ fhir:v "participant" ] )
+  ] [
+     fhir:code [ fhir:v "ChargeItem" ] ;
+     fhir:param ( [ fhir:v "enterer" ] [ fhir:v "performer-actor" ] )
+  ] [
+     fhir:code [ fhir:v "ChargeItemDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Citation" ]
+  ] [
+     fhir:code [ fhir:v "Claim" ] ;
+     fhir:param ( [ fhir:v "payee" ] )
+  ] [
+     fhir:code [ fhir:v "ClaimResponse" ]
+  ] [
+     fhir:code [ fhir:v "ClinicalAssessment" ]
+  ] [
+     fhir:code [ fhir:v "ClinicalUseDefinition" ]
+  ] [
+     fhir:code [ fhir:v "CodeSystem" ]
+  ] [
+     fhir:code [ fhir:v "Communication" ] ;
+     fhir:param ( [ fhir:v "sender" ] [ fhir:v "recipient" ] )
+  ] [
+     fhir:code [ fhir:v "CommunicationRequest" ] ;
+     fhir:param ( [ fhir:v "information-provider" ] [ fhir:v "recipient" ] [ fhir:v "requester" ] )
+  ] [
+     fhir:code [ fhir:v "CompartmentDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Composition" ] ;
+     fhir:param ( [ fhir:v "author" ] )
+  ] [
+     fhir:code [ fhir:v "ConceptMap" ]
+  ] [
+     fhir:code [ fhir:v "Condition" ] ;
+     fhir:param ( [ fhir:v "asserter" ] )
+  ] [
+     fhir:code [ fhir:v "ConditionDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Consent" ]
+  ] [
+     fhir:code [ fhir:v "Contract" ]
+  ] [
+     fhir:code [ fhir:v "Coverage" ] ;
+     fhir:param ( [ fhir:v "policy-holder" ] [ fhir:v "subscriber" ] [ fhir:v "paymentby-party" ] )
+  ] [
+     fhir:code [ fhir:v "CoverageEligibilityRequest" ]
+  ] [
+     fhir:code [ fhir:v "CoverageEligibilityResponse" ]
+  ] [
+     fhir:code [ fhir:v "DetectedIssue" ]
+  ] [
+     fhir:code [ fhir:v "Device" ]
+  ] [
+     fhir:code [ fhir:v "DeviceAlert" ]
+  ] [
+     fhir:code [ fhir:v "DeviceAssociation" ] ;
+     fhir:param ( [ fhir:v "subject" ] [ fhir:v "operator" ] )
+  ] [
+     fhir:code [ fhir:v "DeviceDefinition" ]
+  ] [
+     fhir:code [ fhir:v "DeviceDispense" ]
+  ] [
+     fhir:code [ fhir:v "DeviceMetric" ]
+  ] [
+     fhir:code [ fhir:v "DeviceRequest" ]
+  ] [
+     fhir:code [ fhir:v "DeviceUsage" ]
+  ] [
+     fhir:code [ fhir:v "DiagnosticReport" ]
+  ] [
+     fhir:code [ fhir:v "DocumentReference" ] ;
+     fhir:param ( [ fhir:v "author" ] )
+  ] [
+     fhir:code [ fhir:v "Encounter" ] ;
+     fhir:param ( [ fhir:v "participant" ] )
+  ] [
+     fhir:code [ fhir:v "EncounterHistory" ]
+  ] [
+     fhir:code [ fhir:v "Endpoint" ]
+  ] [
+     fhir:code [ fhir:v "EnrollmentRequest" ]
+  ] [
+     fhir:code [ fhir:v "EnrollmentResponse" ]
+  ] [
+     fhir:code [ fhir:v "EpisodeOfCare" ]
+  ] [
+     fhir:code [ fhir:v "EventDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Evidence" ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable" ]
+  ] [
+     fhir:code [ fhir:v "ExampleScenario" ]
+  ] [
+     fhir:code [ fhir:v "ExplanationOfBenefit" ] ;
+     fhir:param ( [ fhir:v "payee" ] )
+  ] [
+     fhir:code [ fhir:v "FamilyMemberHistory" ]
+  ] [
+     fhir:code [ fhir:v "Flag" ]
+  ] [
+     fhir:code [ fhir:v "FormularyItem" ]
+  ] [
+     fhir:code [ fhir:v "GenomicStudy" ]
+  ] [
+     fhir:code [ fhir:v "Goal" ]
+  ] [
+     fhir:code [ fhir:v "GraphDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Group" ]
+  ] [
+     fhir:code [ fhir:v "GuidanceResponse" ]
+  ] [
+     fhir:code [ fhir:v "HealthcareService" ]
+  ] [
+     fhir:code [ fhir:v "ImagingSelection" ]
+  ] [
+     fhir:code [ fhir:v "ImagingStudy" ]
+  ] [
+     fhir:code [ fhir:v "Immunization" ]
+  ] [
+     fhir:code [ fhir:v "ImmunizationEvaluation" ]
+  ] [
+     fhir:code [ fhir:v "ImmunizationRecommendation" ]
+  ] [
+     fhir:code [ fhir:v "ImplementationGuide" ]
+  ] [
+     fhir:code [ fhir:v "Ingredient" ]
+  ] [
+     fhir:code [ fhir:v "InsurancePlan" ]
+  ] [
+     fhir:code [ fhir:v "InsuranceProduct" ]
+  ] [
+     fhir:code [ fhir:v "InventoryItem" ]
+  ] [
+     fhir:code [ fhir:v "InventoryReport" ]
+  ] [
+     fhir:code [ fhir:v "Invoice" ] ;
+     fhir:param ( [ fhir:v "recipient" ] )
+  ] [
+     fhir:code [ fhir:v "Library" ]
+  ] [
+     fhir:code [ fhir:v "Linkage" ]
+  ] [
+     fhir:code [ fhir:v "List" ]
+  ] [
+     fhir:code [ fhir:v "Location" ]
+  ] [
+     fhir:code [ fhir:v "ManufacturedItemDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Measure" ]
+  ] [
+     fhir:code [ fhir:v "MeasureReport" ]
+  ] [
+     fhir:code [ fhir:v "Medication" ]
+  ] [
+     fhir:code [ fhir:v "MedicationAdministration" ]
+  ] [
+     fhir:code [ fhir:v "MedicationDispense" ]
+  ] [
+     fhir:code [ fhir:v "MedicationKnowledge" ]
+  ] [
+     fhir:code [ fhir:v "MedicationRequest" ]
+  ] [
+     fhir:code [ fhir:v "MedicationStatement" ] ;
+     fhir:param ( [ fhir:v "source" ] )
+  ] [
+     fhir:code [ fhir:v "MedicinalProductDefinition" ]
+  ] [
+     fhir:code [ fhir:v "MessageDefinition" ]
+  ] [
+     fhir:code [ fhir:v "MessageHeader" ]
+  ] [
+     fhir:code [ fhir:v "MolecularDefinition" ]
+  ] [
+     fhir:code [ fhir:v "NamingSystem" ]
+  ] [
+     fhir:code [ fhir:v "NutritionIntake" ] ;
+     fhir:param ( [ fhir:v "source" ] )
+  ] [
+     fhir:code [ fhir:v "NutritionOrder" ]
+  ] [
+     fhir:code [ fhir:v "NutritionProduct" ]
+  ] [
+     fhir:code [ fhir:v "Observation" ] ;
+     fhir:param ( [ fhir:v "performer" ] )
+  ] [
+     fhir:code [ fhir:v "ObservationDefinition" ]
+  ] [
+     fhir:code [ fhir:v "OperationDefinition" ]
+  ] [
+     fhir:code [ fhir:v "OperationOutcome" ]
+  ] [
+     fhir:code [ fhir:v "Organization" ]
+  ] [
+     fhir:code [ fhir:v "OrganizationAffiliation" ]
+  ] [
+     fhir:code [ fhir:v "PackagedProductDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Patient" ] ;
+     fhir:param ( [ fhir:v "link" ] )
+  ] [
+     fhir:code [ fhir:v "PaymentNotice" ]
+  ] [
+     fhir:code [ fhir:v "PaymentReconciliation" ]
+  ] [
+     fhir:code [ fhir:v "Permission" ]
+  ] [
+     fhir:code [ fhir:v "Person" ] ;
+     fhir:param ( [ fhir:v "link" ] )
+  ] [
+     fhir:code [ fhir:v "PersonalRelationship" ] ;
+     fhir:param ( [ fhir:v "source" ] [ fhir:v "target" ] )
+  ] [
+     fhir:code [ fhir:v "PlanDefinition" ]
+  ] [
+     fhir:code [ fhir:v "Practitioner" ]
+  ] [
+     fhir:code [ fhir:v "PractitionerRole" ]
+  ] [
+     fhir:code [ fhir:v "Procedure" ] ;
+     fhir:param ( [ fhir:v "performer" ] )
+  ] [
+     fhir:code [ fhir:v "Provenance" ] ;
+     fhir:param ( [ fhir:v "agent" ] )
+  ] [
+     fhir:code [ fhir:v "Questionnaire" ]
+  ] [
+     fhir:code [ fhir:v "QuestionnaireResponse" ] ;
+     fhir:param ( [ fhir:v "author" ] [ fhir:v "source" ] )
+  ] [
+     fhir:code [ fhir:v "RegulatedAuthorization" ]
+  ] [
+     fhir:code [ fhir:v "RelatedPerson" ] ;
+     fhir:param ( [ fhir:v "{def}" ] )
+  ] [
+     fhir:code [ fhir:v "RequestOrchestration" ] ;
+     fhir:param ( [ fhir:v "participant" ] )
+  ] [
+     fhir:code [ fhir:v "Requirements" ]
+  ] [
+     fhir:code [ fhir:v "ResearchStudy" ]
+  ] [
+     fhir:code [ fhir:v "ResearchSubject" ]
+  ] [
+     fhir:code [ fhir:v "RiskAssessment" ]
+  ] [
+     fhir:code [ fhir:v "Schedule" ] ;
+     fhir:param ( [ fhir:v "actor" ] )
+  ] [
+     fhir:code [ fhir:v "SearchParameter" ]
+  ] [
+     fhir:code [ fhir:v "ServiceRequest" ] ;
+     fhir:param ( [ fhir:v "performer" ] )
+  ] [
+     fhir:code [ fhir:v "Slot" ]
+  ] [
+     fhir:code [ fhir:v "Specimen" ]
+  ] [
+     fhir:code [ fhir:v "SpecimenDefinition" ]
+  ] [
+     fhir:code [ fhir:v "StructureDefinition" ]
+  ] [
+     fhir:code [ fhir:v "StructureMap" ]
+  ] [
+     fhir:code [ fhir:v "Subscription" ]
+  ] [
+     fhir:code [ fhir:v "SubscriptionStatus" ]
+  ] [
+     fhir:code [ fhir:v "SubscriptionTopic" ]
+  ] [
+     fhir:code [ fhir:v "Substance" ]
+  ] [
+     fhir:code [ fhir:v "SubstanceDefinition" ]
+  ] [
+     fhir:code [ fhir:v "SupplyDelivery" ]
+  ] [
+     fhir:code [ fhir:v "SupplyRequest" ] ;
+     fhir:param ( [ fhir:v "requester" ] )
+  ] [
+     fhir:code [ fhir:v "Task" ]
+  ] [
+     fhir:code [ fhir:v "TerminologyCapabilities" ]
+  ] [
+     fhir:code [ fhir:v "Transport" ]
+  ] [
+     fhir:code [ fhir:v "ValueSet" ]
+  ] [
+     fhir:code [ fhir:v "VerificationResult" ]
+  ] [
+     fhir:code [ fhir:v "VisionPrescription" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

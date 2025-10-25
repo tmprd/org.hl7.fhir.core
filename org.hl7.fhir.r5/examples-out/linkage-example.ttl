@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Linkage/example> a fhir:Linkage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:author [
+     fhir:link <http://hl7.org/fhir/Practitioner/f201> ;
+     fhir:reference [ fhir:v "Practitioner/f201" ]
+  ] ; # 
+  fhir:item ( [
+     fhir:type [ fhir:v "source" ] ;
+     fhir:resource [
+       fhir:link <http://hl7.org/fhir/Condition/example> ;
+       fhir:reference [ fhir:v "Condition/example" ] ;
+       fhir:display [ fhir:v "Severe burn of left ear (Date: 24-May 2012)" ]
+     ]
+  ] [
+     fhir:type [ fhir:v "alternate" ] ;
+     fhir:resource [
+       fhir:link <http://hl7.org/fhir/Condition/example-linkage> ;
+       fhir:reference [ fhir:v "Condition/example-linkage" ] ;
+       fhir:display [ fhir:v "Severe burn of left ear (Date: 24-May 2012)" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Condition/example> a fhir:Condition .
+
+<http://hl7.org/fhir/Condition/example-linkage> a fhir:Condition .
+
+# -------------------------------------------------------------------------------------
+

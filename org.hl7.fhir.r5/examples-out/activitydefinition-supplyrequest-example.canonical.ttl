@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ActivityDefinition/blood-tubes-supply> a fhir:ActivityDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "blood-tubes-supply"] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "10 Blood collect tubes blue cap"] ; # 
+  fhir:purpose [ fhir:v "Describes a request for 10 Blood collection tubes with blue caps."] ; # 
+  fhir:usage [ fhir:v "This activity definition is used as the definition of a supply request to resupply blood collection tubes. Elements that apply universally are defined here, while elements that apply to the specific setting of a referral within a particular order set are defined in the order set."] ; # 
+  fhir:kind [ fhir:v "SupplyRequest"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:code [ fhir:v "BlueTubes" ] ;
+       fhir:display [ fhir:v "Blood collect tubes blue cap" ]
+     ] )
+  ] ; # 
+  fhir:quantity [
+     fhir:value [ fhir:v "10"^^xsd:decimal ]
+  ] ; # 
+  fhir:transform [
+     fhir:v "http://example.org/fhir/StructureMap/supplyrequest-transform"^^xsd:anyURI ;
+     fhir:link <http://example.org/fhir/StructureMap/supplyrequest-transform>
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

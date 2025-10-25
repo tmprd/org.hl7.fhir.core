@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/questionnaire-answer-constraint> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "questionnaire-answer-constraint"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem questionnaire-answer-constraint</b>\n      </p>\n      <a name=\"questionnaire-answer-constraint\"> </a>\n      <a name=\"hcquestionnaire-answer-constraint\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/questionnaire-answer-constraint</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">optionsOnly\n            <a name=\"questionnaire-answer-constraint-optionsOnly\"> </a>\n          </td>\n          <td>Options only</td>\n          <td>Only values listed as answerOption or in the expansion of the answerValueSet are permitted</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">optionsOrType\n            <a name=\"questionnaire-answer-constraint-optionsOrType\"> </a>\n          </td>\n          <td>Options or 'type'</td>\n          <td>In addition to the values listed as answerOption or in the expansion of the answerValueSet, any other values that correspond to the specified item.type are permitted</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">optionsOrString\n            <a name=\"questionnaire-answer-constraint-optionsOrString\"> </a>\n          </td>\n          <td>Options or string</td>\n          <td>In addition to the values listed as answerOption or in the expansion of the answerValueSet, free-text strings are permitted.  Answers will have a type of 'string'.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/questionnaire-answer-constraint"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2019" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "QuestionnaireAnswerConstraint"] ; # 
+  fhir:title [ fhir:v "Questionnaire answer constraint codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "Codes that describe the types of constraints possible on a question item that has a list of permitted answers"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "optionsOnly" ] ;
+     fhir:display [ fhir:v "Options only" ] ;
+     fhir:definition [ fhir:v "Only values listed as answerOption or in the expansion of the answerValueSet are permitted" ]
+  ] [
+     fhir:code [ fhir:v "optionsOrType" ] ;
+     fhir:display [ fhir:v "Options or 'type'" ] ;
+     fhir:definition [ fhir:v "In addition to the values listed as answerOption or in the expansion of the answerValueSet, any other values that correspond to the specified item.type are permitted" ]
+  ] [
+     fhir:code [ fhir:v "optionsOrString" ] ;
+     fhir:display [ fhir:v "Options or string" ] ;
+     fhir:definition [ fhir:v "In addition to the values listed as answerOption or in the expansion of the answerValueSet, free-text strings are permitted.  Answers will have a type of 'string'." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

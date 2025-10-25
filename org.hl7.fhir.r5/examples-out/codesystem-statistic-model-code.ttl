@@ -1,0 +1,396 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/statistic-model-code> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "statistic-model-code"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem statistic-model-code</b>\n      </p>\n      <a name=\"statistic-model-code\"> </a>\n      <a name=\"hcstatistic-model-code\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/statistic-model-code</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">oneTailedTest\n            <a name=\"statistic-model-code-oneTailedTest\"> </a>\n          </td>\n          <td>one-tailed test (1 threshold)</td>\n          <td>Used for one-tailed test (1 threshold), no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">twoTailedTest\n            <a name=\"statistic-model-code-twoTailedTest\"> </a>\n          </td>\n          <td>two-tailed test (2 thresholds)</td>\n          <td>Used for two-tailed test (2 threshold), no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">zTest\n            <a name=\"statistic-model-code-zTest\"> </a>\n          </td>\n          <td>z-test</td>\n          <td>Used for z-test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">oneSampleTTest\n            <a name=\"statistic-model-code-oneSampleTTest\"> </a>\n          </td>\n          <td>1-sample t-test</td>\n          <td>Used for 1-sample t-test, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">twoSampleTTest\n            <a name=\"statistic-model-code-twoSampleTTest\"> </a>\n          </td>\n          <td>2-sample t-test</td>\n          <td>Used for 2-sample t-test, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pairedTTest\n            <a name=\"statistic-model-code-pairedTTest\"> </a>\n          </td>\n          <td>paired t-test</td>\n          <td>Used for paired t-test, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chiSquareTest\n            <a name=\"statistic-model-code-chiSquareTest\"> </a>\n          </td>\n          <td>Chi-square test</td>\n          <td>Used for Chi-square test, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chiSquareTestTrend\n            <a name=\"statistic-model-code-chiSquareTestTrend\"> </a>\n          </td>\n          <td>Chi-square test for trend</td>\n          <td>Used for Chi-square test for trend, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pearsonCorrelation\n            <a name=\"statistic-model-code-pearsonCorrelation\"> </a>\n          </td>\n          <td>Pearson correlation</td>\n          <td>Used for Pearson correlation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">anova\n            <a name=\"statistic-model-code-anova\"> </a>\n          </td>\n          <td>ANOVA (ANalysis Of VAriance)</td>\n          <td>Used for ANOVA method of analysis, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">anovaOneWay\n            <a name=\"statistic-model-code-anovaOneWay\"> </a>\n          </td>\n          <td>one-way ANOVA</td>\n          <td>Used for one-way ANOVA method of analysis, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">anovaTwoWay\n            <a name=\"statistic-model-code-anovaTwoWay\"> </a>\n          </td>\n          <td>2-way ANOVA without replication</td>\n          <td>Used for 2-way ANOVA without replication method of analysis, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">anovaTwoWayReplication\n            <a name=\"statistic-model-code-anovaTwoWayReplication\"> </a>\n          </td>\n          <td>2-way ANOVA with replication</td>\n          <td>Used for 2-way ANOVA with replication method of analysis, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">manova\n            <a name=\"statistic-model-code-manova\"> </a>\n          </td>\n          <td>multivariate ANOVA (MANOVA)</td>\n          <td>Used for multivariate ANOVA (MANOVA) method of analysis, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">anovaThreeWay\n            <a name=\"statistic-model-code-anovaThreeWay\"> </a>\n          </td>\n          <td>3-way ANOVA</td>\n          <td>Used for 3-way ANOVA method of analysis, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">signTest\n            <a name=\"statistic-model-code-signTest\"> </a>\n          </td>\n          <td>sign test</td>\n          <td>Used for sign test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">wilcoxonSignedRankTest\n            <a name=\"statistic-model-code-wilcoxonSignedRankTest\"> </a>\n          </td>\n          <td>Wilcoxon signed-rank test</td>\n          <td>Used for Wilcoxon signed-rank test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">wilcoxonRankSumTest\n            <a name=\"statistic-model-code-wilcoxonRankSumTest\"> </a>\n          </td>\n          <td>Wilcoxon rank-sum test</td>\n          <td>Used for Wilcoxon rank-sum test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mannWhitneyUTest\n            <a name=\"statistic-model-code-mannWhitneyUTest\"> </a>\n          </td>\n          <td>Mann-Whitney U test</td>\n          <td>Used for Mann-Whitney U test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fishersExactTest\n            <a name=\"statistic-model-code-fishersExactTest\"> </a>\n          </td>\n          <td>Fisher’s exact test</td>\n          <td>Used for Fisher's exact test, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mcnemarsTest\n            <a name=\"statistic-model-code-mcnemarsTest\"> </a>\n          </td>\n          <td>McNemar’s test</td>\n          <td>Used for McNemar's test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">kruskalWallisTest\n            <a name=\"statistic-model-code-kruskalWallisTest\"> </a>\n          </td>\n          <td>Kruskal Wallis test</td>\n          <td>Used for Kruskal Wallis test, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">spearmanCorrelation\n            <a name=\"statistic-model-code-spearmanCorrelation\"> </a>\n          </td>\n          <td>Spearman correlation</td>\n          <td>Used for Spearman correlation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">kendallCorrelation\n            <a name=\"statistic-model-code-kendallCorrelation\"> </a>\n          </td>\n          <td>Kendall correlation</td>\n          <td>Used for Kendall correlation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">friedmanTest\n            <a name=\"statistic-model-code-friedmanTest\"> </a>\n          </td>\n          <td>Friedman test</td>\n          <td>Used for Friedman test, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">goodmanKruskasGamma\n            <a name=\"statistic-model-code-goodmanKruskasGamma\"> </a>\n          </td>\n          <td>Goodman Kruska’s Gamma</td>\n          <td>Used for Goodman Kruska’s Gamma, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glm\n            <a name=\"statistic-model-code-glm\"> </a>\n          </td>\n          <td>GLM (Generalized Linear Model)</td>\n          <td>Used for GLM (Generalized Linear Model), no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmProbit\n            <a name=\"statistic-model-code-glmProbit\"> </a>\n          </td>\n          <td>GLM with probit link</td>\n          <td>Used for GLM with probit link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmLogit\n            <a name=\"statistic-model-code-glmLogit\"> </a>\n          </td>\n          <td>GLM with logit link</td>\n          <td>Used for GLM with logit link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmIdentity\n            <a name=\"statistic-model-code-glmIdentity\"> </a>\n          </td>\n          <td>GLM with identity link</td>\n          <td>Used for GLM with identity link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmLog\n            <a name=\"statistic-model-code-glmLog\"> </a>\n          </td>\n          <td>GLM with log link</td>\n          <td>Used for GLM with log link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmGeneralizedLogit\n            <a name=\"statistic-model-code-glmGeneralizedLogit\"> </a>\n          </td>\n          <td>GLM with generalized logit link</td>\n          <td>Used for GLM with generalized logit link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmm\n            <a name=\"statistic-model-code-glmm\"> </a>\n          </td>\n          <td>Generalized linear mixed model (GLMM)</td>\n          <td>Used for Generalized linear mixed model (GLMM), no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmmProbit\n            <a name=\"statistic-model-code-glmmProbit\"> </a>\n          </td>\n          <td>GLMM with probit link</td>\n          <td>Used for GLMM with probit link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmmLogit\n            <a name=\"statistic-model-code-glmmLogit\"> </a>\n          </td>\n          <td>GLMM with logit link</td>\n          <td>Used for GLMM with logit link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmmIdentity\n            <a name=\"statistic-model-code-glmmIdentity\"> </a>\n          </td>\n          <td>GLMM with identity link</td>\n          <td>Used for GLMM with identity link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmmLog\n            <a name=\"statistic-model-code-glmmLog\"> </a>\n          </td>\n          <td>GLMM with log link</td>\n          <td>Used for GLMM with log link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">glmmGeneralizedLogit\n            <a name=\"statistic-model-code-glmmGeneralizedLogit\"> </a>\n          </td>\n          <td>GLMM with generalized logit link</td>\n          <td>Used for GLMM with generalized logit link, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">linearRegression\n            <a name=\"statistic-model-code-linearRegression\"> </a>\n          </td>\n          <td>Linear Regression</td>\n          <td>Used for linear regression method of analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">logisticRegression\n            <a name=\"statistic-model-code-logisticRegression\"> </a>\n          </td>\n          <td>Logistic Regression</td>\n          <td>Used for logistic regression method of analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">polynomialRegression\n            <a name=\"statistic-model-code-polynomialRegression\"> </a>\n          </td>\n          <td>Polynomial Regression</td>\n          <td>Used for Polynomial regression method of analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">coxProportionalHazards\n            <a name=\"statistic-model-code-coxProportionalHazards\"> </a>\n          </td>\n          <td>Cox Proportional Hazards</td>\n          <td>Used for Cox proportional hazards method of analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">binomialDistributionRegression\n            <a name=\"statistic-model-code-binomialDistributionRegression\"> </a>\n          </td>\n          <td>Binomial Distribution for Regression</td>\n          <td>Used for Binomial Distribution for Regression, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">multinomialDistributionRegression\n            <a name=\"statistic-model-code-multinomialDistributionRegression\"> </a>\n          </td>\n          <td>Multinomial Distribution for Regression</td>\n          <td>Used for Multinomial Distribution for Regression, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">poissonRegression\n            <a name=\"statistic-model-code-poissonRegression\"> </a>\n          </td>\n          <td>Poisson Regression</td>\n          <td>Used for Poisson Regression, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">negativeBinomialRegression\n            <a name=\"statistic-model-code-negativeBinomialRegression\"> </a>\n          </td>\n          <td>Negative Binomial Regression</td>\n          <td>Used for Negative Binomial Regression, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">zeroCellConstant\n            <a name=\"statistic-model-code-zeroCellConstant\"> </a>\n          </td>\n          <td>Zero-cell adjustment with constant</td>\n          <td>Zero-cell adjustment done by adding a constant to all cells of affected studies, paired with \"value\" to define the constant</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">zeroCellContinuityCorrection\n            <a name=\"statistic-model-code-zeroCellContinuityCorrection\"> </a>\n          </td>\n          <td>Zero-cell adjustment with continuity correction</td>\n          <td>Zero-cell adjustment done by treatment arm continuity correction, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">adjusted\n            <a name=\"statistic-model-code-adjusted\"> </a>\n          </td>\n          <td>Adjusted analysis</td>\n          <td>Used for adjusted analysis, paired with variable element(s)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">interactionTerm\n            <a name=\"statistic-model-code-interactionTerm\"> </a>\n          </td>\n          <td>Interaction term</td>\n          <td>Used for interaction term, paired with \"value\" and two or more variable elements</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">manteHaenszelMethod\n            <a name=\"statistic-model-code-manteHaenszelMethod\"> </a>\n          </td>\n          <td>Mantel-Haenszel method</td>\n          <td>Used for Mantel-Haenszel method, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">metaAnalysis\n            <a name=\"statistic-model-code-metaAnalysis\"> </a>\n          </td>\n          <td>Meta-analysis</td>\n          <td>Used for meta-analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">inverseVariance\n            <a name=\"statistic-model-code-inverseVariance\"> </a>\n          </td>\n          <td>Inverse variance method</td>\n          <td>Used for inverse variance method of meta-analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">petoMethod\n            <a name=\"statistic-model-code-petoMethod\"> </a>\n          </td>\n          <td>Peto method</td>\n          <td>Used for Peto method of meta-analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">hartungKnapp\n            <a name=\"statistic-model-code-hartungKnapp\"> </a>\n          </td>\n          <td>Hartung-Knapp adjustment</td>\n          <td>Hartung-Knapp/Hartung-Knapp-Sidik-Jonkman adjustment used in meta-analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">modifiedHartungKnapp\n            <a name=\"statistic-model-code-modifiedHartungKnapp\"> </a>\n          </td>\n          <td>Modified Hartung-Knapp adjustment</td>\n          <td>Modified Hartung-Knapp/Hartung-Knapp-Sidik-Jonkman adjustment used in meta-analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">effectsFixed\n            <a name=\"statistic-model-code-effectsFixed\"> </a>\n          </td>\n          <td>Fixed-effects</td>\n          <td>From a fixed-effects analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">effectsRandom\n            <a name=\"statistic-model-code-effectsRandom\"> </a>\n          </td>\n          <td>Random-effects</td>\n          <td>From a random-effects analysis, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chiSquareTestHomogeneity\n            <a name=\"statistic-model-code-chiSquareTestHomogeneity\"> </a>\n          </td>\n          <td>Chi-square test for homogeneity</td>\n          <td>Used for Chi-square test for homogeneity, may be paired with \"value\" to express degrees of freedom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">dersimonianLairdMethod\n            <a name=\"statistic-model-code-dersimonianLairdMethod\"> </a>\n          </td>\n          <td>Dersimonian-Laird method</td>\n          <td>Used for Dersimonian-Laird method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pauleMandelMethod\n            <a name=\"statistic-model-code-pauleMandelMethod\"> </a>\n          </td>\n          <td>Paule-Mandel method</td>\n          <td>Used for Paule-Mandel method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">restrictedLikelihood\n            <a name=\"statistic-model-code-restrictedLikelihood\"> </a>\n          </td>\n          <td>Restricted Maximum Likelihood method</td>\n          <td>Used for Restricted Maximum Likelihood method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">maximumLikelihood\n            <a name=\"statistic-model-code-maximumLikelihood\"> </a>\n          </td>\n          <td>Maximum Likelihood method</td>\n          <td>Used for Maximum Likelihood method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">empiricalBayes\n            <a name=\"statistic-model-code-empiricalBayes\"> </a>\n          </td>\n          <td>Empirical Bayes method</td>\n          <td>Used for Empirical Bayes method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">hunterSchmidt\n            <a name=\"statistic-model-code-hunterSchmidt\"> </a>\n          </td>\n          <td>Hunter-Schmidt method</td>\n          <td>Used for Hunter-Schmidt method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sidikJonkman\n            <a name=\"statistic-model-code-sidikJonkman\"> </a>\n          </td>\n          <td>Sidik-Jonkman method</td>\n          <td>Used for Sidik-Jonkman method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">hedgesMethod\n            <a name=\"statistic-model-code-hedgesMethod\"> </a>\n          </td>\n          <td>Hedges method</td>\n          <td>Used for Hedges method of tau estimation, no additional elements needed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauDersimonianLaird\n            <a name=\"statistic-model-code-tauDersimonianLaird\"> </a>\n          </td>\n          <td>Dersimonian-Laird method</td>\n          <td>Dersimonian-Laird method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauPauleMandel\n            <a name=\"statistic-model-code-tauPauleMandel\"> </a>\n          </td>\n          <td>Paule-Mandel method</td>\n          <td>Paule-Mandel method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauRestrictedMaximumLikelihood\n            <a name=\"statistic-model-code-tauRestrictedMaximumLikelihood\"> </a>\n          </td>\n          <td>Restricted Maximum Likelihood method</td>\n          <td>Restricted Maximum Likelihood method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauMaximumLikelihood\n            <a name=\"statistic-model-code-tauMaximumLikelihood\"> </a>\n          </td>\n          <td>Maximum Likelihood method</td>\n          <td>Maximum Likelihood method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauEmpiricalBayes\n            <a name=\"statistic-model-code-tauEmpiricalBayes\"> </a>\n          </td>\n          <td>Empirical Bayes method</td>\n          <td>Empirical Bayes method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauHunterSchmidt\n            <a name=\"statistic-model-code-tauHunterSchmidt\"> </a>\n          </td>\n          <td>Hunter-Schmidt method</td>\n          <td>Hunter-Schmidt method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauSidikJonkman\n            <a name=\"statistic-model-code-tauSidikJonkman\"> </a>\n          </td>\n          <td>Sidik-Jonkman method</td>\n          <td>Sidik-Jonkman method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tauHedges\n            <a name=\"statistic-model-code-tauHedges\"> </a>\n          </td>\n          <td>Hedges method</td>\n          <td>Hedges method for tau squared</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">poolMantelHaenzsel\n            <a name=\"statistic-model-code-poolMantelHaenzsel\"> </a>\n          </td>\n          <td>Mantel-Haenszel method</td>\n          <td>Mantel-Haenszel method for pooling in meta-analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">poolInverseVariance\n            <a name=\"statistic-model-code-poolInverseVariance\"> </a>\n          </td>\n          <td>Inverse variance method</td>\n          <td>Inverse variance method for pooling in meta-analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">poolPeto\n            <a name=\"statistic-model-code-poolPeto\"> </a>\n          </td>\n          <td>Peto method</td>\n          <td>Peto method for pooling in meta-analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">poolGeneralizedLinearMixedModel\n            <a name=\"statistic-model-code-poolGeneralizedLinearMixedModel\"> </a>\n          </td>\n          <td>Generalized linear mixed model (GLMM)</td>\n          <td>Generalized linear mixed model (GLMM) method for pooling in meta-analysis</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/statistic-model-code"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1938" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "StatisticModelCode"] ; # 
+  fhir:title [ fhir:v "Statistic Model Code"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-08-05T12:00:00+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The role that the assertion variable plays."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/statistic-model-code"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/statistic-model-code>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "oneTailedTest" ] ;
+     fhir:display [ fhir:v "one-tailed test (1 threshold)" ] ;
+     fhir:definition [ fhir:v "Used for one-tailed test (1 threshold), no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "twoTailedTest" ] ;
+     fhir:display [ fhir:v "two-tailed test (2 thresholds)" ] ;
+     fhir:definition [ fhir:v "Used for two-tailed test (2 threshold), no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "zTest" ] ;
+     fhir:display [ fhir:v "z-test" ] ;
+     fhir:definition [ fhir:v "Used for z-test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "oneSampleTTest" ] ;
+     fhir:display [ fhir:v "1-sample t-test" ] ;
+     fhir:definition [ fhir:v "Used for 1-sample t-test, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "twoSampleTTest" ] ;
+     fhir:display [ fhir:v "2-sample t-test" ] ;
+     fhir:definition [ fhir:v "Used for 2-sample t-test, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "pairedTTest" ] ;
+     fhir:display [ fhir:v "paired t-test" ] ;
+     fhir:definition [ fhir:v "Used for paired t-test, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "chiSquareTest" ] ;
+     fhir:display [ fhir:v "Chi-square test" ] ;
+     fhir:definition [ fhir:v "Used for Chi-square test, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "chiSquareTestTrend" ] ;
+     fhir:display [ fhir:v "Chi-square test for trend" ] ;
+     fhir:definition [ fhir:v "Used for Chi-square test for trend, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "pearsonCorrelation" ] ;
+     fhir:display [ fhir:v "Pearson correlation" ] ;
+     fhir:definition [ fhir:v "Used for Pearson correlation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "anova" ] ;
+     fhir:display [ fhir:v "ANOVA (ANalysis Of VAriance)" ] ;
+     fhir:definition [ fhir:v "Used for ANOVA method of analysis, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "anovaOneWay" ] ;
+     fhir:display [ fhir:v "one-way ANOVA" ] ;
+     fhir:definition [ fhir:v "Used for one-way ANOVA method of analysis, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "anovaTwoWay" ] ;
+     fhir:display [ fhir:v "2-way ANOVA without replication" ] ;
+     fhir:definition [ fhir:v "Used for 2-way ANOVA without replication method of analysis, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "anovaTwoWayReplication" ] ;
+     fhir:display [ fhir:v "2-way ANOVA with replication" ] ;
+     fhir:definition [ fhir:v "Used for 2-way ANOVA with replication method of analysis, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "manova" ] ;
+     fhir:display [ fhir:v "multivariate ANOVA (MANOVA)" ] ;
+     fhir:definition [ fhir:v "Used for multivariate ANOVA (MANOVA) method of analysis, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "anovaThreeWay" ] ;
+     fhir:display [ fhir:v "3-way ANOVA" ] ;
+     fhir:definition [ fhir:v "Used for 3-way ANOVA method of analysis, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "signTest" ] ;
+     fhir:display [ fhir:v "sign test" ] ;
+     fhir:definition [ fhir:v "Used for sign test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "wilcoxonSignedRankTest" ] ;
+     fhir:display [ fhir:v "Wilcoxon signed-rank test" ] ;
+     fhir:definition [ fhir:v "Used for Wilcoxon signed-rank test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "wilcoxonRankSumTest" ] ;
+     fhir:display [ fhir:v "Wilcoxon rank-sum test" ] ;
+     fhir:definition [ fhir:v "Used for Wilcoxon rank-sum test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "mannWhitneyUTest" ] ;
+     fhir:display [ fhir:v "Mann-Whitney U test" ] ;
+     fhir:definition [ fhir:v "Used for Mann-Whitney U test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "fishersExactTest" ] ;
+     fhir:display [ fhir:v "Fisher’s exact test" ] ;
+     fhir:definition [ fhir:v "Used for Fisher's exact test, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "mcnemarsTest" ] ;
+     fhir:display [ fhir:v "McNemar’s test" ] ;
+     fhir:definition [ fhir:v "Used for McNemar's test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "kruskalWallisTest" ] ;
+     fhir:display [ fhir:v "Kruskal Wallis test" ] ;
+     fhir:definition [ fhir:v "Used for Kruskal Wallis test, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "spearmanCorrelation" ] ;
+     fhir:display [ fhir:v "Spearman correlation" ] ;
+     fhir:definition [ fhir:v "Used for Spearman correlation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "kendallCorrelation" ] ;
+     fhir:display [ fhir:v "Kendall correlation" ] ;
+     fhir:definition [ fhir:v "Used for Kendall correlation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "friedmanTest" ] ;
+     fhir:display [ fhir:v "Friedman test" ] ;
+     fhir:definition [ fhir:v "Used for Friedman test, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "goodmanKruskasGamma" ] ;
+     fhir:display [ fhir:v "Goodman Kruska’s Gamma" ] ;
+     fhir:definition [ fhir:v "Used for Goodman Kruska’s Gamma, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glm" ] ;
+     fhir:display [ fhir:v "GLM (Generalized Linear Model)" ] ;
+     fhir:definition [ fhir:v "Used for GLM (Generalized Linear Model), no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmProbit" ] ;
+     fhir:display [ fhir:v "GLM with probit link" ] ;
+     fhir:definition [ fhir:v "Used for GLM with probit link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmLogit" ] ;
+     fhir:display [ fhir:v "GLM with logit link" ] ;
+     fhir:definition [ fhir:v "Used for GLM with logit link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmIdentity" ] ;
+     fhir:display [ fhir:v "GLM with identity link" ] ;
+     fhir:definition [ fhir:v "Used for GLM with identity link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmLog" ] ;
+     fhir:display [ fhir:v "GLM with log link" ] ;
+     fhir:definition [ fhir:v "Used for GLM with log link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmGeneralizedLogit" ] ;
+     fhir:display [ fhir:v "GLM with generalized logit link" ] ;
+     fhir:definition [ fhir:v "Used for GLM with generalized logit link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmm" ] ;
+     fhir:display [ fhir:v "Generalized linear mixed model (GLMM)" ] ;
+     fhir:definition [ fhir:v "Used for Generalized linear mixed model (GLMM), no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmmProbit" ] ;
+     fhir:display [ fhir:v "GLMM with probit link" ] ;
+     fhir:definition [ fhir:v "Used for GLMM with probit link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmmLogit" ] ;
+     fhir:display [ fhir:v "GLMM with logit link" ] ;
+     fhir:definition [ fhir:v "Used for GLMM with logit link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmmIdentity" ] ;
+     fhir:display [ fhir:v "GLMM with identity link" ] ;
+     fhir:definition [ fhir:v "Used for GLMM with identity link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmmLog" ] ;
+     fhir:display [ fhir:v "GLMM with log link" ] ;
+     fhir:definition [ fhir:v "Used for GLMM with log link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "glmmGeneralizedLogit" ] ;
+     fhir:display [ fhir:v "GLMM with generalized logit link" ] ;
+     fhir:definition [ fhir:v "Used for GLMM with generalized logit link, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "linearRegression" ] ;
+     fhir:display [ fhir:v "Linear Regression" ] ;
+     fhir:definition [ fhir:v "Used for linear regression method of analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "logisticRegression" ] ;
+     fhir:display [ fhir:v "Logistic Regression" ] ;
+     fhir:definition [ fhir:v "Used for logistic regression method of analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "polynomialRegression" ] ;
+     fhir:display [ fhir:v "Polynomial Regression" ] ;
+     fhir:definition [ fhir:v "Used for Polynomial regression method of analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "coxProportionalHazards" ] ;
+     fhir:display [ fhir:v "Cox Proportional Hazards" ] ;
+     fhir:definition [ fhir:v "Used for Cox proportional hazards method of analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "binomialDistributionRegression" ] ;
+     fhir:display [ fhir:v "Binomial Distribution for Regression" ] ;
+     fhir:definition [ fhir:v "Used for Binomial Distribution for Regression, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "multinomialDistributionRegression" ] ;
+     fhir:display [ fhir:v "Multinomial Distribution for Regression" ] ;
+     fhir:definition [ fhir:v "Used for Multinomial Distribution for Regression, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "poissonRegression" ] ;
+     fhir:display [ fhir:v "Poisson Regression" ] ;
+     fhir:definition [ fhir:v "Used for Poisson Regression, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "negativeBinomialRegression" ] ;
+     fhir:display [ fhir:v "Negative Binomial Regression" ] ;
+     fhir:definition [ fhir:v "Used for Negative Binomial Regression, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "zeroCellConstant" ] ;
+     fhir:display [ fhir:v "Zero-cell adjustment with constant" ] ;
+     fhir:definition [ fhir:v "Zero-cell adjustment done by adding a constant to all cells of affected studies, paired with \"value\" to define the constant" ]
+  ] [
+     fhir:code [ fhir:v "zeroCellContinuityCorrection" ] ;
+     fhir:display [ fhir:v "Zero-cell adjustment with continuity correction" ] ;
+     fhir:definition [ fhir:v "Zero-cell adjustment done by treatment arm continuity correction, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "adjusted" ] ;
+     fhir:display [ fhir:v "Adjusted analysis" ] ;
+     fhir:definition [ fhir:v "Used for adjusted analysis, paired with variable element(s)" ]
+  ] [
+     fhir:code [ fhir:v "interactionTerm" ] ;
+     fhir:display [ fhir:v "Interaction term" ] ;
+     fhir:definition [ fhir:v "Used for interaction term, paired with \"value\" and two or more variable elements" ]
+  ] [
+     fhir:code [ fhir:v "manteHaenszelMethod" ] ;
+     fhir:display [ fhir:v "Mantel-Haenszel method" ] ;
+     fhir:definition [ fhir:v "Used for Mantel-Haenszel method, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "metaAnalysis" ] ;
+     fhir:display [ fhir:v "Meta-analysis" ] ;
+     fhir:definition [ fhir:v "Used for meta-analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "inverseVariance" ] ;
+     fhir:display [ fhir:v "Inverse variance method" ] ;
+     fhir:definition [ fhir:v "Used for inverse variance method of meta-analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "petoMethod" ] ;
+     fhir:display [ fhir:v "Peto method" ] ;
+     fhir:definition [ fhir:v "Used for Peto method of meta-analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "hartungKnapp" ] ;
+     fhir:display [ fhir:v "Hartung-Knapp adjustment" ] ;
+     fhir:definition [ fhir:v "Hartung-Knapp/Hartung-Knapp-Sidik-Jonkman adjustment used in meta-analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "modifiedHartungKnapp" ] ;
+     fhir:display [ fhir:v "Modified Hartung-Knapp adjustment" ] ;
+     fhir:definition [ fhir:v "Modified Hartung-Knapp/Hartung-Knapp-Sidik-Jonkman adjustment used in meta-analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "effectsFixed" ] ;
+     fhir:display [ fhir:v "Fixed-effects" ] ;
+     fhir:definition [ fhir:v "From a fixed-effects analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "effectsRandom" ] ;
+     fhir:display [ fhir:v "Random-effects" ] ;
+     fhir:definition [ fhir:v "From a random-effects analysis, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "chiSquareTestHomogeneity" ] ;
+     fhir:display [ fhir:v "Chi-square test for homogeneity" ] ;
+     fhir:definition [ fhir:v "Used for Chi-square test for homogeneity, may be paired with \"value\" to express degrees of freedom" ]
+  ] [
+     fhir:code [ fhir:v "dersimonianLairdMethod" ] ;
+     fhir:display [ fhir:v "Dersimonian-Laird method" ] ;
+     fhir:definition [ fhir:v "Used for Dersimonian-Laird method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "pauleMandelMethod" ] ;
+     fhir:display [ fhir:v "Paule-Mandel method" ] ;
+     fhir:definition [ fhir:v "Used for Paule-Mandel method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "restrictedLikelihood" ] ;
+     fhir:display [ fhir:v "Restricted Maximum Likelihood method" ] ;
+     fhir:definition [ fhir:v "Used for Restricted Maximum Likelihood method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "maximumLikelihood" ] ;
+     fhir:display [ fhir:v "Maximum Likelihood method" ] ;
+     fhir:definition [ fhir:v "Used for Maximum Likelihood method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "empiricalBayes" ] ;
+     fhir:display [ fhir:v "Empirical Bayes method" ] ;
+     fhir:definition [ fhir:v "Used for Empirical Bayes method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "hunterSchmidt" ] ;
+     fhir:display [ fhir:v "Hunter-Schmidt method" ] ;
+     fhir:definition [ fhir:v "Used for Hunter-Schmidt method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "sidikJonkman" ] ;
+     fhir:display [ fhir:v "Sidik-Jonkman method" ] ;
+     fhir:definition [ fhir:v "Used for Sidik-Jonkman method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "hedgesMethod" ] ;
+     fhir:display [ fhir:v "Hedges method" ] ;
+     fhir:definition [ fhir:v "Used for Hedges method of tau estimation, no additional elements needed" ]
+  ] [
+     fhir:code [ fhir:v "tauDersimonianLaird" ] ;
+     fhir:display [ fhir:v "Dersimonian-Laird method" ] ;
+     fhir:definition [ fhir:v "Dersimonian-Laird method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauPauleMandel" ] ;
+     fhir:display [ fhir:v "Paule-Mandel method" ] ;
+     fhir:definition [ fhir:v "Paule-Mandel method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauRestrictedMaximumLikelihood" ] ;
+     fhir:display [ fhir:v "Restricted Maximum Likelihood method" ] ;
+     fhir:definition [ fhir:v "Restricted Maximum Likelihood method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauMaximumLikelihood" ] ;
+     fhir:display [ fhir:v "Maximum Likelihood method" ] ;
+     fhir:definition [ fhir:v "Maximum Likelihood method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauEmpiricalBayes" ] ;
+     fhir:display [ fhir:v "Empirical Bayes method" ] ;
+     fhir:definition [ fhir:v "Empirical Bayes method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauHunterSchmidt" ] ;
+     fhir:display [ fhir:v "Hunter-Schmidt method" ] ;
+     fhir:definition [ fhir:v "Hunter-Schmidt method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauSidikJonkman" ] ;
+     fhir:display [ fhir:v "Sidik-Jonkman method" ] ;
+     fhir:definition [ fhir:v "Sidik-Jonkman method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "tauHedges" ] ;
+     fhir:display [ fhir:v "Hedges method" ] ;
+     fhir:definition [ fhir:v "Hedges method for tau squared" ]
+  ] [
+     fhir:code [ fhir:v "poolMantelHaenzsel" ] ;
+     fhir:display [ fhir:v "Mantel-Haenszel method" ] ;
+     fhir:definition [ fhir:v "Mantel-Haenszel method for pooling in meta-analysis" ]
+  ] [
+     fhir:code [ fhir:v "poolInverseVariance" ] ;
+     fhir:display [ fhir:v "Inverse variance method" ] ;
+     fhir:definition [ fhir:v "Inverse variance method for pooling in meta-analysis" ]
+  ] [
+     fhir:code [ fhir:v "poolPeto" ] ;
+     fhir:display [ fhir:v "Peto method" ] ;
+     fhir:definition [ fhir:v "Peto method for pooling in meta-analysis" ]
+  ] [
+     fhir:code [ fhir:v "poolGeneralizedLinearMixedModel" ] ;
+     fhir:display [ fhir:v "Generalized linear mixed model (GLMM)" ] ;
+     fhir:definition [ fhir:v "Generalized linear mixed model (GLMM) method for pooling in meta-analysis" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

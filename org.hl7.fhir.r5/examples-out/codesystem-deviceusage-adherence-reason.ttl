@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/deviceusage-adherence-reason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "deviceusage-adherence-reason"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem deviceusage-adherence-reason</b>\n      </p>\n      <a name=\"deviceusage-adherence-reason\"> </a>\n      <a name=\"hcdeviceusage-adherence-reason\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/deviceusage-adherence-reason</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lost\n            <a name=\"deviceusage-adherence-reason-lost\"> </a>\n          </td>\n          <td>Lost</td>\n          <td>The device is lost.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">stolen\n            <a name=\"deviceusage-adherence-reason-stolen\"> </a>\n          </td>\n          <td>Stolen</td>\n          <td>The device is stolen.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">prescribed\n            <a name=\"deviceusage-adherence-reason-prescribed\"> </a>\n          </td>\n          <td>Prescribed</td>\n          <td>The device is prescribed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">broken\n            <a name=\"deviceusage-adherence-reason-broken\"> </a>\n          </td>\n          <td>Broken</td>\n          <td>The device is broken.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">burned\n            <a name=\"deviceusage-adherence-reason-burned\"> </a>\n          </td>\n          <td>Burned</td>\n          <td>The device is burned.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">forgot\n            <a name=\"deviceusage-adherence-reason-forgot\"> </a>\n          </td>\n          <td>Forgot</td>\n          <td>The device is forgotten.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/deviceusage-adherence-reason"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1855" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceUsageAdherenceReason"] ; # 
+  fhir:title [ fhir:v "Device Usage Adherence Reason"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A coded concept indicating the reason for the usage of the device."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/deviceusage-adherence-reason"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/deviceusage-adherence-reason>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "lost" ] ;
+     fhir:display [ fhir:v "Lost" ] ;
+     fhir:definition [ fhir:v "The device is lost." ]
+  ] [
+     fhir:code [ fhir:v "stolen" ] ;
+     fhir:display [ fhir:v "Stolen" ] ;
+     fhir:definition [ fhir:v "The device is stolen." ]
+  ] [
+     fhir:code [ fhir:v "prescribed" ] ;
+     fhir:display [ fhir:v "Prescribed" ] ;
+     fhir:definition [ fhir:v "The device is prescribed." ]
+  ] [
+     fhir:code [ fhir:v "broken" ] ;
+     fhir:display [ fhir:v "Broken" ] ;
+     fhir:definition [ fhir:v "The device is broken." ]
+  ] [
+     fhir:code [ fhir:v "burned" ] ;
+     fhir:display [ fhir:v "Burned" ] ;
+     fhir:definition [ fhir:v "The device is burned." ]
+  ] [
+     fhir:code [ fhir:v "forgot" ] ;
+     fhir:display [ fhir:v "Forgot" ] ;
+     fhir:definition [ fhir:v "The device is forgotten." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

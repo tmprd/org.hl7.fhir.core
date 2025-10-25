@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/encounter-reason-use> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "encounter-reason-use"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem encounter-reason-use</b>\n      </p>\n      <a name=\"encounter-reason-use\"> </a>\n      <a name=\"hcencounter-reason-use\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/encounter-reason-use</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">CC\n            <a name=\"encounter-reason-use-CC\"> </a>\n          </td>\n          <td>Chief Complaint</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">HC\n            <a name=\"encounter-reason-use-HC\"> </a>\n          </td>\n          <td>Health Concern</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">AD\n            <a name=\"encounter-reason-use-AD\"> </a>\n          </td>\n          <td>Admitting Diagnosis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">RV\n            <a name=\"encounter-reason-use-RV\"> </a>\n          </td>\n          <td>Reason for Visit</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">HM\n            <a name=\"encounter-reason-use-HM\"> </a>\n          </td>\n          <td>Health Maintenance (including screening)</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pa"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/encounter-reason-use"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2114" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "EncounterReasonUse"] ; # 
+  fhir:title [ fhir:v "Encounter Reason Use"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Encounter Reason Use"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/encounter-reason-use"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/encounter-reason-use>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "CC" ] ;
+     fhir:display [ fhir:v "Chief Complaint" ]
+  ] [
+     fhir:code [ fhir:v "HC" ] ;
+     fhir:display [ fhir:v "Health Concern" ]
+  ] [
+     fhir:code [ fhir:v "AD" ] ;
+     fhir:display [ fhir:v "Admitting Diagnosis" ]
+  ] [
+     fhir:code [ fhir:v "RV" ] ;
+     fhir:display [ fhir:v "Reason for Visit" ]
+  ] [
+     fhir:code [ fhir:v "HM" ] ;
+     fhir:display [ fhir:v "Health Maintenance (including screening)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

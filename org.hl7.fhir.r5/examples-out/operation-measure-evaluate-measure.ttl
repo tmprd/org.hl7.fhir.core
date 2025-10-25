@@ -1,0 +1,177 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OperationDefinition/Measure-evaluate-measure> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Measure-evaluate-measure"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: OperationDefinition Measure-evaluate-measure</b>\n      </p>\n      <a name=\"Measure-evaluate-measure\"> </a>\n      <a name=\"hcMeasure-evaluate-measure\"> </a>\n      <p>URL: [base]/Measure/$evaluate-measure</p>\n      <p>URL: [base]/Measure/[id]/$evaluate-measure</p>\n      <h3>Parameters</h3>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Use</b>\n          </td>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Scope</b>\n          </td>\n          <td>\n            <b>Cardinality</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Binding</b>\n          </td>\n          <td>\n            <b>Documentation</b>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>measure</td>\n          <td>type</td>\n          <td>0..1</td>\n          <td>\n            <a href=\"measure.html\">Measure</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The measure to evaluate. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter is required, or a url (and optionally version) must be supplied.</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>url</td>\n          <td>type</td>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#canonical\">canonical</a> (\n            <a href=\"measure.html\" title=\"http://hl7.org/fhir/StructureDefinition/Measure\">Measure</a>)\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The url of the measure to be applied. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter (and optionally the version), or the measure parameter must be supplied</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>version</td>\n          <td>type</td>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#string\">string</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The version of the measure to be applied. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter may only be used if the url parameter is supplied, and the version is not supplied with it.</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>subject</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#string\">string</a>\n            <br/>(\n            <a href=\"search.html#reference\">reference</a>)\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>Subject for which the measure will be calculated. The subject may be a Patient, Practitioner, PractitionerRole, Organization, Location, Device, or Group. Subjects provided in this parameter will be resolved as the subject of the measure based on the type of the subject. If multiple subjects of the same type are provided, the behavior is implementation-defined</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>periodStart</td>\n          <td/>\n          <td>1..1</td>\n          <td>\n            <a href=\"datatypes.html#date\">date</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The start of the measurement period. In keeping with the semantics of the date parameter used in the FHIR search operation, the period will start at the beginning of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period start to be 2014-01-01T00:00:00 inclusive</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>periodEnd</td>\n          <td/>\n          <td>1..1</td>\n          <td>\n            <a href=\"datatypes.html#date\">date</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The end of the measurement period. The period will end at the end of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period end to be 2014-12-31T23:59:59 inclusive</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>reportType</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#code\">code</a>\n          </td>\n          <td>\n            <a href=\"valueset-measure-report-evaluation-type.html\">Measure Report Evaluation Type</a> (Required)\n          </td>\n          <td>\n            <div>\n              <p>The type of measure report: individual, subject-list, or summary. If not specified, a default value of individual will be used if the subject parameter is supplied, otherwise, summary will be used. NOTE: Implementations should support the use of \n                <code>subject</code> for individual and \n                <code>population</code> for summary for backwards compatibility with existing implementations.\n              </p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>provider</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#string\">string</a>\n            <br/>(\n            <a href=\"search.html#reference\">reference</a>)\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The provider for which the report will be run. This may be a reference to a Practitioner, PractitionerRole, or Organization. If specified, the measure will be calculated for subjects that have a primary relationship to the identified provider. How this relationship is determined is implementation-specific.</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>location</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#string\">string</a>\n            <br/>(\n            <a href=\"search.html#reference\">reference</a>)\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The location for which the report will be run.</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>lastReceivedOn</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#dateTime\">dateTime</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The date the results of this measure were last received. This parameter is only valid for patient-level reports and is used to indicate when the last time a result for this patient was received. This information can be used to limit the set of resources returned for a patient-level report</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>parameters</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"parameters.html\">Parameters</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>Any input parameters for the evaluation. Parameters defined in this input will be made available by name to the CQL expression. Parameter types are mapped to CQL as specified in the \n                <a href=\"https://hl7.org/fhir/uv/cql/\">Using CQL with FHIR</a> implementation guide. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL.\n              </p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>OUT</td>\n          <td>return</td>\n          <td/>\n          <td>0..*</td>\n          <td>\n            <a href=\"bundle.html\">Bundle</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The results of the measure calculation. The result of this operation will be a Bundle for each input subject, where the first entry of the Bundle is a MeasureReport representing the results of the calculation, and subsequent entries in the Bundle are resources created and/or evaluated as part of the calculation. See the MeasureReport resource for a complete description of the output of this operation. Note that implementations may choose to return a MeasureReport with a status of pending to indicate that the report is still being generated. In this case, the client can use a polling method to continually request the MeasureReport until the status is updated to complete</p>\n\n            </div>\n          </td>\n        </tr>\n      </table>\n      <div>\n        <p>The effect of invoking this operation is to calculate the measure for the given subject(s), or all subjects if no subject is supplied. For individual and subject-list reports, the result is a set of Bundles, one for each evaluated subject, where the first entry in each bundle is a MeasureReport resource, and subsequent entries in the Bundle are resources evaluated or created as part of the measure evaluation. For the summary report, the result of this operation is a single bundle with a single MeasureReport of type summary. Note that whether or not this operation affects the state of the server depends on whether the server persists the generated MeasureReport. If the MeasureReport is not persisted, this operation can be invoked with GET</p>\n\n      </div>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "deprecated"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cqi"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/OperationDefinition/Measure-evaluate-measure"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "EvaluateMeasure"] ; # 
+  fhir:title [ fhir:v "Evaluate Measure"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Quality Information"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/cqi" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The evaluate-measure operation is used to calculate an eMeasure and obtain the results"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:affectsState [ fhir:v false] ; # 
+  fhir:code [ fhir:v "evaluate-measure"] ; # 
+  fhir:comment [ fhir:v "The effect of invoking this operation is to calculate the measure for the given subject(s), or all subjects if no subject is supplied. For individual and subject-list reports, the result is a set of Bundles, one for each evaluated subject, where the first entry in each bundle is a MeasureReport resource, and subsequent entries in the Bundle are resources evaluated or created as part of the measure evaluation. For the summary report, the result of this operation is a single bundle with a single MeasureReport of type summary. Note that whether or not this operation affects the state of the server depends on whether the server persists the generated MeasureReport. If the MeasureReport is not persisted, this operation can be invoked with GET"] ; # 
+  fhir:resource ( [ fhir:v "Measure"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v true] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "measure" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:scope ( [ fhir:v "type" ] ) ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The measure to evaluate. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter is required, or a url (and optionally version) must be supplied." ] ;
+     fhir:type [ fhir:v "Measure" ]
+  ] [
+     fhir:name [ fhir:v "url" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:scope ( [ fhir:v "type" ] ) ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The url of the measure to be applied. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter (and optionally the version), or the measure parameter must be supplied" ] ;
+     fhir:type [ fhir:v "canonical" ] ;
+     fhir:targetProfile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Measure"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Measure>
+     ] )
+  ] [
+     fhir:name [ fhir:v "version" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:scope ( [ fhir:v "type" ] ) ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The version of the measure to be applied. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter may only be used if the url parameter is supplied, and the version is not supplied with it." ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:name [ fhir:v "subject" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Subject for which the measure will be calculated. The subject may be a Patient, Practitioner, PractitionerRole, Organization, Location, Device, or Group. Subjects provided in this parameter will be resolved as the subject of the measure based on the type of the subject. If multiple subjects of the same type are provided, the behavior is implementation-defined" ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "periodStart" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The start of the measurement period. In keeping with the semantics of the date parameter used in the FHIR search operation, the period will start at the beginning of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period start to be 2014-01-01T00:00:00 inclusive" ] ;
+     fhir:type [ fhir:v "date" ]
+  ] [
+     fhir:name [ fhir:v "periodEnd" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The end of the measurement period. The period will end at the end of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period end to be 2014-12-31T23:59:59 inclusive" ] ;
+     fhir:type [ fhir:v "date" ]
+  ] [
+     fhir:name [ fhir:v "reportType" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The type of measure report: individual, subject-list, or summary. If not specified, a default value of individual will be used if the subject parameter is supplied, otherwise, summary will be used. NOTE: Implementations should support the use of `subject` for individual and `population` for summary for backwards compatibility with existing implementations." ] ;
+     fhir:type [ fhir:v "code" ] ;
+     fhir:binding [
+       fhir:strength [ fhir:v "required" ] ;
+       fhir:valueSet [
+         fhir:v "http://hl7.org/fhir/ValueSet/measure-report-evaluation-type|6.0.0-ballot3"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/ValueSet/measure-report-evaluation-type|6.0.0-ballot3>
+       ]
+     ]
+  ] [
+     fhir:name [ fhir:v "provider" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The provider for which the report will be run. This may be a reference to a Practitioner, PractitionerRole, or Organization. If specified, the measure will be calculated for subjects that have a primary relationship to the identified provider. How this relationship is determined is implementation-specific." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "location" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The location for which the report will be run." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "lastReceivedOn" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The date the results of this measure were last received. This parameter is only valid for patient-level reports and is used to indicate when the last time a result for this patient was received. This information can be used to limit the set of resources returned for a patient-level report" ] ;
+     fhir:type [ fhir:v "dateTime" ]
+  ] [
+     fhir:name [ fhir:v "parameters" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Any input parameters for the evaluation. Parameters defined in this input will be made available by name to the CQL expression. Parameter types are mapped to CQL as specified in the [Using CQL with FHIR](https://hl7.org/fhir/uv/cql/) implementation guide. If a parameter appears more than once in the input Parameters resource, it is represented with a List in the input CQL. If a parameter has parts, it is represented as a Tuple in the input CQL." ] ;
+     fhir:type [ fhir:v "Parameters" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The results of the measure calculation. The result of this operation will be a Bundle for each input subject, where the first entry of the Bundle is a MeasureReport representing the results of the calculation, and subsequent entries in the Bundle are resources created and/or evaluated as part of the calculation. See the MeasureReport resource for a complete description of the output of this operation. Note that implementations may choose to return a MeasureReport with a status of pending to indicate that the report is still being generated. In this case, the client can use a polling method to continually request the MeasureReport until the status is updated to complete" ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

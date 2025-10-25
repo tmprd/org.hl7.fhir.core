@@ -1,0 +1,186 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OperationDefinition/Measure-collect-data> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Measure-collect-data"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Measure-collect-data</b></p><a name=\"Measure-collect-data\"> </a><a name=\"hcMeasure-collect-data\"> </a><p>URL: [base]/Measure/$collect-data</p><p>URL: [base]/Measure/[id]/$collect-data</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>periodStart</td><td/><td>1..1</td><td><a href=\"datatypes.html#date\">date</a></td><td/><td><div><p>The start of the measurement period. In keeping with the semantics of the date parameter used in the FHIR search operation, the period will start at the beginning of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period start to be 2014-01-01T00:00:00 inclusive</p>\n</div></td></tr><tr><td>IN</td><td>periodEnd</td><td/><td>1..1</td><td><a href=\"datatypes.html#date\">date</a></td><td/><td><div><p>The end of the measurement period. The period will end at the end of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period end to be 2014-12-31T23:59:59 inclusive</p>\n</div></td></tr><tr><td>IN</td><td>measureId</td><td/><td>0..*</td><td><a href=\"datatypes.html#id\">id</a></td><td/><td><div><p>The id of a Measure resource that is on the server for which the data-of-interest will be collected. E.g., the id of the Measure resource for Breast Cancer Screening measure.</p>\n</div></td></tr><tr><td>IN</td><td>measureIdentifier</td><td/><td>0..*</td><td><a href=\"datatypes.html#string\">string</a><br/>(<a href=\"search.html#token\">token</a>)</td><td/><td><div><p>The business identifier of a measure for which the data-of-interest will be collected. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system. Note that the type of this parameter is a string with a search type of token, so the $care-gaps operation has only simple input parameters and may be invoked using GET.</p>\n</div></td></tr><tr><td>IN</td><td>measureUrl</td><td/><td>0..*</td><td><a href=\"datatypes.html#canonical\">canonical</a></td><td/><td><div><p>This the the URL of a measure for which the data-of-interest will be collected. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers.</p>\n</div></td></tr><tr><td>IN</td><td>measureResource</td><td/><td>0..*</td><td><a href=\"measure.html\">Measure</a></td><td/><td><div><p>The measure for which the data-of-interest will be collected is provided as a Measure resource.</p>\n</div></td></tr><tr><td>IN</td><td>measure</td><td/><td>0..*</td><td><a href=\"datatypes.html#string\">string</a><br/>(<a href=\"search.html#token\">token</a>)</td><td/><td><div><p>The measure for which the data-of-interest will be collected. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance</p>\n</div></td></tr><tr><td>IN</td><td>subject</td><td/><td>0..1</td><td><a href=\"datatypes.html#string\">string</a><br/>(<a href=\"search.html#reference\">reference</a>)</td><td/><td><div><p>Subject for which the data-of-interest for the measure will be collected. If not specified, measure data will be collected for all subjects that meet the requirements of the measure.  If specified, the measure will only be collected for the referenced subject(s).</p>\n</div></td></tr><tr><td>IN</td><td>subjectGroup</td><td/><td>0..1</td><td><a href=\"group.html\">Group</a></td><td/><td><div><p>Subject for which the data-of-interest for measure will be collected is provided as a Group resource.</p>\n</div></td></tr><tr><td>IN</td><td>practitioner</td><td/><td>0..1</td><td><a href=\"datatypes.html#string\">string</a><br/>(<a href=\"search.html#reference\">reference</a>)</td><td/><td><div><p>Practitioner for which the measure will be collected. If specified, measure data will be collected only for subjects that have a primary relationship to the identified practitioner</p>\n</div></td></tr><tr><td>IN</td><td>lastReceivedOn</td><td/><td>0..1</td><td><a href=\"datatypes.html#dateTime\">dateTime</a></td><td/><td><div><p>The date the results of this measure were last received. This parameter used to indicate when the last time data for this measure was collected. This information is used to support incremental data collection scenarios</p>\n</div></td></tr><tr><td>IN</td><td>organizationResource</td><td/><td>0..1</td><td><a href=\"organization.html\">Organization</a></td><td/><td><div><p>Organization resource for which data-of-interest for the given measure will be collected.</p>\n</div></td></tr><tr><td>IN</td><td>organization</td><td/><td>0..1</td><td><a href=\"datatypes.html#string\">string</a><br/>(<a href=\"search.html#reference\">reference</a>)</td><td/><td><div><p>Organization for which data-of-interest for the given measure will be collected.</p>\n</div></td></tr><tr><td>IN</td><td>validateResources</td><td/><td>0..1</td><td><a href=\"datatypes.html#boolean\">boolean</a></td><td/><td><div><p>Indicates whether data collected conform to the appropriate profiles as specified by the measure.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>0..*</td><td><a href=\"bundle.html\">Bundle</a></td><td/><td><div><p>Returns <a href=\"https://www.hl7.org/fhir/parameters.html\">Parameters</a> resource, which contains one or more bundles. The first entry of the bundle is a MeasureReport and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation. Note that the result of the $evaluate operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*</p>\n</div></td></tr></table><div><p>The effect of invoking this operation is to gather the data required to perform an evaluation of the measure. If the lastReceivedOn parameter is supplied, only data that is new or has been changed since the lastReceivedOn date is included in the response. Note that the resulting MeasureReport is a transient resource</p>\n</div></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cqi"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/OperationDefinition/Measure-collect-data"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "CollectData"] ; # 
+  fhir:title [ fhir:v "Collect Data"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Quality Information"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/cqi" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The collect-data operation is used to collect the data-of-interest for the given measure. Note that the use of the [X-Provenance header data](provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $collect-data transaction. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:affectsState [ fhir:v false] ; # 
+  fhir:code [ fhir:v "collect-data"] ; # 
+  fhir:comment [ fhir:v "The effect of invoking this operation is to gather the data required to perform an evaluation of the measure. If the lastReceivedOn parameter is supplied, only data that is new or has been changed since the lastReceivedOn date is included in the response. Note that the resulting MeasureReport is a transient resource"] ; # 
+  fhir:resource ( [ fhir:v "Measure"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v true] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "periodStart" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The start of the measurement period. In keeping with the semantics of the date parameter used in the FHIR search operation, the period will start at the beginning of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period start to be 2014-01-01T00:00:00 inclusive" ] ;
+     fhir:type [ fhir:v "date" ]
+  ] [
+     fhir:name [ fhir:v "periodEnd" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The end of the measurement period. The period will end at the end of the period implied by the supplied timestamp. E.g. a value of 2014 would set the period end to be 2014-12-31T23:59:59 inclusive" ] ;
+     fhir:type [ fhir:v "date" ]
+  ] [
+     fhir:name [ fhir:v "measureId" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The id of a Measure resource that is on the server for which the data-of-interest will be collected. E.g., the id of the Measure resource for Breast Cancer Screening measure." ] ;
+     fhir:type [ fhir:v "id" ]
+  ] [
+     fhir:name [ fhir:v "measureIdentifier" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The business identifier of a measure for which the data-of-interest will be collected. E.g., CMS125 is a CMS assigned identifier for the Breast Cancer Screening eCQM in their system. Note that the type of this parameter is a string with a search type of token, so the $care-gaps operation has only simple input parameters and may be invoked using GET." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "token" ]
+  ] [
+     fhir:name [ fhir:v "measureUrl" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "This the the URL of a measure for which the data-of-interest will be collected. A measure URL is specified in the url element of the Measure resource. The measure URL remains the same when the measure is stored on different servers." ] ;
+     fhir:type [ fhir:v "canonical" ]
+  ] [
+     fhir:name [ fhir:v "measureResource" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The measure for which the data-of-interest will be collected is provided as a Measure resource." ] ;
+     fhir:type [ fhir:v "Measure" ]
+  ] [
+     fhir:name [ fhir:v "measure" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The measure for which the data-of-interest will be collected. This parameter is only required when the operation is invoked on the resource type, it is not used when invoking the operation on a Measure instance" ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "token" ]
+  ] [
+     fhir:name [ fhir:v "subject" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Subject for which the data-of-interest for the measure will be collected. If not specified, measure data will be collected for all subjects that meet the requirements of the measure.  If specified, the measure will only be collected for the referenced subject(s)." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "subjectGroup" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Subject for which the data-of-interest for measure will be collected is provided as a Group resource." ] ;
+     fhir:type [ fhir:v "Group" ]
+  ] [
+     fhir:name [ fhir:v "practitioner" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Practitioner for which the measure will be collected. If specified, measure data will be collected only for subjects that have a primary relationship to the identified practitioner" ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "lastReceivedOn" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The date the results of this measure were last received. This parameter used to indicate when the last time data for this measure was collected. This information is used to support incremental data collection scenarios" ] ;
+     fhir:type [ fhir:v "dateTime" ]
+  ] [
+     fhir:name [ fhir:v "organizationResource" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Organization resource for which data-of-interest for the given measure will be collected." ] ;
+     fhir:type [ fhir:v "Organization" ]
+  ] [
+     fhir:name [ fhir:v "organization" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Organization for which data-of-interest for the given measure will be collected." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "validateResources" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Indicates whether data collected conform to the appropriate profiles as specified by the measure." ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "Returns [Parameters](https://www.hl7.org/fhir/parameters.html) resource, which contains one or more bundles. The first entry of the bundle is a MeasureReport and subsequent entries in the bundle are resources created and/or evaluated as part of the measure calculation. Note that the result of the $evaluate operation must be returned using the Parameters resource, even when the result contains only one bundle, because the cardinality of the return parameter is specified as 0..*" ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

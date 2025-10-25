@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/contributor-summary-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "contributor-summary-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem contributor-summary-type</b>\n      </p>\n      <a name=\"contributor-summary-type\"> </a>\n      <a name=\"hccontributor-summary-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/contributor-summary-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">author-string\n            <a name=\"contributor-summary-type-author-string\"> </a>\n          </td>\n          <td>Author string</td>\n          <td>Display of the author list as a complete string.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">contributorship-list\n            <a name=\"contributor-summary-type-contributorship-list\"> </a>\n          </td>\n          <td>Contributorship list</td>\n          <td>Display of the list of contributors as a complete string.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">contributorship-statement\n            <a name=\"contributor-summary-type-contributorship-statement\"> </a>\n          </td>\n          <td>Contributorship statement</td>\n          <td>Compiled summary of contributions.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">acknowledgement-list\n            <a name=\"contributor-summary-type-acknowledgement-list\"> </a>\n          </td>\n          <td>Acknowledgment list</td>\n          <td>Display of the list of acknowledged parties as a complete string.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">acknowledgment-statement\n            <a name=\"contributor-summary-type-acknowledgment-statement\"> </a>\n          </td>\n          <td>Acknowledgment statement</td>\n          <td>Statement of acknowledgment of contributions beyond those compiled for formal contributorship statements.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">funding-statement\n            <a name=\"contributor-summary-type-funding-statement\"> </a>\n          </td>\n          <td>Funding statement</td>\n          <td>Statement of financial support for the creation of the cited artifact.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">competing-interests-statement\n            <a name=\"contributor-summary-type-competing-interests-statement\"> </a>\n          </td>\n          <td>Competing interests statement</td>\n          <td>Statement of completing interests related to the creation of the cited artifact. Also called conflicts of interest or declaration of interests.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/contributor-summary-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1893" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "ContributorSummaryType"] ; # 
+  fhir:title [ fhir:v "Contributor Summary Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Used to code author list statement, contributorship statement, and such."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/contributor-summary-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/contributor-summary-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "author-string" ] ;
+     fhir:display [ fhir:v "Author string" ] ;
+     fhir:definition [ fhir:v "Display of the author list as a complete string." ]
+  ] [
+     fhir:code [ fhir:v "contributorship-list" ] ;
+     fhir:display [ fhir:v "Contributorship list" ] ;
+     fhir:definition [ fhir:v "Display of the list of contributors as a complete string." ]
+  ] [
+     fhir:code [ fhir:v "contributorship-statement" ] ;
+     fhir:display [ fhir:v "Contributorship statement" ] ;
+     fhir:definition [ fhir:v "Compiled summary of contributions." ]
+  ] [
+     fhir:code [ fhir:v "acknowledgement-list" ] ;
+     fhir:display [ fhir:v "Acknowledgment list" ] ;
+     fhir:definition [ fhir:v "Display of the list of acknowledged parties as a complete string." ]
+  ] [
+     fhir:code [ fhir:v "acknowledgment-statement" ] ;
+     fhir:display [ fhir:v "Acknowledgment statement" ] ;
+     fhir:definition [ fhir:v "Statement of acknowledgment of contributions beyond those compiled for formal contributorship statements." ]
+  ] [
+     fhir:code [ fhir:v "funding-statement" ] ;
+     fhir:display [ fhir:v "Funding statement" ] ;
+     fhir:definition [ fhir:v "Statement of financial support for the creation of the cited artifact." ]
+  ] [
+     fhir:code [ fhir:v "competing-interests-statement" ] ;
+     fhir:display [ fhir:v "Competing interests statement" ] ;
+     fhir:definition [ fhir:v "Statement of completing interests related to the creation of the cited artifact. Also called conflicts of interest or declaration of interests." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

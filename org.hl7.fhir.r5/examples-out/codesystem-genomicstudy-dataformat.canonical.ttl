@@ -1,0 +1,200 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/genomicstudy-dataformat> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "genomicstudy-dataformat"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem genomicstudy-dataformat</b></p><a name=\"genomicstudy-dataformat\"> </a><a name=\"hcgenomicstudy-dataformat\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/genomicstudy-dataformat</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">bam<a name=\"genomicstudy-dataformat-bam\"> </a></td><td>BAM</td></tr><tr><td style=\"white-space:nowrap\">bed<a name=\"genomicstudy-dataformat-bed\"> </a></td><td>BED</td></tr><tr><td style=\"white-space:nowrap\">bedpe<a name=\"genomicstudy-dataformat-bedpe\"> </a></td><td>BEDPE</td></tr><tr><td style=\"white-space:nowrap\">bedgraph<a name=\"genomicstudy-dataformat-bedgraph\"> </a></td><td>BedGraph</td></tr><tr><td style=\"white-space:nowrap\">bigbed<a name=\"genomicstudy-dataformat-bigbed\"> </a></td><td>bigBed</td></tr><tr><td style=\"white-space:nowrap\">bigWig<a name=\"genomicstudy-dataformat-bigWig\"> </a></td><td>bigWig</td></tr><tr><td style=\"white-space:nowrap\">birdsuite-files<a name=\"genomicstudy-dataformat-birdsuite-files\"> </a></td><td>Birdsuite-Files</td></tr><tr><td style=\"white-space:nowrap\">broadpeak<a name=\"genomicstudy-dataformat-broadpeak\"> </a></td><td>broadPeak</td></tr><tr><td style=\"white-space:nowrap\">cbs<a name=\"genomicstudy-dataformat-cbs\"> </a></td><td>CBS</td></tr><tr><td style=\"white-space:nowrap\">chemical-reactivity-probing-profiles<a name=\"genomicstudy-dataformat-chemical-reactivity-probing-profiles\"> </a></td><td>Chemical-Reactivity-Probing-Profiles</td></tr><tr><td style=\"white-space:nowrap\">chrom-sizes<a name=\"genomicstudy-dataformat-chrom-sizes\"> </a></td><td>chrom-sizes</td></tr><tr><td style=\"white-space:nowrap\">cn<a name=\"genomicstudy-dataformat-cn\"> </a></td><td>CN</td></tr><tr><td style=\"white-space:nowrap\">custom-file-formats<a name=\"genomicstudy-dataformat-custom-file-formats\"> </a></td><td>Custom-File-Formats</td></tr><tr><td style=\"white-space:nowrap\">cytoband<a name=\"genomicstudy-dataformat-cytoband\"> </a></td><td>Cytoband</td></tr><tr><td style=\"white-space:nowrap\">fasta<a name=\"genomicstudy-dataformat-fasta\"> </a></td><td>FASTA</td></tr><tr><td style=\"white-space:nowrap\">gct<a name=\"genomicstudy-dataformat-gct\"> </a></td><td>GCT</td></tr><tr><td style=\"white-space:nowrap\">cram<a name=\"genomicstudy-dataformat-cram\"> </a></td><td>CRAM</td></tr><tr><td style=\"white-space:nowrap\">genepred<a name=\"genomicstudy-dataformat-genepred\"> </a></td><td>genePred</td></tr><tr><td style=\"white-space:nowrap\">gff-gtf<a name=\"genomicstudy-dataformat-gff-gtf\"> </a></td><td>GFF/GTF</td></tr><tr><td style=\"white-space:nowrap\">gistic<a name=\"genomicstudy-dataformat-gistic\"> </a></td><td>GISTIC</td></tr><tr><td style=\"white-space:nowrap\">goby<a name=\"genomicstudy-dataformat-goby\"> </a></td><td>Goby</td></tr><tr><td style=\"white-space:nowrap\">gwas<a name=\"genomicstudy-dataformat-gwas\"> </a></td><td>GWAS</td></tr><tr><td style=\"white-space:nowrap\">igv<a name=\"genomicstudy-dataformat-igv\"> </a></td><td>IGV</td></tr><tr><td style=\"white-space:nowrap\">loh<a name=\"genomicstudy-dataformat-loh\"> </a></td><td>LOH</td></tr><tr><td style=\"white-space:nowrap\">maf-multiple-alignment-format<a name=\"genomicstudy-dataformat-maf-multiple-alignment-format\"> </a></td><td>MAF-Multiple Alignment Format</td></tr><tr><td style=\"white-space:nowrap\">maf-mutation-annotation-format<a name=\"genomicstudy-dataformat-maf-mutation-annotation-format\"> </a></td><td>MAF-Mutation-Annotation-Format</td></tr><tr><td style=\"white-space:nowrap\">merged-bam-file<a name=\"genomicstudy-dataformat-merged-bam-file\"> </a></td><td>Merged BAM File</td></tr><tr><td style=\"white-space:nowrap\">mut<a name=\"genomicstudy-dataformat-mut\"> </a></td><td>MUT</td></tr><tr><td style=\"white-space:nowrap\">narrowpeak<a name=\"genomicstudy-dataformat-narrowpeak\"> </a></td><td>narrowPeak</td></tr><tr><td style=\"white-space:nowrap\">psl<a name=\"genomicstudy-dataformat-psl\"> </a></td><td>PSL</td></tr><tr><td style=\"white-space:nowrap\">res<a name=\"genomicstudy-dataformat-res\"> </a></td><td>RES</td></tr><tr><td style=\"white-space:nowrap\">rna-secondary-structure-formats<a name=\"genomicstudy-dataformat-rna-secondary-structure-formats\"> </a></td><td>RNA-Secondary-Structure-Formats</td></tr><tr><td style=\"white-space:nowrap\">sam<a name=\"genomicstudy-dataformat-sam\"> </a></td><td>SAM</td></tr><tr><td style=\"white-space:nowrap\">sample-info-attributes-file<a name=\"genomicstudy-dataformat-sample-info-attributes-file\"> </a></td><td>Sample-Info-Attributes-file</td></tr><tr><td style=\"white-space:nowrap\">seg<a name=\"genomicstudy-dataformat-seg\"> </a></td><td>SEG</td></tr><tr><td style=\"white-space:nowrap\">tdf<a name=\"genomicstudy-dataformat-tdf\"> </a></td><td>TDF</td></tr><tr><td style=\"white-space:nowrap\">track-line<a name=\"genomicstudy-dataformat-track-line\"> </a></td><td>Track Line</td></tr><tr><td style=\"white-space:nowrap\">type-line<a name=\"genomicstudy-dataformat-type-line\"> </a></td><td>Type Line</td></tr><tr><td style=\"white-space:nowrap\">vcf<a name=\"genomicstudy-dataformat-vcf\"> </a></td><td>VCF</td></tr><tr><td style=\"white-space:nowrap\">wig<a name=\"genomicstudy-dataformat-wig\"> </a></td><td>WIG</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cg"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/genomicstudy-dataformat"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1978" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "GenomicStudyDataFormat"] ; # 
+  fhir:title [ fhir:v "Genomic Study Data Format"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2022-08-17T14:49:24-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The data format relevant to genomics. These formats and relevant codes were pulled from [Integrative Genomics Viewer Documentation](https://software.broadinstitute.org/software/igv/FileFormats) by Broad Institute."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/genomicstudy-dataformat"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/genomicstudy-dataformat>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "bam" ] ;
+     fhir:display [ fhir:v "BAM" ]
+  ] [
+     fhir:code [ fhir:v "bed" ] ;
+     fhir:display [ fhir:v "BED" ]
+  ] [
+     fhir:code [ fhir:v "bedpe" ] ;
+     fhir:display [ fhir:v "BEDPE" ]
+  ] [
+     fhir:code [ fhir:v "bedgraph" ] ;
+     fhir:display [ fhir:v "BedGraph" ]
+  ] [
+     fhir:code [ fhir:v "bigbed" ] ;
+     fhir:display [ fhir:v "bigBed" ]
+  ] [
+     fhir:code [ fhir:v "bigWig" ] ;
+     fhir:display [ fhir:v "bigWig" ]
+  ] [
+     fhir:code [ fhir:v "birdsuite-files" ] ;
+     fhir:display [ fhir:v "Birdsuite-Files" ]
+  ] [
+     fhir:code [ fhir:v "broadpeak" ] ;
+     fhir:display [ fhir:v "broadPeak" ]
+  ] [
+     fhir:code [ fhir:v "cbs" ] ;
+     fhir:display [ fhir:v "CBS" ]
+  ] [
+     fhir:code [ fhir:v "chemical-reactivity-probing-profiles" ] ;
+     fhir:display [ fhir:v "Chemical-Reactivity-Probing-Profiles" ]
+  ] [
+     fhir:code [ fhir:v "chrom-sizes" ] ;
+     fhir:display [ fhir:v "chrom-sizes" ]
+  ] [
+     fhir:code [ fhir:v "cn" ] ;
+     fhir:display [ fhir:v "CN" ]
+  ] [
+     fhir:code [ fhir:v "custom-file-formats" ] ;
+     fhir:display [ fhir:v "Custom-File-Formats" ]
+  ] [
+     fhir:code [ fhir:v "cytoband" ] ;
+     fhir:display [ fhir:v "Cytoband" ]
+  ] [
+     fhir:code [ fhir:v "fasta" ] ;
+     fhir:display [ fhir:v "FASTA" ]
+  ] [
+     fhir:code [ fhir:v "gct" ] ;
+     fhir:display [ fhir:v "GCT" ]
+  ] [
+     fhir:code [ fhir:v "cram" ] ;
+     fhir:display [ fhir:v "CRAM" ]
+  ] [
+     fhir:code [ fhir:v "genepred" ] ;
+     fhir:display [ fhir:v "genePred" ]
+  ] [
+     fhir:code [ fhir:v "gff-gtf" ] ;
+     fhir:display [ fhir:v "GFF/GTF" ]
+  ] [
+     fhir:code [ fhir:v "gistic" ] ;
+     fhir:display [ fhir:v "GISTIC" ]
+  ] [
+     fhir:code [ fhir:v "goby" ] ;
+     fhir:display [ fhir:v "Goby" ]
+  ] [
+     fhir:code [ fhir:v "gwas" ] ;
+     fhir:display [ fhir:v "GWAS" ]
+  ] [
+     fhir:code [ fhir:v "igv" ] ;
+     fhir:display [ fhir:v "IGV" ]
+  ] [
+     fhir:code [ fhir:v "loh" ] ;
+     fhir:display [ fhir:v "LOH" ]
+  ] [
+     fhir:code [ fhir:v "maf-multiple-alignment-format" ] ;
+     fhir:display [ fhir:v "MAF-Multiple Alignment Format" ]
+  ] [
+     fhir:code [ fhir:v "maf-mutation-annotation-format" ] ;
+     fhir:display [ fhir:v "MAF-Mutation-Annotation-Format" ]
+  ] [
+     fhir:code [ fhir:v "merged-bam-file" ] ;
+     fhir:display [ fhir:v "Merged BAM File" ]
+  ] [
+     fhir:code [ fhir:v "mut" ] ;
+     fhir:display [ fhir:v "MUT" ]
+  ] [
+     fhir:code [ fhir:v "narrowpeak" ] ;
+     fhir:display [ fhir:v "narrowPeak" ]
+  ] [
+     fhir:code [ fhir:v "psl" ] ;
+     fhir:display [ fhir:v "PSL" ]
+  ] [
+     fhir:code [ fhir:v "res" ] ;
+     fhir:display [ fhir:v "RES" ]
+  ] [
+     fhir:code [ fhir:v "rna-secondary-structure-formats" ] ;
+     fhir:display [ fhir:v "RNA-Secondary-Structure-Formats" ]
+  ] [
+     fhir:code [ fhir:v "sam" ] ;
+     fhir:display [ fhir:v "SAM" ]
+  ] [
+     fhir:code [ fhir:v "sample-info-attributes-file" ] ;
+     fhir:display [ fhir:v "Sample-Info-Attributes-file" ]
+  ] [
+     fhir:code [ fhir:v "seg" ] ;
+     fhir:display [ fhir:v "SEG" ]
+  ] [
+     fhir:code [ fhir:v "tdf" ] ;
+     fhir:display [ fhir:v "TDF" ]
+  ] [
+     fhir:code [ fhir:v "track-line" ] ;
+     fhir:display [ fhir:v "Track Line" ]
+  ] [
+     fhir:code [ fhir:v "type-line" ] ;
+     fhir:display [ fhir:v "Type Line" ]
+  ] [
+     fhir:code [ fhir:v "vcf" ] ;
+     fhir:display [ fhir:v "VCF" ]
+  ] [
+     fhir:code [ fhir:v "wig" ] ;
+     fhir:display [ fhir:v "WIG" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

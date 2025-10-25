@@ -1,0 +1,191 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/evidence-report-section> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "evidence-report-section"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem evidence-report-section</b>\n      </p>\n      <a name=\"evidence-report-section\"> </a>\n      <a name=\"hcevidence-report-section\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/evidence-report-section</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Evidence\n            <a name=\"evidence-report-section-Evidence\"> </a>\n          </td>\n          <td>Evidence Results</td>\n          <td>Evidence Results.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Intervention-group-alone-Evidence\n            <a name=\"evidence-report-section-Intervention-group-alone-Evidence\"> </a>\n          </td>\n          <td>Evidence Results for the intervention exposure only</td>\n          <td>Evidence Results for the intervention exposure only.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Intervention-vs-Control-Evidence\n            <a name=\"evidence-report-section-Intervention-vs-Control-Evidence\"> </a>\n          </td>\n          <td>Evidence Results for comparison of Intervention and Control</td>\n          <td>Evidence Results for comparison of Intervention and Control.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Control-group-alone-Evidence\n            <a name=\"evidence-report-section-Control-group-alone-Evidence\"> </a>\n          </td>\n          <td>Evidence Results for the control exposure only</td>\n          <td>Evidence Results for the control exposure only.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">EvidenceVariable\n            <a name=\"evidence-report-section-EvidenceVariable\"> </a>\n          </td>\n          <td>Evidence Variables used</td>\n          <td>Evidence Variables used.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">EvidenceVariable-observed\n            <a name=\"evidence-report-section-EvidenceVariable-observed\"> </a>\n          </td>\n          <td>Evidence Variables actually observed</td>\n          <td>Evidence Variables as observed in the research data.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">EvidenceVariable-intended\n            <a name=\"evidence-report-section-EvidenceVariable-intended\"> </a>\n          </td>\n          <td>Evidence Variables intended for interpretation</td>\n          <td>Evidence Variables intended for interpretation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">EvidenceVariable-population\n            <a name=\"evidence-report-section-EvidenceVariable-population\"> </a>\n          </td>\n          <td>Evidence Variable in variable role Population</td>\n          <td>Evidence Variable in variable role Population.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">EvidenceVariable-exposure\n            <a name=\"evidence-report-section-EvidenceVariable-exposure\"> </a>\n          </td>\n          <td>Evidence Variable in variable role Exposure</td>\n          <td>Evidence Variable in variable role Exposure.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">EvidenceVariable-outcome\n            <a name=\"evidence-report-section-EvidenceVariable-outcome\"> </a>\n          </td>\n          <td>Evidence Variable in variable role Outcome (MeasuredVariable)</td>\n          <td>Evidence Variable in variable role Outcome (MeasuredVariable).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Efficacy-outcomes\n            <a name=\"evidence-report-section-Efficacy-outcomes\"> </a>\n          </td>\n          <td>Efficacy-outcomes</td>\n          <td>Outcomes related to efficacy or potential benefits of interventions.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Harms-outcomes\n            <a name=\"evidence-report-section-Harms-outcomes\"> </a>\n          </td>\n          <td>Harms outcomes</td>\n          <td>Outcomes related to adverse effects or potential harms of interventions.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">SampleSize\n            <a name=\"evidence-report-section-SampleSize\"> </a>\n          </td>\n          <td>Sample Size</td>\n          <td>Sample Size.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">References\n            <a name=\"evidence-report-section-References\"> </a>\n          </td>\n          <td>References</td>\n          <td>References.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Assertion\n            <a name=\"evidence-report-section-Assertion\"> </a>\n          </td>\n          <td>Assertion</td>\n          <td>Assertion.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Reasons\n            <a name=\"evidence-report-section-Reasons\"> </a>\n          </td>\n          <td>Reasons</td>\n          <td>Reasons.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Certainty-of-Evidence\n            <a name=\"evidence-report-section-Certainty-of-Evidence\"> </a>\n          </td>\n          <td>Certainty of Evidence</td>\n          <td>Certainty of Evidence.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Evidence-Classifier\n            <a name=\"evidence-report-section-Evidence-Classifier\"> </a>\n          </td>\n          <td>Evidence Classifier section</td>\n          <td>This section is used for classifiers of the evidence.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Warnings\n            <a name=\"evidence-report-section-Warnings\"> </a>\n          </td>\n          <td>Warnings</td>\n          <td>Warnings.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Text-Summary\n            <a name=\"evidence-report-section-Text-Summary\"> </a>\n          </td>\n          <td>Text Summary</td>\n          <td>Denotes a section specifying text summary for a report.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">SummaryOfBodyOfEvidenceFindings\n            <a name=\"evidence-report-section-SummaryOfBodyOfEvidenceFindings\"> </a>\n          </td>\n          <td>Summary of Body of Evidence Findings</td>\n          <td>Summary of Body of Evidence Findings.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">SummaryOfIndividualStudyFindings\n            <a name=\"evidence-report-section-SummaryOfIndividualStudyFindings\"> </a>\n          </td>\n          <td>Summary of Individual Study Findings</td>\n          <td>Summary of Individual Study Findings.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Header\n            <a name=\"evidence-report-section-Header\"> </a>\n          </td>\n          <td>Header</td>\n          <td>Denotes the header to use for a Text Summary or above a Table.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Tables\n            <a name=\"evidence-report-section-Tables\"> </a>\n          </td>\n          <td>Tables</td>\n          <td>Tables.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Table\n            <a name=\"evidence-report-section-Table\"> </a>\n          </td>\n          <td>Table</td>\n          <td/>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Row-Headers\n            <a name=\"evidence-report-section-Row-Headers\"> </a>\n          </td>\n          <td>Row Headers</td>\n          <td>Denotes a section specifying row headers for a tabular report.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Column-Header\n            <a name=\"evidence-report-section-Column-Header\"> </a>\n          </td>\n          <td>Column Header</td>\n          <td>Denotes the header to use for the column for a tabular report.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Column-Headers\n            <a name=\"evidence-report-section-Column-Headers\"> </a>\n          </td>\n          <td>Column Headers</td>\n          <td>Denotes a section specifying column headers for a tabular report.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/evidence-report-section"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1961" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "ReportSectionType"] ; # 
+  fhir:title [ fhir:v "Report Section Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Evidence Report Section Type."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/evidence-report-section"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/evidence-report-section>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Evidence" ] ;
+     fhir:display [ fhir:v "Evidence Results" ] ;
+     fhir:definition [ fhir:v "Evidence Results." ]
+  ] [
+     fhir:code [ fhir:v "Intervention-group-alone-Evidence" ] ;
+     fhir:display [ fhir:v "Evidence Results for the intervention exposure only" ] ;
+     fhir:definition [ fhir:v "Evidence Results for the intervention exposure only." ]
+  ] [
+     fhir:code [ fhir:v "Intervention-vs-Control-Evidence" ] ;
+     fhir:display [ fhir:v "Evidence Results for comparison of Intervention and Control" ] ;
+     fhir:definition [ fhir:v "Evidence Results for comparison of Intervention and Control." ]
+  ] [
+     fhir:code [ fhir:v "Control-group-alone-Evidence" ] ;
+     fhir:display [ fhir:v "Evidence Results for the control exposure only" ] ;
+     fhir:definition [ fhir:v "Evidence Results for the control exposure only." ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable" ] ;
+     fhir:display [ fhir:v "Evidence Variables used" ] ;
+     fhir:definition [ fhir:v "Evidence Variables used." ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable-observed" ] ;
+     fhir:display [ fhir:v "Evidence Variables actually observed" ] ;
+     fhir:definition [ fhir:v "Evidence Variables as observed in the research data." ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable-intended" ] ;
+     fhir:display [ fhir:v "Evidence Variables intended for interpretation" ] ;
+     fhir:definition [ fhir:v "Evidence Variables intended for interpretation." ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable-population" ] ;
+     fhir:display [ fhir:v "Evidence Variable in variable role Population" ] ;
+     fhir:definition [ fhir:v "Evidence Variable in variable role Population." ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable-exposure" ] ;
+     fhir:display [ fhir:v "Evidence Variable in variable role Exposure" ] ;
+     fhir:definition [ fhir:v "Evidence Variable in variable role Exposure." ]
+  ] [
+     fhir:code [ fhir:v "EvidenceVariable-outcome" ] ;
+     fhir:display [ fhir:v "Evidence Variable in variable role Outcome (MeasuredVariable)" ] ;
+     fhir:definition [ fhir:v "Evidence Variable in variable role Outcome (MeasuredVariable)." ]
+  ] [
+     fhir:code [ fhir:v "Efficacy-outcomes" ] ;
+     fhir:display [ fhir:v "Efficacy-outcomes" ] ;
+     fhir:definition [ fhir:v "Outcomes related to efficacy or potential benefits of interventions." ]
+  ] [
+     fhir:code [ fhir:v "Harms-outcomes" ] ;
+     fhir:display [ fhir:v "Harms outcomes" ] ;
+     fhir:definition [ fhir:v "Outcomes related to adverse effects or potential harms of interventions." ]
+  ] [
+     fhir:code [ fhir:v "SampleSize" ] ;
+     fhir:display [ fhir:v "Sample Size" ] ;
+     fhir:definition [ fhir:v "Sample Size." ]
+  ] [
+     fhir:code [ fhir:v "References" ] ;
+     fhir:display [ fhir:v "References" ] ;
+     fhir:definition [ fhir:v "References." ]
+  ] [
+     fhir:code [ fhir:v "Assertion" ] ;
+     fhir:display [ fhir:v "Assertion" ] ;
+     fhir:definition [ fhir:v "Assertion." ]
+  ] [
+     fhir:code [ fhir:v "Reasons" ] ;
+     fhir:display [ fhir:v "Reasons" ] ;
+     fhir:definition [ fhir:v "Reasons." ]
+  ] [
+     fhir:code [ fhir:v "Certainty-of-Evidence" ] ;
+     fhir:display [ fhir:v "Certainty of Evidence" ] ;
+     fhir:definition [ fhir:v "Certainty of Evidence." ]
+  ] [
+     fhir:code [ fhir:v "Evidence-Classifier" ] ;
+     fhir:display [ fhir:v "Evidence Classifier section" ] ;
+     fhir:definition [ fhir:v "This section is used for classifiers of the evidence." ]
+  ] [
+     fhir:code [ fhir:v "Warnings" ] ;
+     fhir:display [ fhir:v "Warnings" ] ;
+     fhir:definition [ fhir:v "Warnings." ]
+  ] [
+     fhir:code [ fhir:v "Text-Summary" ] ;
+     fhir:display [ fhir:v "Text Summary" ] ;
+     fhir:definition [ fhir:v "Denotes a section specifying text summary for a report." ]
+  ] [
+     fhir:code [ fhir:v "SummaryOfBodyOfEvidenceFindings" ] ;
+     fhir:display [ fhir:v "Summary of Body of Evidence Findings" ] ;
+     fhir:definition [ fhir:v "Summary of Body of Evidence Findings." ]
+  ] [
+     fhir:code [ fhir:v "SummaryOfIndividualStudyFindings" ] ;
+     fhir:display [ fhir:v "Summary of Individual Study Findings" ] ;
+     fhir:definition [ fhir:v "Summary of Individual Study Findings." ]
+  ] [
+     fhir:code [ fhir:v "Header" ] ;
+     fhir:display [ fhir:v "Header" ] ;
+     fhir:definition [ fhir:v "Denotes the header to use for a Text Summary or above a Table." ]
+  ] [
+     fhir:code [ fhir:v "Tables" ] ;
+     fhir:display [ fhir:v "Tables" ] ;
+     fhir:definition [ fhir:v "Tables." ]
+  ] [
+     fhir:code [ fhir:v "Table" ] ;
+     fhir:display [ fhir:v "Table" ]
+  ] [
+     fhir:code [ fhir:v "Row-Headers" ] ;
+     fhir:display [ fhir:v "Row Headers" ] ;
+     fhir:definition [ fhir:v "Denotes a section specifying row headers for a tabular report." ]
+  ] [
+     fhir:code [ fhir:v "Column-Header" ] ;
+     fhir:display [ fhir:v "Column Header" ] ;
+     fhir:definition [ fhir:v "Denotes the header to use for the column for a tabular report." ]
+  ] [
+     fhir:code [ fhir:v "Column-Headers" ] ;
+     fhir:display [ fhir:v "Column Headers" ] ;
+     fhir:definition [ fhir:v "Denotes a section specifying column headers for a tabular report." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

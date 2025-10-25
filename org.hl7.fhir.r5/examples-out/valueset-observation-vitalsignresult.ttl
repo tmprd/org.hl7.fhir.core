@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/observation-vitalsignresult> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-vitalsignresult"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet observation-vitalsignresult</b>\n      </p>\n      <a name=\"observation-vitalsignresult\"> </a>\n      <a name=\"hcobservation-vitalsignresult\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://loinc.org\">\n            <code>http://loinc.org</code>\n          </a>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/85353-1/\">85353-1</a>\n              </td>\n              <td style=\"color: #cccccc\">Vital signs, weight, height, head circumference, oxygen saturation and BMI panel</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/9279-1/\">9279-1</a>\n              </td>\n              <td style=\"color: #cccccc\">Respiratory rate</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8867-4/\">8867-4</a>\n              </td>\n              <td style=\"color: #cccccc\">Heart rate</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/2708-6/\">2708-6</a>\n              </td>\n              <td style=\"color: #cccccc\">Oxygen saturation in Arterial blood</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8310-5/\">8310-5</a>\n              </td>\n              <td style=\"color: #cccccc\">Body temperature</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8302-2/\">8302-2</a>\n              </td>\n              <td style=\"color: #cccccc\">Body height</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/9843-4/\">9843-4</a>\n              </td>\n              <td style=\"color: #cccccc\">Head Occipital-frontal circumference</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/29463-7/\">29463-7</a>\n              </td>\n              <td style=\"color: #cccccc\">Body weight</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/39156-5/\">39156-5</a>\n              </td>\n              <td style=\"color: #cccccc\">Body mass index (BMI) [Ratio]</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/85354-9/\">85354-9</a>\n              </td>\n              <td style=\"color: #cccccc\">Blood pressure panel with all children optional</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8480-6/\">8480-6</a>\n              </td>\n              <td style=\"color: #cccccc\">Systolic blood pressure</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8462-4/\">8462-4</a>\n              </td>\n              <td style=\"color: #cccccc\">Diastolic blood pressure</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8478-0/\">8478-0</a>\n              </td>\n              <td style=\"color: #cccccc\">Mean blood pressure</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/observation-vitalsignresult"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.3.88.12.80.62" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "VitalSigns"] ; # 
+  fhir:title [ fhir:v "Vital Signs"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR project team"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This value set indicates the allowed vital sign result types.   The LOINC code for Vitals Signs panel (85353-1) is a grouping structure for a set of vital signs and includes related links (with type=has-member) to the Observations in this set (e.g. respiratory rate, heart rate, BP).  The Blood pressure panel (85354-9) is used to group the component observations Systolic blood pressure (8480-6) and Diastolic blood pressure (8462-4)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "85353-1" ]
+       ] [
+         fhir:code [ fhir:v "9279-1" ]
+       ] [
+         fhir:code [ fhir:v "8867-4" ]
+       ] [
+         fhir:code [ fhir:v "2708-6" ]
+       ] [
+         fhir:code [ fhir:v "8310-5" ]
+       ] [
+         fhir:code [ fhir:v "8302-2" ]
+       ] [
+         fhir:code [ fhir:v "9843-4" ]
+       ] [
+         fhir:code [ fhir:v "29463-7" ]
+       ] [
+         fhir:code [ fhir:v "39156-5" ]
+       ] [
+         fhir:code [ fhir:v "85354-9" ]
+       ] [
+         fhir:code [ fhir:v "8480-6" ]
+       ] [
+         fhir:code [ fhir:v "8462-4" ]
+       ] [
+         fhir:code [ fhir:v "8478-0" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

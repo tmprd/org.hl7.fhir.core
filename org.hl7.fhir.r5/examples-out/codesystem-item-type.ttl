@@ -1,0 +1,168 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/item-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "item-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem item-type</b>\n      </p>\n      <a name=\"item-type\"> </a>\n      <a name=\"hcitem-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>\n        <b>Properties</b>\n      </p>\n      <p>\n        <b>This code system defines the following properties for its concepts</b>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>URI</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Description</b>\n          </td>\n        </tr>\n        <tr>\n          <td>Not Selectable</td>\n          <td>notSelectable</td>\n          <td>http://hl7.org/fhir/concept-properties#notSelectable</td>\n          <td>boolean</td>\n          <td>Indicates that the code is abstract - only intended to be used as a selector for other concepts</td>\n        </tr>\n      </table>\n      <p>\n        <b>Concepts</b>\n      </p>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/item-type</code> defines the following codes in a Is-A hierarchy:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td>\n            <b>Lvl</b>\n          </td>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n          <td>\n            <b>Not Selectable</b>\n          </td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">group\n            <a name=\"item-type-group\"> </a>\n          </td>\n          <td>Group</td>\n          <td>An item with no direct answer but should have at least one child item.</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">display\n            <a name=\"item-type-display\"> </a>\n          </td>\n          <td>Display</td>\n          <td>Text for display that will not capture an answer or have child items.</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">question\n            <a name=\"item-type-question\"> </a>\n          </td>\n          <td>Question</td>\n          <td>An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).</td>\n          <td>true</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  boolean\n            <a name=\"item-type-boolean\"> </a>\n          </td>\n          <td>Boolean</td>\n          <td>Question with a yes/no answer (valueBoolean).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  decimal\n            <a name=\"item-type-decimal\"> </a>\n          </td>\n          <td>Decimal</td>\n          <td>Question with is a real number answer (valueDecimal).  There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to computably convey the unit of measure associated with the answer for use when performing data extraction to an element of type Quantity.</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  integer\n            <a name=\"item-type-integer\"> </a>\n          </td>\n          <td>Integer</td>\n          <td>Question with an integer answer (valueInteger).  There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to computably convey the unit of measure associated with the answer for use when performing data extraction to an element of type Quantity.</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  date\n            <a name=\"item-type-date\"> </a>\n          </td>\n          <td>Date</td>\n          <td>Question with a date answer (valueDate).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  dateTime\n            <a name=\"item-type-dateTime\"> </a>\n          </td>\n          <td>Date Time</td>\n          <td>Question with a date and time answer (valueDateTime).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  time\n            <a name=\"item-type-time\"> </a>\n          </td>\n          <td>Time</td>\n          <td>Question with a time (hour:minute:second) answer independent of date. (valueTime).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  string\n            <a name=\"item-type-string\"> </a>\n          </td>\n          <td>String</td>\n          <td>Question with a short (few words to short sentence) free-text entry answer (valueString).  Strings SHOULD NOT contain carriage return or newline characters.  If multi-line answers are needed, use the 'text' type.</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  text\n            <a name=\"item-type-text\"> </a>\n          </td>\n          <td>Text</td>\n          <td>Question with a long (potentially multi-paragraph) free-text entry answer (valueString).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  url\n            <a name=\"item-type-url\"> </a>\n          </td>\n          <td>Url</td>\n          <td>Question with a URL (website, FTP site, etc.) answer (valueUri).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  coding\n            <a name=\"item-type-coding\"> </a>\n          </td>\n          <td>Coding</td>\n          <td>Question with a Coding - generally drawn from a list of possible answers (valueCoding)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  attachment\n            <a name=\"item-type-attachment\"> </a>\n          </td>\n          <td>Attachment</td>\n          <td>Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  reference\n            <a name=\"item-type-reference\"> </a>\n          </td>\n          <td>Reference</td>\n          <td>Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  quantity\n            <a name=\"item-type-quantity\"> </a>\n          </td>\n          <td>Quantity</td>\n          <td>Question with a combination of a numeric value and unit as an answer (i.e. a Quantity constrained to SimpleQuantity).  There are two extensions ('http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption' and 'http://hl7.org/fhir/StructureDefinition/questionnaire-unitValueSet')  that can be used to define what unit should be selected for the Quantity.code and Quantity.system.</td>\n          <td/>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/item-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.445" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.438" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "QuestionnaireItemType"] ; # 
+  fhir:title [ fhir:v "Questionnaire Item Type"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Distinguishes groups from questions and display text and indicates data type for questions."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/item-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/item-type>
+  ] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "notSelectable" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/concept-properties#notSelectable"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "Indicates that the code is abstract - only intended to be used as a selector for other concepts" ] ;
+     fhir:type [ fhir:v "boolean" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "group" ] ;
+     fhir:display [ fhir:v "Group" ] ;
+     fhir:definition [ fhir:v "An item with no direct answer but should have at least one child item." ]
+  ] [
+     fhir:code [ fhir:v "display" ] ;
+     fhir:display [ fhir:v "Display" ] ;
+     fhir:definition [ fhir:v "Text for display that will not capture an answer or have child items." ]
+  ] [
+     fhir:code [ fhir:v "question" ] ;
+     fhir:display [ fhir:v "Question" ] ;
+     fhir:definition [ fhir:v "An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype)." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "notSelectable" ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] ) ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "boolean" ] ;
+       fhir:display [ fhir:v "Boolean" ] ;
+       fhir:definition [ fhir:v "Question with a yes/no answer (valueBoolean)." ]
+     ] [
+       fhir:code [ fhir:v "decimal" ] ;
+       fhir:display [ fhir:v "Decimal" ] ;
+       fhir:definition [ fhir:v "Question with is a real number answer (valueDecimal).  There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to computably convey the unit of measure associated with the answer for use when performing data extraction to an element of type Quantity." ]
+     ] [
+       fhir:code [ fhir:v "integer" ] ;
+       fhir:display [ fhir:v "Integer" ] ;
+       fhir:definition [ fhir:v "Question with an integer answer (valueInteger).  There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to computably convey the unit of measure associated with the answer for use when performing data extraction to an element of type Quantity." ]
+     ] [
+       fhir:code [ fhir:v "date" ] ;
+       fhir:display [ fhir:v "Date" ] ;
+       fhir:definition [ fhir:v "Question with a date answer (valueDate)." ]
+     ] [
+       fhir:code [ fhir:v "dateTime" ] ;
+       fhir:display [ fhir:v "Date Time" ] ;
+       fhir:definition [ fhir:v "Question with a date and time answer (valueDateTime)." ]
+     ] [
+       fhir:code [ fhir:v "time" ] ;
+       fhir:display [ fhir:v "Time" ] ;
+       fhir:definition [ fhir:v "Question with a time (hour:minute:second) answer independent of date. (valueTime)." ]
+     ] [
+       fhir:code [ fhir:v "string" ] ;
+       fhir:display [ fhir:v "String" ] ;
+       fhir:definition [ fhir:v "Question with a short (few words to short sentence) free-text entry answer (valueString).  Strings SHOULD NOT contain carriage return or newline characters.  If multi-line answers are needed, use the 'text' type." ]
+     ] [
+       fhir:code [ fhir:v "text" ] ;
+       fhir:display [ fhir:v "Text" ] ;
+       fhir:definition [ fhir:v "Question with a long (potentially multi-paragraph) free-text entry answer (valueString)." ]
+     ] [
+       fhir:code [ fhir:v "url" ] ;
+       fhir:display [ fhir:v "Url" ] ;
+       fhir:definition [ fhir:v "Question with a URL (website, FTP site, etc.) answer (valueUri)." ]
+     ] [
+       fhir:code [ fhir:v "coding" ] ;
+       fhir:display [ fhir:v "Coding" ] ;
+       fhir:definition [ fhir:v "Question with a Coding - generally drawn from a list of possible answers (valueCoding)" ]
+     ] [
+       fhir:code [ fhir:v "attachment" ] ;
+       fhir:display [ fhir:v "Attachment" ] ;
+       fhir:definition [ fhir:v "Question with binary content such as an image, PDF, etc. as an answer (valueAttachment)." ]
+     ] [
+       fhir:code [ fhir:v "reference" ] ;
+       fhir:display [ fhir:v "Reference" ] ;
+       fhir:definition [ fhir:v "Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference)." ]
+     ] [
+       fhir:code [ fhir:v "quantity" ] ;
+       fhir:display [ fhir:v "Quantity" ] ;
+       fhir:definition [ fhir:v "Question with a combination of a numeric value and unit as an answer (i.e. a Quantity constrained to SimpleQuantity).  There are two extensions ('http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption' and 'http://hl7.org/fhir/StructureDefinition/questionnaire-unitValueSet')  that can be used to define what unit should be selected for the Quantity.code and Quantity.system." ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,133 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Bundle/ex-SearchSet-withPermission> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ex-SearchSet-withPermission"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HTEST" ]
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CPLYPOL" ]
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:timestamp [ fhir:v "2023-11-22T09:32:24Z"^^xsd:dateTime] ; # 
+  fhir:total [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "http://test.fhir.net/R4/fhir/Observation?patient=example&status=current"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://test.fhir.net/R4/fhir/Observation/in-Observation"^^xsd:anyURI ] ;
+     fhir:resource ( <http://test.fhir.net/R4/fhir/Observation/in-Observation> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "http://test.fhir.net/R4/fhir/Permission/in-permission-redisclose-forbidden-without-consent"^^xsd:anyURI ] ;
+     fhir:resource ( <http://test.fhir.net/R4/fhir/Permission/in-permission-redisclose-forbidden-without-consent> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] ) . # 
+
+<http://test.fhir.net/R4/fhir/Observation/in-Observation> a fhir:Observation ;
+  fhir:id [ fhir:v "in-Observation"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ETH" ]
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "R" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation in-Observation</b></p><a name=\"in-Observation\"> </a><a name=\"hcin-Observation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Security Labels: substance abuse information sensitivity (Details: ActCode code ETH = 'substance abuse information sensitivity'), restricted (Details: Confidentiality code R = 'restricted')</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"patient-example.html\">Jim  Male, DoB: 1974-12-25 ( Medical record number (use: usual, period: 2001-05-06 --&gt; (ongoing)))</a></p><p><b>effective</b>: 2022-06-13</p><p><b>performer</b>: <a href=\"patient-example.html\">Jim  Male, DoB: 1974-12-25 ( Medical record number (use: usual, period: 2001-05-06 --&gt; (ongoing)))</a></p><p><b>value</b>: 5 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:74013-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "74013-4" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2022-06-13"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "wine glasses per day" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "/d" ]
+  ] . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://test.fhir.net/R4/fhir/Permission/in-permission-redisclose-forbidden-without-consent> a fhir:Permission ;
+  fhir:id [ fhir:v "in-permission-redisclose-forbidden-without-consent"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HTEST" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Permission in-permission-redisclose-forbidden-without-consent</b></p><a name=\"in-permission-redisclose-forbidden-without-consent\"> </a><a name=\"hcin-permission-redisclose-forbidden-without-consent\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Security Label: test health data (Details: ActReason code HTEST = 'test health data')</p></div><p><b>status</b>: Active</p><p><b>asserter</b>: <a href=\"organization-example.html\">Organization ACME Health</a></p><p><b>date</b>: 2023-11-22</p><p><b>combining</b>: Deny-unless-permit</p><blockquote><p><b>rule</b></p><p><b>type</b>: Permit</p><blockquote><p><b>activity</b></p><p><b>purpose</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason TREAT}\">treatment</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason HPAYMT}\">healthcare payment</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason HOPERAT}\">healthcare operations</span></p></blockquote><blockquote><p><b>limit</b></p></blockquote></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:asserter [
+     fhir:link <http://hl7.org/fhir/Organization/example> ;
+     fhir:reference [ fhir:v "Organization/example" ]
+  ] ; # 
+  fhir:date ( [ fhir:v "2023-11-22"^^xsd:date] ) ; # 
+  fhir:combining [ fhir:v "deny-unless-permit"] ; # 
+  fhir:rule ( [
+     fhir:type [ fhir:v "permit" ] ;
+     fhir:activity ( [
+       fhir:purpose ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "TREAT" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HPAYMT" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HOPERAT" ]
+         ] )
+       ] )
+     ] ) ;
+     fhir:limit ( [ ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Organization/example> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

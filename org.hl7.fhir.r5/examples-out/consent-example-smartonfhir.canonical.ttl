@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Consent/consent-example-smartonfhir> a fhir:Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "consent-example-smartonfhir"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:59284-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "59284-0" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/xcda> ;
+     fhir:reference [ fhir:v "Patient/xcda" ]
+  ] ; # 
+  fhir:date [ fhir:v "2016-06-23"^^xsd:date] ; # 
+  fhir:grantor ( [
+     fhir:link <http://hl7.org/fhir/RelatedPerson/peter> ;
+     fhir:reference [ fhir:v "RelatedPerson/peter" ]
+  ] ) ; # 
+  fhir:controller ( [
+     fhir:link <http://hl7.org/fhir/Organization/f001> ;
+     fhir:reference [ fhir:v "Organization/f001" ]
+  ] ) ; # 
+  fhir:regulatoryBasis ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "INFA" ]
+     ] )
+  ] ) ; # 
+  fhir:decision [ fhir:v "permit"] ; # 
+  fhir:provision ( [
+     fhir:period [
+       fhir:start [ fhir:v "2016-06-23T17:02:33+10:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2016-06-23T17:32:33+10:00"^^xsd:dateTime ]
+     ] ;
+     fhir:provision ( [
+       fhir:action ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "access" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "correct" ]
+         ] )
+       ] ) ;
+       fhir:resourceType ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/resource-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MedicationRequest" ]
+       ] )
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/xcda> a fhir:Patient .
+
+<http://hl7.org/fhir/RelatedPerson/peter> a fhir:RelatedPerson .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/BiologicallyDerivedProduct/example-red-cell-antigen> a fhir:BiologicallyDerivedProduct ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-red-cell-antigen"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/medicalproductofhumanorigin"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/medicalproductofhumanorigin>
+     ] )
+  ] ; # 
+  fhir:productCategory [] ; # 
+  fhir:productCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://www.isbt128/org/uri/ProductDescriptionCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "E0398" ]
+     ] ) ;
+     fhir:text [ fhir:v " RED BLOOD CELLS|CPD-AS5/450mL/refg|Irradiated|ResLeu: Less than 5E6" ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://www.isbt128.org/uri/MPHOUniqueIdentifier"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "00000E0398A999924123456A00000" ]
+  ] ) ; # 
+  fhir:biologicalSourceEvent [
+     fhir:system [ fhir:v "https://www.isbt128.org/uri/DonationIdentificationNumber"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A999924123456" ]
+  ] ; # 
+  fhir:division [ fhir:v "A00000"] ; # 
+  fhir:expirationDate [ fhir:v "2024-02-02T23:59:00-05:00"^^xsd:dateTime] ; # 
+  fhir:property ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RedCellAntigen" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri/RedCellAntigen"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0040020206" ] ;
+         fhir:display [ fhir:v "C+" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RedCellAntigen" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri/RedCellAntigen"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0040040106" ] ;
+         fhir:display [ fhir:v "c-" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RedCellAntigen" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri/RedCellAntigen"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0040030106" ] ;
+         fhir:display [ fhir:v "E-" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RedCellAntigen" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri/RedCellAntigen"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0040050206" ] ;
+         fhir:display [ fhir:v "e+" ]
+       ] )
+     ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RedCellAntigen" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.isbt128.org/uri/RedCellAntigen"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0060010106" ] ;
+         fhir:display [ fhir:v "K-" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

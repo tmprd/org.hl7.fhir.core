@@ -1,0 +1,177 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/device-type> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "device-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet device-type</b>\n      </p>\n      <a name=\"device-type\"> </a>\n      <a name=\"hcdevice-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <p>This value set includes codes based on the following rules:</p>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-mdc.html\">\n            <code>urn:iso:std:iso:11073:10101</code>\n          </a> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>528391</td>\n              <td>Blood Pressure Cuff</td>\n            </tr>\n            <tr>\n              <td>528404</td>\n              <td>Body Composition Analyzer</td>\n            </tr>\n            <tr>\n              <td>528425</td>\n              <td>Cardiovascular Device</td>\n            </tr>\n            <tr>\n              <td>528402</td>\n              <td>Coagulation meter</td>\n            </tr>\n            <tr>\n              <td>528409</td>\n              <td>Continuous Glucose Monitor</td>\n            </tr>\n            <tr>\n              <td>528390</td>\n              <td>Electro cardiograph</td>\n            </tr>\n            <tr>\n              <td>528457</td>\n              <td>Generic 20601 Device</td>\n            </tr>\n            <tr>\n              <td>528401</td>\n              <td>Glucose Monitor</td>\n            </tr>\n            <tr>\n              <td>528455</td>\n              <td>Independent Activity/Living Hub</td>\n            </tr>\n            <tr>\n              <td>528403</td>\n              <td>Insulin Pump</td>\n            </tr>\n            <tr>\n              <td>528405</td>\n              <td>Peak Flow meter</td>\n            </tr>\n            <tr>\n              <td>528388</td>\n              <td>Pulse Oximeter</td>\n            </tr>\n            <tr>\n              <td>528397</td>\n              <td>Respiration rate</td>\n            </tr>\n            <tr>\n              <td>528408</td>\n              <td>Sleep Apnea Breathing Equipment</td>\n            </tr>\n            <tr>\n              <td>528426</td>\n              <td>Strength Equipment</td>\n            </tr>\n            <tr>\n              <td>528392</td>\n              <td>Thermometer</td>\n            </tr>\n            <tr>\n              <td>528399</td>\n              <td>Weight Scale</td>\n            </tr>\n          </table>\n        </li>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-GMDN.html\">\n            <code>http://terminology.hl7.org/CodeSystem/GMDN</code>\n          </a> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>38017</td>\n              <td>Dry salt inhalation therapy device</td>\n            </tr>\n            <tr>\n              <td>38663</td>\n              <td>Flexible video nephroscope</td>\n            </tr>\n            <tr>\n              <td>42347</td>\n              <td>Dental implant, endosseous, partially-embedded</td>\n            </tr>\n            <tr>\n              <td>46352</td>\n              <td>Bare-metal intracranial vascular stent</td>\n            </tr>\n            <tr>\n              <td>47264</td>\n              <td>Dual-chamber implantable pacemaker, demand</td>\n            </tr>\n            <tr>\n              <td>62163</td>\n              <td>Intrauterine cannula, reusable</td>\n            </tr>\n            <tr>\n              <td>62260</td>\n              <td>Air-conduction hearing aid acoustic tube</td>\n            </tr>\n            <tr>\n              <td>62423</td>\n              <td>Spinal cord/peripheral nerve implantable analgesic electrical stimulation system lead, wired connection</td>\n            </tr>\n            <tr>\n              <td>62414</td>\n              <td>Blue-light phototherapy lamp, home-use</td>\n            </tr>\n            <tr>\n              <td>64587</td>\n              <td>Uncoated knee femur prosthesis, ceramic</td>\n            </tr>\n            <tr>\n              <td>64992</td>\n              <td>ADAMTS13 activity IVD, kit, chemiluminescent immunoassay</td>\n            </tr>\n          </table>\n        </li>\n        <li>Include codes from\n          <a href=\"http://www.snomed.org/\">\n            <code>http://snomed.info/sct</code>\n          </a> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span> where concept  is-a 49062001 (Device)\n        </li>\n        <li>Include codes from\n          <a href=\"http://www.snomed.org/\">\n            <code>http://snomed.info/sct</code>\n          </a> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span> where concept  is-a 706689003 (Application programme software)\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/device-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.1376" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceType"] ; # 
+  fhir:title [ fhir:v "Device Type"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 Orders and Observations Workgroup"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:11073:10101"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "528391" ] ;
+         fhir:display [ fhir:v "Blood Pressure Cuff" ]
+       ] [
+         fhir:code [ fhir:v "528404" ] ;
+         fhir:display [ fhir:v "Body Composition Analyzer" ]
+       ] [
+         fhir:code [ fhir:v "528425" ] ;
+         fhir:display [ fhir:v "Cardiovascular Device" ]
+       ] [
+         fhir:code [ fhir:v "528402" ] ;
+         fhir:display [ fhir:v "Coagulation meter" ]
+       ] [
+         fhir:code [ fhir:v "528409" ] ;
+         fhir:display [ fhir:v "Continuous Glucose Monitor" ]
+       ] [
+         fhir:code [ fhir:v "528390" ] ;
+         fhir:display [ fhir:v "Electro cardiograph" ]
+       ] [
+         fhir:code [ fhir:v "528457" ] ;
+         fhir:display [ fhir:v "Generic 20601 Device" ]
+       ] [
+         fhir:code [ fhir:v "528401" ] ;
+         fhir:display [ fhir:v "Glucose Monitor" ]
+       ] [
+         fhir:code [ fhir:v "528455" ] ;
+         fhir:display [ fhir:v "Independent Activity/Living Hub" ]
+       ] [
+         fhir:code [ fhir:v "528403" ] ;
+         fhir:display [ fhir:v "Insulin Pump" ]
+       ] [
+         fhir:code [ fhir:v "528405" ] ;
+         fhir:display [ fhir:v "Peak Flow meter" ]
+       ] [
+         fhir:code [ fhir:v "528388" ] ;
+         fhir:display [ fhir:v "Pulse Oximeter" ]
+       ] [
+         fhir:code [ fhir:v "528397" ] ;
+         fhir:display [ fhir:v "Respiration rate" ]
+       ] [
+         fhir:code [ fhir:v "528408" ] ;
+         fhir:display [ fhir:v "Sleep Apnea Breathing Equipment" ]
+       ] [
+         fhir:code [ fhir:v "528426" ] ;
+         fhir:display [ fhir:v "Strength Equipment" ]
+       ] [
+         fhir:code [ fhir:v "528392" ] ;
+         fhir:display [ fhir:v "Thermometer" ]
+       ] [
+         fhir:code [ fhir:v "528399" ] ;
+         fhir:display [ fhir:v "Weight Scale" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/GMDN"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "38017" ] ;
+         fhir:display [ fhir:v "Dry salt inhalation therapy device" ]
+       ] [
+         fhir:code [ fhir:v "38663" ] ;
+         fhir:display [ fhir:v "Flexible video nephroscope" ]
+       ] [
+         fhir:code [ fhir:v "42347" ] ;
+         fhir:display [ fhir:v "Dental implant, endosseous, partially-embedded" ]
+       ] [
+         fhir:code [ fhir:v "46352" ] ;
+         fhir:display [ fhir:v "Bare-metal intracranial vascular stent" ]
+       ] [
+         fhir:code [ fhir:v "47264" ] ;
+         fhir:display [ fhir:v "Dual-chamber implantable pacemaker, demand" ]
+       ] [
+         fhir:code [ fhir:v "62163" ] ;
+         fhir:display [ fhir:v "Intrauterine cannula, reusable" ]
+       ] [
+         fhir:code [ fhir:v "62260" ] ;
+         fhir:display [ fhir:v "Air-conduction hearing aid acoustic tube" ]
+       ] [
+         fhir:code [ fhir:v "62423" ] ;
+         fhir:display [ fhir:v "Spinal cord/peripheral nerve implantable analgesic electrical stimulation system lead, wired connection" ]
+       ] [
+         fhir:code [ fhir:v "62414" ] ;
+         fhir:display [ fhir:v "Blue-light phototherapy lamp, home-use" ]
+       ] [
+         fhir:code [ fhir:v "64587" ] ;
+         fhir:display [ fhir:v "Uncoated knee femur prosthesis, ceramic" ]
+       ] [
+         fhir:code [ fhir:v "64992" ] ;
+         fhir:display [ fhir:v "ADAMTS13 activity IVD, kit, chemiluminescent immunoassay" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "49062001" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "706689003" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

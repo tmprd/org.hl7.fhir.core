@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/devicedispense-status-reason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "devicedispense-status-reason"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem devicedispense-status-reason</b></p><a name=\"devicedispense-status-reason\"> </a><a name=\"hcdevicedispense-status-reason\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/CodeSystem/devicedispense-status-reason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">out-of-stock<a name=\"devicedispense-status-reason-out-of-stock\"> </a></td><td>Out of Stock</td><td>The device was not dispensed because it was not available.</td></tr><tr><td style=\"white-space:nowrap\">off-market<a name=\"devicedispense-status-reason-off-market\"> </a></td><td>Off market</td><td>The device was not dispensed because it is of-market - for example not authorized, withdrawn or recalled.</td></tr><tr><td style=\"white-space:nowrap\">contraindication<a name=\"devicedispense-status-reason-contraindication\"> </a></td><td>Contraindication</td><td>The device was not dispensed because a contraindication was found - for example pregnancy, allergy to a device component...</td></tr><tr><td style=\"white-space:nowrap\">incompatible-device<a name=\"devicedispense-status-reason-incompatible-device\"> </a></td><td>Incompatible device</td><td>The device was not dispensed because an incompatibility has been found with the device or between the device and other devices being used in the same context.</td></tr><tr><td style=\"white-space:nowrap\">order-expired<a name=\"devicedispense-status-reason-order-expired\"> </a></td><td>Order expired</td><td>The device was not dispensed because the order has expired or been invalidated.</td></tr><tr><td style=\"white-space:nowrap\">verbal-order<a name=\"devicedispense-status-reason-verbal-order\"> </a></td><td>Verbal order</td><td>The device not dispensed because there was a verbal order.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/CodeSystem/devicedispense-status-reason"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2110" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceDispenseStatusReasonCodes"] ; # 
+  fhir:title [ fhir:v "DeviceDispense Status Reason Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "DeviceDispense Status Reason Codes"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "out-of-stock" ] ;
+     fhir:display [ fhir:v "Out of Stock" ] ;
+     fhir:definition [ fhir:v "The device was not dispensed because it was not available." ]
+  ] [
+     fhir:code [ fhir:v "off-market" ] ;
+     fhir:display [ fhir:v "Off market" ] ;
+     fhir:definition [ fhir:v "The device was not dispensed because it is of-market - for example not authorized, withdrawn or recalled." ]
+  ] [
+     fhir:code [ fhir:v "contraindication" ] ;
+     fhir:display [ fhir:v "Contraindication" ] ;
+     fhir:definition [ fhir:v "The device was not dispensed because a contraindication was found - for example pregnancy, allergy to a device component..." ]
+  ] [
+     fhir:code [ fhir:v "incompatible-device" ] ;
+     fhir:display [ fhir:v "Incompatible device" ] ;
+     fhir:definition [ fhir:v "The device was not dispensed because an incompatibility has been found with the device or between the device and other devices being used in the same context." ]
+  ] [
+     fhir:code [ fhir:v "order-expired" ] ;
+     fhir:display [ fhir:v "Order expired" ] ;
+     fhir:definition [ fhir:v "The device was not dispensed because the order has expired or been invalidated." ]
+  ] [
+     fhir:code [ fhir:v "verbal-order" ] ;
+     fhir:display [ fhir:v "Verbal order" ] ;
+     fhir:definition [ fhir:v "The device not dispensed because there was a verbal order." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

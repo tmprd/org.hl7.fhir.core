@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DeviceAssociation/bp-monitor-association> a fhir:DeviceAssociation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bp-monitor-association"] ; # 
+  fhir:contained ( [
+     a fhir:Patient ;
+     fhir:id [ fhir:v "example-patient" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Doe" ] ;
+       fhir:given ( [ fhir:v "John" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "nurse-1" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Smith" ] ;
+       fhir:given ( [ fhir:v "Nora" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "nurse-2" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Lee" ] ;
+       fhir:given ( [ fhir:v "Samuel" ] )
+     ] )
+  ] [
+     a fhir:Device ;
+     fhir:id [ fhir:v "bp-monitor" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:name ( [
+       fhir:value [ fhir:v "Omron HBP-1320" ] ;
+       fhir:type [ ]
+     ] ) ;
+     fhir:type ( [
+       fhir:coding ( [
+         a sct:258057004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "258057004" ] ;
+         fhir:display [ fhir:v "Non-invasive blood pressure monitor" ]
+       ] )
+     ] )
+  ] [
+     a fhir:BodyStructure ;
+     fhir:id [ fhir:v "left-arm-structure" ] ;
+     fhir:includedStructure ( [
+       fhir:structure [
+         fhir:coding ( [
+           a sct:368208006 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "368208006" ] ;
+           fhir:display [ fhir:v "Left upper arm structure" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:description [ fhir:v "Cuff placement site for BP measurement" ] ;
+     fhir:patient [
+       fhir:reference [ fhir:v "#example-patient" ]
+     ]
+  ] ) ; # 
+  fhir:device [
+     fhir:reference [ fhir:v "#bp-monitor" ]
+  ] ; # 
+  fhir:status [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/deviceassociation-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "attached" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "#example-patient" ]
+  ] ; # 
+  fhir:bodyStructure [
+     fhir:reference [ fhir:v "#left-arm-structure" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-06-01"^^xsd:date ] ;
+     fhir:end [ fhir:v "2025-06-05"^^xsd:date ]
+  ] ; # 
+  fhir:operation ( [
+     fhir:status [
+       fhir:coding ( [
+         fhir:code [ fhir:v "on" ]
+       ] )
+     ] ;
+     fhir:operator ( [
+       fhir:reference [ fhir:v "#nurse-1" ]
+     ] [
+       fhir:reference [ fhir:v "#nurse-2" ]
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-06-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2025-06-05"^^xsd:date ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

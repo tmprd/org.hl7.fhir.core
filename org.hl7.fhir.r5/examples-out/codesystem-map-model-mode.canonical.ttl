@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/map-model-mode> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "map-model-mode"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem map-model-mode</b></p><a name=\"map-model-mode\"> </a><a name=\"hcmap-model-mode\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/map-model-mode</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">source<a name=\"map-model-mode-source\"> </a></td><td>Source Structure Definition</td><td>This structure describes an instance passed to the mapping engine that is used a source of data.</td></tr><tr><td style=\"white-space:nowrap\">queried<a name=\"map-model-mode-queried\"> </a></td><td>Queried Structure Definition</td><td>This structure describes an instance that the mapping engine may ask for that is used a source of data.</td></tr><tr><td style=\"white-space:nowrap\">target<a name=\"map-model-mode-target\"> </a></td><td>Target Structure Definition</td><td>This structure describes an instance passed to the mapping engine that is used a target of data.</td></tr><tr><td style=\"white-space:nowrap\">produced<a name=\"map-model-mode-produced\"> </a></td><td>Produced Structure Definition</td><td>This structure describes an instance that the mapping engine may ask to create that is used a target of data.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/map-model-mode"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.676" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.662" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "StructureMapModelMode"] ; # 
+  fhir:title [ fhir:v "Structure Map Model Mode"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "How the referenced structure is used in this mapping."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/map-model-mode"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/map-model-mode>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "source" ] ;
+     fhir:display [ fhir:v "Source Structure Definition" ] ;
+     fhir:definition [ fhir:v "This structure describes an instance passed to the mapping engine that is used a source of data." ]
+  ] [
+     fhir:code [ fhir:v "queried" ] ;
+     fhir:display [ fhir:v "Queried Structure Definition" ] ;
+     fhir:definition [ fhir:v "This structure describes an instance that the mapping engine may ask for that is used a source of data." ]
+  ] [
+     fhir:code [ fhir:v "target" ] ;
+     fhir:display [ fhir:v "Target Structure Definition" ] ;
+     fhir:definition [ fhir:v "This structure describes an instance passed to the mapping engine that is used a target of data." ]
+  ] [
+     fhir:code [ fhir:v "produced" ] ;
+     fhir:display [ fhir:v "Produced Structure Definition" ] ;
+     fhir:definition [ fhir:v "This structure describes an instance that the mapping engine may ask to create that is used a target of data." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

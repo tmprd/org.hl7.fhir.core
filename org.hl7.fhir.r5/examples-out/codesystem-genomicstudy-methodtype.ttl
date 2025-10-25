@@ -1,0 +1,323 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/genomicstudy-methodtype> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "genomicstudy-methodtype"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T19:27:59-05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem genomicstudy-methodtype</b>\n      </p>\n      <a name=\"genomicstudy-methodtype\"> </a>\n      <a name=\"hcgenomicstudy-methodtype\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2022-08-16T16:49:24-05:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/genomicstudy-methodtype</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">biochemical-genetics\n            <a name=\"genomicstudy-methodtype-biochemical-genetics\"> </a>\n          </td>\n          <td>Biochemical Genetics</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cytogenetics\n            <a name=\"genomicstudy-methodtype-cytogenetics\"> </a>\n          </td>\n          <td>Cytogenetics</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">molecular-genetics\n            <a name=\"genomicstudy-methodtype-molecular-genetics\"> </a>\n          </td>\n          <td>Molecular Genetics</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">analyte\n            <a name=\"genomicstudy-methodtype-analyte\"> </a>\n          </td>\n          <td>Analyte</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chromosome-breakage-studies\n            <a name=\"genomicstudy-methodtype-chromosome-breakage-studies\"> </a>\n          </td>\n          <td>Chromosome breakage studies</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">deletion-duplication-analysis\n            <a name=\"genomicstudy-methodtype-deletion-duplication-analysis\"> </a>\n          </td>\n          <td>Deletion/duplication analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">detection-of-homozygosity\n            <a name=\"genomicstudy-methodtype-detection-of-homozygosity\"> </a>\n          </td>\n          <td>Detection of homozygosity</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">enzyme-assay\n            <a name=\"genomicstudy-methodtype-enzyme-assay\"> </a>\n          </td>\n          <td>Enzyme assay</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fish-interphase\n            <a name=\"genomicstudy-methodtype-fish-interphase\"> </a>\n          </td>\n          <td>FISH-interphase</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fish-metaphase\n            <a name=\"genomicstudy-methodtype-fish-metaphase\"> </a>\n          </td>\n          <td>FISH-metaphase</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">flow-cytometry\n            <a name=\"genomicstudy-methodtype-flow-cytometry\"> </a>\n          </td>\n          <td>Flow cytometry</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fish\n            <a name=\"genomicstudy-methodtype-fish\"> </a>\n          </td>\n          <td>Fluorescence in situ hybridization (FISH)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">immunohistochemistry\n            <a name=\"genomicstudy-methodtype-immunohistochemistry\"> </a>\n          </td>\n          <td>Immunohistochemistry</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">karyotyping\n            <a name=\"genomicstudy-methodtype-karyotyping\"> </a>\n          </td>\n          <td>Karyotyping</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">linkage-analysis\n            <a name=\"genomicstudy-methodtype-linkage-analysis\"> </a>\n          </td>\n          <td>Linkage analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">methylation-analysis\n            <a name=\"genomicstudy-methodtype-methylation-analysis\"> </a>\n          </td>\n          <td>Methylation analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">msi\n            <a name=\"genomicstudy-methodtype-msi\"> </a>\n          </td>\n          <td>Microsatellite instability testing (MSI)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">m-fish\n            <a name=\"genomicstudy-methodtype-m-fish\"> </a>\n          </td>\n          <td>Multicolor FISH (M-FISH)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mutation-scanning-of-select-exons\n            <a name=\"genomicstudy-methodtype-mutation-scanning-of-select-exons\"> </a>\n          </td>\n          <td>Mutation scanning of select exons</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mutation-scanning-of-the-entire-coding-region\n            <a name=\"genomicstudy-methodtype-mutation-scanning-of-the-entire-coding-region\"> </a>\n          </td>\n          <td>Mutation scanning of the entire coding region</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">protein-analysis\n            <a name=\"genomicstudy-methodtype-protein-analysis\"> </a>\n          </td>\n          <td>Protein analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">protein-expression\n            <a name=\"genomicstudy-methodtype-protein-expression\"> </a>\n          </td>\n          <td>Protein expression</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rna-analysis\n            <a name=\"genomicstudy-methodtype-rna-analysis\"> </a>\n          </td>\n          <td>RNA analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sequence-analysis-of-select-exons\n            <a name=\"genomicstudy-methodtype-sequence-analysis-of-select-exons\"> </a>\n          </td>\n          <td>Sequence analysis of select exons</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sequence-analysis-of-the-entire-coding-region\n            <a name=\"genomicstudy-methodtype-sequence-analysis-of-the-entire-coding-region\"> </a>\n          </td>\n          <td>Sequence analysis of the entire coding region</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sister-chromatid-exchange\n            <a name=\"genomicstudy-methodtype-sister-chromatid-exchange\"> </a>\n          </td>\n          <td>Sister chromatid exchange</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">targeted-variant-analysis\n            <a name=\"genomicstudy-methodtype-targeted-variant-analysis\"> </a>\n          </td>\n          <td>Targeted variant analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">udp\n            <a name=\"genomicstudy-methodtype-udp\"> </a>\n          </td>\n          <td>Uniparental disomy study (UPD)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">aspe\n            <a name=\"genomicstudy-methodtype-aspe\"> </a>\n          </td>\n          <td>Allele-specific primer extension (ASPE)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">alternative-splicing-detection\n            <a name=\"genomicstudy-methodtype-alternative-splicing-detection\"> </a>\n          </td>\n          <td>Alternative splicing detection</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">bi-directional-sanger-sequence-analysis\n            <a name=\"genomicstudy-methodtype-bi-directional-sanger-sequence-analysis\"> </a>\n          </td>\n          <td>Bi-directional Sanger Sequence Analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">c-banding\n            <a name=\"genomicstudy-methodtype-c-banding\"> </a>\n          </td>\n          <td>C-banding</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cia\n            <a name=\"genomicstudy-methodtype-cia\"> </a>\n          </td>\n          <td>Chemiluminescent Immunoassay (CIA)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chromatin-immunoprecipitation-on-chip\n            <a name=\"genomicstudy-methodtype-chromatin-immunoprecipitation-on-chip\"> </a>\n          </td>\n          <td>Chromatin Immunoprecipitation on ChIP</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">comparative-genomic-hybridization\n            <a name=\"genomicstudy-methodtype-comparative-genomic-hybridization\"> </a>\n          </td>\n          <td>Comparative Genomic Hybridization</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">damid\n            <a name=\"genomicstudy-methodtype-damid\"> </a>\n          </td>\n          <td>DamID</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">digital-virtual-karyotyping\n            <a name=\"genomicstudy-methodtype-digital-virtual-karyotyping\"> </a>\n          </td>\n          <td>Digital / Virtual karyotyping</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">digital-microfluidic-microspheres\n            <a name=\"genomicstudy-methodtype-digital-microfluidic-microspheres\"> </a>\n          </td>\n          <td>Digital microfluidic microspheres</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">enzymatic-levels\n            <a name=\"genomicstudy-methodtype-enzymatic-levels\"> </a>\n          </td>\n          <td>Enzymatic levels</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">enzyme-activity\n            <a name=\"genomicstudy-methodtype-enzyme-activity\"> </a>\n          </td>\n          <td>Enzyme activity</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">elisa\n            <a name=\"genomicstudy-methodtype-elisa\"> </a>\n          </td>\n          <td>Enzyme-Linked Immunosorbent Assays (ELISA)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fluorometry\n            <a name=\"genomicstudy-methodtype-fluorometry\"> </a>\n          </td>\n          <td>Fluorometry</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fusion-genes-microarrays\n            <a name=\"genomicstudy-methodtype-fusion-genes-microarrays\"> </a>\n          </td>\n          <td>Fusion genes microarrays</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">g-banding\n            <a name=\"genomicstudy-methodtype-g-banding\"> </a>\n          </td>\n          <td>G-banding</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gc-ms\n            <a name=\"genomicstudy-methodtype-gc-ms\"> </a>\n          </td>\n          <td>Gas chromatographyâ€“mass spectrometry (GC-MS)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gene-expression-profiling\n            <a name=\"genomicstudy-methodtype-gene-expression-profiling\"> </a>\n          </td>\n          <td>Gene expression profiling</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gene-id\n            <a name=\"genomicstudy-methodtype-gene-id\"> </a>\n          </td>\n          <td>GeneID</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">gold-nanoparticle-probe-technology\n            <a name=\"genomicstudy-methodtype-gold-nanoparticle-probe-technology\"> </a>\n          </td>\n          <td>Gold nanoparticle probe technology</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">hplc\n            <a name=\"genomicstudy-methodtype-hplc\"> </a>\n          </td>\n          <td>High-performance liquid chromatography (HPLC)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lc-ms\n            <a name=\"genomicstudy-methodtype-lc-ms\"> </a>\n          </td>\n          <td>Liquid chromatography mass spectrometry (LC-MS)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lc-ms-ms\n            <a name=\"genomicstudy-methodtype-lc-ms-ms\"> </a>\n          </td>\n          <td>Liquid chromatography-tandem mass spectrometry (LC-MS/MS)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">metabolite-levels\n            <a name=\"genomicstudy-methodtype-metabolite-levels\"> </a>\n          </td>\n          <td>Metabolite levels</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">methylation-specific-pcr\n            <a name=\"genomicstudy-methodtype-methylation-specific-pcr\"> </a>\n          </td>\n          <td>Methylation-specific PCR</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">microarray\n            <a name=\"genomicstudy-methodtype-microarray\"> </a>\n          </td>\n          <td>Microarray</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mlpa\n            <a name=\"genomicstudy-methodtype-mlpa\"> </a>\n          </td>\n          <td>Multiplex Ligation-dependent Probe Amplification (MLPA)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ngs-mps\n            <a name=\"genomicstudy-methodtype-ngs-mps\"> </a>\n          </td>\n          <td>Next-Generation (NGS)/Massively parallel sequencing (MPS)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ola\n            <a name=\"genomicstudy-methodtype-ola\"> </a>\n          </td>\n          <td>Oligonucleotide Ligation Assay (OLA)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">oligonucleotide-hybridization-based-dna-sequencing\n            <a name=\"genomicstudy-methodtype-oligonucleotide-hybridization-based-dna-sequencing\"> </a>\n          </td>\n          <td>Oligonucleotide hybridization-based DNA sequencing</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">other\n            <a name=\"genomicstudy-methodtype-other\"> </a>\n          </td>\n          <td>Other</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pcr\n            <a name=\"genomicstudy-methodtype-pcr\"> </a>\n          </td>\n          <td>PCR</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pcr-with-allele-specific-hybridization\n            <a name=\"genomicstudy-methodtype-pcr-with-allele-specific-hybridization\"> </a>\n          </td>\n          <td>PCR with allele specific hybridization</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pcr-rflp-with-southern-hybridization\n            <a name=\"genomicstudy-methodtype-pcr-rflp-with-southern-hybridization\"> </a>\n          </td>\n          <td>PCR-RFLP with Southern hybridization</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">protein-truncation-test\n            <a name=\"genomicstudy-methodtype-protein-truncation-test\"> </a>\n          </td>\n          <td>Protein truncation test</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pyrosequencing\n            <a name=\"genomicstudy-methodtype-pyrosequencing\"> </a>\n          </td>\n          <td>Pyrosequencing</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">q-banding\n            <a name=\"genomicstudy-methodtype-q-banding\"> </a>\n          </td>\n          <td>Q-banding</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">qpcr\n            <a name=\"genomicstudy-methodtype-qpcr\"> </a>\n          </td>\n          <td>Quantitative PCR (qPCR)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">r-banding\n            <a name=\"genomicstudy-methodtype-r-banding\"> </a>\n          </td>\n          <td>R-banding</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rflp\n            <a name=\"genomicstudy-methodtype-rflp\"> </a>\n          </td>\n          <td>RFLP</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rt-lamp\n            <a name=\"genomicstudy-methodtype-rt-lamp\"> </a>\n          </td>\n          <td>RT-LAMP</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rt-pcr\n            <a name=\"genomicstudy-methodtype-rt-pcr\"> </a>\n          </td>\n          <td>RT-PCR</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rt-pcr-with-gel-analysis\n            <a name=\"genomicstudy-methodtype-rt-pcr-with-gel-analysis\"> </a>\n          </td>\n          <td>RT-PCR with gel analysis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rt-qpcr\n            <a name=\"genomicstudy-methodtype-rt-qpcr\"> </a>\n          </td>\n          <td>RT-qPCR</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">snp-detection\n            <a name=\"genomicstudy-methodtype-snp-detection\"> </a>\n          </td>\n          <td>SNP Detection</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">silver-staining\n            <a name=\"genomicstudy-methodtype-silver-staining\"> </a>\n          </td>\n          <td>Silver staining</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sky\n            <a name=\"genomicstudy-methodtype-sky\"> </a>\n          </td>\n          <td>Spectral karyotyping (SKY)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">t-banding\n            <a name=\"genomicstudy-methodtype-t-banding\"> </a>\n          </td>\n          <td>T-banding</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ms-ms\n            <a name=\"genomicstudy-methodtype-ms-ms\"> </a>\n          </td>\n          <td>Tandem mass spectrometry (MS/MS)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tetra-nucleotide-repeat-by-pcr-or-southern-blot\n            <a name=\"genomicstudy-methodtype-tetra-nucleotide-repeat-by-pcr-or-southern-blot\"> </a>\n          </td>\n          <td>Tetra-nucleotide repeat by PCR or Southern Blot</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tiling-arrays\n            <a name=\"genomicstudy-methodtype-tiling-arrays\"> </a>\n          </td>\n          <td>Tiling Arrays</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">trinucleotide-repeat-by-pcr-or-southern-blot\n            <a name=\"genomicstudy-methodtype-trinucleotide-repeat-by-pcr-or-southern-blot\"> </a>\n          </td>\n          <td>Trinucleotide repeat by PCR or Southern Blot</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">uni-directional-sanger-sequencing\n            <a name=\"genomicstudy-methodtype-uni-directional-sanger-sequencing\"> </a>\n          </td>\n          <td>Uni-directional Sanger sequencing</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cg"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/genomicstudy-methodtype"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1979" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "GenomicStudyMethodType"] ; # 
+  fhir:title [ fhir:v "Genomic Study Method Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2022-08-16T16:49:24-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The method type of the GenomicStudy analysis. These method types and relevant codes were pulled from [National Library of Medicine-Genetic Testing Registry](https://www.ncbi.nlm.nih.gov/gtr/) (NCBI-GTR) values of describing different testing methods on various levels: [major method category](https://ftp.ncbi.nlm.nih.gov/pub/GTR/standard_terms/Major_method_category.txt), [method category](https://ftp.ncbi.nlm.nih.gov/pub/GTR/standard_terms/Method_category.txt), and [primary methodology](https://ftp.ncbi.nlm.nih.gov/pub/GTR/standard_terms/Primary_test_methodology.txt)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/genomicstudy-methodtype"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/genomicstudy-methodtype>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "biochemical-genetics" ] ;
+     fhir:display [ fhir:v "Biochemical Genetics" ]
+  ] [
+     fhir:code [ fhir:v "cytogenetics" ] ;
+     fhir:display [ fhir:v "Cytogenetics" ]
+  ] [
+     fhir:code [ fhir:v "molecular-genetics" ] ;
+     fhir:display [ fhir:v "Molecular Genetics" ]
+  ] [
+     fhir:code [ fhir:v "analyte" ] ;
+     fhir:display [ fhir:v "Analyte" ]
+  ] [
+     fhir:code [ fhir:v "chromosome-breakage-studies" ] ;
+     fhir:display [ fhir:v "Chromosome breakage studies" ]
+  ] [
+     fhir:code [ fhir:v "deletion-duplication-analysis" ] ;
+     fhir:display [ fhir:v "Deletion/duplication analysis" ]
+  ] [
+     fhir:code [ fhir:v "detection-of-homozygosity" ] ;
+     fhir:display [ fhir:v "Detection of homozygosity" ]
+  ] [
+     fhir:code [ fhir:v "enzyme-assay" ] ;
+     fhir:display [ fhir:v "Enzyme assay" ]
+  ] [
+     fhir:code [ fhir:v "fish-interphase" ] ;
+     fhir:display [ fhir:v "FISH-interphase" ]
+  ] [
+     fhir:code [ fhir:v "fish-metaphase" ] ;
+     fhir:display [ fhir:v "FISH-metaphase" ]
+  ] [
+     fhir:code [ fhir:v "flow-cytometry" ] ;
+     fhir:display [ fhir:v "Flow cytometry" ]
+  ] [
+     fhir:code [ fhir:v "fish" ] ;
+     fhir:display [ fhir:v "Fluorescence in situ hybridization (FISH)" ]
+  ] [
+     fhir:code [ fhir:v "immunohistochemistry" ] ;
+     fhir:display [ fhir:v "Immunohistochemistry" ]
+  ] [
+     fhir:code [ fhir:v "karyotyping" ] ;
+     fhir:display [ fhir:v "Karyotyping" ]
+  ] [
+     fhir:code [ fhir:v "linkage-analysis" ] ;
+     fhir:display [ fhir:v "Linkage analysis" ]
+  ] [
+     fhir:code [ fhir:v "methylation-analysis" ] ;
+     fhir:display [ fhir:v "Methylation analysis" ]
+  ] [
+     fhir:code [ fhir:v "msi" ] ;
+     fhir:display [ fhir:v "Microsatellite instability testing (MSI)" ]
+  ] [
+     fhir:code [ fhir:v "m-fish" ] ;
+     fhir:display [ fhir:v "Multicolor FISH (M-FISH)" ]
+  ] [
+     fhir:code [ fhir:v "mutation-scanning-of-select-exons" ] ;
+     fhir:display [ fhir:v "Mutation scanning of select exons" ]
+  ] [
+     fhir:code [ fhir:v "mutation-scanning-of-the-entire-coding-region" ] ;
+     fhir:display [ fhir:v "Mutation scanning of the entire coding region" ]
+  ] [
+     fhir:code [ fhir:v "protein-analysis" ] ;
+     fhir:display [ fhir:v "Protein analysis" ]
+  ] [
+     fhir:code [ fhir:v "protein-expression" ] ;
+     fhir:display [ fhir:v "Protein expression" ]
+  ] [
+     fhir:code [ fhir:v "rna-analysis" ] ;
+     fhir:display [ fhir:v "RNA analysis" ]
+  ] [
+     fhir:code [ fhir:v "sequence-analysis-of-select-exons" ] ;
+     fhir:display [ fhir:v "Sequence analysis of select exons" ]
+  ] [
+     fhir:code [ fhir:v "sequence-analysis-of-the-entire-coding-region" ] ;
+     fhir:display [ fhir:v "Sequence analysis of the entire coding region" ]
+  ] [
+     fhir:code [ fhir:v "sister-chromatid-exchange" ] ;
+     fhir:display [ fhir:v "Sister chromatid exchange" ]
+  ] [
+     fhir:code [ fhir:v "targeted-variant-analysis" ] ;
+     fhir:display [ fhir:v "Targeted variant analysis" ]
+  ] [
+     fhir:code [ fhir:v "udp" ] ;
+     fhir:display [ fhir:v "Uniparental disomy study (UPD)" ]
+  ] [
+     fhir:code [ fhir:v "aspe" ] ;
+     fhir:display [ fhir:v "Allele-specific primer extension (ASPE)" ]
+  ] [
+     fhir:code [ fhir:v "alternative-splicing-detection" ] ;
+     fhir:display [ fhir:v "Alternative splicing detection" ]
+  ] [
+     fhir:code [ fhir:v "bi-directional-sanger-sequence-analysis" ] ;
+     fhir:display [ fhir:v "Bi-directional Sanger Sequence Analysis" ]
+  ] [
+     fhir:code [ fhir:v "c-banding" ] ;
+     fhir:display [ fhir:v "C-banding" ]
+  ] [
+     fhir:code [ fhir:v "cia" ] ;
+     fhir:display [ fhir:v "Chemiluminescent Immunoassay (CIA)" ]
+  ] [
+     fhir:code [ fhir:v "chromatin-immunoprecipitation-on-chip" ] ;
+     fhir:display [ fhir:v "Chromatin Immunoprecipitation on ChIP" ]
+  ] [
+     fhir:code [ fhir:v "comparative-genomic-hybridization" ] ;
+     fhir:display [ fhir:v "Comparative Genomic Hybridization" ]
+  ] [
+     fhir:code [ fhir:v "damid" ] ;
+     fhir:display [ fhir:v "DamID" ]
+  ] [
+     fhir:code [ fhir:v "digital-virtual-karyotyping" ] ;
+     fhir:display [ fhir:v "Digital / Virtual karyotyping" ]
+  ] [
+     fhir:code [ fhir:v "digital-microfluidic-microspheres" ] ;
+     fhir:display [ fhir:v "Digital microfluidic microspheres" ]
+  ] [
+     fhir:code [ fhir:v "enzymatic-levels" ] ;
+     fhir:display [ fhir:v "Enzymatic levels" ]
+  ] [
+     fhir:code [ fhir:v "enzyme-activity" ] ;
+     fhir:display [ fhir:v "Enzyme activity" ]
+  ] [
+     fhir:code [ fhir:v "elisa" ] ;
+     fhir:display [ fhir:v "Enzyme-Linked Immunosorbent Assays (ELISA)" ]
+  ] [
+     fhir:code [ fhir:v "fluorometry" ] ;
+     fhir:display [ fhir:v "Fluorometry" ]
+  ] [
+     fhir:code [ fhir:v "fusion-genes-microarrays" ] ;
+     fhir:display [ fhir:v "Fusion genes microarrays" ]
+  ] [
+     fhir:code [ fhir:v "g-banding" ] ;
+     fhir:display [ fhir:v "G-banding" ]
+  ] [
+     fhir:code [ fhir:v "gc-ms" ] ;
+     fhir:display [ fhir:v "Gas chromatographyâ€“mass spectrometry (GC-MS)" ]
+  ] [
+     fhir:code [ fhir:v "gene-expression-profiling" ] ;
+     fhir:display [ fhir:v "Gene expression profiling" ]
+  ] [
+     fhir:code [ fhir:v "gene-id" ] ;
+     fhir:display [ fhir:v "GeneID" ]
+  ] [
+     fhir:code [ fhir:v "gold-nanoparticle-probe-technology" ] ;
+     fhir:display [ fhir:v "Gold nanoparticle probe technology" ]
+  ] [
+     fhir:code [ fhir:v "hplc" ] ;
+     fhir:display [ fhir:v "High-performance liquid chromatography (HPLC)" ]
+  ] [
+     fhir:code [ fhir:v "lc-ms" ] ;
+     fhir:display [ fhir:v "Liquid chromatography mass spectrometry (LC-MS)" ]
+  ] [
+     fhir:code [ fhir:v "lc-ms-ms" ] ;
+     fhir:display [ fhir:v "Liquid chromatography-tandem mass spectrometry (LC-MS/MS)" ]
+  ] [
+     fhir:code [ fhir:v "metabolite-levels" ] ;
+     fhir:display [ fhir:v "Metabolite levels" ]
+  ] [
+     fhir:code [ fhir:v "methylation-specific-pcr" ] ;
+     fhir:display [ fhir:v "Methylation-specific PCR" ]
+  ] [
+     fhir:code [ fhir:v "microarray" ] ;
+     fhir:display [ fhir:v "Microarray" ]
+  ] [
+     fhir:code [ fhir:v "mlpa" ] ;
+     fhir:display [ fhir:v "Multiplex Ligation-dependent Probe Amplification (MLPA)" ]
+  ] [
+     fhir:code [ fhir:v "ngs-mps" ] ;
+     fhir:display [ fhir:v "Next-Generation (NGS)/Massively parallel sequencing (MPS)" ]
+  ] [
+     fhir:code [ fhir:v "ola" ] ;
+     fhir:display [ fhir:v "Oligonucleotide Ligation Assay (OLA)" ]
+  ] [
+     fhir:code [ fhir:v "oligonucleotide-hybridization-based-dna-sequencing" ] ;
+     fhir:display [ fhir:v "Oligonucleotide hybridization-based DNA sequencing" ]
+  ] [
+     fhir:code [ fhir:v "other" ] ;
+     fhir:display [ fhir:v "Other" ]
+  ] [
+     fhir:code [ fhir:v "pcr" ] ;
+     fhir:display [ fhir:v "PCR" ]
+  ] [
+     fhir:code [ fhir:v "pcr-with-allele-specific-hybridization" ] ;
+     fhir:display [ fhir:v "PCR with allele specific hybridization" ]
+  ] [
+     fhir:code [ fhir:v "pcr-rflp-with-southern-hybridization" ] ;
+     fhir:display [ fhir:v "PCR-RFLP with Southern hybridization" ]
+  ] [
+     fhir:code [ fhir:v "protein-truncation-test" ] ;
+     fhir:display [ fhir:v "Protein truncation test" ]
+  ] [
+     fhir:code [ fhir:v "pyrosequencing" ] ;
+     fhir:display [ fhir:v "Pyrosequencing" ]
+  ] [
+     fhir:code [ fhir:v "q-banding" ] ;
+     fhir:display [ fhir:v "Q-banding" ]
+  ] [
+     fhir:code [ fhir:v "qpcr" ] ;
+     fhir:display [ fhir:v "Quantitative PCR (qPCR)" ]
+  ] [
+     fhir:code [ fhir:v "r-banding" ] ;
+     fhir:display [ fhir:v "R-banding" ]
+  ] [
+     fhir:code [ fhir:v "rflp" ] ;
+     fhir:display [ fhir:v "RFLP" ]
+  ] [
+     fhir:code [ fhir:v "rt-lamp" ] ;
+     fhir:display [ fhir:v "RT-LAMP" ]
+  ] [
+     fhir:code [ fhir:v "rt-pcr" ] ;
+     fhir:display [ fhir:v "RT-PCR" ]
+  ] [
+     fhir:code [ fhir:v "rt-pcr-with-gel-analysis" ] ;
+     fhir:display [ fhir:v "RT-PCR with gel analysis" ]
+  ] [
+     fhir:code [ fhir:v "rt-qpcr" ] ;
+     fhir:display [ fhir:v "RT-qPCR" ]
+  ] [
+     fhir:code [ fhir:v "snp-detection" ] ;
+     fhir:display [ fhir:v "SNP Detection" ]
+  ] [
+     fhir:code [ fhir:v "silver-staining" ] ;
+     fhir:display [ fhir:v "Silver staining" ]
+  ] [
+     fhir:code [ fhir:v "sky" ] ;
+     fhir:display [ fhir:v "Spectral karyotyping (SKY)" ]
+  ] [
+     fhir:code [ fhir:v "t-banding" ] ;
+     fhir:display [ fhir:v "T-banding" ]
+  ] [
+     fhir:code [ fhir:v "ms-ms" ] ;
+     fhir:display [ fhir:v "Tandem mass spectrometry (MS/MS)" ]
+  ] [
+     fhir:code [ fhir:v "tetra-nucleotide-repeat-by-pcr-or-southern-blot" ] ;
+     fhir:display [ fhir:v "Tetra-nucleotide repeat by PCR or Southern Blot" ]
+  ] [
+     fhir:code [ fhir:v "tiling-arrays" ] ;
+     fhir:display [ fhir:v "Tiling Arrays" ]
+  ] [
+     fhir:code [ fhir:v "trinucleotide-repeat-by-pcr-or-southern-blot" ] ;
+     fhir:display [ fhir:v "Trinucleotide repeat by PCR or Southern Blot" ]
+  ] [
+     fhir:code [ fhir:v "uni-directional-sanger-sequencing" ] ;
+     fhir:display [ fhir:v "Uni-directional Sanger sequencing" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

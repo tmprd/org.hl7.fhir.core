@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OperationDefinition/Measure-submit-data> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Measure-submit-data"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: OperationDefinition Measure-submit-data</b>\n      </p>\n      <a name=\"Measure-submit-data\"> </a>\n      <a name=\"hcMeasure-submit-data\"> </a>\n      <p>URL: [base]/Measure/$submit-data</p>\n      <p>URL: [base]/Measure/[id]/$submit-data</p>\n      <h3>Parameters</h3>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Use</b>\n          </td>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Scope</b>\n          </td>\n          <td>\n            <b>Cardinality</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Binding</b>\n          </td>\n          <td>\n            <b>Documentation</b>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>measureReport</td>\n          <td/>\n          <td>1..1</td>\n          <td>\n            <a href=\"measurereport.html\">MeasureReport</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The measure report being submitted</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>resource</td>\n          <td/>\n          <td>0..*</td>\n          <td>\n            <a href=\"resource.html\">Resource</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The individual resources that make up the data-of-interest being submitted</p>\n\n            </div>\n          </td>\n        </tr>\n      </table>\n      <div>\n        <p>The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used for subsequent calculation of the relevant quality measure. The data-of-interest for a measure can be determined by examining the measure definition, or by invoking the $data-requirements operation</p>\n\n      </div>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cqi"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/OperationDefinition/Measure-submit-data"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "SubmitData"] ; # 
+  fhir:title [ fhir:v "Submit Data"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Quality Information"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/cqi" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The submit-data operation is used to submit data-of-interest for a measure. There is no expectation that the submitted data represents all the data-of-interest, only that all the data submitted is relevant to the calculation of the measure for a particular subject or population. The dataUpdateType element of the MeasureReport resource is used to indicate whether the data being submitted is a snapshot or incremental update. Additional guidance about data exchange for quality reporting can be found in the Data Exchange for Quality Measures implementation guide. Note that the use of the [X-Provenance header data](provenance.html#header) with data that establishes provenance being submitted/collected **SHOULD** be supported.  This provides the capability for associating the provider with the data submitted through the $submit-data transaction. If the X-Provenance header is used it should be consistent with the `reporter` element in the DEQM Data Exchange MeasureReport Profile."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:affectsState [ fhir:v false] ; # 
+  fhir:code [ fhir:v "submit-data"] ; # 
+  fhir:comment [ fhir:v "The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used for subsequent calculation of the relevant quality measure. The data-of-interest for a measure can be determined by examining the measure definition, or by invoking the $data-requirements operation"] ; # 
+  fhir:resource ( [ fhir:v "Measure"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v true] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "measureReport" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The measure report being submitted" ] ;
+     fhir:type [ fhir:v "MeasureReport" ]
+  ] [
+     fhir:name [ fhir:v "resource" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The individual resources that make up the data-of-interest being submitted" ] ;
+     fhir:type [ fhir:v "Resource" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

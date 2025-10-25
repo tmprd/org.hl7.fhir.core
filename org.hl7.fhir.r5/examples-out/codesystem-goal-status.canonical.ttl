@@ -1,0 +1,126 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/goal-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "goal-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem goal-status</b></p><a name=\"goal-status\"> </a><a name=\"hcgoal-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/goal-status</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">proposed<a name=\"goal-status-proposed\"> </a></td><td>Proposed</td><td>A goal is proposed for this patient.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">planned<a name=\"goal-status-planned\"> </a></td><td>Planned</td><td>A goal is planned for this patient.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">accepted<a name=\"goal-status-accepted\"> </a></td><td>Accepted</td><td>A proposed goal was accepted or acknowledged.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  active<a name=\"goal-status-active\"> </a></td><td>Active</td><td>The goal is being sought actively.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  on-hold<a name=\"goal-status-on-hold\"> </a></td><td>On Hold</td><td>The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  completed<a name=\"goal-status-completed\"> </a></td><td>Completed</td><td>The goal is no longer being sought.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">cancelled<a name=\"goal-status-cancelled\"> </a></td><td>Cancelled</td><td>The goal has been abandoned.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">entered-in-error<a name=\"goal-status-entered-in-error\"> </a></td><td>Entered in Error</td><td>The goal was entered in error and voided.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">rejected<a name=\"goal-status-rejected\"> </a></td><td>Rejected</td><td>A proposed goal was rejected.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pc"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/goal-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.272" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.267" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.150" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "GoalLifecycleStatus"] ; # 
+  fhir:title [ fhir:v "Goal Lifecycle Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes that reflect the current state of a goal and whether the goal is still being targeted."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/goal-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/goal-status>
+  ] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "proposed" ] ;
+     fhir:display [ fhir:v "Proposed" ] ;
+     fhir:definition [ fhir:v "A goal is proposed for this patient." ]
+  ] [
+     fhir:code [ fhir:v "planned" ] ;
+     fhir:display [ fhir:v "Planned" ] ;
+     fhir:definition [ fhir:v "A goal is planned for this patient." ]
+  ] [
+     fhir:code [ fhir:v "accepted" ] ;
+     fhir:display [ fhir:v "Accepted" ] ;
+     fhir:definition [ fhir:v "A proposed goal was accepted or acknowledged." ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ] ;
+       fhir:definition [ fhir:v "The goal is being sought actively." ]
+     ] [
+       fhir:code [ fhir:v "on-hold" ] ;
+       fhir:display [ fhir:v "On Hold" ] ;
+       fhir:definition [ fhir:v "The goal remains a long term objective but is no longer being actively pursued for a temporary period of time." ]
+     ] [
+       fhir:code [ fhir:v "completed" ] ;
+       fhir:display [ fhir:v "Completed" ] ;
+       fhir:definition [ fhir:v "The goal is no longer being sought." ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "cancelled" ] ;
+     fhir:display [ fhir:v "Cancelled" ] ;
+     fhir:definition [ fhir:v "The goal has been abandoned." ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The goal was entered in error and voided." ]
+  ] [
+     fhir:code [ fhir:v "rejected" ] ;
+     fhir:display [ fhir:v "Rejected" ] ;
+     fhir:definition [ fhir:v "A proposed goal was rejected." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

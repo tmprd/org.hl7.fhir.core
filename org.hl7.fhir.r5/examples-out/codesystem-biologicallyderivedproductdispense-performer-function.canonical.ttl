@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-performer-function> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "biologicallyderivedproductdispense-performer-function"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7.org/fhir/biologicallyderivedproductdispense-origin-relationship</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">grouping<a name=\"biologicallyderivedproductdispense-performer-function-grouping\"> </a></td><td>Grouping</td><td>ABO and RhD blood grouping procedure</td></tr><tr><td style=\"white-space:nowrap\">antibody-screening<a name=\"biologicallyderivedproductdispense-performer-function-antibody-screening\"> </a></td><td>Antibody Screening</td><td>Antibody screening procedure</td></tr><tr><td style=\"white-space:nowrap\">antibody-identification<a name=\"biologicallyderivedproductdispense-performer-function-antibody-identification\"> </a></td><td>Antibody Identification</td><td>Antibody identification procedure</td></tr><tr><td style=\"white-space:nowrap\">crossmatch<a name=\"biologicallyderivedproductdispense-performer-function-crossmatch\"> </a></td><td>Crossmatch</td><td>Serological or electronic crossmatch procedure</td></tr><tr><td style=\"white-space:nowrap\">release<a name=\"biologicallyderivedproductdispense-performer-function-release\"> </a></td><td>Release</td><td>Approval for release for clinical application</td></tr><tr><td style=\"white-space:nowrap\">transport<a name=\"biologicallyderivedproductdispense-performer-function-transport\"> </a></td><td>Transport</td><td>Transfer of product from the supply department to the site of clinical use</td></tr><tr><td style=\"white-space:nowrap\">receipt<a name=\"biologicallyderivedproductdispense-performer-function-receipt\"> </a></td><td>Receipt</td><td>Receipt of product for clinical application</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "informative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-performer-function"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "BiologicallyDerivedProductDispensePerformerFunction"] ; # 
+  fhir:title [ fhir:v "Biologically Derived Product Dispense Performer Function"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-01-29T21:19:50+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Biologically Derived Product Dispense Performer Function"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-performer-function"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-performer-function>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "group-and-type" ] ;
+     fhir:display [ fhir:v "Group and Type" ] ;
+     fhir:definition [ fhir:v "ABO and RhD blood grouping procedure" ]
+  ] [
+     fhir:code [ fhir:v "antibody-screen" ] ;
+     fhir:display [ fhir:v "Antibody Screen" ] ;
+     fhir:definition [ fhir:v "Antibody screening procedure" ]
+  ] [
+     fhir:code [ fhir:v "antibody-identification" ] ;
+     fhir:display [ fhir:v "Antibody Identification" ] ;
+     fhir:definition [ fhir:v "Antibody identification procedure" ]
+  ] [
+     fhir:code [ fhir:v "crossmatch" ] ;
+     fhir:display [ fhir:v "Crossmatch" ] ;
+     fhir:definition [ fhir:v "Serological or electronic crossmatch procedure" ]
+  ] [
+     fhir:code [ fhir:v "release" ] ;
+     fhir:display [ fhir:v "Release" ] ;
+     fhir:definition [ fhir:v "Approval for release for clinical application" ]
+  ] [
+     fhir:code [ fhir:v "transport" ] ;
+     fhir:display [ fhir:v "Transport" ] ;
+     fhir:definition [ fhir:v "Transfer of product from the supply department to the site of clinical use" ]
+  ] [
+     fhir:code [ fhir:v "receipt" ] ;
+     fhir:display [ fhir:v "Receipt" ] ;
+     fhir:definition [ fhir:v "Receipt of product for clinical application" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,217 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Bundle/bundle-transaction> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bundle-transaction"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2014-08-18T01:43:30Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Patient"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Patient"^^xsd:anyURI ] ;
+       fhir:ifNoneExist [ fhir:v "identifier=http:/example.org/fhir/ids|234234" ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/fhir/Patient/123"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/fhir/Patient/123> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Patient/123"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:74891afc-ed52-42a2-bcd7-f13d9b60f096"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:74891afc-ed52-42a2-bcd7-f13d9b60f096> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Patient?identifier=http:/example.org/fhir/ids|456456"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/fhir/Patient/123a"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/fhir/Patient/123a> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Patient/123a"^^xsd:anyURI ] ;
+       fhir:ifMatch [ fhir:v "W/\"2\"" ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f6240915-8e9f-4e21-ac6d-ea68ff6b90eb"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f6240915-8e9f-4e21-ac6d-ea68ff6b90eb> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "Provenance"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:request [
+       fhir:method [ fhir:v "DELETE" ] ;
+       fhir:url [ fhir:v "Patient/234"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:request [
+       fhir:method [ fhir:v "DELETE" ] ;
+       fhir:url [ fhir:v "Patient?identifier=123456"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/$lookup"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:request [
+       fhir:method [ fhir:v "GET" ] ;
+       fhir:url [ fhir:v "Patient?name=peter"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:request [
+       fhir:method [ fhir:v "GET" ] ;
+       fhir:url [ fhir:v "Patient/12334"^^xsd:anyURI ] ;
+       fhir:ifNoneMatch [ fhir:v "W/\"4\"" ] ;
+       fhir:ifModifiedSince [ fhir:v "2015-08-31T08:14:33+10:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a> a fhir:Patient ;
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Chalmers" ] ;
+     fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] . # 
+
+<urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059> a fhir:Patient ;
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http:/example.org/fhir/ids"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "234234" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Chalmers" ] ;
+     fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] . # 
+
+<http://example.org/fhir/Patient/123> a fhir:Patient ;
+  fhir:id [ fhir:v "123"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Chalmers" ] ;
+     fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] . # 
+
+<urn:uuid:74891afc-ed52-42a2-bcd7-f13d9b60f096> a fhir:Patient ;
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http:/example.org/fhir/ids"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "456456" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Chalmers" ] ;
+     fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] . # 
+
+<http://example.org/fhir/Patient/123a> a fhir:Patient ;
+  fhir:id [ fhir:v "123a"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Chalmers" ] ;
+     fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1974-12-25"^^xsd:date] . # 
+
+<urn:uuid:f6240915-8e9f-4e21-ac6d-ea68ff6b90eb> a fhir:Provenance ;
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance </b></p><p>Provenance for: </p><ul><li><a href=\"broken-link.html\">urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059</a></li><li><a href=\"broken-link.html\">http://example.org/fhir/Patient/123a</a></li></ul><p>Summary</p><table class=\"grid\"><tr><td>Activity</td><td><span title=\"Codes:\">data entry</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td>Clerical Staff</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:target ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resolve-as-version-specific"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] ) ;
+     fhir:reference [ fhir:v "urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059" ]
+  ] [
+     fhir:link <http://example.org/fhir/Patient/123a> ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resolve-as-version-specific"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] ) ;
+     fhir:reference [ fhir:v "http://example.org/fhir/Patient/123a" ]
+  ] ) ; # 
+  fhir:activity [
+     fhir:text [ fhir:v "data entry" ]
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:display [ fhir:v "Clerical Staff" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:79378cb8-8f58-48e8-a5e8-60ac2755b674> a fhir:Parameters ;
+  fhir:parameter ( [
+     fhir:name [ fhir:v "coding" ] ;
+     fhir:value [
+       a fhir:Coding, loinc:1963-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1963-8" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

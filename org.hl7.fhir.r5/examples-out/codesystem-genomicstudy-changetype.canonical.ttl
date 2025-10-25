@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/genomicstudy-changetype> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "genomicstudy-changetype"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T19:27:59.321-05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem genomicstudy-changetype</b></p><a name=\"genomicstudy-changetype\"> </a><a name=\"hcgenomicstudy-changetype\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2022-08-17T15:47:24.148-05:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/genomicstudy-changetype</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">DNA<a name=\"genomicstudy-changetype-DNA\"> </a></td><td>DNA change</td><td>Change that involves Deoxyribonucleic acid (DNA) sequences.</td></tr><tr><td style=\"white-space:nowrap\">RNA<a name=\"genomicstudy-changetype-RNA\"> </a></td><td>RNA change</td><td>Change that involves Ribonucleic Acid (RNA) sequences.</td></tr><tr><td style=\"white-space:nowrap\">AA<a name=\"genomicstudy-changetype-AA\"> </a></td><td>Protein/amino Acids change </td><td>Change that involves Amino Acid (AA) or protein sequences.</td></tr><tr><td style=\"white-space:nowrap\">CHR<a name=\"genomicstudy-changetype-CHR\"> </a></td><td>Chromosomal changes</td><td>Change that involves number or strcture of chromosomes.</td></tr><tr><td style=\"white-space:nowrap\">CNV<a name=\"genomicstudy-changetype-CNV\"> </a></td><td>Copy number variations</td><td>Change that involves copy number variations among various genomes.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cg"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/genomicstudy-changetype"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1977" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "GenomicStudyChangeType"] ; # 
+  fhir:title [ fhir:v "Genomic Study Change Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2022-08-17T15:48:24-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The change type relevant to GenomicStudy analysis."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/genomicstudy-changetype"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/genomicstudy-changetype>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "DNA" ] ;
+     fhir:display [ fhir:v "DNA change" ] ;
+     fhir:definition [ fhir:v "Change that involves Deoxyribonucleic acid (DNA) sequences." ]
+  ] [
+     fhir:code [ fhir:v "RNA" ] ;
+     fhir:display [ fhir:v "RNA change" ] ;
+     fhir:definition [ fhir:v "Change that involves Ribonucleic Acid (RNA) sequences." ]
+  ] [
+     fhir:code [ fhir:v "AA" ] ;
+     fhir:display [ fhir:v "Protein/amino Acids change " ] ;
+     fhir:definition [ fhir:v "Change that involves Amino Acid (AA) or protein sequences." ]
+  ] [
+     fhir:code [ fhir:v "CHR" ] ;
+     fhir:display [ fhir:v "Chromosomal changes" ] ;
+     fhir:definition [ fhir:v "Change that involves number or strcture of chromosomes." ]
+  ] [
+     fhir:code [ fhir:v "CNV" ] ;
+     fhir:display [ fhir:v "Copy number variations" ] ;
+     fhir:definition [ fhir:v "Change that involves copy number variations among various genomes." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

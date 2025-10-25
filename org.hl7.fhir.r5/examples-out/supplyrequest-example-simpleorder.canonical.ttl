@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/SupplyRequest/simpleorder> a fhir:SupplyRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "simpleorder"] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "Order10284" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       fhir:code [ fhir:v "central" ] ;
+       fhir:display [ fhir:v "Central Stock Resupply" ]
+     ] )
+  ] ; # 
+  fhir:priority [ fhir:v "asap"] ; # 
+  fhir:item [
+     fhir:concept [
+       fhir:coding ( [
+         fhir:code [ fhir:v "BlueTubes" ] ;
+         fhir:display [ fhir:v "Blood collect tubes blue cap" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:quantity [
+     fhir:value [ fhir:v "10"^^xsd:decimal ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2016-12-31"^^xsd:date
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2016-12-31"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:display [ fhir:v "Henry Seven" ]
+  ] ; # 
+  fhir:supplier ( [
+     fhir:display [ fhir:v "Vendor1" ]
+  ] ) ; # 
+  fhir:reason ( [
+     fhir:concept [
+       fhir:coding ( [
+         fhir:code [ fhir:v "stock_low" ] ;
+         fhir:display [ fhir:v "Refill due to low stock" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:deliverFrom [
+     fhir:display [ fhir:v "Location 1" ]
+  ] ; # 
+  fhir:deliverTo [
+     fhir:display [ fhir:v "GoodHealth Clinic Receiving" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

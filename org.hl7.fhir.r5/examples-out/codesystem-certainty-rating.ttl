@@ -1,0 +1,144 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/certainty-rating> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "certainty-rating"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem certainty-rating</b>\n      </p>\n      <a name=\"certainty-rating\"> </a>\n      <a name=\"hccertainty-rating\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/certainty-rating</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">high\n            <a name=\"certainty-rating-high\"> </a>\n          </td>\n          <td>High quality</td>\n          <td>High quality evidence.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">moderate\n            <a name=\"certainty-rating-moderate\"> </a>\n          </td>\n          <td>Moderate quality</td>\n          <td>Moderate quality evidence.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">low\n            <a name=\"certainty-rating-low\"> </a>\n          </td>\n          <td>Low quality</td>\n          <td>Low quality evidence.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">very-low\n            <a name=\"certainty-rating-very-low\"> </a>\n          </td>\n          <td>Very low quality</td>\n          <td>Very low quality evidence.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">no-concern\n            <a name=\"certainty-rating-no-concern\"> </a>\n          </td>\n          <td>no serious concern</td>\n          <td>no serious concern.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">serious-concern\n            <a name=\"certainty-rating-serious-concern\"> </a>\n          </td>\n          <td>serious concern</td>\n          <td>serious concern.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">very-serious-concern\n            <a name=\"certainty-rating-very-serious-concern\"> </a>\n          </td>\n          <td>very serious concern</td>\n          <td>very serious concern.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">extremely-serious-concern\n            <a name=\"certainty-rating-extremely-serious-concern\"> </a>\n          </td>\n          <td>extremely serious concern</td>\n          <td>extremely serious concern.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">present\n            <a name=\"certainty-rating-present\"> </a>\n          </td>\n          <td>present</td>\n          <td>possible reason for increasing quality rating was checked and found to be present.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">absent\n            <a name=\"certainty-rating-absent\"> </a>\n          </td>\n          <td>absent</td>\n          <td>possible reason for increasing quality rating was checked and found to be absent.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">no-change\n            <a name=\"certainty-rating-no-change\"> </a>\n          </td>\n          <td>no change to rating</td>\n          <td>no change to quality rating.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">downcode1\n            <a name=\"certainty-rating-downcode1\"> </a>\n          </td>\n          <td>reduce rating: -1</td>\n          <td>reduce quality rating by 1.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">downcode2\n            <a name=\"certainty-rating-downcode2\"> </a>\n          </td>\n          <td>reduce rating: -2</td>\n          <td>reduce quality rating by 2.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">downcode3\n            <a name=\"certainty-rating-downcode3\"> </a>\n          </td>\n          <td>reduce rating: -3</td>\n          <td>reduce quality rating by 3.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">upcode1\n            <a name=\"certainty-rating-upcode1\"> </a>\n          </td>\n          <td>increase rating: +1</td>\n          <td>increase quality rating by 1.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">upcode2\n            <a name=\"certainty-rating-upcode2\"> </a>\n          </td>\n          <td>increase rating: +2</td>\n          <td>increase quality rating by 2.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/certainty-rating"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1941" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "EvidenceCertaintyRating"] ; # 
+  fhir:title [ fhir:v "Evidence Certainty Rating"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The assessment of quality, confidence, or certainty."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/certainty-rating"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/certainty-rating>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "high" ] ;
+     fhir:display [ fhir:v "High quality" ] ;
+     fhir:definition [ fhir:v "High quality evidence." ]
+  ] [
+     fhir:code [ fhir:v "moderate" ] ;
+     fhir:display [ fhir:v "Moderate quality" ] ;
+     fhir:definition [ fhir:v "Moderate quality evidence." ]
+  ] [
+     fhir:code [ fhir:v "low" ] ;
+     fhir:display [ fhir:v "Low quality" ] ;
+     fhir:definition [ fhir:v "Low quality evidence." ]
+  ] [
+     fhir:code [ fhir:v "very-low" ] ;
+     fhir:display [ fhir:v "Very low quality" ] ;
+     fhir:definition [ fhir:v "Very low quality evidence." ]
+  ] [
+     fhir:code [ fhir:v "no-concern" ] ;
+     fhir:display [ fhir:v "no serious concern" ] ;
+     fhir:definition [ fhir:v "no serious concern." ]
+  ] [
+     fhir:code [ fhir:v "serious-concern" ] ;
+     fhir:display [ fhir:v "serious concern" ] ;
+     fhir:definition [ fhir:v "serious concern." ]
+  ] [
+     fhir:code [ fhir:v "very-serious-concern" ] ;
+     fhir:display [ fhir:v "very serious concern" ] ;
+     fhir:definition [ fhir:v "very serious concern." ]
+  ] [
+     fhir:code [ fhir:v "extremely-serious-concern" ] ;
+     fhir:display [ fhir:v "extremely serious concern" ] ;
+     fhir:definition [ fhir:v "extremely serious concern." ]
+  ] [
+     fhir:code [ fhir:v "present" ] ;
+     fhir:display [ fhir:v "present" ] ;
+     fhir:definition [ fhir:v "possible reason for increasing quality rating was checked and found to be present." ]
+  ] [
+     fhir:code [ fhir:v "absent" ] ;
+     fhir:display [ fhir:v "absent" ] ;
+     fhir:definition [ fhir:v "possible reason for increasing quality rating was checked and found to be absent." ]
+  ] [
+     fhir:code [ fhir:v "no-change" ] ;
+     fhir:display [ fhir:v "no change to rating" ] ;
+     fhir:definition [ fhir:v "no change to quality rating." ]
+  ] [
+     fhir:code [ fhir:v "downcode1" ] ;
+     fhir:display [ fhir:v "reduce rating: -1" ] ;
+     fhir:definition [ fhir:v "reduce quality rating by 1." ]
+  ] [
+     fhir:code [ fhir:v "downcode2" ] ;
+     fhir:display [ fhir:v "reduce rating: -2" ] ;
+     fhir:definition [ fhir:v "reduce quality rating by 2." ]
+  ] [
+     fhir:code [ fhir:v "downcode3" ] ;
+     fhir:display [ fhir:v "reduce rating: -3" ] ;
+     fhir:definition [ fhir:v "reduce quality rating by 3." ]
+  ] [
+     fhir:code [ fhir:v "upcode1" ] ;
+     fhir:display [ fhir:v "increase rating: +1" ] ;
+     fhir:definition [ fhir:v "increase quality rating by 1." ]
+  ] [
+     fhir:code [ fhir:v "upcode2" ] ;
+     fhir:display [ fhir:v "increase rating: +2" ] ;
+     fhir:definition [ fhir:v "increase quality rating by 2." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

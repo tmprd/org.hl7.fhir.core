@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Observation/herd1> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "herd1"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] ) ;
+     fhir:text [ fhir:v "Laboratory" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:80219-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80219-9" ] ;
+       fhir:display [ fhir:v "Mycoplasma hyopneumoniae Ab sample/Positive control in Serum by Immunoassay" ]
+     ] [
+       fhir:system [ fhir:v "http://acme.org/devices/clinical-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Mycoplasma" ] ;
+       fhir:display [ fhir:v "Mycoplasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Mycoplasma hyopneumoniae - MHP" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Group/herd1> ;
+     fhir:reference [ fhir:v "Group/herd1" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:display [ fhir:v "part of a health assurance program" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2017-11-20"^^xsd:date
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.2 ] ;
+     fhir:unit [ fhir:v "% (sample/positive control)" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "%" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NEG" ] ;
+       fhir:display [ fhir:v "Negative" ]
+     ] ) ;
+     fhir:text [ fhir:v "Negative" ]
+  ] ) ; # 
+  fhir:specimen [
+     fhir:link <http://hl7.org/fhir/Specimen/pooled-serum> ;
+     fhir:reference [ fhir:v "Specimen/pooled-serum" ] ;
+     fhir:display [ fhir:v "30 serum" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:text [ fhir:v ">0.4 Positive; 0.3 to 0.4 Suspect < 0.3 Negative" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Group/herd1> a fhir:Group .
+
+<http://hl7.org/fhir/Specimen/pooled-serum> a fhir:Specimen .
+
+# -------------------------------------------------------------------------------------
+

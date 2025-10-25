@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/http-operations> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "http-operations"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem http-operations</b>\n      </p>\n      <a name=\"http-operations\"> </a>\n      <a name=\"hchttp-operations\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/http-operations</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">delete\n            <a name=\"http-operations-delete\"> </a>\n          </td>\n          <td>DELETE</td>\n          <td>HTTP DELETE operation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">get\n            <a name=\"http-operations-get\"> </a>\n          </td>\n          <td>GET</td>\n          <td>HTTP GET operation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">options\n            <a name=\"http-operations-options\"> </a>\n          </td>\n          <td>OPTIONS</td>\n          <td>HTTP OPTIONS operation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">patch\n            <a name=\"http-operations-patch\"> </a>\n          </td>\n          <td>PATCH</td>\n          <td>HTTP PATCH operation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">post\n            <a name=\"http-operations-post\"> </a>\n          </td>\n          <td>POST</td>\n          <td>HTTP POST operation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">put\n            <a name=\"http-operations-put\"> </a>\n          </td>\n          <td>PUT</td>\n          <td>HTTP PUT operation.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">head\n            <a name=\"http-operations-head\"> </a>\n          </td>\n          <td>HEAD</td>\n          <td>HTTP HEAD operation.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/http-operations"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.717" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.705" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "TestScriptRequestMethodCode"] ; # 
+  fhir:title [ fhir:v "Test Script Request Method Code"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The allowable request method or HTTP operation codes."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/http-operations"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/http-operations>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "delete" ] ;
+     fhir:display [ fhir:v "DELETE" ] ;
+     fhir:definition [ fhir:v "HTTP DELETE operation." ]
+  ] [
+     fhir:code [ fhir:v "get" ] ;
+     fhir:display [ fhir:v "GET" ] ;
+     fhir:definition [ fhir:v "HTTP GET operation." ]
+  ] [
+     fhir:code [ fhir:v "options" ] ;
+     fhir:display [ fhir:v "OPTIONS" ] ;
+     fhir:definition [ fhir:v "HTTP OPTIONS operation." ]
+  ] [
+     fhir:code [ fhir:v "patch" ] ;
+     fhir:display [ fhir:v "PATCH" ] ;
+     fhir:definition [ fhir:v "HTTP PATCH operation." ]
+  ] [
+     fhir:code [ fhir:v "post" ] ;
+     fhir:display [ fhir:v "POST" ] ;
+     fhir:definition [ fhir:v "HTTP POST operation." ]
+  ] [
+     fhir:code [ fhir:v "put" ] ;
+     fhir:display [ fhir:v "PUT" ] ;
+     fhir:definition [ fhir:v "HTTP PUT operation." ]
+  ] [
+     fhir:code [ fhir:v "head" ] ;
+     fhir:display [ fhir:v "HEAD" ] ;
+     fhir:definition [ fhir:v "HTTP HEAD operation." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

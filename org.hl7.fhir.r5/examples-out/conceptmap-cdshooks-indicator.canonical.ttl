@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ConceptMap/cdshooks-indicator> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cdshooks-indicator"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ConceptMap cdshooks-indicator</b>\n      </p>\n      <a name=\"cdshooks-indicator\"> </a>\n      <a name=\"hccdshooks-indicator\"> </a>\n      <p>Mapping from http://cds-hooks.hl7.org/ValueSet/indicator to \n        <a href=\"valueset-request-priority.html\">RequestPriority</a>\n      </p>\n      <br/>\n      <p>\n        <b>Group 1 </b>Mapping from \n        <code>unspecified code system</code> to \n        <code>unspecified code system</code>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Source Code</b>\n          </td>\n          <td>\n            <b>Relationship</b>\n          </td>\n          <td>\n            <b>Target Code</b>\n          </td>\n        </tr>\n        <tr>\n          <td>info</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td>routine</td>\n        </tr>\n        <tr>\n          <td>warning</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td>urgent</td>\n        </tr>\n        <tr>\n          <td>critical</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td>stat</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "vocab"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://cds-hooks.hl7.org/ConceptMap/indicator-to-request-priority"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.14.6" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "IndicatorToRequestPriority"] ; # 
+  fhir:title [ fhir:v "Indicator To Request Priority"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Terminology Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/Vocab" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Mapping between CDS Hooks Indicator and Request Priority"] ; # 
+  fhir:sourceScope [
+     a fhir:canonical ;
+     fhir:v "http://cds-hooks.hl7.org/ValueSet/indicator"^^xsd:anyURI ;
+     fhir:link <http://cds-hooks.hl7.org/ValueSet/indicator>
+  ] ; # 
+  fhir:targetScope [
+     a fhir:canonical ;
+     fhir:v "http://hl7.org/fhir/ValueSet/request-priority"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/request-priority>
+  ] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "info" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "routine" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "warning" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "urgent" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "critical" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "stat" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

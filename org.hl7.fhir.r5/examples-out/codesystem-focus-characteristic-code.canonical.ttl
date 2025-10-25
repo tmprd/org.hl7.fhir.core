@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/focus-characteristic-code> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "focus-characteristic-code"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem focus-characteristic-code</b></p><a name=\"focus-characteristic-code\"> </a><a name=\"hcfocus-characteristic-code\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/focus-characteristic-code</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">citation<a name=\"focus-characteristic-code-citation\"> </a></td><td>Citation</td><td>Used to reference a specific article.</td></tr><tr><td style=\"white-space:nowrap\">clinical-outcomes-observed<a name=\"focus-characteristic-code-clinical-outcomes-observed\"> </a></td><td>Observed outcomes are clinical outcomes</td><td>Used to denote a focus on clinical outcomes, ie evidence variable in role of outcome (measured variable) as observed is considered a \"clinical outcome\" (patient-important outcome such as mortality, symptoms, function or quality of life).</td></tr><tr><td style=\"white-space:nowrap\">population<a name=\"focus-characteristic-code-population\"> </a></td><td>Population</td><td>The population of interest.</td></tr><tr><td style=\"white-space:nowrap\">exposure<a name=\"focus-characteristic-code-exposure\"> </a></td><td>Exposure</td><td>The exposure of interest, such as an intervention.</td></tr><tr><td style=\"white-space:nowrap\">comparator<a name=\"focus-characteristic-code-comparator\"> </a></td><td>Comparator</td><td>The comparator (intervention or control state) of interest.</td></tr><tr><td style=\"white-space:nowrap\">outcome<a name=\"focus-characteristic-code-outcome\"> </a></td><td>Outcome</td><td>the outcome of interest.</td></tr><tr><td style=\"white-space:nowrap\">medication-exposures<a name=\"focus-characteristic-code-medication-exposures\"> </a></td><td>Medication exposures</td><td>Any medication exposures. A subset of exposures or interventions that are medications.</td></tr><tr><td style=\"white-space:nowrap\">study-type<a name=\"focus-characteristic-code-study-type\"> </a></td><td>Study type</td><td>Type of research study, such as randomized trial or case-control study.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/focus-characteristic-code"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1960" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "FocusCharacteristicCode"] ; # 
+  fhir:title [ fhir:v "Focus Characteristic Code"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Evidence focus characteristic code."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/focus-characteristic-code"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/focus-characteristic-code>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "citation" ] ;
+     fhir:display [ fhir:v "Citation" ] ;
+     fhir:definition [ fhir:v "Used to reference a specific article." ]
+  ] [
+     fhir:code [ fhir:v "clinical-outcomes-observed" ] ;
+     fhir:display [ fhir:v "Observed outcomes are clinical outcomes" ] ;
+     fhir:definition [ fhir:v "Used to denote a focus on clinical outcomes, ie evidence variable in role of outcome (measured variable) as observed is considered a \"clinical outcome\" (patient-important outcome such as mortality, symptoms, function or quality of life)." ]
+  ] [
+     fhir:code [ fhir:v "population" ] ;
+     fhir:display [ fhir:v "Population" ] ;
+     fhir:definition [ fhir:v "The population of interest." ]
+  ] [
+     fhir:code [ fhir:v "exposure" ] ;
+     fhir:display [ fhir:v "Exposure" ] ;
+     fhir:definition [ fhir:v "The exposure of interest, such as an intervention." ]
+  ] [
+     fhir:code [ fhir:v "comparator" ] ;
+     fhir:display [ fhir:v "Comparator" ] ;
+     fhir:definition [ fhir:v "The comparator (intervention or control state) of interest." ]
+  ] [
+     fhir:code [ fhir:v "outcome" ] ;
+     fhir:display [ fhir:v "Outcome" ] ;
+     fhir:definition [ fhir:v "the outcome of interest." ]
+  ] [
+     fhir:code [ fhir:v "medication-exposures" ] ;
+     fhir:display [ fhir:v "Medication exposures" ] ;
+     fhir:definition [ fhir:v "Any medication exposures. A subset of exposures or interventions that are medications." ]
+  ] [
+     fhir:code [ fhir:v "study-type" ] ;
+     fhir:display [ fhir:v "Study type" ] ;
+     fhir:definition [ fhir:v "Type of research study, such as randomized trial or case-control study." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

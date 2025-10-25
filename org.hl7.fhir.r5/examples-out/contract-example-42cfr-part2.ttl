@@ -1,0 +1,152 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Contract/C-2121> a fhir:Contract ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "C-2121"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2016-07-19T18:18:42.108-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:status [ fhir:v "executed"] ; # 
+  fhir:contentDerivative [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contract-content-derivative"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "registration" ]
+     ] )
+  ] ; # 
+  fhir:issued [ fhir:v "2013-11-01T21:18:27-04:00"^^xsd:dateTime] ; # 
+  fhir:applies [
+     fhir:start [ fhir:v "2013-11-01T21:18:27-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:subject ( [
+     fhir:link <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://mdhhs.org/fhir/consentdirective-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "OPTIN" ]
+     ] ) ;
+     fhir:text [ fhir:v "Opt-in consent directive" ]
+  ] ; # 
+  fhir:subType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentcategorycodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "hcd" ]
+     ] ) #        <code value=\"MDHHS-5515\"\/>\n      <display\n        value=\"Michigan MDHHS-5515 Consent to Share Behavioral Health Information for Care Coordination Purposes\"\n      \/>  
+  ] ) ; # 
+  fhir:term ( [
+     fhir:offer [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contracttermtypecodes"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "statutory" ]
+         ] )
+       ] ;
+       fhir:decision [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "OPTIN" ]
+         ] )
+       ] ;
+       fhir:text [ fhir:v "Can't refuse" ]
+     ] ;
+     fhir:asset ( [
+       fhir:period ( [
+         fhir:start [ fhir:v "2013-11-01T21:18:27-04:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2019-11-01T21:18:27-04:00"^^xsd:dateTime ]
+       ] )
+     ] ) ; #  \n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-Confidentiality\"\/>\n        <code value=\"R\"\/>\n        <display value=\"Restricted\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActCode\"\/>\n        <code value=\"ETH\"\/>\n        <display value=\"substance abuse information sensitivity\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActCode\"\/>\n        <code value=\"42CFRPart2\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActReason\"\/>\n        <code value=\"TREAT\"\/>\n        <display value=\"treatment\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActReason\"\/>\n        <code value=\"HPAYMT\"\/>\n        <display value=\"healthcare payment\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActReason\"\/>\n        <code value=\"HOPERAT\"\/>\n        <display value=\"healthcare operations\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActCode\"\/>\n        <code value=\"PERSISTLABEL\"\/>\n        <display value=\"persist security label\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActCode\"\/>\n        <code value=\"PRIVMARK\"\/>\n        <display value=\"privacy mark\"\/>\n      <\/securityLabel>\n      <securityLabel>\n        <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-ActCode\"\/>\n        <code value=\"NORDSCLCD\"\/>\n        <display value=\"no redisclosure without consent directive\"\/>\n      <\/securityLabel>\n     
+     fhir:action ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/contractaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "action-a" ]
+         ] )
+       ] ;
+       fhir:subject ( [
+         fhir:reference ( [
+           fhir:link <http://hl7.org/fhir/Organization/f001> ;
+           fhir:reference [ fhir:v "Organization/f001" ] ;
+           fhir:display [ fhir:v "VA Ann Arbor Healthcare System" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://mdhhs.org/fhir/consent-actor-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "IR" ] ;
+             fhir:display [ fhir:v "Recipient" ]
+           ] ) ;
+           fhir:text [ fhir:v "Recipient of restricted health information" ]
+         ]
+       ] [
+         fhir:reference ( [
+           fhir:link <http://hl7.org/fhir/Organization/2> ;
+           fhir:reference [ fhir:v "Organization/2" ] ;
+           fhir:display [ fhir:v "Community Mental Health Clinic" ]
+         ] ) ;
+         fhir:role [
+           fhir:coding ( [
+             fhir:system [ fhir:v "http://mdhhs.org/fhir/consent-actor-type"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "IS" ] ;
+             fhir:display [ fhir:v "Sender" ]
+           ] ) ;
+           fhir:text [ fhir:v "Sender of restricted health information" ]
+         ]
+       ] ) ;
+       fhir:intent [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HPRGRP" ]
+         ] )
+       ] ;
+       fhir:status [
+         fhir:text [ fhir:v "Sample" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:signer ( [
+     fhir:type [
+       fhir:system [ fhir:v "http://mdhhs.org/fhir/consent-signer-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SELF" ]
+     ] ;
+     fhir:party [
+       fhir:link <http://hl7.org/fhir/Patient/f201> ;
+       fhir:reference [ fhir:v "Patient/f201" ] ;
+       fhir:display [ fhir:v "Alice Recruit" ]
+     ] ;
+     fhir:signature ( [
+       fhir:type ( [
+         fhir:system [ fhir:v "urn:iso-astm:E1762-95:2013"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1.2.840.10065.1.12.1.1" ]
+       ] ) ;
+       fhir:when [ fhir:v "2017-02-08T10:57:34+01:00"^^xsd:dateTime ] ;
+       fhir:who [
+         fhir:link <http://hl7.org/fhir/Patient/f201> ;
+         fhir:reference [ fhir:v "Patient/f201" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:legal ( [
+     fhir:content [
+       a fhir:Attachment ;
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:language [ fhir:v "en-US" ] ;
+       fhir:url [ fhir:v "http://org.mihin.ecms/ConsentDirective-2121"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "MDHHS-5515 Consent To Share Your Health Information" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+<http://hl7.org/fhir/Organization/2> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

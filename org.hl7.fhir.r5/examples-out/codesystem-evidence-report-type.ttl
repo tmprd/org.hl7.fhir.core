@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/evidence-report-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "evidence-report-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem evidence-report-type</b>\n      </p>\n      <a name=\"evidence-report-type\"> </a>\n      <a name=\"hcevidence-report-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/evidence-report-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">classification\n            <a name=\"evidence-report-type-classification\"> </a>\n          </td>\n          <td>Classification</td>\n          <td>The report is primarily a listing of classifiers about the report subject.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">search-results\n            <a name=\"evidence-report-type-search-results\"> </a>\n          </td>\n          <td>Search Results</td>\n          <td>The report is a composition of results generated in response to a search query.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">resources-compiled\n            <a name=\"evidence-report-type-resources-compiled\"> </a>\n          </td>\n          <td>Resource Compilation</td>\n          <td>The report is a composition containing one or more FHIR resources in the content.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">text-structured\n            <a name=\"evidence-report-type-text-structured\"> </a>\n          </td>\n          <td>Structured Text</td>\n          <td>The report is a structured representation of text.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/evidence-report-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1957" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "EvidenceReportType"] ; # 
+  fhir:title [ fhir:v "Evidence Report Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The kind of report, such as grouping of classifiers, search results, or human-compiled expression."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/evidence-report-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/evidence-report-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "classification" ] ;
+     fhir:display [ fhir:v "Classification" ] ;
+     fhir:definition [ fhir:v "The report is primarily a listing of classifiers about the report subject." ]
+  ] [
+     fhir:code [ fhir:v "search-results" ] ;
+     fhir:display [ fhir:v "Search Results" ] ;
+     fhir:definition [ fhir:v "The report is a composition of results generated in response to a search query." ]
+  ] [
+     fhir:code [ fhir:v "resources-compiled" ] ;
+     fhir:display [ fhir:v "Resource Compilation" ] ;
+     fhir:definition [ fhir:v "The report is a composition containing one or more FHIR resources in the content." ]
+  ] [
+     fhir:code [ fhir:v "text-structured" ] ;
+     fhir:display [ fhir:v "Structured Text" ] ;
+     fhir:definition [ fhir:v "The report is a structured representation of text." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

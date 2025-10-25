@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "relatedperson-relationshiptype"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet relatedperson-relationshiptype</b>\n      </p>\n      <a name=\"relatedperson-relationshiptype\"> </a>\n      <a name=\"hcrelatedperson-relationshiptype\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <p>This value set includes codes based on the following rules:</p>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-ParticipationType.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v3-ParticipationType</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 5.0.0, the version found through the package references\">?5.0.0</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-ParticipationType.html#v3-ParticipationType-WIT\">WIT</a>\n              </td>\n              <td style=\"color: #cccccc\">witness</td>\n              <td>Only with service events. A person witnessing the action happening without doing anything. A witness is not necessarily aware, much less approves of anything stated in the service event. Example for a witness is students watching an operation or an advanced directive witness.</td>\n            </tr>\n          </table>\n        </li>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v3-RoleClass</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 4.0.0, the version found through the package references\">?4.0.0</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-NOT\">NOT</a>\n              </td>\n              <td style=\"color: #cccccc\">notary public</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-ECON\">ECON</a>\n              </td>\n              <td style=\"color: #cccccc\">emergency contact</td>\n              <td>An entity to be contacted in the event of an emergency.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-NOK\">NOK</a>\n              </td>\n              <td style=\"color: #cccccc\">next of kin</td>\n              <td>An individual designated for notification as the next of kin for a given entity.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-GUARD\">GUARD</a>\n              </td>\n              <td style=\"color: #cccccc\">guardian</td>\n              <td>Guardian of a ward</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-DEPEN\">DEPEN</a>\n              </td>\n              <td style=\"color: #cccccc\">dependent</td>\n              <td>**Description:** A role played by a person covered under a policy or program based on an association with a subscriber, which is recognized by the policy holder.\n                <br/>\n                <br/>**Note:** The party playing the role of a dependent is not a claimant in the sense conveyed by the RoleClassCoveredParty CLAIM (claimant). However, a dependent may make a claim under a policy, e.g., a dependent under a health insurance policy may become the claimant for coverage under that policy for wellness examines or if injured and there is no liable third party. In the case of a dependent making a claim, a role type code INSCLM (insured claimant) subtypes the class to indicate that the dependent has filed a claim for services covered under the health insurance policy.\n                <br/>\n                <br/>**Example:** The dependent has an association with the subscriber such as a financial dependency or personal relationship such as that of a spouse, or a natural or adopted child. The policy holder may be required by law to recognize certain associations or may have discretion about the associations. For example, a policy holder may dictate the criteria for the dependent status of adult children who are students, such as requiring full time enrollment, or may recognize domestic partners as dependents. Under certain circumstances, the dependent may be under the indirect authority of a responsible party acting as a surrogate for the subscriber, for example, if the subscriber is differently abled or deceased, a guardian ad Lidem or estate executor may be appointed to assume the subscriberaTMs legal standing in the relationship with the dependent.\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-EMP\">EMP</a>\n              </td>\n              <td style=\"color: #cccccc\">employee</td>\n              <td>A relationship between a person or organization and a person or organization formed for the purpose of exchanging work for compensation. The purpose of the role is to identify the type of relationship the employee has to the employer, rather than the nature of the work actually performed. (Contrast with AssignedEntity.)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-GUAR\">GUAR</a>\n              </td>\n              <td style=\"color: #cccccc\">guarantor</td>\n              <td>A person or organization (player) that serves as a financial guarantor for another person or organization (scoper).</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleClass.html#v3-RoleClass-CAREGIVER\">CAREGIVER</a>\n              </td>\n              <td style=\"color: #cccccc\">caregiver</td>\n              <td>A person responsible for the primary care of a patient at home.</td>\n            </tr>\n          </table>\n        </li>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0131.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v2-0131</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references\">?2.0.0</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0131.html#v2-0131-E\">E</a>\n              </td>\n              <td style=\"color: #cccccc\">Employer</td>\n              <td>Employer</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0131.html#v2-0131-O\">O</a>\n              </td>\n              <td style=\"color: #cccccc\">Other</td>\n              <td>Other</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0131.html#v2-0131-U\">U</a>\n              </td>\n              <td style=\"color: #cccccc\">Unknown</td>\n              <td>Unknown</td>\n            </tr>\n          </table>\n        </li>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references\">?3.0.0</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-INTPRTER\">INTPRTER</a>\n              </td>\n              <td style=\"color: #cccccc\">interpreter</td>\n              <td>An entity which converts spoken or written language into the language of key participants in an event such as when a provider is obtaining a patient's consent to treatment or permission to disclose information.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-POWATT\">POWATT</a>\n              </td>\n              <td style=\"color: #cccccc\">power of attorney</td>\n              <td>A relationship between two people in which one person authorizes another to act for him in a manner which is a legally binding upon the person giving such authority as if he or she personally were to do the acts.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-DPOWATT\">DPOWATT</a>\n              </td>\n              <td style=\"color: #cccccc\">durable power of attorney</td>\n              <td>A relationship between two people in which one person authorizes another, usually a family member or relative, to act for him or her in a manner which is a legally binding upon the person giving such authority as if he or she personally were to do the acts that is often limited in the kinds of powers that can be assigned. Unlike ordinary powers of attorney, durable powers can survive for long periods of time, and again, unlike standard powers of attorney, durable powers can continue after incompetency.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-HPOWATT\">HPOWATT</a>\n              </td>\n              <td style=\"color: #cccccc\">healthcare power of attorney</td>\n              <td>A relationship between two people in which one person authorizes another to act for him or her in a manner which is a legally binding upon the person giving such authority as if he or she personally were to do the acts that continues (by its terms) to be effective even though the grantor has become mentally incompetent after signing the document.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-SPOWATT\">SPOWATT</a>\n              </td>\n              <td style=\"color: #cccccc\">special power of attorney</td>\n              <td>A relationship between two people in which one person authorizes another to act for him or her in a manner which is a legally binding upon the person giving such authority as if he or she personally were to do the acts that is often limited in the kinds of powers that can be assigned.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-BILL\">BILL</a>\n              </td>\n              <td style=\"color: #cccccc\">Billing Contact</td>\n              <td>A contact role used to identify a person within a Provider organization that can be contacted for billing purposes (e.g. about the content of the Invoice).</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pa"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.449" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.442" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.259" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "PatientRelationshipType"] ; # 
+  fhir:title [ fhir:v "Patient Relationship Type"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR Project team"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A set of codes that can be used to indicate the relationship between a Patient and a Related Person."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "WIT" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleClass"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "NOT" ]
+       ] [
+         fhir:code [ fhir:v "ECON" ]
+       ] [
+         fhir:code [ fhir:v "NOK" ]
+       ] [
+         fhir:code [ fhir:v "GUARD" ]
+       ] [
+         fhir:code [ fhir:v "DEPEN" ]
+       ] [
+         fhir:code [ fhir:v "EMP" ]
+       ] [
+         fhir:code [ fhir:v "GUAR" ]
+       ] [
+         fhir:code [ fhir:v "CAREGIVER" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "E" ]
+       ] [
+         fhir:code [ fhir:v "O" ]
+       ] [
+         fhir:code [ fhir:v "U" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "INTPRTER" ]
+       ] [
+         fhir:code [ fhir:v "POWATT" ]
+       ] [
+         fhir:code [ fhir:v "DPOWATT" ]
+       ] [
+         fhir:code [ fhir:v "HPOWATT" ]
+       ] [
+         fhir:code [ fhir:v "SPOWATT" ]
+       ] [
+         fhir:code [ fhir:v "BILL" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

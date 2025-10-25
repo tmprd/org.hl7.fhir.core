@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/devicealert-presence> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "devicealert-presence"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem devicealert-presence</b></p><a name=\"devicealert-presence\"> </a><a name=\"hcdevicealert-presence\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/devicealert-presence</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">on<a name=\"devicealert-presence-on\"> </a></td><td>On</td><td>The signal is annunciated due to the presence of the alert condition</td></tr><tr><td style=\"white-space:nowrap\">latched<a name=\"devicealert-presence-latched\"> </a></td><td>Latched</td><td>The signal is annunciated after the alert condition is no longer present, until it is stopped by deliberate operator action</td></tr><tr><td style=\"white-space:nowrap\">off<a name=\"devicealert-presence-off\"> </a></td><td>Off</td><td>The signal is not being annunciated and the alert condition is no longer present</td></tr><tr><td style=\"white-space:nowrap\">ack<a name=\"devicealert-presence-ack\"> </a></td><td>Acknowledged</td><td>The signal is no longer annunciated having been stopped by deliberate operator action although the alert condition is still present</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "dev"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/devicealert-presence"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceAlertPresence"] ; # 
+  fhir:title [ fhir:v "Device Alert Presence"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-12-10T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Health Care Devices"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/healthcaredevices" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Describes the Presence of a DeviceAlert."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/devicealert-presence"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/devicealert-presence>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "on" ] ;
+     fhir:display [ fhir:v "On" ] ;
+     fhir:definition [ fhir:v "The signal is annunciated due to the presence of the alert condition" ]
+  ] [
+     fhir:code [ fhir:v "latched" ] ;
+     fhir:display [ fhir:v "Latched" ] ;
+     fhir:definition [ fhir:v "The signal is annunciated after the alert condition is no longer present, until it is stopped by deliberate operator action" ]
+  ] [
+     fhir:code [ fhir:v "off" ] ;
+     fhir:display [ fhir:v "Off" ] ;
+     fhir:definition [ fhir:v "The signal is not being annunciated and the alert condition is no longer present" ]
+  ] [
+     fhir:code [ fhir:v "ack" ] ;
+     fhir:display [ fhir:v "Acknowledged" ] ;
+     fhir:definition [ fhir:v "The signal is no longer annunciated having been stopped by deliberate operator action although the alert condition is still present" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

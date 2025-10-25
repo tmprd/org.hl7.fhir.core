@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/task-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "task-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem task-status</b>\n      </p>\n      <a name=\"task-status\"> </a>\n      <a name=\"hctask-status\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/task-status</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">draft\n            <a name=\"task-status-draft\"> </a>\n          </td>\n          <td>Draft</td>\n          <td>The task is not yet ready to be acted upon.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">requested\n            <a name=\"task-status-requested\"> </a>\n          </td>\n          <td>Requested</td>\n          <td>The task is ready to be acted upon and action is sought.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">received\n            <a name=\"task-status-received\"> </a>\n          </td>\n          <td>Received</td>\n          <td>A potential performer has claimed ownership of the task and is evaluating whether to perform it.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">accepted\n            <a name=\"task-status-accepted\"> </a>\n          </td>\n          <td>Accepted</td>\n          <td>The potential performer has agreed to execute the task but has not yet started work.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rejected\n            <a name=\"task-status-rejected\"> </a>\n          </td>\n          <td>Rejected</td>\n          <td>The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ready\n            <a name=\"task-status-ready\"> </a>\n          </td>\n          <td>Ready</td>\n          <td>The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cancelled\n            <a name=\"task-status-cancelled\"> </a>\n          </td>\n          <td>Cancelled</td>\n          <td>The task was not completed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">in-progress\n            <a name=\"task-status-in-progress\"> </a>\n          </td>\n          <td>In Progress</td>\n          <td>The task has been started but is not yet complete.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">on-hold\n            <a name=\"task-status-on-hold\"> </a>\n          </td>\n          <td>On Hold</td>\n          <td>The task has been started but work has been paused.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">failed\n            <a name=\"task-status-failed\"> </a>\n          </td>\n          <td>Failed</td>\n          <td>The task was attempted but was not successful.  No further activity will occur for this task.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">completed\n            <a name=\"task-status-completed\"> </a>\n          </td>\n          <td>Completed</td>\n          <td>The task has been completed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">entered-in-error\n            <a name=\"task-status-entered-in-error\"> </a>\n          </td>\n          <td>Entered in Error</td>\n          <td>The task should never have existed and is retained only because of the possibility it may have used.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/task-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.791" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.774" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "TaskStatus"] ; # 
+  fhir:title [ fhir:v "Task Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The current status of the task."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/task-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/task-status>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "draft" ] ;
+     fhir:display [ fhir:v "Draft" ] ;
+     fhir:definition [ fhir:v "The task is not yet ready to be acted upon." ]
+  ] [
+     fhir:code [ fhir:v "requested" ] ;
+     fhir:display [ fhir:v "Requested" ] ;
+     fhir:definition [ fhir:v "The task is ready to be acted upon and action is sought." ]
+  ] [
+     fhir:code [ fhir:v "received" ] ;
+     fhir:display [ fhir:v "Received" ] ;
+     fhir:definition [ fhir:v "A potential performer has claimed ownership of the task and is evaluating whether to perform it." ]
+  ] [
+     fhir:code [ fhir:v "accepted" ] ;
+     fhir:display [ fhir:v "Accepted" ] ;
+     fhir:definition [ fhir:v "The potential performer has agreed to execute the task but has not yet started work." ]
+  ] [
+     fhir:code [ fhir:v "rejected" ] ;
+     fhir:display [ fhir:v "Rejected" ] ;
+     fhir:definition [ fhir:v "The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action." ]
+  ] [
+     fhir:code [ fhir:v "ready" ] ;
+     fhir:display [ fhir:v "Ready" ] ;
+     fhir:definition [ fhir:v "The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given." ]
+  ] [
+     fhir:code [ fhir:v "cancelled" ] ;
+     fhir:display [ fhir:v "Cancelled" ] ;
+     fhir:definition [ fhir:v "The task was not completed." ]
+  ] [
+     fhir:code [ fhir:v "in-progress" ] ;
+     fhir:display [ fhir:v "In Progress" ] ;
+     fhir:definition [ fhir:v "The task has been started but is not yet complete." ]
+  ] [
+     fhir:code [ fhir:v "on-hold" ] ;
+     fhir:display [ fhir:v "On Hold" ] ;
+     fhir:definition [ fhir:v "The task has been started but work has been paused." ]
+  ] [
+     fhir:code [ fhir:v "failed" ] ;
+     fhir:display [ fhir:v "Failed" ] ;
+     fhir:definition [ fhir:v "The task was attempted but was not successful.  No further activity will occur for this task." ]
+  ] [
+     fhir:code [ fhir:v "completed" ] ;
+     fhir:display [ fhir:v "Completed" ] ;
+     fhir:definition [ fhir:v "The task has been completed." ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The task should never have existed and is retained only because of the possibility it may have used." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

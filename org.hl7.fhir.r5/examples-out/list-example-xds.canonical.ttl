@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/List/example-xds> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-xds"] ; # 
+  fhir:contained ( [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "a1" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Dopplemeyer" ] ;
+       fhir:given ( [ fhir:v "Sherry" ] )
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "john.doe@healthcare.example.org" ]
+     ] )
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://ihe.net/fhir/CodeSystem/identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "master" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://example.org/documents"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "23425234234-2346" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://ihe.net/fhir/CodeSystem/identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "set" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://example.org/documents"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "23425234234-2347" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "working"] ; # 
+  fhir:title [ fhir:v "Physical"] ; # 
+  fhir:code [
+     fhir:text [ fhir:v "History and Physical" ]
+  ] ; # 
+  fhir:subject ( [
+     fhir:link <http://hl7.org/fhir/Patient/xcda> ;
+     fhir:reference [ fhir:v "Patient/xcda" ]
+  ] ) ; # 
+  fhir:date [ fhir:v "2004-12-25T23:50:50-05:00"^^xsd:dateTime] ; # 
+  fhir:source [
+     fhir:reference [ fhir:v "#a1" ]
+  ] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/DocumentReference/example> ;
+       fhir:reference [ fhir:v "DocumentReference/example" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/xcda> a fhir:Patient .
+
+<http://hl7.org/fhir/DocumentReference/example> a fhir:DocumentReference .
+
+# -------------------------------------------------------------------------------------
+

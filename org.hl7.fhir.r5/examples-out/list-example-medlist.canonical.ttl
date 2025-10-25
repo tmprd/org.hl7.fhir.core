@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/List/med-list> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "med-list"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Add hydroxocobalamin</p>\n      <p>Cancel Morphine Sulphate</p>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "changes"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:182836005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "182836005" ] ;
+       fhir:display [ fhir:v "Review of medication" ]
+     ] ) ;
+     fhir:text [ fhir:v "Medication Review" ]
+  ] ; # 
+  fhir:date [ fhir:v "2013-11-20T23:10:23+11:00"^^xsd:dateTime] ; # 
+  fhir:source [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:entry ( [
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://nehta.gov.au/codes/medications/changetype"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "01" ] ;
+         fhir:display [ fhir:v "Prescribed" ]
+       ] )
+     ] ;
+     fhir:item [
+       fhir:display [ fhir:v "hydroxocobalamin" ]
+     ]
+  ] [
+     fhir:flag [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://nehta.gov.au/codes/medications/changetype"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "02" ] ;
+         fhir:display [ fhir:v "Cancelled" ]
+       ] )
+     ] ;
+     fhir:deleted [ fhir:v true ] ;
+     fhir:item [
+       fhir:display [ fhir:v "Morphine Sulfate" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

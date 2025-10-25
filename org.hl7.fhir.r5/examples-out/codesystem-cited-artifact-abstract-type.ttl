@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/cited-artifact-abstract-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cited-artifact-abstract-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem cited-artifact-abstract-type</b>\n      </p>\n      <a name=\"cited-artifact-abstract-type\"> </a>\n      <a name=\"hccited-artifact-abstract-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/cited-artifact-abstract-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">primary-human-use\n            <a name=\"cited-artifact-abstract-type-primary-human-use\"> </a>\n          </td>\n          <td>Primary human use</td>\n          <td>Human-friendly main or official abstract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">primary-machine-use\n            <a name=\"cited-artifact-abstract-type-primary-machine-use\"> </a>\n          </td>\n          <td>Primary machine use</td>\n          <td>Machine-friendly main or official abstract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">truncated\n            <a name=\"cited-artifact-abstract-type-truncated\"> </a>\n          </td>\n          <td>Truncated</td>\n          <td>Truncated abstract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">short-abstract\n            <a name=\"cited-artifact-abstract-type-short-abstract\"> </a>\n          </td>\n          <td>Short abstract</td>\n          <td>Brief abstract, for use when abstracts are provided in different sizes or lengths</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">long-abstract\n            <a name=\"cited-artifact-abstract-type-long-abstract\"> </a>\n          </td>\n          <td>Long abstract</td>\n          <td>Long version of the abstract, for use when abstracts are provided in different sizes or lengths</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">plain-language\n            <a name=\"cited-artifact-abstract-type-plain-language\"> </a>\n          </td>\n          <td>Plain language</td>\n          <td>Additional form of abstract written for the general public</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">different-publisher\n            <a name=\"cited-artifact-abstract-type-different-publisher\"> </a>\n          </td>\n          <td>Different publisher for abstract</td>\n          <td>Abstract produced by a different publisher than the cited artifact</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">language\n            <a name=\"cited-artifact-abstract-type-language\"> </a>\n          </td>\n          <td>Different language</td>\n          <td>Additional form of abstract in a different language</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">autotranslated\n            <a name=\"cited-artifact-abstract-type-autotranslated\"> </a>\n          </td>\n          <td>Different language derived from autotranslation</td>\n          <td>Machine translated form of abstract in a different language, language element codes the language into which it was translated by machine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">duplicate-pmid\n            <a name=\"cited-artifact-abstract-type-duplicate-pmid\"> </a>\n          </td>\n          <td>Different text in additional Medline entry</td>\n          <td>Alternative form of abstract in two or more Medline entries</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">earlier-abstract\n            <a name=\"cited-artifact-abstract-type-earlier-abstract\"> </a>\n          </td>\n          <td>Different text in an earlier version</td>\n          <td>Alternative form of abstract in an earlier version such as epub ahead of print</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/cited-artifact-abstract-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1879" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "CitedArtifactAbstractType"] ; # 
+  fhir:title [ fhir:v "Cited Artifact Abstract Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Used to express the reason and specific aspect for the variant abstract, such as language and specific language"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/cited-artifact-abstract-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/cited-artifact-abstract-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "primary-human-use" ] ;
+     fhir:display [ fhir:v "Primary human use" ] ;
+     fhir:definition [ fhir:v "Human-friendly main or official abstract" ]
+  ] [
+     fhir:code [ fhir:v "primary-machine-use" ] ;
+     fhir:display [ fhir:v "Primary machine use" ] ;
+     fhir:definition [ fhir:v "Machine-friendly main or official abstract" ]
+  ] [
+     fhir:code [ fhir:v "truncated" ] ;
+     fhir:display [ fhir:v "Truncated" ] ;
+     fhir:definition [ fhir:v "Truncated abstract" ]
+  ] [
+     fhir:code [ fhir:v "short-abstract" ] ;
+     fhir:display [ fhir:v "Short abstract" ] ;
+     fhir:definition [ fhir:v "Brief abstract, for use when abstracts are provided in different sizes or lengths" ]
+  ] [
+     fhir:code [ fhir:v "long-abstract" ] ;
+     fhir:display [ fhir:v "Long abstract" ] ;
+     fhir:definition [ fhir:v "Long version of the abstract, for use when abstracts are provided in different sizes or lengths" ]
+  ] [
+     fhir:code [ fhir:v "plain-language" ] ;
+     fhir:display [ fhir:v "Plain language" ] ;
+     fhir:definition [ fhir:v "Additional form of abstract written for the general public" ]
+  ] [
+     fhir:code [ fhir:v "different-publisher" ] ;
+     fhir:display [ fhir:v "Different publisher for abstract" ] ;
+     fhir:definition [ fhir:v "Abstract produced by a different publisher than the cited artifact" ]
+  ] [
+     fhir:code [ fhir:v "language" ] ;
+     fhir:display [ fhir:v "Different language" ] ;
+     fhir:definition [ fhir:v "Additional form of abstract in a different language" ]
+  ] [
+     fhir:code [ fhir:v "autotranslated" ] ;
+     fhir:display [ fhir:v "Different language derived from autotranslation" ] ;
+     fhir:definition [ fhir:v "Machine translated form of abstract in a different language, language element codes the language into which it was translated by machine" ]
+  ] [
+     fhir:code [ fhir:v "duplicate-pmid" ] ;
+     fhir:display [ fhir:v "Different text in additional Medline entry" ] ;
+     fhir:definition [ fhir:v "Alternative form of abstract in two or more Medline entries" ]
+  ] [
+     fhir:code [ fhir:v "earlier-abstract" ] ;
+     fhir:display [ fhir:v "Different text in an earlier version" ] ;
+     fhir:definition [ fhir:v "Alternative form of abstract in an earlier version such as epub ahead of print" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

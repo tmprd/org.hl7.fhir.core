@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/participant-resource-types> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "participant-resource-types"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet participant-resource-types</b>\n      </p>\n      <a name=\"participant-resource-types\"> </a>\n      <a name=\"hcparticipant-resource-types\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"codesystem-fhir-types.html\">\n            <code>http://hl7.org/fhir/fhir-types</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?6.0.0-ballot3</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-CareTeam\">CareTeam</a>\n              </td>\n              <td style=\"color: #cccccc\">CareTeam</td>\n              <td>The Care Team includes all the people, organizations, and care teams who participate or plan to participate in the coordination and delivery of care.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Device\">Device</a>\n              </td>\n              <td style=\"color: #cccccc\">Device</td>\n              <td>This resource describes the properties (regulated, has real time clock, etc.), administrative (manufacturer name, model number, serial number, firmware, etc.), and type (knee replacement, blood pressure cuff, MRI, etc.) of a physical unit (these values do not change much within a given module, for example the serial number, manufacturer name, and model number). An actual unit may consist of several modules in a distinct hierarchy and these are represented by multiple Device resources and bound through the 'parent' element.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Group\">Group</a>\n              </td>\n              <td style=\"color: #cccccc\">Group</td>\n              <td>Represents a defined collection of entities that may be discussed or acted upon collectively but which are not typically expected to act collectively.  These collections are also not typically formally or legally recognized.\n                <br/>\n                <br/>NOTE: Group may be used to define families or households, which in some circumstances may act collectively or have a degree of legal or formal recognition.  This should be considered an exception.  When Group is used for types of entities other than Patient or RelatedPerson, the expectation remains that the Group will not act collectively or have formal recognition - use Organization if these behaviors are needed.\n                <br/>\n                <br/>For example, it is possible for a 'family' Group to be a performer of an Observation or owner of a Task.  However, this is not permitted for a Group made up of Practitioners, PractitionerRoles or Organizations.  Organization or CareTeam would need to be used instead.  A Group of Practitioners could, however, be a subject of an Observation.\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-HealthcareService\">HealthcareService</a>\n              </td>\n              <td style=\"color: #cccccc\">HealthcareService</td>\n              <td>The details of a healthcare service available at a location or in a catalog.  In the case where there is a hierarchy of services (for example, Lab -&gt; Pathology -&gt; Wound Cultures), this can be represented using a set of linked HealthcareServices.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Location\">Location</a>\n              </td>\n              <td style=\"color: #cccccc\">Location</td>\n              <td>Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Organization\">Organization</a>\n              </td>\n              <td style=\"color: #cccccc\">Organization</td>\n              <td>A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Patient\">Patient</a>\n              </td>\n              <td style=\"color: #cccccc\">Patient</td>\n              <td>Demographics and other administrative information about an individual or animal that is the subject of potential, past, current, or future health-related care, services, or processes.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-Practitioner\">Practitioner</a>\n              </td>\n              <td style=\"color: #cccccc\">Practitioner</td>\n              <td>A person who is directly or indirectly involved in the provisioning of healthcare or related services.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-PractitionerRole\">PractitionerRole</a>\n              </td>\n              <td style=\"color: #cccccc\">PractitionerRole</td>\n              <td>A specific set of Roles/Locations/specialties/services that a practitioner may perform, or has performed at an organization during a period of time.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"codesystem-fhir-types.html#fhir-types-RelatedPerson\">RelatedPerson</a>\n              </td>\n              <td style=\"color: #cccccc\">RelatedPerson</td>\n              <td>Information about a person that is involved in a patient's health or the care for a patient, but who is not the primary target of healthcare.</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/participant-resource-types"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.3301" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ParticipantResourceTypes"] ; # 
+  fhir:title [ fhir:v "Participant Resource Types"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "All Resource Types that represent participant resources"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v true] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/fhir-types"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "CareTeam" ]
+       ] [
+         fhir:code [ fhir:v "Device" ]
+       ] [
+         fhir:code [ fhir:v "Group" ]
+       ] [
+         fhir:code [ fhir:v "HealthcareService" ]
+       ] [
+         fhir:code [ fhir:v "Location" ]
+       ] [
+         fhir:code [ fhir:v "Organization" ]
+       ] [
+         fhir:code [ fhir:v "Patient" ]
+       ] [
+         fhir:code [ fhir:v "Practitioner" ]
+       ] [
+         fhir:code [ fhir:v "PractitionerRole" ]
+       ] [
+         fhir:code [ fhir:v "RelatedPerson" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

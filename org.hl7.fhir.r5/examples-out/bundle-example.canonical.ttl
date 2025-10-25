@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Bundle/bundle-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bundle-example"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2014-08-18T01:43:30Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:total [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [ fhir:v "https://example.com/base/MedicationRequest?patient=347&_include=MedicationRequest.medication&_count=2"^^xsd:anyURI ]
+  ] [
+     fhir:relation [ fhir:v "next" ] ;
+     fhir:url [ fhir:v "https://example.com/base/MedicationRequest?patient=347&searchId=ff15fd40-ff71-4b48-b366-09c706bed9d0&page=2"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "https://example.com/base/MedicationRequest/3123"^^xsd:anyURI ] ;
+     fhir:resource ( <https://example.com/base/MedicationRequest/3123> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "match" ] ;
+       fhir:score [ fhir:v "1"^^xsd:decimal ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "https://example.com/base/Medication/example"^^xsd:anyURI ] ;
+     fhir:resource ( <https://example.com/base/Medication/example> ) ;
+     fhir:search [
+       fhir:mode [ fhir:v "include" ]
+     ]
+  ] ) . # 
+
+<https://example.com/base/MedicationRequest/3123> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "3123"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest 3123</b></p><a name=\"3123\"> </a><a name=\"hc3123\"> </a><p><b>status</b>: Unknown</p><p><b>intent</b>: Order</p><h3>Medications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"broken-link.html\">Medication/example</a></td></tr></table><p><b>subject</b>: <a href=\"patient-example-f001-pieter.html\">Pieter van de Heuvel  Male, DoB: 1944-11-17 ( urn:oid:2.16.840.1.113883.2.4.6.3#?ngen-9? (use: usual, ))</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     fhir:reference [
+       fhir:link <http://hl7.org/fhir/Medication/example> ;
+       fhir:reference [ fhir:v "Medication/example" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/f001> ;
+     fhir:reference [ fhir:v "Patient/f001" ]
+  ] . # 
+
+<http://hl7.org/fhir/Medication/example> a fhir:Medication .
+
+<http://hl7.org/fhir/Patient/f001> a fhir:Patient .
+
+<https://example.com/base/Medication/example> a fhir:Medication ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a></div>"^^rdf:XMLLiteral
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

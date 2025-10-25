@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/administrative-gender> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "administrative-gender"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem administrative-gender</b>\n      </p>\n      <a name=\"administrative-gender\"> </a>\n      <a name=\"hcadministrative-gender\"> </a>\n      <p>\n        <b>Properties</b>\n      </p>\n      <p>\n        <b>This code system defines the following properties for its concepts</b>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>URI</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n        </tr>\n        <tr>\n          <td>comments</td>\n          <td>comments</td>\n          <td>http://hl7.org/fhir/concept-properties#comments</td>\n          <td>string</td>\n        </tr>\n      </table>\n      <p>\n        <b>Concepts</b>\n      </p>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/administrative-gender</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n          <td>\n            <b>Comments</b>\n          </td>\n          <td>\n            <b>comments</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">male\n            <a name=\"administrative-gender-male\"> </a>\n          </td>\n          <td>Male</td>\n          <td>Male.</td>\n          <td/>\n          <td>Male</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">female\n            <a name=\"administrative-gender-female\"> </a>\n          </td>\n          <td>Female</td>\n          <td>Female.</td>\n          <td/>\n          <td>Female</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">other\n            <a name=\"administrative-gender-other\"> </a>\n          </td>\n          <td>Other</td>\n          <td>Other.</td>\n          <td/>\n          <td>The administrative gender is a value other than male/female/unknown. Where this value is selected, systems may often choose to include an extension with the localized more specific value.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">unknown\n            <a name=\"administrative-gender-unknown\"> </a>\n          </td>\n          <td>Unknown</td>\n          <td>Unknown.</td>\n          <td/>\n          <td>A proper value is applicable, but not known.  Usage Notes: This means the actual value is not known. If the only thing that is unknown is how to properly express the value in the necessary constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used. No properties should be included for a datatype with this property unless:  Those properties themselves directly translate to a semantic of \"unknown\". (E.g. a local code sent as a translation that conveys 'unknown') Those properties further qualify the nature of what is unknown. (E.g. specifying a use code of \"H\" and a URL prefix of \"tel:\" to convey that it is the home phone number that is unknown.)</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pa"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.0"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "AdministrativeGender"] ; # 
+  fhir:title [ fhir:v "AdministrativeGender"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Administration"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pafm" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The gender of a person used for administrative purposes."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/administrative-gender"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/administrative-gender>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "comments" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/concept-properties#comments"^^xsd:anyURI ] ;
+     fhir:type [ fhir:v "string" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "male" ] ;
+     fhir:display [ fhir:v "Male" ] ;
+     fhir:definition [ fhir:v "Male." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "comments" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Male"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "female" ] ;
+     fhir:display [ fhir:v "Female" ] ;
+     fhir:definition [ fhir:v "Female." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "comments" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Female"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "other" ] ;
+     fhir:display [ fhir:v "Other" ] ;
+     fhir:definition [ fhir:v "Other." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "comments" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "The administrative gender is a value other than male/female/unknown. Where this value is selected, systems may often choose to include an extension with the localized more specific value."
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "unknown" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "Unknown." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "comments" ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "A proper value is applicable, but not known.  Usage Notes: This means the actual value is not known. If the only thing that is unknown is how to properly express the value in the necessary constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used. No properties should be included for a datatype with this property unless:  Those properties themselves directly translate to a semantic of \"unknown\". (E.g. a local code sent as a translation that conveys 'unknown') Those properties further qualify the nature of what is unknown. (E.g. specifying a use code of \"H\" and a URL prefix of \"tel:\" to convey that it is the home phone number that is unknown.)"
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

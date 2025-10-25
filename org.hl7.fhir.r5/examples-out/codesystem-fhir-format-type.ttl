@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/fhir-format-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fhir-format-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem fhir-format-type</b>\n      </p>\n      <a name=\"fhir-format-type\"> </a>\n      <a name=\"hcfhir-format-type\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/fhir-format-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">xml\n            <a name=\"fhir-format-type-xml\"> </a>\n          </td>\n          <td>XML</td>\n          <td>XML content-type corresponding to the application/fhir+xml mime-type.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">json\n            <a name=\"fhir-format-type-json\"> </a>\n          </td>\n          <td>JSON</td>\n          <td>JSON content-type corresponding to the application/fhir+json mime-type.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ttl\n            <a name=\"fhir-format-type-ttl\"> </a>\n          </td>\n          <td>TTL</td>\n          <td>RDF content-type corresponding to the text/turtle mime-type.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.0"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/fhir-format-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1911" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "FHIRFormatType"] ; # 
+  fhir:title [ fhir:v "FHIR Format Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2022-08-17"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "HL7"] ; # 
+  fhir:description [ fhir:v "FHIR Format types"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/fhir-content-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/fhir-content-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "xml" ] ;
+     fhir:display [ fhir:v "XML" ] ;
+     fhir:definition [ fhir:v "XML content-type corresponding to the application/fhir+xml mime-type." ]
+  ] [
+     fhir:code [ fhir:v "json" ] ;
+     fhir:display [ fhir:v "JSON" ] ;
+     fhir:definition [ fhir:v "JSON content-type corresponding to the application/fhir+json mime-type." ]
+  ] [
+     fhir:code [ fhir:v "ttl" ] ;
+     fhir:display [ fhir:v "TTL" ] ;
+     fhir:definition [ fhir:v "RDF content-type corresponding to the text/turtle mime-type." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

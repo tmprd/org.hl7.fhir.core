@@ -1,0 +1,136 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/artifact-contribution-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "artifact-contribution-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem artifact-contribution-type</b></p><a name=\"artifact-contribution-type\"> </a><a name=\"hcartifact-contribution-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/artifact-contribution-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">conceptualization<a name=\"artifact-contribution-type-conceptualization\"> </a></td><td>Conceptualization</td><td>Conceptualization (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">data-curation<a name=\"artifact-contribution-type-data-curation\"> </a></td><td>Data curation</td><td>Data curation (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">formal-analysis<a name=\"artifact-contribution-type-formal-analysis\"> </a></td><td>Formal analysis</td><td>Formal analysis (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">funding-acquisition<a name=\"artifact-contribution-type-funding-acquisition\"> </a></td><td>Funding acquisition</td><td>Funding acquisition (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">investigation<a name=\"artifact-contribution-type-investigation\"> </a></td><td>Investigation</td><td>Investigation (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">methodology<a name=\"artifact-contribution-type-methodology\"> </a></td><td>Methodology</td><td>Methodology (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">project-administration<a name=\"artifact-contribution-type-project-administration\"> </a></td><td>Project administration</td><td>Project administration (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">resources<a name=\"artifact-contribution-type-resources\"> </a></td><td>Resources</td><td>Resources (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">software<a name=\"artifact-contribution-type-software\"> </a></td><td>Software</td><td>Software (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">supervision<a name=\"artifact-contribution-type-supervision\"> </a></td><td>Supervision</td><td>Supervision (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">validation<a name=\"artifact-contribution-type-validation\"> </a></td><td>Validation</td><td>Validation (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">visualization<a name=\"artifact-contribution-type-visualization\"> </a></td><td>Visualization</td><td>Visualization (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">writing-original-draft<a name=\"artifact-contribution-type-writing-original-draft\"> </a></td><td>Writing - original draft</td><td>Writing - original draft (see https://jats4r.org/credit-taxonomy).</td></tr><tr><td style=\"white-space:nowrap\">writing-review-editing<a name=\"artifact-contribution-type-writing-review-editing\"> </a></td><td>Writing - review &amp; editing</td><td>Writing - review &amp; editing (see https://jats4r.org/credit-taxonomy).</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/artifact-contribution-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1891" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "ArtifactContributionType"] ; # 
+  fhir:title [ fhir:v "Artifact Contribution Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Citation contribution."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/artifact-contribution-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/artifact-contribution-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "conceptualization" ] ;
+     fhir:display [ fhir:v "Conceptualization" ] ;
+     fhir:definition [ fhir:v "Conceptualization (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "data-curation" ] ;
+     fhir:display [ fhir:v "Data curation" ] ;
+     fhir:definition [ fhir:v "Data curation (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "formal-analysis" ] ;
+     fhir:display [ fhir:v "Formal analysis" ] ;
+     fhir:definition [ fhir:v "Formal analysis (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "funding-acquisition" ] ;
+     fhir:display [ fhir:v "Funding acquisition" ] ;
+     fhir:definition [ fhir:v "Funding acquisition (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "investigation" ] ;
+     fhir:display [ fhir:v "Investigation" ] ;
+     fhir:definition [ fhir:v "Investigation (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "methodology" ] ;
+     fhir:display [ fhir:v "Methodology" ] ;
+     fhir:definition [ fhir:v "Methodology (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "project-administration" ] ;
+     fhir:display [ fhir:v "Project administration" ] ;
+     fhir:definition [ fhir:v "Project administration (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "resources" ] ;
+     fhir:display [ fhir:v "Resources" ] ;
+     fhir:definition [ fhir:v "Resources (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "software" ] ;
+     fhir:display [ fhir:v "Software" ] ;
+     fhir:definition [ fhir:v "Software (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "supervision" ] ;
+     fhir:display [ fhir:v "Supervision" ] ;
+     fhir:definition [ fhir:v "Supervision (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "validation" ] ;
+     fhir:display [ fhir:v "Validation" ] ;
+     fhir:definition [ fhir:v "Validation (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "visualization" ] ;
+     fhir:display [ fhir:v "Visualization" ] ;
+     fhir:definition [ fhir:v "Visualization (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "writing-original-draft" ] ;
+     fhir:display [ fhir:v "Writing - original draft" ] ;
+     fhir:definition [ fhir:v "Writing - original draft (see https://jats4r.org/credit-taxonomy)." ]
+  ] [
+     fhir:code [ fhir:v "writing-review-editing" ] ;
+     fhir:display [ fhir:v "Writing - review & editing" ] ;
+     fhir:definition [ fhir:v "Writing - review & editing (see https://jats4r.org/credit-taxonomy)." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

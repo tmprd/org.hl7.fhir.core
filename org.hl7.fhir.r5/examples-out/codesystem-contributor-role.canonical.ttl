@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/contributor-role> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "contributor-role"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem contributor-role</b></p><a name=\"contributor-role\"> </a><a name=\"hccontributor-role\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/contributor-role</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">publisher<a name=\"contributor-role-publisher\"> </a></td><td>Publisher</td><td>Entity that makes the content available for public use</td></tr><tr><td style=\"white-space:nowrap\">author<a name=\"contributor-role-author\"> </a></td><td>Author/Creator</td><td>An entity primarily responsible for making the resource, often called author or creator</td></tr><tr><td style=\"white-space:nowrap\">reviewer<a name=\"contributor-role-reviewer\"> </a></td><td>Reviewer</td><td>Entity that examines the content, formally or informally, and suggests revisions or comments</td></tr><tr><td style=\"white-space:nowrap\">endorser<a name=\"contributor-role-endorser\"> </a></td><td>Endorser</td><td>Entity that supports, approves, or advocates for the content</td></tr><tr><td style=\"white-space:nowrap\">editor<a name=\"contributor-role-editor\"> </a></td><td>Editor</td><td>Entity that revises or has authority to control the content</td></tr><tr><td style=\"white-space:nowrap\">informant<a name=\"contributor-role-informant\"> </a></td><td>Informant</td><td>Entity that supplies information</td></tr><tr><td style=\"white-space:nowrap\">funder<a name=\"contributor-role-funder\"> </a></td><td>Funder</td><td>Entity that supplies financial support</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/contributor-role"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1880" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "ContributorRole"] ; # 
+  fhir:title [ fhir:v "Contributor Role"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-03-11T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Used to code the format of the display string."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/contributor-role"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/contributor-role>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "publisher" ] ;
+     fhir:display [ fhir:v "Publisher" ] ;
+     fhir:definition [ fhir:v "Entity that makes the content available for public use" ]
+  ] [
+     fhir:code [ fhir:v "author" ] ;
+     fhir:display [ fhir:v "Author/Creator" ] ;
+     fhir:definition [ fhir:v "An entity primarily responsible for making the resource, often called author or creator" ]
+  ] [
+     fhir:code [ fhir:v "reviewer" ] ;
+     fhir:display [ fhir:v "Reviewer" ] ;
+     fhir:definition [ fhir:v "Entity that examines the content, formally or informally, and suggests revisions or comments" ]
+  ] [
+     fhir:code [ fhir:v "endorser" ] ;
+     fhir:display [ fhir:v "Endorser" ] ;
+     fhir:definition [ fhir:v "Entity that supports, approves, or advocates for the content" ]
+  ] [
+     fhir:code [ fhir:v "editor" ] ;
+     fhir:display [ fhir:v "Editor" ] ;
+     fhir:definition [ fhir:v "Entity that revises or has authority to control the content" ]
+  ] [
+     fhir:code [ fhir:v "informant" ] ;
+     fhir:display [ fhir:v "Informant" ] ;
+     fhir:definition [ fhir:v "Entity that supplies information" ]
+  ] [
+     fhir:code [ fhir:v "funder" ] ;
+     fhir:display [ fhir:v "Funder" ] ;
+     fhir:definition [ fhir:v "Entity that supplies financial support" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

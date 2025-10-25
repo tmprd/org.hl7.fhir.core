@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/RiskAssessment/riskexample> a fhir:RiskAssessment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "riskexample"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Risk assessment for reference only</div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "risk-assessment-breastcancer1" ]
+  ] ) ; # 
+  fhir:basedOn [
+     fhir:link <http://hl7.org/fhir/ImmunizationRecommendation/example> ;
+     fhir:reference [ fhir:v "ImmunizationRecommendation/example" ]
+  ] ; # 
+  fhir:parent [
+     fhir:link <http://hl7.org/fhir/DiagnosticReport/example> ;
+     fhir:reference [ fhir:v "DiagnosticReport/example" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://browser.ihtsdotools.org/"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "709510001" ] ;
+       fhir:display [ fhir:v "Assessment of risk for disease (procedure)" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/example> ;
+     fhir:reference [ fhir:v "Encounter/example" ] ;
+     fhir:display [ fhir:v "Encounter with patient @example" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2017-10-10"^^xsd:date
+  ] ; # 
+  fhir:condition [
+     fhir:link <http://hl7.org/fhir/Condition/example> ;
+     fhir:reference [ fhir:v "Condition/example" ]
+  ] ; # 
+  fhir:performer [
+     fhir:link <http://hl7.org/fhir/Practitioner/example> ;
+     fhir:reference [ fhir:v "Practitioner/example" ]
+  ] ; # 
+  fhir:basis ( [
+     fhir:link <http://hl7.org/fhir/DiagnosticReport/example> ;
+     fhir:reference [ fhir:v "DiagnosticReport/example" ]
+  ] [
+     fhir:link <http://hl7.org/fhir/Observation/example> ;
+     fhir:reference [ fhir:v "Observation/example" ]
+  ] ) ; # 
+  fhir:prediction ( [
+     fhir:outcome [
+       fhir:text [ fhir:v "Breast Cancer" ]
+     ] ;
+     fhir:probability [
+       a fhir:decimal ;
+       fhir:v 0.000368
+     ] ;
+     fhir:when [
+       a fhir:Range ;
+       fhir:low [
+         fhir:value [ fhir:v "54"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "years" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "a" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v "57"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "years" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "a" ]
+       ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "This risk assessment is for reference only" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/ImmunizationRecommendation/example> a fhir:ImmunizationRecommendation .
+
+<http://hl7.org/fhir/DiagnosticReport/example> a fhir:DiagnosticReport .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
+
+<http://hl7.org/fhir/Condition/example> a fhir:Condition .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Observation/example> a fhir:Observation .
+
+# -------------------------------------------------------------------------------------
+

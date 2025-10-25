@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/days-of-week> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "days-of-week"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem days-of-week</b>\n      </p>\n      <a name=\"days-of-week\"> </a>\n      <a name=\"hcdays-of-week\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/days-of-week</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mon\n            <a name=\"days-of-week-mon\"> </a>\n          </td>\n          <td>Monday</td>\n          <td>Monday.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tue\n            <a name=\"days-of-week-tue\"> </a>\n          </td>\n          <td>Tuesday</td>\n          <td>Tuesday.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">wed\n            <a name=\"days-of-week-wed\"> </a>\n          </td>\n          <td>Wednesday</td>\n          <td>Wednesday.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">thu\n            <a name=\"days-of-week-thu\"> </a>\n          </td>\n          <td>Thursday</td>\n          <td>Thursday.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fri\n            <a name=\"days-of-week-fri\"> </a>\n          </td>\n          <td>Friday</td>\n          <td>Friday.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sat\n            <a name=\"days-of-week-sat\"> </a>\n          </td>\n          <td>Saturday</td>\n          <td>Saturday.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sun\n            <a name=\"days-of-week-sun\"> </a>\n          </td>\n          <td>Sunday</td>\n          <td>Sunday.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pa"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.0"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/days-of-week"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.513" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.507" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.302" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DaysOfWeek"] ; # 
+  fhir:title [ fhir:v "Days Of Week"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Administration"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pafm" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The days of the week."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/days-of-week"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/days-of-week>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "mon" ] ;
+     fhir:display [ fhir:v "Monday" ] ;
+     fhir:definition [ fhir:v "Monday." ]
+  ] [
+     fhir:code [ fhir:v "tue" ] ;
+     fhir:display [ fhir:v "Tuesday" ] ;
+     fhir:definition [ fhir:v "Tuesday." ]
+  ] [
+     fhir:code [ fhir:v "wed" ] ;
+     fhir:display [ fhir:v "Wednesday" ] ;
+     fhir:definition [ fhir:v "Wednesday." ]
+  ] [
+     fhir:code [ fhir:v "thu" ] ;
+     fhir:display [ fhir:v "Thursday" ] ;
+     fhir:definition [ fhir:v "Thursday." ]
+  ] [
+     fhir:code [ fhir:v "fri" ] ;
+     fhir:display [ fhir:v "Friday" ] ;
+     fhir:definition [ fhir:v "Friday." ]
+  ] [
+     fhir:code [ fhir:v "sat" ] ;
+     fhir:display [ fhir:v "Saturday" ] ;
+     fhir:definition [ fhir:v "Saturday." ]
+  ] [
+     fhir:code [ fhir:v "sun" ] ;
+     fhir:display [ fhir:v "Sunday" ] ;
+     fhir:definition [ fhir:v "Sunday." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

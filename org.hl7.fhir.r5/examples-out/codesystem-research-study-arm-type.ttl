@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/research-study-arm-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "research-study-arm-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-04T10:33:12.998+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem research-study-arm-type</b>\n      </p>\n      <a name=\"research-study-arm-type\"> </a>\n      <a name=\"hcresearch-study-arm-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2022-05-15T16:55:11.085+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/research-study-arm-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">active-comparator\n            <a name=\"research-study-arm-type-active-comparator\"> </a>\n          </td>\n          <td>Active Comparator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">placebo-comparator\n            <a name=\"research-study-arm-type-placebo-comparator\"> </a>\n          </td>\n          <td>Placebo Comparator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">sham-comparator\n            <a name=\"research-study-arm-type-sham-comparator\"> </a>\n          </td>\n          <td>Sham Comparator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">no-intervention\n            <a name=\"research-study-arm-type-no-intervention\"> </a>\n          </td>\n          <td>No Intervention</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">experimental\n            <a name=\"research-study-arm-type-experimental\"> </a>\n          </td>\n          <td>Experimental</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">other-arm-type\n            <a name=\"research-study-arm-type-other-arm-type\"> </a>\n          </td>\n          <td>Other Arm Type</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/research-study-arm-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "ResearchStudyArmType"] ; # 
+  fhir:title [ fhir:v "ResearchStudy Arm Type Code System"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2022-05-15T16:55:11.085+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes for the main intent of the study."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/research-study-arm-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/research-study-arm-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "active-comparator" ] ;
+     fhir:display [ fhir:v "Active Comparator" ]
+  ] [
+     fhir:code [ fhir:v "placebo-comparator" ] ;
+     fhir:display [ fhir:v "Placebo Comparator" ]
+  ] [
+     fhir:code [ fhir:v "sham-comparator" ] ;
+     fhir:display [ fhir:v "Sham Comparator" ]
+  ] [
+     fhir:code [ fhir:v "no-intervention" ] ;
+     fhir:display [ fhir:v "No Intervention" ]
+  ] [
+     fhir:code [ fhir:v "experimental" ] ;
+     fhir:display [ fhir:v "Experimental" ]
+  ] [
+     fhir:code [ fhir:v "other-arm-type" ] ;
+     fhir:display [ fhir:v "Other Arm Type" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

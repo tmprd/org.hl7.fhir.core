@@ -1,0 +1,145 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Specimen/isolate> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "isolate"] ; # 
+  fhir:contained ( [
+     a fhir:Specimen ;
+     fhir:id [ fhir:v "stool" ] ;
+     fhir:identifier ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ACSN" ] ;
+           fhir:display [ fhir:v "Accession ID" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "http://lab.acme.org/specimens/2015"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "X352356" ]
+     ] [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ACSN" ] ;
+           fhir:display [ fhir:v "Accession ID" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "http://lab.acme.org/specimens/2015"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "X352356" ]
+     ] ) ;
+     fhir:accessionIdentifier [
+       fhir:system [ fhir:v "http://lab.acme.org/specimens/2015"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "X352356" ]
+     ] ;
+     fhir:status [ fhir:v "unavailable" ] ;
+     fhir:type [
+       fhir:coding ( [
+         a sct:119339001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "119339001" ] ;
+         fhir:display [ fhir:v "Stool specimen" ]
+       ] )
+     ] ;
+     fhir:subject [
+       fhir:link <http://hl7.org/fhir/Patient/example> ;
+       fhir:reference [ fhir:v "Patient/example" ]
+     ] ;
+     fhir:receivedTime [ fhir:v "2015-08-16T07:03:00Z"^^xsd:dateTime ] ;
+     fhir:collection [
+       fhir:collector [
+         fhir:display [ fhir:v "Patient" ]
+       ] ;
+       fhir:collected [
+         a fhir:dateTime ;
+         fhir:v "2011-08-16T06:15:00Z"^^xsd:dateTime
+       ] ;
+       fhir:method [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0488"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "LNV" ]
+         ] )
+       ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://lab.acme.org/specimens/2011"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "X352356-ISO1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://lab.acme.org/specimens/2011"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "X352356-ISO1" ]
+  ] ) ; # 
+  fhir:accessionIdentifier [
+     fhir:system [ fhir:v "http://lab.acme.org/specimens/2011"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "X352356-ISO1" ]
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:119303007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119303007" ] ;
+       fhir:display [ fhir:v "Microbial isolate specimen" ]
+     ] ) ;
+     fhir:text [ fhir:v "Bacterial isolate specimen" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:receivedTime [ fhir:v "2015-08-18T07:03:00Z"^^xsd:dateTime] ; # 
+  fhir:parent ( [
+     fhir:reference [ fhir:v "#stool" ]
+  ] ) ; # 
+  fhir:role ( [
+     fhir:coding ( [
+       fhir:code [ fhir:v "p" ] ;
+       fhir:display [ fhir:v "Patient" ]
+     ] )
+  ] ) ; # 
+  fhir:collection [
+     fhir:collector [
+       fhir:link <http://hl7.org/fhir/Practitioner/f202> ;
+       fhir:reference [ fhir:v "Practitioner/f202" ]
+     ] ;
+     fhir:collected [
+       a fhir:dateTime ;
+       fhir:v "2015-08-16T07:03:00Z"^^xsd:dateTime
+     ] ;
+     fhir:method [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0488"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "BAP" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient dropped off specimen" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f202> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

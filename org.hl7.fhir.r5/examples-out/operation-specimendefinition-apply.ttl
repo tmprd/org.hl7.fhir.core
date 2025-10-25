@@ -1,0 +1,142 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/OperationDefinition/SpecimenDefinition-apply> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SpecimenDefinition-apply"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: OperationDefinition SpecimenDefinition-apply</b>\n      </p>\n      <a name=\"SpecimenDefinition-apply\"> </a>\n      <a name=\"hcSpecimenDefinition-apply\"> </a>\n      <p>URL: [base]/SpecimenDefinition/$apply</p>\n      <p>URL: [base]/SpecimenDefinition/[id]/$apply</p>\n      <h3>Parameters</h3>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Use</b>\n          </td>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Scope</b>\n          </td>\n          <td>\n            <b>Cardinality</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Binding</b>\n          </td>\n          <td>\n            <b>Documentation</b>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>specimenDefinition</td>\n          <td>type</td>\n          <td>0..1</td>\n          <td>\n            <a href=\"specimendefinition.html\">SpecimenDefinition</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The specimen definition to be applied. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter is required</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>subject</td>\n          <td/>\n          <td>1..*</td>\n          <td>\n            <a href=\"datatypes.html#string\">string</a>\n            <br/>(\n            <a href=\"search.html#reference\">reference</a>)\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The subject(s) that is/are the target of the Specimen instance to be created. The subject may be a Patient, Group, Device, Substance or Location. Subjects provided in this parameter will be resolved as the subject of the Specimen based on the type of the subject. If multiple subjects of the same type are provided, the behavior is implementation-defined</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>collector</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#string\">string</a>\n            <br/>(\n            <a href=\"search.html#reference\">reference</a>)\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The practitioner (or practitioner role) that is collecting the specimen</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>userType</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The type of user initiating the request, e.g. patient, healthcare provider, or specific type of healthcare provider (physician, nurse, etc.)</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>userLanguage</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>Preferred language of the person using the system</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>userTaskContext</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The task the system user is performing, e.g. laboratory results review, medication list review, etc. This information can be used to tailor decision support outputs, such as recommended information resources</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>setting</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The current setting of the request (inpatient, outpatient, etc.)</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>IN</td>\n          <td>settingContext</td>\n          <td/>\n          <td>0..1</td>\n          <td>\n            <a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>Additional detail about the setting of the request, if any</p>\n\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <td>OUT</td>\n          <td>return</td>\n          <td/>\n          <td>1..1</td>\n          <td>\n            <a href=\"specimen.html\">Specimen</a>\n          </td>\n          <td/>\n          <td>\n            <div>\n              <p>The Specimen resource that is the result of applying the specimen definition</p>\n\n            </div>\n          </td>\n        </tr>\n      </table>\n      <div>\n        <p>The result of this operation is a Specimen resource based on the definition of the specimen as described in the SpecimenDefinition resource and the supplied parameters.</p>\n\n      </div>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/OperationDefinition/SpecimenDefinition-apply"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "Apply"] ; # 
+  fhir:title [ fhir:v "Apply"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Orders and Observations"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/orders" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The apply operation applies a SpecimenDefinition in a given context to create a Specimen resource instance"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:affectsState [ fhir:v false] ; # 
+  fhir:code [ fhir:v "apply"] ; # 
+  fhir:comment [ fhir:v "The result of this operation is a Specimen resource based on the definition of the specimen as described in the SpecimenDefinition resource and the supplied parameters."] ; # 
+  fhir:resource ( [ fhir:v "SpecimenDefinition"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v true] ; # 
+  fhir:instance [ fhir:v true] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "specimenDefinition" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:scope ( [ fhir:v "type" ] ) ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The specimen definition to be applied. If the operation is invoked at the instance level, this parameter is not allowed; if the operation is invoked at the type level, this parameter is required" ] ;
+     fhir:type [ fhir:v "SpecimenDefinition" ]
+  ] [
+     fhir:name [ fhir:v "subject" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "*" ] ;
+     fhir:documentation [ fhir:v "The subject(s) that is/are the target of the Specimen instance to be created. The subject may be a Patient, Group, Device, Substance or Location. Subjects provided in this parameter will be resolved as the subject of the Specimen based on the type of the subject. If multiple subjects of the same type are provided, the behavior is implementation-defined" ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "collector" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The practitioner (or practitioner role) that is collecting the specimen" ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "reference" ]
+  ] [
+     fhir:name [ fhir:v "userType" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The type of user initiating the request, e.g. patient, healthcare provider, or specific type of healthcare provider (physician, nurse, etc.)" ] ;
+     fhir:type [ fhir:v "CodeableConcept" ]
+  ] [
+     fhir:name [ fhir:v "userLanguage" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Preferred language of the person using the system" ] ;
+     fhir:type [ fhir:v "CodeableConcept" ]
+  ] [
+     fhir:name [ fhir:v "userTaskContext" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The task the system user is performing, e.g. laboratory results review, medication list review, etc. This information can be used to tailor decision support outputs, such as recommended information resources" ] ;
+     fhir:type [ fhir:v "CodeableConcept" ]
+  ] [
+     fhir:name [ fhir:v "setting" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The current setting of the request (inpatient, outpatient, etc.)" ] ;
+     fhir:type [ fhir:v "CodeableConcept" ]
+  ] [
+     fhir:name [ fhir:v "settingContext" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v 0 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Additional detail about the setting of the request, if any" ] ;
+     fhir:type [ fhir:v "CodeableConcept" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v 1 ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The Specimen resource that is the result of applying the specimen definition" ] ;
+     fhir:type [ fhir:v "Specimen" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

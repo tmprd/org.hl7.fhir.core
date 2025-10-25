@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/deviceusage-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "deviceusage-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem deviceusage-status</b></p><a name=\"deviceusage-status\"> </a><a name=\"hcdeviceusage-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/deviceusage-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">preparation<a name=\"deviceusage-status-preparation\"> </a></td><td>Preparation</td><td>The core event has not started yet, but some staging activities have begun (e.g. surgical suite preparation). Preparation stages may be tracked for billing purposes.</td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"deviceusage-status-active\"> </a></td><td>Active</td><td>The device is still being used.</td></tr><tr><td style=\"white-space:nowrap\">completed<a name=\"deviceusage-status-completed\"> </a></td><td>Completed</td><td>The device is no longer being used.</td></tr><tr><td style=\"white-space:nowrap\">not-done<a name=\"deviceusage-status-not-done\"> </a></td><td>Not done</td><td>The device was not used.</td></tr><tr><td style=\"white-space:nowrap\">entered-in-error<a name=\"deviceusage-status-entered-in-error\"> </a></td><td>Entered in Error</td><td>The statement was recorded incorrectly.</td></tr><tr><td style=\"white-space:nowrap\">intended<a name=\"deviceusage-status-intended\"> </a></td><td>Intended</td><td>The device may be used at some time in the future.</td></tr><tr><td style=\"white-space:nowrap\">stopped<a name=\"deviceusage-status-stopped\"> </a></td><td>Stopped</td><td>Actions implied by the statement have been permanently halted, before all of them occurred.</td></tr><tr><td style=\"white-space:nowrap\">on-hold<a name=\"deviceusage-status-on-hold\"> </a></td><td>On Hold</td><td>Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called \"suspended\".</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/deviceusage-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2059" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceUsageStatus"] ; # 
+  fhir:title [ fhir:v "Device Usage Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A coded concept indicating the current status of the Device Usage."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/deviceusage-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/deviceusage-status>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "preparation" ] ;
+     fhir:display [ fhir:v "Preparation" ] ;
+     fhir:definition [ fhir:v "The core event has not started yet, but some staging activities have begun (e.g. surgical suite preparation). Preparation stages may be tracked for billing purposes." ]
+  ] [
+     fhir:code [ fhir:v "active" ] ;
+     fhir:display [ fhir:v "Active" ] ;
+     fhir:definition [ fhir:v "The device is still being used." ]
+  ] [
+     fhir:code [ fhir:v "completed" ] ;
+     fhir:display [ fhir:v "Completed" ] ;
+     fhir:definition [ fhir:v "The device is no longer being used." ]
+  ] [
+     fhir:code [ fhir:v "not-done" ] ;
+     fhir:display [ fhir:v "Not done" ] ;
+     fhir:definition [ fhir:v "The device was not used." ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The statement was recorded incorrectly." ]
+  ] [
+     fhir:code [ fhir:v "intended" ] ;
+     fhir:display [ fhir:v "Intended" ] ;
+     fhir:definition [ fhir:v "The device may be used at some time in the future." ]
+  ] [
+     fhir:code [ fhir:v "stopped" ] ;
+     fhir:display [ fhir:v "Stopped" ] ;
+     fhir:definition [ fhir:v "Actions implied by the statement have been permanently halted, before all of them occurred." ]
+  ] [
+     fhir:code [ fhir:v "on-hold" ] ;
+     fhir:display [ fhir:v "On Hold" ] ;
+     fhir:definition [ fhir:v "Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called \"suspended\"." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

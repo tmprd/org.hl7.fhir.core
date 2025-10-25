@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DiagnosticReport/f201> a fhir:DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "f201"] ; # 
+  fhir:contained ( [
+     a fhir:ImagingStudy ;
+     fhir:id [ fhir:v "is1" ] ;
+     fhir:status [ fhir:v "available" ] ;
+     fhir:subject [
+       fhir:link <http://hl7.org/fhir/Patient/f201> ;
+       fhir:reference [ fhir:v "Patient/f201" ]
+     ] ;
+     fhir:description [ fhir:v "HEAD and NECK CT DICOM imaging study" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:394914008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394914008" ] ;
+       fhir:display [ fhir:v "Radiology" ]
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "RAD" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:429858000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "429858000" ] ;
+       fhir:display [ fhir:v "Computed tomography (CT) of head and neck" ]
+     ] ) ;
+     fhir:text [ fhir:v "CT of head-neck" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ] ;
+     fhir:display [ fhir:v "Roel" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2012-12-01T12:00:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:issued [ fhir:v "2012-12-01T12:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/Organization/f203> ;
+     fhir:reference [ fhir:v "Organization/f203" ] ;
+     fhir:display [ fhir:v "Blijdorp MC" ]
+  ] ) ; # 
+  fhir:study ( [
+     fhir:reference [ fhir:v "#is1" ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "CT brains: large tumor sphenoid/clivus."] ; # 
+  fhir:conclusionCode ( [] ) . # 
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Organization/f203> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

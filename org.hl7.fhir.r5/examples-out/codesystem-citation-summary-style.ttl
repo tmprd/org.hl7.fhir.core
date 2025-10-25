@@ -1,0 +1,136 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/citation-summary-style> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "citation-summary-style"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem citation-summary-style</b>\n      </p>\n      <a name=\"citation-summary-style\"> </a>\n      <a name=\"hccitation-summary-style\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/citation-summary-style</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">vancouver\n            <a name=\"citation-summary-style-vancouver\"> </a>\n          </td>\n          <td>Vancouver style</td>\n          <td>Citation style used by International Committee of Medical Journal Editors and maintained by US National Library of Medicine.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ama11\n            <a name=\"citation-summary-style-ama11\"> </a>\n          </td>\n          <td>American Medical Association 11th edition</td>\n          <td>Medicine.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">apa7\n            <a name=\"citation-summary-style-apa7\"> </a>\n          </td>\n          <td>American Psychological Association 7th edition</td>\n          <td>APA 7th edition (October 2019) used by Education, Psychology and Sciences.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">apa6\n            <a name=\"citation-summary-style-apa6\"> </a>\n          </td>\n          <td>American Psychological Association 6th edition</td>\n          <td>APA 6th edition used by Education, Psychology and Sciences.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">asa6\n            <a name=\"citation-summary-style-asa6\"> </a>\n          </td>\n          <td>American Sociological Association 6th edition</td>\n          <td>Sociology.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">mla8\n            <a name=\"citation-summary-style-mla8\"> </a>\n          </td>\n          <td>Modern Language Association 8th edition</td>\n          <td>MLA 8th edition used by the Humanities.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">cochrane\n            <a name=\"citation-summary-style-cochrane\"> </a>\n          </td>\n          <td>Cochrane Style</td>\n          <td>Used by Cochrane reviews, example: Huang, M, Tang T, Pang, P, Li, M, Ma R, Lu, J, et al. Treating COVID-19 with Chloroquine. J Mol Cell Biol 2020; 12(4):322–5.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">elsevier-harvard\n            <a name=\"citation-summary-style-elsevier-harvard\"> </a>\n          </td>\n          <td>Elsevier-Harvard Style</td>\n          <td>Biology ecology.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">nature\n            <a name=\"citation-summary-style-nature\"> </a>\n          </td>\n          <td>Nature Referencing style</td>\n          <td>Biology.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">acs\n            <a name=\"citation-summary-style-acs\"> </a>\n          </td>\n          <td>American Chemical Society</td>\n          <td>Chemistry.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chicago-a-17\n            <a name=\"citation-summary-style-chicago-a-17\"> </a>\n          </td>\n          <td>Chicago Style Version 17 Author Date</td>\n          <td>Used by Business, History and the Fine Arts.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">chicago-b-17\n            <a name=\"citation-summary-style-chicago-b-17\"> </a>\n          </td>\n          <td>Chicago Style Version 17 Full note</td>\n          <td>Used by Business, History and the Fine Arts.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ieee\n            <a name=\"citation-summary-style-ieee\"> </a>\n          </td>\n          <td>Institute of Electrical and Electronics Engineers</td>\n          <td>IT, Engineering.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">comppub\n            <a name=\"citation-summary-style-comppub\"> </a>\n          </td>\n          <td>Computable Publishing</td>\n          <td>Citation style to report human-readable and/or machine-readable access paths, example: Alper BS, Dehnbostel J, Shahin K. 14-day mortality remdesivir vs placebo meta-analysis (ACTT-1, Wang et al, WHO SOLIDARITY).  Fast Evidence Interoperability Resources (FEvIR) Platform, entry 55, version 4. Created 2020 Dec 17. Revised 2020 Dec 21. Accessed 2021 Mar 13. Computable resource at: https://fevir.net/resources/Evidence/55.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/citation-summary-style"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1890" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "CitationSummaryStyle"] ; # 
+  fhir:title [ fhir:v "Citation Summary Style"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The format for display of the citation."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/citation-summary-style"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/citation-summary-style>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "vancouver" ] ;
+     fhir:display [ fhir:v "Vancouver style" ] ;
+     fhir:definition [ fhir:v "Citation style used by International Committee of Medical Journal Editors and maintained by US National Library of Medicine." ]
+  ] [
+     fhir:code [ fhir:v "ama11" ] ;
+     fhir:display [ fhir:v "American Medical Association 11th edition" ] ;
+     fhir:definition [ fhir:v "Medicine." ]
+  ] [
+     fhir:code [ fhir:v "apa7" ] ;
+     fhir:display [ fhir:v "American Psychological Association 7th edition" ] ;
+     fhir:definition [ fhir:v "APA 7th edition (October 2019) used by Education, Psychology and Sciences." ]
+  ] [
+     fhir:code [ fhir:v "apa6" ] ;
+     fhir:display [ fhir:v "American Psychological Association 6th edition" ] ;
+     fhir:definition [ fhir:v "APA 6th edition used by Education, Psychology and Sciences." ]
+  ] [
+     fhir:code [ fhir:v "asa6" ] ;
+     fhir:display [ fhir:v "American Sociological Association 6th edition" ] ;
+     fhir:definition [ fhir:v "Sociology." ]
+  ] [
+     fhir:code [ fhir:v "mla8" ] ;
+     fhir:display [ fhir:v "Modern Language Association 8th edition" ] ;
+     fhir:definition [ fhir:v "MLA 8th edition used by the Humanities." ]
+  ] [
+     fhir:code [ fhir:v "cochrane" ] ;
+     fhir:display [ fhir:v "Cochrane Style" ] ;
+     fhir:definition [ fhir:v "Used by Cochrane reviews, example: Huang, M, Tang T, Pang, P, Li, M, Ma R, Lu, J, et al. Treating COVID-19 with Chloroquine. J Mol Cell Biol 2020; 12(4):322–5." ]
+  ] [
+     fhir:code [ fhir:v "elsevier-harvard" ] ;
+     fhir:display [ fhir:v "Elsevier-Harvard Style" ] ;
+     fhir:definition [ fhir:v "Biology ecology." ]
+  ] [
+     fhir:code [ fhir:v "nature" ] ;
+     fhir:display [ fhir:v "Nature Referencing style" ] ;
+     fhir:definition [ fhir:v "Biology." ]
+  ] [
+     fhir:code [ fhir:v "acs" ] ;
+     fhir:display [ fhir:v "American Chemical Society" ] ;
+     fhir:definition [ fhir:v "Chemistry." ]
+  ] [
+     fhir:code [ fhir:v "chicago-a-17" ] ;
+     fhir:display [ fhir:v "Chicago Style Version 17 Author Date" ] ;
+     fhir:definition [ fhir:v "Used by Business, History and the Fine Arts." ]
+  ] [
+     fhir:code [ fhir:v "chicago-b-17" ] ;
+     fhir:display [ fhir:v "Chicago Style Version 17 Full note" ] ;
+     fhir:definition [ fhir:v "Used by Business, History and the Fine Arts." ]
+  ] [
+     fhir:code [ fhir:v "ieee" ] ;
+     fhir:display [ fhir:v "Institute of Electrical and Electronics Engineers" ] ;
+     fhir:definition [ fhir:v "IT, Engineering." ]
+  ] [
+     fhir:code [ fhir:v "comppub" ] ;
+     fhir:display [ fhir:v "Computable Publishing" ] ;
+     fhir:definition [ fhir:v "Citation style to report human-readable and/or machine-readable access paths, example: Alper BS, Dehnbostel J, Shahin K. 14-day mortality remdesivir vs placebo meta-analysis (ACTT-1, Wang et al, WHO SOLIDARITY).  Fast Evidence Interoperability Resources (FEvIR) Platform, entry 55, version 4. Created 2020 Dec 17. Revised 2020 Dec 21. Accessed 2021 Mar 13. Computable resource at: https://fevir.net/resources/Evidence/55." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,144 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/cited-artifact-status-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cited-artifact-status-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-04T10:33:12.998+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem cited-artifact-status-type</b>\n      </p>\n      <a name=\"cited-artifact-status-type\"> </a>\n      <a name=\"hccited-artifact-status-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-03-11T10:55:11.085+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/cited-artifact-status-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">created\n            <a name=\"cited-artifact-status-type-created\"> </a>\n          </td>\n          <td>Created</td>\n          <td>The content was originally constructed or composed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">submitted\n            <a name=\"cited-artifact-status-type-submitted\"> </a>\n          </td>\n          <td>Submitted</td>\n          <td>The content was sent to the publisher for consideration of publication.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">withdrawn\n            <a name=\"cited-artifact-status-type-withdrawn\"> </a>\n          </td>\n          <td>Withdrawn</td>\n          <td>The content that was not published has been removed from consideration for publishing by the submitter.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">pre-review\n            <a name=\"cited-artifact-status-type-pre-review\"> </a>\n          </td>\n          <td>Pre review</td>\n          <td>The content is awaiting assignment and delivery to reviewer(s).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">under-review\n            <a name=\"cited-artifact-status-type-under-review\"> </a>\n          </td>\n          <td>Under review</td>\n          <td>The content is in a state of being reviewed.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">post-review-pre-published\n            <a name=\"cited-artifact-status-type-post-review-pre-published\"> </a>\n          </td>\n          <td>Post review pre published</td>\n          <td>The content is in a state between the review(s) being completed and being published.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">rejected\n            <a name=\"cited-artifact-status-type-rejected\"> </a>\n          </td>\n          <td>Rejected</td>\n          <td>The content that was not published has been removed from consideration for publishing by a publisher or editor.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">published-early-form\n            <a name=\"cited-artifact-status-type-published-early-form\"> </a>\n          </td>\n          <td>Published early form</td>\n          <td>The content is published but future changes to the published version are expected.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">published-final-form\n            <a name=\"cited-artifact-status-type-published-final-form\"> </a>\n          </td>\n          <td>Published final form</td>\n          <td>The content is published and further changes to the content are not expected.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">accepted\n            <a name=\"cited-artifact-status-type-accepted\"> </a>\n          </td>\n          <td>Accepted</td>\n          <td>The content that was not published yet has been approved for publication by the publisher and/or editor.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">archived\n            <a name=\"cited-artifact-status-type-archived\"> </a>\n          </td>\n          <td>Archived</td>\n          <td>The content is retired or considered no longer current but still available as part of the public record.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">retracted\n            <a name=\"cited-artifact-status-type-retracted\"> </a>\n          </td>\n          <td>Retracted</td>\n          <td>The content that was published is removed from publication and should no longer be considered part of the public record.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">draft\n            <a name=\"cited-artifact-status-type-draft\"> </a>\n          </td>\n          <td>Draft</td>\n          <td>The content is considered unfinished or incomplete and not representative of the current state desired by the content creator.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">active\n            <a name=\"cited-artifact-status-type-active\"> </a>\n          </td>\n          <td>Active</td>\n          <td>The content is considered complete for its current state by the content creator.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">approved\n            <a name=\"cited-artifact-status-type-approved\"> </a>\n          </td>\n          <td>Approved</td>\n          <td>The content has been approved for a state transition, with the focus of approval described in the text associated with this coding.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">unknown\n            <a name=\"cited-artifact-status-type-unknown\"> </a>\n          </td>\n          <td>Unknown</td>\n          <td>The status of the content is not recorded in the metadata.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/cited-artifact-status-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1892" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "CitedArtifactStatusType"] ; # 
+  fhir:title [ fhir:v "Cited Artifact Status Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-03-11T10:55:11.085+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Cited Artifact Status Type"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/cited-artifact-status-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/cited-artifact-status-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "created" ] ;
+     fhir:display [ fhir:v "Created" ] ;
+     fhir:definition [ fhir:v "The content was originally constructed or composed." ]
+  ] [
+     fhir:code [ fhir:v "submitted" ] ;
+     fhir:display [ fhir:v "Submitted" ] ;
+     fhir:definition [ fhir:v "The content was sent to the publisher for consideration of publication." ]
+  ] [
+     fhir:code [ fhir:v "withdrawn" ] ;
+     fhir:display [ fhir:v "Withdrawn" ] ;
+     fhir:definition [ fhir:v "The content that was not published has been removed from consideration for publishing by the submitter." ]
+  ] [
+     fhir:code [ fhir:v "pre-review" ] ;
+     fhir:display [ fhir:v "Pre review" ] ;
+     fhir:definition [ fhir:v "The content is awaiting assignment and delivery to reviewer(s)." ]
+  ] [
+     fhir:code [ fhir:v "under-review" ] ;
+     fhir:display [ fhir:v "Under review" ] ;
+     fhir:definition [ fhir:v "The content is in a state of being reviewed." ]
+  ] [
+     fhir:code [ fhir:v "post-review-pre-published" ] ;
+     fhir:display [ fhir:v "Post review pre published" ] ;
+     fhir:definition [ fhir:v "The content is in a state between the review(s) being completed and being published." ]
+  ] [
+     fhir:code [ fhir:v "rejected" ] ;
+     fhir:display [ fhir:v "Rejected" ] ;
+     fhir:definition [ fhir:v "The content that was not published has been removed from consideration for publishing by a publisher or editor." ]
+  ] [
+     fhir:code [ fhir:v "published-early-form" ] ;
+     fhir:display [ fhir:v "Published early form" ] ;
+     fhir:definition [ fhir:v "The content is published but future changes to the published version are expected." ]
+  ] [
+     fhir:code [ fhir:v "published-final-form" ] ;
+     fhir:display [ fhir:v "Published final form" ] ;
+     fhir:definition [ fhir:v "The content is published and further changes to the content are not expected." ]
+  ] [
+     fhir:code [ fhir:v "accepted" ] ;
+     fhir:display [ fhir:v "Accepted" ] ;
+     fhir:definition [ fhir:v "The content that was not published yet has been approved for publication by the publisher and/or editor." ]
+  ] [
+     fhir:code [ fhir:v "archived" ] ;
+     fhir:display [ fhir:v "Archived" ] ;
+     fhir:definition [ fhir:v "The content is retired or considered no longer current but still available as part of the public record." ]
+  ] [
+     fhir:code [ fhir:v "retracted" ] ;
+     fhir:display [ fhir:v "Retracted" ] ;
+     fhir:definition [ fhir:v "The content that was published is removed from publication and should no longer be considered part of the public record." ]
+  ] [
+     fhir:code [ fhir:v "draft" ] ;
+     fhir:display [ fhir:v "Draft" ] ;
+     fhir:definition [ fhir:v "The content is considered unfinished or incomplete and not representative of the current state desired by the content creator." ]
+  ] [
+     fhir:code [ fhir:v "active" ] ;
+     fhir:display [ fhir:v "Active" ] ;
+     fhir:definition [ fhir:v "The content is considered complete for its current state by the content creator." ]
+  ] [
+     fhir:code [ fhir:v "approved" ] ;
+     fhir:display [ fhir:v "Approved" ] ;
+     fhir:definition [ fhir:v "The content has been approved for a state transition, with the focus of approval described in the text associated with this coding." ]
+  ] [
+     fhir:code [ fhir:v "unknown" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "The status of the content is not recorded in the metadata." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

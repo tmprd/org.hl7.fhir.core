@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/research-study-party-organization-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "research-study-party-organization-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem research-study-party-organization-type</b>\n      </p>\n      <a name=\"research-study-party-organization-type\"> </a>\n      <a name=\"hcresearch-study-party-organization-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2022-05-15T16:55:11.085+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/research-study-party-organization-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">nih\n            <a name=\"research-study-party-organization-type-nih\"> </a>\n          </td>\n          <td>NIH</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">fda\n            <a name=\"research-study-party-organization-type-fda\"> </a>\n          </td>\n          <td>FDA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">government\n            <a name=\"research-study-party-organization-type-government\"> </a>\n          </td>\n          <td>Government</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">nonprofit\n            <a name=\"research-study-party-organization-type-nonprofit\"> </a>\n          </td>\n          <td>Nonprofit</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">academic\n            <a name=\"research-study-party-organization-type-academic\"> </a>\n          </td>\n          <td>Academic</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">industry\n            <a name=\"research-study-party-organization-type-industry\"> </a>\n          </td>\n          <td>Industry</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/research-study-party-organization-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ResearchStudyPartyOrganizationType"] ; # 
+  fhir:title [ fhir:v "ResearchStudy Party Organization Type Code System"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2022-05-15T16:55:11.085+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This is a ResearchStudy's party organization type."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/research-study-party-organization-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/research-study-party-organization-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "nih" ] ;
+     fhir:display [ fhir:v "NIH" ]
+  ] [
+     fhir:code [ fhir:v "fda" ] ;
+     fhir:display [ fhir:v "FDA" ]
+  ] [
+     fhir:code [ fhir:v "government" ] ;
+     fhir:display [ fhir:v "Government" ]
+  ] [
+     fhir:code [ fhir:v "nonprofit" ] ;
+     fhir:display [ fhir:v "Nonprofit" ]
+  ] [
+     fhir:code [ fhir:v "academic" ] ;
+     fhir:display [ fhir:v "Academic" ]
+  ] [
+     fhir:code [ fhir:v "industry" ] ;
+     fhir:display [ fhir:v "Industry" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

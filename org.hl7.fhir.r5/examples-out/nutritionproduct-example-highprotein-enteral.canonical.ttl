@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/NutritionProduct/high-protein-enteral-supplement> a fhir:NutritionProduct ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "high-protein-enteral-supplement"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:443111000124101 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "443111000124101" ] ;
+       fhir:display [ fhir:v "High protein Formula (product)" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:346415002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "346415002" ] ;
+       fhir:display [ fhir:v "Enteral and supplement feeds (product)" ]
+     ] )
+  ] ) ; # 
+  fhir:manufacturer ( [
+     fhir:display [ fhir:v "Abbott" ]
+  ] ) ; # 
+  fhir:nutrient ( [
+     fhir:item [
+       fhir:concept [
+         fhir:coding ( [
+           a sct:1354492001 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1354492001" ]
+         ] )
+       ]
+     ]
+  ] ) ; # 
+  fhir:instance ( [
+     fhir:name [ fhir:v "Promote" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

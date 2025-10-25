@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+#   This example where a patient reports is not taking now but will be taking in future   
+
+<http://hl7.org/fhir/MedicationStatement/example008> a fhir:MedicationStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example008"] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "med0309" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0378-9112-93" ] ;
+         fhir:display [ fhir:v "Nitroglycerin, 30 POUCH in 1 CARTON (0378-9112-93) > 1 PATCH in 1 POUCH (0378-9112-16) > 14 h in 1 PATCH (package)" ]
+       ] )
+     ] ;
+     fhir:doseForm [
+       fhir:coding ( [
+         a sct:376251004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "376251004" ] ;
+         fhir:display [ fhir:v "Nitroglycerin 200 microgram/hour prolonged-release transdermal patch" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "recorded"] ; # 
+  fhir:medication [
+     fhir:reference [
+       fhir:reference [ fhir:v "#med0309" ]
+     ] #   Linked to a RESOURCE Medication  
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/pat1> ;
+     fhir:reference [ fhir:v "Patient/pat1" ] ;
+     fhir:display [ fhir:v "Donald Duck" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient reports they used the given patches over the last 30 days" ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "patch" ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "TPATH24" ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

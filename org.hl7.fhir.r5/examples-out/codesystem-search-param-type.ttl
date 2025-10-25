@@ -1,0 +1,119 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/search-param-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "search-param-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem search-param-type</b>\n      </p>\n      <a name=\"search-param-type\"> </a>\n      <a name=\"hcsearch-param-type\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/search-param-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">number\n            <a name=\"search-param-type-number\"> </a>\n          </td>\n          <td>Number</td>\n          <td>Search parameter SHALL be a number (a whole number, or a decimal).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">date\n            <a name=\"search-param-type-date\"> </a>\n          </td>\n          <td>Date/DateTime</td>\n          <td>Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">string\n            <a name=\"search-param-type-string\"> </a>\n          </td>\n          <td>String</td>\n          <td>Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">token\n            <a name=\"search-param-type-token\"> </a>\n          </td>\n          <td>Token</td>\n          <td>Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a \"|\", depending on the modifier used.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">reference\n            <a name=\"search-param-type-reference\"> </a>\n          </td>\n          <td>Reference</td>\n          <td>A reference to another resource (Reference or canonical).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">composite\n            <a name=\"search-param-type-composite\"> </a>\n          </td>\n          <td>Composite</td>\n          <td>A composite search parameter that combines a search on two values together.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">quantity\n            <a name=\"search-param-type-quantity\"> </a>\n          </td>\n          <td>Quantity</td>\n          <td>A search parameter that searches on a quantity.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">uri\n            <a name=\"search-param-type-uri\"> </a>\n          </td>\n          <td>URI</td>\n          <td>A search parameter that searches on a URI (RFC 3986).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">special\n            <a name=\"search-param-type-special\"> </a>\n          </td>\n          <td>Special</td>\n          <td>Special logic applies to this parameter per the description of the search parameter.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">resource\n            <a name=\"search-param-type-resource\"> </a>\n          </td>\n          <td>Resource</td>\n          <td>A search parameter defined to chain through into embedded resources.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "4.0.0"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/search-param-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.12" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "SearchParamType"] ; # 
+  fhir:title [ fhir:v "SearchParamType"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Data types allowed to be used for search parameters."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/search-param-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/search-param-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "number" ] ;
+     fhir:display [ fhir:v "Number" ] ;
+     fhir:definition [ fhir:v "Search parameter SHALL be a number (a whole number, or a decimal)." ]
+  ] [
+     fhir:code [ fhir:v "date" ] ;
+     fhir:display [ fhir:v "Date/DateTime" ] ;
+     fhir:definition [ fhir:v "Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported." ]
+  ] [
+     fhir:code [ fhir:v "string" ] ;
+     fhir:display [ fhir:v "String" ] ;
+     fhir:definition [ fhir:v "Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces." ]
+  ] [
+     fhir:code [ fhir:v "token" ] ;
+     fhir:display [ fhir:v "Token" ] ;
+     fhir:definition [ fhir:v "Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a \"|\", depending on the modifier used." ]
+  ] [
+     fhir:code [ fhir:v "reference" ] ;
+     fhir:display [ fhir:v "Reference" ] ;
+     fhir:definition [ fhir:v "A reference to another resource (Reference or canonical)." ]
+  ] [
+     fhir:code [ fhir:v "composite" ] ;
+     fhir:display [ fhir:v "Composite" ] ;
+     fhir:definition [ fhir:v "A composite search parameter that combines a search on two values together." ]
+  ] [
+     fhir:code [ fhir:v "quantity" ] ;
+     fhir:display [ fhir:v "Quantity" ] ;
+     fhir:definition [ fhir:v "A search parameter that searches on a quantity." ]
+  ] [
+     fhir:code [ fhir:v "uri" ] ;
+     fhir:display [ fhir:v "URI" ] ;
+     fhir:definition [ fhir:v "A search parameter that searches on a URI (RFC 3986)." ]
+  ] [
+     fhir:code [ fhir:v "special" ] ;
+     fhir:display [ fhir:v "Special" ] ;
+     fhir:definition [ fhir:v "Special logic applies to this parameter per the description of the search parameter." ]
+  ] [
+     fhir:code [ fhir:v "resource" ] ;
+     fhir:display [ fhir:v "Resource" ] ;
+     fhir:definition [ fhir:v "A search parameter defined to chain through into embedded resources." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

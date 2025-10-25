@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/enteral-route> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "enteral-route"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet enteral-route</b>\n      </p>\n      <a name=\"enteral-route\"> </a>\n      <a name=\"hcenteral-route\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references\">?3.0.0</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-PO\">PO</a>\n              </td>\n              <td style=\"color: #cccccc\">Swallow, oral</td>\n              <td>Swallow, oral</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-EFT\">EFT</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, enteral feeding tube</td>\n              <td>Instillation, enteral feeding tube</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-ENTINSTL\">ENTINSTL</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, enteral</td>\n              <td>Instillation, enteral</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-GT\">GT</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, gastrostomy tube</td>\n              <td>Instillation, gastrostomy tube</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-NGT\">NGT</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, nasogastric tube</td>\n              <td>Instillation, nasogastric tube</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-OGT\">OGT</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, orogastric tube</td>\n              <td>Instillation, orogastric tube</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-GJT\">GJT</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, gastro-jejunostomy tube</td>\n              <td>Instillation, gastro-jejunostomy tube</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-JJTINSTL\">JJTINSTL</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, jejunostomy tube</td>\n              <td>Instillation, jejunostomy tube</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-OJJ\">OJJ</a>\n              </td>\n              <td style=\"color: #cccccc\">Instillation, orojejunum tube</td>\n              <td>Instillation, orojejunum tube</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/enteral-route"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.394" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.381" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.214" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "EnteralRouteCodes"] ; # 
+  fhir:title [ fhir:v "Enteral Route Codes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR NutritionOrder team"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "PO" ]
+       ] [
+         fhir:code [ fhir:v "EFT" ]
+       ] [
+         fhir:code [ fhir:v "ENTINSTL" ]
+       ] [
+         fhir:code [ fhir:v "GT" ]
+       ] [
+         fhir:code [ fhir:v "NGT" ]
+       ] [
+         fhir:code [ fhir:v "OGT" ]
+       ] [
+         fhir:code [ fhir:v "GJT" ]
+       ] [
+         fhir:code [ fhir:v "JJTINSTL" ]
+       ] [
+         fhir:code [ fhir:v "OJJ" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

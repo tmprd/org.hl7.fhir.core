@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/DeviceAssociation/robot-association> a fhir:DeviceAssociation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "robot-association"] ; # 
+  fhir:contained ( [
+     a fhir:Patient ;
+     fhir:id [ fhir:v "example-patient" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Doe" ] ;
+       fhir:given ( [ fhir:v "John" ] )
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "example-practitioner" ] ;
+     fhir:name ( [
+       fhir:family [ fhir:v "Nguyen" ] ;
+       fhir:given ( [ fhir:v "Alex" ] )
+     ] )
+  ] [
+     a fhir:Device ;
+     fhir:id [ fhir:v "surgical-robot" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:name ( [
+       fhir:value [ fhir:v "Da Vinci Xi" ] ;
+       fhir:type [ ]
+     ] ) ;
+     fhir:type ( [
+       fhir:coding ( [
+         a sct:466893009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "466893009" ] ;
+         fhir:display [ fhir:v "Robotic surgical system" ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:device [
+     fhir:reference [ fhir:v "#surgical-robot" ]
+  ] ; # 
+  fhir:status [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/deviceassociation-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "attached" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "#example-patient" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-07-01T08:00:00Z"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2025-07-01T12:00:00Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:operation ( [
+     fhir:status [
+       fhir:coding ( [
+         fhir:code [ fhir:v "on" ]
+       ] )
+     ] ;
+     fhir:operator ( [
+       fhir:reference [ fhir:v "#example-practitioner" ]
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-07-01T08:00:00Z"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-07-01T12:00:00Z"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

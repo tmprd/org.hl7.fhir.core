@@ -1,0 +1,680 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/target-species> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "target-species"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem target-species</b>\n      </p>\n      <a name=\"target-species\"> </a>\n      <a name=\"hctarget-species\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/target-species</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108874\n            <a name=\"target-species-100000108874\"> </a>\n          </td>\n          <td>Dove</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108875\n            <a name=\"target-species-100000108875\"> </a>\n          </td>\n          <td>Quail</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108876\n            <a name=\"target-species-100000108876\"> </a>\n          </td>\n          <td>Snipe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108877\n            <a name=\"target-species-100000108877\"> </a>\n          </td>\n          <td>Sparrow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108878\n            <a name=\"target-species-100000108878\"> </a>\n          </td>\n          <td>Starling</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108879\n            <a name=\"target-species-100000108879\"> </a>\n          </td>\n          <td>Swan</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108880\n            <a name=\"target-species-100000108880\"> </a>\n          </td>\n          <td>Turkey hen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108881\n            <a name=\"target-species-100000108881\"> </a>\n          </td>\n          <td>Turkey cock</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108882\n            <a name=\"target-species-100000108882\"> </a>\n          </td>\n          <td>Turkeys</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108883\n            <a name=\"target-species-100000108883\"> </a>\n          </td>\n          <td>Turkey for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108884\n            <a name=\"target-species-100000108884\"> </a>\n          </td>\n          <td>Poult</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108885\n            <a name=\"target-species-100000108885\"> </a>\n          </td>\n          <td>Turtle dove</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108886\n            <a name=\"target-species-100000108886\"> </a>\n          </td>\n          <td>Bison</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108887\n            <a name=\"target-species-100000108887\"> </a>\n          </td>\n          <td>Buffalo</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108888\n            <a name=\"target-species-100000108888\"> </a>\n          </td>\n          <td>Cows</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108889\n            <a name=\"target-species-100000108889\"> </a>\n          </td>\n          <td>Cow for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108890\n            <a name=\"target-species-100000108890\"> </a>\n          </td>\n          <td>Bull for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108891\n            <a name=\"target-species-100000108891\"> </a>\n          </td>\n          <td>Ox</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108892\n            <a name=\"target-species-100000108892\"> </a>\n          </td>\n          <td>Bullock</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108893\n            <a name=\"target-species-100000108893\"> </a>\n          </td>\n          <td>Cattle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108894\n            <a name=\"target-species-100000108894\"> </a>\n          </td>\n          <td>Beef cattle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108895\n            <a name=\"target-species-100000108895\"> </a>\n          </td>\n          <td>Dairy cattle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108896\n            <a name=\"target-species-100000108896\"> </a>\n          </td>\n          <td>Dry cow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108897\n            <a name=\"target-species-100000108897\"> </a>\n          </td>\n          <td>Bull</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108898\n            <a name=\"target-species-100000108898\"> </a>\n          </td>\n          <td>Lactating cow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108899\n            <a name=\"target-species-100000108899\"> </a>\n          </td>\n          <td>All other food producing species</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108900\n            <a name=\"target-species-100000108900\"> </a>\n          </td>\n          <td>All non-food producing species</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108901\n            <a name=\"target-species-100000108901\"> </a>\n          </td>\n          <td>All species  </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108902\n            <a name=\"target-species-100000108902\"> </a>\n          </td>\n          <td>Carnivores</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108903\n            <a name=\"target-species-100000108903\"> </a>\n          </td>\n          <td>Domestic animals</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108904\n            <a name=\"target-species-100000108904\"> </a>\n          </td>\n          <td>Fur animals</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108905\n            <a name=\"target-species-100000108905\"> </a>\n          </td>\n          <td>Game animals</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108906\n            <a name=\"target-species-100000108906\"> </a>\n          </td>\n          <td>Laboratory animals</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108907\n            <a name=\"target-species-100000108907\"> </a>\n          </td>\n          <td>Major species</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108908\n            <a name=\"target-species-100000108908\"> </a>\n          </td>\n          <td>Minor species</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108909\n            <a name=\"target-species-100000108909\"> </a>\n          </td>\n          <td>Ruminant</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108910\n            <a name=\"target-species-100000108910\"> </a>\n          </td>\n          <td>Ruminant and porcine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108911\n            <a name=\"target-species-100000108911\"> </a>\n          </td>\n          <td>Small animals</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108912\n            <a name=\"target-species-100000108912\"> </a>\n          </td>\n          <td>Crocodile</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108913\n            <a name=\"target-species-100000108913\"> </a>\n          </td>\n          <td>Frog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108914\n            <a name=\"target-species-100000108914\"> </a>\n          </td>\n          <td>Iguana</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108915\n            <a name=\"target-species-100000108915\"> </a>\n          </td>\n          <td>Lizard</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108916\n            <a name=\"target-species-100000108916\"> </a>\n          </td>\n          <td>Amphibians</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108917\n            <a name=\"target-species-100000108917\"> </a>\n          </td>\n          <td>Reptiles</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108918\n            <a name=\"target-species-100000108918\"> </a>\n          </td>\n          <td>Reptiles for production</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108919\n            <a name=\"target-species-100000108919\"> </a>\n          </td>\n          <td>Snake</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108920\n            <a name=\"target-species-100000108920\"> </a>\n          </td>\n          <td>Tortoise</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108921\n            <a name=\"target-species-100000108921\"> </a>\n          </td>\n          <td>Turtle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108922\n            <a name=\"target-species-100000108922\"> </a>\n          </td>\n          <td>Honey bees</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108923\n            <a name=\"target-species-100000108923\"> </a>\n          </td>\n          <td>Crustacean</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108924\n            <a name=\"target-species-100000108924\"> </a>\n          </td>\n          <td>Spider</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108925\n            <a name=\"target-species-100000108925\"> </a>\n          </td>\n          <td>Indian hen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108926\n            <a name=\"target-species-100000108926\"> </a>\n          </td>\n          <td>African Goshawk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108927\n            <a name=\"target-species-100000108927\"> </a>\n          </td>\n          <td>Black Kite</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108928\n            <a name=\"target-species-100000108928\"> </a>\n          </td>\n          <td>Budgerigar</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108929\n            <a name=\"target-species-100000108929\"> </a>\n          </td>\n          <td>Bustard</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108930\n            <a name=\"target-species-100000108930\"> </a>\n          </td>\n          <td>Buzzard</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108931\n            <a name=\"target-species-100000108931\"> </a>\n          </td>\n          <td>Hen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108932\n            <a name=\"target-species-100000108932\"> </a>\n          </td>\n          <td>Layer hen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108933\n            <a name=\"target-species-100000108933\"> </a>\n          </td>\n          <td>Cock</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108934\n            <a name=\"target-species-100000108934\"> </a>\n          </td>\n          <td>Broiler</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108935\n            <a name=\"target-species-100000108935\"> </a>\n          </td>\n          <td>Chickens</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108936\n            <a name=\"target-species-100000108936\"> </a>\n          </td>\n          <td>Chicken embryonated eggs</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108937\n            <a name=\"target-species-100000108937\"> </a>\n          </td>\n          <td>Chicken for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108938\n            <a name=\"target-species-100000108938\"> </a>\n          </td>\n          <td>Replacement chick</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108939\n            <a name=\"target-species-100000108939\"> </a>\n          </td>\n          <td>Chick</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108940\n            <a name=\"target-species-100000108940\"> </a>\n          </td>\n          <td>Pullet</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108941\n            <a name=\"target-species-100000108941\"> </a>\n          </td>\n          <td>Cockatiel</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108942\n            <a name=\"target-species-100000108942\"> </a>\n          </td>\n          <td>Cockatoo</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108943\n            <a name=\"target-species-100000108943\"> </a>\n          </td>\n          <td>Common canary</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108944\n            <a name=\"target-species-100000108944\"> </a>\n          </td>\n          <td>Crow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108945\n            <a name=\"target-species-100000108945\"> </a>\n          </td>\n          <td>Duck</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108946\n            <a name=\"target-species-100000108946\"> </a>\n          </td>\n          <td>Duck broiler</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108947\n            <a name=\"target-species-100000108947\"> </a>\n          </td>\n          <td>Duckling</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108948\n            <a name=\"target-species-100000108948\"> </a>\n          </td>\n          <td>Eagle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108949\n            <a name=\"target-species-100000108949\"> </a>\n          </td>\n          <td>Emu</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108950\n            <a name=\"target-species-100000108950\"> </a>\n          </td>\n          <td>Goose</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108951\n            <a name=\"target-species-100000108951\"> </a>\n          </td>\n          <td>Guinea fowl</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108952\n            <a name=\"target-species-100000108952\"> </a>\n          </td>\n          <td>Kestrel</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108953\n            <a name=\"target-species-100000108953\"> </a>\n          </td>\n          <td>Kite</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108954\n            <a name=\"target-species-100000108954\"> </a>\n          </td>\n          <td>Macaw</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108955\n            <a name=\"target-species-100000108955\"> </a>\n          </td>\n          <td>Ostrich</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108956\n            <a name=\"target-species-100000108956\"> </a>\n          </td>\n          <td>Birds</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108957\n            <a name=\"target-species-100000108957\"> </a>\n          </td>\n          <td>Fowls</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108958\n            <a name=\"target-species-100000108958\"> </a>\n          </td>\n          <td>Finch</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108959\n            <a name=\"target-species-100000108959\"> </a>\n          </td>\n          <td>Galliformes</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108960\n            <a name=\"target-species-100000108960\"> </a>\n          </td>\n          <td>Game birds</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108961\n            <a name=\"target-species-100000108961\"> </a>\n          </td>\n          <td>Pekin duck</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108962\n            <a name=\"target-species-100000108962\"> </a>\n          </td>\n          <td>Ornamental birds</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108963\n            <a name=\"target-species-100000108963\"> </a>\n          </td>\n          <td>Poultry</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108964\n            <a name=\"target-species-100000108964\"> </a>\n          </td>\n          <td>Owl</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108965\n            <a name=\"target-species-100000108965\"> </a>\n          </td>\n          <td>Parakeet</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108966\n            <a name=\"target-species-100000108966\"> </a>\n          </td>\n          <td>Parrot</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108967\n            <a name=\"target-species-100000108967\"> </a>\n          </td>\n          <td>Partridge</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108968\n            <a name=\"target-species-100000108968\"> </a>\n          </td>\n          <td>Peregrine Falcon</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108969\n            <a name=\"target-species-100000108969\"> </a>\n          </td>\n          <td>Pheasants</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108970\n            <a name=\"target-species-100000108970\"> </a>\n          </td>\n          <td>Carrier pigeon</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108971\n            <a name=\"target-species-100000108971\"> </a>\n          </td>\n          <td>Newborn calves</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108972\n            <a name=\"target-species-100000108972\"> </a>\n          </td>\n          <td>Pregnant cow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108973\n            <a name=\"target-species-100000108973\"> </a>\n          </td>\n          <td>Pregnant heifer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108974\n            <a name=\"target-species-100000108974\"> </a>\n          </td>\n          <td>Pre-ruminant cattle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108975\n            <a name=\"target-species-100000108975\"> </a>\n          </td>\n          <td>Ruminant cattle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108976\n            <a name=\"target-species-100000108976\"> </a>\n          </td>\n          <td>Wild cattle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108977\n            <a name=\"target-species-100000108977\"> </a>\n          </td>\n          <td>Calf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108978\n            <a name=\"target-species-100000108978\"> </a>\n          </td>\n          <td>Heifers</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108979\n            <a name=\"target-species-100000108979\"> </a>\n          </td>\n          <td>Other Bovids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108980\n            <a name=\"target-species-100000108980\"> </a>\n          </td>\n          <td>Alpaca</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108981\n            <a name=\"target-species-100000108981\"> </a>\n          </td>\n          <td>Camel</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108982\n            <a name=\"target-species-100000108982\"> </a>\n          </td>\n          <td>Llama</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108983\n            <a name=\"target-species-100000108983\"> </a>\n          </td>\n          <td>Other Camelids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108984\n            <a name=\"target-species-100000108984\"> </a>\n          </td>\n          <td>Bitch</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108985\n            <a name=\"target-species-100000108985\"> </a>\n          </td>\n          <td>Bitch for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108986\n            <a name=\"target-species-100000108986\"> </a>\n          </td>\n          <td>Adult male dog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108987\n            <a name=\"target-species-100000108987\"> </a>\n          </td>\n          <td>Adult male dog for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108988\n            <a name=\"target-species-100000108988\"> </a>\n          </td>\n          <td>Dogs</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108989\n            <a name=\"target-species-100000108989\"> </a>\n          </td>\n          <td>Lactating bitch</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108990\n            <a name=\"target-species-100000108990\"> </a>\n          </td>\n          <td>Large dog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108991\n            <a name=\"target-species-100000108991\"> </a>\n          </td>\n          <td>Medium dog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108992\n            <a name=\"target-species-100000108992\"> </a>\n          </td>\n          <td>Pregnant bitch</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108993\n            <a name=\"target-species-100000108993\"> </a>\n          </td>\n          <td>Small dog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108994\n            <a name=\"target-species-100000108994\"> </a>\n          </td>\n          <td>Very large dog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108995\n            <a name=\"target-species-100000108995\"> </a>\n          </td>\n          <td>Very small dog</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108996\n            <a name=\"target-species-100000108996\"> </a>\n          </td>\n          <td>Puppy</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108997\n            <a name=\"target-species-100000108997\"> </a>\n          </td>\n          <td>Foxes</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108998\n            <a name=\"target-species-100000108998\"> </a>\n          </td>\n          <td>Jackal</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000108999\n            <a name=\"target-species-100000108999\"> </a>\n          </td>\n          <td>Other Canids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109000\n            <a name=\"target-species-100000109000\"> </a>\n          </td>\n          <td>Raccoon dogs</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109001\n            <a name=\"target-species-100000109001\"> </a>\n          </td>\n          <td>Wolf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109002\n            <a name=\"target-species-100000109002\"> </a>\n          </td>\n          <td>Chamois</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109003\n            <a name=\"target-species-100000109003\"> </a>\n          </td>\n          <td>Other Caprines</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109004\n            <a name=\"target-species-100000109004\"> </a>\n          </td>\n          <td>Adult female goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109005\n            <a name=\"target-species-100000109005\"> </a>\n          </td>\n          <td>Adult male goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109006\n            <a name=\"target-species-100000109006\"> </a>\n          </td>\n          <td>Dry adult female goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109007\n            <a name=\"target-species-100000109007\"> </a>\n          </td>\n          <td>Goats</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109008\n            <a name=\"target-species-100000109008\"> </a>\n          </td>\n          <td>Lactating adult female goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109009\n            <a name=\"target-species-100000109009\"> </a>\n          </td>\n          <td>Pregnant adult female goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109010\n            <a name=\"target-species-100000109010\"> </a>\n          </td>\n          <td>Pre-ruminant goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109011\n            <a name=\"target-species-100000109011\"> </a>\n          </td>\n          <td>Ruminant goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109012\n            <a name=\"target-species-100000109012\"> </a>\n          </td>\n          <td>Wild goat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109013\n            <a name=\"target-species-100000109013\"> </a>\n          </td>\n          <td>Kid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109014\n            <a name=\"target-species-100000109014\"> </a>\n          </td>\n          <td>Other Ovids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109015\n            <a name=\"target-species-100000109015\"> </a>\n          </td>\n          <td>Ewe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109016\n            <a name=\"target-species-100000109016\"> </a>\n          </td>\n          <td>Ram</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109017\n            <a name=\"target-species-100000109017\"> </a>\n          </td>\n          <td>Dry ewe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109018\n            <a name=\"target-species-100000109018\"> </a>\n          </td>\n          <td>Lactating ewe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109019\n            <a name=\"target-species-100000109019\"> </a>\n          </td>\n          <td>Pregnant ewe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109020\n            <a name=\"target-species-100000109020\"> </a>\n          </td>\n          <td>Pre-ruminant sheep</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109021\n            <a name=\"target-species-100000109021\"> </a>\n          </td>\n          <td>Ruminant sheep</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109022\n            <a name=\"target-species-100000109022\"> </a>\n          </td>\n          <td>Sheep</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109023\n            <a name=\"target-species-100000109023\"> </a>\n          </td>\n          <td>Sheep for meat production</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109024\n            <a name=\"target-species-100000109024\"> </a>\n          </td>\n          <td>Dairy sheep</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109025\n            <a name=\"target-species-100000109025\"> </a>\n          </td>\n          <td>Wild sheep</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109026\n            <a name=\"target-species-100000109026\"> </a>\n          </td>\n          <td>Lamb</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109027\n            <a name=\"target-species-100000109027\"> </a>\n          </td>\n          <td>Elk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109028\n            <a name=\"target-species-100000109028\"> </a>\n          </td>\n          <td>Fallow deer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109029\n            <a name=\"target-species-100000109029\"> </a>\n          </td>\n          <td>Moose</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109030\n            <a name=\"target-species-100000109030\"> </a>\n          </td>\n          <td>Antelope</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109031\n            <a name=\"target-species-100000109031\"> </a>\n          </td>\n          <td>Cervid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109032\n            <a name=\"target-species-100000109032\"> </a>\n          </td>\n          <td>Deer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109033\n            <a name=\"target-species-100000109033\"> </a>\n          </td>\n          <td>Other Deer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109034\n            <a name=\"target-species-100000109034\"> </a>\n          </td>\n          <td>Red deer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109035\n            <a name=\"target-species-100000109035\"> </a>\n          </td>\n          <td>Reindeer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109036\n            <a name=\"target-species-100000109036\"> </a>\n          </td>\n          <td>Roe deer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109037\n            <a name=\"target-species-100000109037\"> </a>\n          </td>\n          <td>Donkey</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109038\n            <a name=\"target-species-100000109038\"> </a>\n          </td>\n          <td>Mare</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109039\n            <a name=\"target-species-100000109039\"> </a>\n          </td>\n          <td>Gelding</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109040\n            <a name=\"target-species-100000109040\"> </a>\n          </td>\n          <td>Horses</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109041\n            <a name=\"target-species-100000109041\"> </a>\n          </td>\n          <td>Stallion</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109042\n            <a name=\"target-species-100000109042\"> </a>\n          </td>\n          <td>Pony</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109043\n            <a name=\"target-species-100000109043\"> </a>\n          </td>\n          <td>Pregnant mare</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109044\n            <a name=\"target-species-100000109044\"> </a>\n          </td>\n          <td>Non food-producing horse</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109045\n            <a name=\"target-species-100000109045\"> </a>\n          </td>\n          <td>Suckling colt</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109046\n            <a name=\"target-species-100000109046\"> </a>\n          </td>\n          <td>Colt</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109047\n            <a name=\"target-species-100000109047\"> </a>\n          </td>\n          <td>Mule</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109048\n            <a name=\"target-species-100000109048\"> </a>\n          </td>\n          <td>Equid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109049\n            <a name=\"target-species-100000109049\"> </a>\n          </td>\n          <td>Female equid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109050\n            <a name=\"target-species-100000109050\"> </a>\n          </td>\n          <td>Other Equids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109051\n            <a name=\"target-species-100000109051\"> </a>\n          </td>\n          <td>Zebra</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109052\n            <a name=\"target-species-100000109052\"> </a>\n          </td>\n          <td>Bobcat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109053\n            <a name=\"target-species-100000109053\"> </a>\n          </td>\n          <td>Adult female cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109054\n            <a name=\"target-species-100000109054\"> </a>\n          </td>\n          <td>Adult female cat for reproduction</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109055\n            <a name=\"target-species-100000109055\"> </a>\n          </td>\n          <td>Adult male cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109056\n            <a name=\"target-species-100000109056\"> </a>\n          </td>\n          <td>Cats</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109057\n            <a name=\"target-species-100000109057\"> </a>\n          </td>\n          <td>Lactating cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109058\n            <a name=\"target-species-100000109058\"> </a>\n          </td>\n          <td>Large cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109059\n            <a name=\"target-species-100000109059\"> </a>\n          </td>\n          <td>Medium cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109060\n            <a name=\"target-species-100000109060\"> </a>\n          </td>\n          <td>Pregnant cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109061\n            <a name=\"target-species-100000109061\"> </a>\n          </td>\n          <td>Small cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109062\n            <a name=\"target-species-100000109062\"> </a>\n          </td>\n          <td>Kitten</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109063\n            <a name=\"target-species-100000109063\"> </a>\n          </td>\n          <td>Cougar</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109064\n            <a name=\"target-species-100000109064\"> </a>\n          </td>\n          <td>Jaguar</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109065\n            <a name=\"target-species-100000109065\"> </a>\n          </td>\n          <td>Leopard</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109066\n            <a name=\"target-species-100000109066\"> </a>\n          </td>\n          <td>Lion</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109067\n            <a name=\"target-species-100000109067\"> </a>\n          </td>\n          <td>Lynx</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109068\n            <a name=\"target-species-100000109068\"> </a>\n          </td>\n          <td>Other Felids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109069\n            <a name=\"target-species-100000109069\"> </a>\n          </td>\n          <td>Tiger</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109070\n            <a name=\"target-species-100000109070\"> </a>\n          </td>\n          <td>Tsushima wild cat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109071\n            <a name=\"target-species-100000109071\"> </a>\n          </td>\n          <td>Other Leporids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109072\n            <a name=\"target-species-100000109072\"> </a>\n          </td>\n          <td>Hare</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000109073\n            <a name=\"target-species-100000109073\"> </a>\n          </td>\n          <td>Female rabbit for reproduction</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/target-species"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2030" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "TargetSpecies"] ; # 
+  fhir:title [ fhir:v "Target Species"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A species for which a medicinal product is intended."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/target-species"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/target-species>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "100000108874" ] ;
+     fhir:display [ fhir:v "Dove" ]
+  ] [
+     fhir:code [ fhir:v "100000108875" ] ;
+     fhir:display [ fhir:v "Quail" ]
+  ] [
+     fhir:code [ fhir:v "100000108876" ] ;
+     fhir:display [ fhir:v "Snipe" ]
+  ] [
+     fhir:code [ fhir:v "100000108877" ] ;
+     fhir:display [ fhir:v "Sparrow" ]
+  ] [
+     fhir:code [ fhir:v "100000108878" ] ;
+     fhir:display [ fhir:v "Starling" ]
+  ] [
+     fhir:code [ fhir:v "100000108879" ] ;
+     fhir:display [ fhir:v "Swan" ]
+  ] [
+     fhir:code [ fhir:v "100000108880" ] ;
+     fhir:display [ fhir:v "Turkey hen" ]
+  ] [
+     fhir:code [ fhir:v "100000108881" ] ;
+     fhir:display [ fhir:v "Turkey cock" ]
+  ] [
+     fhir:code [ fhir:v "100000108882" ] ;
+     fhir:display [ fhir:v "Turkeys" ]
+  ] [
+     fhir:code [ fhir:v "100000108883" ] ;
+     fhir:display [ fhir:v "Turkey for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000108884" ] ;
+     fhir:display [ fhir:v "Poult" ]
+  ] [
+     fhir:code [ fhir:v "100000108885" ] ;
+     fhir:display [ fhir:v "Turtle dove" ]
+  ] [
+     fhir:code [ fhir:v "100000108886" ] ;
+     fhir:display [ fhir:v "Bison" ]
+  ] [
+     fhir:code [ fhir:v "100000108887" ] ;
+     fhir:display [ fhir:v "Buffalo" ]
+  ] [
+     fhir:code [ fhir:v "100000108888" ] ;
+     fhir:display [ fhir:v "Cows" ]
+  ] [
+     fhir:code [ fhir:v "100000108889" ] ;
+     fhir:display [ fhir:v "Cow for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000108890" ] ;
+     fhir:display [ fhir:v "Bull for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000108891" ] ;
+     fhir:display [ fhir:v "Ox" ]
+  ] [
+     fhir:code [ fhir:v "100000108892" ] ;
+     fhir:display [ fhir:v "Bullock" ]
+  ] [
+     fhir:code [ fhir:v "100000108893" ] ;
+     fhir:display [ fhir:v "Cattle" ]
+  ] [
+     fhir:code [ fhir:v "100000108894" ] ;
+     fhir:display [ fhir:v "Beef cattle" ]
+  ] [
+     fhir:code [ fhir:v "100000108895" ] ;
+     fhir:display [ fhir:v "Dairy cattle" ]
+  ] [
+     fhir:code [ fhir:v "100000108896" ] ;
+     fhir:display [ fhir:v "Dry cow" ]
+  ] [
+     fhir:code [ fhir:v "100000108897" ] ;
+     fhir:display [ fhir:v "Bull" ]
+  ] [
+     fhir:code [ fhir:v "100000108898" ] ;
+     fhir:display [ fhir:v "Lactating cow" ]
+  ] [
+     fhir:code [ fhir:v "100000108899" ] ;
+     fhir:display [ fhir:v "All other food producing species" ]
+  ] [
+     fhir:code [ fhir:v "100000108900" ] ;
+     fhir:display [ fhir:v "All non-food producing species" ]
+  ] [
+     fhir:code [ fhir:v "100000108901" ] ;
+     fhir:display [ fhir:v "All species  " ]
+  ] [
+     fhir:code [ fhir:v "100000108902" ] ;
+     fhir:display [ fhir:v "Carnivores" ]
+  ] [
+     fhir:code [ fhir:v "100000108903" ] ;
+     fhir:display [ fhir:v "Domestic animals" ]
+  ] [
+     fhir:code [ fhir:v "100000108904" ] ;
+     fhir:display [ fhir:v "Fur animals" ]
+  ] [
+     fhir:code [ fhir:v "100000108905" ] ;
+     fhir:display [ fhir:v "Game animals" ]
+  ] [
+     fhir:code [ fhir:v "100000108906" ] ;
+     fhir:display [ fhir:v "Laboratory animals" ]
+  ] [
+     fhir:code [ fhir:v "100000108907" ] ;
+     fhir:display [ fhir:v "Major species" ]
+  ] [
+     fhir:code [ fhir:v "100000108908" ] ;
+     fhir:display [ fhir:v "Minor species" ]
+  ] [
+     fhir:code [ fhir:v "100000108909" ] ;
+     fhir:display [ fhir:v "Ruminant" ]
+  ] [
+     fhir:code [ fhir:v "100000108910" ] ;
+     fhir:display [ fhir:v "Ruminant and porcine" ]
+  ] [
+     fhir:code [ fhir:v "100000108911" ] ;
+     fhir:display [ fhir:v "Small animals" ]
+  ] [
+     fhir:code [ fhir:v "100000108912" ] ;
+     fhir:display [ fhir:v "Crocodile" ]
+  ] [
+     fhir:code [ fhir:v "100000108913" ] ;
+     fhir:display [ fhir:v "Frog" ]
+  ] [
+     fhir:code [ fhir:v "100000108914" ] ;
+     fhir:display [ fhir:v "Iguana" ]
+  ] [
+     fhir:code [ fhir:v "100000108915" ] ;
+     fhir:display [ fhir:v "Lizard" ]
+  ] [
+     fhir:code [ fhir:v "100000108916" ] ;
+     fhir:display [ fhir:v "Amphibians" ]
+  ] [
+     fhir:code [ fhir:v "100000108917" ] ;
+     fhir:display [ fhir:v "Reptiles" ]
+  ] [
+     fhir:code [ fhir:v "100000108918" ] ;
+     fhir:display [ fhir:v "Reptiles for production" ]
+  ] [
+     fhir:code [ fhir:v "100000108919" ] ;
+     fhir:display [ fhir:v "Snake" ]
+  ] [
+     fhir:code [ fhir:v "100000108920" ] ;
+     fhir:display [ fhir:v "Tortoise" ]
+  ] [
+     fhir:code [ fhir:v "100000108921" ] ;
+     fhir:display [ fhir:v "Turtle" ]
+  ] [
+     fhir:code [ fhir:v "100000108922" ] ;
+     fhir:display [ fhir:v "Honey bees" ]
+  ] [
+     fhir:code [ fhir:v "100000108923" ] ;
+     fhir:display [ fhir:v "Crustacean" ]
+  ] [
+     fhir:code [ fhir:v "100000108924" ] ;
+     fhir:display [ fhir:v "Spider" ]
+  ] [
+     fhir:code [ fhir:v "100000108925" ] ;
+     fhir:display [ fhir:v "Indian hen" ]
+  ] [
+     fhir:code [ fhir:v "100000108926" ] ;
+     fhir:display [ fhir:v "African Goshawk" ]
+  ] [
+     fhir:code [ fhir:v "100000108927" ] ;
+     fhir:display [ fhir:v "Black Kite" ]
+  ] [
+     fhir:code [ fhir:v "100000108928" ] ;
+     fhir:display [ fhir:v "Budgerigar" ]
+  ] [
+     fhir:code [ fhir:v "100000108929" ] ;
+     fhir:display [ fhir:v "Bustard" ]
+  ] [
+     fhir:code [ fhir:v "100000108930" ] ;
+     fhir:display [ fhir:v "Buzzard" ]
+  ] [
+     fhir:code [ fhir:v "100000108931" ] ;
+     fhir:display [ fhir:v "Hen" ]
+  ] [
+     fhir:code [ fhir:v "100000108932" ] ;
+     fhir:display [ fhir:v "Layer hen" ]
+  ] [
+     fhir:code [ fhir:v "100000108933" ] ;
+     fhir:display [ fhir:v "Cock" ]
+  ] [
+     fhir:code [ fhir:v "100000108934" ] ;
+     fhir:display [ fhir:v "Broiler" ]
+  ] [
+     fhir:code [ fhir:v "100000108935" ] ;
+     fhir:display [ fhir:v "Chickens" ]
+  ] [
+     fhir:code [ fhir:v "100000108936" ] ;
+     fhir:display [ fhir:v "Chicken embryonated eggs" ]
+  ] [
+     fhir:code [ fhir:v "100000108937" ] ;
+     fhir:display [ fhir:v "Chicken for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000108938" ] ;
+     fhir:display [ fhir:v "Replacement chick" ]
+  ] [
+     fhir:code [ fhir:v "100000108939" ] ;
+     fhir:display [ fhir:v "Chick" ]
+  ] [
+     fhir:code [ fhir:v "100000108940" ] ;
+     fhir:display [ fhir:v "Pullet" ]
+  ] [
+     fhir:code [ fhir:v "100000108941" ] ;
+     fhir:display [ fhir:v "Cockatiel" ]
+  ] [
+     fhir:code [ fhir:v "100000108942" ] ;
+     fhir:display [ fhir:v "Cockatoo" ]
+  ] [
+     fhir:code [ fhir:v "100000108943" ] ;
+     fhir:display [ fhir:v "Common canary" ]
+  ] [
+     fhir:code [ fhir:v "100000108944" ] ;
+     fhir:display [ fhir:v "Crow" ]
+  ] [
+     fhir:code [ fhir:v "100000108945" ] ;
+     fhir:display [ fhir:v "Duck" ]
+  ] [
+     fhir:code [ fhir:v "100000108946" ] ;
+     fhir:display [ fhir:v "Duck broiler" ]
+  ] [
+     fhir:code [ fhir:v "100000108947" ] ;
+     fhir:display [ fhir:v "Duckling" ]
+  ] [
+     fhir:code [ fhir:v "100000108948" ] ;
+     fhir:display [ fhir:v "Eagle" ]
+  ] [
+     fhir:code [ fhir:v "100000108949" ] ;
+     fhir:display [ fhir:v "Emu" ]
+  ] [
+     fhir:code [ fhir:v "100000108950" ] ;
+     fhir:display [ fhir:v "Goose" ]
+  ] [
+     fhir:code [ fhir:v "100000108951" ] ;
+     fhir:display [ fhir:v "Guinea fowl" ]
+  ] [
+     fhir:code [ fhir:v "100000108952" ] ;
+     fhir:display [ fhir:v "Kestrel" ]
+  ] [
+     fhir:code [ fhir:v "100000108953" ] ;
+     fhir:display [ fhir:v "Kite" ]
+  ] [
+     fhir:code [ fhir:v "100000108954" ] ;
+     fhir:display [ fhir:v "Macaw" ]
+  ] [
+     fhir:code [ fhir:v "100000108955" ] ;
+     fhir:display [ fhir:v "Ostrich" ]
+  ] [
+     fhir:code [ fhir:v "100000108956" ] ;
+     fhir:display [ fhir:v "Birds" ]
+  ] [
+     fhir:code [ fhir:v "100000108957" ] ;
+     fhir:display [ fhir:v "Fowls" ]
+  ] [
+     fhir:code [ fhir:v "100000108958" ] ;
+     fhir:display [ fhir:v "Finch" ]
+  ] [
+     fhir:code [ fhir:v "100000108959" ] ;
+     fhir:display [ fhir:v "Galliformes" ]
+  ] [
+     fhir:code [ fhir:v "100000108960" ] ;
+     fhir:display [ fhir:v "Game birds" ]
+  ] [
+     fhir:code [ fhir:v "100000108961" ] ;
+     fhir:display [ fhir:v "Pekin duck" ]
+  ] [
+     fhir:code [ fhir:v "100000108962" ] ;
+     fhir:display [ fhir:v "Ornamental birds" ]
+  ] [
+     fhir:code [ fhir:v "100000108963" ] ;
+     fhir:display [ fhir:v "Poultry" ]
+  ] [
+     fhir:code [ fhir:v "100000108964" ] ;
+     fhir:display [ fhir:v "Owl" ]
+  ] [
+     fhir:code [ fhir:v "100000108965" ] ;
+     fhir:display [ fhir:v "Parakeet" ]
+  ] [
+     fhir:code [ fhir:v "100000108966" ] ;
+     fhir:display [ fhir:v "Parrot" ]
+  ] [
+     fhir:code [ fhir:v "100000108967" ] ;
+     fhir:display [ fhir:v "Partridge" ]
+  ] [
+     fhir:code [ fhir:v "100000108968" ] ;
+     fhir:display [ fhir:v "Peregrine Falcon" ]
+  ] [
+     fhir:code [ fhir:v "100000108969" ] ;
+     fhir:display [ fhir:v "Pheasants" ]
+  ] [
+     fhir:code [ fhir:v "100000108970" ] ;
+     fhir:display [ fhir:v "Carrier pigeon" ]
+  ] [
+     fhir:code [ fhir:v "100000108971" ] ;
+     fhir:display [ fhir:v "Newborn calves" ]
+  ] [
+     fhir:code [ fhir:v "100000108972" ] ;
+     fhir:display [ fhir:v "Pregnant cow" ]
+  ] [
+     fhir:code [ fhir:v "100000108973" ] ;
+     fhir:display [ fhir:v "Pregnant heifer" ]
+  ] [
+     fhir:code [ fhir:v "100000108974" ] ;
+     fhir:display [ fhir:v "Pre-ruminant cattle" ]
+  ] [
+     fhir:code [ fhir:v "100000108975" ] ;
+     fhir:display [ fhir:v "Ruminant cattle" ]
+  ] [
+     fhir:code [ fhir:v "100000108976" ] ;
+     fhir:display [ fhir:v "Wild cattle" ]
+  ] [
+     fhir:code [ fhir:v "100000108977" ] ;
+     fhir:display [ fhir:v "Calf" ]
+  ] [
+     fhir:code [ fhir:v "100000108978" ] ;
+     fhir:display [ fhir:v "Heifers" ]
+  ] [
+     fhir:code [ fhir:v "100000108979" ] ;
+     fhir:display [ fhir:v "Other Bovids" ]
+  ] [
+     fhir:code [ fhir:v "100000108980" ] ;
+     fhir:display [ fhir:v "Alpaca" ]
+  ] [
+     fhir:code [ fhir:v "100000108981" ] ;
+     fhir:display [ fhir:v "Camel" ]
+  ] [
+     fhir:code [ fhir:v "100000108982" ] ;
+     fhir:display [ fhir:v "Llama" ]
+  ] [
+     fhir:code [ fhir:v "100000108983" ] ;
+     fhir:display [ fhir:v "Other Camelids" ]
+  ] [
+     fhir:code [ fhir:v "100000108984" ] ;
+     fhir:display [ fhir:v "Bitch" ]
+  ] [
+     fhir:code [ fhir:v "100000108985" ] ;
+     fhir:display [ fhir:v "Bitch for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000108986" ] ;
+     fhir:display [ fhir:v "Adult male dog" ]
+  ] [
+     fhir:code [ fhir:v "100000108987" ] ;
+     fhir:display [ fhir:v "Adult male dog for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000108988" ] ;
+     fhir:display [ fhir:v "Dogs" ]
+  ] [
+     fhir:code [ fhir:v "100000108989" ] ;
+     fhir:display [ fhir:v "Lactating bitch" ]
+  ] [
+     fhir:code [ fhir:v "100000108990" ] ;
+     fhir:display [ fhir:v "Large dog" ]
+  ] [
+     fhir:code [ fhir:v "100000108991" ] ;
+     fhir:display [ fhir:v "Medium dog" ]
+  ] [
+     fhir:code [ fhir:v "100000108992" ] ;
+     fhir:display [ fhir:v "Pregnant bitch" ]
+  ] [
+     fhir:code [ fhir:v "100000108993" ] ;
+     fhir:display [ fhir:v "Small dog" ]
+  ] [
+     fhir:code [ fhir:v "100000108994" ] ;
+     fhir:display [ fhir:v "Very large dog" ]
+  ] [
+     fhir:code [ fhir:v "100000108995" ] ;
+     fhir:display [ fhir:v "Very small dog" ]
+  ] [
+     fhir:code [ fhir:v "100000108996" ] ;
+     fhir:display [ fhir:v "Puppy" ]
+  ] [
+     fhir:code [ fhir:v "100000108997" ] ;
+     fhir:display [ fhir:v "Foxes" ]
+  ] [
+     fhir:code [ fhir:v "100000108998" ] ;
+     fhir:display [ fhir:v "Jackal" ]
+  ] [
+     fhir:code [ fhir:v "100000108999" ] ;
+     fhir:display [ fhir:v "Other Canids" ]
+  ] [
+     fhir:code [ fhir:v "100000109000" ] ;
+     fhir:display [ fhir:v "Raccoon dogs" ]
+  ] [
+     fhir:code [ fhir:v "100000109001" ] ;
+     fhir:display [ fhir:v "Wolf" ]
+  ] [
+     fhir:code [ fhir:v "100000109002" ] ;
+     fhir:display [ fhir:v "Chamois" ]
+  ] [
+     fhir:code [ fhir:v "100000109003" ] ;
+     fhir:display [ fhir:v "Other Caprines" ]
+  ] [
+     fhir:code [ fhir:v "100000109004" ] ;
+     fhir:display [ fhir:v "Adult female goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109005" ] ;
+     fhir:display [ fhir:v "Adult male goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109006" ] ;
+     fhir:display [ fhir:v "Dry adult female goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109007" ] ;
+     fhir:display [ fhir:v "Goats" ]
+  ] [
+     fhir:code [ fhir:v "100000109008" ] ;
+     fhir:display [ fhir:v "Lactating adult female goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109009" ] ;
+     fhir:display [ fhir:v "Pregnant adult female goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109010" ] ;
+     fhir:display [ fhir:v "Pre-ruminant goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109011" ] ;
+     fhir:display [ fhir:v "Ruminant goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109012" ] ;
+     fhir:display [ fhir:v "Wild goat" ]
+  ] [
+     fhir:code [ fhir:v "100000109013" ] ;
+     fhir:display [ fhir:v "Kid" ]
+  ] [
+     fhir:code [ fhir:v "100000109014" ] ;
+     fhir:display [ fhir:v "Other Ovids" ]
+  ] [
+     fhir:code [ fhir:v "100000109015" ] ;
+     fhir:display [ fhir:v "Ewe" ]
+  ] [
+     fhir:code [ fhir:v "100000109016" ] ;
+     fhir:display [ fhir:v "Ram" ]
+  ] [
+     fhir:code [ fhir:v "100000109017" ] ;
+     fhir:display [ fhir:v "Dry ewe" ]
+  ] [
+     fhir:code [ fhir:v "100000109018" ] ;
+     fhir:display [ fhir:v "Lactating ewe" ]
+  ] [
+     fhir:code [ fhir:v "100000109019" ] ;
+     fhir:display [ fhir:v "Pregnant ewe" ]
+  ] [
+     fhir:code [ fhir:v "100000109020" ] ;
+     fhir:display [ fhir:v "Pre-ruminant sheep" ]
+  ] [
+     fhir:code [ fhir:v "100000109021" ] ;
+     fhir:display [ fhir:v "Ruminant sheep" ]
+  ] [
+     fhir:code [ fhir:v "100000109022" ] ;
+     fhir:display [ fhir:v "Sheep" ]
+  ] [
+     fhir:code [ fhir:v "100000109023" ] ;
+     fhir:display [ fhir:v "Sheep for meat production" ]
+  ] [
+     fhir:code [ fhir:v "100000109024" ] ;
+     fhir:display [ fhir:v "Dairy sheep" ]
+  ] [
+     fhir:code [ fhir:v "100000109025" ] ;
+     fhir:display [ fhir:v "Wild sheep" ]
+  ] [
+     fhir:code [ fhir:v "100000109026" ] ;
+     fhir:display [ fhir:v "Lamb" ]
+  ] [
+     fhir:code [ fhir:v "100000109027" ] ;
+     fhir:display [ fhir:v "Elk" ]
+  ] [
+     fhir:code [ fhir:v "100000109028" ] ;
+     fhir:display [ fhir:v "Fallow deer" ]
+  ] [
+     fhir:code [ fhir:v "100000109029" ] ;
+     fhir:display [ fhir:v "Moose" ]
+  ] [
+     fhir:code [ fhir:v "100000109030" ] ;
+     fhir:display [ fhir:v "Antelope" ]
+  ] [
+     fhir:code [ fhir:v "100000109031" ] ;
+     fhir:display [ fhir:v "Cervid" ]
+  ] [
+     fhir:code [ fhir:v "100000109032" ] ;
+     fhir:display [ fhir:v "Deer" ]
+  ] [
+     fhir:code [ fhir:v "100000109033" ] ;
+     fhir:display [ fhir:v "Other Deer" ]
+  ] [
+     fhir:code [ fhir:v "100000109034" ] ;
+     fhir:display [ fhir:v "Red deer" ]
+  ] [
+     fhir:code [ fhir:v "100000109035" ] ;
+     fhir:display [ fhir:v "Reindeer" ]
+  ] [
+     fhir:code [ fhir:v "100000109036" ] ;
+     fhir:display [ fhir:v "Roe deer" ]
+  ] [
+     fhir:code [ fhir:v "100000109037" ] ;
+     fhir:display [ fhir:v "Donkey" ]
+  ] [
+     fhir:code [ fhir:v "100000109038" ] ;
+     fhir:display [ fhir:v "Mare" ]
+  ] [
+     fhir:code [ fhir:v "100000109039" ] ;
+     fhir:display [ fhir:v "Gelding" ]
+  ] [
+     fhir:code [ fhir:v "100000109040" ] ;
+     fhir:display [ fhir:v "Horses" ]
+  ] [
+     fhir:code [ fhir:v "100000109041" ] ;
+     fhir:display [ fhir:v "Stallion" ]
+  ] [
+     fhir:code [ fhir:v "100000109042" ] ;
+     fhir:display [ fhir:v "Pony" ]
+  ] [
+     fhir:code [ fhir:v "100000109043" ] ;
+     fhir:display [ fhir:v "Pregnant mare" ]
+  ] [
+     fhir:code [ fhir:v "100000109044" ] ;
+     fhir:display [ fhir:v "Non food-producing horse" ]
+  ] [
+     fhir:code [ fhir:v "100000109045" ] ;
+     fhir:display [ fhir:v "Suckling colt" ]
+  ] [
+     fhir:code [ fhir:v "100000109046" ] ;
+     fhir:display [ fhir:v "Colt" ]
+  ] [
+     fhir:code [ fhir:v "100000109047" ] ;
+     fhir:display [ fhir:v "Mule" ]
+  ] [
+     fhir:code [ fhir:v "100000109048" ] ;
+     fhir:display [ fhir:v "Equid" ]
+  ] [
+     fhir:code [ fhir:v "100000109049" ] ;
+     fhir:display [ fhir:v "Female equid" ]
+  ] [
+     fhir:code [ fhir:v "100000109050" ] ;
+     fhir:display [ fhir:v "Other Equids" ]
+  ] [
+     fhir:code [ fhir:v "100000109051" ] ;
+     fhir:display [ fhir:v "Zebra" ]
+  ] [
+     fhir:code [ fhir:v "100000109052" ] ;
+     fhir:display [ fhir:v "Bobcat" ]
+  ] [
+     fhir:code [ fhir:v "100000109053" ] ;
+     fhir:display [ fhir:v "Adult female cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109054" ] ;
+     fhir:display [ fhir:v "Adult female cat for reproduction" ]
+  ] [
+     fhir:code [ fhir:v "100000109055" ] ;
+     fhir:display [ fhir:v "Adult male cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109056" ] ;
+     fhir:display [ fhir:v "Cats" ]
+  ] [
+     fhir:code [ fhir:v "100000109057" ] ;
+     fhir:display [ fhir:v "Lactating cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109058" ] ;
+     fhir:display [ fhir:v "Large cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109059" ] ;
+     fhir:display [ fhir:v "Medium cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109060" ] ;
+     fhir:display [ fhir:v "Pregnant cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109061" ] ;
+     fhir:display [ fhir:v "Small cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109062" ] ;
+     fhir:display [ fhir:v "Kitten" ]
+  ] [
+     fhir:code [ fhir:v "100000109063" ] ;
+     fhir:display [ fhir:v "Cougar" ]
+  ] [
+     fhir:code [ fhir:v "100000109064" ] ;
+     fhir:display [ fhir:v "Jaguar" ]
+  ] [
+     fhir:code [ fhir:v "100000109065" ] ;
+     fhir:display [ fhir:v "Leopard" ]
+  ] [
+     fhir:code [ fhir:v "100000109066" ] ;
+     fhir:display [ fhir:v "Lion" ]
+  ] [
+     fhir:code [ fhir:v "100000109067" ] ;
+     fhir:display [ fhir:v "Lynx" ]
+  ] [
+     fhir:code [ fhir:v "100000109068" ] ;
+     fhir:display [ fhir:v "Other Felids" ]
+  ] [
+     fhir:code [ fhir:v "100000109069" ] ;
+     fhir:display [ fhir:v "Tiger" ]
+  ] [
+     fhir:code [ fhir:v "100000109070" ] ;
+     fhir:display [ fhir:v "Tsushima wild cat" ]
+  ] [
+     fhir:code [ fhir:v "100000109071" ] ;
+     fhir:display [ fhir:v "Other Leporids" ]
+  ] [
+     fhir:code [ fhir:v "100000109072" ] ;
+     fhir:display [ fhir:v "Hare" ]
+  ] [
+     fhir:code [ fhir:v "100000109073" ] ;
+     fhir:display [ fhir:v "Female rabbit for reproduction" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

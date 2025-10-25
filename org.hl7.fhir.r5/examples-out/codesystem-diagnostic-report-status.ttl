@@ -1,0 +1,135 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/diagnostic-report-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "diagnostic-report-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem diagnostic-report-status</b>\n      </p>\n      <a name=\"diagnostic-report-status\"> </a>\n      <a name=\"hcdiagnostic-report-status\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/diagnostic-report-status</code> defines the following codes in a Is-A hierarchy:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td>\n            <b>Lvl</b>\n          </td>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">registered\n            <a name=\"diagnostic-report-status-registered\"> </a>\n          </td>\n          <td>Registered</td>\n          <td>The existence of the report is registered, but there is nothing yet available.</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">partial\n            <a name=\"diagnostic-report-status-partial\"> </a>\n          </td>\n          <td>Partial</td>\n          <td>This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  preliminary\n            <a name=\"diagnostic-report-status-preliminary\"> </a>\n          </td>\n          <td>Preliminary</td>\n          <td>Verified early results are available, but not all results are final.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  modified\n            <a name=\"diagnostic-report-status-modified\"> </a>\n          </td>\n          <td>Modified</td>\n          <td>Prior to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a non-finalized (e.g., preliminary) report that has been issued.</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">final\n            <a name=\"diagnostic-report-status-final\"> </a>\n          </td>\n          <td>Final</td>\n          <td>The report is complete and verified by an authorized person.</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">amended\n            <a name=\"diagnostic-report-status-amended\"> </a>\n          </td>\n          <td>Amended</td>\n          <td>Subsequent to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  corrected\n            <a name=\"diagnostic-report-status-corrected\"> </a>\n          </td>\n          <td>Corrected</td>\n          <td>Subsequent to being final, the report has been modified to correct an error in the report or referenced results.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  appended\n            <a name=\"diagnostic-report-status-appended\"> </a>\n          </td>\n          <td>Appended</td>\n          <td>Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged.</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">cancelled\n            <a name=\"diagnostic-report-status-cancelled\"> </a>\n          </td>\n          <td>Cancelled</td>\n          <td>The report is unavailable because the measurement was not started or not completed (also sometimes called \"aborted\").</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">entered-in-error\n            <a name=\"diagnostic-report-status-entered-in-error\"> </a>\n          </td>\n          <td>Entered in Error</td>\n          <td>The report has been withdrawn following a previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be \"cancelled\" rather than \"entered-in-error\".).</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">unknown\n            <a name=\"diagnostic-report-status-unknown\"> </a>\n          </td>\n          <td>Unknown</td>\n          <td>The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for \"other\" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/diagnostic-report-status"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.236" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.231" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.118" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DiagnosticReportStatus"] ; # 
+  fhir:title [ fhir:v "Diagnostic Report Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The status of the diagnostic report."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/diagnostic-report-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/diagnostic-report-status>
+  ] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "registered" ] ;
+     fhir:display [ fhir:v "Registered" ] ;
+     fhir:definition [ fhir:v "The existence of the report is registered, but there is nothing yet available." ]
+  ] [
+     fhir:code [ fhir:v "partial" ] ;
+     fhir:display [ fhir:v "Partial" ] ;
+     fhir:definition [ fhir:v "This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified." ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "preliminary" ] ;
+       fhir:display [ fhir:v "Preliminary" ] ;
+       fhir:definition [ fhir:v "Verified early results are available, but not all results are final." ]
+     ] [
+       fhir:code [ fhir:v "modified" ] ;
+       fhir:display [ fhir:v "Modified" ] ;
+       fhir:definition [ fhir:v "Prior to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a non-finalized (e.g., preliminary) report that has been issued." ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "final" ] ;
+     fhir:display [ fhir:v "Final" ] ;
+     fhir:definition [ fhir:v "The report is complete and verified by an authorized person." ]
+  ] [
+     fhir:code [ fhir:v "amended" ] ;
+     fhir:display [ fhir:v "Amended" ] ;
+     fhir:definition [ fhir:v "Subsequent to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued." ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "corrected" ] ;
+       fhir:display [ fhir:v "Corrected" ] ;
+       fhir:definition [ fhir:v "Subsequent to being final, the report has been modified to correct an error in the report or referenced results." ]
+     ] [
+       fhir:code [ fhir:v "appended" ] ;
+       fhir:display [ fhir:v "Appended" ] ;
+       fhir:definition [ fhir:v "Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged." ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "cancelled" ] ;
+     fhir:display [ fhir:v "Cancelled" ] ;
+     fhir:definition [ fhir:v "The report is unavailable because the measurement was not started or not completed (also sometimes called \"aborted\")." ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The report has been withdrawn following a previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be \"cancelled\" rather than \"entered-in-error\".)." ]
+  ] [
+     fhir:code [ fhir:v "unknown" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for \"other\" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

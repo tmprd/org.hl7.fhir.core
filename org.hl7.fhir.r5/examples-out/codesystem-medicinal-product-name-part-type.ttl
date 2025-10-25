@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/medicinal-product-name-part-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicinal-product-name-part-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem medicinal-product-name-part-type</b>\n      </p>\n      <a name=\"medicinal-product-name-part-type\"> </a>\n      <a name=\"hcmedicinal-product-name-part-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/medicinal-product-name-part-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">FullName\n            <a name=\"medicinal-product-name-part-type-FullName\"> </a>\n          </td>\n          <td>Full name</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">InventedNamePart\n            <a name=\"medicinal-product-name-part-type-InventedNamePart\"> </a>\n          </td>\n          <td>Invented name part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ScientificNamePart\n            <a name=\"medicinal-product-name-part-type-ScientificNamePart\"> </a>\n          </td>\n          <td>Scientific name part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">StrengthPart\n            <a name=\"medicinal-product-name-part-type-StrengthPart\"> </a>\n          </td>\n          <td>Strength part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">DoseFormPart\n            <a name=\"medicinal-product-name-part-type-DoseFormPart\"> </a>\n          </td>\n          <td>Pharmaceutical dose form part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">FormulationPart\n            <a name=\"medicinal-product-name-part-type-FormulationPart\"> </a>\n          </td>\n          <td>Formulation part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">IntendedUsePart\n            <a name=\"medicinal-product-name-part-type-IntendedUsePart\"> </a>\n          </td>\n          <td>Intended use part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">PopulationPart\n            <a name=\"medicinal-product-name-part-type-PopulationPart\"> </a>\n          </td>\n          <td>Target population part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">ContainerPart\n            <a name=\"medicinal-product-name-part-type-ContainerPart\"> </a>\n          </td>\n          <td>Container or pack part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">DevicePart\n            <a name=\"medicinal-product-name-part-type-DevicePart\"> </a>\n          </td>\n          <td>Device part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">TrademarkOrCompanyPart\n            <a name=\"medicinal-product-name-part-type-TrademarkOrCompanyPart\"> </a>\n          </td>\n          <td>Trademark or company name part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">TimeOrPeriodPart\n            <a name=\"medicinal-product-name-part-type-TimeOrPeriodPart\"> </a>\n          </td>\n          <td>Time/Period part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">FlavorPart\n            <a name=\"medicinal-product-name-part-type-FlavorPart\"> </a>\n          </td>\n          <td>Flavor part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">DelimiterPart\n            <a name=\"medicinal-product-name-part-type-DelimiterPart\"> </a>\n          </td>\n          <td>Delimiter part</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">LegacyNamePart\n            <a name=\"medicinal-product-name-part-type-LegacyNamePart\"> </a>\n          </td>\n          <td>Legacy name</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">SpeciesNamePart\n            <a name=\"medicinal-product-name-part-type-SpeciesNamePart\"> </a>\n          </td>\n          <td>Target species name part</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/medicinal-product-name-part-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1924" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ProductNamePartType"] ; # 
+  fhir:title [ fhir:v "Product Name Part Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Type of part of a name for a Medicinal Product."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/medicinal-product-name-part-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/medicinal-product-name-part-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "FullName" ] ;
+     fhir:display [ fhir:v "Full name" ]
+  ] [
+     fhir:code [ fhir:v "InventedNamePart" ] ;
+     fhir:display [ fhir:v "Invented name part" ]
+  ] [
+     fhir:code [ fhir:v "ScientificNamePart" ] ;
+     fhir:display [ fhir:v "Scientific name part" ]
+  ] [
+     fhir:code [ fhir:v "StrengthPart" ] ;
+     fhir:display [ fhir:v "Strength part" ]
+  ] [
+     fhir:code [ fhir:v "DoseFormPart" ] ;
+     fhir:display [ fhir:v "Pharmaceutical dose form part" ]
+  ] [
+     fhir:code [ fhir:v "FormulationPart" ] ;
+     fhir:display [ fhir:v "Formulation part" ]
+  ] [
+     fhir:code [ fhir:v "IntendedUsePart" ] ;
+     fhir:display [ fhir:v "Intended use part" ]
+  ] [
+     fhir:code [ fhir:v "PopulationPart" ] ;
+     fhir:display [ fhir:v "Target population part" ]
+  ] [
+     fhir:code [ fhir:v "ContainerPart" ] ;
+     fhir:display [ fhir:v "Container or pack part" ]
+  ] [
+     fhir:code [ fhir:v "DevicePart" ] ;
+     fhir:display [ fhir:v "Device part" ]
+  ] [
+     fhir:code [ fhir:v "TrademarkOrCompanyPart" ] ;
+     fhir:display [ fhir:v "Trademark or company name part" ]
+  ] [
+     fhir:code [ fhir:v "TimeOrPeriodPart" ] ;
+     fhir:display [ fhir:v "Time/Period part" ]
+  ] [
+     fhir:code [ fhir:v "FlavorPart" ] ;
+     fhir:display [ fhir:v "Flavor part" ]
+  ] [
+     fhir:code [ fhir:v "DelimiterPart" ] ;
+     fhir:display [ fhir:v "Delimiter part" ]
+  ] [
+     fhir:code [ fhir:v "LegacyNamePart" ] ;
+     fhir:display [ fhir:v "Legacy name" ]
+  ] [
+     fhir:code [ fhir:v "SpeciesNamePart" ] ;
+     fhir:display [ fhir:v "Target species name part" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

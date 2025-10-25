@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v2> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cm-administrative-gender-v2"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ConceptMap cm-administrative-gender-v2</b>\n      </p>\n      <a name=\"cm-administrative-gender-v2\"> </a>\n      <a name=\"hccm-administrative-gender-v2\"> </a>\n      <p>Mapping from \n        <a href=\"valueset-administrative-gender.html\">AdministrativeGender</a> to \n        <a href=\"http://terminology.hl7.org/6.5.0/ValueSet-v2-0001.html\">hl7VS-administrativeSex</a>\n      </p>\n      <br/>\n      <p>\n        <b>Group 1 </b>Mapping from \n        <a href=\"codesystem-administrative-gender.html\">AdministrativeGender</a> to \n        <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0001.html\">administrativeSex</a>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td colspan=\"2\">\n            <b>Source Concept Details</b>\n          </td>\n          <td>\n            <b>Relationship</b>\n          </td>\n          <td colspan=\"2\">\n            <b>Target Concept Details</b>\n          </td>\n          <td>\n            <b>Comment</b>\n          </td>\n        </tr>\n        <tr>\n          <td colspan=\"2\">\n            <b>Codes</b> from \n            <a href=\"codesystem-administrative-gender.html\" title=\"http://hl7.org/fhir/administrative-gender\">AdministrativeGender</a>\n          </td>\n          <td/>\n          <td colspan=\"2\">\n            <b>Codes</b> from \n            <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0001.html\" title=\"http://terminology.hl7.org/CodeSystem/v2-0001\">administrativeSex</a>\n          </td>\n          <td/>\n        </tr>\n        <tr>\n          <td style=\"border-right-width: 0px\">male</td>\n          <td style=\"border-left-width: 0px\">Male</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td style=\"border-right-width: 0px\">M</td>\n          <td style=\"border-left-width: 0px\"/>\n          <td/>\n        </tr>\n        <tr>\n          <td style=\"border-right-width: 0px\">female</td>\n          <td style=\"border-left-width: 0px\">Female</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td style=\"border-right-width: 0px\">F</td>\n          <td style=\"border-left-width: 0px\"/>\n          <td/>\n        </tr>\n        <tr>\n          <td style=\"border-right-width: 0px; border-bottom-style: none\">other</td>\n          <td style=\"border-left-width: 0px; border-bottom-style: none\">Other</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a>\n          </td>\n          <td style=\"border-right-width: 0px\">A</td>\n          <td style=\"border-left-width: 0px\"/>\n          <td>Source concept 'other' is broader than target concept 'Ambiguous' because target concept does not include 'Other'</td>\n        </tr>\n        <tr>\n          <td style=\"border-right-width: 0px; border-top-style: none\"/>\n          <td style=\"border-top-style: none; border-left-width: 0px\"/>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a>\n          </td>\n          <td style=\"border-right-width: 0px\">O</td>\n          <td style=\"border-left-width: 0px\"/>\n          <td>Source concept 'other' is broader than target concept 'Other' because target concept does not include 'Ambiguous'</td>\n        </tr>\n        <tr>\n          <td style=\"border-right-width: 0px\">unknown</td>\n          <td style=\"border-left-width: 0px\">Unknown</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td style=\"border-right-width: 0px\">U</td>\n          <td style=\"border-left-width: 0px\"/>\n          <td/>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v2"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "v2.AdministrativeGender"] ; # 
+  fhir:title [ fhir:v "v2 map for AdministrativeGender"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pafm" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:sourceScope [
+     a fhir:canonical ;
+     fhir:v "http://hl7.org/fhir/ValueSet/administrative-gender"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/administrative-gender>
+  ] ; # 
+  fhir:targetScope [
+     a fhir:canonical ;
+     fhir:v "http://terminology.hl7.org/ValueSet/v2-0001"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org/ValueSet/v2-0001>
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/administrative-gender>
+     ] ;
+     fhir:target [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v2-0001"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/CodeSystem/v2-0001>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "male" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "M" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "female" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "F" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "other" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "A" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Source concept 'other' is broader than target concept 'Ambiguous' because target concept does not include 'Other'" ]
+       ] [
+         fhir:code [ fhir:v "O" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Source concept 'other' is broader than target concept 'Other' because target concept does not include 'Ambiguous'" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "unknown" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "U" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,127 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Observation/f205> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "f205"] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://intranet.aumc.nl/labvalues"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1304-03720-eGFR" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:33914-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "33914-3" ] ;
+       fhir:display [ fhir:v "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ] ;
+     fhir:display [ fhir:v "Roel" ]
+  ] ; # 
+  fhir:issued [ fhir:v "2013-04-04T14:34:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/Practitioner/f202> ;
+     fhir:reference [ fhir:v "Practitioner/f202" ] ;
+     fhir:display [ fhir:v "Luigi Maas" ]
+  ] ) ; # 
+  fhir:interpretation ( [
+     fhir:text [ fhir:v "interpretation of results should be assigned based upon the level of kindey function" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...." ]
+  ] ) ; # 
+  fhir:method [
+     fhir:coding ( [
+       a sct:702668005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "702668005" ] ;
+       fhir:display [ fhir:v "MDRD" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48643-1 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48643-1" ] ;
+         fhir:display [ fhir:v "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among black population" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+       fhir:comparator [ fhir:v ">" ] ;
+       fhir:unit [ fhir:v "mL/min/1.73m2" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mL/min/{1.73_m2}" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mL/min/1.73m2" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mL/min/{1.73_m2}" ]
+       ] ;
+       fhir:appliesTo ( [
+         fhir:text [ fhir:v "non-black/african-american" ]
+       ] ) ;
+       fhir:age [
+         fhir:low [
+           fhir:value [ fhir:v "18"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "yrs" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "a" ]
+         ]
+       ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48642-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48642-3" ] ;
+         fhir:display [ fhir:v "GFR/BSA pr.non blk SerPlBld MDRD-ArV" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mL/min/1.73m2" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mL/min/{1.73_m2}" ]
+     ] ;
+     fhir:referenceRange ( [
+       fhir:low [
+         fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mL/min/1.73m2" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mL/min/{1.73_m2}" ]
+       ] ;
+       fhir:age [
+         fhir:low [
+           fhir:value [ fhir:v "18"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "yrs" ] ;
+           fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "a" ]
+         ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f202> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

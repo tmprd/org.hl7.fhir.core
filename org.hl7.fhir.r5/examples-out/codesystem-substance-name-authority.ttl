@@ -1,0 +1,125 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/substance-name-authority> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "substance-name-authority"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem substance-name-authority</b>\n      </p>\n      <a name=\"substance-name-authority\"> </a>\n      <a name=\"hcsubstance-name-authority\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/substance-name-authority</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">BAN\n            <a name=\"substance-name-authority-BAN\"> </a>\n          </td>\n          <td>BAN</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">COSING\n            <a name=\"substance-name-authority-COSING\"> </a>\n          </td>\n          <td>COSING</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">Ph.Eur.\n            <a name=\"substance-name-authority-Ph.46Eur.46\"> </a>\n          </td>\n          <td>Ph.Eur.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">FCC\n            <a name=\"substance-name-authority-FCC\"> </a>\n          </td>\n          <td>FCC</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">INCI\n            <a name=\"substance-name-authority-INCI\"> </a>\n          </td>\n          <td>INCI</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">INN\n            <a name=\"substance-name-authority-INN\"> </a>\n          </td>\n          <td>INN</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">JAN\n            <a name=\"substance-name-authority-JAN\"> </a>\n          </td>\n          <td>JAN</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">JECFA\n            <a name=\"substance-name-authority-JECFA\"> </a>\n          </td>\n          <td>JECFA</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">MARTINDALE\n            <a name=\"substance-name-authority-MARTINDALE\"> </a>\n          </td>\n          <td>MARTINDALE</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">USAN\n            <a name=\"substance-name-authority-USAN\"> </a>\n          </td>\n          <td>USAN</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">USP\n            <a name=\"substance-name-authority-USP\"> </a>\n          </td>\n          <td>USP</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">PHF\n            <a name=\"substance-name-authority-PHF\"> </a>\n          </td>\n          <td>PHF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">HAB\n            <a name=\"substance-name-authority-HAB\"> </a>\n          </td>\n          <td>HAB</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">PhF\n            <a name=\"substance-name-authority-PhF\"> </a>\n          </td>\n          <td>PhF (Pharmacopée française)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">IUIS\n            <a name=\"substance-name-authority-IUIS\"> </a>\n          </td>\n          <td>IUIS</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/substance-name-authority"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2095" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "SubstanceNameAuthority"] ; # 
+  fhir:title [ fhir:v "Substance Name Authority"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "SubstanceNameAuthority"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/substance-name-authority"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/substance-name-authority>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "BAN" ] ;
+     fhir:display [ fhir:v "BAN" ]
+  ] [
+     fhir:code [ fhir:v "COSING" ] ;
+     fhir:display [ fhir:v "COSING" ]
+  ] [
+     fhir:code [ fhir:v "Ph.Eur." ] ;
+     fhir:display [ fhir:v "Ph.Eur." ]
+  ] [
+     fhir:code [ fhir:v "FCC" ] ;
+     fhir:display [ fhir:v "FCC" ]
+  ] [
+     fhir:code [ fhir:v "INCI" ] ;
+     fhir:display [ fhir:v "INCI" ]
+  ] [
+     fhir:code [ fhir:v "INN" ] ;
+     fhir:display [ fhir:v "INN" ]
+  ] [
+     fhir:code [ fhir:v "JAN" ] ;
+     fhir:display [ fhir:v "JAN" ]
+  ] [
+     fhir:code [ fhir:v "JECFA" ] ;
+     fhir:display [ fhir:v "JECFA" ]
+  ] [
+     fhir:code [ fhir:v "MARTINDALE" ] ;
+     fhir:display [ fhir:v "MARTINDALE" ]
+  ] [
+     fhir:code [ fhir:v "USAN" ] ;
+     fhir:display [ fhir:v "USAN" ]
+  ] [
+     fhir:code [ fhir:v "USP" ] ;
+     fhir:display [ fhir:v "USP" ]
+  ] [
+     fhir:code [ fhir:v "PHF" ] ;
+     fhir:display [ fhir:v "PHF" ]
+  ] [
+     fhir:code [ fhir:v "HAB" ] ;
+     fhir:display [ fhir:v "HAB" ]
+  ] [
+     fhir:code [ fhir:v "PhF" ] ;
+     fhir:display [ fhir:v "PhF (Pharmacopée française)" ]
+  ] [
+     fhir:code [ fhir:v "IUIS" ] ;
+     fhir:display [ fhir:v "IUIS" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

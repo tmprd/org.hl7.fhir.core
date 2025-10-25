@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/contributor-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "contributor-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem contributor-type</b>\n      </p>\n      <a name=\"contributor-type\"> </a>\n      <a name=\"hccontributor-type\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/contributor-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">author\n            <a name=\"contributor-type-author\"> </a>\n          </td>\n          <td>Author</td>\n          <td>An author of the content of the module.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">editor\n            <a name=\"contributor-type-editor\"> </a>\n          </td>\n          <td>Editor</td>\n          <td>An editor of the content of the module.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">reviewer\n            <a name=\"contributor-type-reviewer\"> </a>\n          </td>\n          <td>Reviewer</td>\n          <td>A reviewer of the content of the module.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">endorser\n            <a name=\"contributor-type-endorser\"> </a>\n          </td>\n          <td>Endorser</td>\n          <td>An endorser of the content of the module.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/contributor-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.94" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ContributorType"] ; # 
+  fhir:title [ fhir:v "ContributorType"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of contributor."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/contributor-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/contributor-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "author" ] ;
+     fhir:display [ fhir:v "Author" ] ;
+     fhir:definition [ fhir:v "An author of the content of the module." ]
+  ] [
+     fhir:code [ fhir:v "editor" ] ;
+     fhir:display [ fhir:v "Editor" ] ;
+     fhir:definition [ fhir:v "An editor of the content of the module." ]
+  ] [
+     fhir:code [ fhir:v "reviewer" ] ;
+     fhir:display [ fhir:v "Reviewer" ] ;
+     fhir:definition [ fhir:v "A reviewer of the content of the module." ]
+  ] [
+     fhir:code [ fhir:v "endorser" ] ;
+     fhir:display [ fhir:v "Endorser" ] ;
+     fhir:definition [ fhir:v "An endorser of the content of the module." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,203 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/evidence-classifier-code> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "evidence-classifier-code"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem evidence-classifier-code</b></p><a name=\"evidence-classifier-code\"> </a><a name=\"hcevidence-classifier-code\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/evidence-classifier-code</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">COVID19Specific<a name=\"evidence-classifier-code-COVID19Specific\"> </a></td><td>COVID-19 specific article</td><td>About COVID-19.</td></tr><tr><td style=\"white-space:nowrap\">COVID19Relevant<a name=\"evidence-classifier-code-COVID19Relevant\"> </a></td><td>COVID-19 relevant (but not specific) article</td><td>Not about COVID-19 but relevant to COVID-19 management or understanding.</td></tr><tr><td style=\"white-space:nowrap\">COVID19HumanResearch<a name=\"evidence-classifier-code-COVID19HumanResearch\"> </a></td><td>COVID-19 human data in population, exposure, or outcome</td><td>contains human COVID-19 disease in the research data as any variable (population, exposure or outcome).</td></tr><tr><td style=\"white-space:nowrap\">OriginalResearch<a name=\"evidence-classifier-code-OriginalResearch\"> </a></td><td>Article includes original research</td><td>such as randomized trial, observational study.</td></tr><tr><td style=\"white-space:nowrap\">ResearchSynthesis<a name=\"evidence-classifier-code-ResearchSynthesis\"> </a></td><td>Article includes synthesis of research</td><td>such as systematic review, meta-analysis, rapid review.</td></tr><tr><td style=\"white-space:nowrap\">Guideline<a name=\"evidence-classifier-code-Guideline\"> </a></td><td>Article includes guideline</td><td>for clinical practice guidelines.</td></tr><tr><td style=\"white-space:nowrap\">ResearchProtocol<a name=\"evidence-classifier-code-ResearchProtocol\"> </a></td><td>Article provides protocol without results</td><td>for research protocols.</td></tr><tr><td style=\"white-space:nowrap\">NotResearchNotGuideline<a name=\"evidence-classifier-code-NotResearchNotGuideline\"> </a></td><td>Article is neither research nor guideline</td><td>for things that are not research reports, research protocols or guidelines.</td></tr><tr><td style=\"white-space:nowrap\">Treatment<a name=\"evidence-classifier-code-Treatment\"> </a></td><td>Article about treatment</td><td>about therapeutic interventions.</td></tr><tr><td style=\"white-space:nowrap\">PreventionAndControl<a name=\"evidence-classifier-code-PreventionAndControl\"> </a></td><td>Article about prevention and control</td><td>about preventive care and interventions.</td></tr><tr><td style=\"white-space:nowrap\">Diagnosis<a name=\"evidence-classifier-code-Diagnosis\"> </a></td><td>Article about diagnosis</td><td>about methods to distinguish having or not having a condition.</td></tr><tr><td style=\"white-space:nowrap\">PrognosisPrediction<a name=\"evidence-classifier-code-PrognosisPrediction\"> </a></td><td>Article about prognosis or prediction</td><td>about predicting risk for something or risk factors for it.</td></tr><tr><td style=\"white-space:nowrap\">RatedAsYes<a name=\"evidence-classifier-code-RatedAsYes\"> </a></td><td>Rated as yes, affirmative, positive, present, or include</td><td/></tr><tr><td style=\"white-space:nowrap\">RatedAsNo<a name=\"evidence-classifier-code-RatedAsNo\"> </a></td><td>Rated as no, negative, absent, or exclude</td><td>Rated as no, negative, absent, or exclude.</td></tr><tr><td style=\"white-space:nowrap\">NotAssessed<a name=\"evidence-classifier-code-NotAssessed\"> </a></td><td>Not rated, not assessed</td><td>Neither rated as yes nor rated as no.</td></tr><tr><td style=\"white-space:nowrap\">RatedAsRCT<a name=\"evidence-classifier-code-RatedAsRCT\"> </a></td><td>classified as randomized controlled trial</td><td>classified as randomized controlled trial.</td></tr><tr><td style=\"white-space:nowrap\">RatedAsControlledTrial<a name=\"evidence-classifier-code-RatedAsControlledTrial\"> </a></td><td>classified as nonrandomized controlled trial (experimental)</td><td>classified as nonrandomized controlled trial (experimental).</td></tr><tr><td style=\"white-space:nowrap\">RatedAsComparativeCohort<a name=\"evidence-classifier-code-RatedAsComparativeCohort\"> </a></td><td>classified as comparative cohort study (observational)</td><td>classified as comparative cohort study (observational).</td></tr><tr><td style=\"white-space:nowrap\">RatedAsCaseControl<a name=\"evidence-classifier-code-RatedAsCaseControl\"> </a></td><td>classified as case-control study</td><td>classified as case-control study.</td></tr><tr><td style=\"white-space:nowrap\">RatedAsUncontrolledSeries<a name=\"evidence-classifier-code-RatedAsUncontrolledSeries\"> </a></td><td>classified as uncontrolled cohort (case series)</td><td>classified as uncontrolled cohort (case series).</td></tr><tr><td style=\"white-space:nowrap\">RatedAsMixedMethods<a name=\"evidence-classifier-code-RatedAsMixedMethods\"> </a></td><td>classified as mixed-methods study</td><td>classified as mixed-methods study.</td></tr><tr><td style=\"white-space:nowrap\">RatedAsOther<a name=\"evidence-classifier-code-RatedAsOther\"> </a></td><td>classified as other concept (not elsewhere classified)</td><td>classified as other concept (not elsewhere classified).</td></tr><tr><td style=\"white-space:nowrap\">RiskOfBias<a name=\"evidence-classifier-code-RiskOfBias\"> </a></td><td>Risk of bias assessment</td><td>Risk of bias assessment.</td></tr><tr><td style=\"white-space:nowrap\">NoBlinding<a name=\"evidence-classifier-code-NoBlinding\"> </a></td><td>No blinding</td><td>No blinding.</td></tr><tr><td style=\"white-space:nowrap\">AllocConcealNotStated<a name=\"evidence-classifier-code-AllocConcealNotStated\"> </a></td><td>Allocation concealment not stated</td><td>Allocation concealment not stated.</td></tr><tr><td style=\"white-space:nowrap\">EarlyTrialTermination<a name=\"evidence-classifier-code-EarlyTrialTermination\"> </a></td><td>Early trial termination</td><td>Early trial termination.</td></tr><tr><td style=\"white-space:nowrap\">NoITT<a name=\"evidence-classifier-code-NoITT\"> </a></td><td>No intention-to-treat analysis</td><td>No intention-to-treat analysis.</td></tr><tr><td style=\"white-space:nowrap\">Preprint<a name=\"evidence-classifier-code-Preprint\"> </a></td><td>Preprint (not final publication)</td><td>Results presented in preprint (pre-final publication) form.</td></tr><tr><td style=\"white-space:nowrap\">PreliminaryAnalysis<a name=\"evidence-classifier-code-PreliminaryAnalysis\"> </a></td><td>Preliminary analysis</td><td>Preliminary analysis.</td></tr><tr><td style=\"white-space:nowrap\">BaselineImbalance<a name=\"evidence-classifier-code-BaselineImbalance\"> </a></td><td>Baseline imbalances</td><td>Differences between groups at start of trial may confound or bias the findings.</td></tr><tr><td style=\"white-space:nowrap\">SubgroupAnalysis<a name=\"evidence-classifier-code-SubgroupAnalysis\"> </a></td><td>Subgroup analysis</td><td>Subgroup analysis.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/evidence-classifier-code"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1959" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "EvidenceClassifier"] ; # 
+  fhir:title [ fhir:v "Evidence Classifier"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Commonly used classifiers for evidence sets."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/evidence-classifier-code"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/evidence-classifier-code>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "COVID19Specific" ] ;
+     fhir:display [ fhir:v "COVID-19 specific article" ] ;
+     fhir:definition [ fhir:v "About COVID-19." ]
+  ] [
+     fhir:code [ fhir:v "COVID19Relevant" ] ;
+     fhir:display [ fhir:v "COVID-19 relevant (but not specific) article" ] ;
+     fhir:definition [ fhir:v "Not about COVID-19 but relevant to COVID-19 management or understanding." ]
+  ] [
+     fhir:code [ fhir:v "COVID19HumanResearch" ] ;
+     fhir:display [ fhir:v "COVID-19 human data in population, exposure, or outcome" ] ;
+     fhir:definition [ fhir:v "contains human COVID-19 disease in the research data as any variable (population, exposure or outcome)." ]
+  ] [
+     fhir:code [ fhir:v "OriginalResearch" ] ;
+     fhir:display [ fhir:v "Article includes original research" ] ;
+     fhir:definition [ fhir:v "such as randomized trial, observational study." ]
+  ] [
+     fhir:code [ fhir:v "ResearchSynthesis" ] ;
+     fhir:display [ fhir:v "Article includes synthesis of research" ] ;
+     fhir:definition [ fhir:v "such as systematic review, meta-analysis, rapid review." ]
+  ] [
+     fhir:code [ fhir:v "Guideline" ] ;
+     fhir:display [ fhir:v "Article includes guideline" ] ;
+     fhir:definition [ fhir:v "for clinical practice guidelines." ]
+  ] [
+     fhir:code [ fhir:v "ResearchProtocol" ] ;
+     fhir:display [ fhir:v "Article provides protocol without results" ] ;
+     fhir:definition [ fhir:v "for research protocols." ]
+  ] [
+     fhir:code [ fhir:v "NotResearchNotGuideline" ] ;
+     fhir:display [ fhir:v "Article is neither research nor guideline" ] ;
+     fhir:definition [ fhir:v "for things that are not research reports, research protocols or guidelines." ]
+  ] [
+     fhir:code [ fhir:v "Treatment" ] ;
+     fhir:display [ fhir:v "Article about treatment" ] ;
+     fhir:definition [ fhir:v "about therapeutic interventions." ]
+  ] [
+     fhir:code [ fhir:v "PreventionAndControl" ] ;
+     fhir:display [ fhir:v "Article about prevention and control" ] ;
+     fhir:definition [ fhir:v "about preventive care and interventions." ]
+  ] [
+     fhir:code [ fhir:v "Diagnosis" ] ;
+     fhir:display [ fhir:v "Article about diagnosis" ] ;
+     fhir:definition [ fhir:v "about methods to distinguish having or not having a condition." ]
+  ] [
+     fhir:code [ fhir:v "PrognosisPrediction" ] ;
+     fhir:display [ fhir:v "Article about prognosis or prediction" ] ;
+     fhir:definition [ fhir:v "about predicting risk for something or risk factors for it." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsYes" ] ;
+     fhir:display [ fhir:v "Rated as yes, affirmative, positive, present, or include" ]
+  ] [
+     fhir:code [ fhir:v "RatedAsNo" ] ;
+     fhir:display [ fhir:v "Rated as no, negative, absent, or exclude" ] ;
+     fhir:definition [ fhir:v "Rated as no, negative, absent, or exclude." ]
+  ] [
+     fhir:code [ fhir:v "NotAssessed" ] ;
+     fhir:display [ fhir:v "Not rated, not assessed" ] ;
+     fhir:definition [ fhir:v "Neither rated as yes nor rated as no." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsRCT" ] ;
+     fhir:display [ fhir:v "classified as randomized controlled trial" ] ;
+     fhir:definition [ fhir:v "classified as randomized controlled trial." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsControlledTrial" ] ;
+     fhir:display [ fhir:v "classified as nonrandomized controlled trial (experimental)" ] ;
+     fhir:definition [ fhir:v "classified as nonrandomized controlled trial (experimental)." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsComparativeCohort" ] ;
+     fhir:display [ fhir:v "classified as comparative cohort study (observational)" ] ;
+     fhir:definition [ fhir:v "classified as comparative cohort study (observational)." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsCaseControl" ] ;
+     fhir:display [ fhir:v "classified as case-control study" ] ;
+     fhir:definition [ fhir:v "classified as case-control study." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsUncontrolledSeries" ] ;
+     fhir:display [ fhir:v "classified as uncontrolled cohort (case series)" ] ;
+     fhir:definition [ fhir:v "classified as uncontrolled cohort (case series)." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsMixedMethods" ] ;
+     fhir:display [ fhir:v "classified as mixed-methods study" ] ;
+     fhir:definition [ fhir:v "classified as mixed-methods study." ]
+  ] [
+     fhir:code [ fhir:v "RatedAsOther" ] ;
+     fhir:display [ fhir:v "classified as other concept (not elsewhere classified)" ] ;
+     fhir:definition [ fhir:v "classified as other concept (not elsewhere classified)." ]
+  ] [
+     fhir:code [ fhir:v "RiskOfBias" ] ;
+     fhir:display [ fhir:v "Risk of bias assessment" ] ;
+     fhir:definition [ fhir:v "Risk of bias assessment." ]
+  ] [
+     fhir:code [ fhir:v "NoBlinding" ] ;
+     fhir:display [ fhir:v "No blinding" ] ;
+     fhir:definition [ fhir:v "No blinding." ]
+  ] [
+     fhir:code [ fhir:v "AllocConcealNotStated" ] ;
+     fhir:display [ fhir:v "Allocation concealment not stated" ] ;
+     fhir:definition [ fhir:v "Allocation concealment not stated." ]
+  ] [
+     fhir:code [ fhir:v "EarlyTrialTermination" ] ;
+     fhir:display [ fhir:v "Early trial termination" ] ;
+     fhir:definition [ fhir:v "Early trial termination." ]
+  ] [
+     fhir:code [ fhir:v "NoITT" ] ;
+     fhir:display [ fhir:v "No intention-to-treat analysis" ] ;
+     fhir:definition [ fhir:v "No intention-to-treat analysis." ]
+  ] [
+     fhir:code [ fhir:v "Preprint" ] ;
+     fhir:display [ fhir:v "Preprint (not final publication)" ] ;
+     fhir:definition [ fhir:v "Results presented in preprint (pre-final publication) form." ]
+  ] [
+     fhir:code [ fhir:v "PreliminaryAnalysis" ] ;
+     fhir:display [ fhir:v "Preliminary analysis" ] ;
+     fhir:definition [ fhir:v "Preliminary analysis." ]
+  ] [
+     fhir:code [ fhir:v "BaselineImbalance" ] ;
+     fhir:display [ fhir:v "Baseline imbalances" ] ;
+     fhir:definition [ fhir:v "Differences between groups at start of trial may confound or bias the findings." ]
+  ] [
+     fhir:code [ fhir:v "SubgroupAnalysis" ] ;
+     fhir:display [ fhir:v "Subgroup analysis" ] ;
+     fhir:definition [ fhir:v "Subgroup analysis." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

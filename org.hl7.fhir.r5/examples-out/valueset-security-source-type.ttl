@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/security-source-type> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "security-source-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet security-source-type</b>\n      </p>\n      <a name=\"security-source-type\"> </a>\n      <a name=\"hcsecurity-source-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html\">\n            <code>http://terminology.hl7.org/CodeSystem/security-source-type</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 1.0.0, the version found through the package references\">?1.0.0</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n              <td>\n                <b>Definition</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-1\">1</a>\n              </td>\n              <td style=\"color: #cccccc\">User Device</td>\n              <td>End-user display device, diagnostic device.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-2\">2</a>\n              </td>\n              <td style=\"color: #cccccc\">Data Interface</td>\n              <td>Data acquisition device or instrument.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-3\">3</a>\n              </td>\n              <td style=\"color: #cccccc\">Web Server</td>\n              <td>Web Server process or thread.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-4\">4</a>\n              </td>\n              <td style=\"color: #cccccc\">Application Server</td>\n              <td>Application Server process or thread.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-5\">5</a>\n              </td>\n              <td style=\"color: #cccccc\">Database Server</td>\n              <td>Database Server process or thread.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-6\">6</a>\n              </td>\n              <td style=\"color: #cccccc\">Security Server</td>\n              <td>Security server, e.g. a domain controller.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-7\">7</a>\n              </td>\n              <td style=\"color: #cccccc\">Network Device</td>\n              <td>ISO level 1-3 network component.</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-security-source-type.html#security-source-type-8\">8</a>\n              </td>\n              <td style=\"color: #cccccc\">Network Router</td>\n              <td>ISO level 4-6 operating software.</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "sec"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/security-source-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.2981" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "AuditEventSourceType"] ; # 
+  fhir:title [ fhir:v "Audit Event Source Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2010-08-26"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Security"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/secure" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of process where the audit event originated from. Use of these codes is not required but is encouraged to maintain translation with DICOM AuditMessage schema."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association. Additional codes added by HL7 FHIR use-case analysis"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/security-source-type"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "1" ]
+       ] [
+         fhir:code [ fhir:v "2" ]
+       ] [
+         fhir:code [ fhir:v "3" ]
+       ] [
+         fhir:code [ fhir:v "4" ]
+       ] [
+         fhir:code [ fhir:v "5" ]
+       ] [
+         fhir:code [ fhir:v "6" ]
+       ] [
+         fhir:code [ fhir:v "7" ]
+       ] [
+         fhir:code [ fhir:v "8" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

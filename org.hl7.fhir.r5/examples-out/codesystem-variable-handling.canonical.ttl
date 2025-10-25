@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/variable-handling> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "variable-handling"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem variable-handling</b></p><a name=\"variable-handling\"> </a><a name=\"hcvariable-handling\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/variable-handling</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">boolean<a name=\"variable-handling-boolean\"> </a></td><td>boolean variable</td><td>A boolean variable is a variable which is defined to have only 2 possible values: True or False.</td></tr><tr><td style=\"white-space:nowrap\">continuous<a name=\"variable-handling-continuous\"> </a></td><td>continuous variable</td><td>A continuous variable is one for which, within the limits the variable ranges, any value is possible (from STATO http://purl.obolibrary.org/obo/STATO_0000251).</td></tr><tr><td style=\"white-space:nowrap\">dichotomous<a name=\"variable-handling-dichotomous\"> </a></td><td>dichotomous variable</td><td>A dichotomous variable is a categorical variable which is defined to have only 2 categories or possible values (from STATO http://purl.obolibrary.org/obo/STATO_0000090).</td></tr><tr><td style=\"white-space:nowrap\">ordinal<a name=\"variable-handling-ordinal\"> </a></td><td>ordinal variable</td><td>An ordinal variable is a categorical variable where the discrete possible values are ordered or correspond to an implicit ranking (from STATO http://purl.obolibrary.org/obo/STATO_0000228).</td></tr><tr><td style=\"white-space:nowrap\">polychotomous<a name=\"variable-handling-polychotomous\"> </a></td><td>polychotomous variable</td><td>A polychotomous variable is a categorical variable which is defined to have minimally 2 categories or possible values. (from STATO  http://purl.obolibrary.org/obo/STATO_0000087).  Suggestion to limit code use to situations when neither dichotomous nor ordinal variables apply.</td></tr><tr><td style=\"white-space:nowrap\">time-to-event<a name=\"variable-handling-time-to-event\"> </a></td><td>time-to-event</td><td>time-to-event</td></tr><tr><td style=\"white-space:nowrap\">not-specified<a name=\"variable-handling-not-specified\"> </a></td><td>not-specified</td><td>not-specified</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 5
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/variable-handling"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1956" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "EvidenceVariableHandling"] ; # 
+  fhir:title [ fhir:v "Evidence Variable Handling"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The handling of the variable in statistical analysis for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/variable-handling"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/variable-handling>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "boolean" ] ;
+     fhir:display [ fhir:v "boolean variable" ] ;
+     fhir:definition [ fhir:v "A boolean variable is a variable which is defined to have only 2 possible values: True or False." ]
+  ] [
+     fhir:code [ fhir:v "continuous" ] ;
+     fhir:display [ fhir:v "continuous variable" ] ;
+     fhir:definition [ fhir:v "A continuous variable is one for which, within the limits the variable ranges, any value is possible (from STATO http://purl.obolibrary.org/obo/STATO_0000251)." ]
+  ] [
+     fhir:code [ fhir:v "dichotomous" ] ;
+     fhir:display [ fhir:v "dichotomous variable" ] ;
+     fhir:definition [ fhir:v "A dichotomous variable is a categorical variable which is defined to have only 2 categories or possible values (from STATO http://purl.obolibrary.org/obo/STATO_0000090)." ]
+  ] [
+     fhir:code [ fhir:v "ordinal" ] ;
+     fhir:display [ fhir:v "ordinal variable" ] ;
+     fhir:definition [ fhir:v "An ordinal variable is a categorical variable where the discrete possible values are ordered or correspond to an implicit ranking (from STATO http://purl.obolibrary.org/obo/STATO_0000228)." ]
+  ] [
+     fhir:code [ fhir:v "polychotomous" ] ;
+     fhir:display [ fhir:v "polychotomous variable" ] ;
+     fhir:definition [ fhir:v "A polychotomous variable is a categorical variable which is defined to have minimally 2 categories or possible values. (from STATO  http://purl.obolibrary.org/obo/STATO_0000087).  Suggestion to limit code use to situations when neither dichotomous nor ordinal variables apply." ]
+  ] [
+     fhir:code [ fhir:v "time-to-event" ] ;
+     fhir:display [ fhir:v "time-to-event" ] ;
+     fhir:definition [ fhir:v "time-to-event" ]
+  ] [
+     fhir:code [ fhir:v "not-specified" ] ;
+     fhir:display [ fhir:v "not-specified" ] ;
+     fhir:definition [ fhir:v "not-specified" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

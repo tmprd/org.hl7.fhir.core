@@ -1,0 +1,136 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/assert-operator-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "assert-operator-codes"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem assert-operator-codes</b>\n      </p>\n      <a name=\"assert-operator-codes\"> </a>\n      <a name=\"hcassert-operator-codes\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/assert-operator-codes</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">equals\n            <a name=\"assert-operator-codes-equals\"> </a>\n          </td>\n          <td>equals</td>\n          <td>Default value. Equals comparison.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">notEquals\n            <a name=\"assert-operator-codes-notEquals\"> </a>\n          </td>\n          <td>notEquals</td>\n          <td>Not equals comparison.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">in\n            <a name=\"assert-operator-codes-in\"> </a>\n          </td>\n          <td>in</td>\n          <td>Compare value within a known set of values.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">notIn\n            <a name=\"assert-operator-codes-notIn\"> </a>\n          </td>\n          <td>notIn</td>\n          <td>Compare value not within a known set of values.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">greaterThan\n            <a name=\"assert-operator-codes-greaterThan\"> </a>\n          </td>\n          <td>greaterThan</td>\n          <td>Compare value to be greater than a known value.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lessThan\n            <a name=\"assert-operator-codes-lessThan\"> </a>\n          </td>\n          <td>lessThan</td>\n          <td>Compare value to be less than a known value.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">empty\n            <a name=\"assert-operator-codes-empty\"> </a>\n          </td>\n          <td>empty</td>\n          <td>Compare value is empty.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">notEmpty\n            <a name=\"assert-operator-codes-notEmpty\"> </a>\n          </td>\n          <td>notEmpty</td>\n          <td>Compare value is not empty.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">contains\n            <a name=\"assert-operator-codes-contains\"> </a>\n          </td>\n          <td>contains</td>\n          <td>Compare value string contains a known value.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">notContains\n            <a name=\"assert-operator-codes-notContains\"> </a>\n          </td>\n          <td>notContains</td>\n          <td>Compare value string does not contain a known value.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">eval\n            <a name=\"assert-operator-codes-eval\"> </a>\n          </td>\n          <td>evaluate</td>\n          <td>Evaluate the FHIRPath expression as a boolean condition.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">manualEval\n            <a name=\"assert-operator-codes-manualEval\"> </a>\n          </td>\n          <td>manualEvaluate</td>\n          <td>Manually evaluate the condition described by this assert. The test engine SHALL pause and provide an input mechanism to set the outcome of this assert to 'pass', 'fail', 'skip' or 'stop'.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/assert-operator-codes"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.709" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.1.697" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.360" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "AssertionOperatorType"] ; # 
+  fhir:title [ fhir:v "Assertion Operator Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of operator to use for assertion."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/assert-operator-codes"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/assert-operator-codes>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "equals" ] ;
+     fhir:display [ fhir:v "equals" ] ;
+     fhir:definition [ fhir:v "Default value. Equals comparison." ]
+  ] [
+     fhir:code [ fhir:v "notEquals" ] ;
+     fhir:display [ fhir:v "notEquals" ] ;
+     fhir:definition [ fhir:v "Not equals comparison." ]
+  ] [
+     fhir:code [ fhir:v "in" ] ;
+     fhir:display [ fhir:v "in" ] ;
+     fhir:definition [ fhir:v "Compare value within a known set of values." ]
+  ] [
+     fhir:code [ fhir:v "notIn" ] ;
+     fhir:display [ fhir:v "notIn" ] ;
+     fhir:definition [ fhir:v "Compare value not within a known set of values." ]
+  ] [
+     fhir:code [ fhir:v "greaterThan" ] ;
+     fhir:display [ fhir:v "greaterThan" ] ;
+     fhir:definition [ fhir:v "Compare value to be greater than a known value." ]
+  ] [
+     fhir:code [ fhir:v "lessThan" ] ;
+     fhir:display [ fhir:v "lessThan" ] ;
+     fhir:definition [ fhir:v "Compare value to be less than a known value." ]
+  ] [
+     fhir:code [ fhir:v "empty" ] ;
+     fhir:display [ fhir:v "empty" ] ;
+     fhir:definition [ fhir:v "Compare value is empty." ]
+  ] [
+     fhir:code [ fhir:v "notEmpty" ] ;
+     fhir:display [ fhir:v "notEmpty" ] ;
+     fhir:definition [ fhir:v "Compare value is not empty." ]
+  ] [
+     fhir:code [ fhir:v "contains" ] ;
+     fhir:display [ fhir:v "contains" ] ;
+     fhir:definition [ fhir:v "Compare value string contains a known value." ]
+  ] [
+     fhir:code [ fhir:v "notContains" ] ;
+     fhir:display [ fhir:v "notContains" ] ;
+     fhir:definition [ fhir:v "Compare value string does not contain a known value." ]
+  ] [
+     fhir:code [ fhir:v "eval" ] ;
+     fhir:display [ fhir:v "evaluate" ] ;
+     fhir:definition [ fhir:v "Evaluate the FHIRPath expression as a boolean condition." ]
+  ] [
+     fhir:code [ fhir:v "manualEval" ] ;
+     fhir:display [ fhir:v "manualEvaluate" ] ;
+     fhir:definition [ fhir:v "Manually evaluate the condition described by this assert. The test engine SHALL pause and provide an input mechanism to set the outcome of this assert to 'pass', 'fail', 'skip' or 'stop'." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

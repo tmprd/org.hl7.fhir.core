@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/NutritionIntake/example> a fhir:NutritionIntake ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1144223344" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:435771000124106 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "435771000124106" ] ;
+       fhir:display [ fhir:v "General healthful diet" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:display [ fhir:v "Paula Patient Chalmers" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://hl7.org/fhir/Encounter/inpatient-encounter> ;
+     fhir:reference [ fhir:v "Encounter/inpatient-encounter" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2019-08-02T12:45:18+04:00"^^xsd:dateTime
+  ] ; # 
+  fhir:reported [
+     a fhir:Reference ;
+     fhir:link <http://hl7.org/fhir/PractitionerRole/example> ;
+     fhir:reference [ fhir:v "PractitionerRole/example" ]
+  ] . # 
+
+<http://hl7.org/fhir/Encounter/inpatient-encounter> a fhir:Encounter .
+
+<http://hl7.org/fhir/PractitionerRole/example> a fhir:PractitionerRole .
+
+# -------------------------------------------------------------------------------------
+

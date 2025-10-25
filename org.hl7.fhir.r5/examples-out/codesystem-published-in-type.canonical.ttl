@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/published-in-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "published-in-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem published-in-type</b></p><a name=\"published-in-type\"> </a><a name=\"hcpublished-in-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/published-in-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">D020492<a name=\"published-in-type-D020492\"> </a></td><td>Periodical</td><td>Publication intended to be issued on an ongoing basis, generally more frequently than annually, containing separate articles, stories, or writings.</td></tr><tr><td style=\"white-space:nowrap\">D019991<a name=\"published-in-type-D019991\"> </a></td><td>Database</td><td>A structured file of information or a set of logically related data stored and retrieved using computer-based means.</td></tr><tr><td style=\"white-space:nowrap\">D001877<a name=\"published-in-type-D001877\"> </a></td><td>Book</td><td>Non-periodical written or printed works consisting of sheets of pages fastened or bound together within covers.</td></tr><tr><td style=\"white-space:nowrap\">D064886<a name=\"published-in-type-D064886\"> </a></td><td>Dataset</td><td>Works consisting of organized collections of data, which have been stored permanently in a formalized manner suitable for communication, interpretation, or processing.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/published-in-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1887" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "PublishedInType"] ; # 
+  fhir:title [ fhir:v "Published In Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2020-12-28T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of publication such as book, database, or journal."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/published-in-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/published-in-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "D020492" ] ;
+     fhir:display [ fhir:v "Periodical" ] ;
+     fhir:definition [ fhir:v "Publication intended to be issued on an ongoing basis, generally more frequently than annually, containing separate articles, stories, or writings." ]
+  ] [
+     fhir:code [ fhir:v "D019991" ] ;
+     fhir:display [ fhir:v "Database" ] ;
+     fhir:definition [ fhir:v "A structured file of information or a set of logically related data stored and retrieved using computer-based means." ]
+  ] [
+     fhir:code [ fhir:v "D001877" ] ;
+     fhir:display [ fhir:v "Book" ] ;
+     fhir:definition [ fhir:v "Non-periodical written or printed works consisting of sheets of pages fastened or bound together within covers." ]
+  ] [
+     fhir:code [ fhir:v "D064886" ] ;
+     fhir:display [ fhir:v "Dataset" ] ;
+     fhir:definition [ fhir:v "Works consisting of organized collections of data, which have been stored permanently in a formalized manner suitable for communication, interpretation, or processing." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

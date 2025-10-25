@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Group/Household> a fhir:Group ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Household"] ; # 
+  fhir:type [ fhir:v "person"] ; # 
+  fhir:membership [ fhir:v "enumerated"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/ValueSet/group-code"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "household" ]
+     ] )
+  ] ; # 
+  fhir:member ( [
+     fhir:entity [
+       fhir:link <http://hl7.org/fhir/Patient/xcda> ;
+       fhir:reference [ fhir:v "Patient/xcda" ]
+     ]
+  ] [
+     fhir:entity [
+       fhir:link <http://hl7.org/fhir/Patient/pat4> ;
+       fhir:reference [ fhir:v "Patient/pat4" ]
+     ]
+  ] [
+     fhir:entity [
+       fhir:link <http://hl7.org/fhir/Patient/pat3> ;
+       fhir:reference [ fhir:v "Patient/pat3" ]
+     ]
+  ] [
+     fhir:entity [
+       fhir:link <http://hl7.org/fhir/Patient/pat1> ;
+       fhir:reference [ fhir:v "Patient/pat1" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/xcda> a fhir:Patient .
+
+<http://hl7.org/fhir/Patient/pat4> a fhir:Patient .
+
+<http://hl7.org/fhir/Patient/pat3> a fhir:Patient .
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/subscription-notification-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "subscription-notification-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem subscription-notification-type</b>\n      </p>\n      <a name=\"subscription-notification-type\"> </a>\n      <a name=\"hcsubscription-notification-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/subscription-notification-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">handshake\n            <a name=\"subscription-notification-type-handshake\"> </a>\n          </td>\n          <td>Handshake</td>\n          <td>The status was generated as part of the setup or verification of a communications channel.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">heartbeat\n            <a name=\"subscription-notification-type-heartbeat\"> </a>\n          </td>\n          <td>Heartbeat</td>\n          <td>The status was generated to perform a heartbeat notification to the subscriber.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">event-notification\n            <a name=\"subscription-notification-type-event-notification\"> </a>\n          </td>\n          <td>Event Notification</td>\n          <td>The status was generated for an event to the subscriber.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">query-status\n            <a name=\"subscription-notification-type-query-status\"> </a>\n          </td>\n          <td>Query Status</td>\n          <td>The status was generated in response to a status query/request.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">query-event\n            <a name=\"subscription-notification-type-query-event\"> </a>\n          </td>\n          <td>Query Event</td>\n          <td>The status was generated in response to an event query/request.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/subscription-notification-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2027" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "SubscriptionNotificationType"] ; # 
+  fhir:title [ fhir:v "Subscription Notification Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of notification represented by the status message."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/subscription-notification-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/subscription-notification-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "handshake" ] ;
+     fhir:display [ fhir:v "Handshake" ] ;
+     fhir:definition [ fhir:v "The status was generated as part of the setup or verification of a communications channel." ]
+  ] [
+     fhir:code [ fhir:v "heartbeat" ] ;
+     fhir:display [ fhir:v "Heartbeat" ] ;
+     fhir:definition [ fhir:v "The status was generated to perform a heartbeat notification to the subscriber." ]
+  ] [
+     fhir:code [ fhir:v "event-notification" ] ;
+     fhir:display [ fhir:v "Event Notification" ] ;
+     fhir:definition [ fhir:v "The status was generated for an event to the subscriber." ]
+  ] [
+     fhir:code [ fhir:v "query-status" ] ;
+     fhir:display [ fhir:v "Query Status" ] ;
+     fhir:definition [ fhir:v "The status was generated in response to a status query/request." ]
+  ] [
+     fhir:code [ fhir:v "query-event" ] ;
+     fhir:display [ fhir:v "Query Event" ] ;
+     fhir:definition [ fhir:v "The status was generated in response to an event query/request." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

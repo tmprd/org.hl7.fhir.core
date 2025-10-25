@@ -1,0 +1,386 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/packaging-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "packaging-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem packaging-type</b>\n      </p>\n      <a name=\"packaging-type\"> </a>\n      <a name=\"hcpackaging-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/packaging-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073490\n            <a name=\"packaging-type-100000073490\"> </a>\n          </td>\n          <td>Ampoule</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073491\n            <a name=\"packaging-type-100000073491\"> </a>\n          </td>\n          <td>Applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073492\n            <a name=\"packaging-type-100000073492\"> </a>\n          </td>\n          <td>Automatic injection device</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073493\n            <a name=\"packaging-type-100000073493\"> </a>\n          </td>\n          <td>Bag</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073494\n            <a name=\"packaging-type-100000073494\"> </a>\n          </td>\n          <td>Balling gun</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073495\n            <a name=\"packaging-type-100000073495\"> </a>\n          </td>\n          <td>Barrel</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073496\n            <a name=\"packaging-type-100000073496\"> </a>\n          </td>\n          <td>Blister</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073497\n            <a name=\"packaging-type-100000073497\"> </a>\n          </td>\n          <td>Bottle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073498\n            <a name=\"packaging-type-100000073498\"> </a>\n          </td>\n          <td>Box</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073499\n            <a name=\"packaging-type-100000073499\"> </a>\n          </td>\n          <td>Brush</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073500\n            <a name=\"packaging-type-100000073500\"> </a>\n          </td>\n          <td>Brush applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073501\n            <a name=\"packaging-type-100000073501\"> </a>\n          </td>\n          <td>Cannula</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073502\n            <a name=\"packaging-type-100000073502\"> </a>\n          </td>\n          <td>Cap</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073503\n            <a name=\"packaging-type-100000073503\"> </a>\n          </td>\n          <td>Cartridge</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073504\n            <a name=\"packaging-type-100000073504\"> </a>\n          </td>\n          <td>Child-resistant closure</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073505\n            <a name=\"packaging-type-100000073505\"> </a>\n          </td>\n          <td>Cup</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073506\n            <a name=\"packaging-type-100000073506\"> </a>\n          </td>\n          <td>Dabbing applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073507\n            <a name=\"packaging-type-100000073507\"> </a>\n          </td>\n          <td>Dart</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073508\n            <a name=\"packaging-type-100000073508\"> </a>\n          </td>\n          <td>Dredging applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073509\n            <a name=\"packaging-type-100000073509\"> </a>\n          </td>\n          <td>Dredging container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073510\n            <a name=\"packaging-type-100000073510\"> </a>\n          </td>\n          <td>Drench gun</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073511\n            <a name=\"packaging-type-100000073511\"> </a>\n          </td>\n          <td>Dropper applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073512\n            <a name=\"packaging-type-100000073512\"> </a>\n          </td>\n          <td>Dropper container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073513\n            <a name=\"packaging-type-100000073513\"> </a>\n          </td>\n          <td>Fixed cryogenic vessel</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073514\n            <a name=\"packaging-type-100000073514\"> </a>\n          </td>\n          <td>Gas cylinder</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073515\n            <a name=\"packaging-type-100000073515\"> </a>\n          </td>\n          <td>High pressure transdermal delivery device</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073516\n            <a name=\"packaging-type-100000073516\"> </a>\n          </td>\n          <td>Implanter</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073517\n            <a name=\"packaging-type-100000073517\"> </a>\n          </td>\n          <td>Inhaler</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073518\n            <a name=\"packaging-type-100000073518\"> </a>\n          </td>\n          <td>In-ovo injection device</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073519\n            <a name=\"packaging-type-100000073519\"> </a>\n          </td>\n          <td>Injection needle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073520\n            <a name=\"packaging-type-100000073520\"> </a>\n          </td>\n          <td>Injection syringe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073521\n            <a name=\"packaging-type-100000073521\"> </a>\n          </td>\n          <td>Internal graduated calibration chamber</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073522\n            <a name=\"packaging-type-100000073522\"> </a>\n          </td>\n          <td>Intramammary syringe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073523\n            <a name=\"packaging-type-100000073523\"> </a>\n          </td>\n          <td>Jar</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073524\n            <a name=\"packaging-type-100000073524\"> </a>\n          </td>\n          <td>Measuring device</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073525\n            <a name=\"packaging-type-100000073525\"> </a>\n          </td>\n          <td>Measuring spoon</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073526\n            <a name=\"packaging-type-100000073526\"> </a>\n          </td>\n          <td>Metering pump</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073527\n            <a name=\"packaging-type-100000073527\"> </a>\n          </td>\n          <td>Metering valve</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073528\n            <a name=\"packaging-type-100000073528\"> </a>\n          </td>\n          <td>Mobile cryogenic vessel</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073529\n            <a name=\"packaging-type-100000073529\"> </a>\n          </td>\n          <td>Mouthpiece</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073530\n            <a name=\"packaging-type-100000073530\"> </a>\n          </td>\n          <td>Multidose container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073531\n            <a name=\"packaging-type-100000073531\"> </a>\n          </td>\n          <td>Multidose container with airless pump</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073532\n            <a name=\"packaging-type-100000073532\"> </a>\n          </td>\n          <td>Multipuncturer</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073533\n            <a name=\"packaging-type-100000073533\"> </a>\n          </td>\n          <td>Nasal applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073534\n            <a name=\"packaging-type-100000073534\"> </a>\n          </td>\n          <td>Nebuliser</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073535\n            <a name=\"packaging-type-100000073535\"> </a>\n          </td>\n          <td>Needle applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073536\n            <a name=\"packaging-type-100000073536\"> </a>\n          </td>\n          <td>Nozzle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073537\n            <a name=\"packaging-type-100000073537\"> </a>\n          </td>\n          <td>Oral syringe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073538\n            <a name=\"packaging-type-100000073538\"> </a>\n          </td>\n          <td>Pipette</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073539\n            <a name=\"packaging-type-100000073539\"> </a>\n          </td>\n          <td>Pipette applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073540\n            <a name=\"packaging-type-100000073540\"> </a>\n          </td>\n          <td>Pouch</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073541\n            <a name=\"packaging-type-100000073541\"> </a>\n          </td>\n          <td>Pour-on container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073542\n            <a name=\"packaging-type-100000073542\"> </a>\n          </td>\n          <td>Pre-filled gastroenteral tube</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073543\n            <a name=\"packaging-type-100000073543\"> </a>\n          </td>\n          <td>Pre-filled pen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073544\n            <a name=\"packaging-type-100000073544\"> </a>\n          </td>\n          <td>Pre-filled syringe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073545\n            <a name=\"packaging-type-100000073545\"> </a>\n          </td>\n          <td>Pressurised container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073546\n            <a name=\"packaging-type-100000073546\"> </a>\n          </td>\n          <td>Prick test applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073547\n            <a name=\"packaging-type-100000073547\"> </a>\n          </td>\n          <td>Sachet</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073548\n            <a name=\"packaging-type-100000073548\"> </a>\n          </td>\n          <td>Scarifier</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073549\n            <a name=\"packaging-type-100000073549\"> </a>\n          </td>\n          <td>Screw cap</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073550\n            <a name=\"packaging-type-100000073550\"> </a>\n          </td>\n          <td>Single-dose container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073551\n            <a name=\"packaging-type-100000073551\"> </a>\n          </td>\n          <td>Spatula</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073552\n            <a name=\"packaging-type-100000073552\"> </a>\n          </td>\n          <td>Spot-on applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073553\n            <a name=\"packaging-type-100000073553\"> </a>\n          </td>\n          <td>Spray container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073554\n            <a name=\"packaging-type-100000073554\"> </a>\n          </td>\n          <td>Spray pump</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073555\n            <a name=\"packaging-type-100000073555\"> </a>\n          </td>\n          <td>Spray valve</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073556\n            <a name=\"packaging-type-100000073556\"> </a>\n          </td>\n          <td>Stab vaccinator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073557\n            <a name=\"packaging-type-100000073557\"> </a>\n          </td>\n          <td>Stopper</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073558\n            <a name=\"packaging-type-100000073558\"> </a>\n          </td>\n          <td>Straw</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073559\n            <a name=\"packaging-type-100000073559\"> </a>\n          </td>\n          <td>Strip</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073560\n            <a name=\"packaging-type-100000073560\"> </a>\n          </td>\n          <td>Tablet container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073561\n            <a name=\"packaging-type-100000073561\"> </a>\n          </td>\n          <td>Tube</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073562\n            <a name=\"packaging-type-100000073562\"> </a>\n          </td>\n          <td>Vaginal sponge applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000073563\n            <a name=\"packaging-type-100000073563\"> </a>\n          </td>\n          <td>Vial</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000075664\n            <a name=\"packaging-type-100000075664\"> </a>\n          </td>\n          <td>Administration system</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000116195\n            <a name=\"packaging-type-100000116195\"> </a>\n          </td>\n          <td>Calendar package</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000116196\n            <a name=\"packaging-type-100000116196\"> </a>\n          </td>\n          <td>Needle-free injector</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000116197\n            <a name=\"packaging-type-100000116197\"> </a>\n          </td>\n          <td>Roll-on container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000125779\n            <a name=\"packaging-type-100000125779\"> </a>\n          </td>\n          <td>Multidose container with pump</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000137702\n            <a name=\"packaging-type-100000137702\"> </a>\n          </td>\n          <td>Container</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000137703\n            <a name=\"packaging-type-100000137703\"> </a>\n          </td>\n          <td>Oral applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000143554\n            <a name=\"packaging-type-100000143554\"> </a>\n          </td>\n          <td>Multidose container with metering pump</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000143555\n            <a name=\"packaging-type-100000143555\"> </a>\n          </td>\n          <td>Pack</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000163233\n            <a name=\"packaging-type-100000163233\"> </a>\n          </td>\n          <td>disk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000163234\n            <a name=\"packaging-type-100000163234\"> </a>\n          </td>\n          <td>plunger</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000164143\n            <a name=\"packaging-type-100000164143\"> </a>\n          </td>\n          <td>infusion port</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000166980\n            <a name=\"packaging-type-100000166980\"> </a>\n          </td>\n          <td>Valve</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000169899\n            <a name=\"packaging-type-100000169899\"> </a>\n          </td>\n          <td>Jerrycan</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000173982\n            <a name=\"packaging-type-100000173982\"> </a>\n          </td>\n          <td>Oral applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000173983\n            <a name=\"packaging-type-100000173983\"> </a>\n          </td>\n          <td>Dose dispenser</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000174066\n            <a name=\"packaging-type-100000174066\"> </a>\n          </td>\n          <td>Unit-dose blister</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000174067\n            <a name=\"packaging-type-100000174067\"> </a>\n          </td>\n          <td>Pre-filled injector</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000174068\n            <a name=\"packaging-type-100000174068\"> </a>\n          </td>\n          <td>Pre-filled oral syringe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000174069\n            <a name=\"packaging-type-100000174069\"> </a>\n          </td>\n          <td>Pre-filled oral applicator</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000174070\n            <a name=\"packaging-type-100000174070\"> </a>\n          </td>\n          <td>Dose-dispenser cartridge</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000005068\n            <a name=\"packaging-type-200000005068\"> </a>\n          </td>\n          <td>Pen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000005585\n            <a name=\"packaging-type-200000005585\"> </a>\n          </td>\n          <td>Wrapper</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000010647\n            <a name=\"packaging-type-200000010647\"> </a>\n          </td>\n          <td>Lid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000011726\n            <a name=\"packaging-type-200000011726\"> </a>\n          </td>\n          <td>Capsule for opening</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000012539\n            <a name=\"packaging-type-200000012539\"> </a>\n          </td>\n          <td>Child-resistant sachet</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000013191\n            <a name=\"packaging-type-200000013191\"> </a>\n          </td>\n          <td>Tamper-evident closure</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">200000024874\n            <a name=\"packaging-type-200000024874\"> </a>\n          </td>\n          <td>Tablet tube</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/packaging-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1966" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "PackagingType"] ; # 
+  fhir:title [ fhir:v "Packaging Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A type of packaging."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/packaging-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/packaging-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "100000073490" ] ;
+     fhir:display [ fhir:v "Ampoule" ]
+  ] [
+     fhir:code [ fhir:v "100000073491" ] ;
+     fhir:display [ fhir:v "Applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073492" ] ;
+     fhir:display [ fhir:v "Automatic injection device" ]
+  ] [
+     fhir:code [ fhir:v "100000073493" ] ;
+     fhir:display [ fhir:v "Bag" ]
+  ] [
+     fhir:code [ fhir:v "100000073494" ] ;
+     fhir:display [ fhir:v "Balling gun" ]
+  ] [
+     fhir:code [ fhir:v "100000073495" ] ;
+     fhir:display [ fhir:v "Barrel" ]
+  ] [
+     fhir:code [ fhir:v "100000073496" ] ;
+     fhir:display [ fhir:v "Blister" ]
+  ] [
+     fhir:code [ fhir:v "100000073497" ] ;
+     fhir:display [ fhir:v "Bottle" ]
+  ] [
+     fhir:code [ fhir:v "100000073498" ] ;
+     fhir:display [ fhir:v "Box" ]
+  ] [
+     fhir:code [ fhir:v "100000073499" ] ;
+     fhir:display [ fhir:v "Brush" ]
+  ] [
+     fhir:code [ fhir:v "100000073500" ] ;
+     fhir:display [ fhir:v "Brush applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073501" ] ;
+     fhir:display [ fhir:v "Cannula" ]
+  ] [
+     fhir:code [ fhir:v "100000073502" ] ;
+     fhir:display [ fhir:v "Cap" ]
+  ] [
+     fhir:code [ fhir:v "100000073503" ] ;
+     fhir:display [ fhir:v "Cartridge" ]
+  ] [
+     fhir:code [ fhir:v "100000073504" ] ;
+     fhir:display [ fhir:v "Child-resistant closure" ]
+  ] [
+     fhir:code [ fhir:v "100000073505" ] ;
+     fhir:display [ fhir:v "Cup" ]
+  ] [
+     fhir:code [ fhir:v "100000073506" ] ;
+     fhir:display [ fhir:v "Dabbing applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073507" ] ;
+     fhir:display [ fhir:v "Dart" ]
+  ] [
+     fhir:code [ fhir:v "100000073508" ] ;
+     fhir:display [ fhir:v "Dredging applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073509" ] ;
+     fhir:display [ fhir:v "Dredging container" ]
+  ] [
+     fhir:code [ fhir:v "100000073510" ] ;
+     fhir:display [ fhir:v "Drench gun" ]
+  ] [
+     fhir:code [ fhir:v "100000073511" ] ;
+     fhir:display [ fhir:v "Dropper applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073512" ] ;
+     fhir:display [ fhir:v "Dropper container" ]
+  ] [
+     fhir:code [ fhir:v "100000073513" ] ;
+     fhir:display [ fhir:v "Fixed cryogenic vessel" ]
+  ] [
+     fhir:code [ fhir:v "100000073514" ] ;
+     fhir:display [ fhir:v "Gas cylinder" ]
+  ] [
+     fhir:code [ fhir:v "100000073515" ] ;
+     fhir:display [ fhir:v "High pressure transdermal delivery device" ]
+  ] [
+     fhir:code [ fhir:v "100000073516" ] ;
+     fhir:display [ fhir:v "Implanter" ]
+  ] [
+     fhir:code [ fhir:v "100000073517" ] ;
+     fhir:display [ fhir:v "Inhaler" ]
+  ] [
+     fhir:code [ fhir:v "100000073518" ] ;
+     fhir:display [ fhir:v "In-ovo injection device" ]
+  ] [
+     fhir:code [ fhir:v "100000073519" ] ;
+     fhir:display [ fhir:v "Injection needle" ]
+  ] [
+     fhir:code [ fhir:v "100000073520" ] ;
+     fhir:display [ fhir:v "Injection syringe" ]
+  ] [
+     fhir:code [ fhir:v "100000073521" ] ;
+     fhir:display [ fhir:v "Internal graduated calibration chamber" ]
+  ] [
+     fhir:code [ fhir:v "100000073522" ] ;
+     fhir:display [ fhir:v "Intramammary syringe" ]
+  ] [
+     fhir:code [ fhir:v "100000073523" ] ;
+     fhir:display [ fhir:v "Jar" ]
+  ] [
+     fhir:code [ fhir:v "100000073524" ] ;
+     fhir:display [ fhir:v "Measuring device" ]
+  ] [
+     fhir:code [ fhir:v "100000073525" ] ;
+     fhir:display [ fhir:v "Measuring spoon" ]
+  ] [
+     fhir:code [ fhir:v "100000073526" ] ;
+     fhir:display [ fhir:v "Metering pump" ]
+  ] [
+     fhir:code [ fhir:v "100000073527" ] ;
+     fhir:display [ fhir:v "Metering valve" ]
+  ] [
+     fhir:code [ fhir:v "100000073528" ] ;
+     fhir:display [ fhir:v "Mobile cryogenic vessel" ]
+  ] [
+     fhir:code [ fhir:v "100000073529" ] ;
+     fhir:display [ fhir:v "Mouthpiece" ]
+  ] [
+     fhir:code [ fhir:v "100000073530" ] ;
+     fhir:display [ fhir:v "Multidose container" ]
+  ] [
+     fhir:code [ fhir:v "100000073531" ] ;
+     fhir:display [ fhir:v "Multidose container with airless pump" ]
+  ] [
+     fhir:code [ fhir:v "100000073532" ] ;
+     fhir:display [ fhir:v "Multipuncturer" ]
+  ] [
+     fhir:code [ fhir:v "100000073533" ] ;
+     fhir:display [ fhir:v "Nasal applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073534" ] ;
+     fhir:display [ fhir:v "Nebuliser" ]
+  ] [
+     fhir:code [ fhir:v "100000073535" ] ;
+     fhir:display [ fhir:v "Needle applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073536" ] ;
+     fhir:display [ fhir:v "Nozzle" ]
+  ] [
+     fhir:code [ fhir:v "100000073537" ] ;
+     fhir:display [ fhir:v "Oral syringe" ]
+  ] [
+     fhir:code [ fhir:v "100000073538" ] ;
+     fhir:display [ fhir:v "Pipette" ]
+  ] [
+     fhir:code [ fhir:v "100000073539" ] ;
+     fhir:display [ fhir:v "Pipette applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073540" ] ;
+     fhir:display [ fhir:v "Pouch" ]
+  ] [
+     fhir:code [ fhir:v "100000073541" ] ;
+     fhir:display [ fhir:v "Pour-on container" ]
+  ] [
+     fhir:code [ fhir:v "100000073542" ] ;
+     fhir:display [ fhir:v "Pre-filled gastroenteral tube" ]
+  ] [
+     fhir:code [ fhir:v "100000073543" ] ;
+     fhir:display [ fhir:v "Pre-filled pen" ]
+  ] [
+     fhir:code [ fhir:v "100000073544" ] ;
+     fhir:display [ fhir:v "Pre-filled syringe" ]
+  ] [
+     fhir:code [ fhir:v "100000073545" ] ;
+     fhir:display [ fhir:v "Pressurised container" ]
+  ] [
+     fhir:code [ fhir:v "100000073546" ] ;
+     fhir:display [ fhir:v "Prick test applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073547" ] ;
+     fhir:display [ fhir:v "Sachet" ]
+  ] [
+     fhir:code [ fhir:v "100000073548" ] ;
+     fhir:display [ fhir:v "Scarifier" ]
+  ] [
+     fhir:code [ fhir:v "100000073549" ] ;
+     fhir:display [ fhir:v "Screw cap" ]
+  ] [
+     fhir:code [ fhir:v "100000073550" ] ;
+     fhir:display [ fhir:v "Single-dose container" ]
+  ] [
+     fhir:code [ fhir:v "100000073551" ] ;
+     fhir:display [ fhir:v "Spatula" ]
+  ] [
+     fhir:code [ fhir:v "100000073552" ] ;
+     fhir:display [ fhir:v "Spot-on applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073553" ] ;
+     fhir:display [ fhir:v "Spray container" ]
+  ] [
+     fhir:code [ fhir:v "100000073554" ] ;
+     fhir:display [ fhir:v "Spray pump" ]
+  ] [
+     fhir:code [ fhir:v "100000073555" ] ;
+     fhir:display [ fhir:v "Spray valve" ]
+  ] [
+     fhir:code [ fhir:v "100000073556" ] ;
+     fhir:display [ fhir:v "Stab vaccinator" ]
+  ] [
+     fhir:code [ fhir:v "100000073557" ] ;
+     fhir:display [ fhir:v "Stopper" ]
+  ] [
+     fhir:code [ fhir:v "100000073558" ] ;
+     fhir:display [ fhir:v "Straw" ]
+  ] [
+     fhir:code [ fhir:v "100000073559" ] ;
+     fhir:display [ fhir:v "Strip" ]
+  ] [
+     fhir:code [ fhir:v "100000073560" ] ;
+     fhir:display [ fhir:v "Tablet container" ]
+  ] [
+     fhir:code [ fhir:v "100000073561" ] ;
+     fhir:display [ fhir:v "Tube" ]
+  ] [
+     fhir:code [ fhir:v "100000073562" ] ;
+     fhir:display [ fhir:v "Vaginal sponge applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000073563" ] ;
+     fhir:display [ fhir:v "Vial" ]
+  ] [
+     fhir:code [ fhir:v "100000075664" ] ;
+     fhir:display [ fhir:v "Administration system" ]
+  ] [
+     fhir:code [ fhir:v "100000116195" ] ;
+     fhir:display [ fhir:v "Calendar package" ]
+  ] [
+     fhir:code [ fhir:v "100000116196" ] ;
+     fhir:display [ fhir:v "Needle-free injector" ]
+  ] [
+     fhir:code [ fhir:v "100000116197" ] ;
+     fhir:display [ fhir:v "Roll-on container" ]
+  ] [
+     fhir:code [ fhir:v "100000125779" ] ;
+     fhir:display [ fhir:v "Multidose container with pump" ]
+  ] [
+     fhir:code [ fhir:v "100000137702" ] ;
+     fhir:display [ fhir:v "Container" ]
+  ] [
+     fhir:code [ fhir:v "100000137703" ] ;
+     fhir:display [ fhir:v "Oral applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000143554" ] ;
+     fhir:display [ fhir:v "Multidose container with metering pump" ]
+  ] [
+     fhir:code [ fhir:v "100000143555" ] ;
+     fhir:display [ fhir:v "Pack" ]
+  ] [
+     fhir:code [ fhir:v "100000163233" ] ;
+     fhir:display [ fhir:v "disk" ]
+  ] [
+     fhir:code [ fhir:v "100000163234" ] ;
+     fhir:display [ fhir:v "plunger" ]
+  ] [
+     fhir:code [ fhir:v "100000164143" ] ;
+     fhir:display [ fhir:v "infusion port" ]
+  ] [
+     fhir:code [ fhir:v "100000166980" ] ;
+     fhir:display [ fhir:v "Valve" ]
+  ] [
+     fhir:code [ fhir:v "100000169899" ] ;
+     fhir:display [ fhir:v "Jerrycan" ]
+  ] [
+     fhir:code [ fhir:v "100000173982" ] ;
+     fhir:display [ fhir:v "Oral applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000173983" ] ;
+     fhir:display [ fhir:v "Dose dispenser" ]
+  ] [
+     fhir:code [ fhir:v "100000174066" ] ;
+     fhir:display [ fhir:v "Unit-dose blister" ]
+  ] [
+     fhir:code [ fhir:v "100000174067" ] ;
+     fhir:display [ fhir:v "Pre-filled injector" ]
+  ] [
+     fhir:code [ fhir:v "100000174068" ] ;
+     fhir:display [ fhir:v "Pre-filled oral syringe" ]
+  ] [
+     fhir:code [ fhir:v "100000174069" ] ;
+     fhir:display [ fhir:v "Pre-filled oral applicator" ]
+  ] [
+     fhir:code [ fhir:v "100000174070" ] ;
+     fhir:display [ fhir:v "Dose-dispenser cartridge" ]
+  ] [
+     fhir:code [ fhir:v "200000005068" ] ;
+     fhir:display [ fhir:v "Pen" ]
+  ] [
+     fhir:code [ fhir:v "200000005585" ] ;
+     fhir:display [ fhir:v "Wrapper" ]
+  ] [
+     fhir:code [ fhir:v "200000010647" ] ;
+     fhir:display [ fhir:v "Lid" ]
+  ] [
+     fhir:code [ fhir:v "200000011726" ] ;
+     fhir:display [ fhir:v "Capsule for opening" ]
+  ] [
+     fhir:code [ fhir:v "200000012539" ] ;
+     fhir:display [ fhir:v "Child-resistant sachet" ]
+  ] [
+     fhir:code [ fhir:v "200000013191" ] ;
+     fhir:display [ fhir:v "Tamper-evident closure" ]
+  ] [
+     fhir:code [ fhir:v "200000024874" ] ;
+     fhir:display [ fhir:v "Tablet tube" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

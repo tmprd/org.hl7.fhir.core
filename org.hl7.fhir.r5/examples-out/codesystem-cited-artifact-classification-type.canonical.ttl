@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/cited-artifact-classification-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cited-artifact-classification-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-03T19:33:12.998-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cited-artifact-classification-type</b></p><a name=\"cited-artifact-classification-type\"> </a><a name=\"hccited-artifact-classification-type\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/cited-artifact-classification-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">publication-type<a name=\"cited-artifact-classification-type-publication-type\"> </a></td><td>Publication type</td><td>Publication type</td></tr><tr><td style=\"white-space:nowrap\">mesh-heading<a name=\"cited-artifact-classification-type-mesh-heading\"> </a></td><td>MeSH heading</td><td>MeSH heading</td></tr><tr><td style=\"white-space:nowrap\">supplemental-mesh-protocol<a name=\"cited-artifact-classification-type-supplemental-mesh-protocol\"> </a></td><td>Supplemental MeSH for Protocol</td><td>Supplemental MeSH for Protocol</td></tr><tr><td style=\"white-space:nowrap\">supplemental-mesh-disease<a name=\"cited-artifact-classification-type-supplemental-mesh-disease\"> </a></td><td>Supplemental MeSH for Disease</td><td>Supplemental MeSH for Disease</td></tr><tr><td style=\"white-space:nowrap\">supplemental-mesh-organism<a name=\"cited-artifact-classification-type-supplemental-mesh-organism\"> </a></td><td>Supplemental MeSH for Organism</td><td>Supplemental MeSH for Organism</td></tr><tr><td style=\"white-space:nowrap\">keyword<a name=\"cited-artifact-classification-type-keyword\"> </a></td><td>Keyword</td><td>Keyword</td></tr><tr><td style=\"white-space:nowrap\">citation-subset<a name=\"cited-artifact-classification-type-citation-subset\"> </a></td><td>Citation subset</td><td>Citation subset</td></tr><tr><td style=\"white-space:nowrap\">chemical<a name=\"cited-artifact-classification-type-chemical\"> </a></td><td>Chemical</td><td>Chemical</td></tr><tr><td style=\"white-space:nowrap\">publishing-model<a name=\"cited-artifact-classification-type-publishing-model\"> </a></td><td>Publishing Model</td><td>Used for PubModel attribute in Medline</td></tr><tr><td style=\"white-space:nowrap\">knowledge-artifact-type<a name=\"cited-artifact-classification-type-knowledge-artifact-type\"> </a></td><td>Knowledge Artifact Type</td><td>Knowledge Artifact Type</td></tr><tr><td style=\"white-space:nowrap\">coverage<a name=\"cited-artifact-classification-type-coverage\"> </a></td><td>Coverage</td><td>The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/cited-artifact-classification-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1885" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-cibuild"] ; # 
+  fhir:name [ fhir:v "CitedArtifactClassificationType"] ; # 
+  fhir:title [ fhir:v "Cited Artifact Classification Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-03-11T10:55:11.085+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Cited Artifact Classification Type"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/cited-artifact-classification-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/cited-artifact-classification-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "publication-type" ] ;
+     fhir:display [ fhir:v "Publication type" ] ;
+     fhir:definition [ fhir:v "Publication type" ]
+  ] [
+     fhir:code [ fhir:v "mesh-heading" ] ;
+     fhir:display [ fhir:v "MeSH heading" ] ;
+     fhir:definition [ fhir:v "MeSH heading" ]
+  ] [
+     fhir:code [ fhir:v "supplemental-mesh-protocol" ] ;
+     fhir:display [ fhir:v "Supplemental MeSH for Protocol" ] ;
+     fhir:definition [ fhir:v "Supplemental MeSH for Protocol" ]
+  ] [
+     fhir:code [ fhir:v "supplemental-mesh-disease" ] ;
+     fhir:display [ fhir:v "Supplemental MeSH for Disease" ] ;
+     fhir:definition [ fhir:v "Supplemental MeSH for Disease" ]
+  ] [
+     fhir:code [ fhir:v "supplemental-mesh-organism" ] ;
+     fhir:display [ fhir:v "Supplemental MeSH for Organism" ] ;
+     fhir:definition [ fhir:v "Supplemental MeSH for Organism" ]
+  ] [
+     fhir:code [ fhir:v "keyword" ] ;
+     fhir:display [ fhir:v "Keyword" ] ;
+     fhir:definition [ fhir:v "Keyword" ]
+  ] [
+     fhir:code [ fhir:v "citation-subset" ] ;
+     fhir:display [ fhir:v "Citation subset" ] ;
+     fhir:definition [ fhir:v "Citation subset" ]
+  ] [
+     fhir:code [ fhir:v "chemical" ] ;
+     fhir:display [ fhir:v "Chemical" ] ;
+     fhir:definition [ fhir:v "Chemical" ]
+  ] [
+     fhir:code [ fhir:v "publishing-model" ] ;
+     fhir:display [ fhir:v "Publishing Model" ] ;
+     fhir:definition [ fhir:v "Used for PubModel attribute in Medline" ]
+  ] [
+     fhir:code [ fhir:v "knowledge-artifact-type" ] ;
+     fhir:display [ fhir:v "Knowledge Artifact Type" ] ;
+     fhir:definition [ fhir:v "Knowledge Artifact Type" ]
+  ] [
+     fhir:code [ fhir:v "coverage" ] ;
+     fhir:display [ fhir:v "Coverage" ] ;
+     fhir:definition [ fhir:v "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/deviceassociation-status-reason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "deviceassociation-status-reason"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem deviceassociation-status-reason</b></p><a name=\"deviceassociation-status-reason\"> </a><a name=\"hcdeviceassociation-status-reason\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/deviceassociation-status-reason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">attached<a name=\"deviceassociation-status-reason-attached\"> </a></td><td>Attached</td><td>The device is connected to the patient.</td></tr><tr><td style=\"white-space:nowrap\">disconnected<a name=\"deviceassociation-status-reason-disconnected\"> </a></td><td>Disconnected</td><td>The device is no longer connected.</td></tr><tr><td style=\"white-space:nowrap\">failed<a name=\"deviceassociation-status-reason-failed\"> </a></td><td>Failed</td><td>The device has failed to work, or continue to function.</td></tr><tr><td style=\"white-space:nowrap\">placed<a name=\"deviceassociation-status-reason-placed\"> </a></td><td>placed</td><td>The device was placed in the patient.</td></tr><tr><td style=\"white-space:nowrap\">replaced<a name=\"deviceassociation-status-reason-replaced\"> </a></td><td>Replaced</td><td>The device was updated with a new device or device part.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/deviceassociation-status-reason"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceAssociation"] ; # 
+  fhir:title [ fhir:v "DeviceAssociation Status Reason Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "DeviceAssociation Status Reason Codes"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/deviceassociation-status-reason"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/deviceassociation-status-reason>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "attached" ] ;
+     fhir:display [ fhir:v "Attached" ] ;
+     fhir:definition [ fhir:v "The device is connected to the patient." ]
+  ] [
+     fhir:code [ fhir:v "disconnected" ] ;
+     fhir:display [ fhir:v "Disconnected" ] ;
+     fhir:definition [ fhir:v "The device is no longer connected." ]
+  ] [
+     fhir:code [ fhir:v "failed" ] ;
+     fhir:display [ fhir:v "Failed" ] ;
+     fhir:definition [ fhir:v "The device has failed to work, or continue to function." ]
+  ] [
+     fhir:code [ fhir:v "placed" ] ;
+     fhir:display [ fhir:v "placed" ] ;
+     fhir:definition [ fhir:v "The device was placed in the patient." ]
+  ] [
+     fhir:code [ fhir:v "replaced" ] ;
+     fhir:display [ fhir:v "Replaced" ] ;
+     fhir:definition [ fhir:v "The device was updated with a new device or device part." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

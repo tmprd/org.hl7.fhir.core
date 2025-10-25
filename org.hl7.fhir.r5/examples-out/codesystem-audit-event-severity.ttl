@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/audit-event-severity> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "audit-event-severity"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem audit-event-severity</b>\n      </p>\n      <a name=\"audit-event-severity\"> </a>\n      <a name=\"hcaudit-event-severity\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2022-06-06T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/audit-event-severity</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">emergency\n            <a name=\"audit-event-severity-emergency\"> </a>\n          </td>\n          <td>Emergency</td>\n          <td>System is unusable. e.g., This level should only be reported by infrastructure and should not be used by applications.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">alert\n            <a name=\"audit-event-severity-alert\"> </a>\n          </td>\n          <td>Alert</td>\n          <td>Notification should be sent to trigger action be taken. e.g., Loss of the primary network connection needing attention.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">critical\n            <a name=\"audit-event-severity-critical\"> </a>\n          </td>\n          <td>Critical</td>\n          <td>Critical conditions. e.g., A failure in the system's primary application that will reset automatically.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">error\n            <a name=\"audit-event-severity-error\"> </a>\n          </td>\n          <td>Error</td>\n          <td>Error conditions. e.g., An application has exceeded its file storage limit and attempts to write are failing. </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">warning\n            <a name=\"audit-event-severity-warning\"> </a>\n          </td>\n          <td>Warning</td>\n          <td>Warning conditions. May indicate that an error will occur if action is not taken. e.g., A non-root file system has only 2GB remaining.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">notice\n            <a name=\"audit-event-severity-notice\"> </a>\n          </td>\n          <td>Notice</td>\n          <td>Notice messages. Normal but significant condition. Events that are unusual, but not error conditions.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">informational\n            <a name=\"audit-event-severity-informational\"> </a>\n          </td>\n          <td>Informational</td>\n          <td>Normal operational messages that require no action. e.g., An application has started, paused, or ended successfully.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">debug\n            <a name=\"audit-event-severity-debug\"> </a>\n          </td>\n          <td>Debug</td>\n          <td>Debug-level messages. Information useful to developers for debugging the application.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "sec"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 3
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/audit-event-severity"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1894" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "AuditEventSeverity"] ; # 
+  fhir:title [ fhir:v "Audit Event Severity"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2022-06-06T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Security"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/secure" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The severity of the audit entry."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/audit-event-severity"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/audit-event-severity>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "emergency" ] ;
+     fhir:display [ fhir:v "Emergency" ] ;
+     fhir:definition [ fhir:v "System is unusable. e.g., This level should only be reported by infrastructure and should not be used by applications." ]
+  ] [
+     fhir:code [ fhir:v "alert" ] ;
+     fhir:display [ fhir:v "Alert" ] ;
+     fhir:definition [ fhir:v "Notification should be sent to trigger action be taken. e.g., Loss of the primary network connection needing attention." ]
+  ] [
+     fhir:code [ fhir:v "critical" ] ;
+     fhir:display [ fhir:v "Critical" ] ;
+     fhir:definition [ fhir:v "Critical conditions. e.g., A failure in the system's primary application that will reset automatically." ]
+  ] [
+     fhir:code [ fhir:v "error" ] ;
+     fhir:display [ fhir:v "Error" ] ;
+     fhir:definition [ fhir:v "Error conditions. e.g., An application has exceeded its file storage limit and attempts to write are failing. " ]
+  ] [
+     fhir:code [ fhir:v "warning" ] ;
+     fhir:display [ fhir:v "Warning" ] ;
+     fhir:definition [ fhir:v "Warning conditions. May indicate that an error will occur if action is not taken. e.g., A non-root file system has only 2GB remaining." ]
+  ] [
+     fhir:code [ fhir:v "notice" ] ;
+     fhir:display [ fhir:v "Notice" ] ;
+     fhir:definition [ fhir:v "Notice messages. Normal but significant condition. Events that are unusual, but not error conditions." ]
+  ] [
+     fhir:code [ fhir:v "informational" ] ;
+     fhir:display [ fhir:v "Informational" ] ;
+     fhir:definition [ fhir:v "Normal operational messages that require no action. e.g., An application has started, paused, or ended successfully." ]
+  ] [
+     fhir:code [ fhir:v "debug" ] ;
+     fhir:display [ fhir:v "Debug" ] ;
+     fhir:definition [ fhir:v "Debug-level messages. Information useful to developers for debugging the application." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

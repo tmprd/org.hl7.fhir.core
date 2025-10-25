@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Permission/example-exclude> a fhir:Permission ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-exclude"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HTEST" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:asserter [
+     fhir:link <http://hl7.org/fhir/Organization/example> ;
+     fhir:reference [ fhir:v "Organization/example" ]
+  ] ; # 
+  fhir:date ( [ fhir:v "2023-11-22"^^xsd:date] ) ; # 
+  fhir:combining [ fhir:v "deny-unless-permit"] ; #   combining rule is deny-unless-permit, ANY permit authorizes access, so rules do not need to be exhaustively processed, but if no permit is found then access is denied. 
+  fhir:rule ( [
+     fhir:type [ fhir:v "permit" ] ; #   rule is #permit for administrative actions on the directory. This enables maintenance by those with directory admin authorization  
+     fhir:activity ( [
+       fhir:action ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "C" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "R" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "U" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "D" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "E" ]
+         ] )
+       ] ) ;
+       fhir:purpose ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HDIRECT" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HSYSADMIN" ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:type [ fhir:v "permit" ] ; #   When anyone that has TPO authority accesses the directory, they get access to all entries in the directory, but any data marked as Location Sensitive is excluded. Presumes Practitioner resources are tagged at the element level following DS4P Inline Security Labels that indicate the sensitive location elements using the LOCIS tag  
+     fhir:activity ( [
+       fhir:action ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "R" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "E" ]
+         ] )
+       ] ) ;
+       fhir:purpose ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "TREAT" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HPAYMT" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "HOPERAT" ]
+         ] )
+       ] )
+     ] ) ;
+     fhir:limit ( [ ] )
+  ] [
+     fhir:type [ fhir:v "permit" ] ; #   When a Patient accesses the directory, it will be with PurposeOfUse of PATRQT. They only get access to Doctors, and only non-sensitive data. So not access to kitchen staff, janitor, nurses, etc.  
+     fhir:data ( [
+       fhir:expression [
+         fhir:description [ fhir:v "select all Practitioner resources where the Practitioner has a PractitionerRole with code of doctor" ] ;
+         fhir:language [ fhir:v "application/x-fhir-query" ] ;
+         fhir:expression [ fhir:v "Practitioner?_has:PractitionerRole:practitioner:role=http://terminology.hl7.org/CodeSystem/practitioner-role|doctor" ]
+       ]
+     ] ) ;
+     fhir:activity ( [
+       fhir:action ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "R" ]
+         ] )
+       ] [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/audit-event-action"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "E" ]
+         ] )
+       ] ) ;
+       fhir:purpose ( [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "PATRQT" ]
+         ] )
+       ] )
+     ] ) ;
+     fhir:limit ( [ ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Organization/example> a fhir:Organization .
+
+# -------------------------------------------------------------------------------------
+

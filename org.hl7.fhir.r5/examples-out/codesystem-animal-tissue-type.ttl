@@ -1,0 +1,647 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/animal-tissue-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "animal-tissue-type"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem animal-tissue-type</b>\n      </p>\n      <a name=\"animal-tissue-type\"> </a>\n      <a name=\"hcanimal-tissue-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/animal-tissue-type</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072091\n            <a name=\"animal-tissue-type-100000072091\"> </a>\n          </td>\n          <td>All relevant tissues</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072092\n            <a name=\"animal-tissue-type-100000072092\"> </a>\n          </td>\n          <td>Fat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072093\n            <a name=\"animal-tissue-type-100000072093\"> </a>\n          </td>\n          <td>Honey</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072094\n            <a name=\"animal-tissue-type-100000072094\"> </a>\n          </td>\n          <td>Liver</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072095\n            <a name=\"animal-tissue-type-100000072095\"> </a>\n          </td>\n          <td>Fresh Milk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072096\n            <a name=\"animal-tissue-type-100000072096\"> </a>\n          </td>\n          <td>Muscle and skin in natural proportions</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072104\n            <a name=\"animal-tissue-type-100000072104\"> </a>\n          </td>\n          <td>Eggs</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072105\n            <a name=\"animal-tissue-type-100000072105\"> </a>\n          </td>\n          <td>Skin and fat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072106\n            <a name=\"animal-tissue-type-100000072106\"> </a>\n          </td>\n          <td>Kidney</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072107\n            <a name=\"animal-tissue-type-100000072107\"> </a>\n          </td>\n          <td>Meat and offal</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072108\n            <a name=\"animal-tissue-type-100000072108\"> </a>\n          </td>\n          <td>Muscle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000072109\n            <a name=\"animal-tissue-type-100000072109\"> </a>\n          </td>\n          <td>Unspecified</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111053\n            <a name=\"animal-tissue-type-100000111053\"> </a>\n          </td>\n          <td>Adipose tissue</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111054\n            <a name=\"animal-tissue-type-100000111054\"> </a>\n          </td>\n          <td>Adrenal</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111055\n            <a name=\"animal-tissue-type-100000111055\"> </a>\n          </td>\n          <td>Blood vessels</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111056\n            <a name=\"animal-tissue-type-100000111056\"> </a>\n          </td>\n          <td>Bone</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111057\n            <a name=\"animal-tissue-type-100000111057\"> </a>\n          </td>\n          <td>Bone marrow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111058\n            <a name=\"animal-tissue-type-100000111058\"> </a>\n          </td>\n          <td>Brain</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111059\n            <a name=\"animal-tissue-type-100000111059\"> </a>\n          </td>\n          <td>Connective tissue</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111060\n            <a name=\"animal-tissue-type-100000111060\"> </a>\n          </td>\n          <td>Cornea</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111061\n            <a name=\"animal-tissue-type-100000111061\"> </a>\n          </td>\n          <td>Dental pulp</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111062\n            <a name=\"animal-tissue-type-100000111062\"> </a>\n          </td>\n          <td>Duodenum</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111063\n            <a name=\"animal-tissue-type-100000111063\"> </a>\n          </td>\n          <td>Dura mater</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111064\n            <a name=\"animal-tissue-type-100000111064\"> </a>\n          </td>\n          <td>Egg, embryonated</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111065\n            <a name=\"animal-tissue-type-100000111065\"> </a>\n          </td>\n          <td>Egg</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111066\n            <a name=\"animal-tissue-type-100000111066\"> </a>\n          </td>\n          <td>Egg white</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111067\n            <a name=\"animal-tissue-type-100000111067\"> </a>\n          </td>\n          <td>Egg yolk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111068\n            <a name=\"animal-tissue-type-100000111068\"> </a>\n          </td>\n          <td>Embryos</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111069\n            <a name=\"animal-tissue-type-100000111069\"> </a>\n          </td>\n          <td>Enteric plexuses</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111070\n            <a name=\"animal-tissue-type-100000111070\"> </a>\n          </td>\n          <td>Esophagus</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111071\n            <a name=\"animal-tissue-type-100000111071\"> </a>\n          </td>\n          <td>Feathers</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111072\n            <a name=\"animal-tissue-type-100000111072\"> </a>\n          </td>\n          <td>Foetus</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111073\n            <a name=\"animal-tissue-type-100000111073\"> </a>\n          </td>\n          <td>Fore-stomach (ruminants only)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111074\n            <a name=\"animal-tissue-type-100000111074\"> </a>\n          </td>\n          <td>Gingival tissue</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111075\n            <a name=\"animal-tissue-type-100000111075\"> </a>\n          </td>\n          <td>Hair</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111076\n            <a name=\"animal-tissue-type-100000111076\"> </a>\n          </td>\n          <td>Heart/pericardium</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111077\n            <a name=\"animal-tissue-type-100000111077\"> </a>\n          </td>\n          <td>Hide</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111078\n            <a name=\"animal-tissue-type-100000111078\"> </a>\n          </td>\n          <td>Hooves</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111079\n            <a name=\"animal-tissue-type-100000111079\"> </a>\n          </td>\n          <td>Ileum</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111080\n            <a name=\"animal-tissue-type-100000111080\"> </a>\n          </td>\n          <td>Jejunum</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111081\n            <a name=\"animal-tissue-type-100000111081\"> </a>\n          </td>\n          <td>Kidney</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111082\n            <a name=\"animal-tissue-type-100000111082\"> </a>\n          </td>\n          <td>Lard/lard oil</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111083\n            <a name=\"animal-tissue-type-100000111083\"> </a>\n          </td>\n          <td>Large intestine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111084\n            <a name=\"animal-tissue-type-100000111084\"> </a>\n          </td>\n          <td>Liver</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111085\n            <a name=\"animal-tissue-type-100000111085\"> </a>\n          </td>\n          <td>Lung</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111086\n            <a name=\"animal-tissue-type-100000111086\"> </a>\n          </td>\n          <td>Lymph nodes</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111087\n            <a name=\"animal-tissue-type-100000111087\"> </a>\n          </td>\n          <td>Mammary gland</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111088\n            <a name=\"animal-tissue-type-100000111088\"> </a>\n          </td>\n          <td>Udder</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111089\n            <a name=\"animal-tissue-type-100000111089\"> </a>\n          </td>\n          <td>Mammary tumour</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111090\n            <a name=\"animal-tissue-type-100000111090\"> </a>\n          </td>\n          <td>Meat extract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111091\n            <a name=\"animal-tissue-type-100000111091\"> </a>\n          </td>\n          <td>Nasopharyngeal</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111092\n            <a name=\"animal-tissue-type-100000111092\"> </a>\n          </td>\n          <td>Nictitating membrane</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111093\n            <a name=\"animal-tissue-type-100000111093\"> </a>\n          </td>\n          <td>Nasal mucosa</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111094\n            <a name=\"animal-tissue-type-100000111094\"> </a>\n          </td>\n          <td>Ovary</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111095\n            <a name=\"animal-tissue-type-100000111095\"> </a>\n          </td>\n          <td>Pancreas</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111096\n            <a name=\"animal-tissue-type-100000111096\"> </a>\n          </td>\n          <td>Peripheral nerves</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111097\n            <a name=\"animal-tissue-type-100000111097\"> </a>\n          </td>\n          <td>Pituitary gland</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111098\n            <a name=\"animal-tissue-type-100000111098\"> </a>\n          </td>\n          <td>Placenta</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111099\n            <a name=\"animal-tissue-type-100000111099\"> </a>\n          </td>\n          <td>Prostate</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111100\n            <a name=\"animal-tissue-type-100000111100\"> </a>\n          </td>\n          <td>Epididymis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111101\n            <a name=\"animal-tissue-type-100000111101\"> </a>\n          </td>\n          <td>Seminal vesicle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111102\n            <a name=\"animal-tissue-type-100000111102\"> </a>\n          </td>\n          <td>Rennet, calf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111103\n            <a name=\"animal-tissue-type-100000111103\"> </a>\n          </td>\n          <td>Retina</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111104\n            <a name=\"animal-tissue-type-100000111104\"> </a>\n          </td>\n          <td>Optic nerve</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111105\n            <a name=\"animal-tissue-type-100000111105\"> </a>\n          </td>\n          <td>Salivary gland</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111106\n            <a name=\"animal-tissue-type-100000111106\"> </a>\n          </td>\n          <td>Shank</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111107\n            <a name=\"animal-tissue-type-100000111107\"> </a>\n          </td>\n          <td>Skeletal muscle</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111108\n            <a name=\"animal-tissue-type-100000111108\"> </a>\n          </td>\n          <td>Skin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111109\n            <a name=\"animal-tissue-type-100000111109\"> </a>\n          </td>\n          <td>Spinal ganglia</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111110\n            <a name=\"animal-tissue-type-100000111110\"> </a>\n          </td>\n          <td>Spinal cord</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111111\n            <a name=\"animal-tissue-type-100000111111\"> </a>\n          </td>\n          <td>Spleen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111112\n            <a name=\"animal-tissue-type-100000111112\"> </a>\n          </td>\n          <td>Stomach</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111113\n            <a name=\"animal-tissue-type-100000111113\"> </a>\n          </td>\n          <td>Abomasum</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111114\n            <a name=\"animal-tissue-type-100000111114\"> </a>\n          </td>\n          <td>Submaxillary glands</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111115\n            <a name=\"animal-tissue-type-100000111115\"> </a>\n          </td>\n          <td>Tallow</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111116\n            <a name=\"animal-tissue-type-100000111116\"> </a>\n          </td>\n          <td>Tendon</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111117\n            <a name=\"animal-tissue-type-100000111117\"> </a>\n          </td>\n          <td>Testis</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111118\n            <a name=\"animal-tissue-type-100000111118\"> </a>\n          </td>\n          <td>Thymus</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111119\n            <a name=\"animal-tissue-type-100000111119\"> </a>\n          </td>\n          <td>Thyroid gland</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111120\n            <a name=\"animal-tissue-type-100000111120\"> </a>\n          </td>\n          <td>Tongue</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111121\n            <a name=\"animal-tissue-type-100000111121\"> </a>\n          </td>\n          <td>Tonsil</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111122\n            <a name=\"animal-tissue-type-100000111122\"> </a>\n          </td>\n          <td>Trachea</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111123\n            <a name=\"animal-tissue-type-100000111123\"> </a>\n          </td>\n          <td>Trigeminal ganglia</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111124\n            <a name=\"animal-tissue-type-100000111124\"> </a>\n          </td>\n          <td>Tripe</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111125\n            <a name=\"animal-tissue-type-100000111125\"> </a>\n          </td>\n          <td>Uterus (Non-gravid)</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111126\n            <a name=\"animal-tissue-type-100000111126\"> </a>\n          </td>\n          <td>Wool</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111127\n            <a name=\"animal-tissue-type-100000111127\"> </a>\n          </td>\n          <td>Ascites fluid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111128\n            <a name=\"animal-tissue-type-100000111128\"> </a>\n          </td>\n          <td>Bile</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111129\n            <a name=\"animal-tissue-type-100000111129\"> </a>\n          </td>\n          <td>Blood1</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111130\n            <a name=\"animal-tissue-type-100000111130\"> </a>\n          </td>\n          <td>Blood, foetal</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111131\n            <a name=\"animal-tissue-type-100000111131\"> </a>\n          </td>\n          <td>Colostrum</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111132\n            <a name=\"animal-tissue-type-100000111132\"> </a>\n          </td>\n          <td>Cord blood</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111133\n            <a name=\"animal-tissue-type-100000111133\"> </a>\n          </td>\n          <td>CSF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111134\n            <a name=\"animal-tissue-type-100000111134\"> </a>\n          </td>\n          <td>Faeces</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111135\n            <a name=\"animal-tissue-type-100000111135\"> </a>\n          </td>\n          <td>Milk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111136\n            <a name=\"animal-tissue-type-100000111136\"> </a>\n          </td>\n          <td>Nasal mucus</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111137\n            <a name=\"animal-tissue-type-100000111137\"> </a>\n          </td>\n          <td>Placenta fluids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111138\n            <a name=\"animal-tissue-type-100000111138\"> </a>\n          </td>\n          <td>Plasma</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111139\n            <a name=\"animal-tissue-type-100000111139\"> </a>\n          </td>\n          <td>Saliva</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111140\n            <a name=\"animal-tissue-type-100000111140\"> </a>\n          </td>\n          <td>Secretion from bees</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111141\n            <a name=\"animal-tissue-type-100000111141\"> </a>\n          </td>\n          <td>Semen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111142\n            <a name=\"animal-tissue-type-100000111142\"> </a>\n          </td>\n          <td>Serum, calf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111143\n            <a name=\"animal-tissue-type-100000111143\"> </a>\n          </td>\n          <td>Serum, donor adult bovine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111144\n            <a name=\"animal-tissue-type-100000111144\"> </a>\n          </td>\n          <td>Serum, donor calf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111145\n            <a name=\"animal-tissue-type-100000111145\"> </a>\n          </td>\n          <td>Serum, foetal bovine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111146\n            <a name=\"animal-tissue-type-100000111146\"> </a>\n          </td>\n          <td>Serum, newborn calf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111147\n            <a name=\"animal-tissue-type-100000111147\"> </a>\n          </td>\n          <td>Serum/plasma derivate, adult bovine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111148\n            <a name=\"animal-tissue-type-100000111148\"> </a>\n          </td>\n          <td>Serum/plasma, adult bovine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111149\n            <a name=\"animal-tissue-type-100000111149\"> </a>\n          </td>\n          <td>Sweat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111150\n            <a name=\"animal-tissue-type-100000111150\"> </a>\n          </td>\n          <td>Tears</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111151\n            <a name=\"animal-tissue-type-100000111151\"> </a>\n          </td>\n          <td>Urine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111152\n            <a name=\"animal-tissue-type-100000111152\"> </a>\n          </td>\n          <td>Venom</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111153\n            <a name=\"animal-tissue-type-100000111153\"> </a>\n          </td>\n          <td>Whey</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111154\n            <a name=\"animal-tissue-type-100000111154\"> </a>\n          </td>\n          <td>Casein</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111155\n            <a name=\"animal-tissue-type-100000111155\"> </a>\n          </td>\n          <td>Fermentation products</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111156\n            <a name=\"animal-tissue-type-100000111156\"> </a>\n          </td>\n          <td>Gelatin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111157\n            <a name=\"animal-tissue-type-100000111157\"> </a>\n          </td>\n          <td>Lactose</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111158\n            <a name=\"animal-tissue-type-100000111158\"> </a>\n          </td>\n          <td>Protein</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111159\n            <a name=\"animal-tissue-type-100000111159\"> </a>\n          </td>\n          <td>Insulin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111160\n            <a name=\"animal-tissue-type-100000111160\"> </a>\n          </td>\n          <td>Collagen</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111161\n            <a name=\"animal-tissue-type-100000111161\"> </a>\n          </td>\n          <td>Animal Charcoal</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111162\n            <a name=\"animal-tissue-type-100000111162\"> </a>\n          </td>\n          <td>Peptones</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111163\n            <a name=\"animal-tissue-type-100000111163\"> </a>\n          </td>\n          <td>Fatty acids</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000111164\n            <a name=\"animal-tissue-type-100000111164\"> </a>\n          </td>\n          <td>Glycerol</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000125717\n            <a name=\"animal-tissue-type-100000125717\"> </a>\n          </td>\n          <td>Not applicable</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136180\n            <a name=\"animal-tissue-type-100000136180\"> </a>\n          </td>\n          <td>Meat and offal, milk</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136181\n            <a name=\"animal-tissue-type-100000136181\"> </a>\n          </td>\n          <td>Agar blood</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136182\n            <a name=\"animal-tissue-type-100000136182\"> </a>\n          </td>\n          <td>Casamino acid</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136183\n            <a name=\"animal-tissue-type-100000136183\"> </a>\n          </td>\n          <td>Casein, hydrolysate</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136184\n            <a name=\"animal-tissue-type-100000136184\"> </a>\n          </td>\n          <td>Casein, pancreatic digest</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136185\n            <a name=\"animal-tissue-type-100000136185\"> </a>\n          </td>\n          <td>Casein, peptides N3</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136186\n            <a name=\"animal-tissue-type-100000136186\"> </a>\n          </td>\n          <td>Cells</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136187\n            <a name=\"animal-tissue-type-100000136187\"> </a>\n          </td>\n          <td>Cells, BHK21</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136188\n            <a name=\"animal-tissue-type-100000136188\"> </a>\n          </td>\n          <td>Cells, CHO</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136189\n            <a name=\"animal-tissue-type-100000136189\"> </a>\n          </td>\n          <td>Cells, CRFK</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136190\n            <a name=\"animal-tissue-type-100000136190\"> </a>\n          </td>\n          <td>Cells, embryo SPF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136191\n            <a name=\"animal-tissue-type-100000136191\"> </a>\n          </td>\n          <td>Cells, IRC5</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136192\n            <a name=\"animal-tissue-type-100000136192\"> </a>\n          </td>\n          <td>Cells, kidney</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136193\n            <a name=\"animal-tissue-type-100000136193\"> </a>\n          </td>\n          <td>Cells, MDCK</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136194\n            <a name=\"animal-tissue-type-100000136194\"> </a>\n          </td>\n          <td>Cells, red blood</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136195\n            <a name=\"animal-tissue-type-100000136195\"> </a>\n          </td>\n          <td>Collagen, hydrolysate</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136196\n            <a name=\"animal-tissue-type-100000136196\"> </a>\n          </td>\n          <td>Cholesterol</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136197\n            <a name=\"animal-tissue-type-100000136197\"> </a>\n          </td>\n          <td>Egg, SPF embryonated</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136198\n            <a name=\"animal-tissue-type-100000136198\"> </a>\n          </td>\n          <td>Enzyme</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136199\n            <a name=\"animal-tissue-type-100000136199\"> </a>\n          </td>\n          <td>Enzyme, pancreatic enzymes</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136200\n            <a name=\"animal-tissue-type-100000136200\"> </a>\n          </td>\n          <td>Enzyme, pancreatin 6NF</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136201\n            <a name=\"animal-tissue-type-100000136201\"> </a>\n          </td>\n          <td>Enzyme, pepsin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136202\n            <a name=\"animal-tissue-type-100000136202\"> </a>\n          </td>\n          <td>Enzyme, pronase</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136203\n            <a name=\"animal-tissue-type-100000136203\"> </a>\n          </td>\n          <td>Enzyme, trypsin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136204\n            <a name=\"animal-tissue-type-100000136204\"> </a>\n          </td>\n          <td>Heart, digest</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136205\n            <a name=\"animal-tissue-type-100000136205\"> </a>\n          </td>\n          <td>Heart, extract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136206\n            <a name=\"animal-tissue-type-100000136206\"> </a>\n          </td>\n          <td>Intestinal mucosae</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136207\n            <a name=\"animal-tissue-type-100000136207\"> </a>\n          </td>\n          <td>Lactalbumin hydrolysate</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136208\n            <a name=\"animal-tissue-type-100000136208\"> </a>\n          </td>\n          <td>Liver, digest</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136209\n            <a name=\"animal-tissue-type-100000136209\"> </a>\n          </td>\n          <td>Lymphocytes</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136210\n            <a name=\"animal-tissue-type-100000136210\"> </a>\n          </td>\n          <td>Meat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136211\n            <a name=\"animal-tissue-type-100000136211\"> </a>\n          </td>\n          <td>Meat, enzymic hydrolysate</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136212\n            <a name=\"animal-tissue-type-100000136212\"> </a>\n          </td>\n          <td>Medium, cooked meat</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136213\n            <a name=\"animal-tissue-type-100000136213\"> </a>\n          </td>\n          <td>Medium, F10-199 medium</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136214\n            <a name=\"animal-tissue-type-100000136214\"> </a>\n          </td>\n          <td>Medium, FMD culture medium</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136215\n            <a name=\"animal-tissue-type-100000136215\"> </a>\n          </td>\n          <td>Medium, Glasgow MEM culture</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136216\n            <a name=\"animal-tissue-type-100000136216\"> </a>\n          </td>\n          <td>Medium, LB Agar Lennox</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136217\n            <a name=\"animal-tissue-type-100000136217\"> </a>\n          </td>\n          <td>Medium, LB Broth Lennox</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136218\n            <a name=\"animal-tissue-type-100000136218\"> </a>\n          </td>\n          <td>Medium, modified thioglycolate medium</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136219\n            <a name=\"animal-tissue-type-100000136219\"> </a>\n          </td>\n          <td>Medium, trypticase soy broth</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136220\n            <a name=\"animal-tissue-type-100000136220\"> </a>\n          </td>\n          <td>Medium, tryptose phosphate broth</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136221\n            <a name=\"animal-tissue-type-100000136221\"> </a>\n          </td>\n          <td>Milk, skimmed</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136222\n            <a name=\"animal-tissue-type-100000136222\"> </a>\n          </td>\n          <td>Pancreas, extract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136223\n            <a name=\"animal-tissue-type-100000136223\"> </a>\n          </td>\n          <td>Peptones, casein hydrochloric peptone</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136224\n            <a name=\"animal-tissue-type-100000136224\"> </a>\n          </td>\n          <td>Peptones, casein tryptic peptone</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136225\n            <a name=\"animal-tissue-type-100000136225\"> </a>\n          </td>\n          <td>Pituitary extract</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136226\n            <a name=\"animal-tissue-type-100000136226\"> </a>\n          </td>\n          <td>Rennet</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136227\n            <a name=\"animal-tissue-type-100000136227\"> </a>\n          </td>\n          <td>Medium, nutrient broth</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136228\n            <a name=\"animal-tissue-type-100000136228\"> </a>\n          </td>\n          <td>Medium, NZ-Amine</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136229\n            <a name=\"animal-tissue-type-100000136229\"> </a>\n          </td>\n          <td>Medium, thioglycolate medium</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136230\n            <a name=\"animal-tissue-type-100000136230\"> </a>\n          </td>\n          <td>Peptones, proteose peptone</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136231\n            <a name=\"animal-tissue-type-100000136231\"> </a>\n          </td>\n          <td>Serum</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136232\n            <a name=\"animal-tissue-type-100000136232\"> </a>\n          </td>\n          <td>Serum, albumin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136233\n            <a name=\"animal-tissue-type-100000136233\"> </a>\n          </td>\n          <td>Serum, Iron fortified calf</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136234\n            <a name=\"animal-tissue-type-100000136234\"> </a>\n          </td>\n          <td>Skin, connective tissue and bone</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136235\n            <a name=\"animal-tissue-type-100000136235\"> </a>\n          </td>\n          <td>Sperm</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136236\n            <a name=\"animal-tissue-type-100000136236\"> </a>\n          </td>\n          <td>Tryptone</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136237\n            <a name=\"animal-tissue-type-100000136237\"> </a>\n          </td>\n          <td>Meat, extract desiccated</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136247\n            <a name=\"animal-tissue-type-100000136247\"> </a>\n          </td>\n          <td>Stomach mucosa</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136248\n            <a name=\"animal-tissue-type-100000136248\"> </a>\n          </td>\n          <td>Transferin</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136554\n            <a name=\"animal-tissue-type-100000136554\"> </a>\n          </td>\n          <td>Non-neural</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136555\n            <a name=\"animal-tissue-type-100000136555\"> </a>\n          </td>\n          <td>Not specified</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000136556\n            <a name=\"animal-tissue-type-100000136556\"> </a>\n          </td>\n          <td>Organ tissue</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">100000142485\n            <a name=\"animal-tissue-type-100000142485\"> </a>\n          </td>\n          <td>Skin and fat in natural proportions</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "brr"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/animal-tissue-type"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2033" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "AnimalTissueType"] ; # 
+  fhir:title [ fhir:v "Animal Tissue Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A tissue type of an animal."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/animal-tissue-type"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/animal-tissue-type>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "100000072091" ] ;
+     fhir:display [ fhir:v "All relevant tissues" ]
+  ] [
+     fhir:code [ fhir:v "100000072092" ] ;
+     fhir:display [ fhir:v "Fat" ]
+  ] [
+     fhir:code [ fhir:v "100000072093" ] ;
+     fhir:display [ fhir:v "Honey" ]
+  ] [
+     fhir:code [ fhir:v "100000072094" ] ;
+     fhir:display [ fhir:v "Liver" ]
+  ] [
+     fhir:code [ fhir:v "100000072095" ] ;
+     fhir:display [ fhir:v "Fresh Milk" ]
+  ] [
+     fhir:code [ fhir:v "100000072096" ] ;
+     fhir:display [ fhir:v "Muscle and skin in natural proportions" ]
+  ] [
+     fhir:code [ fhir:v "100000072104" ] ;
+     fhir:display [ fhir:v "Eggs" ]
+  ] [
+     fhir:code [ fhir:v "100000072105" ] ;
+     fhir:display [ fhir:v "Skin and fat" ]
+  ] [
+     fhir:code [ fhir:v "100000072106" ] ;
+     fhir:display [ fhir:v "Kidney" ]
+  ] [
+     fhir:code [ fhir:v "100000072107" ] ;
+     fhir:display [ fhir:v "Meat and offal" ]
+  ] [
+     fhir:code [ fhir:v "100000072108" ] ;
+     fhir:display [ fhir:v "Muscle" ]
+  ] [
+     fhir:code [ fhir:v "100000072109" ] ;
+     fhir:display [ fhir:v "Unspecified" ]
+  ] [
+     fhir:code [ fhir:v "100000111053" ] ;
+     fhir:display [ fhir:v "Adipose tissue" ]
+  ] [
+     fhir:code [ fhir:v "100000111054" ] ;
+     fhir:display [ fhir:v "Adrenal" ]
+  ] [
+     fhir:code [ fhir:v "100000111055" ] ;
+     fhir:display [ fhir:v "Blood vessels" ]
+  ] [
+     fhir:code [ fhir:v "100000111056" ] ;
+     fhir:display [ fhir:v "Bone" ]
+  ] [
+     fhir:code [ fhir:v "100000111057" ] ;
+     fhir:display [ fhir:v "Bone marrow" ]
+  ] [
+     fhir:code [ fhir:v "100000111058" ] ;
+     fhir:display [ fhir:v "Brain" ]
+  ] [
+     fhir:code [ fhir:v "100000111059" ] ;
+     fhir:display [ fhir:v "Connective tissue" ]
+  ] [
+     fhir:code [ fhir:v "100000111060" ] ;
+     fhir:display [ fhir:v "Cornea" ]
+  ] [
+     fhir:code [ fhir:v "100000111061" ] ;
+     fhir:display [ fhir:v "Dental pulp" ]
+  ] [
+     fhir:code [ fhir:v "100000111062" ] ;
+     fhir:display [ fhir:v "Duodenum" ]
+  ] [
+     fhir:code [ fhir:v "100000111063" ] ;
+     fhir:display [ fhir:v "Dura mater" ]
+  ] [
+     fhir:code [ fhir:v "100000111064" ] ;
+     fhir:display [ fhir:v "Egg, embryonated" ]
+  ] [
+     fhir:code [ fhir:v "100000111065" ] ;
+     fhir:display [ fhir:v "Egg" ]
+  ] [
+     fhir:code [ fhir:v "100000111066" ] ;
+     fhir:display [ fhir:v "Egg white" ]
+  ] [
+     fhir:code [ fhir:v "100000111067" ] ;
+     fhir:display [ fhir:v "Egg yolk" ]
+  ] [
+     fhir:code [ fhir:v "100000111068" ] ;
+     fhir:display [ fhir:v "Embryos" ]
+  ] [
+     fhir:code [ fhir:v "100000111069" ] ;
+     fhir:display [ fhir:v "Enteric plexuses" ]
+  ] [
+     fhir:code [ fhir:v "100000111070" ] ;
+     fhir:display [ fhir:v "Esophagus" ]
+  ] [
+     fhir:code [ fhir:v "100000111071" ] ;
+     fhir:display [ fhir:v "Feathers" ]
+  ] [
+     fhir:code [ fhir:v "100000111072" ] ;
+     fhir:display [ fhir:v "Foetus" ]
+  ] [
+     fhir:code [ fhir:v "100000111073" ] ;
+     fhir:display [ fhir:v "Fore-stomach (ruminants only)" ]
+  ] [
+     fhir:code [ fhir:v "100000111074" ] ;
+     fhir:display [ fhir:v "Gingival tissue" ]
+  ] [
+     fhir:code [ fhir:v "100000111075" ] ;
+     fhir:display [ fhir:v "Hair" ]
+  ] [
+     fhir:code [ fhir:v "100000111076" ] ;
+     fhir:display [ fhir:v "Heart/pericardium" ]
+  ] [
+     fhir:code [ fhir:v "100000111077" ] ;
+     fhir:display [ fhir:v "Hide" ]
+  ] [
+     fhir:code [ fhir:v "100000111078" ] ;
+     fhir:display [ fhir:v "Hooves" ]
+  ] [
+     fhir:code [ fhir:v "100000111079" ] ;
+     fhir:display [ fhir:v "Ileum" ]
+  ] [
+     fhir:code [ fhir:v "100000111080" ] ;
+     fhir:display [ fhir:v "Jejunum" ]
+  ] [
+     fhir:code [ fhir:v "100000111081" ] ;
+     fhir:display [ fhir:v "Kidney" ]
+  ] [
+     fhir:code [ fhir:v "100000111082" ] ;
+     fhir:display [ fhir:v "Lard/lard oil" ]
+  ] [
+     fhir:code [ fhir:v "100000111083" ] ;
+     fhir:display [ fhir:v "Large intestine" ]
+  ] [
+     fhir:code [ fhir:v "100000111084" ] ;
+     fhir:display [ fhir:v "Liver" ]
+  ] [
+     fhir:code [ fhir:v "100000111085" ] ;
+     fhir:display [ fhir:v "Lung" ]
+  ] [
+     fhir:code [ fhir:v "100000111086" ] ;
+     fhir:display [ fhir:v "Lymph nodes" ]
+  ] [
+     fhir:code [ fhir:v "100000111087" ] ;
+     fhir:display [ fhir:v "Mammary gland" ]
+  ] [
+     fhir:code [ fhir:v "100000111088" ] ;
+     fhir:display [ fhir:v "Udder" ]
+  ] [
+     fhir:code [ fhir:v "100000111089" ] ;
+     fhir:display [ fhir:v "Mammary tumour" ]
+  ] [
+     fhir:code [ fhir:v "100000111090" ] ;
+     fhir:display [ fhir:v "Meat extract" ]
+  ] [
+     fhir:code [ fhir:v "100000111091" ] ;
+     fhir:display [ fhir:v "Nasopharyngeal" ]
+  ] [
+     fhir:code [ fhir:v "100000111092" ] ;
+     fhir:display [ fhir:v "Nictitating membrane" ]
+  ] [
+     fhir:code [ fhir:v "100000111093" ] ;
+     fhir:display [ fhir:v "Nasal mucosa" ]
+  ] [
+     fhir:code [ fhir:v "100000111094" ] ;
+     fhir:display [ fhir:v "Ovary" ]
+  ] [
+     fhir:code [ fhir:v "100000111095" ] ;
+     fhir:display [ fhir:v "Pancreas" ]
+  ] [
+     fhir:code [ fhir:v "100000111096" ] ;
+     fhir:display [ fhir:v "Peripheral nerves" ]
+  ] [
+     fhir:code [ fhir:v "100000111097" ] ;
+     fhir:display [ fhir:v "Pituitary gland" ]
+  ] [
+     fhir:code [ fhir:v "100000111098" ] ;
+     fhir:display [ fhir:v "Placenta" ]
+  ] [
+     fhir:code [ fhir:v "100000111099" ] ;
+     fhir:display [ fhir:v "Prostate" ]
+  ] [
+     fhir:code [ fhir:v "100000111100" ] ;
+     fhir:display [ fhir:v "Epididymis" ]
+  ] [
+     fhir:code [ fhir:v "100000111101" ] ;
+     fhir:display [ fhir:v "Seminal vesicle" ]
+  ] [
+     fhir:code [ fhir:v "100000111102" ] ;
+     fhir:display [ fhir:v "Rennet, calf" ]
+  ] [
+     fhir:code [ fhir:v "100000111103" ] ;
+     fhir:display [ fhir:v "Retina" ]
+  ] [
+     fhir:code [ fhir:v "100000111104" ] ;
+     fhir:display [ fhir:v "Optic nerve" ]
+  ] [
+     fhir:code [ fhir:v "100000111105" ] ;
+     fhir:display [ fhir:v "Salivary gland" ]
+  ] [
+     fhir:code [ fhir:v "100000111106" ] ;
+     fhir:display [ fhir:v "Shank" ]
+  ] [
+     fhir:code [ fhir:v "100000111107" ] ;
+     fhir:display [ fhir:v "Skeletal muscle" ]
+  ] [
+     fhir:code [ fhir:v "100000111108" ] ;
+     fhir:display [ fhir:v "Skin" ]
+  ] [
+     fhir:code [ fhir:v "100000111109" ] ;
+     fhir:display [ fhir:v "Spinal ganglia" ]
+  ] [
+     fhir:code [ fhir:v "100000111110" ] ;
+     fhir:display [ fhir:v "Spinal cord" ]
+  ] [
+     fhir:code [ fhir:v "100000111111" ] ;
+     fhir:display [ fhir:v "Spleen" ]
+  ] [
+     fhir:code [ fhir:v "100000111112" ] ;
+     fhir:display [ fhir:v "Stomach" ]
+  ] [
+     fhir:code [ fhir:v "100000111113" ] ;
+     fhir:display [ fhir:v "Abomasum" ]
+  ] [
+     fhir:code [ fhir:v "100000111114" ] ;
+     fhir:display [ fhir:v "Submaxillary glands" ]
+  ] [
+     fhir:code [ fhir:v "100000111115" ] ;
+     fhir:display [ fhir:v "Tallow" ]
+  ] [
+     fhir:code [ fhir:v "100000111116" ] ;
+     fhir:display [ fhir:v "Tendon" ]
+  ] [
+     fhir:code [ fhir:v "100000111117" ] ;
+     fhir:display [ fhir:v "Testis" ]
+  ] [
+     fhir:code [ fhir:v "100000111118" ] ;
+     fhir:display [ fhir:v "Thymus" ]
+  ] [
+     fhir:code [ fhir:v "100000111119" ] ;
+     fhir:display [ fhir:v "Thyroid gland" ]
+  ] [
+     fhir:code [ fhir:v "100000111120" ] ;
+     fhir:display [ fhir:v "Tongue" ]
+  ] [
+     fhir:code [ fhir:v "100000111121" ] ;
+     fhir:display [ fhir:v "Tonsil" ]
+  ] [
+     fhir:code [ fhir:v "100000111122" ] ;
+     fhir:display [ fhir:v "Trachea" ]
+  ] [
+     fhir:code [ fhir:v "100000111123" ] ;
+     fhir:display [ fhir:v "Trigeminal ganglia" ]
+  ] [
+     fhir:code [ fhir:v "100000111124" ] ;
+     fhir:display [ fhir:v "Tripe" ]
+  ] [
+     fhir:code [ fhir:v "100000111125" ] ;
+     fhir:display [ fhir:v "Uterus (Non-gravid)" ]
+  ] [
+     fhir:code [ fhir:v "100000111126" ] ;
+     fhir:display [ fhir:v "Wool" ]
+  ] [
+     fhir:code [ fhir:v "100000111127" ] ;
+     fhir:display [ fhir:v "Ascites fluid" ]
+  ] [
+     fhir:code [ fhir:v "100000111128" ] ;
+     fhir:display [ fhir:v "Bile" ]
+  ] [
+     fhir:code [ fhir:v "100000111129" ] ;
+     fhir:display [ fhir:v "Blood1" ]
+  ] [
+     fhir:code [ fhir:v "100000111130" ] ;
+     fhir:display [ fhir:v "Blood, foetal" ]
+  ] [
+     fhir:code [ fhir:v "100000111131" ] ;
+     fhir:display [ fhir:v "Colostrum" ]
+  ] [
+     fhir:code [ fhir:v "100000111132" ] ;
+     fhir:display [ fhir:v "Cord blood" ]
+  ] [
+     fhir:code [ fhir:v "100000111133" ] ;
+     fhir:display [ fhir:v "CSF" ]
+  ] [
+     fhir:code [ fhir:v "100000111134" ] ;
+     fhir:display [ fhir:v "Faeces" ]
+  ] [
+     fhir:code [ fhir:v "100000111135" ] ;
+     fhir:display [ fhir:v "Milk" ]
+  ] [
+     fhir:code [ fhir:v "100000111136" ] ;
+     fhir:display [ fhir:v "Nasal mucus" ]
+  ] [
+     fhir:code [ fhir:v "100000111137" ] ;
+     fhir:display [ fhir:v "Placenta fluids" ]
+  ] [
+     fhir:code [ fhir:v "100000111138" ] ;
+     fhir:display [ fhir:v "Plasma" ]
+  ] [
+     fhir:code [ fhir:v "100000111139" ] ;
+     fhir:display [ fhir:v "Saliva" ]
+  ] [
+     fhir:code [ fhir:v "100000111140" ] ;
+     fhir:display [ fhir:v "Secretion from bees" ]
+  ] [
+     fhir:code [ fhir:v "100000111141" ] ;
+     fhir:display [ fhir:v "Semen" ]
+  ] [
+     fhir:code [ fhir:v "100000111142" ] ;
+     fhir:display [ fhir:v "Serum, calf" ]
+  ] [
+     fhir:code [ fhir:v "100000111143" ] ;
+     fhir:display [ fhir:v "Serum, donor adult bovine" ]
+  ] [
+     fhir:code [ fhir:v "100000111144" ] ;
+     fhir:display [ fhir:v "Serum, donor calf" ]
+  ] [
+     fhir:code [ fhir:v "100000111145" ] ;
+     fhir:display [ fhir:v "Serum, foetal bovine" ]
+  ] [
+     fhir:code [ fhir:v "100000111146" ] ;
+     fhir:display [ fhir:v "Serum, newborn calf" ]
+  ] [
+     fhir:code [ fhir:v "100000111147" ] ;
+     fhir:display [ fhir:v "Serum/plasma derivate, adult bovine" ]
+  ] [
+     fhir:code [ fhir:v "100000111148" ] ;
+     fhir:display [ fhir:v "Serum/plasma, adult bovine" ]
+  ] [
+     fhir:code [ fhir:v "100000111149" ] ;
+     fhir:display [ fhir:v "Sweat" ]
+  ] [
+     fhir:code [ fhir:v "100000111150" ] ;
+     fhir:display [ fhir:v "Tears" ]
+  ] [
+     fhir:code [ fhir:v "100000111151" ] ;
+     fhir:display [ fhir:v "Urine" ]
+  ] [
+     fhir:code [ fhir:v "100000111152" ] ;
+     fhir:display [ fhir:v "Venom" ]
+  ] [
+     fhir:code [ fhir:v "100000111153" ] ;
+     fhir:display [ fhir:v "Whey" ]
+  ] [
+     fhir:code [ fhir:v "100000111154" ] ;
+     fhir:display [ fhir:v "Casein" ]
+  ] [
+     fhir:code [ fhir:v "100000111155" ] ;
+     fhir:display [ fhir:v "Fermentation products" ]
+  ] [
+     fhir:code [ fhir:v "100000111156" ] ;
+     fhir:display [ fhir:v "Gelatin" ]
+  ] [
+     fhir:code [ fhir:v "100000111157" ] ;
+     fhir:display [ fhir:v "Lactose" ]
+  ] [
+     fhir:code [ fhir:v "100000111158" ] ;
+     fhir:display [ fhir:v "Protein" ]
+  ] [
+     fhir:code [ fhir:v "100000111159" ] ;
+     fhir:display [ fhir:v "Insulin" ]
+  ] [
+     fhir:code [ fhir:v "100000111160" ] ;
+     fhir:display [ fhir:v "Collagen" ]
+  ] [
+     fhir:code [ fhir:v "100000111161" ] ;
+     fhir:display [ fhir:v "Animal Charcoal" ]
+  ] [
+     fhir:code [ fhir:v "100000111162" ] ;
+     fhir:display [ fhir:v "Peptones" ]
+  ] [
+     fhir:code [ fhir:v "100000111163" ] ;
+     fhir:display [ fhir:v "Fatty acids" ]
+  ] [
+     fhir:code [ fhir:v "100000111164" ] ;
+     fhir:display [ fhir:v "Glycerol" ]
+  ] [
+     fhir:code [ fhir:v "100000125717" ] ;
+     fhir:display [ fhir:v "Not applicable" ]
+  ] [
+     fhir:code [ fhir:v "100000136180" ] ;
+     fhir:display [ fhir:v "Meat and offal, milk" ]
+  ] [
+     fhir:code [ fhir:v "100000136181" ] ;
+     fhir:display [ fhir:v "Agar blood" ]
+  ] [
+     fhir:code [ fhir:v "100000136182" ] ;
+     fhir:display [ fhir:v "Casamino acid" ]
+  ] [
+     fhir:code [ fhir:v "100000136183" ] ;
+     fhir:display [ fhir:v "Casein, hydrolysate" ]
+  ] [
+     fhir:code [ fhir:v "100000136184" ] ;
+     fhir:display [ fhir:v "Casein, pancreatic digest" ]
+  ] [
+     fhir:code [ fhir:v "100000136185" ] ;
+     fhir:display [ fhir:v "Casein, peptides N3" ]
+  ] [
+     fhir:code [ fhir:v "100000136186" ] ;
+     fhir:display [ fhir:v "Cells" ]
+  ] [
+     fhir:code [ fhir:v "100000136187" ] ;
+     fhir:display [ fhir:v "Cells, BHK21" ]
+  ] [
+     fhir:code [ fhir:v "100000136188" ] ;
+     fhir:display [ fhir:v "Cells, CHO" ]
+  ] [
+     fhir:code [ fhir:v "100000136189" ] ;
+     fhir:display [ fhir:v "Cells, CRFK" ]
+  ] [
+     fhir:code [ fhir:v "100000136190" ] ;
+     fhir:display [ fhir:v "Cells, embryo SPF" ]
+  ] [
+     fhir:code [ fhir:v "100000136191" ] ;
+     fhir:display [ fhir:v "Cells, IRC5" ]
+  ] [
+     fhir:code [ fhir:v "100000136192" ] ;
+     fhir:display [ fhir:v "Cells, kidney" ]
+  ] [
+     fhir:code [ fhir:v "100000136193" ] ;
+     fhir:display [ fhir:v "Cells, MDCK" ]
+  ] [
+     fhir:code [ fhir:v "100000136194" ] ;
+     fhir:display [ fhir:v "Cells, red blood" ]
+  ] [
+     fhir:code [ fhir:v "100000136195" ] ;
+     fhir:display [ fhir:v "Collagen, hydrolysate" ]
+  ] [
+     fhir:code [ fhir:v "100000136196" ] ;
+     fhir:display [ fhir:v "Cholesterol" ]
+  ] [
+     fhir:code [ fhir:v "100000136197" ] ;
+     fhir:display [ fhir:v "Egg, SPF embryonated" ]
+  ] [
+     fhir:code [ fhir:v "100000136198" ] ;
+     fhir:display [ fhir:v "Enzyme" ]
+  ] [
+     fhir:code [ fhir:v "100000136199" ] ;
+     fhir:display [ fhir:v "Enzyme, pancreatic enzymes" ]
+  ] [
+     fhir:code [ fhir:v "100000136200" ] ;
+     fhir:display [ fhir:v "Enzyme, pancreatin 6NF" ]
+  ] [
+     fhir:code [ fhir:v "100000136201" ] ;
+     fhir:display [ fhir:v "Enzyme, pepsin" ]
+  ] [
+     fhir:code [ fhir:v "100000136202" ] ;
+     fhir:display [ fhir:v "Enzyme, pronase" ]
+  ] [
+     fhir:code [ fhir:v "100000136203" ] ;
+     fhir:display [ fhir:v "Enzyme, trypsin" ]
+  ] [
+     fhir:code [ fhir:v "100000136204" ] ;
+     fhir:display [ fhir:v "Heart, digest" ]
+  ] [
+     fhir:code [ fhir:v "100000136205" ] ;
+     fhir:display [ fhir:v "Heart, extract" ]
+  ] [
+     fhir:code [ fhir:v "100000136206" ] ;
+     fhir:display [ fhir:v "Intestinal mucosae" ]
+  ] [
+     fhir:code [ fhir:v "100000136207" ] ;
+     fhir:display [ fhir:v "Lactalbumin hydrolysate" ]
+  ] [
+     fhir:code [ fhir:v "100000136208" ] ;
+     fhir:display [ fhir:v "Liver, digest" ]
+  ] [
+     fhir:code [ fhir:v "100000136209" ] ;
+     fhir:display [ fhir:v "Lymphocytes" ]
+  ] [
+     fhir:code [ fhir:v "100000136210" ] ;
+     fhir:display [ fhir:v "Meat" ]
+  ] [
+     fhir:code [ fhir:v "100000136211" ] ;
+     fhir:display [ fhir:v "Meat, enzymic hydrolysate" ]
+  ] [
+     fhir:code [ fhir:v "100000136212" ] ;
+     fhir:display [ fhir:v "Medium, cooked meat" ]
+  ] [
+     fhir:code [ fhir:v "100000136213" ] ;
+     fhir:display [ fhir:v "Medium, F10-199 medium" ]
+  ] [
+     fhir:code [ fhir:v "100000136214" ] ;
+     fhir:display [ fhir:v "Medium, FMD culture medium" ]
+  ] [
+     fhir:code [ fhir:v "100000136215" ] ;
+     fhir:display [ fhir:v "Medium, Glasgow MEM culture" ]
+  ] [
+     fhir:code [ fhir:v "100000136216" ] ;
+     fhir:display [ fhir:v "Medium, LB Agar Lennox" ]
+  ] [
+     fhir:code [ fhir:v "100000136217" ] ;
+     fhir:display [ fhir:v "Medium, LB Broth Lennox" ]
+  ] [
+     fhir:code [ fhir:v "100000136218" ] ;
+     fhir:display [ fhir:v "Medium, modified thioglycolate medium" ]
+  ] [
+     fhir:code [ fhir:v "100000136219" ] ;
+     fhir:display [ fhir:v "Medium, trypticase soy broth" ]
+  ] [
+     fhir:code [ fhir:v "100000136220" ] ;
+     fhir:display [ fhir:v "Medium, tryptose phosphate broth" ]
+  ] [
+     fhir:code [ fhir:v "100000136221" ] ;
+     fhir:display [ fhir:v "Milk, skimmed" ]
+  ] [
+     fhir:code [ fhir:v "100000136222" ] ;
+     fhir:display [ fhir:v "Pancreas, extract" ]
+  ] [
+     fhir:code [ fhir:v "100000136223" ] ;
+     fhir:display [ fhir:v "Peptones, casein hydrochloric peptone" ]
+  ] [
+     fhir:code [ fhir:v "100000136224" ] ;
+     fhir:display [ fhir:v "Peptones, casein tryptic peptone" ]
+  ] [
+     fhir:code [ fhir:v "100000136225" ] ;
+     fhir:display [ fhir:v "Pituitary extract" ]
+  ] [
+     fhir:code [ fhir:v "100000136226" ] ;
+     fhir:display [ fhir:v "Rennet" ]
+  ] [
+     fhir:code [ fhir:v "100000136227" ] ;
+     fhir:display [ fhir:v "Medium, nutrient broth" ]
+  ] [
+     fhir:code [ fhir:v "100000136228" ] ;
+     fhir:display [ fhir:v "Medium, NZ-Amine" ]
+  ] [
+     fhir:code [ fhir:v "100000136229" ] ;
+     fhir:display [ fhir:v "Medium, thioglycolate medium" ]
+  ] [
+     fhir:code [ fhir:v "100000136230" ] ;
+     fhir:display [ fhir:v "Peptones, proteose peptone" ]
+  ] [
+     fhir:code [ fhir:v "100000136231" ] ;
+     fhir:display [ fhir:v "Serum" ]
+  ] [
+     fhir:code [ fhir:v "100000136232" ] ;
+     fhir:display [ fhir:v "Serum, albumin" ]
+  ] [
+     fhir:code [ fhir:v "100000136233" ] ;
+     fhir:display [ fhir:v "Serum, Iron fortified calf" ]
+  ] [
+     fhir:code [ fhir:v "100000136234" ] ;
+     fhir:display [ fhir:v "Skin, connective tissue and bone" ]
+  ] [
+     fhir:code [ fhir:v "100000136235" ] ;
+     fhir:display [ fhir:v "Sperm" ]
+  ] [
+     fhir:code [ fhir:v "100000136236" ] ;
+     fhir:display [ fhir:v "Tryptone" ]
+  ] [
+     fhir:code [ fhir:v "100000136237" ] ;
+     fhir:display [ fhir:v "Meat, extract desiccated" ]
+  ] [
+     fhir:code [ fhir:v "100000136247" ] ;
+     fhir:display [ fhir:v "Stomach mucosa" ]
+  ] [
+     fhir:code [ fhir:v "100000136248" ] ;
+     fhir:display [ fhir:v "Transferin" ]
+  ] [
+     fhir:code [ fhir:v "100000136554" ] ;
+     fhir:display [ fhir:v "Non-neural" ]
+  ] [
+     fhir:code [ fhir:v "100000136555" ] ;
+     fhir:display [ fhir:v "Not specified" ]
+  ] [
+     fhir:code [ fhir:v "100000136556" ] ;
+     fhir:display [ fhir:v "Organ tissue" ]
+  ] [
+     fhir:code [ fhir:v "100000142485" ] ;
+     fhir:display [ fhir:v "Skin and fat in natural proportions" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/procedure-followup> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "procedure-followup"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet procedure-followup</b>\n      </p>\n      <a name=\"procedure-followup\"> </a>\n      <a name=\"hcprocedure-followup\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://www.snomed.org/\">\n            <code>http://snomed.info/sct</code>\n          </a> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/18949003\">18949003</a>\n              </td>\n              <td style=\"color: #cccccc\">Reapplying a fresh dressing</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/30549001\">30549001</a>\n              </td>\n              <td style=\"color: #cccccc\">Removal of suture (procedure)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/241031001\">241031001</a>\n              </td>\n              <td style=\"color: #cccccc\">Removal of drain (procedure)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/35963001\">35963001</a>\n              </td>\n              <td style=\"color: #cccccc\">Removal of staples (procedure)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/225164002\">225164002</a>\n              </td>\n              <td style=\"color: #cccccc\">Removal of ligature (procedure)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/447346005\">447346005</a>\n              </td>\n              <td style=\"color: #cccccc\">Cardiopulmonary exercise test</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/229506003\">229506003</a>\n              </td>\n              <td style=\"color: #cccccc\">Scar tissue massage (regime/therapy)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/274441001\">274441001</a>\n              </td>\n              <td style=\"color: #cccccc\">Suction drainage (procedure)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/394725008\">394725008</a>\n              </td>\n              <td style=\"color: #cccccc\">Diabetes medication review</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"http://snomed.info/id/359825008\">359825008</a>\n              </td>\n              <td style=\"color: #cccccc\">Cytopathology, review of bronchioalveolar lavage specimen (procedure)</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pc"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/procedure-followup"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.429" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.3.420" ]
+  ] [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.2.240" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ProcedureFollowUpCodesSNOMEDCT"] ; # 
+  fhir:title [ fhir:v "Procedure Follow up Codes (SNOMED CT)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR Project team"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "18949003" ]
+       ] [
+         fhir:code [ fhir:v "30549001" ]
+       ] [
+         fhir:code [ fhir:v "241031001" ]
+       ] [
+         fhir:code [ fhir:v "35963001" ]
+       ] [
+         fhir:code [ fhir:v "225164002" ]
+       ] [
+         fhir:code [ fhir:v "447346005" ]
+       ] [
+         fhir:code [ fhir:v "229506003" ]
+       ] [
+         fhir:code [ fhir:v "274441001" ]
+       ] [
+         fhir:code [ fhir:v "394725008" ]
+       ] [
+         fhir:code [ fhir:v "359825008" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

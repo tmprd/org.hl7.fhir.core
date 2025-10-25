@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/device-productidentifierinudi> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "device-productidentifierinudi"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem device-productidentifierinudi</b>\n      </p>\n      <a name=\"device-productidentifierinudi\"> </a>\n      <a name=\"hcdevice-productidentifierinudi\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/device-productidentifierinudi</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">lot-number\n            <a name=\"device-productidentifierinudi-lot-number\"> </a>\n          </td>\n          <td>Lot Number</td>\n          <td>The label includes the lot number.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">manufactured-date\n            <a name=\"device-productidentifierinudi-manufactured-date\"> </a>\n          </td>\n          <td>Manufactured date</td>\n          <td>The label includes the manufacture date.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">serial-number\n            <a name=\"device-productidentifierinudi-serial-number\"> </a>\n          </td>\n          <td>Serial Number</td>\n          <td>The label includes the serial number.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">expiration-date\n            <a name=\"device-productidentifierinudi-expiration-date\"> </a>\n          </td>\n          <td>Expiration date</td>\n          <td>The label includes the expiration date.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">biological-source\n            <a name=\"device-productidentifierinudi-biological-source\"> </a>\n          </td>\n          <td>Biological source</td>\n          <td>The label includes the biological source identifier.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">software-version\n            <a name=\"device-productidentifierinudi-software-version\"> </a>\n          </td>\n          <td>Software Version</td>\n          <td>The label includes the software version.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 0
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/device-productidentifierinudi"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.2134" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceProductionIdentifierInUDI"] ; # 
+  fhir:title [ fhir:v "Device Production Identifier In UDI"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2021-01-05T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The production identifier(s) that are expected to appear in the UDI carrier."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "lot-number" ] ;
+     fhir:display [ fhir:v "Lot Number" ] ;
+     fhir:definition [ fhir:v "The label includes the lot number." ]
+  ] [
+     fhir:code [ fhir:v "manufactured-date" ] ;
+     fhir:display [ fhir:v "Manufactured date" ] ;
+     fhir:definition [ fhir:v "The label includes the manufacture date." ]
+  ] [
+     fhir:code [ fhir:v "serial-number" ] ;
+     fhir:display [ fhir:v "Serial Number" ] ;
+     fhir:definition [ fhir:v "The label includes the serial number." ]
+  ] [
+     fhir:code [ fhir:v "expiration-date" ] ;
+     fhir:display [ fhir:v "Expiration date" ] ;
+     fhir:definition [ fhir:v "The label includes the expiration date." ]
+  ] [
+     fhir:code [ fhir:v "biological-source" ] ;
+     fhir:display [ fhir:v "Biological source" ] ;
+     fhir:definition [ fhir:v "The label includes the biological source identifier." ]
+  ] [
+     fhir:code [ fhir:v "software-version" ] ;
+     fhir:display [ fhir:v "Software Version" ] ;
+     fhir:definition [ fhir:v "The label includes the software version." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

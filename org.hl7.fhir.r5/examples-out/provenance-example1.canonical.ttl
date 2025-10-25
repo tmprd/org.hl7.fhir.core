@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Provenance/example1> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example1"] ; # 
+  fhir:target ( [
+     fhir:link <http://hl7.org/fhir/Patient/pat3/_history/1> ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/targetElement"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:uri ;
+         fhir:v "n1"^^xsd:anyURI
+       ]
+     ] ) ;
+     fhir:reference [ fhir:v "Patient/pat3/_history/1" ]
+  ] ) ; # 
+  fhir:recorded [ fhir:v "2021-12-07T12:23:45+11:00"^^xsd:dateTime] ; # 
+  fhir:agent ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INF" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:link <http://hl7.org/fhir/Patient/pat3> ;
+       fhir:reference [ fhir:v "Patient/pat3" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/pat3/_history/1> a fhir:Patient .
+
+<http://hl7.org/fhir/Patient/pat3> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

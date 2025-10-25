@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ConceptMap/cm-contact-point-system-v2> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cm-contact-point-system-v2"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ConceptMap cm-contact-point-system-v2</b>\n      </p>\n      <a name=\"cm-contact-point-system-v2\"> </a>\n      <a name=\"hccm-contact-point-system-v2\"> </a>\n      <p>Mapping from \n        <a href=\"valueset-contact-point-system.html\">ContactPointSystem</a> to \n        <a href=\"http://terminology.hl7.org/6.5.0/ValueSet-v2-0202.html\">hl7VS-telecommunicationEquipmentType</a>\n      </p>\n      <br/>\n      <p>\n        <b>Group 1 </b>Mapping from \n        <a href=\"codesystem-contact-point-system.html\">ContactPointSystem</a> to \n        <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0202.html\">telecommunicationEquipmentType</a>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Source Code</b>\n          </td>\n          <td>\n            <b>Relationship</b>\n          </td>\n          <td>\n            <b>Target Code</b>\n          </td>\n          <td>\n            <b>Comment</b>\n          </td>\n        </tr>\n        <tr>\n          <td>phone</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td>PH (Telephone)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>fax</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td>FX (Fax)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>email</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a>\n          </td>\n          <td>Internet (Internet Address)</td>\n          <td>for email addresses</td>\n        </tr>\n        <tr>\n          <td>pager</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a>\n          </td>\n          <td>BP (Beeper)</td>\n          <td/>\n        </tr>\n        <tr>\n          <td>url</td>\n          <td>\n            <a href=\"codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a>\n          </td>\n          <td>Internet (Internet Address)</td>\n          <td>for non-email kinds of addresses</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ConceptMap/cm-contact-point-system-v2"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "v2.ContactPointSystem"] ; # 
+  fhir:title [ fhir:v "v2 map for ContactPointSystem"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:sourceScope [
+     a fhir:canonical ;
+     fhir:v "http://hl7.org/fhir/ValueSet/contact-point-system"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/contact-point-system>
+  ] ; # 
+  fhir:targetScope [
+     a fhir:canonical ;
+     fhir:v "http://terminology.hl7.org/ValueSet/v2-0202"^^xsd:anyURI ;
+     fhir:link <http://terminology.hl7.org/ValueSet/v2-0202>
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "http://hl7.org/fhir/contact-point-system"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/contact-point-system>
+     ] ;
+     fhir:target [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v2-0202"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/CodeSystem/v2-0202>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "phone" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "PH" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "fax" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "FX" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "email" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Internet" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ] ;
+         fhir:comment [ fhir:v "for email addresses" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pager" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "BP" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "url" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Internet" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ] ;
+         fhir:comment [ fhir:v "for non-email kinds of addresses" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

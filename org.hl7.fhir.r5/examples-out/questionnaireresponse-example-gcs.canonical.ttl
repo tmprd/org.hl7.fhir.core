@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/QuestionnaireResponse/gcs> a fhir:QuestionnaireResponse ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "gcs"] ; # 
+  fhir:questionnaire [
+     fhir:v "http://hl7.org/fhir/Questionnaire/gcs"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/Questionnaire/gcs>
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter James Chalmers" ]
+  ] ; # 
+  fhir:authored [ fhir:v "2014-12-11T04:44:16Z"^^xsd:dateTime] ; # 
+  fhir:source [
+     fhir:link <http://hl7.org/fhir/Practitioner/f007> ;
+     fhir:reference [ fhir:v "Practitioner/f007" ]
+  ] ; # 
+  fhir:item ( [
+     fhir:linkId [ fhir:v "1.1" ] ;
+     fhir:answer ( [
+       fhir:value [
+         a fhir:Coding, loinc:LA6560-2 ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:decimal ;
+             fhir:v "4"^^xsd:decimal
+           ]
+         ] ) ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA6560-2" ] ;
+         fhir:display [ fhir:v "Confused" ]
+       ]
+     ] )
+  ] [
+     fhir:linkId [ fhir:v "1.2" ] ;
+     fhir:answer ( [
+       fhir:value [
+         a fhir:Coding, loinc:LA6566-9 ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:decimal ;
+             fhir:v "5"^^xsd:decimal
+           ]
+         ] ) ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA6566-9" ] ;
+         fhir:display [ fhir:v "Localizing pain" ]
+       ]
+     ] )
+  ] [
+     fhir:linkId [ fhir:v "1.3" ] ;
+     fhir:answer ( [
+       fhir:value [
+         a fhir:Coding, loinc:LA6556-0 ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:decimal ;
+             fhir:v "4"^^xsd:decimal
+           ]
+         ] ) ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA6556-0" ] ;
+         fhir:display [ fhir:v "Eyes open spontaneously" ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f007> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

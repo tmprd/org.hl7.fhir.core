@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-origin-relationship> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "biologicallyderivedproductdispense-origin-relationship"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7.org/fhir/biologicallyderivedproductdispense-origin-relationship</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">autologous<a name=\"biologicallyderivedproductdispense-origin-relationship-autologous\"> </a></td><td>Autologous</td><td>The product was pre-donated by the recipient</td></tr><tr><td style=\"white-space:nowrap\">related<a name=\"biologicallyderivedproductdispense-origin-relationship-related\"> </a></td><td>Related</td><td>The product is from a blood relation of the recipient</td></tr><tr><td style=\"white-space:nowrap\">directed<a name=\"biologicallyderivedproductdispense-origin-relationship-directed\"> </a></td><td>Directed</td><td>The donor has been specifically selected to provide product for the recipient</td></tr><tr><td style=\"white-space:nowrap\">allogeneic\"<a name=\"biologicallyderivedproductdispense-origin-relationship-allogeneic.34\"> </a></td><td>Allogeneic</td><td>The donor and the recipient are unrelated</td></tr><tr><td style=\"white-space:nowrap\">xenogenic<a name=\"biologicallyderivedproductdispense-origin-relationship-xenogenic\"> </a></td><td>Xenogenic</td><td>The product is from a different species to the recipient</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "informative"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-origin-relationship"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "BiologicallyDerivedProductDispenseOriginRelationship"] ; # 
+  fhir:title [ fhir:v "Biologically Derived Product Dispense Origin Relationship"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-01-29T21:19:50+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Biologically Derived Product Dispense Origin Relationship"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-origin-relationship"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-origin-relationship>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "autologous" ] ;
+     fhir:display [ fhir:v "Autologous" ] ;
+     fhir:definition [ fhir:v "The product was pre-donated by the recipient" ]
+  ] [
+     fhir:code [ fhir:v "related" ] ;
+     fhir:display [ fhir:v "Related" ] ;
+     fhir:definition [ fhir:v "The product is from a blood relation of the recipient" ]
+  ] [
+     fhir:code [ fhir:v "directed" ] ;
+     fhir:display [ fhir:v "Directed" ] ;
+     fhir:definition [ fhir:v "The donor has been specifically selected to provide product for the recipient" ]
+  ] [
+     fhir:code [ fhir:v "allogeneic" ] ;
+     fhir:display [ fhir:v "Allogeneic" ] ;
+     fhir:definition [ fhir:v "The donor and the recipient are unrelated" ]
+  ] [
+     fhir:code [ fhir:v "xenogenic" ] ;
+     fhir:display [ fhir:v "Xenogenic" ] ;
+     fhir:definition [ fhir:v "The product is from a different species to the recipient" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

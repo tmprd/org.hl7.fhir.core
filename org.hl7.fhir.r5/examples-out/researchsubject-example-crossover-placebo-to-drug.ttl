@@ -1,0 +1,29 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ResearchSubject/example-crossover-placebo-to-drug> a fhir:ResearchSubject ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-crossover-placebo-to-drug"] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "ecsr45" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-06-10"^^xsd:date ]
+  ] ; # 
+  fhir:study [
+     fhir:reference [ fhir:v "example-ctgov-study-record" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "cfsb1676546565857" ]
+  ] ; # 
+  fhir:assignedComparisonGroup [ fhir:v "placebo"] ; # 
+  fhir:actualComparisonGroup [ fhir:v "ap303"] . # 
+
+# -------------------------------------------------------------------------------------
+

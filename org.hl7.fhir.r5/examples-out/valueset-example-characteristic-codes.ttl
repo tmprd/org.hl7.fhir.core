@@ -1,0 +1,153 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/example-characteristic-codes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-characteristic-codes"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet example-characteristic-codes</b>\n      </p>\n      <a name=\"example-characteristic-codes\"> </a>\n      <a name=\"hcexample-characteristic-codes\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include these codes as defined in \n          <a href=\"http://loinc.org\">\n            <code>http://loinc.org</code>\n          </a> version \n          <span title=\"Version is not explicity stated. No matching Code System found\">Not Stated (use latest from terminology server)</span>\n          <table class=\"none\">\n            <tr>\n              <td style=\"white-space:nowrap\">\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/76691-5/\">76691-5</a>\n              </td>\n              <td>Gender identity</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/76689-9/\">76689-9</a>\n              </td>\n              <td>Sex assigned at birth</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/21112-8/\">21112-8</a>\n              </td>\n              <td>Birth date</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/46463-6/\">46463-6</a>\n              </td>\n              <td>Race or ethnicity</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/45402-5/\">45402-5</a>\n              </td>\n              <td>Primary language</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/71802-3/\">71802-3</a>\n              </td>\n              <td>Housing status</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8302-2/\">8302-2</a>\n              </td>\n              <td>Body height</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/29463-7/\">29463-7</a>\n              </td>\n              <td>Body weight</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/39156-5/\">39156-5</a>\n              </td>\n              <td>BMI (Body Mass Index)</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8480-6/\">8480-6</a>\n              </td>\n              <td>Systolic blood pressure</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/8462-4/\">8462-4</a>\n              </td>\n              <td>Diastolic blood pressure</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/15074-8/\">15074-8</a>\n              </td>\n              <td>Glucose [Moles/volume] in Blood</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/2085-9/\">2085-9</a>\n              </td>\n              <td>HDL Cholesterol</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/4548-4/\">4548-4</a>\n              </td>\n              <td>Hemoglobin A1c/Hemoglobin.total in Blood</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/75323-6/\">75323-6</a>\n              </td>\n              <td>Condition status</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/55758-7/\">55758-7</a>\n              </td>\n              <td>Diabetes status</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/45701-0/\">45701-0</a>\n              </td>\n              <td>Smoking status</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/68518-0/\">68518-0</a>\n              </td>\n              <td>Pregnancy status</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/74468-0/\">74468-0</a>\n              </td>\n              <td>Vaccination status</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/38208-5/\">38208-5</a>\n              </td>\n              <td>Risk assessment cardiovascular disease</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/79423-0/\">79423-0</a>\n              </td>\n              <td>Cardiovascular disease risk score</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/75640-3/\">75640-3</a>\n              </td>\n              <td>Fall risk assessment</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/10160-0/\">10160-0</a>\n              </td>\n              <td>Medication use</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/45260-7/\">45260-7</a>\n              </td>\n              <td>Medication compliance</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/68358-1/\">68358-1</a>\n              </td>\n              <td>Date chronic dialysis began</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/77301-0/\">77301-0</a>\n              </td>\n              <td>Activities of daily living assessment</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/77160-0/\">77160-0</a>\n              </td>\n              <td>Functional outcome score GOSE</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/72133-2/\">72133-2</a>\n              </td>\n              <td>Montreal Cognitive Assessment [MoCA]</td>\n            </tr>\n            <tr>\n              <td>\n                <a href=\"https://loinc.org/95023-8/\">95023-8</a>\n              </td>\n              <td>FASI v1.0 - Mobility [CMS Assessment]</td>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "draft"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/ValueSet/example-characteristic-codes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ExampleCharacteristicCodes"] ; # 
+  fhir:title [ fhir:v "Example Characterist ic Codes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-03-03"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This value set contains an example set of LOINC codes that might be used to define common characteristics for grouping individuals in FHIR Group resources."] ; # 
+  fhir:copyright [ fhir:v "This content from LOINCÂ® is copyright Â© 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "76691-5" ] ;
+         fhir:display [ fhir:v "Gender identity" ]
+       ] [
+         fhir:code [ fhir:v "76689-9" ] ;
+         fhir:display [ fhir:v "Sex assigned at birth" ]
+       ] [
+         fhir:code [ fhir:v "21112-8" ] ;
+         fhir:display [ fhir:v "Birth date" ]
+       ] [
+         fhir:code [ fhir:v "46463-6" ] ;
+         fhir:display [ fhir:v "Race or ethnicity" ]
+       ] [
+         fhir:code [ fhir:v "45402-5" ] ;
+         fhir:display [ fhir:v "Primary language" ]
+       ] [
+         fhir:code [ fhir:v "71802-3" ] ;
+         fhir:display [ fhir:v "Housing status" ]
+       ] [
+         fhir:code [ fhir:v "8302-2" ] ;
+         fhir:display [ fhir:v "Body height" ]
+       ] [
+         fhir:code [ fhir:v "29463-7" ] ;
+         fhir:display [ fhir:v "Body weight" ]
+       ] [
+         fhir:code [ fhir:v "39156-5" ] ;
+         fhir:display [ fhir:v "BMI (Body Mass Index)" ]
+       ] [
+         fhir:code [ fhir:v "8480-6" ] ;
+         fhir:display [ fhir:v "Systolic blood pressure" ]
+       ] [
+         fhir:code [ fhir:v "8462-4" ] ;
+         fhir:display [ fhir:v "Diastolic blood pressure" ]
+       ] [
+         fhir:code [ fhir:v "15074-8" ] ;
+         fhir:display [ fhir:v "Glucose [Moles/volume] in Blood" ]
+       ] [
+         fhir:code [ fhir:v "2085-9" ] ;
+         fhir:display [ fhir:v "HDL Cholesterol" ]
+       ] [
+         fhir:code [ fhir:v "4548-4" ] ;
+         fhir:display [ fhir:v "Hemoglobin A1c/Hemoglobin.total in Blood" ]
+       ] [
+         fhir:code [ fhir:v "75323-6" ] ;
+         fhir:display [ fhir:v "Condition status" ]
+       ] [
+         fhir:code [ fhir:v "55758-7" ] ;
+         fhir:display [ fhir:v "Diabetes status" ]
+       ] [
+         fhir:code [ fhir:v "45701-0" ] ;
+         fhir:display [ fhir:v "Smoking status" ]
+       ] [
+         fhir:code [ fhir:v "68518-0" ] ;
+         fhir:display [ fhir:v "Pregnancy status" ]
+       ] [
+         fhir:code [ fhir:v "74468-0" ] ;
+         fhir:display [ fhir:v "Vaccination status" ]
+       ] [
+         fhir:code [ fhir:v "38208-5" ] ;
+         fhir:display [ fhir:v "Risk assessment cardiovascular disease" ]
+       ] [
+         fhir:code [ fhir:v "79423-0" ] ;
+         fhir:display [ fhir:v "Cardiovascular disease risk score" ]
+       ] [
+         fhir:code [ fhir:v "75640-3" ] ;
+         fhir:display [ fhir:v "Fall risk assessment" ]
+       ] [
+         fhir:code [ fhir:v "10160-0" ] ;
+         fhir:display [ fhir:v "Medication use" ]
+       ] [
+         fhir:code [ fhir:v "45260-7" ] ;
+         fhir:display [ fhir:v "Medication compliance" ]
+       ] [
+         fhir:code [ fhir:v "68358-1" ] ;
+         fhir:display [ fhir:v "Date chronic dialysis began" ]
+       ] [
+         fhir:code [ fhir:v "77301-0" ] ;
+         fhir:display [ fhir:v "Activities of daily living assessment" ]
+       ] [
+         fhir:code [ fhir:v "77160-0" ] ;
+         fhir:display [ fhir:v "Functional outcome score GOSE" ]
+       ] [
+         fhir:code [ fhir:v "72133-2" ] ;
+         fhir:display [ fhir:v "Montreal Cognitive Assessment [MoCA]" ]
+       ] [
+         fhir:code [ fhir:v "95023-8" ] ;
+         fhir:display [ fhir:v "FASI v1.0 - Mobility [CMS Assessment]" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
