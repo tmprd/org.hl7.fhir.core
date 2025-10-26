@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "timing-abbreviation"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem timing-abbreviation</b></p><a name=\"timing-abbreviation\"> </a><a name=\"hctiming-abbreviation\"> </a><p>This case-sensitive code system <code>http://terminology.hl7.org/CodeSystem/timing-abbreviation</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">C<a name=\"timing-abbreviation-C\"> </a></td><td>Continuous (frequency)</td><td>Service is provided continuously between start time and stop time.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem timing-abbreviation</b></p><a name=\"timing-abbreviation\"> </a><a name=\"hctiming-abbreviation\"> </a><p>This case-sensitive code system <code>http://terminology.hl7.org/CodeSystem/timing-abbreviation</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">C<a name=\"timing-abbreviation-C\"> </a></td><td>Continuous (frequency)</td><td>Service is provided continuously between start time and stop time.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -29,7 +29,7 @@
   fhir:title [ fhir:v "TimingAbbreviation"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

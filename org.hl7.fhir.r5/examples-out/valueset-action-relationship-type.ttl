@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "action-relationship-type"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet action-relationship-type</b>\n      </p>\n      <a name=\"action-relationship-type\"> </a>\n      <a name=\"hcaction-relationship-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include all codes defined in \n          <a href=\"codesystem-action-relationship-type.html\">\n            <code>http://hl7.org/fhir/action-relationship-type</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?6.0.0-ballot3</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet action-relationship-type</b>\n      </p>\n      <a name=\"action-relationship-type\"> </a>\n      <a name=\"hcaction-relationship-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <ul>\n        <li>Include all codes defined in \n          <a href=\"codesystem-action-relationship-type.html\">\n            <code>http://hl7.org/fhir/action-relationship-type</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?6.0.0-ballot3</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

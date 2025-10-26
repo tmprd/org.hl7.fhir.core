@@ -72,7 +72,7 @@
      ] ;
      fhir:text [
        fhir:status [ fhir:v "generated" ] ;
-       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        (snip)\n			</div>"^^rdf:XMLLiteral
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        (snip)\n			</div>"^^rdf:XMLLiteral ]
      ]
   ] [
      fhir:title [ fhir:v "Mpther's Details" ] ;
@@ -85,7 +85,7 @@
      ] ;
      fhir:text [
        fhir:status [ fhir:v "generated" ] ;
-       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n				(snip)\n			</div>"^^rdf:XMLLiteral
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n				(snip)\n			</div>"^^rdf:XMLLiteral ]
      ]
   ] ) . #   entries for child - CarePlan, observations, conditions, encounter, Prescriptions, etc.  
 

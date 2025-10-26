@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "33123"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>OD -2.00 SPH         +2.00 add    0.5 p.d. BD</p>\n			<p>OS -1.00 -0.50 x 180 +2.00 add    0.5 p.d. BU</p>\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>OD -2.00 SPH         +2.00 add    0.5 p.d. BD</p>\n			<p>OS -1.00 -0.50 x 180 +2.00 add    0.5 p.d. BU</p>\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://www.happysight.com/prescription"^^xsd:anyURI ] ;

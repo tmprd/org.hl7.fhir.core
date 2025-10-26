@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "1"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			25 Dec 2013 9:00am - 9:15am: <b>Busy</b> Physiotherapy\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			25 Dec 2013 9:00am - 9:15am: <b>Busy</b> Physiotherapy\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://example.org/identifiers/slots"^^xsd:anyURI ] ;

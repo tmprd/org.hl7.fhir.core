@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "nkla"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>No Known Latex Allergy</p>\n      <p>recordedDate:2015-08-06</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>No Known Latex Allergy</p>\n      <p>recordedDate:2015-08-06</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:code [
      fhir:coding ( [

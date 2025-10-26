@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "timing-abbreviation"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem timing-abbreviation</b>\n      </p>\n      <a name=\"timing-abbreviation\"> </a>\n      <a name=\"hctiming-abbreviation\"> </a>\n      <p>This case-sensitive code system \n        <code>http://terminology.hl7.org/CodeSystem/timing-abbreviation</code> defines the following code:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">C\n            <a name=\"timing-abbreviation-C\"> </a>\n          </td>\n          <td>Continuous (frequency)</td>\n          <td>Service is provided continuously between start time and stop time.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem timing-abbreviation</b>\n      </p>\n      <a name=\"timing-abbreviation\"> </a>\n      <a name=\"hctiming-abbreviation\"> </a>\n      <p>This case-sensitive code system \n        <code>http://terminology.hl7.org/CodeSystem/timing-abbreviation</code> defines the following code:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">C\n            <a name=\"timing-abbreviation-C\"> </a>\n          </td>\n          <td>Continuous (frequency)</td>\n          <td>Service is provided continuously between start time and stop time.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -29,7 +29,7 @@
   fhir:title [ fhir:v "TimingAbbreviation"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

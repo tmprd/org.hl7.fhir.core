@@ -44,7 +44,7 @@
   fhir:id [ fhir:v "3123"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest 3123</b></p><a name=\"3123\"> </a><a name=\"hc3123\"> </a><p><b>status</b>: Unknown</p><p><b>intent</b>: Order</p><h3>Medications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"broken-link.html\">Medication/example</a></td></tr></table><p><b>subject</b>: <a href=\"patient-example-f001-pieter.html\">Pieter van de Heuvel  Male, DoB: 1944-11-17 ( urn:oid:2.16.840.1.113883.2.4.6.3#?ngen-9? (use: usual, ))</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest 3123</b></p><a name=\"3123\"> </a><a name=\"hc3123\"> </a><p><b>status</b>: Unknown</p><p><b>intent</b>: Order</p><h3>Medications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"broken-link.html\">Medication/example</a></td></tr></table><p><b>subject</b>: <a href=\"patient-example-f001-pieter.html\">Pieter van de Heuvel  Male, DoB: 1944-11-17 ( urn:oid:2.16.840.1.113883.2.4.6.3#?ngen-9? (use: usual, ))</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "unknown"] ; #   snip  
   fhir:intent [ fhir:v "order"] ; # 
@@ -67,7 +67,7 @@
   fhir:id [ fhir:v "example"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a></div>"^^rdf:XMLLiteral ]
   ] . # 
 
 # -------------------------------------------------------------------------------------

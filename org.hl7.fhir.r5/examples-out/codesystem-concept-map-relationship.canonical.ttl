@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "concept-map-relationship"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem concept-map-relationship</b></p><a name=\"concept-map-relationship\"> </a><a name=\"hcconcept-map-relationship\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/concept-map-relationship</code> defines the following codes in an undefined hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">related-to<a name=\"concept-map-relationship-related-to\"> </a></td><td>Related To</td><td>The concepts are related to each other, but the exact relationship is not known.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  equivalent<a name=\"concept-map-relationship-equivalent\"> </a></td><td>Equivalent</td><td>The definitions of the concepts mean the same thing.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  source-is-narrower-than-target<a name=\"concept-map-relationship-source-is-narrower-than-target\"> </a></td><td>Source Is Narrower Than Target</td><td>The source concept is narrower in meaning than the target concept.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  source-is-broader-than-target<a name=\"concept-map-relationship-source-is-broader-than-target\"> </a></td><td>Source Is Broader Than Target</td><td>The source concept is broader in meaning than the target concept.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">not-related-to<a name=\"concept-map-relationship-not-related-to\"> </a></td><td>Not Related To</td><td>This is an explicit assertion that the target concept is not related to the source concept.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem concept-map-relationship</b></p><a name=\"concept-map-relationship\"> </a><a name=\"hcconcept-map-relationship\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/concept-map-relationship</code> defines the following codes in an undefined hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">related-to<a name=\"concept-map-relationship-related-to\"> </a></td><td>Related To</td><td>The concepts are related to each other, but the exact relationship is not known.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  equivalent<a name=\"concept-map-relationship-equivalent\"> </a></td><td>Equivalent</td><td>The definitions of the concepts mean the same thing.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  source-is-narrower-than-target<a name=\"concept-map-relationship-source-is-narrower-than-target\"> </a></td><td>Source Is Narrower Than Target</td><td>The source concept is narrower in meaning than the target concept.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  source-is-broader-than-target<a name=\"concept-map-relationship-source-is-broader-than-target\"> </a></td><td>Source Is Broader Than Target</td><td>The source concept is broader in meaning than the target concept.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">not-related-to<a name=\"concept-map-relationship-not-related-to\"> </a></td><td>Not Related To</td><td>This is an explicit assertion that the target concept is not related to the source concept.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -45,7 +45,7 @@
   fhir:title [ fhir:v "ConceptMapRelationship"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

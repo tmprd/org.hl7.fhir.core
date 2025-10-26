@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "consent-example-notTime"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	      The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n        Withhold or withdraw consent for disclosure of records related published during a timeframe</p>\n      <p>Patient \"P. van de Heuvel\" wishes to withhold disclosure of all data from a timeframe to any provider.</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	      The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n        Withhold or withdraw consent for disclosure of records related published during a timeframe</p>\n      <p>Patient \"P. van de Heuvel\" wishes to withhold disclosure of all data from a timeframe to any provider.</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [

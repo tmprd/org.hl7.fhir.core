@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "consent-example-Emergency"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Withhold Authorization for Treatment rule for except for Emergency Treatment</p>\n      <p>Patient \"Pieter van de Heuvel\" wishes to have no data at the Artis University Medical Center available except for Emergency treatment use. \n      An overall Deny consent directive, with an exception \"Permit\" for purposeOfUse \"ETREAT\" at Artis University Medical Center.</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Withhold Authorization for Treatment rule for except for Emergency Treatment</p>\n      <p>Patient \"Pieter van de Heuvel\" wishes to have no data at the Artis University Medical Center available except for Emergency treatment use. \n      An overall Deny consent directive, with an exception \"Permit\" for purposeOfUse \"ETREAT\" at Artis University Medical Center.</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [

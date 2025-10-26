@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "contract-security-control"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Each definition includes usage notes explaining\n            the precedence order in contract lifecycle - i.e., while only some stages are required,\n            the order in which they may occur is deterministic; and a map to comparable FHIR and v.3\n            status codes. It follows guidance about use of status codes in FHIR in\n            \n      <a href=\"sc.html\">the Status Codes Grid</a>.\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Each definition includes usage notes explaining\n            the precedence order in contract lifecycle - i.e., while only some stages are required,\n            the order in which they may occur is deterministic; and a map to comparable FHIR and v.3\n            status codes. It follows guidance about use of status codes in FHIR in\n            \n      <a href=\"sc.html\">the Status Codes Grid</a>.\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

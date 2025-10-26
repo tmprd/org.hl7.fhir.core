@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      HACC Program for Peter James Chalmers at HL7 Healthcare 15 Sept 2014 - current<br/>\n			was on leave from 22 Sept - 24 Sept while in respite care\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      HACC Program for Peter James Chalmers at HL7 Healthcare 15 Sept 2014 - current<br/>\n			was on leave from 22 Sept - 24 Sept while in respite care\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://example.org/sampleepisodeofcare-identifier"^^xsd:anyURI ] ;

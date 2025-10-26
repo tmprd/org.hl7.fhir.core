@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "quantity-comparator"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem quantity-comparator</b></p><a name=\"quantity-comparator\"> </a><a name=\"hcquantity-comparator\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/quantity-comparator</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">&lt;<a name=\"quantity-comparator-.60\"> </a></td><td>Less than</td><td>The actual value is less than the given value.</td></tr><tr><td style=\"white-space:nowrap\">&lt;=<a name=\"quantity-comparator-.60.61\"> </a></td><td>Less or Equal to</td><td>The actual value is less than or equal to the given value.</td></tr><tr><td style=\"white-space:nowrap\">&gt;=<a name=\"quantity-comparator-.62.61\"> </a></td><td>Greater or Equal to</td><td>The actual value is greater than or equal to the given value.</td></tr><tr><td style=\"white-space:nowrap\">&gt;<a name=\"quantity-comparator-.62\"> </a></td><td>Greater than</td><td>The actual value is greater than the given value.</td></tr><tr><td style=\"white-space:nowrap\">ad<a name=\"quantity-comparator-ad\"> </a></td><td>Sufficient to achieve this total quantity</td><td>The actual value is sufficient for the total quantity to equal the given value.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem quantity-comparator</b></p><a name=\"quantity-comparator\"> </a><a name=\"hcquantity-comparator\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/quantity-comparator</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">&lt;<a name=\"quantity-comparator-.60\"> </a></td><td>Less than</td><td>The actual value is less than the given value.</td></tr><tr><td style=\"white-space:nowrap\">&lt;=<a name=\"quantity-comparator-.60.61\"> </a></td><td>Less or Equal to</td><td>The actual value is less than or equal to the given value.</td></tr><tr><td style=\"white-space:nowrap\">&gt;=<a name=\"quantity-comparator-.62.61\"> </a></td><td>Greater or Equal to</td><td>The actual value is greater than or equal to the given value.</td></tr><tr><td style=\"white-space:nowrap\">&gt;<a name=\"quantity-comparator-.62\"> </a></td><td>Greater than</td><td>The actual value is greater than the given value.</td></tr><tr><td style=\"white-space:nowrap\">ad<a name=\"quantity-comparator-ad\"> </a></td><td>Sufficient to achieve this total quantity</td><td>The actual value is sufficient for the total quantity to equal the given value.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -51,7 +51,7 @@
   fhir:title [ fhir:v "QuantityComparator"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

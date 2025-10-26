@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "validationfail"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Error parsing resource XML (Unknown Content \"label\" @ /Patient/identifier/label) at Patient.identifier</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Error parsing resource XML (Unknown Content \"label\" @ /Patient/identifier/label) at Patient.identifier</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "error" ] ;

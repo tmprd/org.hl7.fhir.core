@@ -92,7 +92,7 @@
 <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a> a fhir:Patient ;
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:active [ fhir:v true] ; # 
   fhir:name ( [
@@ -106,7 +106,7 @@
 <urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059> a fhir:Patient ;
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http:/example.org/fhir/ids"^^xsd:anyURI ] ;
@@ -125,7 +125,7 @@
   fhir:id [ fhir:v "123"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:active [ fhir:v true] ; # 
   fhir:name ( [
@@ -139,7 +139,7 @@
 <urn:uuid:74891afc-ed52-42a2-bcd7-f13d9b60f096> a fhir:Patient ;
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http:/example.org/fhir/ids"^^xsd:anyURI ] ;
@@ -158,7 +158,7 @@
   fhir:id [ fhir:v "123a"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:active [ fhir:v true] ; # 
   fhir:name ( [
@@ -172,7 +172,7 @@
 <urn:uuid:f6240915-8e9f-4e21-ac6d-ea68ff6b90eb> a fhir:Provenance ;
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance </b></p><p>Provenance for: </p><ul><li><a href=\"broken-link.html\">urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059</a></li><li><a href=\"broken-link.html\">http://example.org/fhir/Patient/123a</a></li></ul><p>Summary</p><table class=\"grid\"><tr><td>Activity</td><td><span title=\"Codes:\">data entry</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td>Clerical Staff</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance </b></p><p>Provenance for: </p><ul><li><a href=\"broken-link.html\">urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e059</a></li><li><a href=\"broken-link.html\">http://example.org/fhir/Patient/123a</a></li></ul><p>Summary</p><table class=\"grid\"><tr><td>Activity</td><td><span title=\"Codes:\">data entry</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td>Clerical Staff</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:target ( [
      fhir:extension ( [

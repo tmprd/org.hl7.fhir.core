@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "address-use"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem address-use</b></p><a name=\"address-use\"> </a><a name=\"hcaddress-use\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/address-use</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">home<a name=\"address-use-home\"> </a></td><td>Home</td><td>A communication address at a home.</td></tr><tr><td style=\"white-space:nowrap\">work<a name=\"address-use-work\"> </a></td><td>Work</td><td>An office address. First choice for business related contacts during business hours.</td></tr><tr><td style=\"white-space:nowrap\">temp<a name=\"address-use-temp\"> </a></td><td>Temporary</td><td>A temporary address. The period can provide more detailed information.</td></tr><tr><td style=\"white-space:nowrap\">old<a name=\"address-use-old\"> </a></td><td>Old / Incorrect</td><td>This address is no longer in use (or was never correct but retained for records).</td></tr><tr><td style=\"white-space:nowrap\">billing<a name=\"address-use-billing\"> </a></td><td>Billing</td><td>An address to be used to send bills, invoices, receipts etc.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem address-use</b></p><a name=\"address-use\"> </a><a name=\"hcaddress-use\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/address-use</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">home<a name=\"address-use-home\"> </a></td><td>Home</td><td>A communication address at a home.</td></tr><tr><td style=\"white-space:nowrap\">work<a name=\"address-use-work\"> </a></td><td>Work</td><td>An office address. First choice for business related contacts during business hours.</td></tr><tr><td style=\"white-space:nowrap\">temp<a name=\"address-use-temp\"> </a></td><td>Temporary</td><td>A temporary address. The period can provide more detailed information.</td></tr><tr><td style=\"white-space:nowrap\">old<a name=\"address-use-old\"> </a></td><td>Old / Incorrect</td><td>This address is no longer in use (or was never correct but retained for records).</td></tr><tr><td style=\"white-space:nowrap\">billing<a name=\"address-use-billing\"> </a></td><td>Billing</td><td>An address to be used to send bills, invoices, receipts etc.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -51,7 +51,7 @@
   fhir:title [ fhir:v "AddressUse"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

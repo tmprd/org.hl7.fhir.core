@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "denovoChild"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Child Junior Doe (OFFICIAL)</b> (no stated gender) 2021-01-01 ( Medical record number: 11111 (TEMP))</p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Child Junior Doe (OFFICIAL)</b> (no stated gender) 2021-01-01 ( Medical record number: 11111 (TEMP))</p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "temp" ] ;

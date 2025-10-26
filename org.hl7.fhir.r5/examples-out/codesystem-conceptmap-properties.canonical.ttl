@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "conceptmap-properties"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem conceptmap-properties</b></p><a name=\"conceptmap-properties\"> </a><a name=\"hcconceptmap-properties\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/conceptmap-properties</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">relationshipRefinement<a name=\"conceptmap-properties-relationshipRefinement\"> </a></td><td>Relationship Refinement</td><td>Property of type coding that indicates a specific refined relationship such as categorized by or grouped</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem conceptmap-properties</b></p><a name=\"conceptmap-properties\"> </a><a name=\"hcconceptmap-properties\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/conceptmap-properties</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">relationshipRefinement<a name=\"conceptmap-properties-relationshipRefinement\"> </a></td><td>Relationship Refinement</td><td>Property of type coding that indicates a specific refined relationship such as categorized by or grouped</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

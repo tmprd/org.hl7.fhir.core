@@ -23,7 +23,7 @@
   fhir:id [ fhir:v "801728e4-75e9-42e6-b6d0-0cc3e835a70d"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 801728e4-75e9-42e6-b6d0-0cc3e835a70d</b></p><a name=\"801728e4-75e9-42e6-b6d0-0cc3e835a70d\"> </a><a name=\"hc801728e4-75e9-42e6-b6d0-0cc3e835a70d\"> </a><p><b>event</b>: message-events subscription-notification: subscription-notification</p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"broken-link.html\">http://example.org/FHIR/R5</a></td></tr></table><p><b>focus</b>: <a href=\"broken-link.html\">urn:uuid:c13b0b59-525c-4e41-b874-b5b87538a5b7</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 801728e4-75e9-42e6-b6d0-0cc3e835a70d</b></p><a name=\"801728e4-75e9-42e6-b6d0-0cc3e835a70d\"> </a><a name=\"hc801728e4-75e9-42e6-b6d0-0cc3e835a70d\"> </a><p><b>event</b>: message-events subscription-notification: subscription-notification</p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"broken-link.html\">http://example.org/FHIR/R5</a></td></tr></table><p><b>focus</b>: <a href=\"broken-link.html\">urn:uuid:c13b0b59-525c-4e41-b874-b5b87538a5b7</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:event [
      a fhir:Coding ;

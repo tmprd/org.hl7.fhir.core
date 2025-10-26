@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "disease-symptom-procedure"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-27T04:38:40.801+11:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      <ul>\n        \n        \n        <li>Include all codes defined in \n          \n          \n          <a href=\"codesystem-disease-symptom-procedurem.html\">\n            \n            \n            <code>http://hl7.org/fhir/disease-symptom-procedure</code>\n          \n          \n          </a>\n        \n        \n        </li>\n      \n      \n      </ul>disease-symptom-procedurem\n    \n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      <ul>\n        \n        \n        <li>Include all codes defined in \n          \n          \n          <a href=\"codesystem-disease-symptom-procedurem.html\">\n            \n            \n            <code>http://hl7.org/fhir/disease-symptom-procedure</code>\n          \n          \n          </a>\n        \n        \n        </li>\n      \n      \n      </ul>disease-symptom-procedurem\n    \n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

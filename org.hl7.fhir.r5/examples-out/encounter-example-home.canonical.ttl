@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "home"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:Location ;

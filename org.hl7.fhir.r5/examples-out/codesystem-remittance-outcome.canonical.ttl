@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "remittance-outcome"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem remittance-outcome</b></p><a name=\"remittance-outcome\"> </a><a name=\"hcremittance-outcome\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/remittance-outcome</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">complete<a name=\"remittance-outcome-complete\"> </a></td><td>Complete</td><td>The processing completed without errors.</td></tr><tr><td style=\"white-space:nowrap\">error<a name=\"remittance-outcome-error\"> </a></td><td>Error</td><td>The processing identified errors.</td></tr><tr><td style=\"white-space:nowrap\">partial<a name=\"remittance-outcome-partial\"> </a></td><td>Partial</td><td>No errors have been detected and some of the adjudication has been performed.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem remittance-outcome</b></p><a name=\"remittance-outcome\"> </a><a name=\"hcremittance-outcome\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/remittance-outcome</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">complete<a name=\"remittance-outcome-complete\"> </a></td><td>Complete</td><td>The processing completed without errors.</td></tr><tr><td style=\"white-space:nowrap\">error<a name=\"remittance-outcome-error\"> </a></td><td>Error</td><td>The processing identified errors.</td></tr><tr><td style=\"white-space:nowrap\">partial<a name=\"remittance-outcome-partial\"> </a></td><td>Partial</td><td>No errors have been detected and some of the adjudication has been performed.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -33,7 +33,7 @@
   fhir:title [ fhir:v "RemittanceOutcome"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Financial Management"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

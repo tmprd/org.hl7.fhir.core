@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-patientlist"] ; # 
   fhir:text [
      fhir:status [ fhir:v "additional" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>All patients primarily attributed to Practitioner 123</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>All patients primarily attributed to Practitioner 123</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:type [ fhir:v "person"] ; # 
   fhir:membership [ fhir:v "enumerated"] ; # 

@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "datestype"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem datestype</b></p><a name=\"datestype\"> </a><a name=\"hcdatestype\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/datestype</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">card-issued<a name=\"datestype-card-issued\"> </a></td><td>Card Issued</td><td>The date when an insurance card was issued.</td></tr><tr><td style=\"white-space:nowrap\">claim-received<a name=\"datestype-claim-received\"> </a></td><td>Claim Received</td><td>The date when an insurer nreceived a claim, pre-authorization or predetermination.</td></tr><tr><td style=\"white-space:nowrap\">service-expected<a name=\"datestype-service-expected\"> </a></td><td>Service Expected</td><td>The date or period on or during which the services are expected to be performed.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem datestype</b></p><a name=\"datestype\"> </a><a name=\"hcdatestype\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/datestype</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">card-issued<a name=\"datestype-card-issued\"> </a></td><td>Card Issued</td><td>The date when an insurance card was issued.</td></tr><tr><td style=\"white-space:nowrap\">claim-received<a name=\"datestype-claim-received\"> </a></td><td>Claim Received</td><td>The date when an insurer nreceived a claim, pre-authorization or predetermination.</td></tr><tr><td style=\"white-space:nowrap\">service-expected<a name=\"datestype-service-expected\"> </a></td><td>Service Expected</td><td>The date or period on or during which the services are expected to be performed.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

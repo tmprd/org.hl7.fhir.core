@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "examplereq"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian MRI results discussion</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://example.org/sampleappointment-identifier"^^xsd:anyURI ] ;

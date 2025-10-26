@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "groupDenovoFamily"] ; # 
   fhir:text [
      fhir:status [ fhir:v "additional" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> Denovo mutation study members </p>\n      <ul>\n        <li> Patient: Child Junior Doe</li>\n        <li> Mother: Jane Mother Doe</li>\n        <li> Father: John Father Doe</li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> Denovo mutation study members </p>\n      <ul>\n        <li> Patient: Child Junior Doe</li>\n        <li> Mother: Jane Mother Doe</li>\n        <li> Father: John Father Doe</li>\n      </ul>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "temp" ] ;

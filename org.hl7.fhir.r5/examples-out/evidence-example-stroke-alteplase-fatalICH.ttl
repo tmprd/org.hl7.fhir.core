@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-stroke-alteplase-fatalICH"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Risk of fatal ICH with alteplase for stroke\" is a univariate risk estimate.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Risk of fatal ICH with alteplase for stroke\" is a univariate risk estimate.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "consent-example-Out"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	    The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n      Withhold Authorization of sharing data for Treatment\n      </p>\n      <p>\n    Patient \"P. van de Heuvel\" wishes to have no data at the Burgers University Medical Center available for normal treatment use.\n      </p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	    The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n      Withhold Authorization of sharing data for Treatment\n      </p>\n      <p>\n    Patient \"P. van de Heuvel\" wishes to have no data at the Burgers University Medical Center available for normal treatment use.\n      </p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [

@@ -30,7 +30,7 @@
   fhir:id [ fhir:v "warning"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">There is no matching patient for MRN 123456</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">There is no matching patient for MRN 123456</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "warning" ] ;

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "break-the-glass"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Additional information may be available using the Break-The-Glass Protocol</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Additional information may be available using the Break-The-Glass Protocol</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:issue ( [
      fhir:severity [ fhir:v "information" ] ;

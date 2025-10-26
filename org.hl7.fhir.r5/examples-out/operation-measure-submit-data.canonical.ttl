@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "Measure-submit-data"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Measure-submit-data</b></p><a name=\"Measure-submit-data\"> </a><a name=\"hcMeasure-submit-data\"> </a><p>URL: [base]/Measure/$submit-data</p><p>URL: [base]/Measure/[id]/$submit-data</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>measureReport</td><td/><td>1..1</td><td><a href=\"measurereport.html\">MeasureReport</a></td><td/><td><div><p>The measure report being submitted</p>\n</div></td></tr><tr><td>IN</td><td>resource</td><td/><td>0..*</td><td><a href=\"resource.html\">Resource</a></td><td/><td><div><p>The individual resources that make up the data-of-interest being submitted</p>\n</div></td></tr></table><div><p>The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used for subsequent calculation of the relevant quality measure. The data-of-interest for a measure can be determined by examining the measure definition, or by invoking the $data-requirements operation</p>\n</div></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Measure-submit-data</b></p><a name=\"Measure-submit-data\"> </a><a name=\"hcMeasure-submit-data\"> </a><p>URL: [base]/Measure/$submit-data</p><p>URL: [base]/Measure/[id]/$submit-data</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>measureReport</td><td/><td>1..1</td><td><a href=\"measurereport.html\">MeasureReport</a></td><td/><td><div><p>The measure report being submitted</p>\n</div></td></tr><tr><td>IN</td><td>resource</td><td/><td>0..*</td><td><a href=\"resource.html\">Resource</a></td><td/><td><div><p>The individual resources that make up the data-of-interest being submitted</p>\n</div></td></tr></table><div><p>The effect of invoking this operation is that the submitted data is posted to the receiving system and can be used for subsequent calculation of the relevant quality measure. The data-of-interest for a measure can be determined by examining the measure definition, or by invoking the $data-requirements operation</p>\n</div></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
@@ -39,7 +39,7 @@
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "operation"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:30:26-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Clinical Quality Information"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

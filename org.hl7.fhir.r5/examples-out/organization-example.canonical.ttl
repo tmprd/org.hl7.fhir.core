@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      ACME Health - generic example\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      ACME Health - generic example\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:name [ fhir:v "ACME Health"] ; # 
   fhir:alias ( [ fhir:v "Example Health Org"] ) ; # 

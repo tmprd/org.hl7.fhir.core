@@ -20,7 +20,7 @@
   fhir:id [ fhir:v "231e7f38-2dd1-45ac-9161-d7bd87c403bd"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SubscriptionStatus 231e7f38-2dd1-45ac-9161-d7bd87c403bd</b></p><a name=\"231e7f38-2dd1-45ac-9161-d7bd87c403bd\"> </a><a name=\"hc231e7f38-2dd1-45ac-9161-d7bd87c403bd\"> </a><p><b>status</b>: Requested</p><p><b>type</b>: Handshake</p><p><b>eventsSinceSubscriptionStart</b>: 0</p><p><b>subscription</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/Subscription/123</a></p><p><b>topic</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/SubscriptionTopic/admission</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SubscriptionStatus 231e7f38-2dd1-45ac-9161-d7bd87c403bd</b></p><a name=\"231e7f38-2dd1-45ac-9161-d7bd87c403bd\"> </a><a name=\"hc231e7f38-2dd1-45ac-9161-d7bd87c403bd\"> </a><p><b>status</b>: Requested</p><p><b>type</b>: Handshake</p><p><b>eventsSinceSubscriptionStart</b>: 0</p><p><b>subscription</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/Subscription/123</a></p><p><b>topic</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/SubscriptionTopic/admission</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "requested"] ; # 
   fhir:type [ fhir:v "handshake"] ; # 

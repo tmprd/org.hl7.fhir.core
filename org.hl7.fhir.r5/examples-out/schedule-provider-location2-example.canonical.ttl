@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "exampleloc2"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Dr. Beverly Crusher - Starfleet HQ Sickbay Schedule\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Dr. Beverly Crusher - Starfleet HQ Sickbay Schedule\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "usual" ] ;

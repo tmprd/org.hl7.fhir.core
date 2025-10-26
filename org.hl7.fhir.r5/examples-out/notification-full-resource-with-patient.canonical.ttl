@@ -33,7 +33,7 @@
   fhir:id [ fhir:v "641244a4-7c34-44e9-8df3-0a04c6ba5fa7"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SubscriptionStatus 641244a4-7c34-44e9-8df3-0a04c6ba5fa7</b></p><a name=\"641244a4-7c34-44e9-8df3-0a04c6ba5fa7\"> </a><a name=\"hc641244a4-7c34-44e9-8df3-0a04c6ba5fa7\"> </a><p><b>status</b>: Active</p><p><b>type</b>: Event Notification</p><p><b>eventsSinceSubscriptionStart</b>: 2</p><h3>NotificationEvents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>EventNumber</b></td><td><b>Focus</b></td><td><b>AdditionalContext</b></td></tr><tr><td style=\"display: none\">*</td><td>2</td><td><a href=\"broken-link.html\">http://example.org/FHIR/R5/Encounter/2</a></td><td><a href=\"broken-link.html\">http://example.org/FHIR/R5/Patient/ABC</a></td></tr></table><p><b>subscription</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/Subscription/123</a></p><p><b>topic</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/SubscriptionTopic/admission</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SubscriptionStatus 641244a4-7c34-44e9-8df3-0a04c6ba5fa7</b></p><a name=\"641244a4-7c34-44e9-8df3-0a04c6ba5fa7\"> </a><a name=\"hc641244a4-7c34-44e9-8df3-0a04c6ba5fa7\"> </a><p><b>status</b>: Active</p><p><b>type</b>: Event Notification</p><p><b>eventsSinceSubscriptionStart</b>: 2</p><h3>NotificationEvents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>EventNumber</b></td><td><b>Focus</b></td><td><b>AdditionalContext</b></td></tr><tr><td style=\"display: none\">*</td><td>2</td><td><a href=\"broken-link.html\">http://example.org/FHIR/R5/Encounter/2</a></td><td><a href=\"broken-link.html\">http://example.org/FHIR/R5/Patient/ABC</a></td></tr></table><p><b>subscription</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/Subscription/123</a></p><p><b>topic</b>: <a href=\"broken-link.html\">http://example.org/FHIR/R5/SubscriptionTopic/admission</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:type [ fhir:v "event-notification"] ; # 
@@ -66,7 +66,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter 2</b></p><a name=\"2\"> </a><a name=\"hc2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2019-08-07T10:49:22Z</p></div><p><b>status</b>: In Progress</p><p><b>class</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>subject</b>: <a href=\"broken-link.html\">Patient/ABC</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter 2</b></p><a name=\"2\"> </a><a name=\"hc2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2019-08-07T10:49:22Z</p></div><p><b>status</b>: In Progress</p><p><b>class</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode VR}\">virtual</span></p><p><b>subject</b>: <a href=\"broken-link.html\">Patient/ABC</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "in-progress"] ; # 
   fhir:class ( [
@@ -91,7 +91,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ABC</b></p><a name=\"ABC\"> </a><a name=\"hcABC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2019-08-07T10:49:22Z</p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Patient Example (official) (no stated gender), DoB Unknown</p><hr/></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ABC</b></p><a name=\"ABC\"> </a><a name=\"hcABC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2019-08-07T10:49:22Z</p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Patient Example (official) (no stated gender), DoB Unknown</p><hr/></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:name ( [
      fhir:use [ fhir:v "official" ] ;

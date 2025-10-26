@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "resource-aggregation-mode"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem resource-aggregation-mode</b></p><a name=\"resource-aggregation-mode\"> </a><a name=\"hcresource-aggregation-mode\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/resource-aggregation-mode</code> defines the following codes in an undefined hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">contained<a name=\"resource-aggregation-mode-contained\"> </a></td><td>Contained</td><td>The reference is a local reference to a contained resource.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">referenced<a name=\"resource-aggregation-mode-referenced\"> </a></td><td>Referenced</td><td>The reference to a resource that has to be resolved externally to the resource that includes the reference.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bundled<a name=\"resource-aggregation-mode-bundled\"> </a></td><td>Bundled</td><td>When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem resource-aggregation-mode</b></p><a name=\"resource-aggregation-mode\"> </a><a name=\"hcresource-aggregation-mode\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/resource-aggregation-mode</code> defines the following codes in an undefined hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">contained<a name=\"resource-aggregation-mode-contained\"> </a></td><td>Contained</td><td>The reference is a local reference to a contained resource.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">referenced<a name=\"resource-aggregation-mode-referenced\"> </a></td><td>Referenced</td><td>The reference to a resource that has to be resolved externally to the resource that includes the reference.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  bundled<a name=\"resource-aggregation-mode-bundled\"> </a></td><td>Bundled</td><td>When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -51,7 +51,7 @@
   fhir:title [ fhir:v "AggregationMode"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

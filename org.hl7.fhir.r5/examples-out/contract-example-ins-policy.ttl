@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "INS-101"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <p>Plan: Your Choice Split Copay (Non-Grandfathered)</p>\n         <p>Certificate Form Number: YCSCWLN (01-2017)</p>\n      </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <p>Plan: Your Choice Split Copay (Non-Grandfathered)</p>\n         <p>Certificate Form Number: YCSCWLN (01-2017)</p>\n      </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://xyz-insurance.com/forms"^^xsd:anyURI ] ;

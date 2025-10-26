@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			Health Intersections CarePlan Hub<br/>\n			CarePlans can be uploaded to/from this loccation\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			Health Intersections CarePlan Hub<br/>\n			CarePlans can be uploaded to/from this loccation\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://example.org/enpoint-identifier"^^xsd:anyURI ] ;

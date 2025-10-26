@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "fm-solicited"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachment in response to a Request</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachment in response to a Request</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:Organization ;

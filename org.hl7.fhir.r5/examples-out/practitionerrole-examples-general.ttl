@@ -62,7 +62,7 @@
   fhir:id [ fhir:v "f003-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Marc Versteegh<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Marc Versteegh<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f003> ;
@@ -99,7 +99,7 @@
   fhir:id [ fhir:v "example-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/><span style=\"color: gray;\">location:</span> South Wing, second floor<br/><span style=\"color: gray;\">role:</span> RP<br/><span style=\"color: gray;\">Email:</span> dr.adam.careful@example.org<br/><span style=\"color: gray;\">identifier:</span> 52\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/><span style=\"color: gray;\">location:</span> South Wing, second floor<br/><span style=\"color: gray;\">role:</span> RP<br/><span style=\"color: gray;\">Email:</span> dr.adam.careful@example.org<br/><span style=\"color: gray;\">identifier:</span> 52\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://example.org/role-identifier"^^xsd:anyURI ] ;
@@ -158,7 +158,7 @@
   fhir:id [ fhir:v "example-1"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/><span style=\"color: gray;\">organization:</span> Good Health Clinic\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/><span style=\"color: gray;\">organization:</span> Good Health Clinic\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2012-01-01"^^xsd:date ]
@@ -188,7 +188,7 @@
   fhir:id [ fhir:v "example-2"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/>\n            <span style=\"color: gray;\">organization:</span> Good Health Clinic<br/>\n            <span style=\"color: gray;\">role:</span> On call physcologist\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Adam Careful<br/>\n            <span style=\"color: gray;\">organization:</span> Good Health Clinic<br/>\n            <span style=\"color: gray;\">role:</span> On call physcologist\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2016-07-01"^^xsd:date ] ;
@@ -234,7 +234,7 @@
   fhir:id [ fhir:v "f007-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Simone Heps<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Simone Heps<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f007> ;
@@ -269,7 +269,7 @@
   fhir:id [ fhir:v "f004-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Ronald Briet<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Ronald Briet<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f004> ;
@@ -304,7 +304,7 @@
   fhir:id [ fhir:v "xcda1-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Sherry Dopplemeyer<br/><span style=\"color: gray;\">organization:</span> Cleveland Clinic<br/><span style=\"color: gray;\">role:</span> Primary Surgon\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Sherry Dopplemeyer<br/><span style=\"color: gray;\">organization:</span> Cleveland Clinic<br/><span style=\"color: gray;\">role:</span> Primary Surgon\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/xcda1> ;
@@ -332,7 +332,7 @@
   fhir:id [ fhir:v "f202-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Luigi Maas<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Electronic laboratory reporting\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Luigi Maas<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Electronic laboratory reporting\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f202> ;
@@ -369,7 +369,7 @@
   fhir:id [ fhir:v "f201-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Dokter Bronsig<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Implementation of planned interventions\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Dokter Bronsig<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Implementation of planned interventions\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f201> ;
@@ -404,7 +404,7 @@
   fhir:id [ fhir:v "f203-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Juri van Gelder<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Physical therapist\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Juri van Gelder<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Physical therapist\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f203> ;
@@ -439,7 +439,7 @@
   fhir:id [ fhir:v "f005-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Langeveld Anne<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Langeveld Anne<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f005> ;
@@ -474,7 +474,7 @@
   fhir:id [ fhir:v "f006-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Rob van den Berk<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Rob van den Berk<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f006> ;
@@ -509,7 +509,7 @@
   fhir:id [ fhir:v "f001-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Eric van den broek<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Eric van den broek<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f001> ;
@@ -544,7 +544,7 @@
   fhir:id [ fhir:v "f002-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Pieter Voigt<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Pieter Voigt<br/><span style=\"color: gray;\">organization:</span> BMC<br/><span style=\"color: gray;\">role:</span> Care role\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f002> ;
@@ -579,7 +579,7 @@
   fhir:id [ fhir:v "f204-0"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Carla Espinosa<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Renal nurse\n          </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <span style=\"color: gray;\">practitioner:</span> Carla Espinosa<br/><span style=\"color: gray;\">organization:</span> AUMC<br/><span style=\"color: gray;\">role:</span> Renal nurse\n          </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
      fhir:link <http://hl7.org/fhir/Practitioner/f204> ;

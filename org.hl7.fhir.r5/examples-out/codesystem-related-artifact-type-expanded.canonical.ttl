@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "related-artifact-type-expanded"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-27T04:38:40.801+11:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem related-artifact-type-expanded</b></p><a name=\"related-artifact-type-expanded\"> </a><a name=\"hcrelated-artifact-type-expanded\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2022-03-22T16:55:11.085+11:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/related-artifact-type-expanded</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">reprint<a name=\"related-artifact-type-expanded-reprint\"> </a></td><td>Reprint</td><td>A copy of the artifact in a publication with a different artifact identifier.</td></tr><tr><td style=\"white-space:nowrap\">reprint-of<a name=\"related-artifact-type-expanded-reprint-of\"> </a></td><td>Reprint Of</td><td>The original version of record for which the current artifact is a copy.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem related-artifact-type-expanded</b></p><a name=\"related-artifact-type-expanded\"> </a><a name=\"hcrelated-artifact-type-expanded\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2022-03-22T16:55:11.085+11:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/related-artifact-type-expanded</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">reprint<a name=\"related-artifact-type-expanded-reprint\"> </a></td><td>Reprint</td><td>A copy of the artifact in a publication with a different artifact identifier.</td></tr><tr><td style=\"white-space:nowrap\">reprint-of<a name=\"related-artifact-type-expanded-reprint-of\"> </a></td><td>Reprint Of</td><td>The original version of record for which the current artifact is a copy.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

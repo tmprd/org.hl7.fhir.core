@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "hl7"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Health Level Seven International\n      <br/>\n				3300 Washtenaw Avenue, Suite 227\n      <br/>\n				Ann Arbor, MI 48104\n      <br/>\n				USA\n      <br/>\n				(+1) 734-677-7777 (phone)\n      <br/>\n				(+1) 734-677-6622 (fax)\n      <br/>\n				E-mail:  \n      <a href=\"mailto:hq@HL7.org\">hq@HL7.org</a>\n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Health Level Seven International\n      <br/>\n				3300 Washtenaw Avenue, Suite 227\n      <br/>\n				Ann Arbor, MI 48104\n      <br/>\n				USA\n      <br/>\n				(+1) 734-677-7777 (phone)\n      <br/>\n				(+1) 734-677-6622 (fax)\n      <br/>\n				E-mail:  \n      <a href=\"mailto:hq@HL7.org\">hq@HL7.org</a>\n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:name [ fhir:v "Health Level Seven International"] ; # 
   fhir:alias ( [ fhir:v "HL7 International"] ) ; # 

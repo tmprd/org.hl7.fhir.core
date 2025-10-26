@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-stroke-0-3-alteplase-vs-no-alteplase-mRS3-6"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Effect of Alteplase vs No alteplase on mRS 3-6 at 90 days in Stroke 0-3 hours prior\" is a comparative effect estimate.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Effect of Alteplase vs No alteplase on mRS 3-6 at 90 days in Stroke 0-3 hours prior\" is a comparative effect estimate.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

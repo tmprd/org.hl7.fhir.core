@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "variable-role"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem variable-role</b></p><a name=\"variable-role\"> </a><a name=\"hcvariable-role\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/variable-role</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">population<a name=\"variable-role-population\"> </a></td><td>Population</td><td>The group from which the observations were obtained.</td></tr><tr><td style=\"white-space:nowrap\">exposure<a name=\"variable-role-exposure\"> </a></td><td>Exposure</td><td>An independant variable of primary interest.</td></tr><tr><td style=\"white-space:nowrap\">outcome<a name=\"variable-role-outcome\"> </a></td><td>Outcome</td><td>A dependent variable.</td></tr><tr><td style=\"white-space:nowrap\">covariate<a name=\"variable-role-covariate\"> </a></td><td>Covariate</td><td>A variable that influences the exposure or outcome.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem variable-role</b></p><a name=\"variable-role\"> </a><a name=\"hcvariable-role\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/variable-role</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">population<a name=\"variable-role-population\"> </a></td><td>Population</td><td>The group from which the observations were obtained.</td></tr><tr><td style=\"white-space:nowrap\">exposure<a name=\"variable-role-exposure\"> </a></td><td>Exposure</td><td>An independant variable of primary interest.</td></tr><tr><td style=\"white-space:nowrap\">outcome<a name=\"variable-role-outcome\"> </a></td><td>Outcome</td><td>A dependent variable.</td></tr><tr><td style=\"white-space:nowrap\">covariate<a name=\"variable-role-covariate\"> </a></td><td>Covariate</td><td>A variable that influences the exposure or outcome.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "education"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Health education - breast examination for early detection of breast mass</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Health education - breast examination for early detection of breast mass</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:basedOn ( [
      fhir:link <http://hl7.org/fhir/ServiceRequest/education> ;

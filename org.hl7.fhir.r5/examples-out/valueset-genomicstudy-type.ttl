@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "genomicstudy-type"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T19:27:59.321-05:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T12:38:40.801-05:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      \n      \n      <ul>\n        \n        \n        \n        \n        <li>Include type codes defined in \n          \n          \n          \n          \n          <a href=\"http://hl7.org/fhir/genomicstudy-type\">\n            \n            \n            \n            \n            <code>http://hl7.org/fhir/genomicstudy-type</code>\n          \n          \n          \n          \n          </a>\n        \n        \n        \n        \n        </li>\n      \n      \n      \n      \n      </ul>\n    \n    \n    \n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      \n      \n      <ul>\n        \n        \n        \n        \n        <li>Include type codes defined in \n          \n          \n          \n          \n          <a href=\"http://hl7.org/fhir/genomicstudy-type\">\n            \n            \n            \n            \n            <code>http://hl7.org/fhir/genomicstudy-type</code>\n          \n          \n          \n          \n          </a>\n        \n        \n        \n        \n        </li>\n      \n      \n      \n      \n      </ul>\n    \n    \n    \n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

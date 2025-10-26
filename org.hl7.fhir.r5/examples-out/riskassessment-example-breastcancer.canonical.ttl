@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "breastcancer-risk"] ; # 
   fhir:text [
      fhir:status [ fhir:v "additional" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tr>\n          <td colspan=\"2\">\n            <h1>Information about your risk score:</h1>\n          </td>\n        </tr>\n        <tr>\n          <td>\n            <strong>Birthdate:</strong>\n          </td>\n          <td>1981-01-01</td>\n        </tr>\n        <tr>\n          <td>\n            <strong>Gender:</strong>\n          </td>\n          <td>female</td>\n        </tr>\n        <tr>\n          <td>\n            <strong>Ethnicity:</strong>\n          </td>\n          <td>Unknown / Not Reported</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tr>\n          <td colspan=\"2\">\n            <h1>Information about your risk score:</h1>\n          </td>\n        </tr>\n        <tr>\n          <td>\n            <strong>Birthdate:</strong>\n          </td>\n          <td>1981-01-01</td>\n        </tr>\n        <tr>\n          <td>\n            <strong>Gender:</strong>\n          </td>\n          <td>female</td>\n        </tr>\n        <tr>\n          <td>\n            <strong>Ethnicity:</strong>\n          </td>\n          <td>Unknown / Not Reported</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;

@@ -55,7 +55,7 @@
   fhir:id [ fhir:v "71"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              CarePlan repository, CarePlan<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              CarePlan repository, CarePlan<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -82,7 +82,7 @@
   fhir:id [ fhir:v "72"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Questionnaire Destination, QuestionnaireResponse<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Questionnaire Destination, QuestionnaireResponse<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -109,7 +109,7 @@
   fhir:id [ fhir:v "73"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ServiceRequest<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ServiceRequest<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -136,7 +136,7 @@
   fhir:id [ fhir:v "74"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ServiceRequest QuestionnaireResponse<br/>\n              Address: https://open.epic.com/Interface/FHIR</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Referral Requests, ServiceRequest QuestionnaireResponse<br/>\n              Address: https://open.epic.com/Interface/FHIR</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -163,7 +163,7 @@
   fhir:id [ fhir:v "75"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Subscription receiver, ServiceRequest<br/>\n              Address: mailto:subscriptions@example.org</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Subscription receiver, ServiceRequest<br/>\n              Address: mailto:subscriptions@example.org</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -190,7 +190,7 @@
   fhir:id [ fhir:v "76"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              valid usecase?, CDA-EventSummary<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              valid usecase?, CDA-EventSummary<br/>\n              Address: https://sqlonfhir-dstu2.azurewebsites.net/fhir</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -217,7 +217,7 @@
   fhir:id [ fhir:v "77"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              v2 referral Requests, REF-I12<br/>\n              Address: mllp://127.0.0.1:4001</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              v2 referral Requests, REF-I12<br/>\n              Address: mllp://127.0.0.1:4001</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -244,7 +244,7 @@
   fhir:id [ fhir:v "78"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -271,7 +271,7 @@
   fhir:id [ fhir:v "79"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -298,7 +298,7 @@
   fhir:id [ fhir:v "80"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -325,7 +325,7 @@
   fhir:id [ fhir:v "81"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/dicomweb</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [
@@ -352,7 +352,7 @@
   fhir:id [ fhir:v "82"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/wadoUri</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              Enterprise Image Archive, varies (application/dicom, application/dicom+xml, image/jpeg, and many more)<br/>\n              Address: https://pacs.hospital.org/wadoUri</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:connectionType ( [

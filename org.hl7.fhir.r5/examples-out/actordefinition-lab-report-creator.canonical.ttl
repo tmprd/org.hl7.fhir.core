@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "lab-report-creator"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ActorDefinition lab-report-creator</b>\n      </p>\n      <a name=\"lab-report-creator\"/>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Actor: LabReportCreator </b>\n          </td>\n          <td/>\n          <td>Type: system </td>\n        </tr>\n        <tr>\n          <td colspan=\"3\">\n            <div>\n              <p>This actor represents the Laboratory Report creators. That is the actor creating the report that can be send to a consumer or to a repository for report storage and sharing.</p>\n            </div>\n          </td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ActorDefinition lab-report-creator</b>\n      </p>\n      <a name=\"lab-report-creator\"/>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Actor: LabReportCreator </b>\n          </td>\n          <td/>\n          <td>Type: system </td>\n        </tr>\n        <tr>\n          <td colspan=\"3\">\n            <div>\n              <p>This actor represents the Laboratory Report creators. That is the actor creating the report that can be send to a consumer or to a repository for report storage and sharing.</p>\n            </div>\n          </td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

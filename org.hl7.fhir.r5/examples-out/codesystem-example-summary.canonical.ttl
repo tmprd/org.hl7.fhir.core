@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "summary"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem summary</b>\n      </p>\n      <a name=\"summary\"> </a>\n      <a name=\"hcsummary\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/CodeSystem/summary</code> defines codes, but no codes are represented here\n      </p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem summary</b>\n      </p>\n      <a name=\"summary\"> </a>\n      <a name=\"hcsummary\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/CodeSystem/summary</code> defines codes, but no codes are represented here\n      </p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

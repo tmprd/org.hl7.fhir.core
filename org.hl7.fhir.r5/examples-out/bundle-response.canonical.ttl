@@ -89,7 +89,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some narrative</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:active [ fhir:v true] ; # 
   fhir:name ( [

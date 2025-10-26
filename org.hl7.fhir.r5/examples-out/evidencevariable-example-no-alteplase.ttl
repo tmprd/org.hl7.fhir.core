@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-no-alteplase"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"No alteplase\" is an intended exposure concept that may be used in expressing what an Evidence is about.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"No alteplase\" is an intended exposure concept that may be used in expressing what an Evidence is about.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:Group ;

@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "example-dead-or-dependent-90day"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Dead or functionally dependent at 90 days\" is an outcome used in expressing what an Evidence is about.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Dead or functionally dependent at 90 days\" is an outcome used in expressing what an Evidence is about.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:Group ;

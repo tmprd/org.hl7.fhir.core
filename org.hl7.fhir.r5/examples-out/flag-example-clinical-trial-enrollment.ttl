@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "clinical-trial-enrollment"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patients in Group 102 are enrolled in the XYZ123 Clinical Trial.</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patients in Group 102 are enrolled in the XYZ123 Clinical Trial.</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "clinical-trial-2024-group-a" ]

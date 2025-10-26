@@ -52,7 +52,7 @@
   fhir:title [ fhir:v "History bundle"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:30:26-04:00"^^xsd:dateTime] ; # 
   fhir:description [ fhir:v "This profile holds all the requirements and constraints related to a FHIR history bundle."] ; # 
   fhir:fhirVersion [ fhir:v "6.0.0-ballot3"] ; # 
   fhir:mapping ( [

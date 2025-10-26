@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "2docs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Discussion of Peter's ultrasound results to plan ongoing treatment options</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Discussion of Peter's ultrasound results to plan ongoing treatment options</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "booked"] ; # 
   fhir:serviceCategory ( [

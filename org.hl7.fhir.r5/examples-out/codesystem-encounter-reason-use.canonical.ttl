@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "encounter-reason-use"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-27T04:38:40.801+11:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem encounter-reason-use</b></p><a name=\"encounter-reason-use\"> </a><a name=\"hcencounter-reason-use\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/encounter-reason-use</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CC<a name=\"encounter-reason-use-CC\"> </a></td><td>Chief Complaint</td></tr><tr><td style=\"white-space:nowrap\">HC<a name=\"encounter-reason-use-HC\"> </a></td><td>Health Concern</td></tr><tr><td style=\"white-space:nowrap\">AD<a name=\"encounter-reason-use-AD\"> </a></td><td>Admitting Diagnosis</td></tr><tr><td style=\"white-space:nowrap\">RV<a name=\"encounter-reason-use-RV\"> </a></td><td>Reason for Visit</td></tr><tr><td style=\"white-space:nowrap\">HM<a name=\"encounter-reason-use-HM\"> </a></td><td>Health Maintenance (including screening)</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem encounter-reason-use</b></p><a name=\"encounter-reason-use\"> </a><a name=\"hcencounter-reason-use\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2021-01-05T10:01:24.148+11:00</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/encounter-reason-use</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CC<a name=\"encounter-reason-use-CC\"> </a></td><td>Chief Complaint</td></tr><tr><td style=\"white-space:nowrap\">HC<a name=\"encounter-reason-use-HC\"> </a></td><td>Health Concern</td></tr><tr><td style=\"white-space:nowrap\">AD<a name=\"encounter-reason-use-AD\"> </a></td><td>Admitting Diagnosis</td></tr><tr><td style=\"white-space:nowrap\">RV<a name=\"encounter-reason-use-RV\"> </a></td><td>Reason for Visit</td></tr><tr><td style=\"white-space:nowrap\">HM<a name=\"encounter-reason-use-HM\"> </a></td><td>Health Maintenance (including screening)</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

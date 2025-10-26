@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "biologicallyderivedproductdispense-match-status"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <ul>\n        \n        <li>Include all codes defined in \n          \n          <a href=\"CodeSystem-biologicallyderivedproductdispense-match-status.html\">\n            \n            <code>http://hl7.org/fhir/biologicallyderivedproductdispense-match-status</code>\n          \n          </a>\n        \n        </li>\n      \n      </ul>\n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <ul>\n        \n        <li>Include all codes defined in \n          \n          <a href=\"CodeSystem-biologicallyderivedproductdispense-match-status.html\">\n            \n            <code>http://hl7.org/fhir/biologicallyderivedproductdispense-match-status</code>\n          \n          </a>\n        \n        </li>\n      \n      </ul>\n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "medication"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Warning: Usage of Oxycodone in the formulary requires special approval before prescription</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Warning: Usage of Oxycodone in the formulary requires special approval before prescription</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "warning-2024-drug-Oxycodone" ]

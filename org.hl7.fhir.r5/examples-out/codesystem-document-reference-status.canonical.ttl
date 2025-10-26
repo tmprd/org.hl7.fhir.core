@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "document-reference-status"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem document-reference-status</b></p><a name=\"document-reference-status\"> </a><a name=\"hcdocument-reference-status\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/document-reference-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">current<a name=\"document-reference-status-current\"> </a></td><td>Current</td><td>This is the current reference for this document.</td></tr><tr><td style=\"white-space:nowrap\">superseded<a name=\"document-reference-status-superseded\"> </a></td><td>Superseded</td><td>This reference has been superseded by another reference.</td></tr><tr><td style=\"white-space:nowrap\">entered-in-error<a name=\"document-reference-status-entered-in-error\"> </a></td><td>Entered in Error</td><td>This reference was created in error.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem document-reference-status</b></p><a name=\"document-reference-status\"> </a><a name=\"hcdocument-reference-status\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/document-reference-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">current<a name=\"document-reference-status-current\"> </a></td><td>Current</td><td>This is the current reference for this document.</td></tr><tr><td style=\"white-space:nowrap\">superseded<a name=\"document-reference-status-superseded\"> </a></td><td>Superseded</td><td>This reference has been superseded by another reference.</td></tr><tr><td style=\"white-space:nowrap\">entered-in-error<a name=\"document-reference-status-entered-in-error\"> </a></td><td>Entered in Error</td><td>This reference was created in error.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -45,7 +45,7 @@
   fhir:title [ fhir:v "DocumentReferenceStatus"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Orders and Observations"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "example"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				HL7 Payer Network services for Acme Hospital from 1-Jan 2012 to 31-Mar 2012\n			</p>\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				HL7 Payer Network services for Acme Hospital from 1-Jan 2012 to 31-Mar 2012\n			</p>\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://www.acme.org/practitioners"^^xsd:anyURI ] ;

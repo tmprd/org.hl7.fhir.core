@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-Stroke-Thrombolysis-Trialists-2014-2016-IPD-MA-Cohort"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n		  \n      <p>\n			Stroke Thrombolysis Trialists’ Collaborators Group collection used for individual patient data meta-analysis\n	  </p>\n		\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n		  \n      <p>\n			Stroke Thrombolysis Trialists’ Collaborators Group collection used for individual patient data meta-analysis\n	  </p>\n		\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:name [ fhir:v "StrokeThrombolysisTrialists20142016IPDMACohort"] ; # 
   fhir:description [ fhir:v "Stroke Thrombolysis Trialists’ Collaborators Group collection used for individual patient data meta-analysis"] ; # 

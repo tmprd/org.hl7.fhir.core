@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "vaccine-code"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "additional" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      \n      \n      <p>Around the world, various different coding systems are used for immunizations:</p>\n      \n      \n      \n      \n      <ul> \n        \n        \n        \n        \n        <li>USA: CVX (\n          \n          \n          \n          \n          <a href=\"http://hl7.org/fhir/sid/cvx\">http://hl7.org/fhir/sid/cvx</a>)\n        \n        \n        \n        \n        </li>\n        \n        \n        \n        \n        <li>Australia: ACIR (\n          \n          \n          \n          \n          <a href=\"http://www.medicareaustralia.gov.au/provider/vendors/files/9560-1301-acir-idi-vaccine-codes.pdf\">urn:oid:1.2.36.1.2001.1005.17</a>)\n        \n        \n        \n        \n        </li>\n      \n      \n      \n      \n      </ul>\n    \n    \n    \n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      \n      \n      <p>Around the world, various different coding systems are used for immunizations:</p>\n      \n      \n      \n      \n      <ul> \n        \n        \n        \n        \n        <li>USA: CVX (\n          \n          \n          \n          \n          <a href=\"http://hl7.org/fhir/sid/cvx\">http://hl7.org/fhir/sid/cvx</a>)\n        \n        \n        \n        \n        </li>\n        \n        \n        \n        \n        <li>Australia: ACIR (\n          \n          \n          \n          \n          <a href=\"http://www.medicareaustralia.gov.au/provider/vendors/files/9560-1301-acir-idi-vaccine-codes.pdf\">urn:oid:1.2.36.1.2001.1005.17</a>)\n        \n        \n        \n        \n        </li>\n      \n      \n      \n      \n      </ul>\n    \n    \n    \n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

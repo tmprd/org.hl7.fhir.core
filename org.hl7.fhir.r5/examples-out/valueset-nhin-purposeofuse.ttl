@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "nhin-purposeofuse"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet nhin-purposeofuse</b>\n      </p>\n      <a name=\"nhin-purposeofuse\"> </a>\n      <a name=\"hcnhin-purposeofuse\"> </a>\n      <ul>\n        <li>Include all codes defined in \n          <a href=\"codesystem-nhin-purposeofuse.html\">\n            <code>http://healthit.gov/nhin/purposeofuse</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?2.0</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet nhin-purposeofuse</b>\n      </p>\n      <a name=\"nhin-purposeofuse\"> </a>\n      <a name=\"hcnhin-purposeofuse\"> </a>\n      <ul>\n        <li>Include all codes defined in \n          <a href=\"codesystem-nhin-purposeofuse.html\">\n            <code>http://healthit.gov/nhin/purposeofuse</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\">?2.0</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:ConceptMap ;

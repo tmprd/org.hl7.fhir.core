@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "consent-example-grantor"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Consent given to authorized representative</p>\n      <p>This is a case where a Patient is giving a limited (read-only) access to an individual.</p>\n      <p>Patient \"Roel\" wishes to provide Dr. Simone Heps with read-only access to the data at Blijdorp Medisch Centrum available for patient requested access use.</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Consent given to authorized representative</p>\n      <p>This is a case where a Patient is giving a limited (read-only) access to an individual.</p>\n      <p>Patient \"Roel\" wishes to provide Dr. Simone Heps with read-only access to the data at Blijdorp Medisch Centrum available for patient requested access use.</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [

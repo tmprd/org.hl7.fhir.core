@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "document-reference-status"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem document-reference-status</b>\n      </p>\n      <a name=\"document-reference-status\"> </a>\n      <a name=\"hcdocument-reference-status\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/document-reference-status</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">current\n            <a name=\"document-reference-status-current\"> </a>\n          </td>\n          <td>Current</td>\n          <td>This is the current reference for this document.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">superseded\n            <a name=\"document-reference-status-superseded\"> </a>\n          </td>\n          <td>Superseded</td>\n          <td>This reference has been superseded by another reference.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">entered-in-error\n            <a name=\"document-reference-status-entered-in-error\"> </a>\n          </td>\n          <td>Entered in Error</td>\n          <td>This reference was created in error.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem document-reference-status</b>\n      </p>\n      <a name=\"document-reference-status\"> </a>\n      <a name=\"hcdocument-reference-status\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/document-reference-status</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">current\n            <a name=\"document-reference-status-current\"> </a>\n          </td>\n          <td>Current</td>\n          <td>This is the current reference for this document.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">superseded\n            <a name=\"document-reference-status-superseded\"> </a>\n          </td>\n          <td>Superseded</td>\n          <td>This reference has been superseded by another reference.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">entered-in-error\n            <a name=\"document-reference-status-entered-in-error\"> </a>\n          </td>\n          <td>Entered in Error</td>\n          <td>This reference was created in error.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -45,7 +45,7 @@
   fhir:title [ fhir:v "DocumentReferenceStatus"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Orders and Observations"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

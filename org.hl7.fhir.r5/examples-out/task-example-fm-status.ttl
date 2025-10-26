@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "fm-example5"] ; #     This is an example to demonstrate using task for actioning a claim status check  
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b> Generated Narrative with Details</b>\n      </p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b> Generated Narrative with Details</b>\n      </p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;

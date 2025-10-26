@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-id"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \n        <b>Australian IHI Number</b>\n      \n      </p>\n      \n      \n      <p> oid: 1.2.36.1.2001.1003.0</p>\n      \n      \n      <p> uri: http://ns.electronichealth.net.au/id/hi/ihi/1.0</p>\n    \n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \n        <b>Australian IHI Number</b>\n      \n      </p>\n      \n      \n      <p> oid: 1.2.36.1.2001.1003.0</p>\n      \n      \n      <p> uri: http://ns.electronichealth.net.au/id/hi/ihi/1.0</p>\n    \n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

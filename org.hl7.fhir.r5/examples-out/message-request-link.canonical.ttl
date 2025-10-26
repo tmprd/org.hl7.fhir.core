@@ -30,7 +30,7 @@
   fhir:id [ fhir:v "267b18ce-3d37-4581-9baa-6fada338038b"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>This message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)</p>\n					</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>This message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)</p>\n					</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:event [
      a fhir:Coding ;
@@ -55,7 +55,7 @@
   fhir:id [ fhir:v "pat1"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>\n					</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>\n					</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "usual" ] ;
@@ -100,7 +100,7 @@
   fhir:id [ fhir:v "pat2"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</p>\n					</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n						<p>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</p>\n					</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "usual" ] ;

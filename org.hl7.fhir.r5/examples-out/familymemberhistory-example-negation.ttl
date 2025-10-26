@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "negation"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother has no history of malignant tumor of breast</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mother has no history of malignant tumor of breast</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:patient [

@@ -26,7 +26,7 @@
   fhir:id [ fhir:v "example-observation-device-flowratemetric"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation example-observation-device-flowratemetric</b></p><a name=\"example-observation-device-flowratemetric\"> </a><a name=\"hcexample-observation-device-flowratemetric\"> </a><p><b>identifier</b>: <code>http://goodcare.org/observation/id</code>/1191144-10</p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8977-1}\">Fluid intake intravascular 8 hour</span></p><p><b>subject</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p><p><b>focus</b>: <a href=\"broken-link.html\">DeviceMetric/example-iv-pump-flowratemetric</a></p><p><b>effective</b>: 2024-12-05T09:30:10+01:00</p><p><b>value</b>: 150 milliliter per 8 hour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL/(8.h) = 'mL/(8.h)')</span></p><p><b>device</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation example-observation-device-flowratemetric</b></p><a name=\"example-observation-device-flowratemetric\"> </a><a name=\"hcexample-observation-device-flowratemetric\"> </a><p><b>identifier</b>: <code>http://goodcare.org/observation/id</code>/1191144-10</p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8977-1}\">Fluid intake intravascular 8 hour</span></p><p><b>subject</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p><p><b>focus</b>: <a href=\"broken-link.html\">DeviceMetric/example-iv-pump-flowratemetric</a></p><p><b>effective</b>: 2024-12-05T09:30:10+01:00</p><p><b>value</b>: 150 milliliter per 8 hour<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL/(8.h) = 'mL/(8.h)')</span></p><p><b>device</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://goodcare.org/observation/id"^^xsd:anyURI ] ;
@@ -71,7 +71,7 @@
   fhir:id [ fhir:v "example-iv-pump-flowratemetric"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DeviceMetric example-iv-pump-flowratemetric</b></p><a name=\"example-iv-pump-flowratemetric\"> </a><a name=\"hcexample-iv-pump-flowratemetric\"> </a><p><b>type</b>: <span title=\"Codes:{urn:iso:std:iso:11073:10101 157784}\">MDC_FLOW_FLUID_PUMP</span></p><p><b>unit</b>: <span title=\"Codes:{http://unitsofmeasure.org mL/(8.h)}\">mL/(8.h)</span></p><p><b>device</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/metric-category measurement}\">Measurement</span></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DeviceMetric example-iv-pump-flowratemetric</b></p><a name=\"example-iv-pump-flowratemetric\"> </a><a name=\"hcexample-iv-pump-flowratemetric\"> </a><p><b>type</b>: <span title=\"Codes:{urn:iso:std:iso:11073:10101 157784}\">MDC_FLOW_FLUID_PUMP</span></p><p><b>unit</b>: <span title=\"Codes:{http://unitsofmeasure.org mL/(8.h)}\">mL/(8.h)</span></p><p><b>device</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/metric-category measurement}\">Measurement</span></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:type [
      fhir:coding ( [
@@ -97,7 +97,7 @@
   fhir:id [ fhir:v "example-device-patient-association"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DeviceAssociation example-device-patient-association</b></p><a name=\"example-device-patient-association\"> </a><a name=\"hcexample-device-patient-association\"> </a><p><b>device</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p><p><b>status</b>: <span title=\"Codes:{http://hl7.org/fhir/deviceassociation-status attached}\">Attached</span></p><p><b>subject</b>: <a href=\"patient-example-a.html\">Donald Duck</a></p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DeviceAssociation example-device-patient-association</b></p><a name=\"example-device-patient-association\"> </a><a name=\"hcexample-device-patient-association\"> </a><p><b>device</b>: <a href=\"broken-link.html\">Device/example-IV-pump</a></p><p><b>status</b>: <span title=\"Codes:{http://hl7.org/fhir/deviceassociation-status attached}\">Attached</span></p><p><b>subject</b>: <a href=\"patient-example-a.html\">Donald Duck</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:device [
      fhir:link <http://hl7.org/fhir/Device/example-IV-pump> ;

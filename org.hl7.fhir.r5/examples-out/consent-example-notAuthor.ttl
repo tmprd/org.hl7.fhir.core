@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "consent-example-notAuthor"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	    The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n	    This example is to withhold or withdraw consent for disclosure of records that were authored by a specific organization (or service delivery location).</p>\n      <p>Patient \"P. van de Heuvel\" wishes to have all of the PHI (Personal health information) collected at the Burgers University Medical Center restricted from disclosure to every provider.</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n	    The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n	    This example is to withhold or withdraw consent for disclosure of records that were authored by a specific organization (or service delivery location).</p>\n      <p>Patient \"P. van de Heuvel\" wishes to have all of the PHI (Personal health information) collected at the Burgers University Medical Center restricted from disclosure to every provider.</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [

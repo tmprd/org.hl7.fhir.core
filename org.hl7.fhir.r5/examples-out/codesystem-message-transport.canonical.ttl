@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "message-transport"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem message-transport</b></p><a name=\"message-transport\"> </a><a name=\"hcmessage-transport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/message-transport</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">http<a name=\"message-transport-http\"> </a></td><td>HTTP</td><td>The application sends or receives messages using HTTP POST (may be over http: or https:).</td></tr><tr><td style=\"white-space:nowrap\">ftp<a name=\"message-transport-ftp\"> </a></td><td>FTP</td><td>The application sends or receives messages using File Transfer Protocol.</td></tr><tr><td style=\"white-space:nowrap\">mllp<a name=\"message-transport-mllp\"> </a></td><td>MLLP</td><td>The application sends or receives messages using HL7's Minimal Lower Level Protocol.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem message-transport</b></p><a name=\"message-transport\"> </a><a name=\"hcmessage-transport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/message-transport</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">http<a name=\"message-transport-http\"> </a></td><td>HTTP</td><td>The application sends or receives messages using HTTP POST (may be over http: or https:).</td></tr><tr><td style=\"white-space:nowrap\">ftp<a name=\"message-transport-ftp\"> </a></td><td>FTP</td><td>The application sends or receives messages using File Transfer Protocol.</td></tr><tr><td style=\"white-space:nowrap\">mllp<a name=\"message-transport-mllp\"> </a></td><td>MLLP</td><td>The application sends or receives messages using HL7's Minimal Lower Level Protocol.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "provider-unavailable"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Adam Careful is unavailable for referrals from 10/1/2023 to 11/30/2023</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Adam Careful is unavailable for referrals from 10/1/2023 to 11/30/2023</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "provider-unavailable-2024" ]

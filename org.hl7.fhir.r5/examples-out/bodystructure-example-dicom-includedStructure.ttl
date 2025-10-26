@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "dicom-includedStructure"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>DICOM-derived BodyStructure: Left Wrist</p>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>DICOM-derived BodyStructure: Left Wrist</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:includedStructure ( [
      fhir:structure [

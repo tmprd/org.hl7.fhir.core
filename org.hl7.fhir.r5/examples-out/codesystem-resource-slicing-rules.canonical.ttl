@@ -10,11 +10,11 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "resource-slicing-rules"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-24T20:27:59.321-04:00"^^xsd:dateTime ]
+     fhir:lastUpdated [ fhir:v "2025-10-26T13:38:40.801-04:00"^^xsd:dateTime ]
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem resource-slicing-rules</b></p><a name=\"resource-slicing-rules\"> </a><a name=\"hcresource-slicing-rules\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/resource-slicing-rules</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">closed<a name=\"resource-slicing-rules-closed\"> </a></td><td>Closed</td><td>No additional content is allowed other than that described by the slices in this profile.</td></tr><tr><td style=\"white-space:nowrap\">open<a name=\"resource-slicing-rules-open\"> </a></td><td>Open</td><td>Additional content is allowed anywhere in the list.</td></tr><tr><td style=\"white-space:nowrap\">openAtEnd<a name=\"resource-slicing-rules-openAtEnd\"> </a></td><td>Open at End</td><td>Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem resource-slicing-rules</b></p><a name=\"resource-slicing-rules\"> </a><a name=\"hcresource-slicing-rules\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/resource-slicing-rules</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">closed<a name=\"resource-slicing-rules-closed\"> </a></td><td>Closed</td><td>No additional content is allowed other than that described by the slices in this profile.</td></tr><tr><td style=\"white-space:nowrap\">open<a name=\"resource-slicing-rules-open\"> </a></td><td>Open</td><td>Additional content is allowed anywhere in the list.</td></tr><tr><td style=\"white-space:nowrap\">openAtEnd<a name=\"resource-slicing-rules-openAtEnd\"> </a></td><td>Open at End</td><td>Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -51,7 +51,7 @@
   fhir:title [ fhir:v "SlicingRules"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

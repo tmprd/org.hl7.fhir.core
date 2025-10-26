@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "medicationexample1"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Amoxicillin 250mg/5ml Suspension</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Amoxicillin 250mg/5ml Suspension</div>"^^rdf:XMLLiteral ]
   ] ; #   this example includes the code text element only  
   fhir:code [
      fhir:text [ fhir:v "Amoxicillin 250mg/5ml Suspension" ]

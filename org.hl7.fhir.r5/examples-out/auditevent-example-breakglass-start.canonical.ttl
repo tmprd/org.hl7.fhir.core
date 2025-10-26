@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-breakglass-start"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Authorized Break-Glass period has been declared to enable immediate emergent treatment condition. This AuditEvent indicates the start of the Break-Glass event. Another would indicate the stop of that Break-Glass period, provided there is a session or state that can detect the end of the break-glass event.</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Authorized Break-Glass period has been declared to enable immediate emergent treatment condition. This AuditEvent indicates the start of the Break-Glass event. Another would indicate the stop of that Break-Glass period, provided there is a session or state that can detect the end of the break-glass event.</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:action [ fhir:v "E"] ; # 
   fhir:recorded [ fhir:v "2013-09-22T00:08:00Z"^^xsd:dateTime] ; # 

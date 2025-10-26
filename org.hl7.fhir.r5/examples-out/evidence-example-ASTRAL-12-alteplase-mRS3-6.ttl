@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example-ASTRAL-12-alteplase-mRS3-6"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Risk of mRS3-6 at 90 days after Alteplase for Stroke if ASTRAL score 12\" is a univariate risk estimate (non-comparative evidence).\n      </p>\n	\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Risk of mRS3-6 at 90 days after Alteplase for Stroke if ASTRAL score 12\" is a univariate risk estimate (non-comparative evidence).\n      </p>\n	\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

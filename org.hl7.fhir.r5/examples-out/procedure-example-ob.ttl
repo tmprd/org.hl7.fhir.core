@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "ob"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vaginal delivery of healthy male infant on June 2, 2012</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vaginal delivery of healthy male infant on June 2, 2012</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:category ( [

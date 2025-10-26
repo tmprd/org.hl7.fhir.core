@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "3"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			25 Dec 2013 9:30am - 9:45am: <b>Unavailable</b> Physiotherapy<br/>\n			Dr Careful is out of the office\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			25 Dec 2013 9:30am - 9:45am: <b>Unavailable</b> Physiotherapy<br/>\n			Dr Careful is out of the office\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:serviceCategory ( [
      fhir:coding ( [

@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "examplescenario-instance-type"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-27T04:38:40.801+11:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet examplescenario-instance-type</b>\n      </p>\n      <a name=\"examplescenario-instance-type\"> </a>\n      <a name=\"hcexamplescenario-instance-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2020-12-28T16:55:11.085+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <p>This value set includes codes based on the following rules:</p>\n      <ul>\n        <li>Import all the codes that are contained in \n          <a href=\"valueset-resource-types.html\">Resource Types</a>\n        </li>\n        <li>Include all codes defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0354.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v2-0354</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 2.10.0, the version found through the package references\">?2.10.0</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet examplescenario-instance-type</b>\n      </p>\n      <a name=\"examplescenario-instance-type\"> </a>\n      <a name=\"hcexamplescenario-instance-type\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\">Last updated: 2020-12-28T16:55:11.085+11:00</p>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablevalueset.html\">Shareable ValueSet</a>\n        </p>\n      </div>\n      <p>This value set includes codes based on the following rules:</p>\n      <ul>\n        <li>Import all the codes that are contained in \n          <a href=\"valueset-resource-types.html\">Resource Types</a>\n        </li>\n        <li>Include all codes defined in \n          <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0354.html\">\n            <code>http://terminology.hl7.org/CodeSystem/v2-0354</code>\n          </a> version \n          <span title=\"Version is not explicitly stated, which means it is fixed to 2.10.0, the version found through the package references\">?2.10.0</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

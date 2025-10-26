@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "Resource-graph"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Resource-graph</b></p><a name=\"Resource-graph\"> </a><a name=\"hcResource-graph\"> </a><p>URL: [base]/Resource/[id]/$graph</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>graph</td><td/><td>1..1</td><td><a href=\"datatypes.html#uri\">uri</a></td><td/><td><div><p>Servers MAY choose to allow any graph definition to be specified, but MAY require that the client choose a graph definition from a specific list of known supported definitions. The server is not required to support a formal definition of the graph on the end point</p>\n</div></td></tr><tr><td>OUT</td><td>result</td><td/><td>1..1</td><td><a href=\"bundle.html\">Bundle</a></td><td/><td><div><p>The set of resources that were in the graph based on the provided definition</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Resource-graph</b></p><a name=\"Resource-graph\"> </a><a name=\"hcResource-graph\"> </a><p>URL: [base]/Resource/[id]/$graph</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>graph</td><td/><td>1..1</td><td><a href=\"datatypes.html#uri\">uri</a></td><td/><td><div><p>Servers MAY choose to allow any graph definition to be specified, but MAY require that the client choose a graph definition from a specific list of known supported definitions. The server is not required to support a formal definition of the graph on the end point</p>\n</div></td></tr><tr><td>OUT</td><td>result</td><td/><td>1..1</td><td><a href=\"bundle.html\">Bundle</a></td><td/><td><div><p>The set of resources that were in the graph based on the provided definition</p>\n</div></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
@@ -39,7 +39,7 @@
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "operation"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:30:26-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

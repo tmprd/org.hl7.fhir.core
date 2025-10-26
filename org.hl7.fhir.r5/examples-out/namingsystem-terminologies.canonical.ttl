@@ -11,71 +11,80 @@
   fhir:id [ fhir:v "terminologies"] ; # 
   fhir:type [ fhir:v "collection"] ; # 
   fhir:entry ( [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/discriminator-type"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/discriminator-type> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/identifier-use"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/identifier-use> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/constraint-severity"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/constraint-severity> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/concept-map-relationship"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/concept-map-relationship> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/contact-point-system"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/contact-point-system> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/timing-abbreviation"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/timing-abbreviation> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/request-status"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/request-status> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/related-artifact-type"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/related-artifact-type> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/administrative-gender"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/administrative-gender> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/request-intent"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/request-intent> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/FHIR-version"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/FHIR-version> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/search-param-type"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/search-param-type> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/property-representation"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/property-representation> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/contact-point-use"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/contact-point-use> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/trigger-type"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/trigger-type> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/binding-strength"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/binding-strength> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/event-timing"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/event-timing> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/name-use"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/name-use> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/administrative-gender"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/administrative-gender> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/resource-aggregation-mode"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/resource-aggregation-mode> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/request-priority"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/request-priority> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/product-status"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/product-status> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/resource-slicing-rules"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/resource-slicing-rules> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/publication-status"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/publication-status> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/contributor-type"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/contributor-type> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/name-use"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/name-use> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/note-type"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/note-type> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/address-use"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/address-use> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/contact-point-system"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/contact-point-system> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/quantity-comparator"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/quantity-comparator> )
   ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/request-status"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/request-status> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/sort-direction"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/sort-direction> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/timing-abbreviation"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/timing-abbreviation> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/request-intent"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/request-intent> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/contact-point-use"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/contact-point-use> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/narrative-status"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/narrative-status> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/note-type"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/note-type> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/contributor-type"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/contributor-type> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/document-reference-status"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/document-reference-status> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/FHIR-version"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/FHIR-version> )
+  ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/remittance-outcome"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/remittance-outcome> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/identifier-use"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/identifier-use> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/account-aggregate"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/account-aggregate> )
@@ -176,8 +185,17 @@
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/audit-event-severity"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/audit-event-severity> )
   ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/binding-strength"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/binding-strength> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/event-status"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/event-status> )
+  ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/reference-version-rules"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/reference-version-rules> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/address-use"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/address-use> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/biologicallyderived-product-property-type-codes"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/biologicallyderived-product-property-type-codes> )
@@ -202,15 +220,6 @@
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/bundle-type"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/bundle-type> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/search-param-type"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/search-param-type> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/constraint-severity"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/constraint-severity> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/document-reference-status"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/document-reference-status> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/capability-statement-kind"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/capability-statement-kind> )
@@ -377,23 +386,14 @@
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/coverage-kind"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/coverage-kind> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/request-priority"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/request-priority> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/event-status"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/event-status> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/discriminator-type"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/discriminator-type> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/datestype"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/datestype> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/days-of-week"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/days-of-week> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/event-timing"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/event-timing> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/narrative-status"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/narrative-status> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/definition-method"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/definition-method> )
@@ -497,6 +497,9 @@
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/document-relationship-type"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/document-relationship-type> )
   ] [
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/related-artifact-type"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/related-artifact-type> )
+  ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/address-type"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/address-type> )
   ] [
@@ -578,14 +581,11 @@
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/extra-activity-type"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/extra-activity-type> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/sort-direction"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/sort-direction> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/resource-slicing-rules"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/resource-slicing-rules> )
   ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/trigger-type"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/trigger-type> )
-  ] [
-     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/publication-status"^^xsd:anyURI ] ;
-     fhir:resource ( <http://hl7.org/fhir/NamingSystem/publication-status> )
+     fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/resource-aggregation-mode"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hl7.org/fhir/NamingSystem/resource-aggregation-mode> )
   ] [
      fhir:fullUrl [ fhir:v "http://hl7.org/fhir/NamingSystem/fhir-format-type"^^xsd:anyURI ] ;
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/fhir-format-type> )
@@ -1311,12 +1311,12 @@
      fhir:resource ( <http://hl7.org/fhir/NamingSystem/list-item-flag> )
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/discriminator-type> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "discriminator-type"] ; # 
-  fhir:name [ fhir:v "DiscriminatorType"] ; # 
+<http://hl7.org/fhir/NamingSystem/constraint-severity> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "constraint-severity"] ; # 
+  fhir:name [ fhir:v "ConstraintSeverity"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1332,7 +1332,7 @@
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "How an element value is interpreted when discrimination is evaluated."] ; # 
+  fhir:description [ fhir:v "SHALL applications comply with this constraint?"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -1342,50 +1342,11 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/discriminator-type" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/constraint-severity" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.92" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/identifier-use> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "identifier-use"] ; # 
-  fhir:name [ fhir:v "IdentifierUse"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Identifies the purpose for this identifier, if known ."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/identifier-use" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.58" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.82" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -1394,7 +1355,7 @@
   fhir:name [ fhir:v "ConceptMapRelationship"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1420,12 +1381,349 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
+<http://hl7.org/fhir/NamingSystem/search-param-type> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "search-param-type"] ; # 
+  fhir:name [ fhir:v "SearchParamType"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Data types allowed to be used for search parameters."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/search-param-type" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.12" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/property-representation> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "property-representation"] ; # 
+  fhir:name [ fhir:v "PropertyRepresentation"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "How a property is represented when serialized."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/property-representation" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.88" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/trigger-type> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "trigger-type"] ; # 
+  fhir:name [ fhir:v "TriggerType"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of trigger."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/trigger-type" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.104" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/event-timing> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "event-timing"] ; # 
+  fhir:name [ fhir:v "EventTiming"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Real-world event relating to the schedule."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/event-timing" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.76" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/administrative-gender> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "administrative-gender"] ; # 
+  fhir:name [ fhir:v "AdministrativeGender"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Administration"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pafm" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The gender of a person used for administrative purposes."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/administrative-gender" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.2" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/request-priority> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "request-priority"] ; # 
+  fhir:name [ fhir:v "RequestPriority"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Identifies the level of importance to be assigned to actioning the request."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/request-priority" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.116" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/product-status> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "product-status"] ; # 
+  fhir:name [ fhir:v "ProductStatus"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes identifying the lifecycle stage of a product."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/product-status" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.903" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/publication-status> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "publication-status"] ; # 
+  fhir:name [ fhir:v "PublicationStatus"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The lifecycle status of an artifact."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/publication-status" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.4" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/name-use> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "name-use"] ; # 
+  fhir:name [ fhir:v "NameUse"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The use of a human name."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/name-use" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.66" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
 <http://hl7.org/fhir/NamingSystem/contact-point-system> a fhir:NamingSystem ;
   fhir:id [ fhir:v "contact-point-system"] ; # 
   fhir:name [ fhir:v "ContactPointSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1459,12 +1757,12 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/timing-abbreviation> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "timing-abbreviation"] ; # 
-  fhir:name [ fhir:v "TimingAbbreviation"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
+<http://hl7.org/fhir/NamingSystem/quantity-comparator> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "quantity-comparator"] ; # 
+  fhir:name [ fhir:v "QuantityComparator"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1480,7 +1778,7 @@
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Code for a known / defined timing pattern."] ; # 
+  fhir:description [ fhir:v "How the Quantity should be understood and represented."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -1490,8 +1788,12 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/timing-abbreviation" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/quantity-comparator" ] ;
      fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.60" ] ;
+     fhir:preferred [ fhir:v false ]
   ] ) . # 
 
 <http://hl7.org/fhir/NamingSystem/request-status> a fhir:NamingSystem ;
@@ -1499,7 +1801,7 @@
   fhir:name [ fhir:v "RequestStatus"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1538,12 +1840,51 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/related-artifact-type> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "related-artifact-type"] ; # 
-  fhir:name [ fhir:v "RelatedArtifactType"] ; # 
+<http://hl7.org/fhir/NamingSystem/sort-direction> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "sort-direction"] ; # 
+  fhir:name [ fhir:v "SortDirection"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The possible sort directions, ascending or descending."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/sort-direction" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.980" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/timing-abbreviation> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "timing-abbreviation"] ; # 
+  fhir:name [ fhir:v "TimingAbbreviation"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1559,7 +1900,7 @@
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "The type of relationship to the related artifact."] ; # 
+  fhir:description [ fhir:v "Code for a known / defined timing pattern."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -1569,43 +1910,8 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/related-artifact-type" ] ;
+     fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/timing-abbreviation" ] ;
      fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.100" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/administrative-gender> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "administrative-gender"] ; # 
-  fhir:name [ fhir:v "AdministrativeGender"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Patient Administration"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/pafm" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "The gender of a person used for administrative purposes."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/administrative-gender" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.2" ] ;
-     fhir:preferred [ fhir:v false ]
   ] ) . # 
 
 <http://hl7.org/fhir/NamingSystem/request-intent> a fhir:NamingSystem ;
@@ -1613,7 +1919,7 @@
   fhir:name [ fhir:v "RequestIntent"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1652,82 +1958,12 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/FHIR-version> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "FHIR-version"] ; # 
-  fhir:name [ fhir:v "FHIRVersion"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "All published FHIR Versions."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/FHIR-version" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.1310" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/property-representation> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "property-representation"] ; # 
-  fhir:name [ fhir:v "PropertyRepresentation"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "How a property is represented when serialized."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/property-representation" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.88" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
 <http://hl7.org/fhir/NamingSystem/contact-point-use> a fhir:NamingSystem ;
   fhir:id [ fhir:v "contact-point-use"] ; # 
   fhir:name [ fhir:v "ContactPointUse"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1761,121 +1997,12 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/binding-strength> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "binding-strength"] ; # 
-  fhir:name [ fhir:v "BindingStrength"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Indication of the degree of conformance expectations associated with a binding."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/binding-strength" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.44" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/name-use> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "name-use"] ; # 
-  fhir:name [ fhir:v "NameUse"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "The use of a human name."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/name-use" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.66" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/resource-aggregation-mode> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "resource-aggregation-mode"] ; # 
-  fhir:name [ fhir:v "AggregationMode"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "How resource references can be aggregated."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/resource-aggregation-mode" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.86" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/product-status> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "product-status"] ; # 
-  fhir:name [ fhir:v "ProductStatus"] ; # 
+<http://hl7.org/fhir/NamingSystem/narrative-status> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "narrative-status"] ; # 
+  fhir:name [ fhir:v "NarrativeStatus"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1891,7 +2018,7 @@
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes identifying the lifecycle stage of a product."] ; # 
+  fhir:description [ fhir:v "The status of a resource narrative."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -1901,36 +2028,28 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/product-status" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/narrative-status" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.903" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.56" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/resource-slicing-rules> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "resource-slicing-rules"] ; # 
-  fhir:name [ fhir:v "SlicingRules"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
+<http://hl7.org/fhir/NamingSystem/note-type> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "note-type"] ; # 
+  fhir:name [ fhir:v "NoteType"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Financial Management"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fm" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "How slices are interpreted when evaluating an instance."] ; # 
+  fhir:description [ fhir:v "The presentation types of notes."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -1940,11 +2059,11 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/resource-slicing-rules" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/note-type" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.84" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.16" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -1953,7 +2072,7 @@
   fhir:name [ fhir:v "ContributorType"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -1987,20 +2106,20 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/note-type> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "note-type"] ; # 
-  fhir:name [ fhir:v "NoteType"] ; # 
+<http://hl7.org/fhir/NamingSystem/document-reference-status> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "document-reference-status"] ; # 
+  fhir:name [ fhir:v "DocumentReferenceStatus"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Financial Management"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Orders and Observations"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fm" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/orders" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "The presentation types of notes."] ; # 
+  fhir:description [ fhir:v "The status of the document reference."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -2010,36 +2129,28 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/note-type" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/document-reference-status" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.16" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.8" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/address-use> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "address-use"] ; # 
-  fhir:name [ fhir:v "AddressUse"] ; # 
+<http://hl7.org/fhir/NamingSystem/FHIR-version> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "FHIR-version"] ; # 
+  fhir:name [ fhir:v "FHIRVersion"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "The use of an address."] ; # 
+  fhir:description [ fhir:v "All published FHIR Versions."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -2049,50 +2160,11 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/address-use" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/FHIR-version" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.68" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/quantity-comparator> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "quantity-comparator"] ; # 
-  fhir:name [ fhir:v "QuantityComparator"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "How the Quantity should be understood and represented."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/quantity-comparator" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.60" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.1310" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -2101,7 +2173,7 @@
   fhir:name [ fhir:v "RemittanceOutcome"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Financial Management"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -2124,6 +2196,45 @@
   ] [
      fhir:type [ fhir:v "oid" ] ;
      fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.14" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/identifier-use> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "identifier-use"] ; # 
+  fhir:name [ fhir:v "IdentifierUse"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Identifies the purpose for this identifier, if known ."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/identifier-use" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.58" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -2654,7 +2765,7 @@
   fhir:name [ fhir:v "AdditionalBindingPurposeCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -2747,7 +2858,7 @@
   fhir:name [ fhir:v "AdministrationSubPotentReason"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication administration process."] ; # 
   fhir:jurisdiction ( [
@@ -3076,7 +3187,7 @@
   fhir:name [ fhir:v "ASTMSignatureTypeCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ASTM"] ; # 
   fhir:description [ fhir:v "The Digital Signature Purposes, an indication of the reason an entity signs a document. This is included in the signed information and can be used when determining accountability for various actions concerning the document. Examples include: author, transcriptionist/recorder, and witness."] ; # 
   fhir:jurisdiction ( [
@@ -3198,12 +3309,87 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
+<http://hl7.org/fhir/NamingSystem/binding-strength> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "binding-strength"] ; # 
+  fhir:name [ fhir:v "BindingStrength"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Indication of the degree of conformance expectations associated with a binding."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/binding-strength" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.44" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/event-status> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "event-status"] ; # 
+  fhir:name [ fhir:v "EventStatus"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes identifying the lifecycle stage of an event."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/event-status" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.110" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
 <http://hl7.org/fhir/NamingSystem/reference-version-rules> a fhir:NamingSystem ;
   fhir:id [ fhir:v "reference-version-rules"] ; # 
   fhir:name [ fhir:v "ReferenceVersionRules"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -3234,6 +3420,45 @@
   ] [
      fhir:type [ fhir:v "oid" ] ;
      fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.90" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/address-use> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "address-use"] ; # 
+  fhir:name [ fhir:v "AddressUse"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The use of an address."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/address-use" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.68" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -3434,7 +3659,7 @@
   fhir:name [ fhir:v "BiologicallyDerivedProductDispenseStatus"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -3490,107 +3715,6 @@
   ] [
      fhir:type [ fhir:v "oid" ] ;
      fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.621" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/search-param-type> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "search-param-type"] ; # 
-  fhir:name [ fhir:v "SearchParamType"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Data types allowed to be used for search parameters."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/search-param-type" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.12" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/constraint-severity> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "constraint-severity"] ; # 
-  fhir:name [ fhir:v "ConstraintSeverity"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "SHALL applications comply with this constraint?"] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/constraint-severity" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.82" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/document-reference-status> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "document-reference-status"] ; # 
-  fhir:name [ fhir:v "DocumentReferenceStatus"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Orders and Observations"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/orders" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "The status of the document reference."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/document-reference-status" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.8" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -3667,7 +3791,7 @@
   fhir:name [ fhir:v "CatalogType"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "CatalogType"] ; # 
   fhir:jurisdiction ( [
@@ -3692,7 +3816,7 @@
   fhir:name [ fhir:v "Indicator"] ; # 
   fhir:status [ fhir:v "retired"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -3835,7 +3959,7 @@
   fhir:name [ fhir:v "ClaimAdjudicationDecisionCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set provides Claim Adjudication Decision codes."] ; # 
   fhir:jurisdiction ( [
@@ -3860,7 +3984,7 @@
   fhir:name [ fhir:v "ClaimAdjudicationDecisionReasonCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set provides example Claim Adjudication Decision Reason codes."] ; # 
   fhir:jurisdiction ( [
@@ -3885,7 +4009,7 @@
   fhir:name [ fhir:v "ClaimProcessingOutcomeCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set includes Claim Processing Outcome codes."] ; # 
   fhir:jurisdiction ( [
@@ -4118,7 +4242,7 @@
   fhir:name [ fhir:v "ColorCodes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -4149,7 +4273,7 @@
   fhir:name [ fhir:v "ColorRGB"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -4316,7 +4440,7 @@
   fhir:name [ fhir:v "ConceptProperties"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Terminology Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -4388,7 +4512,7 @@
   fhir:name [ fhir:v "ConceptSubsumptionOutcome"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Terminology Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -4458,7 +4582,7 @@
   fhir:name [ fhir:v "ConceptMapProperties"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project"] ; # 
   fhir:description [ fhir:v "A set of common concept properties for use on ConceptMap"] ; # 
   fhir:jurisdiction ( [
@@ -4683,7 +4807,7 @@
   fhir:name [ fhir:v "ConformanceExpectation"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -5389,13 +5513,13 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/request-priority> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "request-priority"] ; # 
-  fhir:name [ fhir:v "RequestPriority"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
+<http://hl7.org/fhir/NamingSystem/discriminator-type> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "discriminator-type"] ; # 
+  fhir:name [ fhir:v "DiscriminatorType"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
@@ -5409,13 +5533,8 @@
        fhir:system [ fhir:v "url" ] ;
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
-     ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Identifies the level of importance to be assigned to actioning the request."] ; # 
+  fhir:description [ fhir:v "How an element value is interpreted when discrimination is evaluated."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -5425,55 +5544,11 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/request-priority" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/discriminator-type" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.116" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/event-status> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "event-status"] ; # 
-  fhir:name [ fhir:v "EventStatus"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Codes identifying the lifecycle stage of an event."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/event-status" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.110" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.92" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -5482,7 +5557,7 @@
   fhir:name [ fhir:v "DatesEventTypeCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set includes sample Dates Event Type codes."] ; # 
   fhir:jurisdiction ( [
@@ -5531,84 +5606,6 @@
   ] [
      fhir:type [ fhir:v "oid" ] ;
      fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.513" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/event-timing> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "event-timing"] ; # 
-  fhir:name [ fhir:v "EventTiming"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Real-world event relating to the schedule."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/event-timing" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.1.76" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/narrative-status> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "narrative-status"] ; # 
-  fhir:name [ fhir:v "NarrativeStatus"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "The status of a resource narrative."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/narrative-status" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.56" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -5749,7 +5746,7 @@
   fhir:name [ fhir:v "ProcedureDeviceActionCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Example value set for Procedure Device Action code (what happened to a device during a procedure."] ; # 
   fhir:jurisdiction ( [
@@ -5944,7 +5941,7 @@
   fhir:name [ fhir:v "DevicePropertyType"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Orders and Observations Workgroup"] ; # 
   fhir:description [ fhir:v "The fixed characteristics or conditions of the device. These codes are for example purposes only."] ; # 
   fhir:jurisdiction ( [
@@ -6273,7 +6270,7 @@
   fhir:name [ fhir:v "DeviceAssociation"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "DeviceAssociation Relationship Codes"] ; # 
   fhir:jurisdiction ( [
@@ -6294,7 +6291,7 @@
   fhir:name [ fhir:v "DeviceAssociation"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "DeviceAssociation Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -6315,7 +6312,7 @@
   fhir:name [ fhir:v "DeviceAssociation"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "DeviceAssociation Status Reason Codes"] ; # 
   fhir:jurisdiction ( [
@@ -6404,7 +6401,7 @@
   fhir:name [ fhir:v "DeviceDispenseStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "DeviceDispense Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -6429,7 +6426,7 @@
   fhir:name [ fhir:v "DeviceDispenseStatusReasonCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "DeviceDispense Status Reason Codes"] ; # 
   fhir:jurisdiction ( [
@@ -6653,12 +6650,51 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
+<http://hl7.org/fhir/NamingSystem/related-artifact-type> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "related-artifact-type"] ; # 
+  fhir:name [ fhir:v "RelatedArtifactType"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The type of relationship to the related artifact."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/related-artifact-type" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.100" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
 <http://hl7.org/fhir/NamingSystem/address-type> a fhir:NamingSystem ;
   fhir:id [ fhir:v "address-type"] ; # 
   fhir:name [ fhir:v "AddressType"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -6697,7 +6733,7 @@
   fhir:name [ fhir:v "Eligibility"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Example set of HealthcareService eligibility codes"] ; # 
   fhir:jurisdiction ( [
@@ -6718,7 +6754,7 @@
   fhir:name [ fhir:v "ClaimProcessingCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project team"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -7012,7 +7048,7 @@
   fhir:name [ fhir:v "ClaimProcessingCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project team"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -7077,7 +7113,7 @@
   fhir:name [ fhir:v "ETSISignatureTypeCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ETSI"] ; # 
   fhir:description [ fhir:v "The ETSI TS 101 733 V2.2.1 (2013-04) - Electronic Signatures and Infrastructures (ESI) - defines a set of Commitment Types (Purpose of Signature). ETSI TS 101 903 V1.2.2 defines vocabulary identifiers for these Commitment Types. Digital Signature Purposes, an indication of the reason an entity signs a document. This is included in the signed information and can be used when determining accountability for various actions concerning the document. "] ; # 
   fhir:jurisdiction ( [
@@ -7488,7 +7524,7 @@
   fhir:name [ fhir:v "ExtraActivityType"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Security"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -7517,103 +7553,28 @@
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
-<http://hl7.org/fhir/NamingSystem/sort-direction> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "sort-direction"] ; # 
-  fhir:name [ fhir:v "SortDirection"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "The possible sort directions, ascending or descending."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/sort-direction" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.980" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/trigger-type> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "trigger-type"] ; # 
-  fhir:name [ fhir:v "TriggerType"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
-  fhir:contact ( [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/fhir" ]
-     ] [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
-     ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "The type of trigger."] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
-     ] )
-  ] ) ; # 
-  fhir:uniqueId ( [
-     fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/trigger-type" ] ;
-     fhir:preferred [ fhir:v true ]
-  ] [
-     fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.104" ] ;
-     fhir:preferred [ fhir:v false ]
-  ] ) . # 
-
-<http://hl7.org/fhir/NamingSystem/publication-status> a fhir:NamingSystem ;
-  fhir:id [ fhir:v "publication-status"] ; # 
-  fhir:name [ fhir:v "PublicationStatus"] ; # 
+<http://hl7.org/fhir/NamingSystem/resource-slicing-rules> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "resource-slicing-rules"] ; # 
+  fhir:name [ fhir:v "SlicingRules"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International / Clinical Decision Support"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
        fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
      ] )
-  ] [
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/dss" ]
-     ] )
   ] ) ; # 
-  fhir:description [ fhir:v "The lifecycle status of an artifact."] ; # 
+  fhir:description [ fhir:v "How slices are interpreted when evaluating an instance."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
@@ -7623,11 +7584,50 @@
   ] ) ; # 
   fhir:uniqueId ( [
      fhir:type [ fhir:v "uri" ] ;
-     fhir:value [ fhir:v "http://hl7.org/fhir/publication-status" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/resource-slicing-rules" ] ;
      fhir:preferred [ fhir:v true ]
   ] [
      fhir:type [ fhir:v "oid" ] ;
-     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.4" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.84" ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/NamingSystem/resource-aggregation-mode> a fhir:NamingSystem ;
+  fhir:id [ fhir:v "resource-aggregation-mode"] ; # 
+  fhir:name [ fhir:v "AggregationMode"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "codesystem"] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "How resource references can be aggregated."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "http://hl7.org/fhir/resource-aggregation-mode" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] [
+     fhir:type [ fhir:v "oid" ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.4.642.4.86" ] ;
      fhir:preferred [ fhir:v false ]
   ] ) . # 
 
@@ -7661,7 +7661,7 @@
   fhir:name [ fhir:v "FHIROldTypes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -7744,7 +7744,7 @@
   fhir:name [ fhir:v "FHIRPathTypesCodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -7843,7 +7843,7 @@
   fhir:name [ fhir:v "FinancialResourceStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set includes Status codes."] ; # 
   fhir:jurisdiction ( [
@@ -7868,7 +7868,7 @@
   fhir:name [ fhir:v "FormularyItemStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "FormularyItem Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -8097,7 +8097,7 @@
   fhir:name [ fhir:v "GoalAcceptStatus"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -8493,7 +8493,7 @@
   fhir:name [ fhir:v "GuideParameterCode"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "GuideParameterCode"] ; # 
   fhir:jurisdiction ( [
@@ -8619,7 +8619,7 @@
   fhir:name [ fhir:v "CodeSystemSummaryExampleACMEBodySites"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Terminology Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -8650,7 +8650,7 @@
   fhir:name [ fhir:v "UsageContextAgreementScope"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -8725,7 +8725,7 @@
   fhir:name [ fhir:v "MessageEvent"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Infrastructure And Messaging"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -8874,7 +8874,7 @@
   fhir:name [ fhir:v "BeneficiaryRelationshipCodes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Financial Management"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -8910,7 +8910,7 @@
   fhir:name [ fhir:v "FHIRCanonicalStatusCodes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project"] ; # 
   fhir:description [ fhir:v "The master set of status codes used throughout FHIR. All status codes are mapped to one of these codes."] ; # 
   fhir:jurisdiction ( [
@@ -8935,7 +8935,7 @@
   fhir:name [ fhir:v "FHIRRestfulInteractions"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -8966,7 +8966,7 @@
   fhir:name [ fhir:v "FHIRSafetyCheckListEntries"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -9002,7 +9002,7 @@
   fhir:name [ fhir:v "SampleSecurityStructuralRoles"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Security"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -9038,7 +9038,7 @@
   fhir:name [ fhir:v "SimpleFormatCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -9198,7 +9198,7 @@
   fhir:name [ fhir:v "LinkRelationTypes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Internet Assigned Numbers Authority (IANA)"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -9225,7 +9225,7 @@
   fhir:name [ fhir:v "MedicationAdministrationStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "MedicationAdministration Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9250,7 +9250,7 @@
   fhir:name [ fhir:v "MedicationDoseAid"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication dose aid"] ; # 
   fhir:jurisdiction ( [
@@ -9275,7 +9275,7 @@
   fhir:name [ fhir:v "MedicationIngredientStrengthCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Ingredient Strength Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9300,7 +9300,7 @@
   fhir:name [ fhir:v "MedicationIntendedPerformerRole"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Intended Performer Role"] ; # 
   fhir:jurisdiction ( [
@@ -9325,7 +9325,7 @@
   fhir:name [ fhir:v "MedicationStatementAdherenceCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "MedicationStatement Adherence Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9350,7 +9350,7 @@
   fhir:name [ fhir:v "MedicationStatementStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "MedicationStatement Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9375,7 +9375,7 @@
   fhir:name [ fhir:v "MedicationStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9400,7 +9400,7 @@
   fhir:name [ fhir:v "MedicationDispenseStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Dispense Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9425,7 +9425,7 @@
   fhir:name [ fhir:v "MedicationDispenseStatusReasonCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Dispense Status Reason Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9450,7 +9450,7 @@
   fhir:name [ fhir:v "MedicationRequestIntentCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "MedicationRequest Intent Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9475,7 +9475,7 @@
   fhir:name [ fhir:v "MedicationRequestStatusCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "MedicationRequest Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9500,7 +9500,7 @@
   fhir:name [ fhir:v "NutritionIntakeStatusReason"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Nutrition Intake Status Reason Codes"] ; # 
   fhir:jurisdiction ( [
@@ -9525,7 +9525,7 @@
   fhir:name [ fhir:v "ServiceRequestStatusReasonCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International - Orders and Observations"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -9587,7 +9587,7 @@
   fhir:name [ fhir:v "TaskCode"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Codes indicating the type of action that is expected to be performed"] ; # 
   fhir:jurisdiction ( [
@@ -9986,7 +9986,7 @@
   fhir:name [ fhir:v "InventoryItemNameType"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "InventoryItem Name Type"] ; # 
   fhir:jurisdiction ( [
@@ -10007,7 +10007,7 @@
   fhir:name [ fhir:v "InventoryItemStatus"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "InventoryItem Status Codes"] ; # 
   fhir:jurisdiction ( [
@@ -10699,7 +10699,7 @@
   fhir:name [ fhir:v "MeasureDefinitionExample"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Clinical Quality Information Workgroup"] ; # 
   fhir:description [ fhir:v "Example Measure Definitions for the Measure Resource."] ; # 
   fhir:jurisdiction ( [
@@ -10724,7 +10724,7 @@
   fhir:name [ fhir:v "MeasureGroupExample"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Clinical Quality Information Workgroup"] ; # 
   fhir:description [ fhir:v "Example Measure Groups for the Measure Resource."] ; # 
   fhir:jurisdiction ( [
@@ -10817,7 +10817,7 @@
   fhir:name [ fhir:v "MeasureStratifierExample"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Clinical Quality Information Workgroup"] ; # 
   fhir:description [ fhir:v "This example code system defines codes for common types of measure stratification."] ; # 
   fhir:jurisdiction ( [
@@ -10842,7 +10842,7 @@
   fhir:name [ fhir:v "MeasureSupplementalDataExample"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Clinical Quality Information Workgroup"] ; # 
   fhir:description [ fhir:v "Identifier supplemental data in a population for measuring purposes."] ; # 
   fhir:jurisdiction ( [
@@ -10867,7 +10867,7 @@
   fhir:name [ fhir:v "MeasureReportStratifierValueExample"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Clinical Quality Information Workgroup"] ; # 
   fhir:description [ fhir:v "Example Region Value Measure Groups for the Measure Resource."] ; # 
   fhir:jurisdiction ( [
@@ -10892,7 +10892,7 @@
   fhir:name [ fhir:v "MedicationCostCategoryCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Cost Category Codes"] ; # 
   fhir:jurisdiction ( [
@@ -10917,7 +10917,7 @@
   fhir:name [ fhir:v "MedDispenseAdminLocationCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Medication Dispense Administration Location Codes"] ; # 
   fhir:jurisdiction ( [
@@ -11924,7 +11924,7 @@
   fhir:name [ fhir:v "OrganizationAffiliationRole"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This example value set defines a set of codes that can be used to indicate the role of one Organization in relation to its affiliation with another."] ; # 
   fhir:jurisdiction ( [
@@ -12115,7 +12115,7 @@
   fhir:name [ fhir:v "PaymentIssuerTypeCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project team"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -12146,7 +12146,7 @@
   fhir:name [ fhir:v "PaymentKindCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project team"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -12177,7 +12177,7 @@
   fhir:name [ fhir:v "ClaimProcessingCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR Project team"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -12412,7 +12412,7 @@
   fhir:name [ fhir:v "QualificationStatus"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Set of statuses that apply to qualifications of practitioners and organizations"] ; # 
   fhir:jurisdiction ( [
@@ -12437,7 +12437,7 @@
   fhir:name [ fhir:v "QuestionnaireAnswerConstraint"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Codes that describe the types of constraints possible on a question item that has a list of permitted answers"] ; # 
   fhir:jurisdiction ( [
@@ -12496,7 +12496,7 @@
   fhir:name [ fhir:v "QuestionnaireItemDisabledDisplay"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "QuestionnaireItemDisabledDisplay"] ; # 
   fhir:jurisdiction ( [
@@ -12623,7 +12623,7 @@
   fhir:name [ fhir:v "ReasonMedicationNotGivenCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process."] ; # 
   fhir:jurisdiction ( [
@@ -12916,7 +12916,7 @@
   fhir:name [ fhir:v "ResourceValidationMode"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "ResourceValidationMode"] ; # 
   fhir:jurisdiction ( [
@@ -13043,7 +13043,7 @@
   fhir:name [ fhir:v "RiskAssessmentMethod"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -13073,7 +13073,7 @@
   fhir:name [ fhir:v "RiskAssessmentOutcome"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -13299,7 +13299,7 @@
   fhir:name [ fhir:v "ICD10ProcedureCodes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This value set includes sample ICD-10 Procedure codes."] ; # 
   fhir:jurisdiction ( [
@@ -13664,7 +13664,7 @@
   fhir:name [ fhir:v "SubscriptionStatus"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "This codesystem defines a set of codes that can be used to filter Subscription triggers."] ; # 
   fhir:jurisdiction ( [
@@ -14863,7 +14863,7 @@
   fhir:name [ fhir:v "TransportCode"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Example codes for transport events demonstrating different types of transport activities"] ; # 
   fhir:jurisdiction ( [
@@ -15388,7 +15388,7 @@
   fhir:name [ fhir:v "PatientMedicineChangeTypes"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:kind [ fhir:v "codesystem"] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:38:40-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International"] ; # 
   fhir:description [ fhir:v "Example Item Flags for the List Resource. In this case, these are the kind of flags that would be used on a medication list at the end of a consultation."] ; # 
   fhir:jurisdiction ( [

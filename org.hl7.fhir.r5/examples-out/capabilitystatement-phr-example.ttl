@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "phr"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Prototype Capability Statement for September 2013 Connectathon</p>\n      <p>The server offers read and search support on the following resource types:</p>\n      <ul>\n        <li>Patient</li>\n        <li>DocumentReference</li>\n        <li>Condition</li>\n        <li>DiagnosticReport</li>\n      </ul>\n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Prototype Capability Statement for September 2013 Connectathon</p>\n      <p>The server offers read and search support on the following resource types:</p>\n      <ul>\n        <li>Patient</li>\n        <li>DocumentReference</li>\n        <li>Condition</li>\n        <li>DiagnosticReport</li>\n      </ul>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

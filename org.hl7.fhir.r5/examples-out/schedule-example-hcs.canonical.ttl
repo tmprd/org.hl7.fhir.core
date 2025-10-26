@@ -12,7 +12,7 @@
   fhir:id [ fhir:v "example-hcs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Burgers UMC, Posttraumatic Stress Disorder Clinic\n		</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      Burgers UMC, Posttraumatic Stress Disorder Clinic\n		</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:active [ fhir:v true] ; # 
   fhir:serviceCategory ( [

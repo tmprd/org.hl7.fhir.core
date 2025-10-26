@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "sound"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sound recording of speech example for Patient Henry Levin (MRN 12345):<br/><img src=\"#s11\" alt=\"diagram\"/></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sound recording of speech example for Patient Henry Levin (MRN 12345):<br/><img src=\"#s11\" alt=\"diagram\"/></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "current"] ; # 
   fhir:subject [

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "example"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Application Start for under service login \"Grahame\" (id: Grahame's Test HL7Connect)</div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Application Start for under service login \"Grahame\" (id: Grahame's Test HL7Connect)</div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:action [ fhir:v "E"] ; # 
   fhir:recorded [ fhir:v "2012-10-25T22:04:27+11:00"^^xsd:dateTime] ; # 

@@ -10,7 +10,7 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "genomicstudy-dataformat"] ; # 
   fhir:meta [
-     fhir:lastUpdated [ fhir:v "2025-10-25T11:27:59.321+11:00"^^xsd:dateTime ] ;
+     fhir:lastUpdated [ fhir:v "2025-10-27T04:38:40.801+11:00"^^xsd:dateTime ] ;
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      \n      \n      <ul>\n        \n        \n        \n        \n        <li>Include major genomic data file format as described by Broad Institue \n          \n          \n          \n          \n          <a href=\"http://hl7.org/fhir/genomicstudy-dataformat\">\n            \n            \n            \n            \n            <code>http://hl7.org/fhir/genomicstudy-dataformat</code>\n          \n          \n          \n          \n          </a>\n        \n        \n        \n        \n        </li>\n      \n      \n      \n      \n      </ul>\n    \n    \n    \n    \n    </div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      \n      \n      \n      <ul>\n        \n        \n        \n        \n        <li>Include major genomic data file format as described by Broad Institue \n          \n          \n          \n          \n          <a href=\"http://hl7.org/fhir/genomicstudy-dataformat\">\n            \n            \n            \n            \n            <code>http://hl7.org/fhir/genomicstudy-dataformat</code>\n          \n          \n          \n          \n          </a>\n        \n        \n        \n        \n        </li>\n      \n      \n      \n      \n      </ul>\n    \n    \n    \n    \n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;

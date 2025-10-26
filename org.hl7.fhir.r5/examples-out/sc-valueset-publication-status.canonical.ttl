@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "sc-publication-status"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap sc-publication-status</b></p><a name=\"sc-publication-status\"> </a><a name=\"hcsc-publication-status\"> </a><p>Mapping from <a href=\"valueset-publication-status.html\">PublicationStatus</a> to <a href=\"valueset-resource-status.html\">Canonical Status Codes for FHIR Resources</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"codesystem-publication-status.html\">PublicationStatus</a> to <a href=\"codesystem-resource-status.html\">Canonical Status Codes for FHIR Resources</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>draft</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>draft</td></tr><tr><td>active</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>active</td></tr><tr><td>retired</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>inactive</td></tr><tr><td>unknown</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>unknown</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap sc-publication-status</b></p><a name=\"sc-publication-status\"> </a><a name=\"hcsc-publication-status\"> </a><p>Mapping from <a href=\"valueset-publication-status.html\">PublicationStatus</a> to <a href=\"valueset-resource-status.html\">Canonical Status Codes for FHIR Resources</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"codesystem-publication-status.html\">PublicationStatus</a> to <a href=\"codesystem-resource-status.html\">Canonical Status Codes for FHIR Resources</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>draft</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>draft</td></tr><tr><td>active</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>active</td></tr><tr><td>retired</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>inactive</td></tr><tr><td>unknown</td><td><a href=\"codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>unknown</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [ fhir:v "http://hl7.org/fhir/ConceptMap/sc-publication-status"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
@@ -19,7 +19,7 @@
   fhir:title [ fhir:v "Canonical Mapping for \"PublicationStatus\""] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2025-10-24T20:27:59-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-26T13:30:26-04:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / FHIR Infrastructure"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
