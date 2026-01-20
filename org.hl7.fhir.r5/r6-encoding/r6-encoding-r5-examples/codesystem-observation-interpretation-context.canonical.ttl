@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/observation-interpretation-context> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-interpretation-context"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-11-04T20:54:11.305-05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem observation-interpretation-context</b></p><a name=\"observation-interpretation-context\"> </a><a name=\"hcobservation-interpretation-context\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/CodeSystem/observation-interpretation-context</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">diabetic<a name=\"observation-interpretation-context-diabetic\"> </a></td><td>Diabetic</td><td>The patient has diabetes mellitus, which may affect interpretation of glucose and other metabolic observations.</td></tr><tr><td style=\"white-space:nowrap\">fasting<a name=\"observation-interpretation-context-fasting\"> </a></td><td>Fasting</td><td>The patient was fasting at the time of the observation, which affects interpretation of metabolic and nutritional observations.</td></tr><tr><td style=\"white-space:nowrap\">paraplegic<a name=\"observation-interpretation-context-paraplegic\"> </a></td><td>Paraplegic</td><td>The patient has paraplegia, which may affect interpretation of mobility, neurological, and other physical observations.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "oo"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/CodeSystem/observation-interpretation-context"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/CodeSystem/observation-interpretation-context>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "ObservationInterpretationContextCodes"] ; # 
+  fhir:title [ fhir:v "Observation Interpretation Context Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Orders and Observations"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/orders" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes identifying contextual factors that affect interpretation of observations. This provides examples of conditions or states that may be critical to understanding the significance of an observation."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/observation-interpretation-context"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/observation-interpretation-context>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "diabetic" ] ;
+     fhir:display [ fhir:v "Diabetic" ] ;
+     fhir:definition [ fhir:v "The patient has diabetes mellitus, which may affect interpretation of glucose and other metabolic observations." ]
+  ] [
+     fhir:code [ fhir:v "fasting" ] ;
+     fhir:display [ fhir:v "Fasting" ] ;
+     fhir:definition [ fhir:v "The patient was fasting at the time of the observation, which affects interpretation of metabolic and nutritional observations." ]
+  ] [
+     fhir:code [ fhir:v "paraplegic" ] ;
+     fhir:display [ fhir:v "Paraplegic" ] ;
+     fhir:definition [ fhir:v "The patient has paraplegia, which may affect interpretation of mobility, neurological, and other physical observations." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

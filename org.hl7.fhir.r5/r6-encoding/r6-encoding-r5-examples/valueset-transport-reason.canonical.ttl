@@ -1,0 +1,134 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/transport-reason> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "transport-reason"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-11-04T20:54:11.305-05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet transport-reason</b></p><a name=\"transport-reason\"> </a><a name=\"hctransport-reason\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0003</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 2.13.0, the version found through the package references\"> version ?2.13.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-A01\">A01</a></td><td>ADT/ACK - Admit/visit notification</td><td>ADT/ACK - Admit/visit notification</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-A02\">A02</a></td><td>ADT/ACK - Transfer a patient</td><td>ADT/ACK - Transfer a patient</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-A03\">A03</a></td><td>ADT/ACK - Discharge/end visit</td><td>ADT/ACK -  Discharge/end visit</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-I12\">I12</a></td><td>REF/RRI - Patient referral</td><td>REF/RRI - Patient referral</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-O23\">O23</a></td><td>OMI - Imaging order</td><td>OMI - Imaging order</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-O27\">O27</a></td><td>OMB - Blood product order</td><td>OMB - Blood product order</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-S38\">S38</a></td><td>Containers Prepared for Specimen Collection</td><td>Describes the event before specimen collection, when containers have been prepared</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-R26\">R26</a></td><td>OSM - Unsolicited Specimen Shipment Manifest Message</td><td>OSM - Unsolicited Specimen Shipment Manifest Message</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-S47\">S47</a></td><td>Specimen Sent to Archive</td><td>Describes the event when a specimen has been moved into storage</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-S48\">S48</a></td><td>Specimen Retrieved from Archive</td><td>Describes the event when a specimen has been moved out of storage</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v2-0003.html#v2-0003-U14\">U14</a></td><td>INR/ACK – Automated Equipment Inventory Request</td><td>INR/ACK – Automated Equipment Inventory Request</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "draft"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 1
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/ValueSet/transport-reason"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/transport-reason>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "TransportReason"] ; # 
+  fhir:title [ fhir:v "Transport Reason Codes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-10-24T16:55:11+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Example ValueSet that can be used to describe reasons for transport."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0003"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0003>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "A01" ] ;
+         fhir:display [ fhir:v "ADT/ACK - Admit/visit notification" ]
+       ] [
+         fhir:code [ fhir:v "A02" ] ;
+         fhir:display [ fhir:v "ADT/ACK - Transfer a patient" ]
+       ] [
+         fhir:code [ fhir:v "A03" ] ;
+         fhir:display [ fhir:v "ADT/ACK - Discharge/end visit" ]
+       ] [
+         fhir:code [ fhir:v "I12" ] ;
+         fhir:display [ fhir:v "REF/RRI - Patient referral" ]
+       ] [
+         fhir:code [ fhir:v "O23" ] ;
+         fhir:display [ fhir:v "OMI - Imaging order" ]
+       ] [
+         fhir:code [ fhir:v "O27" ] ;
+         fhir:display [ fhir:v "OMB - Blood product order" ]
+       ] [
+         fhir:code [ fhir:v "S38" ] ;
+         fhir:display [ fhir:v "Containers Prepared for Specimen Collection" ]
+       ] [
+         fhir:code [ fhir:v "R26" ] ;
+         fhir:display [ fhir:v "OSM - Unsolicited Specimen Shipment Manifest Message" ]
+       ] [
+         fhir:code [ fhir:v "S47" ] ;
+         fhir:display [ fhir:v "Specimen Sent to Archive" ]
+       ] [
+         fhir:code [ fhir:v "S48" ] ;
+         fhir:display [ fhir:v "Specimen Retrieved from Archive" ]
+       ] [
+         fhir:code [ fhir:v "U14" ] ;
+         fhir:display [ fhir:v "INR/ACK – Automated Equipment Inventory Request" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

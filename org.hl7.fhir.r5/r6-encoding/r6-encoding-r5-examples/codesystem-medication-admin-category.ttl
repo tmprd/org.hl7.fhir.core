@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/medication-admin-category> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medication-admin-category"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-11-04T20:54:11.305-05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem medication-admin-category</b>\n      </p>\n      <a name=\"medication-admin-category\"> </a>\n      <a name=\"hcmedication-admin-category\"> </a>\n      <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n        <p style=\"margin-bottom: 0px\"/>\n        <p style=\"margin-bottom: 0px\">Profile: \n          <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a>\n        </p>\n      </div>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/CodeSystem/medication-admin-category</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">inpatient\n            <a name=\"medication-admin-category-inpatient\"> </a>\n          </td>\n          <td>Inpatient</td>\n          <td>Includes administrations for medications to be administered or consumed in an inpatient or acute care setting.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">outpatient\n            <a name=\"medication-admin-category-outpatient\"> </a>\n          </td>\n          <td>Outpatient</td>\n          <td>Includes administrations for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">community\n            <a name=\"medication-admin-category-community\"> </a>\n          </td>\n          <td>Community</td>\n          <td>Includes administrations for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">discharge\n            <a name=\"medication-admin-category-discharge\"> </a>\n          </td>\n          <td>Discharge</td>\n          <td>Includes administrations for medications created when the patient is being released from a facility.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "phx"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/CodeSystem/medication-admin-category"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/CodeSystem/medication-admin-category>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "MedicationAdministrationCategoryCodes"] ; # 
+  fhir:title [ fhir:v "Medication Administration Category Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "Medication Administration Category Codes \n **Note to Balloters: This code system is expected to move to [terminology.fhir.org](http://terminology.fhir.org)**"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/medication-admin-category"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/medication-admin-category>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "inpatient" ] ;
+     fhir:display [ fhir:v "Inpatient" ] ;
+     fhir:definition [ fhir:v "Includes administrations for medications to be administered or consumed in an inpatient or acute care setting." ]
+  ] [
+     fhir:code [ fhir:v "outpatient" ] ;
+     fhir:display [ fhir:v "Outpatient" ] ;
+     fhir:definition [ fhir:v "Includes administrations for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)." ]
+  ] [
+     fhir:code [ fhir:v "community" ] ;
+     fhir:display [ fhir:v "Community" ] ;
+     fhir:definition [ fhir:v "Includes administrations for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)." ]
+  ] [
+     fhir:code [ fhir:v "discharge" ] ;
+     fhir:display [ fhir:v "Discharge" ] ;
+     fhir:definition [ fhir:v "Includes administrations for medications created when the patient is being released from a facility." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/deviceassociation-association-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "deviceassociation-association-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-11-04T20:54:11.305-05:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem deviceassociation-association-status</b></p><a name=\"deviceassociation-association-status\"> </a><a name=\"hcdeviceassociation-association-status\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.org/fhir/CodeSystem/deviceassociation-association-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">implanted<a name=\"deviceassociation-association-status-implanted\"> </a></td><td>Implanted</td><td>The device is implanted in the patient.</td></tr><tr><td style=\"white-space:nowrap\">explanted<a name=\"deviceassociation-association-status-explanted\"> </a></td><td>Explanted</td><td>The device is no longer implanted in the patient. Note that this is not the value to be used for devices that have never been implanted. In those cases, no value or a specific value can be used.</td></tr><tr><td style=\"white-space:nowrap\">attached<a name=\"deviceassociation-association-status-attached\"> </a></td><td>Attached</td><td>The device is attached to the patient but not implanted in the patient.</td></tr><tr><td style=\"white-space:nowrap\">on<a name=\"deviceassociation-association-status-on\"> </a></td><td>On</td><td>The device is powered on / operationally active.</td></tr><tr><td style=\"white-space:nowrap\">off<a name=\"deviceassociation-association-status-off\"> </a></td><td>Off</td><td>The device is powered off / not operationally active.</td></tr><tr><td style=\"white-space:nowrap\">standby<a name=\"deviceassociation-association-status-standby\"> </a></td><td>Standby</td><td>The device is powered and available but not currently in active operation.</td></tr><tr><td style=\"white-space:nowrap\">defective<a name=\"deviceassociation-association-status-defective\"> </a></td><td>Defective</td><td>The device is defective.</td></tr><tr><td style=\"white-space:nowrap\">abandoned<a name=\"deviceassociation-association-status-abandoned\"> </a></td><td>Abandoned</td><td>The implanted device remains in the patient's body and is no longer in use.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "oo"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/CodeSystem/deviceassociation-association-status"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/CodeSystem/deviceassociation-association-status>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot3"] ; # 
+  fhir:name [ fhir:v "DeviceAssociationAssociationStatusCodes"] ; # 
+  fhir:title [ fhir:v "DeviceAssociation Association Status Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "Codes that describe the state of a device’s association (e.g., implanted, attached, on, off, standby, defective)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "implanted" ] ;
+     fhir:display [ fhir:v "Implanted" ] ;
+     fhir:definition [ fhir:v "The device is implanted in the patient." ]
+  ] [
+     fhir:code [ fhir:v "explanted" ] ;
+     fhir:display [ fhir:v "Explanted" ] ;
+     fhir:definition [ fhir:v "The device is no longer implanted in the patient. Note that this is not the value to be used for devices that have never been implanted. In those cases, no value or a specific value can be used." ]
+  ] [
+     fhir:code [ fhir:v "attached" ] ;
+     fhir:display [ fhir:v "Attached" ] ;
+     fhir:definition [ fhir:v "The device is attached to the patient but not implanted in the patient." ]
+  ] [
+     fhir:code [ fhir:v "on" ] ;
+     fhir:display [ fhir:v "On" ] ;
+     fhir:definition [ fhir:v "The device is powered on / operationally active." ]
+  ] [
+     fhir:code [ fhir:v "off" ] ;
+     fhir:display [ fhir:v "Off" ] ;
+     fhir:definition [ fhir:v "The device is powered off / not operationally active." ]
+  ] [
+     fhir:code [ fhir:v "standby" ] ;
+     fhir:display [ fhir:v "Standby" ] ;
+     fhir:definition [ fhir:v "The device is powered and available but not currently in active operation." ]
+  ] [
+     fhir:code [ fhir:v "defective" ] ;
+     fhir:display [ fhir:v "Defective" ] ;
+     fhir:definition [ fhir:v "The device is defective." ]
+  ] [
+     fhir:code [ fhir:v "abandoned" ] ;
+     fhir:display [ fhir:v "Abandoned" ] ;
+     fhir:definition [ fhir:v "The implanted device remains in the patient's body and is no longer in use." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
