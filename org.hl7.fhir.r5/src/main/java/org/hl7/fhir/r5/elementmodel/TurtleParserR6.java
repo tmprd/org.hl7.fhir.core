@@ -360,7 +360,7 @@ public class TurtleParserR6 extends ParserBase {
     subject.linkedPredicate(FHIR_BASE_PREFIX + "nodeRole", FHIR_BASE_PREFIX + "treeRoot", linkResolver == null ? null : linkResolver.resolvePage("rdf.html#tree-root"), null);
 
     for (Element child : e.getChildren()) {
-      composeElement(section, subject, child, null);
+      composeElement(section, subject, child, e, e);
     }
 
   }
@@ -376,18 +376,42 @@ public class TurtleParserR6 extends ParserBase {
     return null;
   }
 
+  /**
+   * Resolves a reference using default URI rules when no enclosing resource context is available.
+   */
   protected String getReferenceURI(String ref) {
-    if (ref != null && (ref.startsWith("http://") || ref.startsWith("https://") || ref.startsWith("urn:") || ref.startsWith("#")))
-      return "<" + ref + ">";
-    else if (base != null && ref != null && ref.contains("/"))
-      return "<" + Utilities.appendForwardSlash(base) + ref + ">";
-    else if (ref != null) {
-        return "fhir:" + ref;
-    } else return null;
+    return getReferenceURI(ref, null);
   }
 
-  protected void decorateReference(Complex t, Element coding) {
-    String refURI = getReferenceURI(coding.getChildValue("reference"));
+  /**
+   * Resolves relative fragment references against the current resource subject so `#id` links
+   * become absolute fragment URIs in the generated Turtle.
+   */
+  protected String getReferenceURI(String ref, Element resourceContext) {
+    if (ref == null) {
+      return null;
+    }
+    if (ref.startsWith("#")) {
+      String resourceSubjectId = resourceContext == null ? null : genSubjectId(resourceContext);
+      if (!Utilities.noString(resourceSubjectId)) {
+        return resourceSubjectId.substring(0, resourceSubjectId.length() - 1) + ref + ">";
+      }
+      return "<" + ref + ">";
+    }
+    if (ref.startsWith("http://") || ref.startsWith("https://") || ref.startsWith("urn:")) {
+      return "<" + ref + ">";
+    }
+    if (base != null && ref.contains("/")) {
+      return "<" + Utilities.appendForwardSlash(base) + ref + ">";
+    }
+    return "fhir:" + ref;
+  }
+
+  /**
+   * Emits the RDF link predicate for a Reference element using the current resource context.
+   */
+  protected void decorateReference(Complex t, Element coding, Element resourceContext) {
+    String refURI = getReferenceURI(coding.getChildValue("reference"), resourceContext);
     if(refURI != null)
       t.linkedPredicate(FHIR_BASE_PREFIX + "l", refURI, linkResolver == null ? null : linkResolver.resolvePage("rdf.html#reference"), null);
   }
@@ -402,6 +426,19 @@ public class TurtleParserR6 extends ParserBase {
       return "<" + Utilities.pathURL(base, e.getType(), id) + ">";
   }
 
+  /**
+   * Builds the named subject URI for a contained resource using the parent resource URI plus
+   * the contained resource id as a fragment.
+   */
+  private String genContainedSubjectId(Element parent, Element element) {
+    String parentSubjectId = genSubjectId(parent);
+    String containedId = element.getChildValue("id");
+    if (Utilities.noString(parentSubjectId) || containedId == null) {
+      return null;
+    }
+    return parentSubjectId.substring(0, parentSubjectId.length() - 1) + "#" + containedId + ">";
+  }
+
   private String urlescape(String s) {
     StringBuilder b = new StringBuilder();
     for (char ch : s.toCharArray()) {
@@ -413,7 +450,11 @@ public class TurtleParserR6 extends ParserBase {
     return b.toString();
   }
 
-  private void composeElement(Section section, Complex ctxt, Element element, Element parent) throws FHIRException {
+  /**
+   * Composes an element into Turtle while carrying the enclosing resource so relative canonical
+   * and reference values can be expanded against the correct subject URI.
+   */
+  private void composeElement(Section section, Complex ctxt, Element element, Element parent, Element resourceContext) throws FHIRException {
     //    "Extension".equals(element.getType())?
     //            (element.getProperty().getDefinition().getIsModifier()? "modifierExtension" : "extension") ; 
 
@@ -430,6 +471,11 @@ public class TurtleParserR6 extends ParserBase {
     Complex t;
     if (element.getSpecial() == SpecialElement.BUNDLE_ENTRY && parent != null && parent.getNamedChildValue("fullUrl") != null) {
       String url = "<"+parent.getNamedChildValue("fullUrl")+">";
+      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
+      t = section.subject(url);
+    } else if (element.getSpecial() == SpecialElement.CONTAINED && parent != null && genContainedSubjectId(parent, element) != null) {
+      // Contained resource
+      String url = genContainedSubjectId(parent, element);
       ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
       t = section.subject(url);
     } else {
@@ -450,9 +496,9 @@ public class TurtleParserR6 extends ParserBase {
         t.linkedPredicate(FHIR_BASE_PREFIX + "v", ttlLiteral(elementLiteral, element.getType()), linkResolver == null ? null : linkResolver.resolveType(element.getType()), null);
         if (element.getXhtml() != null) {
           String s = new XhtmlComposer(true, false).compose(element.getXhtml());
-          linkURI(t, s, element.getType());
+          linkURI(t, s, element.getType(), resourceContext);
         } else {
-          linkURI(t, element.getValue(), element.getType());
+          linkURI(t, element.getValue(), element.getType(), resourceContext);
         }
     }
       
@@ -460,7 +506,7 @@ public class TurtleParserR6 extends ParserBase {
     if ("Coding".equals(element.getType()))
       decorateCoding(t, element, section);
     if (Utilities.existsInList(element.getType(), "Reference"))
-      decorateReference(t, element);
+      decorateReference(t, element, resourceContext);
 
     if("canonical".equals(element.getType())) {
       String refURI = element.primitiveValue();
@@ -472,7 +518,7 @@ public class TurtleParserR6 extends ParserBase {
     }
 
     if("Reference".equals(element.getType())) {
-      String refURI = getReferenceURI(element.getChildValue("reference"));
+      String refURI = getReferenceURI(element.getChildValue("reference"), resourceContext);
       if (refURI != null) {
         String uriType = getURIType(refURI);
         if(uriType != null && !section.hasSubject(refURI))
@@ -480,8 +526,10 @@ public class TurtleParserR6 extends ParserBase {
       }
     }
 
+    // Once recursion enters another resource, fragment references should resolve against that resource.
+    Element nextResourceContext = element.isResource() ? element : resourceContext;
     for (Element child : element.getChildren()) {
-      composeElement(section, t, child, element);
+      composeElement(section, t, child, element, nextResourceContext);
     }
   }
 
@@ -571,7 +619,11 @@ public class TurtleParserR6 extends ParserBase {
     }		
   }
 
-  private void linkURI(Complex t, String value, String type) {
+  /**
+   * Adds the RDF link predicate for URI-like primitive values, expanding fragment canonicals
+   * against the current resource when necessary.
+   */
+  private void linkURI(Complex t, String value, String type, Element resourceContext) {
 	if (type.equals("canonical") || type.equals("oid") || type.equals("uri") || type.equals("url") || type.equals("uuid")) {
 	  String versioned = value;
 	  if (versioned.contains("|")) {
@@ -583,9 +635,9 @@ public class TurtleParserR6 extends ParserBase {
 		  else separator = "?";
 		  versioned = url + separator + "version=" + version;
 	  }
-	  String refURI = getReferenceURI(versioned);
+    String refURI = getReferenceURI(versioned, resourceContext);
 	  if (refURI != null)
-        t.linkedPredicate("fhir:l", getReferenceURI(versioned), linkResolver == null ? null : linkResolver.resolveType(type), null);
+          t.linkedPredicate("fhir:l", refURI, linkResolver == null ? null : linkResolver.resolveType(type), null);
     }
   }
 
