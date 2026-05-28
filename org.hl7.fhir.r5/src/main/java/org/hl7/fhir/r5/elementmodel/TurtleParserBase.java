@@ -51,6 +51,7 @@ import org.hl7.fhir.r5.extensions.ExtensionDefinitions;
 import org.hl7.fhir.r5.extensions.ExtensionUtilities;
 import org.hl7.fhir.r5.formats.IParser.OutputStyle;
 import org.hl7.fhir.r5.model.ElementDefinition.TypeRefComponent;
+import org.hl7.fhir.r5.model.NamingSystem;
 import org.hl7.fhir.r5.model.StructureDefinition;
 import org.hl7.fhir.r5.utils.SnomedExpressions;
 import org.hl7.fhir.r5.utils.SnomedExpressions.Expression;
@@ -81,6 +82,7 @@ public abstract class TurtleParserBase extends ParserBase {
   public static String FHIR_URI_BASE = "http://hl7.org/fhir/";
   public static String FHIR_VERSION_BASE = "http://build.fhir.org/";
   public static String FHIR_BASE_PREFIX = "fhir:";
+  public static String RDF_TYPE_PREDICATE = "a";
 
   protected TurtleParserBase(IWorkerContext context) {
     super(context);
@@ -347,9 +349,9 @@ public abstract class TurtleParserBase extends ParserBase {
 
     Subject subject;
     if (hasModifierExtension(e)) 
-      subject = section.triple(subjId, "a", FHIR_BASE_PREFIX + "_" + className(e.getType()));
+      subject = section.triple(subjId, RDF_TYPE_PREDICATE, FHIR_BASE_PREFIX + "_" + className(e.getType()));
     else 
-      subject = section.triple(subjId, "a", FHIR_BASE_PREFIX + className(e.getType()));
+      subject = section.triple(subjId, RDF_TYPE_PREDICATE, FHIR_BASE_PREFIX + className(e.getType()));
 
 
     composeResourceMetadata(subject, e);
@@ -436,19 +438,34 @@ public abstract class TurtleParserBase extends ParserBase {
     if (style == OutputStyle.PRETTY) {
       comment = String.join(", ", element.getComments());
     }
+
+    String link = linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty());
+    boolean isList = element.getProperty().isList();
+
     Complex t;
     if (element.getSpecial() == SpecialElement.BUNDLE_ENTRY && parent != null && parent.getNamedChildValue("fullUrl") != null) {
       String url = "<"+parent.getNamedChildValue("fullUrl")+">";
-      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
-      t = section.subject(url);
+      // Bundle.entry.resource is 0..1, so emit a plain object (not an RDF list)
+      // even though the surrounding entry property is a list.
+      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, link, comment, false);
+      // Always create a new subject block for the bundle entry's resource so
+      // that bundles containing multiple entries with the same fullUrl
+      // (e.g. different versions of the same resource) are serialized as
+      // separate Turtle subject blocks rather than being merged together.
+      t = section.newSubject(url);
     } else {
-      t = ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
+      t = ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, link, comment, isList);
     }
+    
+    var elementLink = linkResolver == null ? null : linkResolver.resolveType(element.fhirType());
+    
     if (element.getProperty().getName().endsWith("[x]")) {
-      t.linkedPredicate("a", FHIR_BASE_PREFIX+className(element.fhirType()), linkResolver == null ? null : linkResolver.resolveType(element.fhirType()), null);
+      t.linkedPredicate(RDF_TYPE_PREDICATE, FHIR_BASE_PREFIX+className(element.fhirType()), elementLink, null);
     }
+
     if (element.getSpecial() != null)
-      t.linkedPredicate("a", FHIR_BASE_PREFIX+className(element.fhirType()), linkResolver == null ? null : linkResolver.resolveType(element.fhirType()), null);
+      t.linkedPredicate(RDF_TYPE_PREDICATE, FHIR_BASE_PREFIX+className(element.fhirType()), elementLink, null);
+    
     if (element.hasValue()) {
         String elementLiteral = null;
         if ("xhtml".equals(element.getType())) {
@@ -460,26 +477,30 @@ public abstract class TurtleParserBase extends ParserBase {
         decoratePrimitiveValue(t, element);
     }
 
-    if ("Coding".equals(element.getType()))
-      decorateCoding(t, element, section);
-    if (Utilities.existsInList(element.getType(), "Reference"))
-      decorateReference(t, element);
+    var elementType = element.getType();
 
-    if("canonical".equals(element.getType())) {
+    if ("Coding".equals(element.getType())) {
+      decorateCoding(t, element, section);
+    }
+
+    if (Utilities.existsInList(elementType, "Reference")) {
+      decorateReference(t, element);
+    }
+
+    if ("canonical".equals(elementType)) {
       String refURI = element.primitiveValue();
       if (refURI != null) {
         String uriType = getURIType(refURI);
         if(uriType != null && !section.hasSubject(refURI))
-          section.triple(refURI, "a", FHIR_BASE_PREFIX + className(uriType));
+          section.triple(refURI, RDF_TYPE_PREDICATE, FHIR_BASE_PREFIX + className(uriType));
       }
     }
-
-    if("Reference".equals(element.getType())) {
+    if ("Reference".equals(elementType)) {
       String refURI = getReferenceURI(element.getChildValue("reference"));
       if (refURI != null) {
         String uriType = getURIType(refURI);
         if(uriType != null && !section.hasSubject(refURI))
-          section.triple(refURI, "a", FHIR_BASE_PREFIX + className(uriType));
+          section.triple(refURI, RDF_TYPE_PREDICATE, FHIR_BASE_PREFIX + className(uriType));
       }
     }
 
@@ -582,13 +603,13 @@ public abstract class TurtleParserBase extends ParserBase {
       if (code.contains(":") || code.contains("="))
         generateLinkedPredicate(t, code);
       else
-        t.linkedPredicate("a", "sct:" + urlescape(code), null, null);
+        t.linkedPredicate(RDF_TYPE_PREDICATE, "sct:" + urlescape(code), null, null);
     } else if ("http://loinc.org".equals(system)) {
       t.prefix("loinc", "https://loinc.org/rdf/");
-      t.linkedPredicate("a", "loinc:"+urlescape(code).toUpperCase(), null, null);
+      t.linkedPredicate(RDF_TYPE_PREDICATE, "loinc:"+urlescape(code).toUpperCase(), null, null);
     } else if ("https://www.nlm.nih.gov/mesh".equals(system)) {
       t.prefix("mesh", "http://id.nlm.nih.gov/mesh/");
-      t.linkedPredicate("a", "mesh:"+urlescape(code), null, null);
+      t.linkedPredicate(RDF_TYPE_PREDICATE, "mesh:"+urlescape(code), null, null);
     }  
   }
 

@@ -264,6 +264,19 @@ public class Turtle {
 			return s;
 		}
 
+		/**
+		 * Always creates a new Subject for the given id, even if one already
+		 * exists in this section. Use this when distinct serialized blocks are
+		 * required for resources that share the same URI (e.g. multiple Bundle
+		 * entries with identical fullUrl values referencing different versions).
+		 */
+		public Subject newSubject(String subject) {
+			Subject s = new Subject();
+			s.id = subject;
+			subjects.add(s);
+			return s;
+		}
+
     public boolean hasSubject(String subject) {
       for (Subject ss : subjects) 
         if (ss.id.equals(subject))
