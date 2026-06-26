@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Group/example-outcomedefinition-hba1c-at-12-months> a fhir:Group ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-outcomedefinition-hba1c-at-12-months"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "6" ] ;
+     fhir:lastUpdated [ fhir:v "2025-03-15T21:09:28.653Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://hl7.org/fhir/uv/ebm/StructureDefinition/outcome-definition"^^xsd:anyURI ;
+       fhir:l <https://hl7.org/fhir/uv/ebm/StructureDefinition/outcome-definition>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/artifact-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/artifact-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "Brian S. Alper" ]
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "HbA1c at 12 months"] ; # 
+  fhir:description [ fhir:v "HbA1c at 12 months as the endpoint (outcome measure)"] ; # 
+  fhir:membership [ fhir:v "conceptual"] ; # 
+  fhir:characteristic ( [
+     fhir:code [
+       fhir:text [ fhir:v "Observation" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a loinc:4548-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "4548-4" ] ;
+         fhir:display [ fhir:v "Hemoglobin A1c/Hemoglobin.total in Blood" ]
+       ] )
+     ] ;
+     fhir:exclude [ fhir:v false ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
