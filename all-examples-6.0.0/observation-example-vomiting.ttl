@@ -16,8 +16,8 @@
      fhir:text [ fhir:v "Signs and Symptoms" ]
   ] ) ; # 
   fhir:code [
+     a loinc:45708-5, sct:249497008 ;
      fhir:coding ( [
-       a loinc:45708-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -25,7 +25,6 @@
        fhir:code [ fhir:v "45708-5" ] ;
        fhir:display [ fhir:v "Vomiting [Minimum Data Set]" ]
      ] [
-       a sct:249497008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -43,9 +42,8 @@
      fhir:v "2016-05-18T22:33:22Z"^^xsd:dateTime
   ] ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:2667000 ;
      fhir:coding ( [
-       a sct:2667000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -12,8 +12,8 @@
   fhir:id [ fhir:v "f201"] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:code [
+     a sct:367336001 ;
      fhir:coding ( [
-       a sct:367336001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -39,8 +39,8 @@
   ] ; # 
   fhir:performer ( [
      fhir:function [
+       a sct:310512001 ;
        fhir:coding ( [
-         a sct:310512001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -61,8 +61,8 @@
      ]
   ] ) ; # 
   fhir:bodySite ( [
+     a sct:272676008 ;
      fhir:coding ( [
-       a sct:272676008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

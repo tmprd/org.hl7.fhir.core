@@ -194,6 +194,7 @@
      ] )
   ] ; # 
   fhir:category ( [
+     a sct:439401001 ;
      fhir:coding ( [
        fhir:system [
          fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ;
@@ -202,7 +203,6 @@
        fhir:code [ fhir:v "encounter-diagnosis" ] ;
        fhir:display [ fhir:v "Encounter Diagnosis" ]
      ] [
-       a sct:439401001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -212,8 +212,8 @@
      ] )
   ] ) ; # 
   fhir:severity [
+     a sct:24484000 ;
      fhir:coding ( [
-       a sct:24484000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -223,8 +223,8 @@
      ] )
   ] ; # 
   fhir:code [
+     a sct:39065001 ;
      fhir:coding ( [
-       a sct:39065001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -234,8 +234,8 @@
      ] )
   ] ; # 
   fhir:bodySite ( [
+     a sct:49521004 ;
      fhir:coding ( [
-       a sct:49521004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

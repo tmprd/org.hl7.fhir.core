@@ -12,8 +12,8 @@
   fhir:id [ fhir:v "physicaltherapy-neck"] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:category ( [
+     a sct:119600000 ;
      fhir:coding ( [
-       a sct:119600000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -23,8 +23,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a sct:399010004 ;
      fhir:coding ( [
-       a sct:399010004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -51,8 +51,8 @@
   ] ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:298253002 ;
        fhir:coding ( [
-         a sct:298253002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -63,8 +63,8 @@
      ]
   ] ) ; # 
   fhir:bodySite ( [
+     a sct:410737007 ;
      fhir:coding ( [
-       a sct:410737007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

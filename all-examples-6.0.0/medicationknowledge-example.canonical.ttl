@@ -25,8 +25,8 @@
   fhir:name ( [ fhir:v "Vancomycin Hydrochloride (VANCOMYCIN HYDROCHLORIDE)"] ) ; # 
   fhir:definitional [
      fhir:doseForm [
+       a sct:385268001 ;
        fhir:coding ( [
-         a sct:385268001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

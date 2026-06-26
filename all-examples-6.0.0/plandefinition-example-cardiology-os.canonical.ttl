@@ -115,8 +115,8 @@
        fhir:text [ fhir:v "Metoprolol Tartrate 25 MG" ]
      ] ;
      fhir:doseForm [
+       a sct:385055001 ;
        fhir:coding ( [
-         a sct:385055001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -225,8 +225,8 @@
        fhir:text [ fhir:v "Metoprolol Tartrate 50 MG" ]
      ] ;
      fhir:doseForm [
+       a sct:385055001 ;
        fhir:coding ( [
-         a sct:385055001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -415,8 +415,8 @@
        fhir:text [ fhir:v "Nitroglycerin 0.4 MG" ]
      ] ;
      fhir:doseForm [
+       a sct:385055001 ;
        fhir:coding ( [
-         a sct:385055001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -574,9 +574,8 @@
        fhir:code [ fhir:v "focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:56265001 ;
        fhir:coding ( [
-         a sct:56265001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

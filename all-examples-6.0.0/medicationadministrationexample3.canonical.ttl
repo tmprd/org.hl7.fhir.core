@@ -26,8 +26,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "on-hold"] ; # 
   fhir:statusReason ( [
+     a sct:373147003 ;
      fhir:coding ( [
-       a sct:373147003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

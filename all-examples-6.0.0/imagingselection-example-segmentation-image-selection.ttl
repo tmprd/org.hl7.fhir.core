@@ -78,8 +78,8 @@
   fhir:frameOfReferenceUid [ fhir:v "1.2.840.113747.20080222.234082332589842666931650220811572.0"] ; # 
   fhir:bodySite [
      fhir:concept [
+       a sct:74670003 ;
        fhir:coding ( [
-         a sct:74670003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

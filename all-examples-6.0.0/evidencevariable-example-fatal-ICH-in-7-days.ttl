@@ -20,8 +20,8 @@
      fhir:membership [ fhir:v "conceptual" ] ;
      fhir:characteristic ( [
        fhir:code [
+         a sct:260905004 ;
          fhir:coding ( [
-           a sct:260905004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -31,9 +31,8 @@
          ] )
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, sct:1386000 ;
          fhir:coding ( [
-           a sct:1386000 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -48,9 +47,8 @@
          fhir:text [ fhir:v "resulting in" ]
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, sct:419620001 ;
          fhir:coding ( [
-           a sct:419620001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -68,8 +66,8 @@
      fhir:membership [ fhir:v "definitional" ] ;
      fhir:characteristic ( [
        fhir:code [
+         a sct:260905004 ;
          fhir:coding ( [
-           a sct:260905004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

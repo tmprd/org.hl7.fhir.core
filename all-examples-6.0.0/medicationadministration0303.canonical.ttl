@@ -57,8 +57,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "4.5 grams in D5W 250 ml. IV every 6 hours. Infuse over 30 min at 8L/min " ] ;
      fhir:route [
+       a sct:47625008 ;
        fhir:coding ( [
-         a sct:47625008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

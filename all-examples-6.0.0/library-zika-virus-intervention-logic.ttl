@@ -71,9 +71,8 @@
        fhir:code [ fhir:v "user" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:309343006 ;
        fhir:coding ( [
-         a sct:309343006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

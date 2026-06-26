@@ -16,8 +16,8 @@
      fhir:manufacturer [ fhir:v "Acme Devices, Inc" ] ;
      fhir:lotNumber [ fhir:v "1234-5678" ] ;
      fhir:type ( [
+       a sct:14106009 ;
        fhir:coding ( [
-         a sct:14106009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -29,8 +29,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:code [
+     a sct:25267002 ;
      fhir:coding ( [
-       a sct:25267002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

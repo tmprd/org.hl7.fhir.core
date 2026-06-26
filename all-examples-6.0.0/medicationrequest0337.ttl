@@ -14,8 +14,8 @@
      a fhir:Medication ;
      fhir:id [ fhir:v "med0337" ] ;
      fhir:doseForm [
+       a sct:385219001 ;
        fhir:coding ( [
-         a sct:385219001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

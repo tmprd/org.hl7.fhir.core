@@ -23,8 +23,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "available"] ; # 
   fhir:type [
+     a sct:122555007 ;
      fhir:coding ( [
-       a sct:122555007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

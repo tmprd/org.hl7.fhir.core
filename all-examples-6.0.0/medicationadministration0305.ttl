@@ -28,8 +28,8 @@
        fhir:reference [ fhir:v "Organization/mmanu" ]
      ] ;
      fhir:doseForm [
+       a sct:421637006 ;
        fhir:coding ( [
-         a sct:421637006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -72,8 +72,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "1.8 mg/kg IV infusion over 30 minutes" ] ;
      fhir:route [
+       a sct:255560000 ;
        fhir:coding ( [
-         a sct:255560000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

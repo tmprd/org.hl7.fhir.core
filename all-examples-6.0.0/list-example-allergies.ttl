@@ -30,8 +30,8 @@
   fhir:mode [ fhir:v "working"] ; # 
   fhir:title [ fhir:v "Current Allergy List"] ; # 
   fhir:code [
+     a loinc:52472-8 ;
      fhir:coding ( [
-       a loinc:52472-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

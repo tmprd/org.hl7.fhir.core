@@ -24,8 +24,8 @@
      fhir:display [ fhir:v "Lactose Intolerance" ]
   ] ) ; # 
   fhir:excludeFoodModifier ( [
+     a sct:102261002 ;
      fhir:coding ( [
-       a sct:102261002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -36,8 +36,8 @@
   ] ) ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:439111000124103 ;
        fhir:coding ( [
-         a sct:439111000124103 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -46,8 +46,8 @@
          fhir:display [ fhir:v "Mechanically altered diet" ]
        ] )
      ] [
+       a sct:1255164005 ;
        fhir:coding ( [
-         a sct:1255164005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -56,8 +56,8 @@
          fhir:display [ fhir:v "Halal diet" ]
        ] )
      ] [
+       a sct:425458000 ;
        fhir:coding ( [
-         a sct:425458000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -66,8 +66,8 @@
          fhir:display [ fhir:v "Lactose-free diet" ]
        ] )
      ] [
+       a sct:437421000124105 ;
        fhir:coding ( [
-         a sct:437421000124105 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -76,8 +76,8 @@
          fhir:display [ fhir:v "Decreased sodium diet" ]
        ] )
      ] [
+       a sct:439061000124104 ;
        fhir:coding ( [
-         a sct:439061000124104 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -89,8 +89,8 @@
      fhir:schedule [ ] ;
      fhir:nutrient ( [
        fhir:modifier [
+         a sct:39972003 ;
          fhir:coding ( [
-           a sct:39972003 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

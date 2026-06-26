@@ -58,8 +58,8 @@
   fhir:version [ fhir:v "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21"] ; # 
   fhir:status [ fhir:v "current"] ; # 
   fhir:type [
+     a loinc:55107-7 ;
      fhir:coding ( [
-       a loinc:55107-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -68,8 +68,8 @@
      ] )
   ] ; # 
   fhir:category ( [
+     a loinc:11369-6 ;
      fhir:coding ( [
-       a loinc:11369-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -106,8 +106,8 @@
 #    <reference value="Encounter/example"/>
 #  </context>
   fhir:facilityType [
+     a sct:82242000 ;
      fhir:coding ( [
-       a sct:82242000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -116,8 +116,8 @@
      ] )
   ] ; # 
   fhir:practiceSetting [
+     a sct:408467006 ;
      fhir:coding ( [
-       a sct:408467006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

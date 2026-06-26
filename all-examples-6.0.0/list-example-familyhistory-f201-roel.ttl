@@ -21,8 +21,8 @@
        fhir:display [ fhir:v "Roel" ]
      ] ;
      fhir:relationship [
+       a sct:72705000 ;
        fhir:coding ( [
-         a sct:72705000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -37,8 +37,8 @@
      ] ;
      fhir:condition ( [
        fhir:code [
+         a sct:39839004 ;
          fhir:coding ( [
-           a sct:39839004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -58,8 +58,8 @@
        fhir:display [ fhir:v "Roel" ]
      ] ;
      fhir:relationship [
+       a sct:38048003 ;
        fhir:coding ( [
-         a sct:38048003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -74,8 +74,8 @@
      ] ;
      fhir:condition ( [
        fhir:code [
+         a sct:115665000 ;
          fhir:coding ( [
-           a sct:115665000 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -85,8 +85,8 @@
          ] )
        ] ;
        fhir:outcome [
+         a sct:419099009 ;
          fhir:coding ( [
-           a sct:419099009 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -100,8 +100,8 @@
   fhir:status [ fhir:v "current"] ; # 
   fhir:mode [ fhir:v "snapshot"] ; # 
   fhir:code [
+     a loinc:8670-2 ;
      fhir:coding ( [
-       a loinc:8670-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

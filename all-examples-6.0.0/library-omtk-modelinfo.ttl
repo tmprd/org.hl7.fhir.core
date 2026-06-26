@@ -57,9 +57,8 @@
        fhir:display [ fhir:v "Clinical Focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:182888003 ;
        fhir:coding ( [
-         a sct:182888003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -78,9 +77,8 @@
        fhir:display [ fhir:v "Clinical Focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:82423001 ;
        fhir:coding ( [
-         a sct:82423001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

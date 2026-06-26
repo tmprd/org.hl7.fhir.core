@@ -29,8 +29,8 @@
      fhir:text [ fhir:v "Vital Signs" ]
   ] ) ; # 
   fhir:code [
+     a loinc:8310-5 ;
      fhir:coding ( [
-       a loinc:8310-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

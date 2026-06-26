@@ -36,8 +36,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:85354-9 ;
      fhir:coding ( [
-       a loinc:85354-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -71,8 +71,8 @@
      fhir:text [ fhir:v "Below low normal" ]
   ] ) ; # 
   fhir:bodySite [
+     a sct:368209003 ;
      fhir:coding ( [
-       a sct:368209003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -83,8 +83,8 @@
   ] ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:8480-6, sct:271649006 ;
        fhir:coding ( [
-         a loinc:8480-6 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -92,7 +92,6 @@
          fhir:code [ fhir:v "8480-6" ] ;
          fhir:display [ fhir:v "Systolic blood pressure" ]
        ] [
-         a sct:271649006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -120,8 +119,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:8462-4 ;
        fhir:coding ( [
-         a loinc:8462-4 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

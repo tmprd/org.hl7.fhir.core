@@ -53,8 +53,8 @@
 #    than using terminology based reasoning
   fhir:criticality [ fhir:v "high"] ; # there is no question that the allergy is real and serious
   fhir:code [
+     a sct:227493005 ;
      fhir:coding ( [
-       a sct:227493005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -90,8 +90,8 @@
      ] ; # It's possible to list specific things to which the patient responded,\n      e.g. chocolate (that happened to contain cashew nuts). This event has\n      such a specific substance. Note that systems should ensure that what\n      goes in here does not conflict with the substance above, and systems\n      processing the data can be sure that what is here does not contravene\n      the substance above
      fhir:manifestation ( [
        fhir:concept [
+         a sct:39579001 ;
          fhir:coding ( [
-           a sct:39579001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -105,8 +105,8 @@
      fhir:onset [ fhir:v "2012-06-12"^^xsd:date ] ;
      fhir:severity [ fhir:v "severe" ] ;
      fhir:exposureRoute [
+       a sct:34206005 ;
        fhir:coding ( [
-         a sct:34206005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -118,8 +118,8 @@
   ] [
      fhir:manifestation ( [
        fhir:concept [
+         a sct:64305001 ;
          fhir:coding ( [
-           a sct:64305001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

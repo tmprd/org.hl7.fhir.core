@@ -50,8 +50,8 @@
   fhir:reaction ( [
      fhir:manifestation ( [
        fhir:concept [
+         a sct:247472004 ;
          fhir:coding ( [
-           a sct:247472004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

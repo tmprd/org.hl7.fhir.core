@@ -22,8 +22,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a sct:43478001 ;
      fhir:coding ( [
-       a sct:43478001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -47,9 +47,8 @@
   ] ; # 
   fhir:issued [ fhir:v "2018-04-03T15:30:10+01:00"^^xsd:dateTime] ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:52101004 ;
      fhir:coding ( [
-       a sct:52101004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

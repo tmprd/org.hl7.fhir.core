@@ -50,8 +50,8 @@
      fhir:code [ fhir:v "258814008" ]
   ] ; # 
   fhir:interpretation ( [
+     a sct:166717003 ;
      fhir:coding ( [
-       a sct:166717003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

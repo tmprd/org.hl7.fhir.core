@@ -11,8 +11,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "adult-formula-supplement"] ; # 
   fhir:code [
+     a sct:442651000124102 ;
      fhir:coding ( [
-       a sct:442651000124102 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

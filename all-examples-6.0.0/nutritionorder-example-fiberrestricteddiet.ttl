@@ -46,8 +46,8 @@
      ] )
   ] ) ; # 
   fhir:excludeFoodModifier ( [
+     a sct:227493005 ;
      fhir:coding ( [
-       a sct:227493005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -58,8 +58,8 @@
   ] ) ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:1156444001 ;
        fhir:coding ( [
-         a sct:1156444001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -76,8 +76,8 @@
        ] ) ;
        fhir:text [ fhir:v "Fiber restricted diet" ]
      ] [
+       a sct:1055207008 ;
        fhir:coding ( [
-         a sct:1055207008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -109,8 +109,8 @@
      ] ; # EH example of three times a day starting on 2\/10
      fhir:nutrient ( [
        fhir:modifier [
+         a sct:68992005 ;
          fhir:coding ( [
-           a sct:68992005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -130,8 +130,8 @@
        ]
      ] [
        fhir:modifier [
+         a sct:226887002 ;
          fhir:coding ( [
-           a sct:226887002 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

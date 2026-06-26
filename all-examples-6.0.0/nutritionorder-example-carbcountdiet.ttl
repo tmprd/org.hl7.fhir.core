@@ -46,8 +46,8 @@
      ] )
   ] ) ; # 
   fhir:excludeFoodModifier ( [
+     a sct:227493005 ;
      fhir:coding ( [
-       a sct:227493005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -58,8 +58,8 @@
   ] ) ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:435651000124106 ;
        fhir:coding ( [
-         a sct:435651000124106 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -91,8 +91,8 @@
      ] ; # EH example of three times a day starting on 2\/10 using schedule
      fhir:nutrient ( [
        fhir:modifier [
+         a sct:2331003 ;
          fhir:coding ( [
-           a sct:2331003 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

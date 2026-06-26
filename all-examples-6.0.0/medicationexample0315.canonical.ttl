@@ -21,8 +21,8 @@
      ] )
   ] ; # 
   fhir:doseForm [
+     a sct:385157007 ;
      fhir:coding ( [
-       a sct:385157007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

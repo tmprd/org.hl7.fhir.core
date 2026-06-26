@@ -14,8 +14,8 @@
      a fhir:Medication ;
      fhir:id [ fhir:v "med0318" ] ;
      fhir:doseForm [
+       a sct:385221006 ;
        fhir:coding ( [
-         a sct:385221006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -112,8 +112,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "1000mL infused at 50ml/hour for 4 hours - hung at 2200 hours" ] ;
      fhir:site [
+       a sct:6073002 ;
        fhir:coding ( [
-         a sct:6073002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -123,8 +123,8 @@
        ] )
      ] ;
      fhir:route [
+       a sct:255560000 ;
        fhir:coding ( [
-         a sct:255560000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

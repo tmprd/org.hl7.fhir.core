@@ -55,8 +55,8 @@
      fhir:type [ ]
   ] ) ; # 
   fhir:type ( [
+     a sct:468063009 ;
      fhir:coding ( [
-       a sct:468063009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

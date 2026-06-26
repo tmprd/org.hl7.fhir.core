@@ -444,8 +444,8 @@
      fhir:value [ fhir:v "20150816-001245" ]
   ] ) ; # 
   fhir:type [
+     a sct:119364003 ;
      fhir:coding ( [
-       a sct:119364003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -492,8 +492,8 @@
      fhir:value [ fhir:v "20150816-00124" ]
   ] ) ; # 
   fhir:type [
+     a sct:445295009 ;
      fhir:coding ( [
-       a sct:445295009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -538,8 +538,8 @@
      fhir:value [ fhir:v "20150816-00124" ]
   ] ) ; # 
   fhir:type [
+     a sct:122575003 ;
      fhir:coding ( [
-       a sct:122575003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -568,8 +568,8 @@
   fhir:id [ fhir:v "p2"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:58410-2 ;
      fhir:coding ( [
-       a loinc:58410-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -684,8 +684,8 @@
   fhir:id [ fhir:v "r1"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:718-7 ;
      fhir:coding ( [
-       a loinc:718-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -739,8 +739,8 @@
   fhir:id [ fhir:v "r2"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:789-8 ;
      fhir:coding ( [
-       a loinc:789-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -794,8 +794,8 @@
   fhir:id [ fhir:v "r3"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:4544-3 ;
      fhir:coding ( [
-       a loinc:4544-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -843,8 +843,8 @@
   fhir:id [ fhir:v "r4"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:787-2 ;
      fhir:coding ( [
-       a loinc:787-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -907,8 +907,8 @@
   fhir:id [ fhir:v "r5"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:785-6 ;
      fhir:coding ( [
-       a loinc:785-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -971,8 +971,8 @@
   fhir:id [ fhir:v "r6"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:777-3 ;
      fhir:coding ( [
-       a loinc:777-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1026,8 +1026,8 @@
   fhir:id [ fhir:v "r7"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:6690-2 ;
      fhir:coding ( [
-       a loinc:6690-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1081,8 +1081,8 @@
   fhir:id [ fhir:v "r8"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:770-8 ;
      fhir:coding ( [
-       a loinc:770-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1116,8 +1116,8 @@
   fhir:id [ fhir:v "r9"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:751-8 ;
      fhir:coding ( [
-       a loinc:751-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1180,8 +1180,8 @@
   fhir:id [ fhir:v "r10"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:736-9 ;
      fhir:coding ( [
-       a loinc:736-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1215,8 +1215,8 @@
   fhir:id [ fhir:v "r11"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:731-0 ;
      fhir:coding ( [
-       a loinc:731-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1279,8 +1279,8 @@
   fhir:id [ fhir:v "r12"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:5905-5 ;
      fhir:coding ( [
-       a loinc:5905-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1314,8 +1314,8 @@
   fhir:id [ fhir:v "r13"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:742-7 ;
      fhir:coding ( [
-       a loinc:742-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1369,8 +1369,8 @@
   fhir:id [ fhir:v "r14"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:713-8 ;
      fhir:coding ( [
-       a loinc:713-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1404,8 +1404,8 @@
   fhir:id [ fhir:v "r15"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:711-2 ;
      fhir:coding ( [
-       a loinc:711-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1468,8 +1468,8 @@
   fhir:id [ fhir:v "r16"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:706-2 ;
      fhir:coding ( [
-       a loinc:706-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1503,8 +1503,8 @@
   fhir:id [ fhir:v "r17"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:704-7 ;
      fhir:coding ( [
-       a loinc:704-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1549,8 +1549,8 @@
   fhir:id [ fhir:v "p1"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:24323-8 ;
      fhir:coding ( [
-       a loinc:24323-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1690,8 +1690,8 @@
   fhir:id [ fhir:v "o1"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2951-2, sct:104934005 ;
      fhir:coding ( [
-       a loinc:2951-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1699,7 +1699,6 @@
        fhir:code [ fhir:v "2951-2" ] ;
        fhir:display [ fhir:v "Sodium [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:104934005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1736,8 +1735,8 @@
   fhir:id [ fhir:v "o2"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2823-3, sct:59573005 ;
      fhir:coding ( [
-       a loinc:2823-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1745,7 +1744,6 @@
        fhir:code [ fhir:v "2823-3" ] ;
        fhir:display [ fhir:v "Potassium [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:59573005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1782,8 +1780,8 @@
   fhir:id [ fhir:v "o3"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2075-0, sct:46511006 ;
      fhir:coding ( [
-       a loinc:2075-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1791,7 +1789,6 @@
        fhir:code [ fhir:v "2075-0" ] ;
        fhir:display [ fhir:v "Chloride [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:46511006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1828,8 +1825,8 @@
   fhir:id [ fhir:v "o4"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:1963-8, sct:88645003 ;
      fhir:coding ( [
-       a loinc:1963-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1837,7 +1834,6 @@
        fhir:code [ fhir:v "1963-8" ] ;
        fhir:display [ fhir:v "Bicarbonate [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:88645003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1874,8 +1870,8 @@
   fhir:id [ fhir:v "o5"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:1863-0, sct:271057005 ;
      fhir:coding ( [
-       a loinc:1863-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1883,7 +1879,6 @@
        fhir:code [ fhir:v "1863-0" ] ;
        fhir:display [ fhir:v "Anion gap in Serum or Plasma by Calculated.4Ions" ]
      ] [
-       a sct:271057005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1920,8 +1915,8 @@
   fhir:id [ fhir:v "o6"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14749-6, sct:36048009 ;
      fhir:coding ( [
-       a loinc:14749-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1929,7 +1924,6 @@
        fhir:code [ fhir:v "14749-6" ] ;
        fhir:display [ fhir:v "Glucose [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:36048009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1966,8 +1960,8 @@
   fhir:id [ fhir:v "o7"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14937-7, sct:273967009 ;
      fhir:coding ( [
-       a loinc:14937-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1975,7 +1969,6 @@
        fhir:code [ fhir:v "14937-7" ] ;
        fhir:display [ fhir:v "Urea nitrogen [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:273967009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2012,8 +2005,8 @@
   fhir:id [ fhir:v "o8"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14682-9, sct:70901006 ;
      fhir:coding ( [
-       a loinc:14682-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2021,7 +2014,6 @@
        fhir:code [ fhir:v "14682-9" ] ;
        fhir:display [ fhir:v "Creatinine [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:70901006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2058,8 +2050,8 @@
   fhir:id [ fhir:v "o9"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14933-6, sct:86228006 ;
      fhir:coding ( [
-       a loinc:14933-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2067,7 +2059,6 @@
        fhir:code [ fhir:v "14933-6" ] ;
        fhir:display [ fhir:v "Urate [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:86228006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2113,8 +2104,8 @@
   fhir:id [ fhir:v "o10"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14631-6, sct:27171005 ;
      fhir:coding ( [
-       a loinc:14631-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2122,7 +2113,6 @@
        fhir:code [ fhir:v "14631-6" ] ;
        fhir:display [ fhir:v "Bilirubin.total [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:27171005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2159,8 +2149,8 @@
   fhir:id [ fhir:v "o11"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14629-0, sct:39748002 ;
      fhir:coding ( [
-       a loinc:14629-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2168,7 +2158,6 @@
        fhir:code [ fhir:v "14629-0" ] ;
        fhir:display [ fhir:v "Bilirubin.direct [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:39748002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2205,8 +2194,8 @@
   fhir:id [ fhir:v "o12"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:6768-6, sct:88810008 ;
      fhir:coding ( [
-       a loinc:6768-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2214,7 +2203,6 @@
        fhir:code [ fhir:v "6768-6" ] ;
        fhir:display [ fhir:v "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma" ]
      ] [
-       a sct:88810008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2251,8 +2239,8 @@
   fhir:id [ fhir:v "o13"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2324-2, sct:69480007 ;
      fhir:coding ( [
-       a loinc:2324-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2260,7 +2248,6 @@
        fhir:code [ fhir:v "2324-2" ] ;
        fhir:display [ fhir:v "Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma" ]
      ] [
-       a sct:69480007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2297,8 +2284,8 @@
   fhir:id [ fhir:v "o14"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:1742-6, sct:34608000 ;
      fhir:coding ( [
-       a loinc:1742-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2306,7 +2293,6 @@
        fhir:code [ fhir:v "1742-6" ] ;
        fhir:display [ fhir:v "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma" ]
      ] [
-       a sct:34608000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2352,8 +2338,8 @@
   fhir:id [ fhir:v "o15"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:1920-8, sct:45896001 ;
      fhir:coding ( [
-       a loinc:1920-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2361,7 +2347,6 @@
        fhir:code [ fhir:v "1920-8" ] ;
        fhir:display [ fhir:v "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma" ]
      ] [
-       a sct:45896001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2398,8 +2383,8 @@
   fhir:id [ fhir:v "o16"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2532-0, sct:11274001 ;
      fhir:coding ( [
-       a loinc:2532-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2407,7 +2392,6 @@
        fhir:code [ fhir:v "2532-0" ] ;
        fhir:display [ fhir:v "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma" ]
      ] [
-       a sct:11274001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2444,8 +2428,8 @@
   fhir:id [ fhir:v "o17"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2000-8, sct:71878006 ;
      fhir:coding ( [
-       a loinc:2000-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2453,7 +2437,6 @@
        fhir:code [ fhir:v "2000-8" ] ;
        fhir:display [ fhir:v "Calcium [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:71878006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2490,8 +2473,8 @@
   fhir:id [ fhir:v "o18"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:13959-2, sct:166708003 ;
      fhir:coding ( [
-       a loinc:13959-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2499,7 +2482,6 @@
        fhir:code [ fhir:v "13959-2" ] ;
        fhir:display [ fhir:v "Calcium.ionized [Moles/volume] in Serum or Plasma by calculation" ]
      ] [
-       a sct:166708003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2536,8 +2518,8 @@
   fhir:id [ fhir:v "o19"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:14879-1, sct:104866001 ;
      fhir:coding ( [
-       a loinc:14879-1 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2545,7 +2527,6 @@
        fhir:code [ fhir:v "14879-1" ] ;
        fhir:display [ fhir:v "Phosphate [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:104866001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2582,8 +2563,8 @@
   fhir:id [ fhir:v "o20"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2885-2, sct:74040009 ;
      fhir:coding ( [
-       a loinc:2885-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2591,7 +2572,6 @@
        fhir:code [ fhir:v "2885-2" ] ;
        fhir:display [ fhir:v "Protein [Mass/volume] in Serum or Plasma" ]
      ] [
-       a sct:74040009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2628,8 +2608,8 @@
   fhir:id [ fhir:v "o21"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:1751-7, sct:104485008 ;
      fhir:coding ( [
-       a loinc:1751-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2637,7 +2617,6 @@
        fhir:code [ fhir:v "1751-7" ] ;
        fhir:display [ fhir:v "Albumin [Mass/volume] in Serum or Plasma" ]
      ] [
-       a sct:104485008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2674,8 +2653,8 @@
   fhir:id [ fhir:v "o22"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:10834-0, sct:104979009 ;
      fhir:coding ( [
-       a loinc:10834-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2683,7 +2662,6 @@
        fhir:code [ fhir:v "10834-0" ] ;
        fhir:display [ fhir:v "Globulin [Mass/volume] in Serum by calculation" ]
      ] [
-       a sct:104979009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2720,8 +2698,8 @@
   fhir:id [ fhir:v "p3"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:24357-6 ;
      fhir:coding ( [
-       a loinc:24357-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2796,8 +2774,8 @@
   fhir:id [ fhir:v "u1"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2756-5 ;
      fhir:coding ( [
-       a loinc:2756-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2835,8 +2813,8 @@
   fhir:id [ fhir:v "u2"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2887-8 ;
      fhir:coding ( [
-       a loinc:2887-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2860,9 +2838,8 @@
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:260385009 ;
      fhir:coding ( [
-       a sct:260385009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2881,8 +2858,8 @@
   fhir:id [ fhir:v "u3"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2965-2 ;
      fhir:coding ( [
-       a loinc:2965-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2919,8 +2896,8 @@
   fhir:id [ fhir:v "u4"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:33051-4 ;
      fhir:coding ( [
-       a loinc:33051-4 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2944,9 +2921,8 @@
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:260385009 ;
      fhir:coding ( [
-       a sct:260385009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -2965,8 +2941,8 @@
   fhir:id [ fhir:v "u5"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:2349-9 ;
      fhir:coding ( [
-       a loinc:2349-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -2990,9 +2966,8 @@
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:260385009 ;
      fhir:coding ( [
-       a sct:260385009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -3011,8 +2986,8 @@
   fhir:id [ fhir:v "u6"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:33052-2 ;
      fhir:coding ( [
-       a loinc:33052-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -3036,9 +3011,8 @@
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:260385009 ;
      fhir:coding ( [
-       a sct:260385009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -3057,8 +3031,8 @@
   fhir:id [ fhir:v "u7"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:30405-5 ;
      fhir:coding ( [
-       a loinc:30405-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -3096,8 +3070,8 @@
   fhir:id [ fhir:v "u8"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:30391-7 ;
      fhir:coding ( [
-       a loinc:30391-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -3136,8 +3110,8 @@
   fhir:id [ fhir:v "u9"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:13654-9 ;
      fhir:coding ( [
-       a loinc:13654-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

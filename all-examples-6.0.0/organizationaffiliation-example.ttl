@@ -49,8 +49,8 @@
      ] )
   ] ) ; # General Practice Provider for the first 3 months of 2012
   fhir:specialty ( [
+     a sct:408443003 ;
      fhir:coding ( [
-       a sct:408443003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

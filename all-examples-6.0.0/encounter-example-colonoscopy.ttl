@@ -22,8 +22,8 @@
      ] )
   ] ) ; # Encounter has been completed
   fhir:type ( [
+     a sct:73761001 ;
      fhir:coding ( [
-       a sct:73761001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -16,8 +16,8 @@
   ] ; # 
   fhir:includedStructure ( [
      fhir:structure [
+       a sct:74670003 ;
        fhir:coding ( [
-         a sct:74670003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -27,8 +27,8 @@
        ] )
      ] ;
      fhir:laterality [
+       a sct:7771000 ;
        fhir:coding ( [
-         a sct:7771000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

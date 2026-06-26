@@ -14,8 +14,8 @@
   fhir:intent [ fhir:v "plan"] ; # 
   fhir:code [
      fhir:concept [
+       a sct:229115003 ;
        fhir:coding ( [
-         a sct:229115003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

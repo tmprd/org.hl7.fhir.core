@@ -26,8 +26,8 @@
        fhir:type [ ]
      ] ) ;
      fhir:type ( [
+       a sct:58938008 ;
        fhir:coding ( [
-         a sct:58938008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -33,8 +33,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
+     a sct:15220000 ;
      fhir:coding ( [
-       a sct:15220000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -50,8 +50,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a sct:104177005 ;
      fhir:coding ( [
-       a sct:104177005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -93,8 +93,8 @@
   fhir:intent [ fhir:v "original-order"] ; # 
   fhir:code [
      fhir:concept [
+       a sct:104177005 ;
        fhir:coding ( [
-         a sct:104177005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

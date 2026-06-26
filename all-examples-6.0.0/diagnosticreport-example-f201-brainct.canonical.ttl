@@ -22,8 +22,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
+     a sct:394914008 ;
      fhir:coding ( [
-       a sct:394914008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -39,8 +39,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a sct:429858000 ;
      fhir:coding ( [
-       a sct:429858000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -15,8 +15,8 @@
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>No Known Drug Allergy</p>\n      <p>recordedDate:2015-08-06</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:code [
+     a sct:409137002 ;
      fhir:coding ( [
-       a sct:409137002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -40,8 +40,8 @@
      fhir:text [ fhir:v "Vital Signs" ]
   ] ) ; # 
   fhir:code [
+     a loinc:2708-6, loinc:59408-5 ;
      fhir:coding ( [
-       a loinc:2708-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -49,7 +49,6 @@
        fhir:code [ fhir:v "2708-6" ] ;
        fhir:display [ fhir:v "Oxygen saturation in Arterial blood" ]
      ] [
-       a loinc:59408-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

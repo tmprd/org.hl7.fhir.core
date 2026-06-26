@@ -315,8 +315,8 @@
          fhir:text [ fhir:v "topic" ]
        ] ;
        fhir:classifier ( [
+         a sct:394579002 ;
          fhir:coding ( [
-           a sct:394579002 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -331,8 +331,8 @@
          fhir:text [ fhir:v "topic" ]
        ] ;
        fhir:classifier ( [
+         a sct:314204000 ;
          fhir:coding ( [
-           a sct:314204000 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -354,8 +354,8 @@
          fhir:text [ fhir:v "topic" ]
        ] ;
        fhir:classifier ( [
+         a sct:75444003 ;
          fhir:coding ( [
-           a sct:75444003 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

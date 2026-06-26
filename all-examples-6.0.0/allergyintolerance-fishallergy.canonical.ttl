@@ -43,8 +43,8 @@
   ] ; # 
   fhir:category ( [ fhir:v "food"] ) ; # 
   fhir:code [
+     a sct:227037002 ;
      fhir:coding ( [
-       a sct:227037002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

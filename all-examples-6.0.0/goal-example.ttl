@@ -53,8 +53,8 @@
   ] ; # 
   fhir:target ( [
      fhir:measure [
+       a loinc:3141-9 ;
        fhir:coding ( [
-         a loinc:3141-9 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

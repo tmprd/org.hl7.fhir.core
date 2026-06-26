@@ -46,8 +46,8 @@
      ] )
   ] ) ; # 
   fhir:excludeFoodModifier ( [
+     a sct:227493005 ;
      fhir:coding ( [
-       a sct:227493005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -58,8 +58,8 @@
   ] ) ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:437421000124105 ;
        fhir:coding ( [
-         a sct:437421000124105 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -76,8 +76,8 @@
        ] ) ;
        fhir:text [ fhir:v "Low Sodium Diet" ]
      ] [
+       a sct:437401000124100 ;
        fhir:coding ( [
-         a sct:437401000124100 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -86,8 +86,8 @@
          fhir:display [ fhir:v "Decreased potassium diet (regime/therapy)" ]
        ] )
      ] [
+       a sct:437381000124100 ;
        fhir:coding ( [
-         a sct:437381000124100 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -96,8 +96,8 @@
          fhir:display [ fhir:v "Decreased phosphorus diet (regime/therapy)" ]
        ] )
      ] [
+       a sct:439061000124104 ;
        fhir:coding ( [
-         a sct:439061000124104 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -121,8 +121,8 @@
      ] ; # EH example of three times a day starting on 2\/10
      fhir:nutrient ( [
        fhir:modifier [
+         a sct:60471000 ;
          fhir:coding ( [
-           a sct:60471000 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -142,8 +142,8 @@
        ]
      ] [
        fhir:modifier [
+         a sct:63793008 ;
          fhir:coding ( [
-           a sct:63793008 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -163,8 +163,8 @@
        ]
      ] [
        fhir:modifier [
+         a sct:19751002 ;
          fhir:coding ( [
-           a sct:19751002 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

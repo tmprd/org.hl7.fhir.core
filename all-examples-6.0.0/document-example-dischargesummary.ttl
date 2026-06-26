@@ -112,8 +112,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:type [
+     a loinc:28655-9 ;
      fhir:coding ( [
-       a loinc:28655-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -141,8 +141,8 @@
   fhir:section ( [
      fhir:title [ fhir:v "Reason for admission" ] ;
      fhir:code [
+       a loinc:29299-5 ;
        fhir:coding ( [
-         a loinc:29299-5 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -162,8 +162,8 @@
   ] [
      fhir:title [ fhir:v "Medications on Discharge" ] ;
      fhir:code [
+       a loinc:10183-2 ;
        fhir:coding ( [
-         a loinc:10183-2 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -186,8 +186,8 @@
   ] [
      fhir:title [ fhir:v "Known allergies" ] ;
      fhir:code [
+       a loinc:48765-2 ;
        fhir:coding ( [
-         a loinc:48765-2 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -307,8 +307,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:46241-6 ;
      fhir:coding ( [
-       a loinc:46241-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -345,8 +345,8 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:concept [
+       a sct:66493003 ;
        fhir:coding ( [
-         a sct:66493003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

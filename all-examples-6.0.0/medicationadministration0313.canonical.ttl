@@ -13,8 +13,8 @@
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:concept [
+       a sct:322254008 ;
        fhir:coding ( [
-         a sct:322254008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -57,8 +57,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "Insert one suppository rectally twice daily as needed for fever to a maximim of 3 per day" ] ;
      fhir:site [
+       a sct:34402009 ;
        fhir:coding ( [
-         a sct:34402009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

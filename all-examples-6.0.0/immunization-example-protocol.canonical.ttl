@@ -137,8 +137,8 @@
   fhir:protocolApplied ( [
      fhir:series [ fhir:v "2-dose" ] ;
      fhir:targetDisease ( [
+       a sct:40468003 ;
        fhir:coding ( [
-         a sct:40468003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -150,8 +150,8 @@
   ] [
      fhir:series [ fhir:v "3-dose" ] ;
      fhir:targetDisease ( [
+       a sct:66071002 ;
        fhir:coding ( [
-         a sct:66071002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

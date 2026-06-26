@@ -46,8 +46,8 @@
 #    useful when the substance is not coded, or it's quicker to sort/filter on
 #    than using terminology based reasoning
   fhir:code [
+     a sct:227037002 ;
      fhir:coding ( [
-       a sct:227037002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -28,8 +28,8 @@
   fhir:dateTime [ fhir:v "2014-09-17"^^xsd:date] ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:1255825005 ;
        fhir:coding ( [
-         a sct:1255825005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -61,8 +61,8 @@
      ] ; # EH example of three times a day starting on 2\/10
      fhir:texture ( [
        fhir:modifier [
+         a sct:228055009 ;
          fhir:coding ( [
-           a sct:228055009 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -77,8 +77,8 @@
   fhir:supplement ( [
      fhir:type [
        fhir:concept [
+         a sct:442971000124100 ;
          fhir:coding ( [
-           a sct:442971000124100 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

@@ -22,8 +22,8 @@
      fhir:description [ fhir:v "Extra information on activity " ] ;
      fhir:kind [ fhir:v "ServiceRequest" ] ;
      fhir:code [
+       a loinc:39156-5 ;
        fhir:coding ( [
-         a loinc:39156-5 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -90,9 +90,8 @@
        fhir:code [ fhir:v "focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:414916001 ;
        fhir:coding ( [
-         a sct:414916001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -135,8 +134,8 @@
        fhir:text [ fhir:v "When the patient's BMI Ratio is at or above 25" ]
      ] ;
      fhir:addresses ( [
+       a sct:414916001 ;
        fhir:coding ( [
-         a sct:414916001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -157,8 +156,8 @@
      ] ) ;
      fhir:target ( [
        fhir:measure [
+         a loinc:39156-5 ;
          fhir:coding ( [
-           a loinc:39156-5 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>

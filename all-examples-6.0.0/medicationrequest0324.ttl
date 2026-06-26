@@ -22,8 +22,8 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:concept [
+       a sct:322254008 ;
        fhir:coding ( [
-         a sct:322254008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -46,8 +46,8 @@
   ] ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:30242009 ;
        fhir:coding ( [
-         a sct:30242009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

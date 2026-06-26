@@ -16,8 +16,8 @@
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:category ( [
+     a sct:386637004 ;
      fhir:coding ( [
-       a sct:386637004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -28,8 +28,8 @@
      fhir:text [ fhir:v "OB" ]
   ] ) ; # 
   fhir:code [
+     a sct:22633006 ;
      fhir:coding ( [
-       a sct:22633006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

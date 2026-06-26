@@ -32,8 +32,8 @@
   ] ; # 
   fhir:condition ( [
      fhir:code [
+       a sct:371041009 ;
        fhir:coding ( [
-         a sct:371041009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

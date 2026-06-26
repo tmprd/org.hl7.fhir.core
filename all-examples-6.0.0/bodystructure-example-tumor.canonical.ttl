@@ -19,8 +19,8 @@
   ] ) ; # 
   fhir:includedStructure ( [
      fhir:structure [
+       a sct:78961009 ;
        fhir:coding ( [
-         a sct:78961009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

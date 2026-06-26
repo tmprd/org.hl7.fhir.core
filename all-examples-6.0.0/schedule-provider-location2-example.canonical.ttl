@@ -46,8 +46,8 @@
      ]
   ] ) ; # 
   fhir:specialty ( [
+     a sct:394610002 ;
      fhir:coding ( [
-       a sct:394610002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

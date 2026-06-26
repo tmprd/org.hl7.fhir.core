@@ -20,8 +20,8 @@
   fhir:active [ fhir:v false] ; # 
   fhir:includedStructure ( [
      fhir:structure [
+       a sct:14975008 ;
        fhir:coding ( [
-         a sct:14975008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -32,8 +32,8 @@
        fhir:text [ fhir:v "Forearm" ]
      ] ;
      fhir:laterality [
+       a sct:419161000 ;
        fhir:coding ( [
-         a sct:419161000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -59,8 +59,8 @@
          ] )
        ] ) ;
        fhir:surfaceOrientation ( [
+         a sct:46053002 ;
          fhir:coding ( [
-           a sct:46053002 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -71,8 +71,8 @@
        ] )
      ] ) ;
      fhir:qualifier ( [
+       a sct:263929005 ;
        fhir:coding ( [
-         a sct:263929005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -32,8 +32,8 @@
   ] ; # 
   fhir:recommendation ( [
      fhir:vaccineCode ( [
+       a sct:14745005 ;
        fhir:coding ( [
-         a sct:14745005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

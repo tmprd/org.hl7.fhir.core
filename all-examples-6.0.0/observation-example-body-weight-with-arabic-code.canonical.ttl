@@ -23,8 +23,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:29463-7, loinc:3141-9, sct:27113001 ;
      fhir:coding ( [
-       a loinc:29463-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -32,7 +32,6 @@
        fhir:code [ fhir:v "29463-7" ] ;
        fhir:display [ fhir:v "Body Weight" ]
      ] [
-       a loinc:3141-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -40,7 +39,6 @@
        fhir:code [ fhir:v "3141-9" ] ;
        fhir:display [ fhir:v "Body weight Measured" ]
      ] [
-       a sct:27113001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

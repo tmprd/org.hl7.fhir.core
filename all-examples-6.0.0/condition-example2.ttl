@@ -43,8 +43,8 @@
      ] )
   ] ) ; # 
   fhir:severity [
+     a sct:255604002 ;
      fhir:coding ( [
-       a sct:255604002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

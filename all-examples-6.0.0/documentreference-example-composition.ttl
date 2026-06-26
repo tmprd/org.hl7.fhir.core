@@ -28,8 +28,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "current"] ; # 
   fhir:type [
+     a loinc:11488-4 ;
      fhir:coding ( [
-       a loinc:11488-4 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -39,8 +39,8 @@
      ] )
   ] ; # 
   fhir:category ( [
+     a loinc:LP183761-8 ;
      fhir:coding ( [
-       a loinc:LP183761-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

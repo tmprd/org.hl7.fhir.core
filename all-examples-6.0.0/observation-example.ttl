@@ -24,8 +24,8 @@
        fhir:display [ fhir:v "Vital Signs" ]
      ] )
   ] [
+     a loinc:29463-7 ;
      fhir:coding ( [
-       a loinc:29463-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -35,8 +35,8 @@
      ] )
   ] ) ; # category code is A code that classifies the general type of observation being made. This is used for searching, sorting and display purposes.
   fhir:code [
+     a loinc:29463-7, sct:27113001 ;
      fhir:coding ( [
-       a loinc:29463-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -44,7 +44,6 @@
        fhir:code [ fhir:v "29463-7" ] ;
        fhir:display [ fhir:v "Body weight" ]
      ] [
-       a sct:27113001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -94,8 +93,8 @@
 #    "tablet"), etc. For these, something else is required (e.g. SNOMED CT)
   fhir:component ( [
      fhir:code [
+       a loinc:8361-8 ;
        fhir:coding ( [
-         a loinc:8361-8 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -105,9 +104,8 @@
        ] )
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:10904000 ;
        fhir:coding ( [
-         a sct:10904000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

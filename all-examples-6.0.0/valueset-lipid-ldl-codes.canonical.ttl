@@ -2,7 +2,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -81,7 +80,6 @@
          fhir:display [ fhir:v "LDL Cholesterol (Assay)" ] ;
          fhir:designation ( [
            fhir:use [
-             a sct:900000000000003001 ;
              fhir:system [
                fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                fhir:l <http://snomed.info/sct>
@@ -96,7 +94,6 @@
          fhir:display [ fhir:v "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation" ] ;
          fhir:designation ( [
            fhir:use [
-             a sct:900000000000003001 ;
              fhir:system [
                fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                fhir:l <http://snomed.info/sct>

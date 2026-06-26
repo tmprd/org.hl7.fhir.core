@@ -71,8 +71,8 @@
   fhir:status [ fhir:v "current"] ; # 
   fhir:docStatus [ fhir:v "preliminary"] ; # 
   fhir:type [
+     a loinc:34108-1 ;
      fhir:coding ( [
-       a loinc:34108-1 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

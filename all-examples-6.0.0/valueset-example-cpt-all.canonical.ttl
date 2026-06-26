@@ -58,9 +58,8 @@
        fhir:code [ fhir:v "species" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:337915000 ;
        fhir:coding ( [
-         a sct:337915000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

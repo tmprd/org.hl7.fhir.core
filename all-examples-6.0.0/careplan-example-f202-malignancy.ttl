@@ -15,8 +15,8 @@
      fhir:id [ fhir:v "careteam" ] ;
      fhir:participant ( [
        fhir:role [
+         a sct:28995006 ;
          fhir:coding ( [
-           a sct:28995006 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

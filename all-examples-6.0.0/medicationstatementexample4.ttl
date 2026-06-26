@@ -15,8 +15,8 @@
   fhir:status [ fhir:v "recorded"] ; # 
   fhir:medication [
      fhir:concept [
+       a sct:27658006 ;
        fhir:coding ( [
-         a sct:27658006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -57,8 +57,8 @@
        ] )
      ] ;
      fhir:reason [
+       a sct:266710000 ;
        fhir:coding ( [
-         a sct:266710000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

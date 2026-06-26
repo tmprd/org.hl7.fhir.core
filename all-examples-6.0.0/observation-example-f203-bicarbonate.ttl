@@ -20,8 +20,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # Bicarbonate was measured on April fourth
   fhir:code [
+     a loinc:1963-8, sct:365722008 ;
      fhir:coding ( [
-       a loinc:1963-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -29,7 +29,6 @@
        fhir:code [ fhir:v "1963-8" ] ;
        fhir:display [ fhir:v "Bicarbonate [Moles/volume] in Serum or Plasma" ]
      ] [
-       a sct:365722008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -60,8 +59,8 @@
      fhir:code [ fhir:v "258813002" ]
   ] ; # 
   fhir:interpretation ( [
+     a sct:166698001 ;
      fhir:coding ( [
-       a sct:166698001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

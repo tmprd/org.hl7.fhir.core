@@ -11,8 +11,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "med0313"] ; # 
   fhir:code [
+     a sct:400621001 ;
      fhir:coding ( [
-       a sct:400621001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -22,8 +22,8 @@
      ] )
   ] ; # 
   fhir:doseForm [
+     a sct:385219001 ;
      fhir:coding ( [
-       a sct:385219001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -35,8 +35,8 @@
   fhir:ingredient ( [
      fhir:item [
        fhir:concept [
+         a sct:387106007 ;
          fhir:coding ( [
-           a sct:387106007 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

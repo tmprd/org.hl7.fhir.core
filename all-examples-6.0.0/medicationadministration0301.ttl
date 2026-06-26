@@ -113,8 +113,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "500mg IV q6h x 3 days" ] ;
      fhir:route [
+       a sct:47625008 ;
        fhir:coding ( [
-         a sct:47625008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

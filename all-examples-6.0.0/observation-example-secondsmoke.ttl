@@ -24,8 +24,8 @@
      fhir:text [ fhir:v "Social History" ]
   ] ) ; # 
   fhir:code [
+     a loinc:39243-1, sct:102409004 ;
      fhir:coding ( [
-       a loinc:39243-1 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -33,7 +33,6 @@
        fhir:code [ fhir:v "39243-1" ] ;
        fhir:display [ fhir:v "Second hand smoke exposure CPHS" ]
      ] [
-       a sct:102409004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -52,9 +51,8 @@
      fhir:v "2016-05-18T22:33:22Z"^^xsd:dateTime
   ] ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:373066001 ;
      fhir:coding ( [
-       a sct:373066001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -28,8 +28,8 @@
      fhir:reference [ fhir:v "Organization/hl7" ]
   ] ; # 
   fhir:targetDisease [
+     a sct:1857005 ;
      fhir:coding ( [
-       a sct:1857005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

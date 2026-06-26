@@ -1,5 +1,4 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -67,7 +66,7 @@
          fhir:text [ fhir:v "Gender" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA3-6 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -98,7 +97,7 @@
          fhir:text [ fhir:v "Were you born a twin?" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA32-8 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -116,7 +115,7 @@
          fhir:text [ fhir:v "Were you adopted?" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA32-8 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -134,7 +133,7 @@
          fhir:text [ fhir:v "Are your parents related to each other in any way other than marriage?" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA32-8 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -227,7 +226,7 @@
          fhir:text [ fhir:v "Race" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA4457-3 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -245,7 +244,7 @@
          fhir:text [ fhir:v "Ethnicity" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA4611-5 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -255,7 +254,7 @@
            ]
          ] [
            fhir:value [
-             a fhir:Coding, loinc:LA10606-4 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -284,7 +283,7 @@
          fhir:text [ fhir:v "Relationship to you" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA10405-1 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -315,7 +314,7 @@
          fhir:text [ fhir:v "Gender" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA3-6 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -333,7 +332,7 @@
          fhir:text [ fhir:v "Living?" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA33-6 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -368,7 +367,7 @@
          fhir:text [ fhir:v "Was this person born a twin?" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA32-8 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -386,7 +385,7 @@
          fhir:text [ fhir:v "Was this person adopted?" ] ;
          fhir:answer ( [
            fhir:value [
-             a fhir:Coding, loinc:LA32-8 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>
@@ -409,7 +408,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10415-0 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -440,7 +439,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -458,7 +457,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -493,7 +492,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -511,7 +510,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -529,7 +528,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA14284-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -543,7 +542,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10397-0 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -567,7 +566,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10418-4 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -598,7 +597,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -616,7 +615,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -651,7 +650,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -669,7 +668,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -687,7 +686,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA14283-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -701,7 +700,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10397-0 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -725,7 +724,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10419-2 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -756,7 +755,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -774,7 +773,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -809,7 +808,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -827,7 +826,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -851,7 +850,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10420-0 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -882,7 +881,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -900,7 +899,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -935,7 +934,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -953,7 +952,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -977,7 +976,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10416-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1008,7 +1007,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1026,7 +1025,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1061,7 +1060,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1079,7 +1078,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1103,7 +1102,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10425-9 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1134,7 +1133,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1152,7 +1151,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1187,7 +1186,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1205,7 +1204,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1229,7 +1228,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10421-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1260,7 +1259,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1278,7 +1277,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1313,7 +1312,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1331,7 +1330,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1349,7 +1348,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10543-9 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1373,7 +1372,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10423-4 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1404,7 +1403,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1422,7 +1421,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1441,7 +1440,7 @@
                  fhir:text [ fhir:v "Cause of Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10537-1 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -1459,7 +1458,7 @@
                  fhir:text [ fhir:v "Age at Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10400-2 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -1480,7 +1479,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1498,7 +1497,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1516,7 +1515,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10537-1 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1530,7 +1529,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10400-2 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1554,7 +1553,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10424-2 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1585,7 +1584,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1603,7 +1602,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1622,7 +1621,7 @@
                  fhir:text [ fhir:v "Cause of Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10589-2 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -1650,7 +1649,7 @@
                  fhir:text [ fhir:v "Age at Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10400-2 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -1671,7 +1670,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1689,7 +1688,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1713,7 +1712,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10417-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1744,7 +1743,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1762,7 +1761,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1781,7 +1780,7 @@
                  fhir:text [ fhir:v "Cause of Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA15682-0 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -1799,7 +1798,7 @@
                  fhir:text [ fhir:v "Age at Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10399-6 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -1820,7 +1819,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1838,7 +1837,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1856,7 +1855,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA15682-0 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1870,7 +1869,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10398-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1894,7 +1893,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10414-3 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1925,7 +1924,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1943,7 +1942,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1978,7 +1977,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -1996,7 +1995,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2020,7 +2019,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10410-1 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2051,7 +2050,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2069,7 +2068,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2104,7 +2103,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2122,7 +2121,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2146,7 +2145,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10412-7 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2177,7 +2176,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA2-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2195,7 +2194,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2214,7 +2213,7 @@
                  fhir:text [ fhir:v "Cause of Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA16286-9 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -2232,7 +2231,7 @@
                  fhir:text [ fhir:v "Age at Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10400-2 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -2253,7 +2252,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2271,7 +2270,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2295,7 +2294,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10413-5 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2326,7 +2325,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2344,7 +2343,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2363,7 +2362,7 @@
                  fhir:text [ fhir:v "Cause of Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA19526-5 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -2381,7 +2380,7 @@
                  fhir:text [ fhir:v "Age at Death" ] ;
                  fhir:answer ( [
                    fhir:value [
-                     a fhir:Coding, loinc:LA10400-2 ;
+                     a fhir:Coding ;
                      fhir:system [
                        fhir:v "http://loinc.org"^^xsd:anyURI ;
                        fhir:l <http://loinc.org>
@@ -2402,7 +2401,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2420,7 +2419,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2438,7 +2437,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA14283-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2452,7 +2451,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10399-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2470,7 +2469,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA16982-3 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2484,7 +2483,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10395-4 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2508,7 +2507,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10411-9 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2539,7 +2538,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2557,7 +2556,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2592,7 +2591,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2610,7 +2609,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2628,7 +2627,7 @@
            fhir:text [ fhir:v "Disease or Condition" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA14283-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2642,7 +2641,7 @@
            fhir:text [ fhir:v "Age at Diagnosis" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10397-0 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2666,7 +2665,7 @@
            fhir:text [ fhir:v "Relationship to you" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA10411-9 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2697,7 +2696,7 @@
            fhir:text [ fhir:v "Gender" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA3-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2715,7 +2714,7 @@
            fhir:text [ fhir:v "Living?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA33-6 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2750,7 +2749,7 @@
            fhir:text [ fhir:v "Was this person born a twin?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>
@@ -2768,7 +2767,7 @@
            fhir:text [ fhir:v "Was this person adopted?" ] ;
            fhir:answer ( [
              fhir:value [
-               a fhir:Coding, loinc:LA32-8 ;
+               a fhir:Coding ;
                fhir:system [
                  fhir:v "http://loinc.org"^^xsd:anyURI ;
                  fhir:l <http://loinc.org>

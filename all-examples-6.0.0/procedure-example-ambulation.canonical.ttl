@@ -24,8 +24,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "not-done"] ; # 
   fhir:statusReason [
+     a sct:398254007 ;
      fhir:coding ( [
-       a sct:398254007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -36,8 +36,8 @@
      fhir:text [ fhir:v "Pre-eclampsia" ]
   ] ; # 
   fhir:code [
+     a sct:62013009 ;
      fhir:coding ( [
-       a sct:62013009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

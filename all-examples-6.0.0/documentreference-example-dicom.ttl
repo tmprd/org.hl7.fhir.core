@@ -88,8 +88,8 @@
   ] ; # 
   fhir:event ( [
      fhir:concept [
+       a sct:399067008 ;
        fhir:coding ( [
-         a sct:399067008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -20,8 +20,8 @@
   fhir:dateTime [ fhir:v "2024-10-23T00:00:00Z"^^xsd:dateTime] ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:1255823003 ;
        fhir:coding ( [
-         a sct:1255823003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -30,8 +30,8 @@
          fhir:display [ fhir:v "International Dysphagia Diet Standardisation Initiative Framework - Minced and Moist Level 5 food" ]
        ] )
      ] [
+       a sct:1255822008 ;
        fhir:coding ( [
-         a sct:1255822008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

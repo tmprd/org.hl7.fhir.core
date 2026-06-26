@@ -19,8 +19,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:code [
+     a sct:435771000124106 ;
      fhir:coding ( [
-       a sct:435771000124106 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -48,8 +48,8 @@
      fhir:text [ fhir:v "Provider of rehabilitation services" ]
   ] ) ; # 
   fhir:specialty ( [
+     a sct:394602003 ;
      fhir:coding ( [
-       a sct:394602003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

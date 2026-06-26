@@ -52,9 +52,8 @@
        fhir:code [ fhir:v "venue" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:440655000 ;
        fhir:coding ( [
-         a sct:440655000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

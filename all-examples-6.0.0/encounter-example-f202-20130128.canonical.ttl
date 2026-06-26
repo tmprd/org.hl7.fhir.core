@@ -26,8 +26,8 @@
      ] )
   ] ) ; # 
   fhir:priority [
+     a sct:103391001 ;
      fhir:coding ( [
-       a sct:103391001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -37,8 +37,8 @@
      ] )
   ] ; # 
   fhir:type ( [
+     a sct:367336001 ;
      fhir:coding ( [
-       a sct:367336001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

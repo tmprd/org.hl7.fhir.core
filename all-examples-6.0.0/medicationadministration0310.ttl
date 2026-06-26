@@ -53,8 +53,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "6 mg PO daily for remission induction; adjust dosage to white blood cell (WBC) count.  With hold treatment if WBC is less than 15,000/µL; resume when WBC is greater than 50,000/µL" ] ;
      fhir:route [
+       a sct:26643006 ;
        fhir:coding ( [
-         a sct:26643006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

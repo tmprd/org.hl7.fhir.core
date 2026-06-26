@@ -98,8 +98,8 @@
   fhir:activity ( [
      fhir:performedActivity ( [
        fhir:concept [
+         a sct:6397004 ;
          fhir:coding ( [
-           a sct:6397004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

@@ -21,8 +21,8 @@
   ] ) ; # from DomainResource: text, contained, extension, and modifierExtension
   fhir:status [ fhir:v "registered"] ; # 
   fhir:type ( [
+     a sct:443968007 ;
      fhir:coding ( [
-       a sct:443968007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -54,8 +54,8 @@
   ] ) ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:309529002 ;
        fhir:coding ( [
-         a sct:309529002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -79,8 +79,8 @@
        fhir:value [ fhir:v "urn:uuid:1111-1111-1111-1112" ]
      ] ) ;
      fhir:methodType ( [
+       a sct:117040002 ;
        fhir:coding ( [
-         a sct:117040002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -118,8 +118,8 @@
        ] )
      ] ) ;
      fhir:genomeBuild [
+       a loinc:LA26806-2 ;
        fhir:coding ( [
-         a loinc:LA26806-2 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -194,8 +194,8 @@
        fhir:value [ fhir:v "urn:uuid:1111-1111-1111-1115" ]
      ] ) ;
      fhir:methodType ( [
+       a sct:117040002 ;
        fhir:coding ( [
-         a sct:117040002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -215,8 +215,8 @@
        ] )
      ] ) ;
      fhir:genomeBuild [
+       a loinc:LA26806-2 ;
        fhir:coding ( [
-         a loinc:LA26806-2 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

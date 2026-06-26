@@ -45,8 +45,8 @@
   fhir:type [ fhir:v "animal"] ; # 
   fhir:membership [ fhir:v "enumerated"] ; # 
   fhir:code [
+     a sct:388393002 ;
      fhir:coding ( [
-       a sct:388393002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

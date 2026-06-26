@@ -25,8 +25,8 @@
        fhir:text [ fhir:v "Novolog 100u/ml" ]
      ] ;
      fhir:doseForm [
+       a sct:385219001 ;
        fhir:coding ( [
-         a sct:385219001 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -38,8 +38,8 @@
      fhir:ingredient ( [
        fhir:item [
          fhir:concept [
+           a sct:325072002 ;
            fhir:coding ( [
-             a sct:325072002 ;
              fhir:system [
                fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                fhir:l <http://snomed.info/sct>
@@ -100,8 +100,8 @@
   ] ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:44054006 ;
        fhir:coding ( [
-         a sct:44054006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

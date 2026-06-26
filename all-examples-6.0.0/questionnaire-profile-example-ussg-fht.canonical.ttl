@@ -1,5 +1,4 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -139,9 +138,8 @@
        fhir:code [ fhir:v "species" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:337915000 ;
        fhir:coding ( [
-         a sct:337915000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -165,7 +163,6 @@
   fhir:approvalDate [ fhir:v "2015-10-31"^^xsd:date] ; # 
   fhir:lastReviewDate [ fhir:v "2017-03-15"^^xsd:date] ; # 
   fhir:code ( [
-     a loinc:54127-6 ;
      fhir:system [
        fhir:v "http://loinc.org"^^xsd:anyURI ;
        fhir:l <http://loinc.org>
@@ -255,7 +252,7 @@
          ] ;
          fhir:initial ( [
            fhir:value [
-             a fhir:Coding, loinc:LA32-8 ;
+             a fhir:Coding ;
              fhir:system [
                fhir:v "http://loinc.org"^^xsd:anyURI ;
                fhir:l <http://loinc.org>

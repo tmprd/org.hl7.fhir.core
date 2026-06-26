@@ -28,8 +28,8 @@
      fhir:value [ fhir:v "20150816-00124" ]
   ] ) ; # 
   fhir:type [
+     a sct:119364003 ;
      fhir:coding ( [
-       a sct:119364003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

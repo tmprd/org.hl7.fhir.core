@@ -11,8 +11,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "example"] ; # 
   fhir:code [
+     a sct:226886006 ;
      fhir:coding ( [
-       a sct:226886006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -23,8 +23,8 @@
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [
+     a sct:102263004 ;
      fhir:coding ( [
-       a sct:102263004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

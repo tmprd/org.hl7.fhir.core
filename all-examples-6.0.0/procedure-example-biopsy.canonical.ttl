@@ -16,8 +16,8 @@
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:category ( [
+     a sct:103693007 ;
      fhir:coding ( [
-       a sct:103693007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -28,8 +28,8 @@
      fhir:text [ fhir:v "Diagnostic procedure" ]
   ] ) ; # 
   fhir:code [
+     a sct:90105005 ;
      fhir:coding ( [
-       a sct:90105005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -62,8 +62,8 @@
   ] ) ; # 
   fhir:complication ( [
      fhir:concept [
+       a sct:67750007 ;
        fhir:coding ( [
-         a sct:67750007 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -80,8 +80,8 @@
   ] ) ; # 
   fhir:used ( [
      fhir:concept [
+       a sct:79068005 ;
        fhir:coding ( [
-         a sct:79068005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

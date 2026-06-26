@@ -16,8 +16,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:47527-7 ;
      fhir:coding ( [
-       a loinc:47527-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

@@ -22,9 +22,8 @@
          fhir:l fhir:value
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, sct:446141000124107 ;
          fhir:coding ( [
-           a sct:446141000124107 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -63,9 +62,8 @@
          fhir:l fhir:value
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:LA29519-8 ;
          fhir:coding ( [
-           a loinc:LA29519-8 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -120,9 +118,8 @@
          fhir:l fhir:type
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:76689-9 ;
          fhir:coding ( [
-           a loinc:76689-9 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>

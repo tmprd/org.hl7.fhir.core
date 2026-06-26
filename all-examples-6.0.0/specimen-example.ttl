@@ -38,8 +38,8 @@
 #  </text>
   fhir:status [ fhir:v "available"] ; # 
   fhir:type [
+     a sct:122555007 ;
      fhir:coding ( [
-       a sct:122555007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -82,8 +82,8 @@
      ] ; # method is usually implied by type
      fhir:bodySite [
        fhir:concept [
+         a sct:49852007 ;
          fhir:coding ( [
-           a sct:49852007 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

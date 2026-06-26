@@ -84,9 +84,8 @@
        fhir:code [ fhir:v "focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:87512008 ;
        fhir:coding ( [
-         a sct:87512008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -104,9 +103,8 @@
        fhir:code [ fhir:v "focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:40379007 ;
        fhir:coding ( [
-         a sct:40379007 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -124,9 +122,8 @@
        fhir:code [ fhir:v "focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:225444004 ;
        fhir:coding ( [
-         a sct:225444004 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -144,9 +141,8 @@
        fhir:code [ fhir:v "focus" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:306206005 ;
        fhir:coding ( [
-         a sct:306206005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -164,9 +160,8 @@
        fhir:code [ fhir:v "user" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:309343006 ;
        fhir:coding ( [
-         a sct:309343006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -184,9 +179,8 @@
        fhir:code [ fhir:v "venue" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:440655000 ;
        fhir:coding ( [
-         a sct:440655000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -247,8 +241,8 @@
   ] ) ; # 
   fhir:kind [ fhir:v "ServiceRequest"] ; # 
   fhir:code [
+     a sct:306206005 ;
      fhir:coding ( [
-       a sct:306206005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

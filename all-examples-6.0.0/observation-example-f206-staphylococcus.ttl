@@ -16,6 +16,7 @@
   fhir:id [ fhir:v "f206"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:600-7 ;
      fhir:coding ( [
        fhir:system [
          fhir:v "http://acmelabs.org"^^xsd:anyURI ;
@@ -24,7 +25,6 @@
        fhir:code [ fhir:v "104177" ] ;
        fhir:display [ fhir:v "Blood culture" ]
      ] [
-       a loinc:600-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -45,9 +45,8 @@
      fhir:display [ fhir:v "Luigi Maas" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:3092008 ;
      fhir:coding ( [
-       a sct:3092008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -66,8 +65,8 @@
      ] )
   ] ) ; # 
   fhir:method [
+     a sct:104177005 ;
      fhir:coding ( [
-       a sct:104177005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

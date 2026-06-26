@@ -194,8 +194,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -312,8 +312,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:664-3 ;
      fhir:coding ( [
-       a loinc:664-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -345,8 +345,8 @@
   ] ) ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -370,8 +370,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -433,8 +433,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:664-3 ;
      fhir:coding ( [
-       a loinc:664-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -466,8 +466,8 @@
   ] ) ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -491,8 +491,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -554,8 +554,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:664-3 ;
      fhir:coding ( [
-       a loinc:664-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -587,8 +587,8 @@
   ] ) ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -612,8 +612,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -675,8 +675,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:664-3 ;
      fhir:coding ( [
-       a loinc:664-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -708,8 +708,8 @@
   ] ) ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -733,8 +733,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:664-3 ;
        fhir:coding ( [
-         a loinc:664-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -796,8 +796,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -828,9 +828,8 @@
      fhir:reference [ fhir:v "Organization/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:263812008 ;
      fhir:coding ( [
-       a sct:263812008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -879,8 +878,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -911,9 +910,8 @@
      fhir:reference [ fhir:v "Organization/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:263776006 ;
      fhir:coding ( [
-       a sct:263776006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -962,8 +960,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -994,9 +992,8 @@
      fhir:reference [ fhir:v "Organization/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:263776006 ;
      fhir:coding ( [
-       a sct:263776006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1045,8 +1042,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:28-1 ;
      fhir:coding ( [
-       a loinc:28-1 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1136,8 +1133,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:185-9 ;
      fhir:coding ( [
-       a loinc:185-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1227,8 +1224,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:267-5 ;
      fhir:coding ( [
-       a loinc:267-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1318,8 +1315,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:28-1 ;
      fhir:coding ( [
-       a loinc:28-1 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1409,8 +1406,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:185-9 ;
      fhir:coding ( [
-       a loinc:185-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1491,8 +1488,8 @@
      fhir:text [ fhir:v "Micro" ]
   ] ) ; # 
   fhir:code [
+     a loinc:267-5 ;
      fhir:coding ( [
-       a loinc:267-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1575,8 +1572,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1607,9 +1604,8 @@
      fhir:reference [ fhir:v "Organization/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:23506009 ;
      fhir:coding ( [
-       a sct:23506009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1665,8 +1661,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1697,9 +1693,8 @@
      fhir:reference [ fhir:v "Organization/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:56415008 ;
      fhir:coding ( [
-       a sct:56415008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -1773,8 +1768,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:624-7 ;
      fhir:coding ( [
-       a loinc:624-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1805,9 +1800,8 @@
      fhir:reference [ fhir:v "Organization/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:3092008 ;
      fhir:coding ( [
-       a sct:3092008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

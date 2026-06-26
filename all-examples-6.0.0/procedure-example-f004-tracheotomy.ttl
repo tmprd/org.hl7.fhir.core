@@ -12,8 +12,8 @@
   fhir:id [ fhir:v "f004"] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:code [
+     a sct:48387007 ;
      fhir:coding ( [
-       a sct:48387007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -60,8 +60,8 @@
      ]
   ] ) ; # 
   fhir:bodySite ( [
+     a sct:83030008 ;
      fhir:coding ( [
-       a sct:83030008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

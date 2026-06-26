@@ -14,8 +14,8 @@
      a fhir:Medication ;
      fhir:id [ fhir:v "med0310" ] ;
      fhir:code [
+       a sct:430127000 ;
        fhir:coding ( [
-         a sct:430127000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -125,8 +125,8 @@
      fhir:display [ fhir:v "Patrick Pump" ]
   ] ; # 
   fhir:performerType [
+     a sct:26369006 ;
      fhir:coding ( [
-       a sct:26369006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -142,8 +142,8 @@
   ] ) ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:297217002 ;
        fhir:coding ( [
-         a sct:297217002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -27,8 +27,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [
+     a loinc:LA27976-2 ;
      fhir:coding ( [
-       a loinc:LA27976-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

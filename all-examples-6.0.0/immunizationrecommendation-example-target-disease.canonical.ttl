@@ -33,8 +33,8 @@
   ] ; # 
   fhir:recommendation ( [
      fhir:targetDisease ( [
+       a sct:40468003 ;
        fhir:coding ( [
-         a sct:40468003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -47,8 +47,8 @@
      ] ;
      fhir:dateCriterion ( [
        fhir:code [
+         a loinc:30981-5 ;
          fhir:coding ( [
-           a loinc:30981-5 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>

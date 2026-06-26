@@ -20,8 +20,8 @@
   fhir:dateTime [ fhir:v "2024-10-23T00:00:00Z"^^xsd:dateTime] ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:435771000124106 ;
        fhir:coding ( [
-         a sct:435771000124106 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -30,8 +30,8 @@
          fhir:display [ fhir:v "General healthful diet" ]
        ] )
      ] [
+       a sct:436721000124103 ;
        fhir:coding ( [
-         a sct:436721000124103 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -40,8 +40,8 @@
          fhir:display [ fhir:v "Increased energy diet" ]
        ] )
      ] [
+       a sct:1055200005 ;
        fhir:coding ( [
-         a sct:1055200005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -98,8 +98,8 @@
      ]
   ] [
      fhir:concept [
+       a sct:357009 ;
        fhir:coding ( [
-         a sct:357009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -134,8 +134,8 @@
      ] ) ;
      fhir:bodySite [
        fhir:concept [
+         a sct:74670003 ;
          fhir:coding ( [
-           a sct:74670003 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

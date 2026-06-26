@@ -1301,9 +1301,8 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:9279-1 ;
          fhir:coding ( [
-           a loinc:9279-1 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -3532,9 +3531,8 @@
        fhir:short [ fhir:v "Respiratory Rate" ] ;
        fhir:definition [ fhir:v "Respiratory Rate" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:9279-1 ;
          fhir:coding ( [
-           a loinc:9279-1 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>

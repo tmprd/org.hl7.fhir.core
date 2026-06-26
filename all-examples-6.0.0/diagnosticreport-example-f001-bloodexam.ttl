@@ -42,8 +42,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
+     a sct:252275004 ;
      fhir:coding ( [
-       a sct:252275004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -59,8 +59,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:58410-2 ;
      fhir:coding ( [
-       a loinc:58410-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -122,9 +122,8 @@
        fhir:l <http://example.org/bodysitecode>
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:14975008 ;
        fhir:coding ( [
-         a sct:14975008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -145,8 +144,8 @@
   fhir:intent [ fhir:v "original-order"] ; # 
   fhir:code [
      fhir:concept [
+       a loinc:58410-2 ;
        fhir:coding ( [
-         a loinc:58410-2 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

@@ -63,8 +63,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "Rapid daily-dose escalation, until tolerated, from 3 mg/d, and then 10 mg/d, to the recommended maintenance dose of 30 mg IV over 120 min, 3 times per wk on alternate days for up to 12 wk" ] ;
      fhir:route [
+       a sct:47625008 ;
        fhir:coding ( [
-         a sct:47625008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -74,8 +74,8 @@
        ] )
      ] ;
      fhir:method [
+       a sct:422145002 ;
        fhir:coding ( [
-         a sct:422145002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

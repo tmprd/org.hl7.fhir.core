@@ -61,8 +61,8 @@
   fhir:dosage ( [
      fhir:text [ fhir:v "give 10% of dose over 1 minute" ] ;
      fhir:route [
+       a sct:47625008 ;
        fhir:coding ( [
-         a sct:47625008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -95,8 +95,8 @@
   ] [
      fhir:text [ fhir:v "give remaining 90% of dose over 1 hour" ] ;
      fhir:route [
+       a sct:47625008 ;
        fhir:coding ( [
-         a sct:47625008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

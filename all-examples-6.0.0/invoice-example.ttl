@@ -33,8 +33,8 @@
   ] ; # 
   fhir:participant ( [
      fhir:role [
+       a sct:17561000 ;
        fhir:coding ( [
-         a sct:17561000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

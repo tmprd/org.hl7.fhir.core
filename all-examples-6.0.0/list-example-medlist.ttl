@@ -17,8 +17,8 @@
   fhir:status [ fhir:v "current"] ; # 
   fhir:mode [ fhir:v "changes"] ; # 
   fhir:code [
+     a sct:182836005 ;
      fhir:coding ( [
-       a sct:182836005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

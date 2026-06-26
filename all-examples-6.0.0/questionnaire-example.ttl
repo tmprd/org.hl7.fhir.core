@@ -2,7 +2,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -120,7 +119,6 @@
                fhir:code [ fhir:v "COMCAR00" ] ;
                fhir:display [ fhir:v "Angina Pectoris" ]
              ] [
-               a sct:194828000 ;
                fhir:system [
                  fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                  fhir:l <http://snomed.info/sct>
@@ -137,7 +135,6 @@
            ] [
              fhir:linkId [ fhir:v "1.1.1.1.2" ] ;
              fhir:code ( [
-               a sct:22298006 ;
                fhir:system [
                  fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                  fhir:l <http://snomed.info/sct>

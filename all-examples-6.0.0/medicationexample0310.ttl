@@ -15,8 +15,8 @@
      fhir:id [ fhir:v "sub03" ] ;
      fhir:code [
        fhir:concept [
+         a sct:55452001 ;
          fhir:coding ( [
-           a sct:55452001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -28,8 +28,8 @@
      ]
   ] ) ; # 
   fhir:code [
+     a sct:430127000 ;
      fhir:coding ( [
-       a sct:430127000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -39,8 +39,8 @@
      ] )
   ] ; # 
   fhir:doseForm [
+     a sct:385055001 ;
      fhir:coding ( [
-       a sct:385055001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

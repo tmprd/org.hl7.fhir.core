@@ -40,8 +40,8 @@
      fhir:id [ fhir:v "heart-structure" ] ;
      fhir:includedStructure ( [
        fhir:structure [
+         a sct:80891009 ;
          fhir:coding ( [
-           a sct:80891009 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

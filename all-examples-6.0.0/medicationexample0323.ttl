@@ -15,8 +15,8 @@
      fhir:id [ fhir:v "sub10" ] ;
      fhir:code [
        fhir:concept [
+         a sct:419442005 ;
          fhir:coding ( [
-           a sct:419442005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -31,8 +31,8 @@
      fhir:id [ fhir:v "sub11" ] ;
      fhir:code [
        fhir:concept [
+         a sct:387171003 ;
          fhir:coding ( [
-           a sct:387171003 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -47,8 +47,8 @@
      fhir:id [ fhir:v "sub12" ] ;
      fhir:code [
        fhir:concept [
+         a sct:80582002 ;
          fhir:coding ( [
-           a sct:80582002 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -63,8 +63,8 @@
      fhir:id [ fhir:v "sub13" ] ;
      fhir:code [
        fhir:concept [
+         a sct:444883009 ;
          fhir:coding ( [
-           a sct:444883009 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -79,8 +79,8 @@
      fhir:text [ fhir:v "WHO Hand Sanitizer Formulation 1% - 10L" ]
   ] ; # 
   fhir:doseForm [
+     a sct:739006009 ;
      fhir:coding ( [
-       a sct:739006009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -14,8 +14,8 @@
      a fhir:Medication ;
      fhir:id [ fhir:v "med0319" ] ;
      fhir:doseForm [
+       a sct:385101003 ;
        fhir:coding ( [
-         a sct:385101003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -28,8 +28,8 @@
      fhir:ingredient ( [
        fhir:item [
          fhir:concept [
+           a sct:387253001 ;
            fhir:coding ( [
-             a sct:387253001 ;
              fhir:system [
                fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                fhir:l <http://snomed.info/sct>
@@ -61,8 +61,8 @@
      ] [
        fhir:item [
          fhir:concept [
+           a sct:396458002 ;
            fhir:coding ( [
-             a sct:396458002 ;
              fhir:system [
                fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                fhir:l <http://snomed.info/sct>
@@ -94,8 +94,8 @@
      ] [
        fhir:item [
          fhir:concept [
+           a sct:126066007 ;
            fhir:coding ( [
-             a sct:126066007 ;
              fhir:system [
                fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
                fhir:l <http://snomed.info/sct>

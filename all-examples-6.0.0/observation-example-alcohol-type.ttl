@@ -59,9 +59,8 @@
        ] ) # Local - unable to identify a proper LOINC code
      ] ; # component.code is same as code
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:35748005 ;
        fhir:coding ( [
-         a sct:35748005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -82,9 +81,8 @@
        ] ) # Local - unable to identify a proper LOINC code
      ] ; # component.code is same as code
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:53410008 ;
        fhir:coding ( [
-         a sct:53410008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -105,9 +103,8 @@
        ] ) # Local - unable to identify a proper LOINC code
      ] ; # component.code is same as code
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:6524003 ;
        fhir:coding ( [
-         a sct:6524003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

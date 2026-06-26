@@ -11,8 +11,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "high-protein-enteral-supplement"] ; # 
   fhir:code [
+     a sct:443111000124101 ;
      fhir:coding ( [
-       a sct:443111000124101 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -23,8 +23,8 @@
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [
+     a sct:346415002 ;
      fhir:coding ( [
-       a sct:346415002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -39,8 +39,8 @@
   fhir:nutrient ( [
      fhir:item [
        fhir:concept [
+         a sct:1354492001 ;
          fhir:coding ( [
-           a sct:1354492001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

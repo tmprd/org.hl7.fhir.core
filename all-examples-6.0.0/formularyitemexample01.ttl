@@ -11,8 +11,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "formularyitemexample01"] ; # 
   fhir:code [
+     a sct:323418000 ;
      fhir:coding ( [
-       a sct:323418000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

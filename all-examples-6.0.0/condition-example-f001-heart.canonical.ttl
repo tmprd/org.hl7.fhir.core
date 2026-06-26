@@ -29,8 +29,8 @@
      ] )
   ] ; # 
   fhir:category ( [
+     a sct:439401001 ;
      fhir:coding ( [
-       a sct:439401001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -40,8 +40,8 @@
      ] )
   ] ) ; # 
   fhir:severity [
+     a sct:6736007 ;
      fhir:coding ( [
-       a sct:6736007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -51,8 +51,8 @@
      ] )
   ] ; # 
   fhir:code [
+     a sct:368009 ;
      fhir:coding ( [
-       a sct:368009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -62,8 +62,8 @@
      ] )
   ] ; # 
   fhir:bodySite ( [
+     a sct:40768004 ;
      fhir:coding ( [
-       a sct:40768004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -89,8 +89,8 @@
   fhir:recordedDate [ fhir:v "2011-10-05"^^xsd:date] ; # 
   fhir:evidence ( [
      fhir:concept [
+       a sct:426396005 ;
        fhir:coding ( [
-         a sct:426396005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

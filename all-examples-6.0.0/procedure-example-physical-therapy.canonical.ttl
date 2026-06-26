@@ -21,8 +21,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:category ( [
+     a sct:386053000 ;
      fhir:coding ( [
-       a sct:386053000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -33,8 +33,8 @@
      fhir:text [ fhir:v "Evaluation" ]
   ] ) ; # 
   fhir:code [
+     a sct:710830005 ;
      fhir:coding ( [
-       a sct:710830005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -66,8 +66,8 @@
      ]
   ] ) ; # 
   fhir:bodySite ( [
+     a sct:36701003 ;
      fhir:coding ( [
-       a sct:36701003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

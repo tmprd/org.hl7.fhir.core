@@ -45,8 +45,8 @@
      ] )
   ] ) ; # 
   fhir:excludeFoodModifier ( [
+     a sct:227493005 ;
      fhir:coding ( [
-       a sct:227493005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -58,8 +58,8 @@
   fhir:supplement ( [
      fhir:type [
        fhir:concept [
+         a sct:443051000124104 ;
          fhir:coding ( [
-           a sct:443051000124104 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -98,8 +98,8 @@
        ] ) ;
        fhir:asNeeded [ fhir:v true ] ;
        fhir:asNeededFor [
+         a sct:440321000124101 ;
          fhir:coding ( [
-           a sct:440321000124101 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

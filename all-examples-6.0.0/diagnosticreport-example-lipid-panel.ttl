@@ -35,8 +35,8 @@
        ] )
      ] ) ;
      fhir:code [
+       a loinc:35200-5 ;
        fhir:coding ( [
-         a loinc:35200-5 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -108,8 +108,8 @@
        ] )
      ] ) ;
      fhir:code [
+       a loinc:35217-9 ;
        fhir:coding ( [
-         a loinc:35217-9 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -179,8 +179,8 @@
        ] )
      ] ) ;
      fhir:code [
+       a loinc:2085-9 ;
        fhir:coding ( [
-         a loinc:2085-9 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -250,8 +250,8 @@
        ] )
      ] ) ;
      fhir:code [
+       a loinc:13457-7 ;
        fhir:coding ( [
-         a loinc:13457-7 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -326,8 +326,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:57698-3 ;
      fhir:coding ( [
-       a loinc:57698-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

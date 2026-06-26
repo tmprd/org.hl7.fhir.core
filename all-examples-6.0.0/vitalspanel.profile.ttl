@@ -1296,9 +1296,8 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:85353-1 ;
          fhir:coding ( [
-           a loinc:85353-1 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -3439,9 +3438,8 @@
        fhir:definition [ fhir:v "Vital Signs Panel" ] ;
        fhir:alias ( [ fhir:v "Panel Name" ] [ fhir:v "Panel Code" ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:85353-1 ;
          fhir:coding ( [
-           a loinc:85353-1 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>

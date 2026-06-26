@@ -45,8 +45,8 @@
      ] )
   ] ) ; # 
   fhir:excludeFoodModifier ( [
+     a sct:227493005 ;
      fhir:coding ( [
-       a sct:227493005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -57,8 +57,8 @@
   ] ) ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:386619000 ;
        fhir:coding ( [
-         a sct:386619000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -75,8 +75,8 @@
        ] ) ;
        fhir:text [ fhir:v "Low sodium diet" ]
      ] [
+       a sct:226208002 ;
        fhir:coding ( [
-         a sct:226208002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -95,8 +95,8 @@
      ] ) ;
      fhir:nutrient ( [
        fhir:modifier [
+         a sct:39972003 ;
          fhir:coding ( [
-           a sct:39972003 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -116,8 +116,8 @@
        ]
      ] [
        fhir:modifier [
+         a sct:33463005 ;
          fhir:coding ( [
-           a sct:33463005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

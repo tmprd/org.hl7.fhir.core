@@ -23,8 +23,8 @@
   fhir:priority [ fhir:v "routine"] ; # 
   fhir:medication [
      fhir:concept [
+       a sct:376988009 ;
        fhir:coding ( [
-         a sct:376988009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -47,8 +47,8 @@
   ] ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:40930008 ;
        fhir:coding ( [
-         a sct:40930008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

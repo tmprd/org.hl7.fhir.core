@@ -51,8 +51,8 @@
      fhir:text [ fhir:v "Counselling" ]
   ] ) ; # 
   fhir:type ( [
+     a sct:394913002 ;
      fhir:coding ( [
-       a sct:394913002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -61,8 +61,8 @@
        fhir:display [ fhir:v "Psychotherapy (specialty)" ]
      ] )
   ] [
+     a sct:394587001 ;
      fhir:coding ( [
-       a sct:394587001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -72,8 +72,8 @@
      ] )
   ] ) ; # 
   fhir:specialty ( [
+     a sct:47505003 ;
      fhir:coding ( [
-       a sct:47505003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -27,8 +27,8 @@
   fhir:dateTime [ fhir:v "2014-09-17"^^xsd:date] ; # 
   fhir:oralDiet [
      fhir:type ( [
+       a sct:435801000124108 ;
        fhir:coding ( [
-         a sct:435801000124108 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -60,8 +60,8 @@
      ] ;
      fhir:texture ( [
        fhir:modifier [
+         a sct:228049004 ;
          fhir:coding ( [
-           a sct:228049004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

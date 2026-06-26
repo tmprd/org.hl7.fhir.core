@@ -38,8 +38,8 @@
      ] )
   ] ) ; # 
   fhir:typeCollected [
+     a sct:122555007 ;
      fhir:coding ( [
-       a sct:122555007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -51,8 +51,8 @@
   fhir:patientPreparation ( [
      fhir:text [ fhir:v "12 hour fasting" ]
   ] [
+     a sct:263678003 ;
      fhir:coding ( [
-       a sct:263678003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -65,8 +65,8 @@
   fhir:typeTested ( [
      fhir:isDerived [ fhir:v false ] ;
      fhir:type [
+       a sct:119364003 ;
        fhir:coding ( [
-         a sct:119364003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -78,8 +78,8 @@
      fhir:preference [ fhir:v "preferred" ] ;
      fhir:container [
        fhir:material [
+         a sct:61088005 ;
          fhir:coding ( [
-           a sct:61088005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -89,8 +89,8 @@
          ] )
        ] ;
        fhir:type [
+         a sct:702281005 ;
          fhir:coding ( [
-           a sct:702281005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -189,8 +189,8 @@
      ] )
   ] [
      fhir:type [
+       a sct:119361006 ;
        fhir:coding ( [
-         a sct:119361006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -202,8 +202,8 @@
      fhir:preference [ fhir:v "alternate" ] ;
      fhir:container [
        fhir:material [
+         a sct:32039001 ;
          fhir:coding ( [
-           a sct:32039001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -213,8 +213,8 @@
          ] )
        ] ;
        fhir:type [
+         a sct:702281005 ;
          fhir:coding ( [
-           a sct:702281005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

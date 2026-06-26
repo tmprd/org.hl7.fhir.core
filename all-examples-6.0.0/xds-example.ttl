@@ -115,8 +115,8 @@
      ] )
   ] ; # 
   fhir:category ( [
+     a loinc:47039-3 ;
      fhir:coding ( [
-       a loinc:47039-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

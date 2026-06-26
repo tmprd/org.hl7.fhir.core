@@ -31,8 +31,8 @@
      ] )
   ] ; # 
   fhir:category ( [
+     a sct:55607006 ;
      fhir:coding ( [
-       a sct:55607006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -48,8 +48,8 @@
      ] ) # Bacterial sepsis is certainly a moderate to severe problem
   ] ) ; # 
   fhir:severity [
+     a sct:371924009 ;
      fhir:coding ( [
-       a sct:371924009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -59,8 +59,8 @@
      ] )
   ] ; # 
   fhir:code [
+     a sct:10001005 ;
      fhir:coding ( [
-       a sct:10001005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -70,8 +70,8 @@
      ] ) # The problem is bacterial sepsis
   ] ; # 
   fhir:bodySite ( [
+     a sct:281158006 ;
      fhir:coding ( [
-       a sct:281158006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

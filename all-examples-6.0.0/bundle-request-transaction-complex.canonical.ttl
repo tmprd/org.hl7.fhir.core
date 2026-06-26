@@ -293,8 +293,8 @@
      ] )
   ] ) ; # 
   fhir:type ( [
+     a sct:162673000 ;
      fhir:coding ( [
-       a sct:162673000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -357,8 +357,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:2093-3 ;
      fhir:coding ( [
-       a loinc:2093-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

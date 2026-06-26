@@ -15,8 +15,8 @@
      fhir:id [ fhir:v "careteam" ] ;
      fhir:participant ( [
        fhir:role [
+         a sct:425268008 ;
          fhir:coding ( [
-           a sct:425268008 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -32,8 +32,8 @@
        ]
      ] [
        fhir:role [
+         a sct:229774002 ;
          fhir:coding ( [
-           a sct:229774002 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -78,8 +78,8 @@
      fhir:intent [ fhir:v "order" ] ;
      fhir:code [
        fhir:concept [
+         a sct:306005 ;
          fhir:coding ( [
-           a sct:306005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

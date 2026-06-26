@@ -31,8 +31,8 @@
      fhir:reference [ fhir:v "#mmanu" ]
   ] ; # 
   fhir:doseForm [
+     a sct:75359005 ;
      fhir:coding ( [
-       a sct:75359005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -44,8 +44,8 @@
   fhir:ingredient ( [
      fhir:item [
        fhir:concept [
+         a sct:75359005 ;
          fhir:coding ( [
-           a sct:75359005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

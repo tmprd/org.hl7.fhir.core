@@ -14,8 +14,8 @@
      a fhir:Medication ;
      fhir:id [ fhir:v "med0312" ] ;
      fhir:code [
+       a sct:116805008 ;
        fhir:coding ( [
-         a sct:116805008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

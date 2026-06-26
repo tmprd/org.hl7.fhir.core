@@ -29,8 +29,8 @@
   fhir:status [ fhir:v "active"] ; # 
   fhir:intent [ fhir:v "order"] ; # 
   fhir:category ( [
+     a sct:103696004 ;
      fhir:coding ( [
-       a sct:103696004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -42,8 +42,8 @@
   fhir:priority [ fhir:v "routine"] ; # 
   fhir:code [
      fhir:concept [
+       a sct:172676009 ;
        fhir:coding ( [
-         a sct:172676009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

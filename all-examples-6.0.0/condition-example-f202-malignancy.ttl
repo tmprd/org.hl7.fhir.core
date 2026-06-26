@@ -48,8 +48,8 @@
      ] )
   ] ) ; # 
   fhir:severity [
+     a sct:24484000 ;
      fhir:coding ( [
-       a sct:24484000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -59,8 +59,8 @@
      ] )
   ] ; # 
   fhir:code [
+     a sct:363346000 ;
      fhir:coding ( [
-       a sct:363346000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -70,8 +70,8 @@
      ] ) # The problem is a malignant tumor
   ] ; # 
   fhir:bodySite ( [
+     a sct:361355005 ;
      fhir:coding ( [
-       a sct:361355005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

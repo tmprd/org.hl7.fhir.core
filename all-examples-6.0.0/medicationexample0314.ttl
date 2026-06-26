@@ -21,8 +21,8 @@
      ] )
   ] ; # 
   fhir:doseForm [
+     a sct:385055001 ;
      fhir:coding ( [
-       a sct:385055001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -34,8 +34,8 @@
   fhir:ingredient ( [
      fhir:item [
        fhir:concept [
+         a sct:386983007 ;
          fhir:coding ( [
-           a sct:386983007 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

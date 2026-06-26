@@ -45,8 +45,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:85354-9 ;
      fhir:coding ( [
-       a loinc:85354-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -83,8 +83,8 @@
 #        of an observation that has no value if it has "COMP" (component)
 #        observations
   fhir:bodySite [
+     a sct:368209003 ;
      fhir:coding ( [
-       a sct:368209003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -95,8 +95,8 @@
   ] ; # The BodySite can be captured in a LOINC code but am showing it here to demonstrate populating the element
   fhir:component ( [
      fhir:code [
+       a loinc:8480-6, sct:271649006 ;
        fhir:coding ( [
-         a loinc:8480-6 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -104,7 +104,6 @@
          fhir:code [ fhir:v "8480-6" ] ;
          fhir:display [ fhir:v "Systolic blood pressure" ]
        ] [
-         a sct:271649006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -143,8 +142,8 @@
      ] ) # an interpretation for the individual composite observation
   ] [
      fhir:code [
+       a loinc:8462-4 ;
        fhir:coding ( [
-         a loinc:8462-4 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

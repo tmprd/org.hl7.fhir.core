@@ -67,8 +67,8 @@
   ] ; # 
   fhir:contact ( [
      fhir:relationship ( [
+       a sct:72705000 ;
        fhir:coding ( [
-         a sct:72705000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

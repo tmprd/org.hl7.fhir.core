@@ -14,8 +14,8 @@
      a fhir:Medication ;
      fhir:id [ fhir:v "med0306" ] ;
      fhir:code [
+       a sct:324252006 ;
        fhir:coding ( [
-         a sct:324252006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -68,8 +68,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "Two tablets at once" ] ;
      fhir:route [
+       a sct:26643006 ;
        fhir:coding ( [
-         a sct:26643006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -79,8 +79,8 @@
        ] )
      ] ;
      fhir:method [
+       a sct:421521009 ;
        fhir:coding ( [
-         a sct:421521009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

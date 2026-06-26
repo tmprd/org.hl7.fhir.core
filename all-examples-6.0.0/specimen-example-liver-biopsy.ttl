@@ -35,8 +35,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "available"] ; # 
   fhir:type [
+     a sct:119376003 ;
      fhir:coding ( [
-       a sct:119376003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -74,8 +74,8 @@
        fhir:code [ fhir:v "cm" ]
      ] ;
      fhir:method [
+       a sct:129314006 ;
        fhir:coding ( [
-         a sct:129314006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -86,8 +86,8 @@
      ] ;
      fhir:bodySite [
        fhir:concept [
+         a sct:10200004 ;
          fhir:coding ( [
-           a sct:10200004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -114,8 +114,8 @@
      ]
   ] ) ; # 
   fhir:condition ( [
+     a sct:48883003 ;
      fhir:coding ( [
-       a sct:48883003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

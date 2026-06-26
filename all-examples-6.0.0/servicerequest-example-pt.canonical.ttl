@@ -13,8 +13,8 @@
   fhir:status [ fhir:v "completed"] ; # 
   fhir:intent [ fhir:v "order"] ; # 
   fhir:category ( [
+     a sct:386053000 ;
      fhir:coding ( [
-       a sct:386053000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -26,8 +26,8 @@
   ] ) ; # 
   fhir:code [
      fhir:concept [
+       a sct:710830005 ;
        fhir:coding ( [
-         a sct:710830005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

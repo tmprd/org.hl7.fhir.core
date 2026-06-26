@@ -61,8 +61,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:85354-9 ;
      fhir:coding ( [
-       a loinc:85354-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -102,8 +102,8 @@
      fhir:text [ fhir:v "In this example, the blood pressure measurements are not available due to cancellation of the order.  Data absent reason is present for each component" ]
   ] ) ; # 
   fhir:bodySite [
+     a sct:368209003 ;
      fhir:coding ( [
-       a sct:368209003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -114,8 +114,8 @@
   ] ; # for an observation with components, these cannot disagree with the flags on the components
   fhir:component ( [
      fhir:code [
+       a loinc:8480-6, sct:271649006 ;
        fhir:coding ( [
-         a loinc:8480-6 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -123,7 +123,6 @@
          fhir:code [ fhir:v "8480-6" ] ;
          fhir:display [ fhir:v "Systolic blood pressure" ]
        ] [
-         a sct:271649006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -151,8 +150,8 @@
      ] # no value due to some error\n    <valueQuantity>\n      <value value=\"107\"\/>\n      <unit value=\"mm[Hg]\"\/>\n    <\/valueQuantity>
   ] [
      fhir:code [
+       a loinc:8462-4 ;
        fhir:coding ( [
-         a loinc:8462-4 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

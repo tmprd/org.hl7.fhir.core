@@ -199,8 +199,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:632-0 ;
      fhir:coding ( [
-       a loinc:632-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1154,8 +1154,8 @@
   fhir:intent [ fhir:v "original-order"] ; # 
   fhir:code [
      fhir:concept [
+       a loinc:632-0 ;
        fhir:coding ( [
-         a loinc:632-0 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

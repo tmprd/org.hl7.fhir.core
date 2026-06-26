@@ -27,8 +27,8 @@
        fhir:text [ fhir:v "Tylenol PM" ]
      ] ;
      fhir:doseForm [
+       a sct:385057009 ;
        fhir:coding ( [
-         a sct:385057009 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -127,8 +127,8 @@
   ] ) ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:166643006 ;
        fhir:coding ( [
-         a sct:166643006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -153,8 +153,8 @@
        ] )
      ] ;
      fhir:reason [
+       a sct:266710000 ;
        fhir:coding ( [
-         a sct:266710000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

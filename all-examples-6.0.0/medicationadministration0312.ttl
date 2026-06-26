@@ -21,8 +21,8 @@
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:concept [
+       a sct:333919005 ;
        fhir:coding ( [
-         a sct:333919005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

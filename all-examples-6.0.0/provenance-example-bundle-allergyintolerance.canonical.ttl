@@ -72,8 +72,8 @@
   fhir:category ( [ fhir:v "medication"] ) ; # 
   fhir:criticality [ fhir:v "high"] ; # 
   fhir:code [
+     a sct:762952008 ;
      fhir:coding ( [
-       a sct:762952008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -95,8 +95,8 @@
   fhir:reaction ( [
      fhir:manifestation ( [
        fhir:concept [
+         a sct:247472004 ;
          fhir:coding ( [
-           a sct:247472004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

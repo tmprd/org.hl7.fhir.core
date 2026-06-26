@@ -37,9 +37,8 @@
          fhir:l fhir:breed
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, sct:58108001 ;
          fhir:coding ( [
-           a sct:58108001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

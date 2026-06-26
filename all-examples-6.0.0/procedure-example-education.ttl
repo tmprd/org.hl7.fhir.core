@@ -21,8 +21,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:category ( [
+     a sct:311401005 ;
      fhir:coding ( [
-       a sct:311401005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -33,8 +33,8 @@
      fhir:text [ fhir:v "Education" ]
   ] ) ; # 
   fhir:code [
+     a sct:48023004 ;
      fhir:coding ( [
-       a sct:48023004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

@@ -26,8 +26,8 @@
      ] )
   ] ) ; # 
   fhir:priority [
+     a sct:394849002 ;
      fhir:coding ( [
-       a sct:394849002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -37,8 +37,8 @@
      ] )
   ] ; # 
   fhir:type ( [
+     a sct:183807002 ;
      fhir:coding ( [
-       a sct:183807002 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -138,8 +138,8 @@
      fhir:reference [ fhir:v "Account/example" ]
   ] ) ; # 
   fhir:dietPreference ( [
+     a sct:276026009 ;
      fhir:coding ( [
-       a sct:276026009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -174,8 +174,8 @@
        fhir:reference [ fhir:v "Location/2" ]
      ] ;
      fhir:admitSource [
+       a sct:309902002 ;
        fhir:coding ( [
-         a sct:309902002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

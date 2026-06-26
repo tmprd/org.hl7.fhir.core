@@ -28,8 +28,8 @@
   fhir:intent [ fhir:v "original-order"] ; # 
   fhir:parameter ( [
      fhir:code [
+       a loinc:28826-6 ;
        fhir:coding ( [
-         a loinc:28826-6 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -51,8 +51,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:28829-0 ;
        fhir:coding ( [
-         a loinc:28829-0 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -74,8 +74,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:28810-0 ;
        fhir:coding ( [
-         a loinc:28810-0 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

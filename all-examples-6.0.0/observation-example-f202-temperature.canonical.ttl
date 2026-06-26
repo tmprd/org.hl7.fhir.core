@@ -23,8 +23,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:8310-5, loinc:8331-1, sct:56342008 ;
      fhir:coding ( [
-       a loinc:8310-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -39,7 +39,6 @@
        fhir:code [ fhir:v "BT" ] ;
        fhir:display [ fhir:v "Body temperature" ]
      ] [
-       a loinc:8331-1 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -47,7 +46,6 @@
        fhir:code [ fhir:v "8331-1" ] ;
        fhir:display [ fhir:v "Oral temperature" ]
      ] [
-       a sct:56342008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -91,8 +89,8 @@
      ] )
   ] ) ; # 
   fhir:bodySite [
+     a sct:74262004 ;
      fhir:coding ( [
-       a sct:74262004 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -102,8 +100,8 @@
      ] )
   ] ; # 
   fhir:method [
+     a sct:89003005 ;
      fhir:coding ( [
-       a sct:89003005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

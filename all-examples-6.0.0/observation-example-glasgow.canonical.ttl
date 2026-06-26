@@ -12,8 +12,8 @@
   fhir:id [ fhir:v "glasgow"] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:9269-2 ;
      fhir:coding ( [
-       a loinc:9269-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -88,8 +88,8 @@
   ] ) ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:9268-4 ;
        fhir:coding ( [
-         a loinc:9268-4 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -100,7 +100,7 @@
        fhir:text [ fhir:v "GCS Motor" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6566-9 ;
        fhir:coding ( [
          fhir:system [
            fhir:v "http://example.org/codes"^^xsd:anyURI ;
@@ -109,7 +109,6 @@
          fhir:code [ fhir:v "5" ] ;
          fhir:display [ fhir:v "Localizes painful stimuli" ]
        ] [
-         a loinc:LA6566-9 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;
@@ -131,8 +130,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:9270-0 ;
        fhir:coding ( [
-         a loinc:9270-0 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -143,7 +142,7 @@
        fhir:text [ fhir:v "GSC Verbal" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6560-2 ;
        fhir:coding ( [
          fhir:system [
            fhir:v "http://example.org/codes"^^xsd:anyURI ;
@@ -152,7 +151,6 @@
          fhir:code [ fhir:v "4" ] ;
          fhir:display [ fhir:v "Confused, disoriented" ]
        ] [
-         a loinc:LA6560-2 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;
@@ -174,8 +172,8 @@
      ]
   ] [
      fhir:code [
+       a loinc:9267-6 ;
        fhir:coding ( [
-         a loinc:9267-6 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -186,7 +184,7 @@
        fhir:text [ fhir:v "Eyes" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6556-0 ;
        fhir:coding ( [
          fhir:system [
            fhir:v "http://example.org/codes"^^xsd:anyURI ;
@@ -195,7 +193,6 @@
          fhir:code [ fhir:v "4" ] ;
          fhir:display [ fhir:v "Opens eyes spontaneously" ]
        ] [
-         a loinc:LA6556-0 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;

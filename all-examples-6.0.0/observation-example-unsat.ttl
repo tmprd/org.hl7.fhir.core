@@ -21,8 +21,8 @@
   ] ) ; # urn:oid:2.16.840.1.113883.4.642.1.7, 2.16.840.1.113883.4.642.1.118
   fhir:status [ fhir:v "cancelled"] ; # 
   fhir:code [
+     a loinc:15074-8 ;
      fhir:coding ( [
-       a loinc:15074-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -47,8 +47,8 @@
      fhir:display [ fhir:v "A. Langeveld" ]
   ] ) ; # 
   fhir:dataAbsentReason [
+     a sct:125154007 ;
      fhir:coding ( [
-       a sct:125154007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

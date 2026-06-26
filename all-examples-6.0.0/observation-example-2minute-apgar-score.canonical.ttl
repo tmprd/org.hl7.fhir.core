@@ -54,8 +54,8 @@
      fhir:text [ fhir:v "Survey" ]
   ] ) ; # 
   fhir:code [
+     a loinc:9273-4 ;
      fhir:coding ( [
-       a loinc:9273-4 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -88,8 +88,8 @@
   ] ; # 
   fhir:component ( [
      fhir:code [
+       a sct:249227004 ;
        fhir:coding ( [
-         a sct:249227004 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -100,9 +100,8 @@
        fhir:text [ fhir:v "Apgar color score" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6723-6 ;
        fhir:coding ( [
-         a loinc:LA6723-6 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;
@@ -130,8 +129,8 @@
      ]
   ] [
      fhir:code [
+       a sct:249223000 ;
        fhir:coding ( [
-         a sct:249223000 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -142,9 +141,8 @@
        fhir:text [ fhir:v "Apgar heart rate score" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6717-8 ;
        fhir:coding ( [
-         a loinc:LA6717-8 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;
@@ -172,8 +170,8 @@
      ]
   ] [
      fhir:code [
+       a sct:249226008 ;
        fhir:coding ( [
-         a sct:249226008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -184,9 +182,8 @@
        fhir:text [ fhir:v "Apgar response to stimulus score" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6721-0 ;
        fhir:coding ( [
-         a loinc:LA6721-0 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;
@@ -214,8 +211,8 @@
      ]
   ] [
      fhir:code [
+       a sct:249225007 ;
        fhir:coding ( [
-         a sct:249225007 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -226,9 +223,8 @@
        fhir:text [ fhir:v "Apgar muscle tone score" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6714-5 ;
        fhir:coding ( [
-         a loinc:LA6714-5 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;
@@ -256,8 +252,8 @@
      ]
   ] [
      fhir:code [
+       a sct:249224006 ;
        fhir:coding ( [
-         a sct:249224006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -268,9 +264,8 @@
        fhir:text [ fhir:v "Apgar respiratory effort score" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, loinc:LA6726-9 ;
        fhir:coding ( [
-         a loinc:LA6726-9 ;
          fhir:extension ( [
            fhir:url [
              fhir:v "http://hl7.org/fhir/StructureDefinition/itemWeight"^^xsd:anyURI ;

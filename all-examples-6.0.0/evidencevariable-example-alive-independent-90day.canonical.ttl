@@ -21,8 +21,8 @@
      fhir:membership [ fhir:v "definitional" ] ;
      fhir:characteristic ( [
        fhir:code [
+         a sct:260905004 ;
          fhir:coding ( [
-           a sct:260905004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -32,9 +32,8 @@
          ] )
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, sct:419099009 ;
          fhir:coding ( [
-           a sct:419099009 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -46,8 +45,8 @@
        fhir:exclude [ fhir:v true ]
      ] [
        fhir:code [
+         a sct:260905004 ;
          fhir:coding ( [
-           a sct:260905004 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -57,9 +56,8 @@
          ] )
        ] ;
        fhir:value [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, sct:718705001 ;
          fhir:coding ( [
-           a sct:718705001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

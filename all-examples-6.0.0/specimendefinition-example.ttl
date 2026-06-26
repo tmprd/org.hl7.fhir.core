@@ -38,8 +38,8 @@
      ] )
   ] ) ; # 
   fhir:typeCollected [
+     a sct:122555007 ;
      fhir:coding ( [
-       a sct:122555007 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -54,8 +54,8 @@
   fhir:typeTested ( [
      fhir:isDerived [ fhir:v true ] ;
      fhir:type [
+       a sct:119364003 ;
        fhir:coding ( [
-         a sct:119364003 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -70,8 +70,8 @@
          fhir:text [ fhir:v "glass" ]
        ] ;
        fhir:type [
+         a sct:702281005 ;
          fhir:coding ( [
-           a sct:702281005 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>

@@ -34,8 +34,8 @@
      fhir:reference [ fhir:v "Location/1" ]
   ] ; # 
   fhir:activity [
+     a sct:3457005 ;
      fhir:coding ( [
-       a sct:3457005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

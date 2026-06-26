@@ -33,8 +33,8 @@
   ] ; # 
   fhir:reason ( [
      fhir:concept [
+       a sct:11865081000119107 ;
        fhir:coding ( [
-         a sct:11865081000119107 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

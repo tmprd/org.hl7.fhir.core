@@ -1296,9 +1296,8 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:85354-9 ;
          fhir:coding ( [
-           a loinc:85354-9 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -3611,9 +3610,8 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:8480-6 ;
          fhir:coding ( [
-           a loinc:8480-6 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -4137,9 +4135,8 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:8462-4 ;
          fhir:coding ( [
-           a loinc:8462-4 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -4498,9 +4495,8 @@
        fhir:short [ fhir:v "Blood Pressure" ] ;
        fhir:definition [ fhir:v "Blood Pressure" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:85354-9 ;
          fhir:coding ( [
-           a loinc:85354-9 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -4566,9 +4562,8 @@
        fhir:short [ fhir:v "Systolic Blood Pressure" ] ;
        fhir:definition [ fhir:v "Systolic Blood Pressure" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:8480-6 ;
          fhir:coding ( [
-           a loinc:8480-6 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>
@@ -4669,9 +4664,8 @@
        fhir:short [ fhir:v "Diastolic Blood Pressure" ] ;
        fhir:definition [ fhir:v "Diastolic Blood Pressure" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept ;
+         a fhir:CodeableConcept, loinc:8462-4 ;
          fhir:coding ( [
-           a loinc:8462-4 ;
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
              fhir:l <http://loinc.org>

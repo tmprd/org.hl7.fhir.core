@@ -20,8 +20,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:33914-3 ;
      fhir:coding ( [
-       a loinc:33914-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -48,8 +48,8 @@
      fhir:text [ fhir:v "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...." ]
   ] ) ; # 
   fhir:method [
+     a sct:702668005 ;
      fhir:coding ( [
-       a sct:702668005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -60,8 +60,8 @@
   ] ; # 
   fhir:component ( [
      fhir:code [
+       a loinc:48643-1 ;
        fhir:coding ( [
-         a loinc:48643-1 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>
@@ -108,8 +108,8 @@
      ] )
   ] [
      fhir:code [
+       a loinc:48642-3 ;
        fhir:coding ( [
-         a loinc:48642-3 ;
          fhir:system [
            fhir:v "http://loinc.org"^^xsd:anyURI ;
            fhir:l <http://loinc.org>

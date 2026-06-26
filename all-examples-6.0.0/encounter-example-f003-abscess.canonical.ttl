@@ -30,8 +30,8 @@
      ] )
   ] ) ; # 
   fhir:priority [
+     a sct:183496005 ;
      fhir:coding ( [
-       a sct:183496005 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -41,8 +41,8 @@
      ] )
   ] ; # 
   fhir:type ( [
+     a sct:270427003 ;
      fhir:coding ( [
-       a sct:270427003 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -79,8 +79,8 @@
   fhir:reason ( [
      fhir:value ( [
        fhir:concept [
+         a sct:18099001 ;
          fhir:coding ( [
-           a sct:18099001 ;
            fhir:system [
              fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
              fhir:l <http://snomed.info/sct>
@@ -101,8 +101,8 @@
        fhir:value [ fhir:v "93042" ]
      ] ;
      fhir:admitSource [
+       a sct:305956004 ;
        fhir:coding ( [
-         a sct:305956004 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -112,8 +112,8 @@
        ] )
      ] ;
      fhir:dischargeDisposition [
+       a sct:306689006 ;
        fhir:coding ( [
-         a sct:306689006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

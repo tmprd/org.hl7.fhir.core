@@ -23,8 +23,8 @@
   ] ) ; # 
   fhir:status [ fhir:v "available"] ; # 
   fhir:type [
+     a sct:122610009 ;
      fhir:coding ( [
-       a sct:122610009 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -57,8 +57,8 @@
        fhir:unit [ fhir:v "mm2" ]
      ] ;
      fhir:method [
+       a sct:129314006 ;
        fhir:coding ( [
-         a sct:129314006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

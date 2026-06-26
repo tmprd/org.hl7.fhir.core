@@ -44,8 +44,8 @@
   fhir:dosage [
      fhir:text [ fhir:v "20 Units SC before breakfast" ] ;
      fhir:route [
+       a sct:263887005 ;
        fhir:coding ( [
-         a sct:263887005 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

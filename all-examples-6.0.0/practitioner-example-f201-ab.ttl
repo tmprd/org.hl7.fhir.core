@@ -45,8 +45,8 @@
   ] ) ; # ISO 3166 3 letter code
   fhir:qualification ( [
      fhir:code [
+       a sct:41672002 ;
        fhir:coding ( [
-         a sct:41672002 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -155,8 +155,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:58410-2 ;
      fhir:coding ( [
-       a loinc:58410-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -294,8 +294,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:718-7 ;
      fhir:coding ( [
-       a loinc:718-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -353,8 +353,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:789-8 ;
      fhir:coding ( [
-       a loinc:789-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -412,8 +412,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:4544-3 ;
      fhir:coding ( [
-       a loinc:4544-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -465,8 +465,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:787-2 ;
      fhir:coding ( [
-       a loinc:787-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -533,8 +533,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:785-6 ;
      fhir:coding ( [
-       a loinc:785-6 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -601,8 +601,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:777-3 ;
      fhir:coding ( [
-       a loinc:777-3 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -660,8 +660,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:6690-2 ;
      fhir:coding ( [
-       a loinc:6690-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -719,8 +719,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:770-8 ;
      fhir:coding ( [
-       a loinc:770-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -758,8 +758,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:751-8 ;
      fhir:coding ( [
-       a loinc:751-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -826,8 +826,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:736-9 ;
      fhir:coding ( [
-       a loinc:736-9 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -865,8 +865,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:731-0 ;
      fhir:coding ( [
-       a loinc:731-0 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -933,8 +933,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:5905-5 ;
      fhir:coding ( [
-       a loinc:5905-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -972,8 +972,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:742-7 ;
      fhir:coding ( [
-       a loinc:742-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1031,8 +1031,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:713-8 ;
      fhir:coding ( [
-       a loinc:713-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1070,8 +1070,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:711-2 ;
      fhir:coding ( [
-       a loinc:711-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1138,8 +1138,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:706-2 ;
      fhir:coding ( [
-       a loinc:706-2 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -1177,8 +1177,8 @@
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
+     a loinc:704-7 ;
      fhir:coding ( [
-       a loinc:704-7 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

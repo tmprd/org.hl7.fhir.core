@@ -23,8 +23,8 @@
      ] )
   ] ) ; # 
   fhir:code [
+     a loinc:76691-5 ;
      fhir:coding ( [
-       a loinc:76691-5 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
@@ -51,9 +51,8 @@
      fhir:reference [ fhir:v "Practitioner/example" ]
   ] ) ; # 
   fhir:value [
-     a fhir:CodeableConcept ;
+     a fhir:CodeableConcept, sct:191788006 ;
      fhir:coding ( [
-       a sct:191788006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>

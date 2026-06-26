@@ -12,8 +12,8 @@
   fhir:id [ fhir:v "f202"] ; # 
   fhir:code [
      fhir:concept [
+       a sct:3092008 ;
        fhir:coding ( [
-         a sct:3092008 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>

@@ -31,8 +31,8 @@
      fhir:display [ fhir:v "UK Pharmacies" ]
   ] ) ; # and/or would this [also] go into Contract.domain as a Jurisdiction?? (see the example on UK Pharamacy Juristiction)
   fhir:type [
+     a loinc:57016-8 ;
      fhir:coding ( [
-       a loinc:57016-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>

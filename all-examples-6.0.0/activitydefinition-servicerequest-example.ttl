@@ -57,9 +57,8 @@
        fhir:code [ fhir:v "user" ]
      ] ;
      fhir:value [
-       a fhir:CodeableConcept ;
+       a fhir:CodeableConcept, sct:309343006 ;
        fhir:coding ( [
-         a sct:309343006 ;
          fhir:system [
            fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
            fhir:l <http://snomed.info/sct>
@@ -72,8 +71,8 @@
   fhir:purpose [ fhir:v "Describes the proposal to perform a Heart Valve replacement."] ; # 
   fhir:usage [ fhir:v "This activity definition is used as the definition of a service request to perform a heart valve replacement. Elements that apply universally are defined here, while elements that apply to the specific setting of a referral within a particular order set are defined in the order set."] ; # 
   fhir:topic ( [
+     a sct:34068001 ;
      fhir:coding ( [
-       a sct:34068001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -84,8 +83,8 @@
   ] ) ; # 
   fhir:kind [ fhir:v "ServiceRequest"] ; # 
   fhir:code [
+     a sct:34068001 ;
      fhir:coding ( [
-       a sct:34068001 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
@@ -131,8 +130,8 @@
      ]
   ] ) ; # 
   fhir:bodySite ( [
+     a sct:17401000 ;
      fhir:coding ( [
-       a sct:17401000 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
