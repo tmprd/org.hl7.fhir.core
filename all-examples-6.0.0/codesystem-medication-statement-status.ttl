@@ -1,0 +1,87 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/medication-statement-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medication-statement-status"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2026-05-09T18:12:32.651-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem medication-statement-status</b>\n      </p>\n      <a name=\"medication-statement-status\"> </a>\n      <a name=\"hcmedication-statement-status\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/CodeSystem/medication-statement-status</code> defines the following codes:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">recorded\n            <a name=\"medication-statement-status-recorded\"> </a>\n          </td>\n          <td>Recorded</td>\n          <td>The action of recording the medication statement is finished.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">entered-in-error\n            <a name=\"medication-statement-status-entered-in-error\"> </a>\n          </td>\n          <td>Entered in Error</td>\n          <td>The statement was entered in error and is not valid.</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">draft\n            <a name=\"medication-statement-status-draft\"> </a>\n          </td>\n          <td>Draft</td>\n          <td>The medication usage is draft or preliminary.</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "phx"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "normative"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/CodeSystem/medication-statement-status"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/CodeSystem/medication-statement-status>
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.4.642.4.1980" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "6.0.0-ballot4"] ; # 
+  fhir:name [ fhir:v "MedicationStatementStatusCodes"] ; # 
+  fhir:title [ fhir:v "MedicationStatement Status Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International"] ; # 
+  fhir:description [ fhir:v "MedicationStatement Status Codes"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/medication-statement-status"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/medication-statement-status>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "recorded" ] ;
+     fhir:display [ fhir:v "Recorded" ] ;
+     fhir:definition [ fhir:v "The action of recording the medication statement is finished." ]
+  ] [
+     fhir:code [ fhir:v "entered-in-error" ] ;
+     fhir:display [ fhir:v "Entered in Error" ] ;
+     fhir:definition [ fhir:v "The statement was entered in error and is not valid." ]
+  ] [
+     fhir:code [ fhir:v "draft" ] ;
+     fhir:display [ fhir:v "Draft" ] ;
+     fhir:definition [ fhir:v "The medication usage is draft or preliminary." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

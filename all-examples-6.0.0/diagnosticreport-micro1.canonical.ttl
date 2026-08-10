@@ -1,0 +1,1174 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Bundle/micro> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "micro"] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/DiagnosticReport/micro"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/DiagnosticReport/micro>
+     ] ;
+     fhir:resource ( <https://example.com/base/DiagnosticReport/micro> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx1-4"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx1-4>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx1-4> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx1-5"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx1-5>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx1-5> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-1"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-1>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-1> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-2"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-2>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-2> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-4"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-4>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-4> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-6"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-6>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-6> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-8"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-8>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-8> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-10"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-10>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-10> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-12"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-12>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-12> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-14"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-14>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-14> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-16"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-16>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-16> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-18"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-18>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-18> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-20"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-20>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-20> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-22"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-22>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-22> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-24"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-24>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-24> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-26"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-26>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-26> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-28"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-28>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-28> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-30"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-30>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-30> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-32"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-32>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-32> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx2-34"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx2-34>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx2-34> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/nte-1"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/nte-1>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/nte-1> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obx3-1"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obx3-1>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obx3-1> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obr-2"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obr-2>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obr-2> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/obr-3"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/obr-3>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/obr-3> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/Observation/org1"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/Observation/org1>
+     ] ;
+     fhir:resource ( <https://example.com/base/Observation/org1> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/base/ServiceRequest/req"^^xsd:anyURI ;
+       fhir:l <https://example.com/base/ServiceRequest/req>
+     ] ;
+     fhir:resource ( <https://example.com/base/ServiceRequest/req> )
+  ] ) . # 
+
+<https://example.com/base/DiagnosticReport/micro> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "micro"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://hnam.org/identifiers/orders"^^xsd:anyURI ;
+       fhir:l <http://hnam.org/identifiers/orders>
+     ] ;
+     fhir:value [ fhir:v "290741144" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:l <http://hl7.org/fhir/ServiceRequest/req> ;
+     fhir:reference [ fhir:v "ServiceRequest/req" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0074>
+       ] ;
+       fhir:code [ fhir:v "MB" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     a loinc:632-0 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "632-0" ] ;
+       fhir:display [ fhir:v "Bacteria identified in Wound by Aerobe culture" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:issued [ fhir:v "2009-08-10T08:25:44+10:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:l <http://hl7.org/fhir/Observation/org1> ;
+     fhir:reference [ fhir:v "Observation/org1" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/ServiceRequest/req> a fhir:ServiceRequest .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Observation/org1> a fhir:Observation .
+
+<https://example.com/base/Observation/obx1-4> a fhir:Observation ;
+  fhir:id [ fhir:v "obx1-4"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "ORGANISM" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/organisms"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/organisms>
+       ] ;
+       fhir:code [ fhir:v "Staaur" ]
+     ] ) ;
+     fhir:text [ fhir:v "Staphylococcus aureus" ]
+  ] . # 
+
+<https://example.com/base/Observation/obx1-5> a fhir:Observation ;
+  fhir:id [ fhir:v "obx1-5"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "CULTPOSNEG" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/flags"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/flags>
+       ] ;
+       fhir:code [ fhir:v "POS" ]
+     ] )
+  ] . # 
+
+<https://example.com/base/Observation/obx2-1> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-1"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60504" ] ;
+       fhir:display [ fhir:v "Ampicillin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "R" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-2> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-2"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60512" ] ;
+       fhir:display [ fhir:v "Cefazolin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-4> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-4"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60516" ] ;
+       fhir:display [ fhir:v "Cefoxitin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-6> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-6"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60527" ] ;
+       fhir:display [ fhir:v "Clindamycin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:comparator [ fhir:v ">=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-8> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-8"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "61203" ] ;
+       fhir:display [ fhir:v "Daptomycin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-10> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-10"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60532" ] ;
+       fhir:display [ fhir:v "Doxycycline" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-12> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-12"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60533" ] ;
+       fhir:display [ fhir:v "Erythromycin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "8"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "R" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-14> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-14"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60536" ] ;
+       fhir:display [ fhir:v "Gentamicin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-16> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-16"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "61007" ] ;
+       fhir:display [ fhir:v "Levofloxacin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-18> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-18"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60699" ] ;
+       fhir:display [ fhir:v "Linezolid" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "4"^^xsd:decimal ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-20> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-20"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "61204" ] ;
+       fhir:display [ fhir:v "Moxifloxacin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-22> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-22"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60551" ] ;
+       fhir:display [ fhir:v "Oxacillin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-24> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-24"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60552" ] ;
+       fhir:display [ fhir:v "Penicillin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "R" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-26> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-26"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60697" ] ;
+       fhir:display [ fhir:v "Quinupristin/Dalfopristin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-28> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-28"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60555" ] ;
+       fhir:display [ fhir:v "Rifampin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-30> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-30"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60558" ] ;
+       fhir:display [ fhir:v "Tetracycline" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-32> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-32"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60561" ] ;
+       fhir:display [ fhir:v "Trimethoprim/Sulfamethoxazole" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.0526 ] ;
+     fhir:comparator [ fhir:v "<=" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obx2-34> a fhir:Observation ;
+  fhir:id [ fhir:v "obx2-34"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60563" ] ;
+       fhir:display [ fhir:v "Vancomycin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "1"^^xsd:decimal ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/nte-1> a fhir:Observation ;
+  fhir:id [ fhir:v "nte-1"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "2099930" ] ;
+       fhir:display [ fhir:v "D-Test" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:String ;
+     fhir:v "D-Test:  Negative - This isolate does not demonstrate inducible clindamycin resistance in vitro."
+  ] . # 
+
+<https://example.com/base/Observation/obx3-1> a fhir:Observation ;
+  fhir:id [ fhir:v "obx3-1"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/tests"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/tests>
+       ] ;
+       fhir:code [ fhir:v "60036" ] ;
+       fhir:display [ fhir:v "Oxacillin" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "S" ]
+     ] )
+  ] ) . # 
+
+<https://example.com/base/Observation/obr-2> a fhir:Observation ;
+  fhir:id [ fhir:v "obr-2"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/panels"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/panels>
+       ] ;
+       fhir:code [ fhir:v "60790" ] ;
+       fhir:display [ fhir:v "Susceptibility - Automated broth dilution (Billed)" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Todd Ashby" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-1> ;
+     fhir:reference [ fhir:v "Observation/obx2-1" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-2> ;
+     fhir:reference [ fhir:v "Observation/obx2-2" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-4> ;
+     fhir:reference [ fhir:v "Observation/obx2-4" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-6> ;
+     fhir:reference [ fhir:v "Observation/obx2-6" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-8> ;
+     fhir:reference [ fhir:v "Observation/obx2-8" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-10> ;
+     fhir:reference [ fhir:v "Observation/obx2-10" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-12> ;
+     fhir:reference [ fhir:v "Observation/obx2-12" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-14> ;
+     fhir:reference [ fhir:v "Observation/obx2-14" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-16> ;
+     fhir:reference [ fhir:v "Observation/obx2-16" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-18> ;
+     fhir:reference [ fhir:v "Observation/obx2-18" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-20> ;
+     fhir:reference [ fhir:v "Observation/obx2-20" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-22> ;
+     fhir:reference [ fhir:v "Observation/obx2-22" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-24> ;
+     fhir:reference [ fhir:v "Observation/obx2-24" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-26> ;
+     fhir:reference [ fhir:v "Observation/obx2-26" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-28> ;
+     fhir:reference [ fhir:v "Observation/obx2-28" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-30> ;
+     fhir:reference [ fhir:v "Observation/obx2-30" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-32> ;
+     fhir:reference [ fhir:v "Observation/obx2-32" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx2-34> ;
+     fhir:reference [ fhir:v "Observation/obx2-34" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/nte-1> ;
+     fhir:reference [ fhir:v "Observation/nte-1" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/obx2-1> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-2> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-4> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-6> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-8> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-10> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-12> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-14> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-16> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-18> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-20> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-22> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-24> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-26> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-28> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-30> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-32> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx2-34> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/nte-1> a fhir:Observation .
+
+<https://example.com/base/Observation/obr-3> a fhir:Observation ;
+  fhir:id [ fhir:v "obr-3"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/panels"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/panels>
+       ] ;
+       fhir:code [ fhir:v "60418" ] ;
+       fhir:display [ fhir:v "Susceptibility - Disk diffusion (Billed)" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:l <http://hl7.org/fhir/Observation/obx3-1> ;
+     fhir:reference [ fhir:v "Observation/obx3-1" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/obx3-1> a fhir:Observation .
+
+<https://example.com/base/Observation/org1> a fhir:Observation ;
+  fhir:id [ fhir:v "org1"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://acme.org/lab/codes/organisms"^^xsd:anyURI ;
+         fhir:l <http://acme.org/lab/codes/organisms>
+       ] ;
+       fhir:code [ fhir:v "Staaur" ]
+     ] ) ;
+     fhir:text [ fhir:v "Staphylococcus aureus Panel" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:l <http://hl7.org/fhir/Observation/obx1-4> ;
+     fhir:reference [ fhir:v "Observation/obx1-4" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obx1-5> ;
+     fhir:reference [ fhir:v "Observation/obx1-5" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obr-2> ;
+     fhir:reference [ fhir:v "Observation/obr-2" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/Observation/obr-3> ;
+     fhir:reference [ fhir:v "Observation/obr-3" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/obx1-4> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obx1-5> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obr-2> a fhir:Observation .
+
+<http://hl7.org/fhir/Observation/obr-3> a fhir:Observation .
+
+<https://example.com/base/ServiceRequest/req> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "req"] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "255337816" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "original-order"] ; # 
+  fhir:code [
+     fhir:concept [
+       a loinc:632-0 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "632-0" ]
+       ] ) ;
+       fhir:text [ fhir:v "Culture, MRSA" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

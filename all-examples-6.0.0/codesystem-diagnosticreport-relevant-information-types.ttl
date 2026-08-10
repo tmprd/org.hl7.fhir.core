@@ -1,0 +1,142 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/diagnosticreport-relevant-information-types> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "diagnosticreport-relevant-information-types"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2026-05-09T18:12:32.651-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem diagnosticreport-relevant-information-types</b>\n      </p>\n      <a name=\"diagnosticreport-relevant-information-types\"> </a>\n      <a name=\"hcdiagnosticreport-relevant-information-types\"> </a>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/diagnosticreport-relevant-information-types</code> defines the following codes in a Is-A hierarchy:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td>\n            <b>Lvl</b>\n          </td>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">QST\n            <a name=\"diagnosticreport-relevant-information-types-QST\"> </a>\n          </td>\n          <td>Question</td>\n          <td>Question</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  AOE\n            <a name=\"diagnosticreport-relevant-information-types-AOE\"> </a>\n          </td>\n          <td>Ask at Order Entry</td>\n          <td>Ask at Order Entry</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  ASC\n            <a name=\"diagnosticreport-relevant-information-types-ASC\"> </a>\n          </td>\n          <td>Ask at Specimen Collection</td>\n          <td>Ask at Specimen Collection</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">RSLT\n            <a name=\"diagnosticreport-relevant-information-types-RSLT\"> </a>\n          </td>\n          <td>Result</td>\n          <td>Result</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  MCS\n            <a name=\"diagnosticreport-relevant-information-types-MCS\"> </a>\n          </td>\n          <td>Micro Culture Status</td>\n          <td>Sub-type of RSLT (Result) This term identifies observations that give overall culture outcome, when no specific organism is being named.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  MID\n            <a name=\"diagnosticreport-relevant-information-types-MID\"> </a>\n          </td>\n          <td>Micro Isolate Descriptor</td>\n          <td>Sub-type of RSLT (Result) This term identifies any other observations about the isolate.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  MIG\n            <a name=\"diagnosticreport-relevant-information-types-MIG\"> </a>\n          </td>\n          <td>Micro Isolate Growth Quantity</td>\n          <td>Sub-type of RSLT (Result) This term identifies growth levels of an isolate – can be numeric or categorical.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  MIN\n            <a name=\"diagnosticreport-relevant-information-types-MIN\"> </a>\n          </td>\n          <td>Micro Isolate Name</td>\n          <td>NSub-type of RSLT (Result) This term identifies observations that name a specific organism either at the species or the genus level.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  MOD\n            <a name=\"diagnosticreport-relevant-information-types-MOD\"> </a>\n          </td>\n          <td>Micro Other Descriptor</td>\n          <td>Sub-type of RSLT (Result) This term identifies observations that do not fit the culture status, but is not at the isolate level.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  MSS\n            <a name=\"diagnosticreport-relevant-information-types-MSS\"> </a>\n          </td>\n          <td>Micro Sample Stain</td>\n          <td>Sub-type of RSLT (Result) This term identifies observations on gram stains (and other stains or smears) on the clinical sample.</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  SUP\n            <a name=\"diagnosticreport-relevant-information-types-SUP\"> </a>\n          </td>\n          <td>Supplemental Result</td>\n          <td>Supplemental Result</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  SUR\n            <a name=\"diagnosticreport-relevant-information-types-SUR\"> </a>\n          </td>\n          <td>Susceptibility Related</td>\n          <td>Susceptibility Related</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  UNSP\n            <a name=\"diagnosticreport-relevant-information-types-UNSP\"> </a>\n          </td>\n          <td>Unspecified</td>\n          <td>Unspecified</td>\n        </tr>\n        <tr>\n          <td>1</td>\n          <td style=\"white-space:nowrap\">SCI\n            <a name=\"diagnosticreport-relevant-information-types-SCI\"> </a>\n          </td>\n          <td>Supporting Clinical Information</td>\n          <td>Supporting Clinical Information</td>\n        </tr>\n        <tr>\n          <td>2</td>\n          <td style=\"white-space:nowrap\">  PHX\n            <a name=\"diagnosticreport-relevant-information-types-PHX\"> </a>\n          </td>\n          <td>Patient History</td>\n          <td>Historical patient data</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "oo"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/diagnosticreport-relevant-information-types"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/diagnosticreport-relevant-information-types>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot4"] ; # 
+  fhir:name [ fhir:v "DiagnosticReportRelevantInformationTypes"] ; # 
+  fhir:title [ fhir:v "Diagnostic Report Relevant Information Types"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-11-01T10:01:24+11:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 (FHIR Project)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@lists.hl7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Concepts specifying how referenced information is considered relevant in a DiagnosticReport. Level 1 derives from v2-0936; Level 2 derives from v2-0937; PHX (Patient History) is added under SCI."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/diagnosticreport-relevant-information-types"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/diagnosticreport-relevant-information-types>
+  ] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "QST" ] ;
+     fhir:display [ fhir:v "Question" ] ;
+     fhir:definition [ fhir:v "Question" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "AOE" ] ;
+       fhir:display [ fhir:v "Ask at Order Entry" ] ;
+       fhir:definition [ fhir:v "Ask at Order Entry" ]
+     ] [
+       fhir:code [ fhir:v "ASC" ] ;
+       fhir:display [ fhir:v "Ask at Specimen Collection" ] ;
+       fhir:definition [ fhir:v "Ask at Specimen Collection" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "RSLT" ] ;
+     fhir:display [ fhir:v "Result" ] ;
+     fhir:definition [ fhir:v "Result" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "MCS" ] ;
+       fhir:display [ fhir:v "Micro Culture Status" ] ;
+       fhir:definition [ fhir:v "Sub-type of RSLT (Result) This term identifies observations that give overall culture outcome, when no specific organism is being named." ]
+     ] [
+       fhir:code [ fhir:v "MID" ] ;
+       fhir:display [ fhir:v "Micro Isolate Descriptor" ] ;
+       fhir:definition [ fhir:v "Sub-type of RSLT (Result) This term identifies any other observations about the isolate." ]
+     ] [
+       fhir:code [ fhir:v "MIG" ] ;
+       fhir:display [ fhir:v "Micro Isolate Growth Quantity" ] ;
+       fhir:definition [ fhir:v "Sub-type of RSLT (Result) This term identifies growth levels of an isolate – can be numeric or categorical." ]
+     ] [
+       fhir:code [ fhir:v "MIN" ] ;
+       fhir:display [ fhir:v "Micro Isolate Name" ] ;
+       fhir:definition [ fhir:v "NSub-type of RSLT (Result) This term identifies observations that name a specific organism either at the species or the genus level." ]
+     ] [
+       fhir:code [ fhir:v "MOD" ] ;
+       fhir:display [ fhir:v "Micro Other Descriptor" ] ;
+       fhir:definition [ fhir:v "Sub-type of RSLT (Result) This term identifies observations that do not fit the culture status, but is not at the isolate level." ]
+     ] [
+       fhir:code [ fhir:v "MSS" ] ;
+       fhir:display [ fhir:v "Micro Sample Stain" ] ;
+       fhir:definition [ fhir:v "Sub-type of RSLT (Result) This term identifies observations on gram stains (and other stains or smears) on the clinical sample." ]
+     ] [
+       fhir:code [ fhir:v "SUP" ] ;
+       fhir:display [ fhir:v "Supplemental Result" ] ;
+       fhir:definition [ fhir:v "Supplemental Result" ]
+     ] [
+       fhir:code [ fhir:v "SUR" ] ;
+       fhir:display [ fhir:v "Susceptibility Related" ] ;
+       fhir:definition [ fhir:v "Susceptibility Related" ]
+     ] [
+       fhir:code [ fhir:v "UNSP" ] ;
+       fhir:display [ fhir:v "Unspecified" ] ;
+       fhir:definition [ fhir:v "Unspecified" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "SCI" ] ;
+     fhir:display [ fhir:v "Supporting Clinical Information" ] ;
+     fhir:definition [ fhir:v "Supporting Clinical Information" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "PHX" ] ;
+       fhir:display [ fhir:v "Patient History" ] ;
+       fhir:definition [ fhir:v "Historical patient data" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

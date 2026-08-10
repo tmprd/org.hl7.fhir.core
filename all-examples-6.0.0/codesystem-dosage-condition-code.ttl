@@ -1,0 +1,207 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/dosage-condition-code> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "dosage-condition-code"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2026-05-09T18:12:32.651-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: CodeSystem dosage-condition-code</b>\n      </p>\n      <a name=\"dosage-condition-code\"> </a>\n      <a name=\"hcdosage-condition-code\"> </a>\n      <p>\n        <b>Properties</b>\n      </p>\n      <p>\n        <b>This code system defines the following properties for its concepts</b>\n      </p>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Name</b>\n          </td>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Type</b>\n          </td>\n          <td>\n            <b>Description</b>\n          </td>\n        </tr>\n        <tr>\n          <td>type</td>\n          <td>type</td>\n          <td>code</td>\n          <td>The type that goes in ConditionDetails.value for this code</td>\n        </tr>\n        <tr>\n          <td>details</td>\n          <td>details</td>\n          <td>string</td>\n          <td>Documentation about what might go in the details for this code</td>\n        </tr>\n      </table>\n      <p>\n        <b>Concepts</b>\n      </p>\n      <p>This case-sensitive code system \n        <code>http://hl7.org/fhir/CodeSystem/dosage-condition-code</code> defines the following codes in a Is-A hierarchy:\n      </p>\n      <table class=\"codes\">\n        <tr>\n          <td style=\"white-space:nowrap\">\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Display</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n          <td>\n            <b>type</b>\n          </td>\n          <td>\n            <b>details</b>\n          </td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">if-needed\n            <a name=\"dosage-condition-code-if-needed\"> </a>\n          </td>\n          <td>If Needed</td>\n          <td>Whether this is needed. Note that this is different to PRN, because the entire course is if required, not on a per dose basis</td>\n          <td>boolean</td>\n          <td>N/A</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">tolerates\n            <a name=\"dosage-condition-code-tolerates\"> </a>\n          </td>\n          <td>Patient tolerates Medication</td>\n          <td>Whether the patient tolerates a medication (e.g. SCT 1303423003)</td>\n          <td>boolean</td>\n          <td>Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">problem-abates\n            <a name=\"dosage-condition-code-problem-abates\"> </a>\n          </td>\n          <td>Problem Abates</td>\n          <td>Whether a symptom, problem of finding abates. It's not really important what type it is. This is considered equivalent to 'patient responds to medication'. The degree of abatement is not defined</td>\n          <td>boolean</td>\n          <td>Detail would be a problem, symptom or finding, if it's not just implied</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">problem-presents\n            <a name=\"dosage-condition-code-problem-presents\"> </a>\n          </td>\n          <td>Problem Presents</td>\n          <td>Whether a symptom, problem of finding presents. It's not really important what type it is.</td>\n          <td>boolean</td>\n          <td>Detail would be a problem, symptom or finding, if it's not just implied</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medication-tolerated\n            <a name=\"dosage-condition-code-medication-tolerated\"> </a>\n          </td>\n          <td>Medication Tolerated</td>\n          <td>Medication Is Tolerated</td>\n          <td>boolean</td>\n          <td>Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medication-funded\n            <a name=\"dosage-condition-code-medication-funded\"> </a>\n          </td>\n          <td>Medication Funded</td>\n          <td>Medication Is Funded / Approved</td>\n          <td>boolean</td>\n          <td>Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for</td>\n        </tr>\n        <tr>\n          <td style=\"white-space:nowrap\">medication-available\n            <a name=\"dosage-condition-code-medication-available\"> </a>\n          </td>\n          <td>Medication Available</td>\n          <td>(Sufficient) medication Is Available (e.g. Supply issues)</td>\n          <td>boolean</td>\n          <td>Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for</td>\n        </tr>\n      </table>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "normative"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "phx"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/CodeSystem/dosage-condition-code"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/CodeSystem/dosage-condition-code>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot4"] ; # 
+  fhir:name [ fhir:v "DosageConditionCodes"] ; # 
+  fhir:title [ fhir:v "Dosage Condition Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Pharmacy"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/fiwg" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/medication" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Additional Binding Purpose"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "http://hl7.org/fhir/ValueSet/dosage-condition-code"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/dosage-condition-code>
+  ] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "type" ] ;
+     fhir:description [ fhir:v "The type that goes in ConditionDetails.value for this code" ] ;
+     fhir:type [ fhir:v "code" ]
+  ] [
+     fhir:code [ fhir:v "details" ] ;
+     fhir:description [ fhir:v "Documentation about what might go in the details for this code" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "if-needed" ] ;
+     fhir:display [ fhir:v "If Needed" ] ;
+     fhir:definition [ fhir:v "Whether this is needed. Note that this is different to PRN, because the entire course is if required, not on a per dose basis" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "N/A"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "tolerates" ] ;
+     fhir:display [ fhir:v "Patient tolerates Medication" ] ;
+     fhir:definition [ fhir:v "Whether the patient tolerates a medication (e.g. SCT 1303423003)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "problem-abates" ] ;
+     fhir:display [ fhir:v "Problem Abates" ] ;
+     fhir:definition [ fhir:v "Whether a symptom, problem of finding abates. It's not really important what type it is. This is considered equivalent to 'patient responds to medication'. The degree of abatement is not defined" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "Detail would be a problem, symptom or finding, if it's not just implied"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "problem-presents" ] ;
+     fhir:display [ fhir:v "Problem Presents" ] ;
+     fhir:definition [ fhir:v "Whether a symptom, problem of finding presents. It's not really important what type it is." ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "Detail would be a problem, symptom or finding, if it's not just implied"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "medication-tolerated" ] ;
+     fhir:display [ fhir:v "Medication Tolerated" ] ;
+     fhir:definition [ fhir:v "Medication Is Tolerated" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "medication-funded" ] ;
+     fhir:display [ fhir:v "Medication Funded" ] ;
+     fhir:definition [ fhir:v "Medication Is Funded / Approved" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for"
+       ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "medication-available" ] ;
+     fhir:display [ fhir:v "Medication Available" ] ;
+     fhir:definition [ fhir:v "(Sufficient) medication Is Available (e.g. Supply issues)" ] ;
+     fhir:property ( [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "boolean"
+       ]
+     ] [
+       fhir:code [ fhir:v "details" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "Can nominate another medication that this depends on; if none is nominated, it's the medicine this dose is for"
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
