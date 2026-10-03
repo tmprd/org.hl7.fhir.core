@@ -871,8 +871,24 @@ public class ValidationEngine implements IValidatorResourceFetcher, IValidationP
 
   public void convert(String source, String output) throws FHIRException, IOException {
     Content cnt = igLoader.loadContent(source, "validate", false, true);
+    if (cnt.getCntType() == FhirFormat.TURTLE) {
+      throw new FHIRException("Turtle input is not supported by convert because reverse conversion is not reliable. Use JSON or XML input.");
+    }
+    if (convertOutputFormat(output) == FhirFormat.TURTLE && cnt.getCntType() != FhirFormat.JSON && cnt.getCntType() != FhirFormat.XML) {
+      throw new FHIRException("Conversion to Turtle requires JSON or XML input.");
+    }
     Element e = Manager.parseSingle(context, new ByteArrayInputStream(cnt.getFocus().getBytes()), cnt.getCntType());
-    Manager.compose(context, e, ManagedFileAccess.outStream(output), (output.endsWith(".json") ? FhirFormat.JSON : FhirFormat.XML), OutputStyle.PRETTY, null);
+    Manager.compose(context, e, ManagedFileAccess.outStream(output), convertOutputFormat(output), OutputStyle.PRETTY, null);
+  }
+
+  public static FhirFormat convertOutputFormat(String output) {
+    if (output.endsWith(".json")) {
+      return FhirFormat.JSON;
+    }
+    if (output.endsWith(".ttl")) {
+      return FhirFormat.TURTLE;
+    }
+    return FhirFormat.XML;
   }
 
   public String evaluateFhirPath(String source, String expression) throws FHIRException, IOException {
