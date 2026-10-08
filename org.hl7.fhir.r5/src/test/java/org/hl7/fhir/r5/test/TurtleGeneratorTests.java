@@ -228,6 +228,7 @@ public class TurtleGeneratorTests {
     parser.setIdPolicy(IdRenderingPolicy.None);
     parser.setShowDecorations(true);
     parser.setDeriveConceptIriFromNamingSystem(true);
+    parser.setCanonicalizeXhtml(false);
 
     Method r6ParserMethod = TurtleParser.class.getDeclaredMethod("r6Parser");
     r6ParserMethod.setAccessible(true);
@@ -237,6 +238,7 @@ public class TurtleGeneratorTests {
     assertThat(delegate.getIdPolicy()).isEqualTo(IdRenderingPolicy.None);
     assertThat(delegate.isShowDecorations()).isTrue();
     assertThat(delegate.isDeriveConceptIriFromNamingSystem()).isTrue();
+    assertThat(delegate.isCanonicalizeXhtml()).isFalse();
   }
 
   /**

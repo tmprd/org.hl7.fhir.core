@@ -23,8 +23,10 @@ import org.hl7.fhir.r5.elementmodel.Element;
 import org.hl7.fhir.r5.elementmodel.JsonParser;
 import org.hl7.fhir.r5.elementmodel.Manager;
 import org.hl7.fhir.r5.elementmodel.Manager.FhirFormat;
+import org.hl7.fhir.r5.elementmodel.ParserBase;
 import org.hl7.fhir.r5.elementmodel.ResourceParser;
 import org.hl7.fhir.r5.elementmodel.TurtleParser;
+import org.hl7.fhir.r5.elementmodel.TurtleParserBase;
 import org.hl7.fhir.r5.elementmodel.XmlParser;
 import org.hl7.fhir.r5.formats.IParser.OutputStyle;
 import org.hl7.fhir.r5.model.Resource;
@@ -65,9 +67,53 @@ public final class TurtleGeneratorTestUtils {
     public void setDeriveConceptIriFromNamingSystem(boolean deriveConceptIriFromNamingSystem) {
       turtleParser.setDeriveConceptIriFromNamingSystem(deriveConceptIriFromNamingSystem);
     }
+
+    public void setCanonicalizeXhtml(boolean canonicalizeXhtml) {
+      turtleParser.setCanonicalizeXhtml(canonicalizeXhtml);
+    }
+
+    public void setConceptIriHandling(TurtleParserBase.ConceptIriHandling conceptIriHandling) {
+      turtleParser.setConceptIriHandling(conceptIriHandling);
+    }
     
     public String getFhirVersion() {
       return workerContext.getVersion();
+    }
+
+    public Element parseResource(InputStream stream, FhirFormat format) throws IOException {
+      return parseResource(parserFor(format), stream, format);
+    }
+
+    public Element parseStrictResource(InputStream stream, FhirFormat format) throws IOException {
+      ParserBase parser = Manager.makeParser(workerContext, format);
+      parser.setupValidation(ParserBase.ValidationPolicy.EVERYTHING);
+      if (parser instanceof TurtleParser) {
+        ((TurtleParser) parser).setConceptIriHandling(turtleParser.getConceptIriHandling());
+      }
+      return parseResource(parser, stream, format);
+    }
+
+    private Element parseResource(ParserBase parser, InputStream stream, FhirFormat format) throws IOException {
+      var errors = new ArrayList<ValidationMessage>();
+      Element resource = parser.parseSingle(stream, errors);
+      if (resource == null || errors.stream().anyMatch(message -> message.getLevel() == ValidationMessage.IssueSeverity.ERROR
+          || message.getLevel() == ValidationMessage.IssueSeverity.FATAL)) {
+        throw new IOException("Unable to parse " + format + ": " + errors);
+      }
+      return resource;
+    }
+
+    public void composeResource(Element resource, OutputStream stream, FhirFormat format) throws IOException {
+      parserFor(format).compose(resource, stream, OutputStyle.PRETTY, null);
+    }
+
+    private ParserBase parserFor(FhirFormat format) {
+      switch (format) {
+      case JSON: return jsonParser;
+      case XML: return xmlParser;
+      case TURTLE: return turtleParser;
+      default: throw new IllegalArgumentException("Unsupported Turtle test format: " + format);
+      }
     }
 
     
@@ -110,7 +156,7 @@ public final class TurtleGeneratorTestUtils {
         System.out.println("Unable to parse XML -- not relevant for Turtle generation");
         return;
       }
-      turtleParser.compose(resourceElement, turtleStream, OutputStyle.PRETTY, null);
+      composeResource(resourceElement, turtleStream, FhirFormat.TURTLE);
     }
 
     public Turtle composeTurtleFromXmlResourcePath(Path xmlResourcePath) throws IOException, UcumException {
@@ -150,7 +196,7 @@ public final class TurtleGeneratorTestUtils {
     public void generateTurtleFromJsonStream(InputStream jsonStream, OutputStream turtleStream) throws IOException, UcumException {
       var errorList = new ArrayList<ValidationMessage>();
       Element resourceElement = jsonParser.parseSingle(jsonStream, errorList);
-      turtleParser.compose(resourceElement, turtleStream, OutputStyle.PRETTY, null);
+      composeResource(resourceElement, turtleStream, FhirFormat.TURTLE);
       for (ValidationMessage message : errorList) {
         System.out.println(message.getDisplay());
       }
@@ -162,7 +208,7 @@ public final class TurtleGeneratorTestUtils {
       Element resourceElement = resourceParser.parse(resource);
       var turtleFilePath = outputTurtleDirectory.resolve(profileName + ".ttl").toString();
       try (OutputStream outputStream = ManagedFileAccess.outStream(turtleFilePath)) {
-        turtleParser.compose(resourceElement, outputStream, OutputStyle.PRETTY, null);
+        composeResource(resourceElement, outputStream, FhirFormat.TURTLE);
         return turtleFilePath;
       }
     }

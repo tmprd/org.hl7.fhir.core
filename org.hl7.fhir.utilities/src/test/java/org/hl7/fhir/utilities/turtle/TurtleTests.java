@@ -4,10 +4,148 @@ import org.hl7.fhir.utilities.tests.BaseTestingUtilities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class TurtleTests {
+
+  @ParameterizedTest
+  @ValueSource(strings = {"<http://example.org/subject>", "ex:subject", ":subject"})
+  void mergesStatementsForTheSameSubject(String subject) throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix ex: <http://example.org/> . @prefix : <http://example.org/> . "
+        + subject + " ex:items (ex:first ex:second) . "
+        + subject + " ex:flag true . "
+        + subject + " ex:type ex:First . "
+        + subject + " ex:type ex:Second .");
+    Assertions.assertEquals(1, turtle.getObjects().size());
+    Turtle.TTLComplex node = turtle.getObject("http://example.org/subject");
+    Turtle.TTLList items = (Turtle.TTLList) node.getPredicates().get("http://example.org/items");
+    Assertions.assertTrue(items.isCollection());
+    Assertions.assertEquals(2, items.getList().size());
+    Assertions.assertEquals("true", ((Turtle.TTLLiteral) node.getPredicates().get("http://example.org/flag")).getValue());
+    Turtle.TTLList types = (Turtle.TTLList) node.getPredicates().get("http://example.org/type");
+    Assertions.assertFalse(types.isCollection());
+    Assertions.assertEquals(2, types.getList().size());
+  }
+
+  @ParameterizedTest
+  @CsvSource(value = {"()|0", "(ex:first)|1", "(ex:first ex:second)|2"}, delimiter = '|')
+  void retainsCollectionAsSingleObject(String source, int size) throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix ex: <http://example.org/> . ex:subject ex:items " + source + " .");
+    Turtle.TTLObject object = turtle.getObject("http://example.org/subject").getPredicates()
+        .get("http://example.org/items");
+    Assertions.assertInstanceOf(Turtle.TTLList.class, object);
+    Assertions.assertTrue(((Turtle.TTLList) object).isCollection());
+    Assertions.assertEquals(size, ((Turtle.TTLList) object).getList().size());
+    if (size > 0) {
+      Assertions.assertEquals("http://example.org/first",
+          ((Turtle.TTLURL) ((Turtle.TTLList) object).getList().get(0)).getUri());
+    }
+  }
+
+  @Test
+  void retainsNestedCollectionsAndNamedObjects() throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix ex: <http://example.org/> . "
+        + "ex:subject ex:items (() (ex:first ex:second) <http://example.org/third>) .");
+    Turtle.TTLList collection = (Turtle.TTLList) turtle.getObject("http://example.org/subject")
+        .getPredicates().get("http://example.org/items");
+    Assertions.assertTrue(collection.isCollection());
+    Assertions.assertEquals(3, collection.getList().size());
+    Assertions.assertTrue(((Turtle.TTLList) collection.getList().get(0)).isCollection());
+    Assertions.assertTrue(((Turtle.TTLList) collection.getList().get(1)).isCollection());
+    Assertions.assertEquals(0, ((Turtle.TTLList) collection.getList().get(0)).getList().size());
+    Assertions.assertEquals(2, ((Turtle.TTLList) collection.getList().get(1)).getList().size());
+    Assertions.assertEquals("http://example.org/third",
+        ((Turtle.TTLURL) collection.getList().get(2)).getUri());
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {"(ex:first), (ex:second)", "(ex:first); ex:items (ex:second)"})
+  void retainsMultipleCollectionObjects(String source) throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix ex: <http://example.org/> . ex:subject ex:items " + source + " .");
+    Turtle.TTLList objects = (Turtle.TTLList) turtle.getObject("http://example.org/subject")
+        .getPredicates().get("http://example.org/items");
+    Assertions.assertFalse(objects.isCollection());
+    Assertions.assertEquals(2, objects.getList().size());
+    Assertions.assertInstanceOf(Turtle.TTLList.class, objects.getList().get(0));
+    Assertions.assertInstanceOf(Turtle.TTLList.class, objects.getList().get(1));
+    Assertions.assertTrue(((Turtle.TTLList) objects.getList().get(0)).isCollection());
+    Assertions.assertTrue(((Turtle.TTLList) objects.getList().get(1)).isCollection());
+    Assertions.assertTrue(objects.getList().get(0).hasValue("http://example.org/first"));
+    Assertions.assertTrue(objects.getList().get(1).hasValue("http://example.org/second"));
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {"(), ex:first, (ex:second)", "ex:first, (), (ex:second)"})
+  void retainsMixedRepeatedObjects(String source) throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix ex: <http://example.org/> . ex:subject ex:items " + source + " .");
+    Turtle.TTLList objects = (Turtle.TTLList) turtle.getObject("http://example.org/subject")
+        .getPredicates().get("http://example.org/items");
+    Assertions.assertFalse(objects.isCollection());
+    Assertions.assertEquals(3, objects.getList().size());
+    int emptyIndex = source.startsWith("()") ? 0 : 1;
+    Turtle.TTLList empty = (Turtle.TTLList) objects.getList().get(emptyIndex);
+    Assertions.assertTrue(empty.isCollection());
+    Assertions.assertTrue(empty.getList().isEmpty());
+    Assertions.assertEquals("http://example.org/first",
+        ((Turtle.TTLURL) objects.getList().get(1 - emptyIndex)).getUri());
+    Turtle.TTLList singleton = (Turtle.TTLList) objects.getList().get(2);
+    Assertions.assertTrue(singleton.isCollection());
+    Assertions.assertEquals(1, singleton.getList().size());
+    Assertions.assertTrue(singleton.hasValue("http://example.org/second"));
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {"", "@prefix rdfs: <http://example.org/legacy/> . ",
+      "@prefix rdf: <http://example.org/not-rdf/> . "})
+  void shorthandTypeUsesStandardRdfNamespace(String prefixes) throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse(prefixes + "<http://example.org/subject> a <http://example.org/Type> .");
+    Assertions.assertTrue(turtle.getObject("http://example.org/subject").getPredicates()
+        .get("http://www.w3.org/1999/02/22-rdf-syntax-ns#type").hasValue("http://example.org/Type"));
+  }
+
+  @Test
+  void retainsExplicitLegacyRdfsType() throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
+        + "<http://example.org/subject> rdfs:type <http://example.org/Type> .");
+    Assertions.assertTrue(turtle.getObject("http://example.org/subject").getPredicates()
+        .get("http://www.w3.org/2000/01/rdf-schema#type").hasValue("http://example.org/Type"));
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {
+      "rdf:type ex:first, ex:second",
+      "rdf:type ex:first , ex:second",
+      "rdf:type <http://example.org/first>, <http://example.org/second>",
+      "rdf:type ex:first ; rdf:type ex:second"
+  })
+  void retainsMultipleTypesInBlankNode(String predicates) throws Exception {
+    Turtle turtle = new Turtle();
+    turtle.parse("@prefix ex: <http://example.org/> .\n"
+        + "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n"
+        + "ex:subject ex:child [ " + predicates + " ] .");
+    Turtle.TTLComplex child = (Turtle.TTLComplex) turtle.getObject("http://example.org/subject")
+        .getPredicates().get("http://example.org/child");
+    Turtle.TTLList types = (Turtle.TTLList) child.getPredicates()
+        .get("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+    Assertions.assertFalse(types.isCollection());
+    Turtle.TTLList constructed = turtle.new TTLList(types.getList().get(0));
+    Assertions.assertFalse(constructed.isCollection());
+    Assertions.assertEquals(1, constructed.getList().size());
+    Assertions.assertEquals(2, types.getList().size());
+    Assertions.assertTrue(types.hasValue("http://example.org/first"));
+    Assertions.assertTrue(types.hasValue("http://example.org/second"));
+  }
 
   private void doTest(String s, boolean ok) {
     try {
@@ -182,7 +320,7 @@ class TurtleTests {
 
   @Test
   void test_last() throws Exception {
-    doTest(BaseTestingUtilities.loadTestResource("turtle", "last.ttl"), false);
+    doTest(BaseTestingUtilities.loadTestResource("turtle", "last.ttl"), true);
   }
 
   @Test
@@ -566,7 +704,7 @@ class TurtleTests {
 
   @Test
   void test_nested_collection() throws Exception {
-    doTest(BaseTestingUtilities.loadTestResource("turtle", "nested_collection.ttl"), false);
+    doTest(BaseTestingUtilities.loadTestResource("turtle", "nested_collection.ttl"), true);
   }
 
   @Test
@@ -802,7 +940,7 @@ class TurtleTests {
 
   @Test
   void test_turtle_subm_03() throws Exception {
-    doTest(BaseTestingUtilities.loadTestResource("turtle", "turtle-subm-03.ttl"), false);
+    doTest(BaseTestingUtilities.loadTestResource("turtle", "turtle-subm-03.ttl"), true);
   }
 
   @Test
@@ -1002,7 +1140,7 @@ class TurtleTests {
 
   @Test
   void test_turtle_subm_23() throws Exception {
-    doTest(BaseTestingUtilities.loadTestResource("turtle", "turtle-subm-23.ttl"), false);
+    doTest(BaseTestingUtilities.loadTestResource("turtle", "turtle-subm-23.ttl"), true);
   }
 
   @Test

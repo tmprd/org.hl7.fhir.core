@@ -131,20 +131,7 @@ public class TurtleParserR6 extends TurtleParserBase {
   }
 
   private void linkURI(Complex t, String value, String type) {
-    if (value == null) {
-      return;
-    }
-    String versioned = value;
-    if (versioned.contains("|")) {
-      @SuppressWarnings("checkstyle:stringImplicitPatternUsage")
-      //single literal character split
-      String[] parts = versioned.split("\\|", 2);
-      String url = parts[0];
-      String version = parts[1];
-      String separator = url.contains("?") ? "&" : "?";
-      versioned = url + separator + "version=" + version;
-    }
-    String refURI = getReferenceURI(versioned);
+    String refURI = getReferenceURI(versionedCanonicalToIriForm(value));
     if (refURI != null) {
       t.linkedPredicate(getReferencePredicate(), refURI, linkResolver == null ? null : linkResolver.resolveType(type), null);
     }

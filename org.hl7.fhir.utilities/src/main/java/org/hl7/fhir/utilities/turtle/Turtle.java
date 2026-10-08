@@ -740,11 +740,22 @@ public class Turtle {
 
   public class TTLList extends TTLObject {
     private List<TTLObject> list = new ArrayList<Turtle.TTLObject>();
+		private boolean collection;
 
     public TTLList(TTLObject obj) {
       super();
       list.add(obj);
     }
+
+		private TTLList(int line, int col) {
+			this.line = line;
+			this.col = col;
+			collection = true;
+		}
+
+		public boolean isCollection() {
+			return collection;
+		}
     
     @Override
     public boolean hasValue(String value) {
@@ -778,7 +789,7 @@ public class Turtle {
       else {
         TTLObject eo = predicates.get(uri);
         TTLList list = null; 
-        if (eo instanceof TTLList) 
+		if (eo instanceof TTLList && !((TTLList) eo).isCollection())
           list = (TTLList) eo; 
         else {
           list = new TTLList(eo);
@@ -930,7 +941,7 @@ public class Turtle {
 					b.append(ch);
 					while (cursor < source.length()) {
 						ch = grab();
-            if (Character.isWhitespace(ch) || Utilities.charInSet(ch, ';', ']', ')', '~') || (( ch == ':') && !postColon)) {
+			if (Character.isWhitespace(ch) || Utilities.charInSet(ch, ',', ';', ']', ')', '~') || (( ch == ':') && !postColon)) {
               break;
             }
 						b.append(ch);
@@ -1151,7 +1162,7 @@ public class Turtle {
 				TTLURL uri = new TTLURL(lexer.startLine, lexer.startCol);
 				uri.setUri(lexer.uri());
 				TTLComplex complex = parseComplex(lexer);
-				objects.put(uri, complex);
+				addObject(uri, complex);
 				lexer.token(".");
 			} else if (lexer.peekType() == LexerTokenType.WORD) {
 				doPrefixes = false;
@@ -1162,7 +1173,7 @@ public class Turtle {
 				lexer.token(":");
 				uri.setUri(prefixes.get(pfx)+lexer.word());
 				TTLComplex complex = parseComplex(lexer);
-				objects.put(uri, complex);
+				addObject(uri, complex);
 				lexer.token(".");
 			} else if (lexer.peek(LexerTokenType.TOKEN, ":")) {
 				doPrefixes = false;
@@ -1172,7 +1183,7 @@ public class Turtle {
           throw new FHIRFormatError("Unknown prefix ''");
 				uri.setUri(prefixes.get(null)+lexer.word());
 				TTLComplex complex = parseComplex(lexer);
-				objects.put(uri, complex);
+				addObject(uri, complex);
 				lexer.token(".");
 			} else if (lexer.peek(LexerTokenType.TOKEN, "[")) {
 				doPrefixes = false;
@@ -1193,7 +1204,16 @@ public class Turtle {
 		}
 	}
 
-  private TTLURL anonymousId() throws FHIRFormatError {
+	private void addObject(TTLURL uri, TTLComplex value) {
+		TTLComplex existing = getObject(uri.getUri());
+		if (existing == null) {
+			objects.put(uri, value);
+		} else {
+			existing.addPredicates(value.getPredicates());
+		}
+	}
+
+	private TTLURL anonymousId() throws FHIRFormatError {
     TTLURL url = new TTLURL(-1, -1);
     url.setUri("urn:uuid:"+UUID.randomUUID().toString().toLowerCase());
     return url;
@@ -1216,88 +1236,20 @@ public class Turtle {
             throw new FHIRFormatError("unknown prefix "+t);
 					uri = prefixes.get(t)+lexer.word();
 				} else if (t != null && t.equals("a"))
-					uri = prefixes.get("rdfs")+"type";
+					uri = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
 				else
 					throw lexer.error("unexpected token");
 			}
 
-			boolean inlist = false;
-			if (lexer.peek(LexerTokenType.TOKEN, "(")) {
-				inlist = true;
-				lexer.token("(");
-			}
-
 			boolean rpt = false;
 			do {
-				if (lexer.peek(LexerTokenType.TOKEN, "[")) {
-					lexer.token("[");
-          result.addPredicate(uri, parseComplex(lexer));
-					lexer.token("]");
-				} else if (lexer.peekType() == LexerTokenType.URI) {
-					TTLURL u = new TTLURL(lexer.startLine, lexer.startCol);
-					u.setUri(lexer.uri());
-          result.addPredicate(uri, u);
-				} else if (lexer.peekType() == LexerTokenType.LITERAL) {
-					TTLLiteral u = new TTLLiteral(lexer.startLine, lexer.startCol);
-					u.value = lexer.literal();
-					if (lexer.peek(LexerTokenType.TOKEN, "^")) {
-						lexer.token("^");
-						lexer.token("^");
-						if (lexer.peekType() == LexerTokenType.URI) {
-							u.type = lexer.uri();
-						} else {
-							String l = lexer.word();
-							lexer.token(":");
-							u.type = prefixes.get(l)+ lexer.word();
-						}
-					}
-					if (lexer.peek(LexerTokenType.TOKEN, "@")) {
-						//lang tag - skip it 
-						lexer.token("@");
-            String lang = lexer.word();
-
-            @SuppressWarnings("checkstyle:stringImplicitPatternUsage")
-            //bounded, optional non-overlapping group, safe
-            boolean matchesLangRegex = !lang.matches(LANG_REGEX);
-            if (matchesLangRegex) {
-              throw new FHIRFormatError("Invalid Language tag "+lang);
-            }
-					}
-          result.addPredicate(uri, u);
-				} else if (lexer.peekType() == LexerTokenType.WORD || lexer.peek(LexerTokenType.TOKEN, ":")) {
-					int sl = lexer.startLine;
-					int sc = lexer.startCol;
-					String pfx = lexer.peekType() == LexerTokenType.WORD ? lexer.word() : null;
-					if (Utilities.isDecimal(pfx, true, true) && !lexer.peek(LexerTokenType.TOKEN, ":")) {
-						TTLLiteral u = new TTLLiteral(sl, sc);
-						u.value = pfx;
-            result.addPredicate(uri, u);					
-					} else if (("false".equals(pfx) || "true".equals(pfx)) && !lexer.peek(LexerTokenType.TOKEN, ":")) {
-						TTLLiteral u = new TTLLiteral(sl, sc);
-						u.value = pfx;
-            result.addPredicate(uri, u);					
-					} else {
-						if (!prefixes.containsKey(pfx))
-              throw new FHIRFormatError("Unknown prefix "+(pfx == null ? "''" : pfx));						
-						TTLURL u = new TTLURL(sl, sc);
-						lexer.token(":");
-						u.setUri(prefixes.get(pfx)+lexer.word());
-            result.addPredicate(uri, u);
-					} 
-				} else if (!lexer.peek(LexerTokenType.TOKEN, ";") && (!inlist || !lexer.peek(LexerTokenType.TOKEN, ")"))) {
-          throw new FHIRFormatError("unexpected token "+lexer.token);
-				}
-
-				if (inlist)
-					rpt = !lexer.peek(LexerTokenType.TOKEN, ")");
-				else {
+        if (!lexer.peek(LexerTokenType.TOKEN, ";")) {
+          result.addPredicate(uri, parseObject(lexer));
+        }
 					rpt = lexer.peek(LexerTokenType.TOKEN, ",");
 					if (rpt)
             lexer.readNext(false);
-				}
 			} while (rpt);
-			if (inlist)
-				lexer.token(")");
 
 			if (lexer.peek(LexerTokenType.TOKEN, ";")) {
         while ((lexer.peek(LexerTokenType.TOKEN, ";"))) {
@@ -1309,6 +1261,74 @@ public class Turtle {
 			}
 		}
 		return result;
+	}
+
+	private TTLList parseList(Lexer lexer) throws FHIRFormatError {
+		TTLList result = new TTLList(lexer.startLine, lexer.startCol);
+		lexer.token("(");
+		while (!lexer.peek(LexerTokenType.TOKEN, ")")) {
+			result.list.add(parseObject(lexer));
+		}
+		lexer.token(")");
+		return result;
+	}
+
+	private TTLObject parseObject(Lexer lexer) throws FHIRFormatError {
+		if (lexer.peek(LexerTokenType.TOKEN, "(")) {
+			return parseList(lexer);
+		} else if (lexer.peek(LexerTokenType.TOKEN, "[")) {
+			lexer.token("[");
+			TTLComplex result = parseComplex(lexer);
+			lexer.token("]");
+			return result;
+		} else if (lexer.peekType() == LexerTokenType.URI) {
+			TTLURL result = new TTLURL(lexer.startLine, lexer.startCol);
+			result.setUri(lexer.uri());
+			return result;
+		} else if (lexer.peekType() == LexerTokenType.LITERAL) {
+			TTLLiteral result = new TTLLiteral(lexer.startLine, lexer.startCol);
+			result.value = lexer.literal();
+			if (lexer.peek(LexerTokenType.TOKEN, "^")) {
+				lexer.token("^");
+				lexer.token("^");
+				if (lexer.peekType() == LexerTokenType.URI) {
+					result.type = lexer.uri();
+				} else {
+					String prefix = lexer.word();
+					lexer.token(":");
+					result.type = prefixes.get(prefix) + lexer.word();
+				}
+			}
+			if (lexer.peek(LexerTokenType.TOKEN, "@")) {
+				lexer.token("@");
+				String lang = lexer.word();
+				@SuppressWarnings("checkstyle:stringImplicitPatternUsage")
+				boolean matchesLangRegex = !lang.matches(LANG_REGEX);
+				if (matchesLangRegex) {
+					throw new FHIRFormatError("Invalid Language tag " + lang);
+				}
+			}
+			return result;
+		} else if (lexer.peekType() == LexerTokenType.WORD || lexer.peek(LexerTokenType.TOKEN, ":")) {
+			int line = lexer.startLine;
+			int col = lexer.startCol;
+			String prefix = lexer.peekType() == LexerTokenType.WORD ? lexer.word() : null;
+			if ((Utilities.isDecimal(prefix, true, true) || "false".equals(prefix) || "true".equals(prefix))
+					&& !lexer.peek(LexerTokenType.TOKEN, ":")) {
+				TTLLiteral result = new TTLLiteral(line, col);
+				result.value = prefix;
+				return result;
+			} else {
+				if (!prefixes.containsKey(prefix)) {
+					throw new FHIRFormatError("Unknown prefix " + (prefix == null ? "''" : prefix));
+				}
+				TTLURL result = new TTLURL(line, col);
+				lexer.token(":");
+				result.setUri(prefixes.get(prefix) + lexer.word());
+				return result;
+			}
+		}
+		throw new FHIRFormatError("unexpected token " + lexer.token);
 	}
 
   public Map<TTLURL, TTLComplex> getObjects() {

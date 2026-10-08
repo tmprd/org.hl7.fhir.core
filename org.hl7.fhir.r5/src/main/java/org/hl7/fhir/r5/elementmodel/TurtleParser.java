@@ -109,6 +109,8 @@ public class TurtleParser extends TurtleParserBase {
     delegate.setSignatureServices(signatureServices);
     delegate.canonicalFilter = canonicalFilter;
     delegate.setStyle(getStyle());
+    delegate.setCanonicalizeXhtml(isCanonicalizeXhtml());
+    delegate.setConceptIriHandling(getConceptIriHandling());
     delegate.base = base;
     if (delegate instanceof TurtleParserR6) {
       ((TurtleParserR6) delegate).setDeriveConceptIriFromNamingSystem(deriveConceptIriFromNamingSystem);
@@ -200,7 +202,7 @@ public class TurtleParser extends TurtleParserBase {
         t.linkedPredicate("a", "sct:" + urlescape(code), null, null);
       }
     } else if ("http://loinc.org".equals(system)) {
-      t.prefix("loinc", "https://loinc.org/rdf/");
+      t.prefix("loinc", "http://loinc.org/rdf/");
       t.linkedPredicate("a", "loinc:"+urlescape(code).toUpperCase(), null, null);
     } else if ("https://www.nlm.nih.gov/mesh".equals(system)) {
       t.prefix("mesh", "http://id.nlm.nih.gov/mesh/");

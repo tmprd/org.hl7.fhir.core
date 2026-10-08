@@ -31,11 +31,15 @@ package org.hl7.fhir.r5.elementmodel;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.exceptions.FHIRFormatError;
 import org.hl7.fhir.r5.context.IWorkerContext;
 import org.hl7.fhir.r5.elementmodel.Element.SpecialElement;
+import org.hl7.fhir.r5.formats.IParser.OutputStyle;
 import org.hl7.fhir.r5.model.ElementDefinition.TypeRefComponent;
 import org.hl7.fhir.r5.utils.SnomedExpressions;
 
@@ -44,6 +48,11 @@ import org.hl7.fhir.utilities.turtle.Turtle;
 import org.hl7.fhir.utilities.turtle.Turtle.Complex;
 import org.hl7.fhir.utilities.turtle.Turtle.Section;
 import org.hl7.fhir.utilities.turtle.Turtle.Subject;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLComplex;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLList;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLLiteral;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLObject;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLURL;
 import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
 
 
@@ -60,6 +69,69 @@ public class TurtleParserR4 extends TurtleParserBase {
   @Override
   protected String className(String element) {
     return element;
+  }
+
+  @Override
+  protected boolean usesTypedChoices() {
+    return false;
+  }
+
+  @Override
+  protected List<String> nonPropertyPredicates() {
+    List<String> names = new ArrayList<>(super.nonPropertyPredicates());
+    names.add("index");
+    return names;
+  }
+
+  @Override
+  protected String valueName() {
+    return "value";
+  }
+
+  @Override
+  protected String getFormalName(Property property) {
+    return getLegacyFormalName(property);
+  }
+
+  @Override
+  protected String getFormalName(Property property, String elementName) {
+    return getLegacyFormalName(property, elementName);
+  }
+
+  @Override
+  protected boolean isDirectXhtmlLiteral(Property property, String name, TTLObject value) {
+    return value instanceof TTLLiteral && "xhtml".equals(property.getType(name));
+  }
+
+  @Override
+  protected List<TTLObject> orderChildren(Turtle src, TTLList values, String path) {
+    TreeMap<Integer, TTLObject> indexed = new TreeMap<>();
+    for (TTLObject value : values.getList()) {
+      TTLComplex node = value instanceof TTLComplex ? (TTLComplex) value
+          : value instanceof TTLURL ? src.getObject(((TTLURL) value).getUri()) : null;
+      TTLObject index = node == null ? null : node.getPredicates().get(FHIR_URI_BASE + "index");
+      if (index != null) {
+        if (!(index instanceof TTLLiteral)) {
+          throw new FHIRFormatError("Expected an integer fhir:index at " + path);
+        }
+        int ordinal;
+        try {
+          ordinal = Integer.parseInt(((TTLLiteral) index).getValue());
+        } catch (NumberFormatException exception) {
+          throw new FHIRFormatError("Invalid integer fhir:index at " + path + ": " + ((TTLLiteral) index).getValue());
+        }
+        if (ordinal < 0 || indexed.putIfAbsent(ordinal, value) != null) {
+          throw new FHIRFormatError("Negative or duplicate fhir:index at " + path + ": " + ordinal);
+        }
+      }
+    }
+    if (indexed.isEmpty()) {
+      return values.getList();
+    }
+    if (indexed.size() != values.getList().size()) {
+      throw new FHIRFormatError("Missing fhir:index in indexed repetitions at " + path);
+    }
+    return new ArrayList<>(indexed.values());
   }
 
   @Override
@@ -132,7 +204,7 @@ public class TurtleParserR4 extends TurtleParserBase {
   }
 
   protected void decorateCanonical(Complex t, Element canonical) {
-    String refURI = getReferenceURI(canonical.primitiveValue());
+    String refURI = getReferenceURI(versionedCanonicalToIriForm(canonical.primitiveValue()));
     if (refURI != null) {
       t.linkedPredicate("fhir:link", refURI,
           linkResolver == null ? null : linkResolver.resolvePage("rdf.html#reference"), null);
@@ -198,7 +270,9 @@ public class TurtleParserR4 extends TurtleParserBase {
     for (Element child : element.getChildren()) {
       if ("xhtml".equals(child.getType())) {
         String childfn = getFormalName(child);
-        String childValue = new XhtmlComposer(XhtmlComposer.XML, false).setCanonical(true).compose(child.getXhtml());
+        String childValue = isCanonicalizeXhtml()
+            ? new XhtmlComposer(XhtmlComposer.XML, false).setCanonical(true).compose(child.getXhtml())
+            : child.getXhtmlSource(getStyle() == OutputStyle.CANONICAL);
         t.predicate("fhir:" + childfn, ttlLiteral(childValue, child.getType()));
       } else {
         composeElement(section, t, child, element);
@@ -303,7 +377,7 @@ public class TurtleParserR4 extends TurtleParserBase {
         t.linkedPredicate("a", "sct:" + urlescape(code), null, null);
       }
     } else if ("http://loinc.org".equals(system)) {
-      t.prefix("loinc", "http://loinc.org/rdf#");
+      t.prefix("loinc", "http://loinc.org/rdf/");
       t.linkedPredicate("a", "loinc:" + urlescape(code).toUpperCase(), null, null);
     }
   }

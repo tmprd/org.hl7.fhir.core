@@ -23,7 +23,7 @@ class TurtleConceptIri {
   /** Known code systems and how to render their codes as RDF concept IRIs in Turtle. */
   private static final List<TurtleConceptIri> KNOWN_CONCEPT_IRIS = List.of(
       new TurtleConceptIri(SNOMED_SYSTEM, "http://snomed.info/id/", "sct", false),
-      new TurtleConceptIri("http://loinc.org", "https://loinc.org/rdf/", "loinc", true),
+      new TurtleConceptIri("http://loinc.org", "http://loinc.org/rdf/", "loinc", true),
       new TurtleConceptIri("https://www.nlm.nih.gov/mesh", "http://id.nlm.nih.gov/mesh/", "mesh", false));
 
   final String system;
@@ -97,14 +97,27 @@ class TurtleConceptIri {
 
   /** Renders {@code code} as a concept IRI, or {@code null} if this IRI cannot render it. */
   String render(String code) {
+    String localName = localName(code);
+    if (localName == null) {
+      return null;
+    }
+    if (prefix != null) {
+      return prefix + ":" + localName;
+    }
+    return "<" + iriStem + localName + ">";
+  }
+
+  /** Returns the absolute concept IRI for {@code code}, or {@code null} if this IRI cannot render it. */
+  String expand(String code) {
+    String localName = localName(code);
+    return localName == null ? null : iriStem + localName;
+  }
+
+  private String localName(String code) {
     // Post-coordinated codes not supported, but could be translate to OWL in some cases
     if (SNOMED_SYSTEM.equals(system) && (code.contains(":") || code.contains("="))) {
       return null;
     }
-    String renderedCode = upperCaseCode ? TurtleParserBase.urlescape(code).toUpperCase() : TurtleParserBase.urlescape(code);
-    if (prefix != null) {
-      return prefix + ":" + renderedCode;
-    }
-    return "<" + iriStem + renderedCode + ">";
+    return upperCaseCode ? TurtleParserBase.urlescape(code).toUpperCase() : TurtleParserBase.urlescape(code);
   }
 }

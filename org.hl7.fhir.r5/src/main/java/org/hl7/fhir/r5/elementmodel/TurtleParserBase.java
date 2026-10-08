@@ -71,6 +71,10 @@ import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueSeverity;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueType;
 import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
+import org.hl7.fhir.utilities.xhtml.XhtmlParser;
+
+import lombok.Getter;
+import lombok.Setter;
 
 
 public abstract class TurtleParserBase extends ParserBase {
@@ -79,6 +83,20 @@ public abstract class TurtleParserBase extends ParserBase {
   /** Type of the resource currently being composed; set in {@link #compose(Element, Turtle, String)}. */
   protected String resourceType;
   private OutputStyle style;
+  // false carries the narrative literal unaltered (except in canonical output), as the JSON and XML writers do
+  @Getter @Setter private boolean canonicalizeXhtml = true;
+
+  /** How concept IRIs ({@code rdf:type} on a Coding or CodeableConcept) are carried into the element model when reading Turtle. */
+  public enum ConceptIriHandling {
+    /** Ignore them; JSON and XML have no direct equivalent. */
+    DROP,
+    /** Add each to its Coding as an {@link #EXT_RDF_CONCEPT_IRI} extension. */
+    EXTENSION
+  }
+
+  public static final String EXT_RDF_CONCEPT_IRI = "http://hl7.org/fhir/StructureDefinition/rdf-concept-iri";
+
+  @Getter @Setter private ConceptIriHandling conceptIriHandling = ConceptIriHandling.DROP;
 
   public static String FHIR_URI_BASE = "http://hl7.org/fhir/";
   public static String FHIR_VERSION_BASE = "http://build.fhir.org/";
@@ -132,7 +150,7 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private Element parse(List<ValidationMessage> errors, Turtle src, TTLComplex cmp) throws FHIRException {
-    TTLObject type = cmp.getPredicates().get("http://www.w3.org/2000/01/rdf-schema#type");
+    TTLObject type = resourceType(cmp);
     if (type == null) {
       logError(errors, ValidationMessage.NO_RULE_DATE, cmp.getLine(), cmp.getCol(), "(document)", IssueType.INVALID, context.formatMessage(I18nConstants.UNKNOWN_RESOURCE_TYPE_MISSING_RDFSTYPE), IssueSeverity.FATAL);
       return null;
@@ -171,13 +189,18 @@ public abstract class TurtleParserBase extends ParserBase {
 
     List<Property> properties = element.getProperty().getChildProperties(element.getName(), null);
     Set<String> processed = new HashSet<String>();
+    processed.add("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+    processed.add("http://www.w3.org/2000/01/rdf-schema#type");
+    for (String decoration : nonPropertyPredicates()) {
+      processed.add(FHIR_URI_BASE + decoration);
+    }
     if (primitive)
-      processed.add(FHIR_URI_BASE + "value");
+      processed.add(FHIR_URI_BASE + valueName());
 
     // note that we do not trouble ourselves to maintain the wire format order here - we don't even know what it was anyway
     // first pass: process the properties
     for (Property property : properties) {
-      if (property.isChoice()) {
+      if (property.isChoice() && !usesTypedChoices()) {
         for (TypeRefComponent type : property.getDefinition().getType()) {
           String eName = property.getName().substring(0, property.getName().length()-3) + Utilities.capitalize(type.getCode());
           parseChild(errors, src, object, element, processed, property, path, getFormalName(property, eName));
@@ -188,10 +211,13 @@ public abstract class TurtleParserBase extends ParserBase {
     }
 
     // second pass: check for things not processed
-    if (policy != ValidationPolicy.NONE) {
+    if (usesTypedChoices() || policy != ValidationPolicy.NONE) {
       for (String u : object.getPredicates().keySet()) {
         if (!processed.contains(u)) {
           TTLObject n = object.getPredicates().get(u);
+          if (usesTypedChoices() && u.startsWith(FHIR_URI_BASE)) {
+            throw new FHIRFormatError("Unrecognised FHIR predicate " + u + " at " + path);
+          }
           logError(errors, ValidationMessage.NO_RULE_DATE, n.getLine(), n.getCol(), path, IssueType.STRUCTURE, context.formatMessage(I18nConstants.UNRECOGNISED_PREDICATE_, u), IssueSeverity.ERROR);
         }
       }
@@ -199,14 +225,27 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private void parseChild(List<ValidationMessage> errors, Turtle src, TTLComplex object, Element context, Set<String> processed, Property property, String path, String name) throws FHIRException {
-    processed.add(name);
+    processed.add(FHIR_URI_BASE + name);
     String npath = path+"/"+property.getName();
     TTLObject e = object.getPredicates().get(FHIR_URI_BASE + name);
     if (e == null)
       return;
+    if (usesTypedChoices() && property.isList()) {
+      for (TTLObject member : collectionMembers(src, e, npath)) {
+        parseChildInstance(errors, src, npath, object, context, property, name, member);
+      }
+      return;
+    }
+    if (usesTypedChoices() && e instanceof TTLList && !property.isList()) {
+      TTLList values = (TTLList) e;
+      if (!property.isResource() || !values.isCollection() || values.getList().size() != 1) {
+        throw new FHIRFormatError("Unexpected collection or multiple values at " + npath);
+      }
+      e = values.getList().get(0);
+    }
     if (property.isList() && (e instanceof TTLList)) {
       TTLList arr = (TTLList) e;
-      for (TTLObject am : arr.getList()) {
+      for (TTLObject am : orderChildren(src, arr, npath)) {
         parseChildInstance(errors, src, npath, object, context, property, name, am);
       }
     } else {
@@ -215,34 +254,189 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private void parseChildInstance(List<ValidationMessage> errors, Turtle src, String npath, TTLComplex object, Element element, Property property, String name, TTLObject e) throws FHIRException {
+    if (usesTypedChoices()) {
+      e = resolveNode(src, e, npath);
+      if (property.isChoice()) {
+        if (!(e instanceof TTLComplex)) {
+          throw new FHIRFormatError("Expected a typed choice node at " + npath);
+        }
+        name = choiceName(property, (TTLComplex) e, npath);
+      }
+    }
     if (property.isResource())
       parseResource(errors, src, npath, object, element, property, name, e);
+    else if (isDirectXhtmlLiteral(property, tail(name), e)) {
+      String source = ((TTLLiteral) e).getValue();
+      Element narrative = new Element(tail(name), property).markLocation(e.getLine(), e.getCol()).setFormat(FhirFormat.TURTLE);
+      try {
+        narrative.setXhtml(new XhtmlParser().setXmlMode(true).parse(source, null).getDocumentElement(), source);
+      } catch (Exception exception) {
+        throw new FHIRFormatError("Invalid XHTML at " + npath + ": " + exception.getMessage());
+      }
+      element.getChildren().add(narrative);
+    }
     else  if (e instanceof TTLComplex) {
       TTLComplex child = (TTLComplex) e;
       Element n = new Element(tail(name), property).markLocation(e.getLine(), e.getCol()).setFormat(FhirFormat.TURTLE);
       element.getChildren().add(n);
       if (property.isPrimitive(property.getType(tail(name)))) {
         parseChildren(errors, src, npath, child, n, true);
-        TTLObject val = child.getPredicates().get(FHIR_URI_BASE + "value");
+        TTLObject val = child.getPredicates().get(FHIR_URI_BASE + valueName());
         if (val != null) {
           if (val instanceof TTLLiteral) {
             String value = ((TTLLiteral) val).getValue();
             String type = ((TTLLiteral) val).getType();
             // todo: check type
-            n.setValue(value);
+            if ("xhtml".equals(property.getType(tail(name)))) {
+              if (!"http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral".equals(type)) {
+                throw new FHIRFormatError("Expected rdf:XMLLiteral at " + npath);
+              }
+              try {
+                n.setXhtml(new XhtmlParser().setXmlMode(true).parse(value, null).getDocumentElement(), value);
+              } catch (Exception exception) {
+                throw new FHIRFormatError("Invalid XHTML at " + npath + ": " + exception.getMessage());
+              }
+            } else {
+              n.setValue(value);
+            }
           } else
-            logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_LITERAL_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
+            throw new FHIRFormatError("Expected a literal primitive value at " + npath);
         }
-      } else 
+      } else {
         parseChildren(errors, src, npath, child, n, false);
+        if (conceptIriHandling == ConceptIriHandling.EXTENSION) {
+          attachConceptIris(errors, child, n, property.getType(tail(name)), npath);
+        }
+      }
 
-    } else 
+    } else if (usesTypedChoices()) {
+      throw new FHIRFormatError("Expected a URI or blank node at " + npath);
+    } else
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_URI_OR_BNODE_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
+  }
+
+  private List<TTLObject> collectionMembers(Turtle src, TTLObject value, String path) {
+    if (value instanceof TTLList && ((TTLList) value).isCollection()) {
+      return ((TTLList) value).getList();
+    }
+    String rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+    List<TTLObject> members = new ArrayList<>();
+    Set<TTLObject> visited = new HashSet<>();
+    while (!(value instanceof TTLURL && value.hasValue(rdf + "nil"))) {
+      value = resolveNode(src, value, path);
+      if (!(value instanceof TTLComplex)) {
+        throw new FHIRFormatError("Expected an RDF collection cell at " + path);
+      }
+      if (!visited.add(value)) {
+        throw new FHIRFormatError("Cycle in RDF collection at " + path);
+      }
+      TTLComplex cell = (TTLComplex) value;
+      TTLObject first = cell.getPredicates().get(rdf + "first");
+      TTLObject rest = cell.getPredicates().get(rdf + "rest");
+      if (first == null || first instanceof TTLList) {
+        throw new FHIRFormatError("Expected exactly one rdf:first at " + path);
+      }
+      if (rest == null || rest instanceof TTLList) {
+        throw new FHIRFormatError("Expected exactly one rdf:rest at " + path);
+      }
+      members.add(first);
+      value = rest;
+    }
+    return members;
+  }
+
+  private TTLObject resolveNode(Turtle src, TTLObject value, String path) {
+    if (value instanceof TTLURL) {
+      TTLComplex node = src.getObject(((TTLURL) value).getUri());
+      if (node == null) {
+        throw new FHIRFormatError("Unresolved node " + ((TTLURL) value).getUri() + " at " + path);
+      }
+      return node;
+    }
+    return value;
+  }
+
+  private String choiceName(Property property, TTLComplex node, String path) {
+    TTLObject types = resourceType(node);
+    List<TTLObject> values = types instanceof TTLList ? ((TTLList) types).getList() : Arrays.asList(types);
+    String selected = null;
+    for (TypeRefComponent type : property.getDefinition().getType()) {
+      for (TTLObject value : values) {
+        if (value != null && value.hasValue(FHIR_URI_BASE + className(type.getCode()))) {
+          String candidate = property.getName().substring(0, property.getName().length() - 3) + Utilities.capitalize(type.getCode());
+          if (selected != null && !selected.equals(candidate)) {
+            throw new FHIRFormatError("Ambiguous rdf:type for choice at " + path);
+          }
+          selected = candidate;
+        }
+      }
+    }
+    if (selected == null) {
+      throw new FHIRFormatError("Missing or unsupported rdf:type for choice at " + path);
+    }
+    return selected;
   }
 
 
   private String tail(String name) {
     return name.substring(name.lastIndexOf(".")+1);
+  }
+
+  protected List<TTLObject> orderChildren(Turtle src, TTLList values, String path) {
+    return values.getList();
+  }
+
+  protected boolean isDirectXhtmlLiteral(Property property, String name, TTLObject value) {
+    return false;
+  }
+
+  private TTLObject resourceType(TTLComplex object) {
+    TTLObject type = object.getPredicates().get("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+    return type == null ? object.getPredicates().get("http://www.w3.org/2000/01/rdf-schema#type") : type;
+  }
+
+  // R4/R5 writers type the Coding itself; R6 types the CodeableConcept, so its IRIs are matched back to a coding.
+  private void attachConceptIris(List<ValidationMessage> errors, TTLComplex node, Element element, String type, String path) throws FHIRException {
+    if (!Utilities.existsInList(type, "Coding", "CodeableConcept")) {
+      return;
+    }
+    for (String iri : conceptIris(node)) {
+      Element coding = "Coding".equals(type) ? element : codingForConceptIri(element, iri);
+      if (coding != null) {
+        Element extension = coding.addElement("extension");
+        extension.addElement("url").setValue(EXT_RDF_CONCEPT_IRI);
+        extension.addElement("valueUri").setValue(iri);
+      } else {
+        logError(errors, ValidationMessage.NO_RULE_DATE, node.getLine(), node.getCol(), path, IssueType.INFORMATIONAL,
+            "Concept IRI " + iri + " matches no coding, so it was dropped", IssueSeverity.WARNING);
+      }
+    }
+  }
+
+  private List<String> conceptIris(TTLComplex node) {
+    TTLObject types = resourceType(node);
+    List<String> iris = new ArrayList<>();
+    if (types == null) {
+      return iris;
+    }
+    for (TTLObject value : types instanceof TTLList ? ((TTLList) types).getList() : Arrays.asList(types)) {
+      if (value instanceof TTLURL && !((TTLURL) value).getUri().startsWith(FHIR_URI_BASE)) {
+        iris.add(((TTLURL) value).getUri());
+      }
+    }
+    return iris;
+  }
+
+  private Element codingForConceptIri(Element codeableConcept, String iri) {
+    for (Element coding : codeableConcept.getChildrenByName("coding")) {
+      String system = coding.getChildValue("system");
+      String code = coding.getChildValue("code");
+      TurtleConceptIri conceptIri = system == null || code == null ? null : TurtleConceptIri.resolve(context, system, true);
+      if (conceptIri != null && iri.equals(conceptIri.expand(code))) {
+        return coding;
+      }
+    }
+    return null;
   }
 
   private void parseResource(List<ValidationMessage> errors, Turtle src, String npath, TTLComplex object, Element element, Property property, String name, TTLObject e) throws FHIRException {
@@ -259,7 +453,7 @@ public abstract class TurtleParserBase extends ParserBase {
     } else
       throw new FHIRFormatError(context.formatMessage(I18nConstants.WRONG_TYPE_FOR_RESOURCE));
 
-    TTLObject type = obj.getPredicates().get("http://www.w3.org/2000/01/rdf-schema#type");
+    TTLObject type = resourceType(obj);
     if (type == null) {
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.UNKNOWN_RESOURCE_TYPE_MISSING_RDFSTYPE), IssueSeverity.FATAL);
       return;
@@ -292,7 +486,29 @@ public abstract class TurtleParserBase extends ParserBase {
     parseChildren(errors, src, npath, obj, n, false);
   }
 
-  private String getFormalName(Property property) {
+  protected boolean usesTypedChoices() {
+    return true;
+  }
+
+  /** fhir: predicates that are read (or deliberately ignored) without being element properties. */
+  protected List<String> nonPropertyPredicates() {
+    return Arrays.asList("nodeRole", "link", "l", "resourceDefinition");
+  }
+
+  protected String valueName() {
+    return "v";
+  }
+
+  protected String getFormalName(Property property) {
+    String name = property.getName();
+    return name.endsWith("[x]") ? name.substring(0, name.length() - 3) : name;
+  }
+
+  protected String getFormalName(Property property, String elementName) {
+    return getFormalName(property);
+  }
+
+  protected String getLegacyFormalName(Property property) {
     String en = property.getDefinition().getBase().getPath();
     if (en == null) 
       en = property.getDefinition().getPath();
@@ -306,7 +522,7 @@ public abstract class TurtleParserBase extends ParserBase {
     return en;
   }
 
-  private String getFormalName(Property property, String elementName) {
+  protected String getLegacyFormalName(Property property, String elementName) {
     String en = property.getDefinition().getBase().getPath();
     if (en == null)
       en = property.getDefinition().getPath();
@@ -389,6 +605,20 @@ public abstract class TurtleParserBase extends ParserBase {
     return FHIR_BASE_PREFIX + "link";
   }
 
+  /**
+   * A vertical bar is not a legal IRI character, so a versioned canonical carries its version as a
+   * query parameter in IRI positions. This representation is Turtle-only: the {@code |version} form
+   * is retained in the sibling value literal, which is what the reverse parser reads.
+   */
+  protected static String versionedCanonicalToIriForm(String value) {
+    int bar = value == null ? -1 : value.indexOf('|');
+    if (bar < 0) {
+      return value;
+    }
+    String url = value.substring(0, bar);
+    return url + (url.contains("?") ? "&" : "?") + "version=" + value.substring(bar + 1);
+  }
+
   protected void decorateReference(Complex t, Element coding) {
     String refURI = getReferenceURI(coding.getChildValue("reference"));
     if(refURI != null)
@@ -397,7 +627,7 @@ public abstract class TurtleParserBase extends ParserBase {
 
   protected void decoratePrimitiveValue(Complex t, Element element) {
     if (Utilities.existsInList(element.getType(), "canonical")) {
-      String refURI = getReferenceURI(element.primitiveValue());
+      String refURI = getReferenceURI(versionedCanonicalToIriForm(element.primitiveValue()));
       if (refURI != null) {
         t.linkedPredicate(getReferencePredicate(), refURI, linkResolver == null ? null : linkResolver.resolvePage("rdf.html#reference"), null);
       }
@@ -455,7 +685,7 @@ public abstract class TurtleParserBase extends ParserBase {
     if (element.hasValue()) {
         String elementLiteral = null;
         if (element.isXhtml()) {
-          elementLiteral = element.getXhtmlSource(true);
+          elementLiteral = element.getXhtmlSource(canonicalizeXhtml || style == OutputStyle.CANONICAL);
         } else {
           elementLiteral = element.getValue();
         }
