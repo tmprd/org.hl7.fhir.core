@@ -14,7 +14,6 @@ import java.util.stream.Stream;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-import org.hl7.fhir.exceptions.FHIRFormatError;
 import org.hl7.fhir.r5.elementmodel.Element;
 import org.hl7.fhir.r5.elementmodel.Manager;
 import org.hl7.fhir.r5.elementmodel.Manager.FhirFormat;
@@ -173,7 +172,7 @@ class TurtleR5R6RoundTripTests {
     String turtle = "@prefix fhir: <http://hl7.org/fhir/> . "
         + "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . "
         + "<http://example.org/patient> a fhir:Patient; fhir:nodeRole fhir:treeRoot; " + predicates + " .";
-    FHIRFormatError exception = Assertions.assertThrows(FHIRFormatError.class,
+    java.io.IOException exception = Assertions.assertThrows(java.io.IOException.class,
         () -> parse(contexts.get(version), turtle, FhirFormat.TURTLE));
     Assertions.assertTrue(exception.getMessage().contains("/Patient"), exception.getMessage());
   }
@@ -211,7 +210,7 @@ class TurtleR5R6RoundTripTests {
   void rejectsMalformedFhirCollections(String version, String names) {
     String turtle = "@prefix fhir: <http://hl7.org/fhir/> . <http://example.org/patient> a fhir:Patient; "
         + "fhir:nodeRole fhir:treeRoot; fhir:name " + names.replace('\'', '"') + ".";
-    Assertions.assertThrows(FHIRFormatError.class, () -> parse(contexts.get(version), turtle, FhirFormat.TURTLE));
+    Assertions.assertThrows(java.io.IOException.class, () -> parse(contexts.get(version), turtle, FhirFormat.TURTLE));
   }
 
   @ParameterizedTest
@@ -287,7 +286,7 @@ class TurtleR5R6RoundTripTests {
     extensions.setConceptIriHandling(ConceptIriHandling.EXTENSION);
     String expected = """
         {"resourceType":"Observation","status":"final","code":{"coding":[
-          {"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/rdf-concept-iri","valueUri":"https://loinc.org/rdf/8480-6"}],
+          {"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/rdf-concept-iri","valueUri":"http://loinc.org/rdf/8480-6"}],
            "system":"http://loinc.org","code":"8480-6"},
           {"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/rdf-concept-iri","valueUri":"http://snomed.info/id/271649006"}],
            "system":"http://snomed.info/sct","code":"271649006"}]}}

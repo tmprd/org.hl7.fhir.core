@@ -53,6 +53,7 @@ import org.hl7.fhir.utilities.turtle.Turtle.TTLList;
 import org.hl7.fhir.utilities.turtle.Turtle.TTLLiteral;
 import org.hl7.fhir.utilities.turtle.Turtle.TTLObject;
 import org.hl7.fhir.utilities.turtle.Turtle.TTLURL;
+import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
 
 
@@ -103,8 +104,9 @@ public class TurtleParserR4 extends TurtleParserBase {
     return value instanceof TTLLiteral && "xhtml".equals(property.getType(name));
   }
 
+  // on a bad fhir:index the error is reported and encounter order is kept
   @Override
-  protected List<TTLObject> orderChildren(Turtle src, TTLList values, String path) {
+  protected List<TTLObject> orderChildren(List<ValidationMessage> errors, Turtle src, TTLList values, String path) throws FHIRFormatError {
     TreeMap<Integer, TTLObject> indexed = new TreeMap<>();
     for (TTLObject value : values.getList()) {
       TTLComplex node = value instanceof TTLComplex ? (TTLComplex) value
@@ -112,16 +114,19 @@ public class TurtleParserR4 extends TurtleParserBase {
       TTLObject index = node == null ? null : node.getPredicates().get(FHIR_URI_BASE + "index");
       if (index != null) {
         if (!(index instanceof TTLLiteral)) {
-          throw new FHIRFormatError("Expected an integer fhir:index at " + path);
+          logFormatError(errors, index, path, "Expected an integer fhir:index at " + path);
+          return values.getList();
         }
         int ordinal;
         try {
           ordinal = Integer.parseInt(((TTLLiteral) index).getValue());
         } catch (NumberFormatException exception) {
-          throw new FHIRFormatError("Invalid integer fhir:index at " + path + ": " + ((TTLLiteral) index).getValue());
+          logFormatError(errors, index, path, "Invalid integer fhir:index at " + path + ": " + ((TTLLiteral) index).getValue());
+          return values.getList();
         }
         if (ordinal < 0 || indexed.putIfAbsent(ordinal, value) != null) {
-          throw new FHIRFormatError("Negative or duplicate fhir:index at " + path + ": " + ordinal);
+          logFormatError(errors, index, path, "Negative or duplicate fhir:index at " + path + ": " + ordinal);
+          return values.getList();
         }
       }
     }
@@ -129,7 +134,8 @@ public class TurtleParserR4 extends TurtleParserBase {
       return values.getList();
     }
     if (indexed.size() != values.getList().size()) {
-      throw new FHIRFormatError("Missing fhir:index in indexed repetitions at " + path);
+      logFormatError(errors, values, path, "Missing fhir:index in indexed repetitions at " + path);
+      return values.getList();
     }
     return new ArrayList<>(indexed.values());
   }

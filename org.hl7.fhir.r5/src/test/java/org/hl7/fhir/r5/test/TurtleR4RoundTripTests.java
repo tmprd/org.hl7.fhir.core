@@ -8,7 +8,6 @@ import java.nio.file.Path;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import org.hl7.fhir.exceptions.FHIRFormatError;
 import org.hl7.fhir.r5.elementmodel.Element;
 import org.hl7.fhir.r5.elementmodel.Manager.FhirFormat;
 import org.hl7.fhir.r5.elementmodel.TurtleParserBase.ConceptIriHandling;
@@ -118,7 +117,7 @@ class TurtleR4RoundTripTests {
     String turtle = "@prefix fhir: <http://hl7.org/fhir/> . "
         + "<http://example.org/patient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> fhir:Patient; "
         + "fhir:nodeRole fhir:treeRoot; fhir:Patient.name " + names + ".";
-    FHIRFormatError exception = Assertions.assertThrows(FHIRFormatError.class, () -> parse(turtle, FhirFormat.TURTLE));
+    java.io.IOException exception = Assertions.assertThrows(java.io.IOException.class, () -> parse(turtle, FhirFormat.TURTLE));
     Assertions.assertTrue(exception.getMessage().contains("fhir:index"), exception.getMessage());
     Assertions.assertTrue(exception.getMessage().contains("/Patient/name"), exception.getMessage());
   }
@@ -189,7 +188,7 @@ class TurtleR4RoundTripTests {
     try {
       String expected = """
           {"resourceType":"Observation","status":"final","code":{"coding":[
-            {"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/rdf-concept-iri","valueUri":"http://loinc.org/rdf#8480-6"}],
+            {"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/rdf-concept-iri","valueUri":"http://loinc.org/rdf/8480-6"}],
              "system":"http://loinc.org","code":"8480-6"},
             {"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/rdf-concept-iri","valueUri":"http://snomed.info/id/271649006"}],
              "system":"http://snomed.info/sct","code":"271649006"}]}}

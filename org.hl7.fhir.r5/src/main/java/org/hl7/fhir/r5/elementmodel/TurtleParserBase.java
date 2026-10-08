@@ -211,13 +211,10 @@ public abstract class TurtleParserBase extends ParserBase {
     }
 
     // second pass: check for things not processed
-    if (usesTypedChoices() || policy != ValidationPolicy.NONE) {
+    if (policy != ValidationPolicy.NONE) {
       for (String u : object.getPredicates().keySet()) {
         if (!processed.contains(u)) {
           TTLObject n = object.getPredicates().get(u);
-          if (usesTypedChoices() && u.startsWith(FHIR_URI_BASE)) {
-            throw new FHIRFormatError("Unrecognised FHIR predicate " + u + " at " + path);
-          }
           logError(errors, ValidationMessage.NO_RULE_DATE, n.getLine(), n.getCol(), path, IssueType.STRUCTURE, context.formatMessage(I18nConstants.UNRECOGNISED_PREDICATE_, u), IssueSeverity.ERROR);
         }
       }
@@ -231,7 +228,7 @@ public abstract class TurtleParserBase extends ParserBase {
     if (e == null)
       return;
     if (usesTypedChoices() && property.isList()) {
-      for (TTLObject member : collectionMembers(src, e, npath)) {
+      for (TTLObject member : collectionMembers(errors, src, e, npath)) {
         parseChildInstance(errors, src, npath, object, context, property, name, member);
       }
       return;
@@ -239,13 +236,14 @@ public abstract class TurtleParserBase extends ParserBase {
     if (usesTypedChoices() && e instanceof TTLList && !property.isList()) {
       TTLList values = (TTLList) e;
       if (!property.isResource() || !values.isCollection() || values.getList().size() != 1) {
-        throw new FHIRFormatError("Unexpected collection or multiple values at " + npath);
+        logFormatError(errors, e, npath, "Unexpected collection or multiple values at " + npath);
+        return;
       }
       e = values.getList().get(0);
     }
     if (property.isList() && (e instanceof TTLList)) {
       TTLList arr = (TTLList) e;
-      for (TTLObject am : orderChildren(src, arr, npath)) {
+      for (TTLObject am : orderChildren(errors, src, arr, npath)) {
         parseChildInstance(errors, src, npath, object, context, property, name, am);
       }
     } else {
@@ -255,12 +253,19 @@ public abstract class TurtleParserBase extends ParserBase {
 
   private void parseChildInstance(List<ValidationMessage> errors, Turtle src, String npath, TTLComplex object, Element element, Property property, String name, TTLObject e) throws FHIRException {
     if (usesTypedChoices()) {
-      e = resolveNode(src, e, npath);
+      e = resolveNode(errors, src, e, npath);
+      if (e == null) {
+        return;
+      }
       if (property.isChoice()) {
         if (!(e instanceof TTLComplex)) {
-          throw new FHIRFormatError("Expected a typed choice node at " + npath);
+          logFormatError(errors, e, npath, "Expected a typed choice node at " + npath);
+          return;
         }
-        name = choiceName(property, (TTLComplex) e, npath);
+        name = choiceName(errors, property, (TTLComplex) e, npath);
+        if (name == null) {
+          return;
+        }
       }
     }
     if (property.isResource())
@@ -271,7 +276,8 @@ public abstract class TurtleParserBase extends ParserBase {
       try {
         narrative.setXhtml(new XhtmlParser().setXmlMode(true).parse(source, null).getDocumentElement(), source);
       } catch (Exception exception) {
-        throw new FHIRFormatError("Invalid XHTML at " + npath + ": " + exception.getMessage());
+        logFormatError(errors, e, npath, "Invalid XHTML at " + npath + ": " + exception.getMessage());
+        return;
       }
       element.getChildren().add(narrative);
     }
@@ -289,18 +295,19 @@ public abstract class TurtleParserBase extends ParserBase {
             // todo: check type
             if ("xhtml".equals(property.getType(tail(name)))) {
               if (!"http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral".equals(type)) {
-                throw new FHIRFormatError("Expected rdf:XMLLiteral at " + npath);
-              }
-              try {
-                n.setXhtml(new XhtmlParser().setXmlMode(true).parse(value, null).getDocumentElement(), value);
-              } catch (Exception exception) {
-                throw new FHIRFormatError("Invalid XHTML at " + npath + ": " + exception.getMessage());
+                logFormatError(errors, val, npath, "Expected rdf:XMLLiteral at " + npath);
+              } else {
+                try {
+                  n.setXhtml(new XhtmlParser().setXmlMode(true).parse(value, null).getDocumentElement(), value);
+                } catch (Exception exception) {
+                  logFormatError(errors, val, npath, "Invalid XHTML at " + npath + ": " + exception.getMessage());
+                }
               }
             } else {
               n.setValue(value);
             }
           } else
-            throw new FHIRFormatError("Expected a literal primitive value at " + npath);
+            logFormatError(errors, val, npath, "Expected a literal primitive value at " + npath);
         }
       } else {
         parseChildren(errors, src, npath, child, n, false);
@@ -310,12 +317,13 @@ public abstract class TurtleParserBase extends ParserBase {
       }
 
     } else if (usesTypedChoices()) {
-      throw new FHIRFormatError("Expected a URI or blank node at " + npath);
+      logFormatError(errors, e, npath, "Expected a URI or blank node at " + npath);
     } else
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_URI_OR_BNODE_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
   }
 
-  private List<TTLObject> collectionMembers(Turtle src, TTLObject value, String path) {
+  // a malformed collection is reported and contributes no members
+  private List<TTLObject> collectionMembers(List<ValidationMessage> errors, Turtle src, TTLObject value, String path) throws FHIRFormatError {
     if (value instanceof TTLList && ((TTLList) value).isCollection()) {
       return ((TTLList) value).getList();
     }
@@ -323,21 +331,28 @@ public abstract class TurtleParserBase extends ParserBase {
     List<TTLObject> members = new ArrayList<>();
     Set<TTLObject> visited = new HashSet<>();
     while (!(value instanceof TTLURL && value.hasValue(rdf + "nil"))) {
-      value = resolveNode(src, value, path);
-      if (!(value instanceof TTLComplex)) {
-        throw new FHIRFormatError("Expected an RDF collection cell at " + path);
+      TTLObject cellValue = resolveNode(errors, src, value, path);
+      if (cellValue == null) {
+        return new ArrayList<>();
       }
-      if (!visited.add(value)) {
-        throw new FHIRFormatError("Cycle in RDF collection at " + path);
+      if (!(cellValue instanceof TTLComplex)) {
+        logFormatError(errors, cellValue, path, "Expected an RDF collection cell at " + path);
+        return new ArrayList<>();
       }
-      TTLComplex cell = (TTLComplex) value;
+      if (!visited.add(cellValue)) {
+        logFormatError(errors, cellValue, path, "Cycle in RDF collection at " + path);
+        return new ArrayList<>();
+      }
+      TTLComplex cell = (TTLComplex) cellValue;
       TTLObject first = cell.getPredicates().get(rdf + "first");
       TTLObject rest = cell.getPredicates().get(rdf + "rest");
       if (first == null || first instanceof TTLList) {
-        throw new FHIRFormatError("Expected exactly one rdf:first at " + path);
+        logFormatError(errors, cell, path, "Expected exactly one rdf:first at " + path);
+        return new ArrayList<>();
       }
       if (rest == null || rest instanceof TTLList) {
-        throw new FHIRFormatError("Expected exactly one rdf:rest at " + path);
+        logFormatError(errors, cell, path, "Expected exactly one rdf:rest at " + path);
+        return new ArrayList<>();
       }
       members.add(first);
       value = rest;
@@ -345,18 +360,25 @@ public abstract class TurtleParserBase extends ParserBase {
     return members;
   }
 
-  private TTLObject resolveNode(Turtle src, TTLObject value, String path) {
+  /** Returns the node a URI names, or {@code null} (after reporting) if it is not in the document. */
+  private TTLObject resolveNode(List<ValidationMessage> errors, Turtle src, TTLObject value, String path) throws FHIRFormatError {
     if (value instanceof TTLURL) {
       TTLComplex node = src.getObject(((TTLURL) value).getUri());
       if (node == null) {
-        throw new FHIRFormatError("Unresolved node " + ((TTLURL) value).getUri() + " at " + path);
+        logFormatError(errors, value, path, "Unresolved node " + ((TTLURL) value).getUri() + " at " + path);
       }
       return node;
     }
     return value;
   }
 
-  private String choiceName(Property property, TTLComplex node, String path) {
+  /** Reports a malformed graph: recorded under {@link ValidationPolicy#EVERYTHING}, otherwise thrown by {@link #logError}. */
+  protected void logFormatError(List<ValidationMessage> errors, TTLObject location, String path, String message) throws FHIRFormatError {
+    logError(errors, ValidationMessage.NO_RULE_DATE, location == null ? -1 : location.getLine(), location == null ? -1 : location.getCol(),
+        path, IssueType.STRUCTURE, message, IssueSeverity.FATAL);
+  }
+
+  private String choiceName(List<ValidationMessage> errors, Property property, TTLComplex node, String path) throws FHIRFormatError {
     TTLObject types = resourceType(node);
     List<TTLObject> values = types instanceof TTLList ? ((TTLList) types).getList() : Arrays.asList(types);
     String selected = null;
@@ -365,14 +387,15 @@ public abstract class TurtleParserBase extends ParserBase {
         if (value != null && value.hasValue(FHIR_URI_BASE + className(type.getCode()))) {
           String candidate = property.getName().substring(0, property.getName().length() - 3) + Utilities.capitalize(type.getCode());
           if (selected != null && !selected.equals(candidate)) {
-            throw new FHIRFormatError("Ambiguous rdf:type for choice at " + path);
+            logFormatError(errors, node, path, "Ambiguous rdf:type for choice at " + path);
+            return null;
           }
           selected = candidate;
         }
       }
     }
     if (selected == null) {
-      throw new FHIRFormatError("Missing or unsupported rdf:type for choice at " + path);
+      logFormatError(errors, node, path, "Missing or unsupported rdf:type for choice at " + path);
     }
     return selected;
   }
@@ -382,7 +405,7 @@ public abstract class TurtleParserBase extends ParserBase {
     return name.substring(name.lastIndexOf(".")+1);
   }
 
-  protected List<TTLObject> orderChildren(Turtle src, TTLList values, String path) {
+  protected List<TTLObject> orderChildren(List<ValidationMessage> errors, Turtle src, TTLList values, String path) throws FHIRFormatError {
     return values.getList();
   }
 

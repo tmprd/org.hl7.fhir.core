@@ -273,7 +273,7 @@ public class TurtleGeneratorTests {
   void testR6CodeableConceptUsesBuiltInConceptIriByDefault() throws Exception {
     ParserContext builtInParserContext = ParserContext.fromWorkerContext(TurtleGeneratorTestUtils.getVersionOverrideWorkerContext(R6_VERSION));
     String builtInTurtle = generateObservationCodeableConcept(builtInParserContext, "http://loinc.org", "8867-4");
-    assertThat(builtInTurtle).contains("@prefix loinc: <https://loinc.org/rdf/> .");
+    assertThat(builtInTurtle).contains("@prefix loinc: <http://loinc.org/rdf/> .");
     assertThat(builtInTurtle).contains("a loinc:8867-4");
   }
 
