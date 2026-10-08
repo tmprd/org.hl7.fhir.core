@@ -226,6 +226,7 @@ public class ExtensionDefinitions {
   public static final String EXT_ADDITIONAL_COMPARTMENT = "http://hl7.org/fhir/tools/StructureDefinition/additional-resource-compartment";
   public static final String EXT_ADDITIONAL_REFERENCE = "http://hl7.org/fhir/tools/StructureDefinition/additional-resource-reference";
   public static final String EXT_ADDITIONAL_RESOURCE = "http://hl7.org/fhir/tools/StructureDefinition/additional-resource";
+  public static final String EXT_RDF_CONCEPT_IRI = "http://hl7.org/fhir/StructureDefinition/rdf-concept-iri";
   public static final String EXT_IG_EXPANSION_PARAMETERS = "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters";
   public static final String EXT_SUPPL_TYPE = "http://hl7.org/fhir/StructureDefinition/codesystem-supplement-type";
   public static final String CANONICAL_RESOLUTION_METHOD = "http://hl7.org/fhir/StructureDefinition/version-resolution-method";

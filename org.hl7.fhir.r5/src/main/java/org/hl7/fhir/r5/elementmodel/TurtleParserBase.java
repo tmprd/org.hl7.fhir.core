@@ -90,11 +90,9 @@ public abstract class TurtleParserBase extends ParserBase {
   public enum ConceptIriHandling {
     /** Ignore them; JSON and XML have no direct equivalent. */
     DROP,
-    /** Add each to its Coding as an {@link #EXT_RDF_CONCEPT_IRI} extension. */
+    /** Add each to its Coding as an {@link ExtensionDefinitions#EXT_RDF_CONCEPT_IRI} extension. */
     EXTENSION
   }
-
-  public static final String EXT_RDF_CONCEPT_IRI = "http://hl7.org/fhir/StructureDefinition/rdf-concept-iri";
 
   @Getter @Setter private ConceptIriHandling conceptIriHandling = ConceptIriHandling.DROP;
 
@@ -235,6 +233,7 @@ public abstract class TurtleParserBase extends ParserBase {
     }
     if (usesTypedChoices() && e instanceof TTLList && !property.isList()) {
       TTLList values = (TTLList) e;
+      // earlier writers put single resources in one-item lists, e.g. Bundle.entry.resource in the published R5 examples
       if (!property.isResource() || !values.isCollection() || values.getList().size() != 1) {
         logFormatError(errors, e, npath, "Unexpected collection or multiple values at " + npath);
         return;
@@ -427,7 +426,7 @@ public abstract class TurtleParserBase extends ParserBase {
       Element coding = "Coding".equals(type) ? element : codingForConceptIri(element, iri);
       if (coding != null) {
         Element extension = coding.addElement("extension");
-        extension.addElement("url").setValue(EXT_RDF_CONCEPT_IRI);
+        extension.addElement("url").setValue(ExtensionDefinitions.EXT_RDF_CONCEPT_IRI);
         extension.addElement("valueUri").setValue(iri);
       } else {
         logError(errors, ValidationMessage.NO_RULE_DATE, node.getLine(), node.getCol(), path, IssueType.INFORMATIONAL,
@@ -454,6 +453,7 @@ public abstract class TurtleParserBase extends ParserBase {
     for (Element coding : codeableConcept.getChildrenByName("coding")) {
       String system = coding.getChildValue("system");
       String code = coding.getChildValue("code");
+      // always consults NamingSystems, whereas the R6 writer does so only if deriveConceptIriFromNamingSystem is set
       TurtleConceptIri conceptIri = system == null || code == null ? null : TurtleConceptIri.resolve(context, system, true);
       if (conceptIri != null && iri.equals(conceptIri.expand(code))) {
         return coding;
@@ -695,10 +695,10 @@ public abstract class TurtleParserBase extends ParserBase {
     Complex t;
     if (element.getSpecial() == SpecialElement.BUNDLE_ENTRY && parent != null && parent.getNamedChildValue("fullUrl") != null) {
       String url = "<"+parent.getNamedChildValue("fullUrl")+">";
-      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
+      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.isList());
       t = section.subject(url);
     } else {
-      t = ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
+      t = ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.isList());
     }
     if (element.getProperty().getName().endsWith("[x]")) {
       t.linkedPredicate("a", FHIR_BASE_PREFIX+className(element.fhirType()), linkResolver == null ? null : linkResolver.resolveType(element.fhirType()), null);

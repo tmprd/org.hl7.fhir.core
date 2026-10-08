@@ -58,6 +58,7 @@ class TurtleR5R6RoundTripTests {
     String json = "{\"resourceType\":\"Patient\",\"id\":\"example\",\"active\":true,\"name\":[{\"given\":[\"First\",\"Second\"]}]}";
     String turtle = compose(parsers, parse(parsers, json, FhirFormat.JSON), FhirFormat.TURTLE);
     Assertions.assertTrue(turtle.contains("fhir:v"), turtle);
+    Assertions.assertTrue(turtle.contains("fhir:name ("), turtle);
     Assertions.assertFalse(turtle.contains("fhir:index"), turtle);
     Assertions.assertEquals(com.google.gson.JsonParser.parseString(json),
         com.google.gson.JsonParser.parseString(compose(parsers, parse(parsers, turtle, FhirFormat.TURTLE), FhirFormat.JSON)));
@@ -95,7 +96,8 @@ class TurtleR5R6RoundTripTests {
     FhirFormat finalFormat = FhirFormat.valueOf(finalName);
     Element original = parse(parsers, json, FhirFormat.JSON);
     String turtle = compose(parsers, parse(parsers, compose(parsers, original, intermediate), intermediate), FhirFormat.TURTLE);
-    Assertions.assertTrue(turtle.contains("fhir:resource ( <http://example.org/Patient/patient> )"), turtle);
+    Assertions.assertTrue(turtle.contains("fhir:resource <http://example.org/Patient/patient>"), turtle);
+    Assertions.assertTrue(turtle.contains("fhir:contained ("), turtle);
     Assertions.assertTrue(turtle.contains("rdf:XMLLiteral"), turtle);
     Assertions.assertFalse(turtle.contains("fhir:index"), turtle);
     Element restored = parse(parsers, compose(parsers, parse(parsers, turtle, FhirFormat.TURTLE), finalFormat), finalFormat);
@@ -122,6 +124,25 @@ class TurtleR5R6RoundTripTests {
         {"resourceType":"Patient","id":"example","active":false,
          "name":[{"family":"Second","given":["C"]},{"family":"First","given":["A","B"]}],
          "contained":[{"resourceType":"Organization","id":"org"}]}
+        """;
+    ParserContext parsers = contexts.get(version);
+    assertJsonEquals(JsonParser.parseString(expected),
+        JsonParser.parseString(compose(parsers, parse(parsers, turtle, FhirFormat.TURTLE), FhirFormat.JSON)), "$");
+  }
+
+  @ParameterizedTest
+  @ValueSource(strings = {"5.0.0", "6.0.0"})
+  void acceptsSingleResourcesInLegacyOneItemLists(String version) throws Exception {
+    String turtle = """
+        @prefix fhir: <http://hl7.org/fhir/> .
+        <http://example.org/Bundle/b> a fhir:Bundle; fhir:nodeRole fhir:treeRoot;
+          fhir:type [ fhir:v "collection" ];
+          fhir:entry ([ fhir:fullUrl [ fhir:v "http://example.org/Patient/p" ]; fhir:resource (<http://example.org/Patient/p>) ]).
+        <http://example.org/Patient/p> a fhir:Patient; fhir:id [ fhir:v "p" ].
+        """;
+    String expected = """
+        {"resourceType":"Bundle","type":"collection",
+         "entry":[{"fullUrl":"http://example.org/Patient/p","resource":{"resourceType":"Patient","id":"p"}}]}
         """;
     ParserContext parsers = contexts.get(version);
     assertJsonEquals(JsonParser.parseString(expected),
