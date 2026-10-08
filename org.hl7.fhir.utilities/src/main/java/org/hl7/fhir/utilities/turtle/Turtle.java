@@ -51,6 +51,18 @@ public class Turtle {
 
   public static final String LANG_REGEX = "[a-z]{2}(-[a-zA-Z]{2})?";
 
+  public static final String RDF_NS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+  public static final String RDFS_NS = "http://www.w3.org/2000/01/rdf-schema#";
+  public static final String OWL_NS = "http://www.w3.org/2002/07/owl#";
+  public static final String XSD_NS = "http://www.w3.org/2001/XMLSchema#";
+  public static final String RDF_TYPE = RDF_NS + "type";
+  // not an RDF Schema term, but older FHIR Turtle used it in place of rdf:type
+  public static final String RDFS_TYPE = RDFS_NS + "type";
+  public static final String RDF_FIRST = RDF_NS + "first";
+  public static final String RDF_REST = RDF_NS + "rest";
+  public static final String RDF_NIL = RDF_NS + "nil";
+  public static final String RDF_XML_LITERAL = RDF_NS + "XMLLiteral";
+
 
 	// Object model
 	public interface Triple {
@@ -1236,7 +1248,7 @@ public class Turtle {
             throw new FHIRFormatError("unknown prefix "+t);
 					uri = prefixes.get(t)+lexer.word();
 				} else if (t != null && t.equals("a"))
-					uri = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+					uri = RDF_TYPE;
 				else
 					throw lexer.error("unexpected token");
 			}

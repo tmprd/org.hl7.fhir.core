@@ -48,14 +48,10 @@ import org.hl7.fhir.r5.context.IWorkerContext;
 import org.hl7.fhir.r5.elementmodel.Element.SpecialElement;
 import org.hl7.fhir.r5.elementmodel.Manager.FhirFormat;
 import org.hl7.fhir.r5.extensions.ExtensionDefinitions;
-import org.hl7.fhir.r5.extensions.ExtensionUtilities;
 import org.hl7.fhir.r5.formats.IParser.OutputStyle;
 import org.hl7.fhir.r5.model.ElementDefinition.TypeRefComponent;
 import org.hl7.fhir.r5.model.StructureDefinition;
-import org.hl7.fhir.r5.utils.SnomedExpressions;
-import org.hl7.fhir.r5.utils.SnomedExpressions.Expression;
 import org.hl7.fhir.utilities.FileUtilities;
-
 import org.hl7.fhir.utilities.Utilities;
 import org.hl7.fhir.utilities.i18n.I18nConstants;
 import org.hl7.fhir.utilities.turtle.Turtle;
@@ -70,7 +66,7 @@ import org.hl7.fhir.utilities.turtle.Turtle.TTLURL;
 import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueSeverity;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueType;
-import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
+import org.hl7.fhir.utilities.xhtml.XhtmlNode;
 import org.hl7.fhir.utilities.xhtml.XhtmlParser;
 
 import lombok.Getter;
@@ -83,7 +79,7 @@ public abstract class TurtleParserBase extends ParserBase {
   /** Type of the resource currently being composed; set in {@link #compose(Element, Turtle, String)}. */
   protected String resourceType;
   private OutputStyle style;
-  // false carries the narrative literal unaltered (except in canonical output), as the JSON and XML writers do
+  /** If false, narrative is written as its original source (except in canonical output), as the JSON and XML writers do. */
   @Getter @Setter private boolean canonicalizeXhtml = true;
 
   /** How concept IRIs ({@code rdf:type} on a Coding or CodeableConcept) are carried into the element model when reading Turtle. */
@@ -96,9 +92,9 @@ public abstract class TurtleParserBase extends ParserBase {
 
   @Getter @Setter private ConceptIriHandling conceptIriHandling = ConceptIriHandling.DROP;
 
-  public static String FHIR_URI_BASE = "http://hl7.org/fhir/";
-  public static String FHIR_VERSION_BASE = "http://build.fhir.org/";
-  public static String FHIR_BASE_PREFIX = "fhir:";
+  public static final String FHIR_URI_BASE = "http://hl7.org/fhir/";
+  public static final String FHIR_VERSION_BASE = "http://build.fhir.org/";
+  public static final String FHIR_BASE_PREFIX = "fhir:";
 
   protected TurtleParserBase(IWorkerContext context) {
     super(context);
@@ -187,8 +183,8 @@ public abstract class TurtleParserBase extends ParserBase {
 
     List<Property> properties = element.getProperty().getChildProperties(element.getName(), null);
     Set<String> processed = new HashSet<String>();
-    processed.add("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-    processed.add("http://www.w3.org/2000/01/rdf-schema#type");
+    processed.add(Turtle.RDF_TYPE);
+    processed.add(Turtle.RDFS_TYPE);
     for (String decoration : nonPropertyPredicates()) {
       processed.add(FHIR_URI_BASE + decoration);
     }
@@ -271,14 +267,12 @@ public abstract class TurtleParserBase extends ParserBase {
       parseResource(errors, src, npath, object, element, property, name, e);
     else if (isDirectXhtmlLiteral(property, tail(name), e)) {
       String source = ((TTLLiteral) e).getValue();
-      Element narrative = new Element(tail(name), property).markLocation(e.getLine(), e.getCol()).setFormat(FhirFormat.TURTLE);
-      try {
-        narrative.setXhtml(new XhtmlParser().setXmlMode(true).parse(source, null).getDocumentElement(), source);
-      } catch (Exception exception) {
-        logFormatError(errors, e, npath, "Invalid XHTML at " + npath + ": " + exception.getMessage());
-        return;
+      XhtmlNode xhtml = parseXhtml(errors, e, source, npath);
+      if (xhtml != null) {
+        Element narrative = new Element(tail(name), property).markLocation(e.getLine(), e.getCol()).setFormat(FhirFormat.TURTLE);
+        narrative.setXhtml(xhtml, source);
+        element.getChildren().add(narrative);
       }
-      element.getChildren().add(narrative);
     }
     else  if (e instanceof TTLComplex) {
       TTLComplex child = (TTLComplex) e;
@@ -293,13 +287,12 @@ public abstract class TurtleParserBase extends ParserBase {
             String type = ((TTLLiteral) val).getType();
             // todo: check type
             if ("xhtml".equals(property.getType(tail(name)))) {
-              if (!"http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral".equals(type)) {
+              if (!Turtle.RDF_XML_LITERAL.equals(type)) {
                 logFormatError(errors, val, npath, "Expected rdf:XMLLiteral at " + npath);
               } else {
-                try {
-                  n.setXhtml(new XhtmlParser().setXmlMode(true).parse(value, null).getDocumentElement(), value);
-                } catch (Exception exception) {
-                  logFormatError(errors, val, npath, "Invalid XHTML at " + npath + ": " + exception.getMessage());
+                XhtmlNode xhtml = parseXhtml(errors, val, value, npath);
+                if (xhtml != null) {
+                  n.setXhtml(xhtml, value);
                 }
               }
             } else {
@@ -321,15 +314,24 @@ public abstract class TurtleParserBase extends ParserBase {
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_URI_OR_BNODE_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
   }
 
+  /** Returns the parsed XHTML, or {@code null} after reporting it as invalid. */
+  private XhtmlNode parseXhtml(List<ValidationMessage> errors, TTLObject location, String source, String path) throws FHIRFormatError {
+    try {
+      return new XhtmlParser().setXmlMode(true).parse(source, null).getDocumentElement();
+    } catch (Exception exception) {
+      logFormatError(errors, location, path, "Invalid XHTML at " + path + ": " + exception.getMessage());
+      return null;
+    }
+  }
+
   // a malformed collection is reported and contributes no members
   private List<TTLObject> collectionMembers(List<ValidationMessage> errors, Turtle src, TTLObject value, String path) throws FHIRFormatError {
     if (value instanceof TTLList && ((TTLList) value).isCollection()) {
       return ((TTLList) value).getList();
     }
-    String rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
     List<TTLObject> members = new ArrayList<>();
     Set<TTLObject> visited = new HashSet<>();
-    while (!(value instanceof TTLURL && value.hasValue(rdf + "nil"))) {
+    while (!(value instanceof TTLURL && value.hasValue(Turtle.RDF_NIL))) {
       TTLObject cellValue = resolveNode(errors, src, value, path);
       if (cellValue == null) {
         return new ArrayList<>();
@@ -343,8 +345,8 @@ public abstract class TurtleParserBase extends ParserBase {
         return new ArrayList<>();
       }
       TTLComplex cell = (TTLComplex) cellValue;
-      TTLObject first = cell.getPredicates().get(rdf + "first");
-      TTLObject rest = cell.getPredicates().get(rdf + "rest");
+      TTLObject first = cell.getPredicates().get(Turtle.RDF_FIRST);
+      TTLObject rest = cell.getPredicates().get(Turtle.RDF_REST);
       if (first == null || first instanceof TTLList) {
         logFormatError(errors, cell, path, "Expected exactly one rdf:first at " + path);
         return new ArrayList<>();
@@ -413,8 +415,8 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private TTLObject resourceType(TTLComplex object) {
-    TTLObject type = object.getPredicates().get("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
-    return type == null ? object.getPredicates().get("http://www.w3.org/2000/01/rdf-schema#type") : type;
+    TTLObject type = object.getPredicates().get(Turtle.RDF_TYPE);
+    return type == null ? object.getPredicates().get(Turtle.RDFS_TYPE) : type;
   }
 
   // R4/R5 writers type the Coding itself; R6 types the CodeableConcept, so its IRIs are matched back to a coding.
@@ -574,10 +576,10 @@ public abstract class TurtleParserBase extends ParserBase {
     resourceType = e.getType();
 
     ttl.prefix("fhir", FHIR_URI_BASE);
-    ttl.prefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-    ttl.prefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
-    ttl.prefix("owl", "http://www.w3.org/2002/07/owl#");
-    ttl.prefix("xsd", "http://www.w3.org/2001/XMLSchema#");
+    ttl.prefix("rdf", Turtle.RDF_NS);
+    ttl.prefix("rdfs", Turtle.RDFS_NS);
+    ttl.prefix("owl", Turtle.OWL_NS);
+    ttl.prefix("xsd", Turtle.XSD_NS);
 
     Section section = ttl.section("resource");
     if (style == OutputStyle.PRETTY) {
@@ -834,6 +836,18 @@ public abstract class TurtleParserBase extends ParserBase {
 
   protected void decorateCoding(Complex t, Element coding, Section section) throws FHIRException {
     // Do nothing by default
+  }
+
+  /** Types {@code t} with the concept IRI of a coding from a well-known code system (SNOMED CT, LOINC, MeSH). */
+  protected void decorateWithKnownConceptIri(Complex t, Element coding) {
+    String system = coding.getChildValue("system");
+    String code = coding.getChildValue("code");
+    TurtleConceptIri conceptIri = system == null || code == null ? null : TurtleConceptIri.forSystem(system);
+    String iri = conceptIri == null ? null : conceptIri.render(code);
+    if (iri != null) {
+      t.prefix(conceptIri.prefix, conceptIri.iriStem);
+      t.linkedPredicate("a", iri, null, null);
+    }
   }
 
   protected void decorateCodeableConcept(Complex t, Element codeableConcept, Section section) throws FHIRException {

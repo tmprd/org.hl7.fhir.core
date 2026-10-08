@@ -143,9 +143,9 @@ public class TurtleParserR4 extends TurtleParserBase {
   @Override
   public void compose(Element e, Turtle ttl, String base) throws FHIRException {
     ttl.prefix("fhir", FHIR_URI_BASE);
-    ttl.prefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
-    ttl.prefix("owl", "http://www.w3.org/2002/07/owl#");
-    ttl.prefix("xsd", "http://www.w3.org/2001/XMLSchema#");
+    ttl.prefix("rdfs", Turtle.RDFS_NS);
+    ttl.prefix("owl", Turtle.OWL_NS);
+    ttl.prefix("xsd", Turtle.XSD_NS);
 
     Section section = ttl.section("resource");
     String subjId = genSubjectId(e);
@@ -369,22 +369,11 @@ public class TurtleParserR4 extends TurtleParserBase {
 
   @Override
   protected void decorateCoding(Complex t, Element coding, Section section) throws FHIRException {
-    String system = coding.getChildValue("system");
     String code = coding.getChildValue("code");
-
-    if (system == null || code == null) {
-      return;
-    }
-    if ("http://snomed.info/sct".equals(system)) {
-      t.prefix("sct", "http://snomed.info/id/");
-      if (code.contains(":") || code.contains("=")) {
-        generateLinkedPredicate(t, code);
-      } else {
-        t.linkedPredicate("a", "sct:" + urlescape(code), null, null);
-      }
-    } else if ("http://loinc.org".equals(system)) {
-      t.prefix("loinc", "http://loinc.org/rdf/");
-      t.linkedPredicate("a", "loinc:" + urlescape(code).toUpperCase(), null, null);
+    if ("http://snomed.info/sct".equals(coding.getChildValue("system")) && code != null && (code.contains(":") || code.contains("="))) {
+      generateLinkedPredicate(t, code);
+    } else {
+      decorateWithKnownConceptIri(t, coding);
     }
   }
 
