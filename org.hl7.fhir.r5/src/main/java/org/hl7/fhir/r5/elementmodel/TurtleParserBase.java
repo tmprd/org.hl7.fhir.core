@@ -231,7 +231,7 @@ public abstract class TurtleParserBase extends ParserBase {
       TTLList values = (TTLList) e;
       // earlier writers put single resources in one-item lists, e.g. Bundle.entry.resource in the published R5 examples
       if (!property.isResource() || !values.isCollection() || values.getList().size() != 1) {
-        logFormatError(errors, e, npath, "Unexpected collection or multiple values at " + npath);
+        logFormatError(errors, e, npath, I18nConstants.TURTLE_UNEXPECTED_COLLECTION, npath);
         return;
       }
       e = values.getList().get(0);
@@ -254,7 +254,7 @@ public abstract class TurtleParserBase extends ParserBase {
       }
       if (property.isChoice()) {
         if (!(e instanceof TTLComplex)) {
-          logFormatError(errors, e, npath, "Expected a typed choice node at " + npath);
+          logFormatError(errors, e, npath, I18nConstants.TURTLE_CHOICE_NOT_A_NODE, npath);
           return;
         }
         name = choiceName(errors, property, (TTLComplex) e, npath);
@@ -288,7 +288,7 @@ public abstract class TurtleParserBase extends ParserBase {
             // todo: check type
             if ("xhtml".equals(property.getType(tail(name)))) {
               if (!Turtle.RDF_XML_LITERAL.equals(type)) {
-                logFormatError(errors, val, npath, "Expected rdf:XMLLiteral at " + npath);
+                logFormatError(errors, val, npath, I18nConstants.TURTLE_XHTML_NOT_XML_LITERAL, npath);
               } else {
                 XhtmlNode xhtml = parseXhtml(errors, val, value, npath);
                 if (xhtml != null) {
@@ -299,7 +299,7 @@ public abstract class TurtleParserBase extends ParserBase {
               n.setValue(value);
             }
           } else
-            logFormatError(errors, val, npath, "Expected a literal primitive value at " + npath);
+            logFormatError(errors, val, npath, I18nConstants.TURTLE_PRIMITIVE_NOT_LITERAL, npath);
         }
       } else {
         parseChildren(errors, src, npath, child, n, false);
@@ -309,7 +309,7 @@ public abstract class TurtleParserBase extends ParserBase {
       }
 
     } else if (usesTypedChoices()) {
-      logFormatError(errors, e, npath, "Expected a URI or blank node at " + npath);
+      logFormatError(errors, e, npath, I18nConstants.TURTLE_NOT_URI_OR_BNODE, npath);
     } else
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_URI_OR_BNODE_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
   }
@@ -319,7 +319,7 @@ public abstract class TurtleParserBase extends ParserBase {
     try {
       return new XhtmlParser().setXmlMode(true).parse(source, null).getDocumentElement();
     } catch (Exception exception) {
-      logFormatError(errors, location, path, "Invalid XHTML at " + path + ": " + exception.getMessage());
+      logFormatError(errors, location, path, I18nConstants.TURTLE_XHTML_INVALID, path, exception.getMessage());
       return null;
     }
   }
@@ -337,22 +337,22 @@ public abstract class TurtleParserBase extends ParserBase {
         return new ArrayList<>();
       }
       if (!(cellValue instanceof TTLComplex)) {
-        logFormatError(errors, cellValue, path, "Expected an RDF collection cell at " + path);
+        logFormatError(errors, cellValue, path, I18nConstants.TURTLE_COLLECTION_BAD_CELL, path);
         return new ArrayList<>();
       }
       if (!visited.add(cellValue)) {
-        logFormatError(errors, cellValue, path, "Cycle in RDF collection at " + path);
+        logFormatError(errors, cellValue, path, I18nConstants.TURTLE_COLLECTION_CYCLE, path);
         return new ArrayList<>();
       }
       TTLComplex cell = (TTLComplex) cellValue;
       TTLObject first = cell.getPredicates().get(Turtle.RDF_FIRST);
       TTLObject rest = cell.getPredicates().get(Turtle.RDF_REST);
       if (first == null || first instanceof TTLList) {
-        logFormatError(errors, cell, path, "Expected exactly one rdf:first at " + path);
+        logFormatError(errors, cell, path, I18nConstants.TURTLE_COLLECTION_BAD_FIRST, path);
         return new ArrayList<>();
       }
       if (rest == null || rest instanceof TTLList) {
-        logFormatError(errors, cell, path, "Expected exactly one rdf:rest at " + path);
+        logFormatError(errors, cell, path, I18nConstants.TURTLE_COLLECTION_BAD_REST, path);
         return new ArrayList<>();
       }
       members.add(first);
@@ -366,7 +366,7 @@ public abstract class TurtleParserBase extends ParserBase {
     if (value instanceof TTLURL) {
       TTLComplex node = src.getObject(((TTLURL) value).getUri());
       if (node == null) {
-        logFormatError(errors, value, path, "Unresolved node " + ((TTLURL) value).getUri() + " at " + path);
+        logFormatError(errors, value, path, I18nConstants.TURTLE_UNRESOLVED_NODE, ((TTLURL) value).getUri(), path);
       }
       return node;
     }
@@ -374,9 +374,9 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   /** Reports a malformed graph: recorded under {@link ValidationPolicy#EVERYTHING}, otherwise thrown by {@link #logError}. */
-  protected void logFormatError(List<ValidationMessage> errors, TTLObject location, String path, String message) throws FHIRFormatError {
+  protected void logFormatError(List<ValidationMessage> errors, TTLObject location, String path, String messageId, Object... args) throws FHIRFormatError {
     logError(errors, ValidationMessage.NO_RULE_DATE, location == null ? -1 : location.getLine(), location == null ? -1 : location.getCol(),
-        path, IssueType.STRUCTURE, message, IssueSeverity.FATAL);
+        path, IssueType.STRUCTURE, context.formatMessage(messageId, args), IssueSeverity.FATAL);
   }
 
   private String choiceName(List<ValidationMessage> errors, Property property, TTLComplex node, String path) throws FHIRFormatError {
@@ -388,7 +388,7 @@ public abstract class TurtleParserBase extends ParserBase {
         if (value != null && value.hasValue(FHIR_URI_BASE + className(type.getCode()))) {
           String candidate = property.getName().substring(0, property.getName().length() - 3) + Utilities.capitalize(type.getCode());
           if (selected != null && !selected.equals(candidate)) {
-            logFormatError(errors, node, path, "Ambiguous rdf:type for choice at " + path);
+            logFormatError(errors, node, path, I18nConstants.TURTLE_CHOICE_AMBIGUOUS_TYPE, path);
             return null;
           }
           selected = candidate;
@@ -396,7 +396,7 @@ public abstract class TurtleParserBase extends ParserBase {
       }
     }
     if (selected == null) {
-      logFormatError(errors, node, path, "Missing or unsupported rdf:type for choice at " + path);
+      logFormatError(errors, node, path, I18nConstants.TURTLE_CHOICE_MISSING_TYPE, path);
     }
     return selected;
   }
@@ -432,7 +432,7 @@ public abstract class TurtleParserBase extends ParserBase {
         extension.addElement("valueUri").setValue(iri);
       } else {
         logError(errors, ValidationMessage.NO_RULE_DATE, node.getLine(), node.getCol(), path, IssueType.INFORMATIONAL,
-            "Concept IRI " + iri + " matches no coding, so it was dropped", IssueSeverity.WARNING);
+            context.formatMessage(I18nConstants.TURTLE_CONCEPT_IRI_UNMATCHED, iri), IssueSeverity.WARNING);
       }
     }
   }

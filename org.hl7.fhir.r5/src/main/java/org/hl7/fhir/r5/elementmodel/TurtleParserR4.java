@@ -44,6 +44,7 @@ import org.hl7.fhir.r5.model.ElementDefinition.TypeRefComponent;
 import org.hl7.fhir.r5.utils.SnomedExpressions;
 
 import org.hl7.fhir.utilities.Utilities;
+import org.hl7.fhir.utilities.i18n.I18nConstants;
 import org.hl7.fhir.utilities.turtle.Turtle;
 import org.hl7.fhir.utilities.turtle.Turtle.Complex;
 import org.hl7.fhir.utilities.turtle.Turtle.Section;
@@ -114,18 +115,18 @@ public class TurtleParserR4 extends TurtleParserBase {
       TTLObject index = node == null ? null : node.getPredicates().get(FHIR_URI_BASE + "index");
       if (index != null) {
         if (!(index instanceof TTLLiteral)) {
-          logFormatError(errors, index, path, "Expected an integer fhir:index at " + path);
+          logFormatError(errors, index, path, I18nConstants.TURTLE_INDEX_NOT_LITERAL, path);
           return values.getList();
         }
         int ordinal;
         try {
           ordinal = Integer.parseInt(((TTLLiteral) index).getValue());
         } catch (NumberFormatException exception) {
-          logFormatError(errors, index, path, "Invalid integer fhir:index at " + path + ": " + ((TTLLiteral) index).getValue());
+          logFormatError(errors, index, path, I18nConstants.TURTLE_INDEX_NOT_INTEGER, path, ((TTLLiteral) index).getValue());
           return values.getList();
         }
         if (ordinal < 0 || indexed.putIfAbsent(ordinal, value) != null) {
-          logFormatError(errors, index, path, "Negative or duplicate fhir:index at " + path + ": " + ordinal);
+          logFormatError(errors, index, path, I18nConstants.TURTLE_INDEX_NEGATIVE_OR_DUPLICATE, path, String.valueOf(ordinal));
           return values.getList();
         }
       }
@@ -134,7 +135,7 @@ public class TurtleParserR4 extends TurtleParserBase {
       return values.getList();
     }
     if (indexed.size() != values.getList().size()) {
-      logFormatError(errors, values, path, "Missing fhir:index in indexed repetitions at " + path);
+      logFormatError(errors, values, path, I18nConstants.TURTLE_INDEX_MISSING, path);
       return values.getList();
     }
     return new ArrayList<>(indexed.values());
