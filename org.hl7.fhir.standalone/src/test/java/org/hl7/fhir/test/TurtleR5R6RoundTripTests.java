@@ -1,4 +1,4 @@
-package org.hl7.fhir.r5.test;
+package org.hl7.fhir.test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -14,15 +14,14 @@ import java.util.stream.Stream;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-import org.hl7.fhir.r5.elementmodel.Element;
-import org.hl7.fhir.r5.elementmodel.Manager;
-import org.hl7.fhir.r5.elementmodel.Manager.FhirFormat;
-import org.hl7.fhir.r5.elementmodel.ParserBase;
-import org.hl7.fhir.r5.elementmodel.TurtleParser;
-import org.hl7.fhir.r5.elementmodel.TurtleParserBase.ConceptIriHandling;
-import org.hl7.fhir.r5.test.TurtleGeneratorTestUtils.ParserContext;
-import org.hl7.fhir.r5.test.utils.TestingUtilities;
-import org.hl7.fhir.utilities.npm.FilesystemPackageCacheManager;
+import org.hl7.fhir.model.utilities.formats.FhirFormat;
+import org.hl7.fhir.services.elementmodel.Element;
+import org.hl7.fhir.services.elementmodel.Manager;
+import org.hl7.fhir.services.elementmodel.ParserBase;
+import org.hl7.fhir.services.elementmodel.TurtleParser;
+import org.hl7.fhir.services.elementmodel.TurtleParserBase.ConceptIriHandling;
+import org.hl7.fhir.standalone.testing.TestingUtilities;
+import org.hl7.fhir.test.TurtleGeneratorTestUtils.ParserContext;
 import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueSeverity;
 import org.junit.jupiter.api.Assertions;
@@ -34,6 +33,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+/** Services-family port of org.hl7.fhir.r5.test.TurtleR5R6RoundTripTests; keep the two in step. */
 class TurtleR5R6RoundTripTests {
   // Matches VersionUtilities.getCurrentVersion and the standalone TestingUtilities default.
   private static final String R6_CORE_VERSION = "6.0.0-snapshot1";
@@ -42,10 +42,7 @@ class TurtleR5R6RoundTripTests {
   @BeforeAll
   static void setup() throws Exception {
     contexts.put("5.0.0", ParserContext.fromWorkerContext(TestingUtilities.getSharedWorkerContext("5.0.0")));
-    var cache = new FilesystemPackageCacheManager.Builder().build();
-    var core = cache.loadPackage("hl7.fhir.r6.core", R6_CORE_VERSION);
-    Assertions.assertEquals(R6_CORE_VERSION, core.version());
-    contexts.put("6.0.0", ParserContext.fromWorkerContext(TestingUtilities.getWorkerContext(core)));
+    contexts.put("6.0.0", ParserContext.fromWorkerContext(TestingUtilities.getSharedWorkerContext(R6_CORE_VERSION)));
     Assertions.assertEquals(R6_CORE_VERSION, contexts.get("6.0.0").getFhirVersion());
     contexts.values().forEach(parsers -> parsers.setCanonicalizeXhtml(false));
   }
@@ -265,11 +262,7 @@ class TurtleR5R6RoundTripTests {
     }
   }
 
-  /**
-   * XML parsing must normalize CRLF to LF, so no XML leg can return a CRLF narrative verbatim. This is
-   * independent of Turtle: plain JSON-XML-JSON loses it too, and the RDF canonicalization proposal records
-   * the same limitation for any resource represented as XML during its life cycle.
-   */
+  // XML parsing must normalize CRLF to LF, so no XML leg can return a CRLF narrative verbatim; this is not a Turtle defect.
   private JsonElement normalizeNarrativeLineEndings(JsonElement resource) {
     JsonElement copy = JsonParser.parseString(resource.toString());
     normalizeNarrativeLineEndings(copy, new java.util.ArrayDeque<>());

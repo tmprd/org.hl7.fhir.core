@@ -54,6 +54,7 @@ import org.hl7.fhir.utilities.turtle.Turtle.TTLList;
 import org.hl7.fhir.utilities.turtle.Turtle.TTLLiteral;
 import org.hl7.fhir.utilities.turtle.Turtle.TTLObject;
 import org.hl7.fhir.utilities.turtle.Turtle.TTLURL;
+import org.hl7.fhir.utilities.turtle.TurtleIRIUtil;
 import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
 
@@ -183,8 +184,10 @@ public class TurtleParserR4 extends TurtleParserBase {
   @Override
   protected String getURIType(String uri) {
     if (uri.startsWith("<" + FHIR_URI_BASE)) {
-      if (uri.substring(FHIR_URI_BASE.length() + 1).contains("/")) {
-        return uri.substring(FHIR_URI_BASE.length() + 1, uri.indexOf('/', FHIR_URI_BASE.length() + 1));
+      int slash = uri.indexOf('/', FHIR_URI_BASE.length() + 1);
+      // A conditional reference (Type?search) identifies a search, not a resource of that type.
+      if (slash > 0 && uri.lastIndexOf('?', slash) < 0) {
+        return uri.substring(FHIR_URI_BASE.length() + 1, slash);
       }
     }
     return null;
@@ -193,9 +196,9 @@ public class TurtleParserR4 extends TurtleParserBase {
   @Override
   protected String getReferenceURI(String ref) {
     if (ref != null && (ref.startsWith("http://") || ref.startsWith("https://"))) {
-      return "<" + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(ref) + ">";
     } else if (base != null && ref != null && ref.contains("/")) {
-      return "<" + Utilities.appendForwardSlash(base) + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(Utilities.appendForwardSlash(base) + ref) + ">";
     } else {
       return null;
     }

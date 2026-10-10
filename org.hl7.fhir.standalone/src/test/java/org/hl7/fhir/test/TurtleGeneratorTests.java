@@ -219,6 +219,7 @@ public class TurtleGeneratorTests {
     parser.setIdPolicy(IdRenderingPolicy.None);
     parser.setShowDecorations(true);
     parser.setDeriveConceptIriFromNamingSystem(true);
+    parser.setCanonicalizeXhtml(false);
 
     Method r6ParserMethod = TurtleParser.class.getDeclaredMethod("r6Parser");
     r6ParserMethod.setAccessible(true);
@@ -228,6 +229,7 @@ public class TurtleGeneratorTests {
     assertThat(delegate.getIdPolicy()).isEqualTo(IdRenderingPolicy.None);
     assertThat(delegate.isShowDecorations()).isTrue();
     assertThat(delegate.isDeriveConceptIriFromNamingSystem()).isTrue();
+    assertThat(delegate.isCanonicalizeXhtml()).isFalse();
   }
 
   /**
@@ -262,7 +264,7 @@ public class TurtleGeneratorTests {
   void testR6CodeableConceptUsesBuiltInConceptIriByDefault() throws Exception {
     TurtleGeneratorTestUtils.ParserContext builtInParserContext = TurtleGeneratorTestUtils.ParserContext.fromWorkerContext(TurtleGeneratorTestUtils.getVersionOverrideWorkerContext(R6_VERSION));
     String builtInTurtle = generateObservationCodeableConcept(builtInParserContext, "http://loinc.org", "8867-4");
-    assertThat(builtInTurtle).contains("@prefix loinc: <https://loinc.org/rdf/> .");
+    assertThat(builtInTurtle).contains("@prefix loinc: <http://loinc.org/rdf/> .");
     assertThat(builtInTurtle).contains("a loinc:8867-4");
   }
 

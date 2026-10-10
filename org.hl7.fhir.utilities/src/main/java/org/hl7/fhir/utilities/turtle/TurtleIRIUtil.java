@@ -1,5 +1,6 @@
 package org.hl7.fhir.utilities.turtle;
 
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 
 // Created by claude-sonnet-4-6
@@ -48,5 +49,24 @@ public class TurtleIRIUtil {
       }
     }
     return true;
+  }
+
+  /** Percent-encodes (as UTF-8) every character that {@link #isValidIRI} would reject; valid escapes are kept. */
+  public static String escapeIri(String uri) {
+    StringBuilder b = new StringBuilder(uri.length());
+    int i = 0;
+    while (i < uri.length()) {
+      int cp = uri.codePointAt(i);
+      boolean keep = cp == '%' ? i + 2 < uri.length() && isHexDigit(uri.substring(i + 1, i + 3)) : isIriChar(cp);
+      if (keep) {
+        b.appendCodePoint(cp);
+      } else {
+        for (byte octet : new String(Character.toChars(cp)).getBytes(StandardCharsets.UTF_8)) {
+          b.append('%').append(String.format("%02X", octet & 0xFF));
+        }
+      }
+      i += Character.charCount(cp);
+    }
+    return b.toString();
   }
 }

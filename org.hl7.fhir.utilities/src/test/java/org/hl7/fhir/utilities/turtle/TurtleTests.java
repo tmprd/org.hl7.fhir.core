@@ -13,6 +13,18 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 class TurtleTests {
 
   @ParameterizedTest
+  @CsvSource(delimiterString = " -> ", value = {
+    "http://hl7.org/fhir/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999959197 -> http://hl7.org/fhir/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi%7C9999959197",
+    "http://example.org/a b -> http://example.org/a%20b",
+    "http://example.org/%7C%zz -> http://example.org/%7C%25zz",
+    "http://example.org/café -> http://example.org/café"
+  })
+  void escapesCharactersNotAllowedInIris(String iri, String expected) {
+    Assertions.assertEquals(expected, TurtleIRIUtil.escapeIri(iri));
+    Assertions.assertTrue(TurtleIRIUtil.isValidIRI(expected));
+  }
+
+  @ParameterizedTest
   @ValueSource(strings = {"<http://example.org/subject>", "ex:subject", ":subject"})
   void mergesStatementsForTheSameSubject(String subject) throws Exception {
     Turtle turtle = new Turtle();

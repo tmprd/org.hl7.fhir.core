@@ -43,6 +43,7 @@ import org.hl7.fhir.utilities.Utilities;
 import org.hl7.fhir.utilities.turtle.Turtle.Complex;
 import org.hl7.fhir.utilities.turtle.Turtle.Section;
 import org.hl7.fhir.utilities.turtle.Turtle.Subject;
+import org.hl7.fhir.utilities.turtle.TurtleIRIUtil;
 
 
 
@@ -69,12 +70,25 @@ public class TurtleParserR6 extends TurtleParserBase {
 
   protected String getReferenceURI(String ref) {
     if (ref != null && (ref.startsWith("http://") || ref.startsWith("https://") || ref.startsWith("urn:") || ref.startsWith("#")))
-      return "<" + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(ref) + ">";
     else if (base != null && ref != null && ref.contains("/"))
-      return "<" + Utilities.appendForwardSlash(base) + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(Utilities.appendForwardSlash(base) + ref) + ">";
     else if (ref != null) {
-        return "fhir:" + ref;
+        return isSimpleLocalName(ref) ? "fhir:" + ref : "<" + TurtleIRIUtil.escapeIri(FHIR_URI_BASE + ref) + ">";
     } else return null;
+  }
+
+  // Can "fhir:" + ref be written as a Turtle prefixed name? Only a safe ASCII subset of PN_LOCAL is accepted (no leading '-').
+  private static boolean isSimpleLocalName(String ref) {
+    if (ref.startsWith("-")) {
+      return false;
+    }
+    for (char c : ref.toCharArray()) {
+      if (!(c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9' || c == '_' || c == '-')) {
+        return false;
+      }
+    }
+    return true;
   }
 
   @Override

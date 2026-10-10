@@ -12,17 +12,23 @@ import org.hl7.fhir.utilities.FileUtilities;
 import org.hl7.fhir.utilities.Utilities;
 import org.hl7.fhir.utilities.i18n.I18nConstants;
 import org.hl7.fhir.utilities.turtle.Turtle;
+import org.hl7.fhir.utilities.turtle.TurtleIRIUtil;
 import org.hl7.fhir.utilities.turtle.Turtle.*;
 import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueSeverity;
 import org.hl7.fhir.utilities.validation.ValidationMessage.IssueType;
-import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
+import org.hl7.fhir.utilities.xhtml.XhtmlNode;
+import org.hl7.fhir.utilities.xhtml.XhtmlParser;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -63,10 +69,25 @@ public abstract class TurtleParserBase extends ParserBase {
   /** Type of the resource currently being composed; set in {@link #compose(Element, Turtle, String)}. */
   protected String resourceType;
   private OutputStyle style;
+  /** If false, narrative is written as its original source (except in canonical output), as the JSON and XML writers do. */
+  @Getter @Setter private boolean canonicalizeXhtml = true;
 
-  public static String FHIR_URI_BASE = "http://hl7.org/fhir/";
-  public static String FHIR_VERSION_BASE = "http://build.fhir.org/";
-  public static String FHIR_BASE_PREFIX = "fhir:";
+  /** How concept IRIs ({@code rdf:type} on a Coding or CodeableConcept) are carried into the element model when reading Turtle. */
+  public enum ConceptIriHandling {
+    /** Ignore them; JSON and XML have no direct equivalent. */
+    DROP,
+    /** Add each to its Coding as an {@link #EXT_RDF_CONCEPT_IRI} extension. */
+    EXTENSION
+  }
+
+  // org.hl7.fhir.model's ExtensionDefinitions is generated and doesn't include this extension yet
+  public static final String EXT_RDF_CONCEPT_IRI = "http://hl7.org/fhir/StructureDefinition/rdf-concept-iri";
+
+  @Getter @Setter private ConceptIriHandling conceptIriHandling = ConceptIriHandling.DROP;
+
+  public static final String FHIR_URI_BASE = "http://hl7.org/fhir/";
+  public static final String FHIR_VERSION_BASE = "http://build.fhir.org/";
+  public static final String FHIR_BASE_PREFIX = "fhir:";
 
   protected TurtleParserBase(IWorkerContext context) {
     super(context);
@@ -116,7 +137,7 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private Element parse(List<ValidationMessage> errors, Turtle src, TTLComplex cmp) throws FHIRException {
-    TTLObject type = cmp.getPredicates().get("http://www.w3.org/2000/01/rdf-schema#type");
+    TTLObject type = resourceType(cmp);
     if (type == null) {
       logError(errors, ValidationMessage.NO_RULE_DATE, cmp.getLine(), cmp.getCol(), "(document)", IssueType.INVALID, context.formatMessage(I18nConstants.UNKNOWN_RESOURCE_TYPE_MISSING_RDFSTYPE), IssueSeverity.FATAL);
       return null;
@@ -155,13 +176,18 @@ public abstract class TurtleParserBase extends ParserBase {
 
     List<Property> properties = element.getProperty().getChildProperties(element.getName(), null);
     Set<String> processed = new HashSet<String>();
+    processed.add(Turtle.RDF_TYPE);
+    processed.add(Turtle.RDFS_TYPE);
+    for (String decoration : nonPropertyPredicates()) {
+      processed.add(FHIR_URI_BASE + decoration);
+    }
     if (primitive)
-      processed.add(FHIR_URI_BASE + "value");
+      processed.add(FHIR_URI_BASE + valueName());
 
     // note that we do not trouble ourselves to maintain the wire format order here - we don't even know what it was anyway
     // first pass: process the properties
     for (Property property : properties) {
-      if (property.isChoice()) {
+      if (property.isChoice() && !usesTypedChoices()) {
         for (TypeRefComponent type : property.getDefinition().getTypeList()) {
           String eName = property.getName().substring(0, property.getName().length()-3) + Utilities.capitalize(type.getCode());
           parseChild(errors, src, object, element, processed, property, path, getFormalName(property, eName));
@@ -183,14 +209,29 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private void parseChild(List<ValidationMessage> errors, Turtle src, TTLComplex object, Element context, Set<String> processed, Property property, String path, String name) throws FHIRException {
-    processed.add(name);
+    processed.add(FHIR_URI_BASE + name);
     String npath = path+"/"+property.getName();
     TTLObject e = object.getPredicates().get(FHIR_URI_BASE + name);
     if (e == null)
       return;
+    if (usesTypedChoices() && property.isList()) {
+      for (TTLObject member : collectionMembers(errors, src, e, npath)) {
+        parseChildInstance(errors, src, npath, object, context, property, name, member);
+      }
+      return;
+    }
+    if (usesTypedChoices() && e instanceof TTLList && !property.isList()) {
+      TTLList values = (TTLList) e;
+      // earlier writers put single resources in one-item lists, e.g. Bundle.entry.resource in the published R5 examples
+      if (!property.isResource() || !values.isCollection() || values.getList().size() != 1) {
+        logFormatError(errors, e, npath, I18nConstants.TURTLE_UNEXPECTED_COLLECTION, npath);
+        return;
+      }
+      e = values.getList().get(0);
+    }
     if (property.isList() && (e instanceof TTLList)) {
       TTLList arr = (TTLList) e;
-      for (TTLObject am : arr.getList()) {
+      for (TTLObject am : orderChildren(errors, src, arr, npath)) {
         parseChildInstance(errors, src, npath, object, context, property, name, am);
       }
     } else {
@@ -199,34 +240,221 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   private void parseChildInstance(List<ValidationMessage> errors, Turtle src, String npath, TTLComplex object, Element element, Property property, String name, TTLObject e) throws FHIRException {
+    if (usesTypedChoices()) {
+      e = resolveNode(errors, src, e, npath);
+      if (e == null) {
+        return;
+      }
+      if (property.isChoice()) {
+        if (!(e instanceof TTLComplex)) {
+          logFormatError(errors, e, npath, I18nConstants.TURTLE_CHOICE_NOT_A_NODE, npath);
+          return;
+        }
+        name = choiceName(errors, property, (TTLComplex) e, npath);
+        if (name == null) {
+          return;
+        }
+      }
+    }
     if (property.isResource())
       parseResource(errors, src, npath, object, element, property, name, e);
+    else if (isDirectXhtmlLiteral(property, tail(name), e)) {
+      String source = ((TTLLiteral) e).getValue();
+      XhtmlNode xhtml = parseXhtml(errors, e, source, npath);
+      if (xhtml != null) {
+        Element narrative = new Element(tail(name), property).markLocation(e.getLine(), e.getCol()).setFormat(FhirFormat.TURTLE);
+        narrative.setXhtml(xhtml, source);
+        element.getChildList().add(narrative);
+      }
+    }
     else  if (e instanceof TTLComplex) {
       TTLComplex child = (TTLComplex) e;
       Element n = new Element(tail(name), property).markLocation(e.getLine(), e.getCol()).setFormat(FhirFormat.TURTLE);
       element.getChildList().add(n);
       if (property.isPrimitive(property.getType(tail(name)))) {
         parseChildren(errors, src, npath, child, n, true);
-        TTLObject val = child.getPredicates().get(FHIR_URI_BASE + "value");
+        TTLObject val = child.getPredicates().get(FHIR_URI_BASE + valueName());
         if (val != null) {
           if (val instanceof TTLLiteral) {
             String value = ((TTLLiteral) val).getValue();
             String type = ((TTLLiteral) val).getType();
             // todo: check type
-            n.setValue(value);
+            if ("xhtml".equals(property.getType(tail(name)))) {
+              if (!Turtle.RDF_XML_LITERAL.equals(type)) {
+                logFormatError(errors, val, npath, I18nConstants.TURTLE_XHTML_NOT_XML_LITERAL, npath);
+              } else {
+                XhtmlNode xhtml = parseXhtml(errors, val, value, npath);
+                if (xhtml != null) {
+                  n.setXhtml(xhtml, value);
+                }
+              }
+            } else {
+              n.setValue(value);
+            }
           } else
-            logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_LITERAL_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
+            logFormatError(errors, val, npath, I18nConstants.TURTLE_PRIMITIVE_NOT_LITERAL, npath);
         }
-      } else 
+      } else {
         parseChildren(errors, src, npath, child, n, false);
+        if (conceptIriHandling == ConceptIriHandling.EXTENSION) {
+          attachConceptIris(errors, child, n, property.getType(tail(name)), npath);
+        }
+      }
 
-    } else 
+    } else if (usesTypedChoices()) {
+      logFormatError(errors, e, npath, I18nConstants.TURTLE_NOT_URI_OR_BNODE, npath);
+    } else
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.THIS_PROPERTY_MUST_BE_A_URI_OR_BNODE_NOT_, "a "+e.getClass().getName()), IssueSeverity.ERROR);
   }
 
 
+  /** Returns the parsed XHTML, or {@code null} after reporting it as invalid. */
+  private XhtmlNode parseXhtml(List<ValidationMessage> errors, TTLObject location, String source, String path) throws FHIRFormatError {
+    try {
+      return new XhtmlParser().setXmlMode(true).parse(source, null).getDocumentElement();
+    } catch (Exception exception) {
+      logFormatError(errors, location, path, I18nConstants.TURTLE_XHTML_INVALID, path, exception.getMessage());
+      return null;
+    }
+  }
+
+  // a malformed collection is reported and contributes no members
+  private List<TTLObject> collectionMembers(List<ValidationMessage> errors, Turtle src, TTLObject value, String path) throws FHIRFormatError {
+    if (value instanceof TTLList && ((TTLList) value).isCollection()) {
+      return ((TTLList) value).getList();
+    }
+    List<TTLObject> members = new ArrayList<>();
+    Set<TTLObject> visited = new HashSet<>();
+    while (!(value instanceof TTLURL && value.hasValue(Turtle.RDF_NIL))) {
+      TTLObject cellValue = resolveNode(errors, src, value, path);
+      if (cellValue == null) {
+        return new ArrayList<>();
+      }
+      if (!(cellValue instanceof TTLComplex)) {
+        logFormatError(errors, cellValue, path, I18nConstants.TURTLE_COLLECTION_BAD_CELL, path);
+        return new ArrayList<>();
+      }
+      if (!visited.add(cellValue)) {
+        logFormatError(errors, cellValue, path, I18nConstants.TURTLE_COLLECTION_CYCLE, path);
+        return new ArrayList<>();
+      }
+      TTLComplex cell = (TTLComplex) cellValue;
+      TTLObject first = cell.getPredicates().get(Turtle.RDF_FIRST);
+      TTLObject rest = cell.getPredicates().get(Turtle.RDF_REST);
+      if (first == null || first instanceof TTLList) {
+        logFormatError(errors, cell, path, I18nConstants.TURTLE_COLLECTION_BAD_FIRST, path);
+        return new ArrayList<>();
+      }
+      if (rest == null || rest instanceof TTLList) {
+        logFormatError(errors, cell, path, I18nConstants.TURTLE_COLLECTION_BAD_REST, path);
+        return new ArrayList<>();
+      }
+      members.add(first);
+      value = rest;
+    }
+    return members;
+  }
+
+  /** Returns the node a URI names, or {@code null} (after reporting) if it is not in the document. */
+  private TTLObject resolveNode(List<ValidationMessage> errors, Turtle src, TTLObject value, String path) throws FHIRFormatError {
+    if (value instanceof TTLURL) {
+      TTLComplex node = src.getObject(((TTLURL) value).getUri());
+      if (node == null) {
+        logFormatError(errors, value, path, I18nConstants.TURTLE_UNRESOLVED_NODE, ((TTLURL) value).getUri(), path);
+      }
+      return node;
+    }
+    return value;
+  }
+
+  /** Reports a malformed graph: recorded under {@link ValidationPolicy#EVERYTHING}, otherwise thrown by {@link #logError}. */
+  protected void logFormatError(List<ValidationMessage> errors, TTLObject location, String path, String messageId, Object... args) throws FHIRFormatError {
+    logError(errors, ValidationMessage.NO_RULE_DATE, location == null ? -1 : location.getLine(), location == null ? -1 : location.getCol(),
+        path, IssueType.STRUCTURE, context.formatMessage(messageId, args), IssueSeverity.FATAL);
+  }
+
+  private String choiceName(List<ValidationMessage> errors, Property property, TTLComplex node, String path) throws FHIRFormatError {
+    TTLObject types = resourceType(node);
+    List<TTLObject> values = types instanceof TTLList ? ((TTLList) types).getList() : Arrays.asList(types);
+    String selected = null;
+    for (TypeRefComponent type : property.getDefinition().getTypeList()) {
+      for (TTLObject value : values) {
+        if (value != null && value.hasValue(FHIR_URI_BASE + className(type.getCode()))) {
+          String candidate = property.getName().substring(0, property.getName().length() - 3) + Utilities.capitalize(type.getCode());
+          if (selected != null && !selected.equals(candidate)) {
+            logFormatError(errors, node, path, I18nConstants.TURTLE_CHOICE_AMBIGUOUS_TYPE, path);
+            return null;
+          }
+          selected = candidate;
+        }
+      }
+    }
+    if (selected == null) {
+      logFormatError(errors, node, path, I18nConstants.TURTLE_CHOICE_MISSING_TYPE, path);
+    }
+    return selected;
+  }
+
   private String tail(String name) {
     return name.substring(name.lastIndexOf(".")+1);
+  }
+
+  protected List<TTLObject> orderChildren(List<ValidationMessage> errors, Turtle src, TTLList values, String path) throws FHIRFormatError {
+    return values.getList();
+  }
+
+  protected boolean isDirectXhtmlLiteral(Property property, String name, TTLObject value) {
+    return false;
+  }
+
+  private TTLObject resourceType(TTLComplex object) {
+    TTLObject type = object.getPredicates().get(Turtle.RDF_TYPE);
+    return type == null ? object.getPredicates().get(Turtle.RDFS_TYPE) : type;
+  }
+
+  // R4/R5 writers type the Coding itself; R6 types the CodeableConcept, so its IRIs are matched back to a coding.
+  private void attachConceptIris(List<ValidationMessage> errors, TTLComplex node, Element element, String type, String path) throws FHIRException {
+    if (!Utilities.existsInList(type, "Coding", "CodeableConcept")) {
+      return;
+    }
+    for (String iri : conceptIris(node)) {
+      Element coding = "Coding".equals(type) ? element : codingForConceptIri(element, iri);
+      if (coding != null) {
+        Element extension = coding.addElement("extension");
+        extension.addElement("url").setValue(EXT_RDF_CONCEPT_IRI);
+        extension.addElement("valueUri").setValue(iri);
+      } else {
+        logError(errors, ValidationMessage.NO_RULE_DATE, node.getLine(), node.getCol(), path, IssueType.INFORMATIONAL,
+            context.formatMessage(I18nConstants.TURTLE_CONCEPT_IRI_UNMATCHED, iri), IssueSeverity.WARNING);
+      }
+    }
+  }
+
+  private List<String> conceptIris(TTLComplex node) {
+    TTLObject types = resourceType(node);
+    List<String> iris = new ArrayList<>();
+    if (types == null) {
+      return iris;
+    }
+    for (TTLObject value : types instanceof TTLList ? ((TTLList) types).getList() : Arrays.asList(types)) {
+      if (value instanceof TTLURL && !((TTLURL) value).getUri().startsWith(FHIR_URI_BASE)) {
+        iris.add(((TTLURL) value).getUri());
+      }
+    }
+    return iris;
+  }
+
+  private Element codingForConceptIri(Element codeableConcept, String iri) {
+    for (Element coding : codeableConcept.getChildrenByName("coding")) {
+      String system = coding.getChildValue("system");
+      String code = coding.getChildValue("code");
+      // always consults NamingSystems, whereas the R6 writer does so only if deriveConceptIriFromNamingSystem is set
+      TurtleConceptIri conceptIri = system == null || code == null ? null : TurtleConceptIri.resolve(context, system, true);
+      if (conceptIri != null && iri.equals(conceptIri.expand(code))) {
+        return coding;
+      }
+    }
+    return null;
   }
 
   private void parseResource(List<ValidationMessage> errors, Turtle src, String npath, TTLComplex object, Element element, Property property, String name, TTLObject e) throws FHIRException {
@@ -243,7 +471,7 @@ public abstract class TurtleParserBase extends ParserBase {
     } else
       throw new FHIRFormatError(context.formatMessage(I18nConstants.WRONG_TYPE_FOR_RESOURCE));
 
-    TTLObject type = obj.getPredicates().get("http://www.w3.org/2000/01/rdf-schema#type");
+    TTLObject type = resourceType(obj);
     if (type == null) {
       logError(errors, ValidationMessage.NO_RULE_DATE, object.getLine(), object.getCol(), npath, IssueType.INVALID, context.formatMessage(I18nConstants.UNKNOWN_RESOURCE_TYPE_MISSING_RDFSTYPE), IssueSeverity.FATAL);
       return;
@@ -276,7 +504,29 @@ public abstract class TurtleParserBase extends ParserBase {
     parseChildren(errors, src, npath, obj, n, false);
   }
 
-  private String getFormalName(Property property) {
+  protected boolean usesTypedChoices() {
+    return true;
+  }
+
+  /** fhir: predicates that are read (or deliberately ignored) without being element properties. */
+  protected List<String> nonPropertyPredicates() {
+    return Arrays.asList("nodeRole", "link", "l", "resourceDefinition");
+  }
+
+  protected String valueName() {
+    return "v";
+  }
+
+  protected String getFormalName(Property property) {
+    String name = property.getName();
+    return name.endsWith("[x]") ? name.substring(0, name.length() - 3) : name;
+  }
+
+  protected String getFormalName(Property property, String elementName) {
+    return getFormalName(property);
+  }
+
+  protected String getLegacyFormalName(Property property) {
     String en = property.getDefinition().getBase().getPath();
     if (en == null) 
       en = property.getDefinition().getPath();
@@ -290,7 +540,7 @@ public abstract class TurtleParserBase extends ParserBase {
     return en;
   }
 
-  private String getFormalName(Property property, String elementName) {
+  protected String getLegacyFormalName(Property property, String elementName) {
     String en = property.getDefinition().getBase().getPath();
     if (en == null)
       en = property.getDefinition().getPath();
@@ -319,10 +569,10 @@ public abstract class TurtleParserBase extends ParserBase {
     resourceType = e.getType();
 
     ttl.prefix("fhir", FHIR_URI_BASE);
-    ttl.prefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-    ttl.prefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
-    ttl.prefix("owl", "http://www.w3.org/2002/07/owl#");
-    ttl.prefix("xsd", "http://www.w3.org/2001/XMLSchema#");
+    ttl.prefix("rdf", Turtle.RDF_NS);
+    ttl.prefix("rdfs", Turtle.RDFS_NS);
+    ttl.prefix("owl", Turtle.OWL_NS);
+    ttl.prefix("xsd", Turtle.XSD_NS);
 
     Section section = ttl.section("resource");
     if (style == OutputStyle.PRETTY) {
@@ -355,22 +605,39 @@ public abstract class TurtleParserBase extends ParserBase {
   }
 
   protected String getURIType(String uri) {
-    if(uri.startsWith("<" + FHIR_URI_BASE))
-      if(uri.substring(FHIR_URI_BASE.length() + 1).contains("/"))
-        return uri.substring(FHIR_URI_BASE.length() + 1, uri.indexOf('/', FHIR_URI_BASE.length() + 1));
+    if (uri.startsWith("<" + FHIR_URI_BASE)) {
+      int slash = uri.indexOf('/', FHIR_URI_BASE.length() + 1);
+      // A conditional reference (Type?search) identifies a search, not a resource of that type.
+      if (slash > 0 && uri.lastIndexOf('?', slash) < 0)
+        return uri.substring(FHIR_URI_BASE.length() + 1, slash);
+    }
     return null;
   }
 
   protected String getReferenceURI(String ref) {
     if (ref != null && (ref.startsWith("http://") || ref.startsWith("https://")))
-      return "<" + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(ref) + ">";
     else if (base != null && ref != null && ref.contains("/"))
-      return "<" + Utilities.appendForwardSlash(base) + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(Utilities.appendForwardSlash(base) + ref) + ">";
     else return null;
   }
 
   protected String getReferencePredicate() {
     return FHIR_BASE_PREFIX + "link";
+  }
+
+  /**
+   * A vertical bar is not a legal IRI character, so a versioned canonical carries its version as a
+   * query parameter in IRI positions. This representation is Turtle-only: the {@code |version} form
+   * is retained in the sibling value literal, which is what the reverse parser reads.
+   */
+  protected static String versionedCanonicalToIriForm(String value) {
+    int bar = value == null ? -1 : value.indexOf('|');
+    if (bar < 0) {
+      return value;
+    }
+    String url = value.substring(0, bar);
+    return url + (url.contains("?") ? "&" : "?") + "version=" + value.substring(bar + 1);
   }
 
   protected void decorateReference(Complex t, Element coding) {
@@ -381,7 +648,7 @@ public abstract class TurtleParserBase extends ParserBase {
 
   protected void decoratePrimitiveValue(Complex t, Element element) {
     if (Utilities.existsInList(element.getType(), "canonical")) {
-      String refURI = getReferenceURI(element.primitiveValue());
+      String refURI = getReferenceURI(versionedCanonicalToIriForm(element.primitiveValue()));
       if (refURI != null) {
         t.linkedPredicate(getReferencePredicate(), refURI, linkResolver == null ? null : linkResolver.resolvePage("rdf.html#reference"), null);
       }
@@ -426,10 +693,10 @@ public abstract class TurtleParserBase extends ParserBase {
     Complex t;
     if (element.getSpecial() == SpecialElement.BUNDLE_ENTRY && parent != null && parent.getNamedChildValue("fullUrl") != null) {
       String url = "<"+parent.getNamedChildValue("fullUrl")+">";
-      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
+      ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, url, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.isList());
       t = section.subject(url);
     } else {
-      t = ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.getProperty().isList());
+      t = ctxt.linkedPredicate(FHIR_BASE_PREFIX+en, linkResolver == null ? null : linkResolver.resolveProperty(element.getProperty()), comment, element.isList());
     }
     if (element.getProperty().getName().endsWith("[x]")) {
       t.linkedPredicate("a", FHIR_BASE_PREFIX+className(element.fhirType()), linkResolver == null ? null : linkResolver.resolveType(element.fhirType()), null);
@@ -439,7 +706,7 @@ public abstract class TurtleParserBase extends ParserBase {
     if (element.hasValue()) {
         String elementLiteral = null;
         if (element.isXhtml()) {
-          elementLiteral = element.getXhtmlSource(true);
+          elementLiteral = element.getXhtmlSource(canonicalizeXhtml || style == OutputStyle.CANONICAL);
         } else {
           elementLiteral = element.getValue();
         }
@@ -565,6 +832,18 @@ public abstract class TurtleParserBase extends ParserBase {
 
   protected void decorateCoding(Complex t, Element coding, Section section) throws FHIRException {
     // Do nothing by default
+  }
+
+  /** Types {@code t} with the concept IRI of a coding from a well-known code system (SNOMED CT, LOINC, MeSH). */
+  protected void decorateWithKnownConceptIri(Complex t, Element coding) {
+    String system = coding.getChildValue("system");
+    String code = coding.getChildValue("code");
+    TurtleConceptIri conceptIri = system == null || code == null ? null : TurtleConceptIri.forSystem(system);
+    String iri = conceptIri == null ? null : conceptIri.render(code);
+    if (iri != null) {
+      t.prefix(conceptIri.prefix, conceptIri.iriStem);
+      t.linkedPredicate("a", iri, null, null);
+    }
   }
 
   protected void decorateCodeableConcept(Complex t, Element codeableConcept, Section section) throws FHIRException {

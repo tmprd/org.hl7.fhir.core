@@ -1,4 +1,4 @@
-package org.hl7.fhir.r5.test;
+package org.hl7.fhir.test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,11 +8,11 @@ import java.nio.file.Path;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import org.hl7.fhir.r5.elementmodel.Element;
-import org.hl7.fhir.r5.elementmodel.Manager.FhirFormat;
-import org.hl7.fhir.r5.elementmodel.TurtleParserBase.ConceptIriHandling;
-import org.hl7.fhir.r5.test.TurtleGeneratorTestUtils.ParserContext;
-import org.hl7.fhir.r5.test.utils.TestingUtilities;
+import org.hl7.fhir.model.utilities.formats.FhirFormat;
+import org.hl7.fhir.services.elementmodel.Element;
+import org.hl7.fhir.services.elementmodel.TurtleParserBase.ConceptIriHandling;
+import org.hl7.fhir.standalone.testing.TestingUtilities;
+import org.hl7.fhir.test.TurtleGeneratorTestUtils.ParserContext;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,6 +20,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+/** Services-family port of org.hl7.fhir.r5.test.TurtleR4RoundTripTests; keep the two in step. */
 class TurtleR4RoundTripTests {
   private static ParserContext parsers;
 

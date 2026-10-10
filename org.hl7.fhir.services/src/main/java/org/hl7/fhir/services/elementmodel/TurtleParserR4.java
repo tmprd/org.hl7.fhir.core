@@ -31,18 +31,30 @@ package org.hl7.fhir.services.elementmodel;
 
 
 import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.exceptions.FHIRFormatError;
 import org.hl7.fhir.services.context.IWorkerContext;
 import org.hl7.fhir.services.elementmodel.Element.SpecialElement;
 import org.hl7.fhir.model.core.ElementDefinition.TypeRefComponent;
+import org.hl7.fhir.model.utilities.formats.OutputStyle;
 import org.hl7.fhir.services.terminology.SnomedExpressions;
 import org.hl7.fhir.utilities.Utilities;
+import org.hl7.fhir.utilities.i18n.I18nConstants;
 import org.hl7.fhir.utilities.turtle.Turtle;
 import org.hl7.fhir.utilities.turtle.Turtle.Complex;
 import org.hl7.fhir.utilities.turtle.Turtle.Section;
 import org.hl7.fhir.utilities.turtle.Turtle.Subject;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLComplex;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLList;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLLiteral;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLObject;
+import org.hl7.fhir.utilities.turtle.Turtle.TTLURL;
+import org.hl7.fhir.utilities.turtle.TurtleIRIUtil;
+import org.hl7.fhir.utilities.validation.ValidationMessage;
 import org.hl7.fhir.utilities.xhtml.XhtmlComposer;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 
 /***
@@ -61,11 +73,79 @@ public class TurtleParserR4 extends TurtleParserBase {
   }
 
   @Override
+  protected boolean usesTypedChoices() {
+    return false;
+  }
+
+  @Override
+  protected List<String> nonPropertyPredicates() {
+    List<String> names = new ArrayList<>(super.nonPropertyPredicates());
+    names.add("index");
+    return names;
+  }
+
+  @Override
+  protected String valueName() {
+    return "value";
+  }
+
+  @Override
+  protected String getFormalName(Property property) {
+    return getLegacyFormalName(property);
+  }
+
+  @Override
+  protected String getFormalName(Property property, String elementName) {
+    return getLegacyFormalName(property, elementName);
+  }
+
+  @Override
+  protected boolean isDirectXhtmlLiteral(Property property, String name, TTLObject value) {
+    return value instanceof TTLLiteral && "xhtml".equals(property.getType(name));
+  }
+
+  // on a bad fhir:index the error is reported and encounter order is kept
+  @Override
+  protected List<TTLObject> orderChildren(List<ValidationMessage> errors, Turtle src, TTLList values, String path) throws FHIRFormatError {
+    TreeMap<Integer, TTLObject> indexed = new TreeMap<>();
+    for (TTLObject value : values.getList()) {
+      TTLComplex node = value instanceof TTLComplex ? (TTLComplex) value
+          : value instanceof TTLURL ? src.getObject(((TTLURL) value).getUri()) : null;
+      TTLObject index = node == null ? null : node.getPredicates().get(FHIR_URI_BASE + "index");
+      if (index != null) {
+        if (!(index instanceof TTLLiteral)) {
+          logFormatError(errors, index, path, I18nConstants.TURTLE_INDEX_NOT_LITERAL, path);
+          return values.getList();
+        }
+        int ordinal;
+        try {
+          ordinal = Integer.parseInt(((TTLLiteral) index).getValue());
+        } catch (NumberFormatException exception) {
+          logFormatError(errors, index, path, I18nConstants.TURTLE_INDEX_NOT_INTEGER, path, ((TTLLiteral) index).getValue());
+          return values.getList();
+        }
+        if (ordinal < 0 || indexed.putIfAbsent(ordinal, value) != null) {
+          logFormatError(errors, index, path, I18nConstants.TURTLE_INDEX_NEGATIVE_OR_DUPLICATE, path, String.valueOf(ordinal));
+          return values.getList();
+        }
+      }
+    }
+    if (indexed.isEmpty()) {
+      return values.getList();
+    }
+    if (indexed.size() != values.getList().size()) {
+      logFormatError(errors, values, path, I18nConstants.TURTLE_INDEX_MISSING, path);
+      return values.getList();
+    }
+    return new ArrayList<>(indexed.values());
+  }
+
+  @Override
   public void compose(Element e, Turtle ttl, String base) throws FHIRException {
     ttl.prefix("fhir", FHIR_URI_BASE);
-    ttl.prefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
-    ttl.prefix("owl", "http://www.w3.org/2002/07/owl#");
-    ttl.prefix("xsd", "http://www.w3.org/2001/XMLSchema#");
+    ttl.prefix("rdfs", Turtle.RDFS_NS);
+    ttl.prefix("owl", Turtle.OWL_NS);
+    ttl.prefix("xsd", Turtle.XSD_NS);
 
     Section section = ttl.section("resource");
     String subjId = genSubjectId(e);
@@ -102,8 +182,10 @@ public class TurtleParserR4 extends TurtleParserBase {
   @Override
   protected String getURIType(String uri) {
     if (uri.startsWith("<" + FHIR_URI_BASE)) {
-      if (uri.substring(FHIR_URI_BASE.length() + 1).contains("/")) {
-        return uri.substring(FHIR_URI_BASE.length() + 1, uri.indexOf('/', FHIR_URI_BASE.length() + 1));
+      int slash = uri.indexOf('/', FHIR_URI_BASE.length() + 1);
+      // A conditional reference (Type?search) identifies a search, not a resource of that type.
+      if (slash > 0 && uri.lastIndexOf('?', slash) < 0) {
+        return uri.substring(FHIR_URI_BASE.length() + 1, slash);
       }
     }
     return null;
@@ -112,9 +194,9 @@ public class TurtleParserR4 extends TurtleParserBase {
   @Override
   protected String getReferenceURI(String ref) {
     if (ref != null && (ref.startsWith("http://") || ref.startsWith("https://"))) {
-      return "<" + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(ref) + ">";
     } else if (base != null && ref != null && ref.contains("/")) {
-      return "<" + Utilities.appendForwardSlash(base) + ref + ">";
+      return "<" + TurtleIRIUtil.escapeIri(Utilities.appendForwardSlash(base) + ref) + ">";
     } else {
       return null;
     }
@@ -130,7 +212,7 @@ public class TurtleParserR4 extends TurtleParserBase {
   }
 
   protected void decorateCanonical(Complex t, Element canonical) {
-    String refURI = getReferenceURI(canonical.primitiveValue());
+    String refURI = getReferenceURI(versionedCanonicalToIriForm(canonical.primitiveValue()));
     if (refURI != null) {
       t.linkedPredicate("fhir:link", refURI,
           linkResolver == null ? null : linkResolver.resolvePage("rdf.html#reference"), null);
@@ -196,7 +278,9 @@ public class TurtleParserR4 extends TurtleParserBase {
     for (Element child : element.getChildList()) {
       if ("xhtml".equals(child.getType())) {
         String childfn = getFormalName(child);
-        String childValue = new XhtmlComposer(XhtmlComposer.XML, false).setCanonical(true).compose(child.getXhtml());
+        String childValue = isCanonicalizeXhtml()
+            ? new XhtmlComposer(XhtmlComposer.XML, false).setCanonical(true).compose(child.getXhtml())
+            : child.getXhtmlSource(getStyle() == OutputStyle.CANONICAL);
         t.predicate("fhir:" + childfn, ttlLiteral(childValue, child.getType()));
       } else {
         composeElement(section, t, child, element);
@@ -287,22 +371,11 @@ public class TurtleParserR4 extends TurtleParserBase {
 
   @Override
   protected void decorateCoding(Complex t, Element coding, Section section) throws FHIRException {
-    String system = coding.getChildValue("system");
     String code = coding.getChildValue("code");
-
-    if (system == null || code == null) {
-      return;
-    }
-    if ("http://snomed.info/sct".equals(system)) {
-      t.prefix("sct", "http://snomed.info/id/");
-      if (code.contains(":") || code.contains("=")) {
-        generateLinkedPredicate(t, code);
-      } else {
-        t.linkedPredicate("a", "sct:" + urlescape(code), null, null);
-      }
-    } else if ("http://loinc.org".equals(system)) {
-      t.prefix("loinc", "http://loinc.org/rdf#");
-      t.linkedPredicate("a", "loinc:" + urlescape(code).toUpperCase(), null, null);
+    if ("http://snomed.info/sct".equals(coding.getChildValue("system")) && code != null && (code.contains(":") || code.contains("="))) {
+      generateLinkedPredicate(t, code);
+    } else {
+      decorateWithKnownConceptIri(t, coding);
     }
   }
 

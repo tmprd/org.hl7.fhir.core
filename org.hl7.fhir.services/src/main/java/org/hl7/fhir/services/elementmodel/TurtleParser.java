@@ -106,6 +106,8 @@ public class TurtleParser extends TurtleParserBase {
     delegate.setSignatureServices(signatureServices);
     delegate.canonicalFilter = canonicalFilter;
     delegate.setStyle(getStyle());
+    delegate.setCanonicalizeXhtml(isCanonicalizeXhtml());
+    delegate.setConceptIriHandling(getConceptIriHandling());
     delegate.base = base;
     if (delegate instanceof TurtleParserR6) {
       ((TurtleParserR6) delegate).setDeriveConceptIriFromNamingSystem(deriveConceptIriFromNamingSystem);
@@ -184,25 +186,7 @@ public class TurtleParser extends TurtleParserBase {
 
   @Override
   protected void decorateCoding(Complex t, Element coding, Section section) throws FHIRException {
-    String system = coding.getChildValue("system");
-    String code = coding.getChildValue("code");
-
-    if (system == null || code == null)
-      return;
-    if ("http://snomed.info/sct".equals(system)) {
-      t.prefix("sct", "http://snomed.info/id/");
-      if (code.contains(":") || code.contains("=")) {
-        // Post-coordinated expressions aren't supported
-      } else {
-        t.linkedPredicate("a", "sct:" + urlescape(code), null, null);
-      }
-    } else if ("http://loinc.org".equals(system)) {
-      t.prefix("loinc", "https://loinc.org/rdf/");
-      t.linkedPredicate("a", "loinc:"+urlescape(code).toUpperCase(), null, null);
-    } else if ("https://www.nlm.nih.gov/mesh".equals(system)) {
-      t.prefix("mesh", "http://id.nlm.nih.gov/mesh/");
-      t.linkedPredicate("a", "mesh:"+urlescape(code), null, null);
-    }
+    decorateWithKnownConceptIri(t, coding);
   }
 
   @Override
