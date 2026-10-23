@@ -1,0 +1,118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0337> a fhir:MedicationDispense ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "meddisp0337"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "HTEST" ] ;
+       fhir:display [ fhir:v "test health data" ]
+     ] )
+  ] ; # 
+  fhir:contained ( [
+     a fhir:MedicationRequest ;
+     fhir:id [ fhir:v "rx" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:intent [ fhir:v "order" ] ;
+     fhir:medication [
+       fhir:concept [
+         fhir:text [ fhir:v "Pulmicort Turbuhaler 400 microgram/actuation inhalation (budesonide)" ]
+       ]
+     ] ;
+     fhir:subject [
+       fhir:l <http://hl7.org/fhir/Patient/pat1> ;
+       fhir:reference [ fhir:v "Patient/pat1" ] ;
+       fhir:display [ fhir:v "Donald Duck" ]
+     ] ;
+     fhir:authoredOn [ fhir:v "2026-03-02"^^xsd:date ] ;
+     fhir:requester [
+       fhir:l <http://hl7.org/fhir/Practitioner/f007> ;
+       fhir:reference [ fhir:v "Practitioner/f007" ]
+     ] ;
+     fhir:dosageInstruction ( [ ] ) ;
+     fhir:dispenseRequest [
+       fhir:numberOfRepeatsAllowed [ fhir:v "5"^^xsd:nonNegativeInteger ] ;
+       fhir:quantity [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "inhaler" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "{inhaler}" ]
+       ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:text [ fhir:v "Pulmicort Turbuhaler 400 microgram/actuation inhalation (budesonide)" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/pat1> ;
+     fhir:reference [ fhir:v "Patient/pat1" ] ;
+     fhir:display [ fhir:v "Donald Duck" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:l <http://hl7.org/fhir/Practitioner/f006> ;
+       fhir:reference [ fhir:v "Practitioner/f006" ]
+     ]
+  ] ) ; # 
+  fhir:authorizingPrescription ( [
+     fhir:l <#rx> ;
+     fhir:reference [ fhir:v "#rx" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "RF" ] ;
+       fhir:display [ fhir:v "Refill" ]
+     ] )
+  ] ; # 
+  fhir:quantity [
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "inhaler" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "{inhaler}" ]
+  ] ; # 
+  fhir:daysSupply [
+     fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "Day" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "d" ]
+  ] ; # 
+  fhir:whenHandedOver [ fhir:v "2026-05-04T11:00:00+10:00"^^xsd:dateTime] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Third supply against the prescription: the original supply and the 2nd of the 5 authorized repeats. 3 repeats remain." ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f007> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Practitioner/f006> a fhir:Practitioner .
+
+# -------------------------------------------------------------------------------------
+

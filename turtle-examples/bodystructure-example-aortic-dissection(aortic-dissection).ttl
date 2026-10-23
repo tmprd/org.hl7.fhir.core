@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/BodyStructure/aortic-dissection> a fhir:BodyStructure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "aortic-dissection"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "HTEST" ] ;
+       fhir:display [ fhir:v "test health data" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Aortic dissection involves the ascending aorta and aortic arch. The overall morphology describes the dissection. Each included structure identifies its true lumen.</p>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:morphology [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://radlex.org"^^xsd:anyURI ;
+         fhir:l <http://radlex.org>
+       ] ;
+       fhir:code [ fhir:v "RID3320" ] ;
+       fhir:display [ fhir:v "aortic dissection" ]
+     ] )
+  ] ; # 
+  fhir:includedStructure ( [
+     fhir:structure [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://radlex.org"^^xsd:anyURI ;
+           fhir:l <http://radlex.org>
+         ] ;
+         fhir:code [ fhir:v "RID580" ] ;
+         fhir:display [ fhir:v "ascending aorta" ]
+       ] )
+     ]
+  ] [
+     fhir:structure [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://radlex.org"^^xsd:anyURI ;
+           fhir:l <http://radlex.org>
+         ] ;
+         fhir:code [ fhir:v "RID581" ] ;
+         fhir:display [ fhir:v "aortic arch" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:description [ fhir:v "Aortic dissection involving the ascending aorta and aortic arch, with true lumen identified in both structures"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

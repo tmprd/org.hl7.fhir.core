@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/BodyStructure/cardiac-myxoma> a fhir:BodyStructure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cardiac-myxoma"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "HTEST" ] ;
+       fhir:display [ fhir:v "test health data" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>A single myxoma spans the cavity of the left cardiac atrium and the inflow tract of the left ventricle. The morphology is recorded once on the overall BodyStructure; both anatomical locations are included structures.</p>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:morphology [
+     a sct:39143003 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "39143003" ] ;
+       fhir:display [ fhir:v "Myxoma" ]
+     ] )
+  ] ; # 
+  fhir:includedStructure ( [
+     fhir:structure [
+       a sct:1259959001 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "1259959001" ] ;
+         fhir:display [ fhir:v "Structure of cavity of left cardiac atrium" ]
+       ] )
+     ]
+  ] [
+     fhir:structure [
+       a sct:70238003 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "70238003" ] ;
+         fhir:display [ fhir:v "Structure of inflow tract of left ventricle" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:description [ fhir:v "A single myxoma spanning the left atrial cavity and the inflow tract of the left ventricle"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

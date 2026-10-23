@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/BodyStructure/right-lung-consolidation> a fhir:BodyStructure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "right-lung-consolidation"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "HTEST" ] ;
+       fhir:display [ fhir:v "test health data" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Consolidation involves the right lung with the right lower lobe excluded. The overall morphology describes the consolidation; the included structure identifies the lung and its laterality.</p>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:morphology [
+     a sct:9656002 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "9656002" ] ;
+       fhir:display [ fhir:v "Consolidation" ]
+     ] )
+  ] ; # 
+  fhir:includedStructure ( [
+     fhir:structure [
+       a sct:39607008 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "39607008" ] ;
+         fhir:display [ fhir:v "Lung structure" ]
+       ] )
+     ] ;
+     fhir:laterality [
+       a sct:24028007 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "24028007" ] ;
+         fhir:display [ fhir:v "Right" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:excludedStructure ( [
+     fhir:structure [
+       a sct:266005 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "266005" ] ;
+         fhir:display [ fhir:v "Structure of lower lobe of right lung" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:description [ fhir:v "Consolidation of the right lung, excluding the right lower lobe"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

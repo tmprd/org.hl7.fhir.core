@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Provenance/example-onbehalf-sister> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-onbehalf-sister"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "HTEST" ] ;
+       fhir:display [ fhir:v "test health data" ]
+     ] )
+  ] ; # reference to the resource that was created
+  fhir:target ( [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:DateTime ;
+     fhir:v "2024-06-01T12:00:00Z"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2024-06-01T12:00:00Z"^^xsd:dateTime] ; # 
+  fhir:authorization ( [] ) ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:agent ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "INF" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:l <http://example.org/fhir/RelatedPerson/brother> ;
+       fhir:reference [ fhir:v "http://example.org/fhir/RelatedPerson/brother" ]
+     ] ;
+     fhir:onBehalfOf [
+       fhir:l <http://example.org/fhir/RelatedPerson/sister> ;
+       fhir:reference [ fhir:v "http://example.org/fhir/RelatedPerson/sister" ]
+     ]
+  ] ) ; # agent representing the brother acting on behalf of the sister
+  fhir:entity ( [
+     fhir:role [ fhir:v "source" ] ;
+     fhir:what [
+       fhir:l <http://example.org/fhir/DocumentReference/example> ;
+       fhir:reference [ fhir:v "http://example.org/fhir/DocumentReference/example" ] ;
+       fhir:display [ fhir:v "Document created by brother on behalf of sister" ]
+     ]
+  ] [
+     fhir:role [ fhir:v "source" ] ;
+     fhir:what [
+       fhir:l <http://hl7.org/fhir/Patient/example> ;
+       fhir:reference [ fhir:v "Patient/example" ] ;
+       fhir:display [ fhir:v "Original Patient resource" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+# -------------------------------------------------------------------------------------
+

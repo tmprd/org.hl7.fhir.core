@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/Medication/med0325> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "med0325"] ; # 
+  fhir:meta [
+     fhir:security ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "HTEST" ] ;
+       fhir:display [ fhir:v "test health data" ]
+     ] )
+  ] ; # A Medication representing a physical item (one pack on a pharmacy shelf) of the same product as medicationexample0324.
+#       identifier is the business identifier of this record (a stock-system number); instance.identifier is the serial number
+#       of the item; the batch is in instance.lotNumber, not in an identifier.
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/pharmacy-stock"^^xsd:anyURI ;
+       fhir:l <http://example.org/pharmacy-stock>
+     ] ;
+     fhir:value [ fhir:v "STK-2026-004711" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "308191" ] ;
+       fhir:display [ fhir:v "amoxicillin 500 MG Oral Capsule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] . # 
+
+# -------------------------------------------------------------------------------------
+
