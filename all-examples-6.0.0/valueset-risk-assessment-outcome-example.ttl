@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/risk-assessment-outcome-example> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "risk-assessment-outcome-example"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2026-05-09T18:12:32.651-04:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p class=\"res-header-id\">\n        <b>Generated Narrative: ValueSet risk-assessment-outcome-example</b>\n      </p>\n      <a name=\"risk-assessment-outcome-example\"> </a>\n      <a name=\"hcrisk-assessment-outcome-example\"> </a>\n      <ul>\n        <li>Include all codes defined in \n          <a href=\"codesystem-risk-assessment-outcome-example.html\">\n            <code>http://hl7.org/fhir/risk-assessment-outcome-example</code>\n          </a>\n          <span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?6.0.0-ballot4</span>\n        </li>\n      </ul>\n    </div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "cds"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://hl7.org/fhir/ValueSet/risk-assessment-outcome-example"^^xsd:anyURI ;
+     fhir:l <http://hl7.org/fhir/ValueSet/risk-assessment-outcome-example>
+  ] ; # 
+  fhir:version [ fhir:v "6.0.0-ballot4"] ; # 
+  fhir:name [ fhir:v "RiskAssessmentOutcomeExample"] ; # 
+  fhir:title [ fhir:v "Risk Assessment Outcome Example"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:publisher [ fhir:v "FHIR Project team"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Example value set illustrating possible codes for identifying the condition or other outcome; e.g. death, remission, amputation, infection, etc."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/risk-assessment-outcome-example"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/risk-assessment-outcome-example>
+       ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
