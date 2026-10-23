@@ -24,39 +24,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>This Observation annotates samples in the EKG waveform referenced by derivedFrom. SampledData code 426783006 indicates sinus rhythm; code 5370000 indicates atrial flutter. The contained ConceptMap maps those SNOMED CT codes to LOINC answer codes.</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:ConceptMap ;
-     fhir:id [ fhir:v "ekg-annotation-map" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:experimental [ fhir:v true ] ;
-     fhir:group ( [
-       fhir:source [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
-       ] ;
-       fhir:target [
-         fhir:v "http://loinc.org"^^xsd:anyURI ;
-         fhir:l <http://loinc.org>
-       ] ;
-       fhir:element ( [
-         fhir:code [ fhir:v "426783006" ] ;
-         fhir:display [ fhir:v "ECG: sinus rhythm" ] ;
-         fhir:target ( [
-           fhir:code [ fhir:v "LA17718-0" ] ;
-           fhir:display [ fhir:v "Sinus rhythm" ] ;
-           fhir:relationship [ fhir:v "equivalent" ]
-         ] )
-       ] [
-         fhir:code [ fhir:v "5370000" ] ;
-         fhir:display [ fhir:v "Atrial flutter" ] ;
-         fhir:target ( [
-           fhir:code [ fhir:v "LA17085-4" ] ;
-           fhir:display [ fhir:v "Atrial flutter" ] ;
-           fhir:relationship [ fhir:v "equivalent" ]
-         ] )
-       ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Observation/ekg-coded-annotations#ekg-annotation-map> ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
      a loinc:76281-5 ;
@@ -93,7 +61,7 @@
      fhir:dimensions [ fhir:v "1"^^xsd:positiveInteger ] ;
      fhir:codeMap [
        fhir:v "#ekg-annotation-map"^^xsd:anyURI ;
-       fhir:l <#ekg-annotation-map>
+       fhir:l <http://hl7.org/fhir/Observation/ekg-coded-annotations#ekg-annotation-map>
      ] ;
      fhir:data [ fhir:v "426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 426783006 5370000 5370000 5370000 5370000 5370000 5370000 5370000 5370000 5370000 426783006 426783006 426783006 426783006 426783006 426783006 426783006" ]
   ] ; # 
@@ -101,6 +69,38 @@
      fhir:l <http://hl7.org/fhir/Observation/ekg> ;
      fhir:reference [ fhir:v "Observation/ekg" ] ;
      fhir:display [ fhir:v "EKG waveform" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/ekg-coded-annotations#ekg-annotation-map> a fhir:ConceptMap ;
+  fhir:id [ fhir:v "ekg-annotation-map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+       fhir:l <http://snomed.info/sct>
+     ] ;
+     fhir:target [
+       fhir:v "http://loinc.org"^^xsd:anyURI ;
+       fhir:l <http://loinc.org>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "426783006" ] ;
+       fhir:display [ fhir:v "ECG: sinus rhythm" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "LA17718-0" ] ;
+         fhir:display [ fhir:v "Sinus rhythm" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "5370000" ] ;
+       fhir:display [ fhir:v "Atrial flutter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "LA17085-4" ] ;
+         fhir:display [ fhir:v "Atrial flutter" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
   ] ) . # 
 
 <http://hl7.org/fhir/Patient/f001> a fhir:Patient .

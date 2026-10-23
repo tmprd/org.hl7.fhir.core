@@ -23,43 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachment in response to a Request</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "provider" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/provideroffices"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/provideroffices>
-       ] ;
-       fhir:value [ fhir:v "3456" ]
-     ] )
-  ] [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "payer" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/insurer"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/insurer>
-       ] ;
-       fhir:value [ fhir:v "123456" ]
-     ] )
-  ] [
-     a fhir:CommunicationRequest ;
-     fhir:id [ fhir:v "request" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/insurer/123456"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/insurer/123456>
-       ] ;
-       fhir:value [ fhir:v "ABC123" ]
-     ] ) ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:intent [ fhir:v "proposal" ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/1> ;
-       fhir:reference [ fhir:v "Patient/1" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Communication/fm-solicited#provider> <http://hl7.org/fhir/Communication/fm-solicited#payer> <http://hl7.org/fhir/Communication/fm-solicited#request> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://www.providerco.com/communication"^^xsd:anyURI ;
@@ -68,7 +32,7 @@
      fhir:value [ fhir:v "12345" ]
   ] ) ; # body of the resource
   fhir:basedOn ( [
-     fhir:l <#request> ;
+     fhir:l <http://hl7.org/fhir/Communication/fm-solicited#request> ;
      fhir:reference [ fhir:v "#request" ]
   ] ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
@@ -87,11 +51,11 @@
   ] ; # 
   fhir:sent [ fhir:v "2016-06-12T18:01:10-08:00"^^xsd:dateTime] ; # 
   fhir:recipient ( [
-     fhir:l <#payer> ;
+     fhir:l <http://hl7.org/fhir/Communication/fm-solicited#payer> ;
      fhir:reference [ fhir:v "#payer" ]
   ] ) ; # 
   fhir:sender [
-     fhir:l <#provider> ;
+     fhir:l <http://hl7.org/fhir/Communication/fm-solicited#provider> ;
      fhir:reference [ fhir:v "#provider" ]
   ] ; # 
   fhir:payload ( [
@@ -115,6 +79,42 @@
        fhir:creation [ fhir:v "2010-02-01T10:57:34+01:00"^^xsd:dateTime ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Communication/fm-solicited#provider> a fhir:Organization ;
+  fhir:id [ fhir:v "provider"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/provideroffices"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/provideroffices>
+     ] ;
+     fhir:value [ fhir:v "3456" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Communication/fm-solicited#payer> a fhir:Organization ;
+  fhir:id [ fhir:v "payer"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/insurer"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/insurer>
+     ] ;
+     fhir:value [ fhir:v "123456" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Communication/fm-solicited#request> a fhir:CommunicationRequest ;
+  fhir:id [ fhir:v "request"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/insurer/123456"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/insurer/123456>
+     ] ;
+     fhir:value [ fhir:v "ABC123" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/1> ;
+     fhir:reference [ fhir:v "Patient/1" ]
+  ] . # 
 
 <http://hl7.org/fhir/Patient/1> a fhir:Patient .
 

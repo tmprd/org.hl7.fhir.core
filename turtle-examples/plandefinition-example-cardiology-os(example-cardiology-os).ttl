@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -19,352 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Library ;
-     fhir:id [ fhir:v "cardiology-chestPain-logic" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/library-type"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/library-type>
-         ] ;
-         fhir:code [ fhir:v "logic-library" ] ;
-         fhir:display [ fhir:v "Logic Library" ]
-       ] )
-     ] ;
-     fhir:description [ fhir:v "Placeholder library" ]
-  ] [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "referralToCardiologyConsult" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:description [ fhir:v "Consider other consult modalities which might be available (e.g., e-consult or other rapidly iterative consult method. A simple consult is included here as the overarching clinical intent." ] ;
-     fhir:kind [ fhir:v "ServiceRequest" ] ; # Kind indicates the type of resource that is defined by this activity, a ServiceRequest in this case
-     fhir:timing [
-       a fhir:Timing ;
-       fhir:event ( [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/StructureDefinition/cqf-expression"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/StructureDefinition/cqf-expression>
-           ] ;
-           fhir:value [
-             a fhir:Expression ;
-             fhir:language [ fhir:v "text/cql-expression-expression" ] ;
-             fhir:expression [ fhir:v "Now()" ]
-           ]
-         ] ) # The expression here specifies the value for the timing of the resulting resource. In this case, referralRequest.fulfillmentTime.start
-       ] )
-     ] ; # <code>\n        <coding>\n          <system value=\"http:\/\/snomed.info\/sct\" \/>\n          <code value=\"TSR\" \/>\n        <\/coding>\n        <text value=\"Referral to Cardiology\" \/>\n      <\/code>
-     fhir:participant ( [
-       fhir:type [ fhir:v "practitioner" ]
-     ] )
-  ] [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "metoprololTartrate25Prescription" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:kind [ fhir:v "MedicationRequest" ] ;
-     fhir:product [
-       a fhir:Reference ;
-       fhir:l <#metoprololTartrate25Medication> ;
-       fhir:reference [ fhir:v "#metoprololTartrate25Medication" ]
-     ] ;
-     fhir:dynamicValue ( [
-       fhir:path [ fhir:v "medicationRequest.priority" ] ;
-       fhir:expression [
-         fhir:language [ fhir:v "text/cql-expression-expression" ] ;
-         fhir:expression [ fhir:v "'routine'" ]
-       ]
-     ] )
-  ] [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "metoprololTartrate25Medication" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "866426" ]
-       ] ) ;
-       fhir:text [ fhir:v "Metoprolol Tartrate 25 MG" ]
-     ] ;
-     fhir:doseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "385055001" ] ;
-         fhir:display [ fhir:v "Tablet (basic dose form)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Tablet dose form" ]
-     ] ;
-     fhir:ingredient ( [
-       fhir:item [
-         fhir:concept [
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-               fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-             ] ;
-             fhir:code [ fhir:v "6918" ]
-           ] ) ;
-           fhir:text [ fhir:v "Metoprolol" ]
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "25"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "mg" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "{tbl}" ]
-         ]
-       ]
-     ] )
-  ] [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "metoprololTartrate50Prescription" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:kind [ fhir:v "MedicationRequest" ] ;
-     fhir:product [
-       a fhir:Reference ;
-       fhir:l <#metoprololTartrate50Medication> ;
-       fhir:reference [ fhir:v "#metoprololTartrate50Medication" ]
-     ] ;
-     fhir:dynamicValue ( [
-       fhir:path [ fhir:v "medicationRequest.priority" ] ;
-       fhir:expression [
-         fhir:language [ fhir:v "text/cql-expression-expression" ] ;
-         fhir:expression [ fhir:v "'routine'" ]
-       ]
-     ] )
-  ] [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "metoprololTartrate50Medication" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "866435" ]
-       ] ) ;
-       fhir:text [ fhir:v "Metoprolol Tartrate 50 MG" ]
-     ] ;
-     fhir:doseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "385055001" ] ;
-         fhir:display [ fhir:v "Tablet (basic dose form)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Tablet dose form" ]
-     ] ;
-     fhir:ingredient ( [
-       fhir:item [
-         fhir:concept [
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-               fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-             ] ;
-             fhir:code [ fhir:v "6918" ]
-           ] ) ;
-           fhir:text [ fhir:v "Metoprolol" ]
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "50"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "mg" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "{tbl}" ]
-         ]
-       ]
-     ] )
-  ] [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "amlodipinePrescription" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:kind [ fhir:v "MedicationRequest" ] ;
-     fhir:product [
-       a fhir:Reference ;
-       fhir:l <#amlodipineMedication> ;
-       fhir:reference [ fhir:v "#amlodipineMedication" ]
-     ] ;
-     fhir:dynamicValue ( [
-       fhir:path [ fhir:v "medicationRequest.priority" ] ;
-       fhir:expression [
-         fhir:language [ fhir:v "text/cql-expression-expression" ] ;
-         fhir:expression [ fhir:v "'routine'" ]
-       ]
-     ] )
-  ] [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "amlodipineMedication" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "329528" ]
-       ] ) ;
-       fhir:text [ fhir:v "amLODIPine 5 MG" ]
-     ] ;
-     fhir:doseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "385055001" ] ;
-         fhir:display [ fhir:v "Tablet (basic dose form)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Tablet dose form" ]
-     ] ;
-     fhir:ingredient ( [
-       fhir:item [
-         fhir:concept [
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-               fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-             ] ;
-             fhir:code [ fhir:v "17767" ]
-           ] ) ;
-           fhir:text [ fhir:v "amLODIPine" ]
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "5"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "mg" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "{tbl}" ]
-         ]
-       ]
-     ] )
-  ] [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "nitroglycerinPrescription" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:kind [ fhir:v "MedicationRequest" ] ;
-     fhir:product [
-       a fhir:Reference ;
-       fhir:l <#nitroglycerinMedication> ;
-       fhir:reference [ fhir:v "#nitroglycerinMedication" ]
-     ] ;
-     fhir:dynamicValue ( [
-       fhir:path [ fhir:v "medicationRequest.priority" ] ;
-       fhir:expression [
-         fhir:language [ fhir:v "text/cql-expression-expression" ] ;
-         fhir:expression [ fhir:v "routine" ]
-       ]
-     ] )
-  ] [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "nitroglycerinMedication" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "316365" ]
-       ] ) ;
-       fhir:text [ fhir:v "Nitroglycerin 0.4 MG" ]
-     ] ;
-     fhir:doseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "385055001" ] ;
-         fhir:display [ fhir:v "Tablet (basic dose form)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Tablet dose form" ]
-     ] ;
-     fhir:ingredient ( [
-       fhir:item [
-         fhir:concept [
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-               fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-             ] ;
-             fhir:code [ fhir:v "4917" ]
-           ] ) ;
-           fhir:text [ fhir:v "Nitroglycerin" ]
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v 0.4 ] ;
-           fhir:unit [ fhir:v "mg" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "{tbl}" ]
-         ]
-       ]
-     ] )
-  ] [
-     a fhir:ValueSet ;
-     fhir:id [ fhir:v "CardiologyReferralReasonValues" ] ;
-     fhir:name [ fhir:v "Cardiology Referral Reason value set" ] ; # Identifiers: Terminology Service requests still on going for\n         value set and code definitions. Hence skeeleton and placeholders here for example
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:compose [
-       fhir:include ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:concept ( [
-           fhir:code [ fhir:v "429559004" ] ;
-           fhir:display [ fhir:v "typical angina" ]
-         ] )
-       ] )
-     ]
-  ] [
-     a fhir:Questionnaire ;
-     fhir:id [ fhir:v "CollectReferralReason" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:item ( [
-       fhir:linkId [ fhir:v "1" ] ;
-       fhir:text [ fhir:v "Reason for Cardiology Consult" ] ;
-       fhir:type [ fhir:v "coding" ] ;
-       fhir:required [ fhir:v true ] ;
-       fhir:repeats [ fhir:v true ] ;
-       fhir:answerValueSet [
-         fhir:v "#CardiologyReferralReasonValues"^^xsd:anyURI ;
-         fhir:l <#CardiologyReferralReasonValues>
-       ]
-     ] )
-  ] [
-     a fhir:Questionnaire ;
-     fhir:id [ fhir:v "CardiologyConsultationGoal" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:item ( [
-       fhir:linkId [ fhir:v "2" ] ;
-       fhir:text [ fhir:v "Goal of cardiology consultation" ] ;
-       fhir:type [ fhir:v "string" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#cardiology-chestPain-logic> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#referralToCardiologyConsult> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate25Medication> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate50Medication> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#amlodipinePrescription> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#amlodipineMedication> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#nitroglycerinPrescription> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#nitroglycerinMedication> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyReferralReasonValues> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CollectReferralReason> <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyConsultationGoal> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
@@ -585,7 +241,7 @@
   ] ) ; # 
   fhir:library ( [
      fhir:v "#cardiology-chestPain-logic"^^xsd:anyURI ;
-     fhir:l <#cardiology-chestPain-logic>
+     fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#cardiology-chestPain-logic>
   ] ) ; # 
   fhir:action ( [
      fhir:action ( [
@@ -597,7 +253,7 @@
          fhir:definition [
            a fhir:Canonical ;
            fhir:v "#referralToCardiologyConsult"^^xsd:anyURI ;
-           fhir:l <#referralToCardiologyConsult>
+           fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#referralToCardiologyConsult>
          ] ;
          fhir:dynamicValue ( [
            fhir:path [ fhir:v "timing.event" ] ;
@@ -647,14 +303,14 @@
          fhir:definition [
            a fhir:Canonical ;
            fhir:v "#CollectReferralReason"^^xsd:anyURI ;
-           fhir:l <#CollectReferralReason>
+           fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CollectReferralReason>
          ]
        ] [
          fhir:title [ fhir:v "Goal of cardiology consultation" ] ;
          fhir:definition [
            a fhir:Canonical ;
            fhir:v "#CardiologyConsultationGoal"^^xsd:anyURI ;
-           fhir:l <#CardiologyConsultationGoal>
+           fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyConsultationGoal>
          ]
        ] )
      ] [
@@ -672,7 +328,7 @@
            fhir:definition [
              a fhir:Canonical ;
              fhir:v "#metoprololTartrate25Prescription"^^xsd:anyURI ;
-             fhir:l <#metoprololTartrate25Prescription>
+             fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription>
            ] ;
            fhir:dynamicValue ( [
              fhir:path [ fhir:v "status" ] ;
@@ -698,7 +354,7 @@
            fhir:definition [
              a fhir:Canonical ;
              fhir:v "#metoprololTartrate50Prescription"^^xsd:anyURI ;
-             fhir:l <#metoprololTartrate50Prescription>
+             fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription>
            ] ;
            fhir:dynamicValue ( [
              fhir:path [ fhir:v "status" ] ;
@@ -724,7 +380,7 @@
            fhir:definition [
              a fhir:Canonical ;
              fhir:v "#amlodipinePrescription"^^xsd:anyURI ;
-             fhir:l <#amlodipinePrescription>
+             fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#amlodipinePrescription>
            ] ;
            fhir:dynamicValue ( [
              fhir:path [ fhir:v "status" ] ;
@@ -755,7 +411,7 @@
            fhir:definition [
              a fhir:Canonical ;
              fhir:v "#nitroglycerinPrescription"^^xsd:anyURI ;
-             fhir:l <#nitroglycerinPrescription>
+             fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#nitroglycerinPrescription>
            ] ;
            fhir:dynamicValue ( [
              fhir:path [ fhir:v "status" ] ;
@@ -780,6 +436,362 @@
        ] )
      ] ) # <action>\n      Patient disposition and triage group\n    <\/action>
   ] ) . # Actions
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#cardiology-chestPain-logic> a fhir:Library ;
+  fhir:id [ fhir:v "cardiology-chestPain-logic"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/library-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/library-type>
+       ] ;
+       fhir:code [ fhir:v "logic-library" ] ;
+       fhir:display [ fhir:v "Logic Library" ]
+     ] )
+  ] ; # 
+  fhir:description [ fhir:v "Placeholder library"] . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#referralToCardiologyConsult> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "referralToCardiologyConsult"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:description [ fhir:v "Consider other consult modalities which might be available (e.g., e-consult or other rapidly iterative consult method. A simple consult is included here as the overarching clinical intent."] ; # 
+  fhir:kind [ fhir:v "ServiceRequest"] ; # Kind indicates the type of resource that is defined by this activity, a ServiceRequest in this case
+  fhir:timing [
+     a fhir:Timing ;
+     fhir:event ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/cqf-expression"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/cqf-expression>
+         ] ;
+         fhir:value [
+           a fhir:Expression ;
+           fhir:language [ fhir:v "text/cql-expression-expression" ] ;
+           fhir:expression [ fhir:v "Now()" ]
+         ]
+       ] ) # The expression here specifies the value for the timing of the resulting resource. In this case, referralRequest.fulfillmentTime.start
+     ] )
+  ] ; # <code>
+#        <coding>
+#          <system value="http://snomed.info/sct" />
+#          <code value="TSR" />
+#        </coding>
+#        <text value="Referral to Cardiology" />
+#      </code>
+  fhir:participant ( [
+     fhir:type [ fhir:v "practitioner" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "metoprololTartrate25Prescription"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:product [
+     a fhir:Reference ;
+     fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate25Medication> ;
+     fhir:reference [ fhir:v "#metoprololTartrate25Medication" ]
+  ] ; # 
+  fhir:dynamicValue ( [
+     fhir:path [ fhir:v "medicationRequest.priority" ] ;
+     fhir:expression [
+       fhir:language [ fhir:v "text/cql-expression-expression" ] ;
+       fhir:expression [ fhir:v "'routine'" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate25Medication> a fhir:Medication ;
+  fhir:id [ fhir:v "metoprololTartrate25Medication"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "866426" ]
+     ] ) ;
+     fhir:text [ fhir:v "Metoprolol Tartrate 25 MG" ]
+  ] ; # 
+  fhir:doseForm [
+     a sct:385055001 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet (basic dose form)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Tablet dose form" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       fhir:concept [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+           ] ;
+           fhir:code [ fhir:v "6918" ]
+         ] ) ;
+         fhir:text [ fhir:v "Metoprolol" ]
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "25"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "{tbl}" ]
+       ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "metoprololTartrate50Prescription"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:product [
+     a fhir:Reference ;
+     fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate50Medication> ;
+     fhir:reference [ fhir:v "#metoprololTartrate50Medication" ]
+  ] ; # 
+  fhir:dynamicValue ( [
+     fhir:path [ fhir:v "medicationRequest.priority" ] ;
+     fhir:expression [
+       fhir:language [ fhir:v "text/cql-expression-expression" ] ;
+       fhir:expression [ fhir:v "'routine'" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#metoprololTartrate50Medication> a fhir:Medication ;
+  fhir:id [ fhir:v "metoprololTartrate50Medication"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "866435" ]
+     ] ) ;
+     fhir:text [ fhir:v "Metoprolol Tartrate 50 MG" ]
+  ] ; # 
+  fhir:doseForm [
+     a sct:385055001 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet (basic dose form)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Tablet dose form" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       fhir:concept [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+           ] ;
+           fhir:code [ fhir:v "6918" ]
+         ] ) ;
+         fhir:text [ fhir:v "Metoprolol" ]
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "{tbl}" ]
+       ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#amlodipinePrescription> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "amlodipinePrescription"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:product [
+     a fhir:Reference ;
+     fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#amlodipineMedication> ;
+     fhir:reference [ fhir:v "#amlodipineMedication" ]
+  ] ; # 
+  fhir:dynamicValue ( [
+     fhir:path [ fhir:v "medicationRequest.priority" ] ;
+     fhir:expression [
+       fhir:language [ fhir:v "text/cql-expression-expression" ] ;
+       fhir:expression [ fhir:v "'routine'" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#amlodipineMedication> a fhir:Medication ;
+  fhir:id [ fhir:v "amlodipineMedication"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "329528" ]
+     ] ) ;
+     fhir:text [ fhir:v "amLODIPine 5 MG" ]
+  ] ; # 
+  fhir:doseForm [
+     a sct:385055001 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet (basic dose form)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Tablet dose form" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       fhir:concept [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+           ] ;
+           fhir:code [ fhir:v "17767" ]
+         ] ) ;
+         fhir:text [ fhir:v "amLODIPine" ]
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "{tbl}" ]
+       ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#nitroglycerinPrescription> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "nitroglycerinPrescription"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:product [
+     a fhir:Reference ;
+     fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#nitroglycerinMedication> ;
+     fhir:reference [ fhir:v "#nitroglycerinMedication" ]
+  ] ; # 
+  fhir:dynamicValue ( [
+     fhir:path [ fhir:v "medicationRequest.priority" ] ;
+     fhir:expression [
+       fhir:language [ fhir:v "text/cql-expression-expression" ] ;
+       fhir:expression [ fhir:v "routine" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#nitroglycerinMedication> a fhir:Medication ;
+  fhir:id [ fhir:v "nitroglycerinMedication"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "316365" ]
+     ] ) ;
+     fhir:text [ fhir:v "Nitroglycerin 0.4 MG" ]
+  ] ; # 
+  fhir:doseForm [
+     a sct:385055001 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet (basic dose form)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Tablet dose form" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       fhir:concept [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+           ] ;
+           fhir:code [ fhir:v "4917" ]
+         ] ) ;
+         fhir:text [ fhir:v "Nitroglycerin" ]
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v 0.4 ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "{tbl}" ]
+       ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyReferralReasonValues> a fhir:ValueSet ;
+  fhir:id [ fhir:v "CardiologyReferralReasonValues"] ; # 
+  fhir:name [ fhir:v "Cardiology Referral Reason value set"] ; # Identifiers: Terminology Service requests still on going for
+#         value set and code definitions. Hence skeeleton and placeholders here for example
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "429559004" ] ;
+         fhir:display [ fhir:v "typical angina" ]
+       ] )
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CollectReferralReason> a fhir:Questionnaire ;
+  fhir:id [ fhir:v "CollectReferralReason"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:item ( [
+     fhir:linkId [ fhir:v "1" ] ;
+     fhir:text [ fhir:v "Reason for Cardiology Consult" ] ;
+     fhir:type [ fhir:v "coding" ] ;
+     fhir:required [ fhir:v true ] ;
+     fhir:repeats [ fhir:v true ] ;
+     fhir:answerValueSet [
+       fhir:v "#CardiologyReferralReasonValues"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyReferralReasonValues>
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyConsultationGoal> a fhir:Questionnaire ;
+  fhir:id [ fhir:v "CardiologyConsultationGoal"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:item ( [
+     fhir:linkId [ fhir:v "2" ] ;
+     fhir:text [ fhir:v "Goal of cardiology consultation" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

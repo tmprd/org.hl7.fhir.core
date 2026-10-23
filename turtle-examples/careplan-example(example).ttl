@@ -24,36 +24,7 @@
      fhir:status [ fhir:v "additional" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Condition ;
-     fhir:id [ fhir:v "p1" ] ;
-     fhir:clinicalStatus [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
-         ] ;
-         fhir:code [ fhir:v "active" ]
-       ] )
-     ] ;
-     fhir:verificationStatus [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
-         ] ;
-         fhir:code [ fhir:v "confirmed" ]
-       ] )
-     ] ;
-     fhir:code [
-       fhir:text [ fhir:v "Obesity" ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter James Chalmers" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CarePlan/example#p1> ) ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "12345" ]
   ] ) ; # 
@@ -96,7 +67,7 @@
   ] ) ; # 
   fhir:addresses ( [
      fhir:reference [
-       fhir:l <#p1> ;
+       fhir:l <http://hl7.org/fhir/CarePlan/example#p1> ;
        fhir:reference [ fhir:v "#p1" ] ;
        fhir:display [ fhir:v "obesity" ]
      ]
@@ -124,6 +95,35 @@
        fhir:reference [ fhir:v "ServiceRequest/benchpress" ]
      ] # planned exercise plan
   ] ) . # exercise activity
+
+<http://hl7.org/fhir/CarePlan/example#p1> a fhir:Condition ;
+  fhir:id [ fhir:v "p1"] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
+       ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Obesity" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter James Chalmers" ]
+  ] . # 
 
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
 

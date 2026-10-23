@@ -19,118 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:ValueSet ;
-     fhir:id [ fhir:v "motor" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://loinc.org"^^xsd:anyURI ;
-         fhir:l <http://loinc.org>
-       ] ;
-       fhir:value [ fhir:v "http://loinc.org/ValueSet/LL357-5" ]
-     ] ) ;
-     fhir:name [ fhir:v "GCS Motor Value Set" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:description [ fhir:v "LOINC ANSWER LIST    (LL357-5)" ] ;
-     fhir:compose [
-       fhir:include ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:concept ( [
-           fhir:code [ fhir:v "LA6562-8" ] ;
-           fhir:display [ fhir:v "No motor response" ]
-         ] [
-           fhir:code [ fhir:v "LA6563-6" ] ;
-           fhir:display [ fhir:v "Extension to pain" ]
-         ] [
-           fhir:code [ fhir:v "LA6564-4" ] ;
-           fhir:display [ fhir:v "Flexion to pain" ]
-         ] [
-           fhir:code [ fhir:v "LA6565-1" ] ;
-           fhir:display [ fhir:v "Withdrawl from pain" ]
-         ] [
-           fhir:code [ fhir:v "LA6566-9" ] ;
-           fhir:display [ fhir:v "Localizing pain" ]
-         ] [
-           fhir:code [ fhir:v "LA6567-7" ] ;
-           fhir:display [ fhir:v "Obeys commands" ]
-         ] )
-       ] )
-     ]
-  ] [
-     a fhir:ValueSet ;
-     fhir:id [ fhir:v "verbal" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://loinc.org"^^xsd:anyURI ;
-         fhir:l <http://loinc.org>
-       ] ;
-       fhir:value [ fhir:v "http://loinc.org/ValueSet/LL356-7" ]
-     ] ) ;
-     fhir:name [ fhir:v "GCS Verbal Value Set" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:description [ fhir:v "LOINC ANSWER LIST    (LL356-7)" ] ;
-     fhir:compose [
-       fhir:include ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:concept ( [
-           fhir:code [ fhir:v "LA6557-8" ] ;
-           fhir:display [ fhir:v "No verbal response (>2yrs); no vocal response (<=2yrs)" ]
-         ] [
-           fhir:code [ fhir:v "LA6558-6" ] ;
-           fhir:display [ fhir:v "Incomprehensible sounds" ]
-         ] [
-           fhir:code [ fhir:v "LA6559-4" ] ;
-           fhir:display [ fhir:v "Inappropriate words" ]
-         ] [
-           fhir:code [ fhir:v "LA6560-2" ] ;
-           fhir:display [ fhir:v "Confused" ]
-         ] [
-           fhir:code [ fhir:v "LA6561-0" ] ;
-           fhir:display [ fhir:v "Oriented" ]
-         ] )
-       ] )
-     ]
-  ] [
-     a fhir:ValueSet ;
-     fhir:id [ fhir:v "eye" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://loinc.org"^^xsd:anyURI ;
-         fhir:l <http://loinc.org>
-       ] ;
-       fhir:value [ fhir:v "http://loinc.org/ValueSet/LL355-9" ]
-     ] ) ;
-     fhir:name [ fhir:v "GCS Eye Value Set" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:description [ fhir:v "LOINC ANSWER LIST    (LL355-9)" ] ;
-     fhir:compose [
-       fhir:include ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:concept ( [
-           fhir:code [ fhir:v "LA6553-7" ] ;
-           fhir:display [ fhir:v "No eye opening" ]
-         ] [
-           fhir:code [ fhir:v "LA6554-5" ] ;
-           fhir:display [ fhir:v "Eye opening to pain" ]
-         ] [
-           fhir:code [ fhir:v "LA6555-2" ] ;
-           fhir:display [ fhir:v "Eye opening to verbal command" ]
-         ] [
-           fhir:code [ fhir:v "LA6556-0" ] ;
-           fhir:display [ fhir:v "Eyes open spontaneously" ]
-         ] )
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Questionnaire/gcs#motor> <http://hl7.org/fhir/Questionnaire/gcs#verbal> <http://hl7.org/fhir/Questionnaire/gcs#eye> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
@@ -184,7 +73,7 @@
      fhir:type [ fhir:v "coding" ] ;
      fhir:answerValueSet [
        fhir:v "#verbal"^^xsd:anyURI ;
-       fhir:l <#verbal>
+       fhir:l <http://hl7.org/fhir/Questionnaire/gcs#verbal>
      ]
   ] [
      fhir:linkId [ fhir:v "1.2" ] ;
@@ -198,7 +87,7 @@
      fhir:type [ fhir:v "coding" ] ;
      fhir:answerValueSet [
        fhir:v "#motor"^^xsd:anyURI ;
-       fhir:l <#motor>
+       fhir:l <http://hl7.org/fhir/Questionnaire/gcs#motor>
      ]
   ] [
      fhir:linkId [ fhir:v "1.3" ] ;
@@ -212,9 +101,120 @@
      fhir:type [ fhir:v "coding" ] ;
      fhir:answerValueSet [
        fhir:v "#eye"^^xsd:anyURI ;
-       fhir:l <#eye>
+       fhir:l <http://hl7.org/fhir/Questionnaire/gcs#eye>
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Questionnaire/gcs#motor> a fhir:ValueSet ;
+  fhir:id [ fhir:v "motor"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://loinc.org"^^xsd:anyURI ;
+       fhir:l <http://loinc.org>
+     ] ;
+     fhir:value [ fhir:v "http://loinc.org/ValueSet/LL357-5" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "GCS Motor Value Set"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:description [ fhir:v "LOINC ANSWER LIST    (LL357-5)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "LA6562-8" ] ;
+         fhir:display [ fhir:v "No motor response" ]
+       ] [
+         fhir:code [ fhir:v "LA6563-6" ] ;
+         fhir:display [ fhir:v "Extension to pain" ]
+       ] [
+         fhir:code [ fhir:v "LA6564-4" ] ;
+         fhir:display [ fhir:v "Flexion to pain" ]
+       ] [
+         fhir:code [ fhir:v "LA6565-1" ] ;
+         fhir:display [ fhir:v "Withdrawl from pain" ]
+       ] [
+         fhir:code [ fhir:v "LA6566-9" ] ;
+         fhir:display [ fhir:v "Localizing pain" ]
+       ] [
+         fhir:code [ fhir:v "LA6567-7" ] ;
+         fhir:display [ fhir:v "Obeys commands" ]
+       ] )
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/Questionnaire/gcs#verbal> a fhir:ValueSet ;
+  fhir:id [ fhir:v "verbal"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://loinc.org"^^xsd:anyURI ;
+       fhir:l <http://loinc.org>
+     ] ;
+     fhir:value [ fhir:v "http://loinc.org/ValueSet/LL356-7" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "GCS Verbal Value Set"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:description [ fhir:v "LOINC ANSWER LIST    (LL356-7)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "LA6557-8" ] ;
+         fhir:display [ fhir:v "No verbal response (>2yrs); no vocal response (<=2yrs)" ]
+       ] [
+         fhir:code [ fhir:v "LA6558-6" ] ;
+         fhir:display [ fhir:v "Incomprehensible sounds" ]
+       ] [
+         fhir:code [ fhir:v "LA6559-4" ] ;
+         fhir:display [ fhir:v "Inappropriate words" ]
+       ] [
+         fhir:code [ fhir:v "LA6560-2" ] ;
+         fhir:display [ fhir:v "Confused" ]
+       ] [
+         fhir:code [ fhir:v "LA6561-0" ] ;
+         fhir:display [ fhir:v "Oriented" ]
+       ] )
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/Questionnaire/gcs#eye> a fhir:ValueSet ;
+  fhir:id [ fhir:v "eye"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://loinc.org"^^xsd:anyURI ;
+       fhir:l <http://loinc.org>
+     ] ;
+     fhir:value [ fhir:v "http://loinc.org/ValueSet/LL355-9" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "GCS Eye Value Set"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:description [ fhir:v "LOINC ANSWER LIST    (LL355-9)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "LA6553-7" ] ;
+         fhir:display [ fhir:v "No eye opening" ]
+       ] [
+         fhir:code [ fhir:v "LA6554-5" ] ;
+         fhir:display [ fhir:v "Eye opening to pain" ]
+       ] [
+         fhir:code [ fhir:v "LA6555-2" ] ;
+         fhir:display [ fhir:v "Eye opening to verbal command" ]
+       ] [
+         fhir:code [ fhir:v "LA6556-0" ] ;
+         fhir:display [ fhir:v "Eyes open spontaneously" ]
+       ] )
+     ] )
+  ] . # 
 
 # -------------------------------------------------------------------------------------
 

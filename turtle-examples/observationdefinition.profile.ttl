@@ -3176,7 +3176,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ObservationDefinition.qualifiedValue"^^xsd:anyURI ;
-         fhir:l <#ObservationDefinition.qualifiedValue>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ObservationDefinition#ObservationDefinition.qualifiedValue>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4837,7 +4837,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ObservationDefinition.qualifiedValue"^^xsd:anyURI ;
-         fhir:l <#ObservationDefinition.qualifiedValue>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ObservationDefinition#ObservationDefinition.qualifiedValue>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

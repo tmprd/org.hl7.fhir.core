@@ -44,7 +44,7 @@
        fhir:v "https://example.com/base/MedicationRequest/3123"^^xsd:anyURI ;
        fhir:l <https://example.com/base/MedicationRequest/3123>
      ] ;
-     fhir:resource ( <https://example.com/base/MedicationRequest/3123> ) ;
+     fhir:resource <https://example.com/base/MedicationRequest/3123> ;
      fhir:search [
        fhir:mode [ fhir:v "match" ] ; # this resource included as a match to the search criteria.\n         Servers are not required to populate this, but should, because\n         there are a few cases where it might be ambiguous whether a \n         resource is added because it's a match or an include
        fhir:score [ fhir:v "1"^^xsd:decimal ] # score. For matches where the criteria are not determinate,\n        e.g. text search on narrative, the server can include a score to indicate\n        how well the resource matches the conditions. Since this search is by patient\n        identifier, there's nothing fuzzy about it, but for example purposes:
@@ -54,7 +54,7 @@
        fhir:v "https://example.com/base/Medication/example"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Medication/example>
      ] ;
-     fhir:resource ( <https://example.com/base/Medication/example> ) ;
+     fhir:resource <https://example.com/base/Medication/example> ;
      fhir:search [
        fhir:mode [ fhir:v "include" ] # added because the client asked to include the medications
      ]
@@ -70,18 +70,14 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <http://hl7.org/fhir/Medication/example> ;
+       fhir:l <https://example.com/base/Medication/example> ;
        fhir:reference [ fhir:v "Medication/example" ]
      ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/f001> ;
+     fhir:l <https://example.com/base/Patient/f001> ;
      fhir:reference [ fhir:v "Patient/f001" ]
   ] . # 
-
-<http://hl7.org/fhir/Medication/example> a fhir:Medication .
-
-<http://hl7.org/fhir/Patient/f001> a fhir:Patient .
 
 <https://example.com/base/Medication/example> a fhir:Medication ;
   fhir:id [ fhir:v "example"] ; # 

@@ -26,355 +26,355 @@
        fhir:v "http://hl7.org/fhir/Practitioner/1"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/1>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/1> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/1>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/13"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/13>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/13> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/13>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/14"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/14>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/14> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/14>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/15"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/15>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/15> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/15>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/16"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/16>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/16> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/16>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/17"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/17>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/17> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/17>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/18"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/18>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/18> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/18>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/19"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/19>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/19> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/19>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/20"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/20>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/20> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/20>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/21"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/21>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/21> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/21>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/22"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/22>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/22> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/22>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/23"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/23>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/23> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/23>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/24"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/24>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/24> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/24>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/25"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/25>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/25> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/25>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/26"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/26>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/26> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/26>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/27"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/27>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/27> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/27>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/28"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/28>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/28> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/28>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/29"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/29>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/29> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/29>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/30"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/30>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/30> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/30>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/31"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/31>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/31> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/31>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/32"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/32>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/32> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/32>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/33"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/33>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/33> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/33>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/34"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/34>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/34> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/34>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/35"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/35>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/35> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/35>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/36"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/36>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/36> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/36>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/37"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/37>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/37> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/37>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/38"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/38>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/38> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/38>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/39"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/39>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/39> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/39>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/40"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/40>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/40> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/40>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/41"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/41>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/41> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/41>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/42"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/42>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/42> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/42>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/43"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/43>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/43> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/43>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/44"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/44>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/44> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/44>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/45"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/45>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/45> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/45>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/46"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/46>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/46> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/46>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/47"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/47>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/47> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/47>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/48"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/48>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/48> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/48>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/49"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/49>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/49> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/49>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/50"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/50>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/50> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/50>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/51"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/51>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/51> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/51>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/52"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/52>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/52> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/52>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/53"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/53>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/53> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/53>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/54"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/54>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/54> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/54>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/55"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/55>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/55> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/55>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/56"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/56>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/56> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/56>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/57"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/57>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/57> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/57>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/58"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/58>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/58> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/58>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/59"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/59>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/59> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/59>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/60"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/60>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/60> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/60>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/61"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/61>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/61> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/61>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/62"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/62>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/62> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/62>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/63"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/63>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/63> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/63>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/64"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/64>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/64> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/64>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/65"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/65>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/65> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/65>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/66"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/66>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/66> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/66>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/67"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/67>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/67> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/67>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/68"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/68>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/68> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/68>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/69"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/69>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/69> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/69>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Practitioner/70"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Practitioner/70>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Practitioner/70> )
+     fhir:resource <http://hl7.org/fhir/Practitioner/70>
   ] ) . # 
 
 <http://hl7.org/fhir/Practitioner/1> a fhir:Practitioner ;

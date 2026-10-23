@@ -20,11 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "mmanu" ] ;
-     fhir:name [ fhir:v "Medication Manufacturer" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Medication/med0306#mmanu> ) ; # 
   fhir:code [
      fhir:coding ( [
        fhir:system [
@@ -37,7 +33,7 @@
      fhir:text [ fhir:v "Adcetris" ]
   ] ; # 
   fhir:marketingAuthorizationHolder [
-     fhir:l <#mmanu> ;
+     fhir:l <http://hl7.org/fhir/Medication/med0306#mmanu> ;
      fhir:reference [ fhir:v "#mmanu" ]
   ] ; # 
   fhir:doseForm [
@@ -51,6 +47,10 @@
        fhir:display [ fhir:v "Lyophilised powder for conventional release solution for injection" ]
      ] )
   ] . # 
+
+<http://hl7.org/fhir/Medication/med0306#mmanu> a fhir:Organization ;
+  fhir:id [ fhir:v "mmanu"] ; # 
+  fhir:name [ fhir:v "Medication Manufacturer"] . # 
 
 # -------------------------------------------------------------------------------------
 

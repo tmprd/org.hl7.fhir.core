@@ -26,19 +26,19 @@
        fhir:v "http://hl7.org/fhir/Observation/example-observation-device-flowratemetric"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Observation/example-observation-device-flowratemetric>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Observation/example-observation-device-flowratemetric> )
+     fhir:resource <http://hl7.org/fhir/Observation/example-observation-device-flowratemetric>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/DeviceAssociation/example-device-patient-association"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/DeviceAssociation/example-device-patient-association>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/DeviceAssociation/example-device-patient-association> )
+     fhir:resource <http://hl7.org/fhir/DeviceAssociation/example-device-patient-association>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/DeviceMetric/example-iv-pump-flowratemetric"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/DeviceMetric/example-iv-pump-flowratemetric>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/DeviceMetric/example-iv-pump-flowratemetric> )
+     fhir:resource <http://hl7.org/fhir/DeviceMetric/example-iv-pump-flowratemetric>
   ] ) . # 
 
 <http://hl7.org/fhir/Observation/example-observation-device-flowratemetric> a fhir:Observation ;

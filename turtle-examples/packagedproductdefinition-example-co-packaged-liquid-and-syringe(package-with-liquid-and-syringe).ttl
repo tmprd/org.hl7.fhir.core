@@ -22,28 +22,7 @@
 #				<name value="WonderSyringe"/>
 #				<type value="manufacturer-name"/>
 #			</deviceName
-  fhir:contained ( [
-     a fhir:DeviceDefinition ;
-     fhir:id [ fhir:v "syringeDevice" ] ;
-     fhir:classification ( [
-       fhir:type [
-         fhir:text [ fhir:v "syringe" ]
-       ]
-     ] )
-  ] [
-     a fhir:ManufacturedItemDefinition ;
-     fhir:id [ fhir:v "liquidItem" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:manufacturedDoseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://example.org.uk/fhir/doseform"^^xsd:anyURI ;
-           fhir:l <http://example.org.uk/fhir/doseform>
-         ] ;
-         fhir:code [ fhir:v "solution for injection" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/PackagedProductDefinition/package-with-liquid-and-syringe#syringeDevice> <http://hl7.org/fhir/PackagedProductDefinition/package-with-liquid-and-syringe#liquidItem> ) ; # 
   fhir:packageFor ( [
      fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/ProductThatHasThisPackType> ;
      fhir:reference [ fhir:v "MedicinalProductDefinition/ProductThatHasThisPackType" ]
@@ -52,7 +31,7 @@
      fhir:containedItem ( [
        fhir:item [
          fhir:reference [
-           fhir:l <#liquidItem> ;
+           fhir:l <http://hl7.org/fhir/PackagedProductDefinition/package-with-liquid-and-syringe#liquidItem> ;
            fhir:reference [ fhir:v "#liquidItem" ] # reference an item defined above
          ]
        ] ;
@@ -68,12 +47,33 @@
      ] [
        fhir:item [
          fhir:reference [
-           fhir:l <#syringeDevice> ;
+           fhir:l <http://hl7.org/fhir/PackagedProductDefinition/package-with-liquid-and-syringe#syringeDevice> ;
            fhir:reference [ fhir:v "#syringeDevice" ] # reference an item defined above
          ]
        ]
      ] ) # here we can describe the packaging, but in this case we just want to talk about the contents, Note that containedItem here is a completely different meaning to \"contained\" above\n	         This refers to items physically contained in the package.
   ] . # package contents start here, consists of a liquid and a syringe
+
+<http://hl7.org/fhir/PackagedProductDefinition/package-with-liquid-and-syringe#syringeDevice> a fhir:DeviceDefinition ;
+  fhir:id [ fhir:v "syringeDevice"] ; # 
+  fhir:classification ( [
+     fhir:type [
+       fhir:text [ fhir:v "syringe" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/PackagedProductDefinition/package-with-liquid-and-syringe#liquidItem> a fhir:ManufacturedItemDefinition ;
+  fhir:id [ fhir:v "liquidItem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:manufacturedDoseForm [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://example.org.uk/fhir/doseform"^^xsd:anyURI ;
+         fhir:l <http://example.org.uk/fhir/doseform>
+       ] ;
+       fhir:code [ fhir:v "solution for injection" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/MedicinalProductDefinition/ProductThatHasThisPackType> a fhir:MedicinalProductDefinition .
 

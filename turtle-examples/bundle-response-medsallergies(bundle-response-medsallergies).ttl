@@ -25,14 +25,14 @@
        fhir:v "http://example.org/fhir/Patient/example"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/Patient/example>
      ] ;
-     fhir:resource ( <http://example.org/fhir/Patient/example> ) ;
+     fhir:resource <http://example.org/fhir/Patient/example> ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "5bdf95d0-24a6-4024-95f5-d546fb479b" ] ;
        fhir:meta [
@@ -47,14 +47,14 @@
            fhir:l <http://test.fhir.org/r5/MedicationStatement?_format=application/fhir+xml&search-id=804eee4a-0a54-4414-9c07-169952f929&&patient=example&_list=%24current%2Dmedications&_sort=_id>
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "0c11a91c-3638-4d58-8cf1-40e60f43c6" ] ;
        fhir:meta [
@@ -69,14 +69,14 @@
            fhir:l <http://test.fhir.org/r5/AllergyIntolerance?_format=application/fhir+xml&search-id=b1981f8a-4139-4db6-923d-77d764c990&&patient=example&_list=%24current%2Dallergies&_sort=_id>
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "19f0fa29-f8fe-4b07-b035-f488893f06" ] ;
        fhir:meta [
@@ -91,14 +91,14 @@
            fhir:l <http://test.fhir.org/r5/Condition?_format=application/fhir+xml&search-id=4d097c43-54aa-4157-b500-be22208dd0&&patient=example&_list=%24current%2Dproblems&_sort=_id>
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "dff8ab42-33f9-42ec-88c5-83d3f05323" ] ;
        fhir:meta [
@@ -113,7 +113,7 @@
            fhir:l <http://test.fhir.org/r5/MedicationStatement?_format=application/fhir+xml&search-id=31d4af75-cdcf-4f85-9666-4bafadebb5&&patient=example&_sort=_id>
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
@@ -269,11 +269,9 @@
      ]
   ] ) ; # 
   fhir:managingOrganization [
-     fhir:l <http://hl7.org/fhir/Organization/1> ;
+     fhir:l <http://example.org/fhir/Organization/1> ;
      fhir:reference [ fhir:v "Organization/1" ]
   ] . # 
-
-<http://hl7.org/fhir/Organization/1> a fhir:Organization .
 
 # -------------------------------------------------------------------------------------
 

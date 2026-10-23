@@ -19,159 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:PackagedProductDefinition ;
-     fhir:id [ fhir:v "package" ] ;
-     fhir:packageFor ( [
-       fhir:l <#> ;
-       fhir:reference [ fhir:v "#" ]
-     ] ) ;
-     fhir:packaging [
-       fhir:packaging ( [
-         fhir:type [
-           fhir:coding ( [
-             fhir:code [ fhir:v "cardboard box (outer)" ]
-           ] )
-         ] ;
-         fhir:packaging ( [
-           fhir:type [
-             fhir:coding ( [
-               fhir:code [ fhir:v "cardboard box (inner)" ]
-             ] )
-           ] ;
-           fhir:packaging ( [
-             fhir:type [
-               fhir:coding ( [
-                 fhir:code [ fhir:v "sachet" ]
-               ] )
-             ] ;
-             fhir:containedItem ( [
-               fhir:item [
-                 fhir:reference [
-                   fhir:l <#powderItem> ;
-                   fhir:reference [ fhir:v "#powderItem" ]
-                 ]
-               ] ;
-               fhir:amount [
-                 fhir:value [ fhir:v "5"^^xsd:decimal ] ;
-                 fhir:unit [ fhir:v "g" ] ;
-                 fhir:system [
-                   fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-                   fhir:l <http://unitsofmeasure.org>
-                 ] ;
-                 fhir:code [ fhir:v "g" ]
-               ]
-             ] )
-           ] [
-             fhir:type [
-               fhir:coding ( [
-                 fhir:code [ fhir:v "bottle" ]
-               ] )
-             ] ;
-             fhir:containedItem ( [
-               fhir:item [
-                 fhir:reference [
-                   fhir:l <#solventItem> ;
-                   fhir:reference [ fhir:v "#solventItem" ]
-                 ]
-               ] ;
-               fhir:amount [
-                 fhir:value [ fhir:v "20"^^xsd:decimal ] ;
-                 fhir:unit [ fhir:v "ml" ] ;
-                 fhir:system [
-                   fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-                   fhir:l <http://unitsofmeasure.org>
-                 ] ;
-                 fhir:code [ fhir:v "mL" ]
-               ]
-             ] )
-           ] )
-         ] [
-           fhir:type [
-             fhir:coding ( [
-               fhir:code [ fhir:v "foil bag" ]
-             ] )
-           ] ;
-           fhir:containedItem ( [
-             fhir:item [
-               fhir:reference [
-                 fhir:l <#syringeDevice> ;
-                 fhir:reference [ fhir:v "#syringeDevice" ]
-               ]
-             ] ;
-             fhir:amount [
-               fhir:value [ fhir:v "1"^^xsd:decimal ]
-             ]
-           ] )
-         ] )
-       ] )
-     ]
-  ] [
-     a fhir:ManufacturedItemDefinition ;
-     fhir:id [ fhir:v "solventItem" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:manufacturedDoseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://example.org.uk/fhir/doseform"^^xsd:anyURI ;
-           fhir:l <http://example.org.uk/fhir/doseform>
-         ] ;
-         fhir:code [ fhir:v "solvent for powder for injection" ]
-       ] )
-     ]
-  ] [
-     a fhir:ManufacturedItemDefinition ;
-     fhir:id [ fhir:v "powderItem" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:manufacturedDoseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://example.org.uk/fhir/doseform"^^xsd:anyURI ;
-           fhir:l <http://example.org.uk/fhir/doseform>
-         ] ;
-         fhir:code [ fhir:v "powder for solution for injection" ]
-       ] )
-     ]
-  ] [
-     a fhir:DeviceDefinition ;
-     fhir:id [ fhir:v "syringeDevice" ] ;
-     fhir:classification ( [
-       fhir:type [
-         fhir:text [ fhir:v "syringe" ]
-       ]
-     ] )
-  ] [
-     a fhir:AdministrableProductDefinition ;
-     fhir:id [ fhir:v "administrable-form" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:formOf ( [
-       fhir:l <#> ;
-       fhir:reference [ fhir:v "#" ]
-     ] ) ;
-     fhir:administrableDoseForm [
-       fhir:coding ( [
-         fhir:code [ fhir:v "solution for injection" ]
-       ] )
-     ] ;
-     fhir:producedFrom ( [
-       fhir:l <#powderItem> ;
-       fhir:reference [ fhir:v "#powderItem" ]
-     ] [
-       fhir:l <#solventItem> ;
-       fhir:reference [ fhir:v "#solventItem" ]
-     ] ) ;
-     fhir:routeOfAdministration ( [
-       fhir:code [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://example.org.uk/fhir/route"^^xsd:anyURI ;
-             fhir:l <http://example.org.uk/fhir/route>
-           ] ;
-           fhir:code [ fhir:v "intramuscular" ]
-         ] )
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#package> <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#solventItem> <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#powderItem> <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#syringeDevice> <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#administrable-form> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://example.org.uk/fhir/product"^^xsd:anyURI ;
@@ -190,6 +38,158 @@
   ] ; # 
   fhir:name ( [
      fhir:productName [ fhir:v "Wonderdrug liquid 20ml (integral syringe)" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#package> a fhir:PackagedProductDefinition ;
+  fhir:id [ fhir:v "package"] ; # 
+  fhir:packageFor ( [
+     fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete> ;
+     fhir:reference [ fhir:v "#" ]
+  ] ) ; # 
+  fhir:packaging [
+     fhir:packaging ( [
+       fhir:type [
+         fhir:coding ( [
+           fhir:code [ fhir:v "cardboard box (outer)" ]
+         ] )
+       ] ;
+       fhir:packaging ( [
+         fhir:type [
+           fhir:coding ( [
+             fhir:code [ fhir:v "cardboard box (inner)" ]
+           ] )
+         ] ;
+         fhir:packaging ( [
+           fhir:type [
+             fhir:coding ( [
+               fhir:code [ fhir:v "sachet" ]
+             ] )
+           ] ;
+           fhir:containedItem ( [
+             fhir:item [
+               fhir:reference [
+                 fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#powderItem> ;
+                 fhir:reference [ fhir:v "#powderItem" ]
+               ]
+             ] ;
+             fhir:amount [
+               fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "g" ] ;
+               fhir:system [
+                 fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+                 fhir:l <http://unitsofmeasure.org>
+               ] ;
+               fhir:code [ fhir:v "g" ]
+             ]
+           ] )
+         ] [
+           fhir:type [
+             fhir:coding ( [
+               fhir:code [ fhir:v "bottle" ]
+             ] )
+           ] ;
+           fhir:containedItem ( [
+             fhir:item [
+               fhir:reference [
+                 fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#solventItem> ;
+                 fhir:reference [ fhir:v "#solventItem" ]
+               ]
+             ] ;
+             fhir:amount [
+               fhir:value [ fhir:v "20"^^xsd:decimal ] ;
+               fhir:unit [ fhir:v "ml" ] ;
+               fhir:system [
+                 fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+                 fhir:l <http://unitsofmeasure.org>
+               ] ;
+               fhir:code [ fhir:v "mL" ]
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:type [
+           fhir:coding ( [
+             fhir:code [ fhir:v "foil bag" ]
+           ] )
+         ] ;
+         fhir:containedItem ( [
+           fhir:item [
+             fhir:reference [
+               fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#syringeDevice> ;
+               fhir:reference [ fhir:v "#syringeDevice" ]
+             ]
+           ] ;
+           fhir:amount [
+             fhir:value [ fhir:v "1"^^xsd:decimal ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#solventItem> a fhir:ManufacturedItemDefinition ;
+  fhir:id [ fhir:v "solventItem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:manufacturedDoseForm [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://example.org.uk/fhir/doseform"^^xsd:anyURI ;
+         fhir:l <http://example.org.uk/fhir/doseform>
+       ] ;
+       fhir:code [ fhir:v "solvent for powder for injection" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#powderItem> a fhir:ManufacturedItemDefinition ;
+  fhir:id [ fhir:v "powderItem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:manufacturedDoseForm [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://example.org.uk/fhir/doseform"^^xsd:anyURI ;
+         fhir:l <http://example.org.uk/fhir/doseform>
+       ] ;
+       fhir:code [ fhir:v "powder for solution for injection" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#syringeDevice> a fhir:DeviceDefinition ;
+  fhir:id [ fhir:v "syringeDevice"] ; # 
+  fhir:classification ( [
+     fhir:type [
+       fhir:text [ fhir:v "syringe" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#administrable-form> a fhir:AdministrableProductDefinition ;
+  fhir:id [ fhir:v "administrable-form"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:formOf ( [
+     fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete> ;
+     fhir:reference [ fhir:v "#" ]
+  ] ) ; # 
+  fhir:administrableDoseForm [
+     fhir:coding ( [
+       fhir:code [ fhir:v "solution for injection" ]
+     ] )
+  ] ; # 
+  fhir:producedFrom ( [
+     fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#powderItem> ;
+     fhir:reference [ fhir:v "#powderItem" ]
+  ] [
+     fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/drug-and-device-complete#solventItem> ;
+     fhir:reference [ fhir:v "#solventItem" ]
+  ] ) ; # 
+  fhir:routeOfAdministration ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://example.org.uk/fhir/route"^^xsd:anyURI ;
+           fhir:l <http://example.org.uk/fhir/route>
+         ] ;
+         fhir:code [ fhir:v "intramuscular" ]
+       ] )
+     ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

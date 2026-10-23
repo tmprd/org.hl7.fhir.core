@@ -24,76 +24,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>\n        \"Fatal Intracranial Hemorrhage Within Seven Days\" is an outcome used in expressing what an Evidence is about.\n      </p>\n	\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Group ;
-     fhir:id [ fhir:v "Cohort-Definition" ] ;
-     fhir:membership [ fhir:v "conceptual" ] ;
-     fhir:characteristic ( [
-       fhir:code [
-         a sct:260905004 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "260905004" ] ;
-           fhir:display [ fhir:v "Condition" ]
-         ] )
-       ] ;
-       fhir:value [
-         a fhir:CodeableConcept, sct:1386000 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "1386000" ] ;
-           fhir:display [ fhir:v "Intracranial hemorrhage (disorder)" ]
-         ] )
-       ] ;
-       fhir:exclude [ fhir:v false ]
-     ] [
-       fhir:code [
-         fhir:text [ fhir:v "resulting in" ]
-       ] ;
-       fhir:value [
-         a fhir:CodeableConcept, sct:419620001 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "419620001" ] ;
-           fhir:display [ fhir:v "Death (event)" ]
-         ] )
-       ] ;
-       fhir:exclude [ fhir:v false ]
-     ] )
-  ] [
-     a fhir:Group ;
-     fhir:id [ fhir:v "Definition-Group" ] ;
-     fhir:type [ fhir:v "person" ] ;
-     fhir:membership [ fhir:v "definitional" ] ;
-     fhir:characteristic ( [
-       fhir:code [
-         a sct:260905004 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "260905004" ] ;
-           fhir:display [ fhir:v "Condition" ]
-         ] )
-       ] ;
-       fhir:value [
-         a fhir:Reference ;
-         fhir:l <#Cohort-Definition> ;
-         fhir:reference [ fhir:v "#Cohort-Definition" ]
-       ] ;
-       fhir:exclude [ fhir:v false ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/EvidenceVariable/example-fatal-ICH-in-7-days#Cohort-Definition> <http://hl7.org/fhir/EvidenceVariable/example-fatal-ICH-in-7-days#Definition-Group> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
@@ -117,6 +48,75 @@
   fhir:description [ fhir:v "Fatal Intracranial Hemorrhage Within Seven Days"] ; # 
   fhir:actual [ fhir:v true] ; # 
   fhir:handling [] . # 
+
+<http://hl7.org/fhir/EvidenceVariable/example-fatal-ICH-in-7-days#Cohort-Definition> a fhir:Group ;
+  fhir:id [ fhir:v "Cohort-Definition"] ; # 
+  fhir:membership [ fhir:v "conceptual"] ; # 
+  fhir:characteristic ( [
+     fhir:code [
+       a sct:260905004 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "260905004" ] ;
+         fhir:display [ fhir:v "Condition" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept, sct:1386000 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "1386000" ] ;
+         fhir:display [ fhir:v "Intracranial hemorrhage (disorder)" ]
+       ] )
+     ] ;
+     fhir:exclude [ fhir:v false ]
+  ] [
+     fhir:code [
+       fhir:text [ fhir:v "resulting in" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept, sct:419620001 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "419620001" ] ;
+         fhir:display [ fhir:v "Death (event)" ]
+       ] )
+     ] ;
+     fhir:exclude [ fhir:v false ]
+  ] ) . # 
+
+<http://hl7.org/fhir/EvidenceVariable/example-fatal-ICH-in-7-days#Definition-Group> a fhir:Group ;
+  fhir:id [ fhir:v "Definition-Group"] ; # 
+  fhir:type [ fhir:v "person"] ; # 
+  fhir:membership [ fhir:v "definitional"] ; # 
+  fhir:characteristic ( [
+     fhir:code [
+       a sct:260905004 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "260905004" ] ;
+         fhir:display [ fhir:v "Condition" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <http://hl7.org/fhir/EvidenceVariable/example-fatal-ICH-in-7-days#Cohort-Definition> ;
+       fhir:reference [ fhir:v "#Cohort-Definition" ]
+     ] ;
+     fhir:exclude [ fhir:v false ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

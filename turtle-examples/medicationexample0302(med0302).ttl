@@ -20,11 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "mmanu" ] ;
-     fhir:name [ fhir:v "Medication Manufacturer" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Medication/med0302#mmanu> ) ; # 
   fhir:code [
      fhir:coding ( [
        fhir:system [
@@ -37,7 +33,7 @@
      fhir:text [ fhir:v "Zosyn (piperacillin/tazobactam) 4.5gm injection" ]
   ] ; # 
   fhir:marketingAuthorizationHolder [
-     fhir:l <#mmanu> ;
+     fhir:l <http://hl7.org/fhir/Medication/med0302#mmanu> ;
      fhir:reference [ fhir:v "#mmanu" ]
   ] ; # 
   fhir:doseForm [
@@ -116,6 +112,10 @@
        ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Medication/med0302#mmanu> a fhir:Organization ;
+  fhir:id [ fhir:v "mmanu"] ; # 
+  fhir:name [ fhir:v "Medication Manufacturer"] . # 
 
 # -------------------------------------------------------------------------------------
 

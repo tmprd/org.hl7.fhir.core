@@ -46,7 +46,7 @@
        fhir:v "http://example.org/fhir/Provenance/anon0"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/Provenance/anon0>
      ] ;
-     fhir:resource ( <http://example.org/fhir/Provenance/anon0> ) ;
+     fhir:resource <http://example.org/fhir/Provenance/anon0> ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
@@ -55,7 +55,7 @@
        fhir:v "http://example.org/fhir/Patient/anon0"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/Patient/anon0>
      ] ;
-     fhir:resource ( <http://example.org/fhir/Patient/anon0> ) ;
+     fhir:resource <http://example.org/fhir/Patient/anon0> ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
@@ -64,7 +64,7 @@
        fhir:v "http://example.org/fhir/Condition/anon0"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/Condition/anon0>
      ] ;
-     fhir:resource ( <http://example.org/fhir/Condition/anon0> ) ;
+     fhir:resource <http://example.org/fhir/Condition/anon0> ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
@@ -126,12 +126,10 @@
   fhir:entity ( [
      fhir:role [ fhir:v "source" ] ;
      fhir:what [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
+       fhir:l <http://example.org/fhir/Patient/example> ;
        fhir:reference [ fhir:v "Patient/example" ]
      ]
   ] ) . # 
-
-<http://hl7.org/fhir/Patient/example> a fhir:Patient .
 
 <http://example.org/fhir/Patient/anon0> a fhir:Patient ;
   fhir:id [ fhir:v "anon0"] ; # 
@@ -241,15 +239,13 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/anon0> ;
+     fhir:l <http://example.org/fhir/Patient/anon0> ;
      fhir:reference [ fhir:v "Patient/anon0" ] # patient as anon0 id
   ] ; # 
   fhir:onset [
      a fhir:DateTime ;
      fhir:v "2012-05-01"^^xsd:date
   ] . # dates aligned to first of month
-
-<http://hl7.org/fhir/Patient/anon0> a fhir:Patient .
 
 # -------------------------------------------------------------------------------------
 

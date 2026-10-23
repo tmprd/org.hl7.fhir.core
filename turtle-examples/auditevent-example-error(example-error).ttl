@@ -23,17 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Recording that an error has happened due to a client requesting that an Observation resource be Created on the Patient endpoint. Note that the OperationOutcome from failed transaction is recorded as an AuditEvent.entity.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:OperationOutcome ;
-     fhir:id [ fhir:v "o1" ] ;
-     fhir:issue ( [
-       fhir:severity [ fhir:v "error" ] ;
-       fhir:code [ fhir:v "invalid" ] ;
-       fhir:details [
-         fhir:text [ fhir:v "Invalid pointer operation" ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/AuditEvent/example-error#o1> ) ; # 
   fhir:action [ fhir:v "C"] ; # 
   fhir:recorded [ fhir:v "2017-09-07T23:42:24Z"^^xsd:dateTime] ; # 
   fhir:outcome [
@@ -126,10 +116,20 @@
   ] ; # 
   fhir:entity ( [
      fhir:what [
-       fhir:l <#o1> ;
+       fhir:l <http://hl7.org/fhir/AuditEvent/example-error#o1> ;
        fhir:reference [ fhir:v "#o1" ] ;
        fhir:display [ fhir:v "transaction failed" ]
      ] # record the OperationOutcome returned to the client
+  ] ) . # 
+
+<http://hl7.org/fhir/AuditEvent/example-error#o1> a fhir:OperationOutcome ;
+  fhir:id [ fhir:v "o1"] ; # 
+  fhir:issue ( [
+     fhir:severity [ fhir:v "error" ] ;
+     fhir:code [ fhir:v "invalid" ] ;
+     fhir:details [
+       fhir:text [ fhir:v "Invalid pointer operation" ]
+     ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

@@ -2838,7 +2838,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.molecularWeight"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.molecularWeight>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.molecularWeight>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4205,7 +4205,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.name"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.name>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.name>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4238,7 +4238,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.name"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.name>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.name>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -9135,7 +9135,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.structure.representation"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.structure.representation>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.structure.representation>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -9785,7 +9785,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.nucleicAcid.gene"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.nucleicAcid.gene>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.nucleicAcid.gene>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -10998,7 +10998,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.molecularWeight"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.molecularWeight>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.molecularWeight>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11654,7 +11654,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.name"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.name>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.name>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11672,7 +11672,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.name"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.name>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.name>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -13554,7 +13554,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.structure.representation"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.structure.representation>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.structure.representation>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -13770,7 +13770,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#SubstanceDefinition.nucleicAcid.gene"^^xsd:anyURI ;
-         fhir:l <#SubstanceDefinition.nucleicAcid.gene>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/SubstanceDefinition#SubstanceDefinition.nucleicAcid.gene>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

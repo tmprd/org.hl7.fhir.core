@@ -26,73 +26,73 @@
        fhir:v "http://hl7.org/fhir/Patient/1"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/1>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/1> )
+     fhir:resource <http://hl7.org/fhir/Patient/1>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/2> )
+     fhir:resource <http://hl7.org/fhir/Patient/2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/3> )
+     fhir:resource <http://hl7.org/fhir/Patient/3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/4"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/4>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/4> )
+     fhir:resource <http://hl7.org/fhir/Patient/4>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/5"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/5>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/5> )
+     fhir:resource <http://hl7.org/fhir/Patient/5>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/6"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/6>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/6> )
+     fhir:resource <http://hl7.org/fhir/Patient/6>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/7"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/7>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/7> )
+     fhir:resource <http://hl7.org/fhir/Patient/7>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/8"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/8>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/8> )
+     fhir:resource <http://hl7.org/fhir/Patient/8>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/9"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/9>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/9> )
+     fhir:resource <http://hl7.org/fhir/Patient/9>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/10"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/10>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/10> )
+     fhir:resource <http://hl7.org/fhir/Patient/10>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/11"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/11>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/11> )
+     fhir:resource <http://hl7.org/fhir/Patient/11>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Patient/12"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Patient/12>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Patient/12> )
+     fhir:resource <http://hl7.org/fhir/Patient/12>
   ] ) . # 
 
 <http://hl7.org/fhir/Patient/1> a fhir:Patient ;

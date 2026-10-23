@@ -3734,7 +3734,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#Questionnaire.item"^^xsd:anyURI ;
-         fhir:l <#Questionnaire.item>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Questionnaire#Questionnaire.item>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -5811,7 +5811,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#Questionnaire.item"^^xsd:anyURI ;
-         fhir:l <#Questionnaire.item>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Questionnaire#Questionnaire.item>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

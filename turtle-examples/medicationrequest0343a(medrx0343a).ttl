@@ -20,21 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0343a" ] ;
-     fhir:code [
-       a sct:1179448000 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "1179448000" ] ;
-         fhir:display [ fhir:v "Product containing precisely ondansetron 4 milligram/1 each conventional release oral lyophilisate (clinical drug)" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0343a#med0343a> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -55,7 +41,7 @@
   fhir:intent [ fhir:v "option"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0343a> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0343a#med0343a> ;
        fhir:reference [ fhir:v "#med0343a" ] ;
        fhir:display [ fhir:v "Ondansetron 4mg Tablet" ]
      ]
@@ -72,6 +58,20 @@
      fhir:display [ fhir:v "Patrick Pump" ]
   ] ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0343a#med0343a> a fhir:Medication ;
+  fhir:id [ fhir:v "med0343a"] ; # 
+  fhir:code [
+     a sct:1179448000 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "1179448000" ] ;
+       fhir:display [ fhir:v "Product containing precisely ondansetron 4 milligram/1 each conventional release oral lyophilisate (clinical drug)" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

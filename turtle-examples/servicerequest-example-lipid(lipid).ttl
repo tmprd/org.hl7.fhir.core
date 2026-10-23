@@ -20,37 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Observation ;
-     fhir:id [ fhir:v "fasting" ] ;
-     fhir:status [ fhir:v "final" ] ; # the mandatory quality flag:
-     fhir:code [
-       a loinc:49541-6 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:code [ fhir:v "49541-6" ] ;
-         fhir:display [ fhir:v "Fasting status - Reported" ]
-       ] )
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:value [
-       a fhir:CodeableConcept ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0136"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0136>
-         ] ;
-         fhir:code [ fhir:v "Y" ] ;
-         fhir:display [ fhir:v "Yes" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/ServiceRequest/lipid#fasting> ) ; # 
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
@@ -124,7 +94,7 @@
   ] ) ; # 
   fhir:supportingInfo ( [
      fhir:reference [
-       fhir:l <#fasting> ;
+       fhir:l <http://hl7.org/fhir/ServiceRequest/lipid#fasting> ;
        fhir:reference [ fhir:v "#fasting" ] ;
        fhir:display [ fhir:v "Fasting status" ]
      ]
@@ -132,6 +102,36 @@
   fhir:note ( [
      fhir:text [ fhir:v "patient is afraid of needles" ]
   ] ) . # 
+
+<http://hl7.org/fhir/ServiceRequest/lipid#fasting> a fhir:Observation ;
+  fhir:id [ fhir:v "fasting"] ; # 
+  fhir:status [ fhir:v "final"] ; # the mandatory quality flag:
+  fhir:code [
+     a loinc:49541-6 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "49541-6" ] ;
+       fhir:display [ fhir:v "Fasting status - Reported" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v2-0136"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v2-0136>
+       ] ;
+       fhir:code [ fhir:v "Y" ] ;
+       fhir:display [ fhir:v "Yes" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
 

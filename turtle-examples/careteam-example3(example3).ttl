@@ -26,37 +26,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">West Main Home Health Agency Home Care Team.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "prac-sw" ] ;
-     fhir:name ( [
-       fhir:text [ fhir:v "Social Worker" ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "prac-hha" ] ;
-     fhir:name ( [
-       fhir:text [ fhir:v "Home Health Aide" ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "prac-ncc" ] ;
-     fhir:name ( [
-       fhir:text [ fhir:v "Nurse Care Coordinator" ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "prac-pt" ] ;
-     fhir:name ( [
-       fhir:text [ fhir:v "Physical Therapist" ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "prac-ot" ] ;
-     fhir:name ( [
-       fhir:text [ fhir:v "Occupational Therapist" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CareTeam/example3#prac-sw> <http://hl7.org/fhir/CareTeam/example3#prac-hha> <http://hl7.org/fhir/CareTeam/example3#prac-ncc> <http://hl7.org/fhir/CareTeam/example3#prac-pt> <http://hl7.org/fhir/CareTeam/example3#prac-ot> ) ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:category ( [
      a loinc:LA28866-4 ;
@@ -75,7 +45,7 @@
        fhir:text [ fhir:v "Social Worker" ]
      ] ;
      fhir:member [
-       fhir:l <#prac-sw> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example3#prac-sw> ;
        fhir:reference [ fhir:v "#prac-sw" ] ;
        fhir:display [ fhir:v "Social Worker" ]
      ]
@@ -84,7 +54,7 @@
        fhir:text [ fhir:v "Home Health Aide" ]
      ] ;
      fhir:member [
-       fhir:l <#prac-hha> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example3#prac-hha> ;
        fhir:reference [ fhir:v "#prac-hha" ] ;
        fhir:display [ fhir:v "Home Health Aide" ]
      ]
@@ -93,7 +63,7 @@
        fhir:text [ fhir:v "Nurse Care Coordinator" ]
      ] ;
      fhir:member [
-       fhir:l <#prac-ncc> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example3#prac-ncc> ;
        fhir:reference [ fhir:v "#prac-ncc" ] ;
        fhir:display [ fhir:v "Nurse Care Coordinator" ]
      ]
@@ -102,7 +72,7 @@
        fhir:text [ fhir:v "Physical Therapist" ]
      ] ;
      fhir:member [
-       fhir:l <#prac-pt> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example3#prac-pt> ;
        fhir:reference [ fhir:v "#prac-pt" ] ;
        fhir:display [ fhir:v "Physical Therapist" ]
      ]
@@ -111,7 +81,7 @@
        fhir:text [ fhir:v "Occupational Therapist" ]
      ] ;
      fhir:member [
-       fhir:l <#prac-ot> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example3#prac-ot> ;
        fhir:reference [ fhir:v "#prac-ot" ] ;
        fhir:display [ fhir:v "Occupational Therapist" ]
      ]
@@ -119,6 +89,36 @@
   fhir:managingOrganization ( [
      fhir:l <http://hl7.org/fhir/Organization/f001> ;
      fhir:reference [ fhir:v "Organization/f001" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example3#prac-sw> a fhir:Practitioner ;
+  fhir:id [ fhir:v "prac-sw"] ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "Social Worker" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example3#prac-hha> a fhir:Practitioner ;
+  fhir:id [ fhir:v "prac-hha"] ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "Home Health Aide" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example3#prac-ncc> a fhir:Practitioner ;
+  fhir:id [ fhir:v "prac-ncc"] ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "Nurse Care Coordinator" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example3#prac-pt> a fhir:Practitioner ;
+  fhir:id [ fhir:v "prac-pt"] ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "Physical Therapist" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example3#prac-ot> a fhir:Practitioner ;
+  fhir:id [ fhir:v "prac-ot"] ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "Occupational Therapist" ]
   ] ) . # 
 
 <http://hl7.org/fhir/Organization/f001> a fhir:Organization .

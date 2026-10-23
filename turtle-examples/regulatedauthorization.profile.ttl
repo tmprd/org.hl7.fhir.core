@@ -1561,7 +1561,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#RegulatedAuthorization.case"^^xsd:anyURI ;
-         fhir:l <#RegulatedAuthorization.case>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/RegulatedAuthorization#RegulatedAuthorization.case>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2212,7 +2212,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#RegulatedAuthorization.case"^^xsd:anyURI ;
-         fhir:l <#RegulatedAuthorization.case>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/RegulatedAuthorization#RegulatedAuthorization.case>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

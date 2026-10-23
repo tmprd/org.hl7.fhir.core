@@ -20,21 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0343b" ] ;
-     fhir:code [
-       a sct:782032003 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "782032003" ] ;
-         fhir:display [ fhir:v "Product containing precisely ondansetron (as ondansetron hydrochloride) 2 milligram/1 milliliter conventional release solution for injection (clinical drug)" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0343b#med0343b> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -55,7 +41,7 @@
   fhir:intent [ fhir:v "option"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0343b> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0343b#med0343b> ;
        fhir:reference [ fhir:v "#med0343b" ] ;
        fhir:display [ fhir:v "Ondansetron 2mg/ml Injection" ]
      ]
@@ -72,6 +58,20 @@
      fhir:display [ fhir:v "Patrick Pump" ]
   ] ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0343b#med0343b> a fhir:Medication ;
+  fhir:id [ fhir:v "med0343b"] ; # 
+  fhir:code [
+     a sct:782032003 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "782032003" ] ;
+       fhir:display [ fhir:v "Product containing precisely ondansetron (as ondansetron hydrochloride) 2 milligram/1 milliliter conventional release solution for injection (clinical drug)" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

@@ -2323,7 +2323,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#PackagedProductDefinition.packaging"^^xsd:anyURI ;
-         fhir:l <#PackagedProductDefinition.packaging>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/PackagedProductDefinition#PackagedProductDefinition.packaging>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2356,7 +2356,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#PackagedProductDefinition.packaging.property"^^xsd:anyURI ;
-         fhir:l <#PackagedProductDefinition.packaging.property>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/PackagedProductDefinition#PackagedProductDefinition.packaging.property>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -3223,7 +3223,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#PackagedProductDefinition.packaging"^^xsd:anyURI ;
-         fhir:l <#PackagedProductDefinition.packaging>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/PackagedProductDefinition#PackagedProductDefinition.packaging>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -3241,7 +3241,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#PackagedProductDefinition.packaging.property"^^xsd:anyURI ;
-         fhir:l <#PackagedProductDefinition.packaging.property>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/PackagedProductDefinition#PackagedProductDefinition.packaging.property>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

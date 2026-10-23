@@ -27,7 +27,7 @@
        fhir:v "urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d"^^xsd:anyURI ;
        fhir:l <urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d>
      ] ;
-     fhir:resource ( <urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d> ) ;
+     fhir:resource <urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -40,7 +40,7 @@
        fhir:v "http://localhost:9556/svc/fhir/Patient/a2"^^xsd:anyURI ;
        fhir:l <http://localhost:9556/svc/fhir/Patient/a2>
      ] ;
-     fhir:resource ( <http://localhost:9556/svc/fhir/Patient/a2> ) ;
+     fhir:resource <http://localhost:9556/svc/fhir/Patient/a2> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -54,7 +54,7 @@
        fhir:v "http://localhost:9556/svc/fhir/Practitioner/a3"^^xsd:anyURI ;
        fhir:l <http://localhost:9556/svc/fhir/Practitioner/a3>
      ] ;
-     fhir:resource ( <http://localhost:9556/svc/fhir/Practitioner/a3> ) ;
+     fhir:resource <http://localhost:9556/svc/fhir/Practitioner/a3> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -67,7 +67,7 @@
        fhir:v "http://localhost:9556/svc/fhir/Practitioner/a4"^^xsd:anyURI ;
        fhir:l <http://localhost:9556/svc/fhir/Practitioner/a4>
      ] ;
-     fhir:resource ( <http://localhost:9556/svc/fhir/Practitioner/a4> ) ;
+     fhir:resource <http://localhost:9556/svc/fhir/Practitioner/a4> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -80,7 +80,7 @@
        fhir:v "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32"^^xsd:anyURI ;
        fhir:l <http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32>
      ] ;
-     fhir:resource ( <http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32> ) ;
+     fhir:resource <http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [

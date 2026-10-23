@@ -20,25 +20,11 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0306" ] ;
-     fhir:code [
-       a sct:324252006 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "324252006" ] ;
-         fhir:display [ fhir:v "Azithromycin (as azithromycin dihydrate) 250 mg oral capsule" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationAdministration/medadmin0306#med0306> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0306> ;
+       fhir:l <http://hl7.org/fhir/MedicationAdministration/medadmin0306#med0306> ;
        fhir:reference [ fhir:v "#med0306" ]
      ]
   ] ; # 
@@ -108,6 +94,20 @@
        ] ;
        fhir:code [ fhir:v "TAB" ]
      ]
+  ] . # 
+
+<http://hl7.org/fhir/MedicationAdministration/medadmin0306#med0306> a fhir:Medication ;
+  fhir:id [ fhir:v "med0306"] ; # 
+  fhir:code [
+     a sct:324252006 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "324252006" ] ;
+       fhir:display [ fhir:v "Azithromycin (as azithromycin dihydrate) 250 mg oral capsule" ]
+     ] )
   ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .

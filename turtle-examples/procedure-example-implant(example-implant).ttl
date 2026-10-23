@@ -30,23 +30,7 @@
 #        <reference value="Patient/example"/> 
 #      </humanSubject> 
 #		</association>
-  fhir:contained ( [
-     a fhir:Device ;
-     fhir:id [ fhir:v "example-pacemaker" ] ;
-     fhir:manufacturer [ fhir:v "Acme Devices, Inc" ] ;
-     fhir:lotNumber [ fhir:v "1234-5678" ] ;
-     fhir:type ( [
-       a sct:14106009 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "14106009" ] ;
-         fhir:display [ fhir:v "Cardiac pacemaker, device (physical object)" ]
-       ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Procedure/example-implant#example-pacemaker> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:code [
      a sct:25267002 ;
@@ -95,9 +79,25 @@
        ] )
      ] ;
      fhir:manipulated [
-       fhir:l <#example-pacemaker> ;
+       fhir:l <http://hl7.org/fhir/Procedure/example-implant#example-pacemaker> ;
        fhir:reference [ fhir:v "#example-pacemaker" ]
      ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Procedure/example-implant#example-pacemaker> a fhir:Device ;
+  fhir:id [ fhir:v "example-pacemaker"] ; # 
+  fhir:manufacturer [ fhir:v "Acme Devices, Inc"] ; # 
+  fhir:lotNumber [ fhir:v "1234-5678"] ; # 
+  fhir:type ( [
+     a sct:14106009 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "14106009" ] ;
+       fhir:display [ fhir:v "Cardiac pacemaker, device (physical object)" ]
+     ] )
   ] ) . # 
 
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .

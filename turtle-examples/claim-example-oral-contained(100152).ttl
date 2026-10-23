@@ -23,140 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Oral Health Claim</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "org-insurer" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
-         fhir:l <http://www.bindb.com/bin>
-       ] ;
-       fhir:value [ fhir:v "123456" ]
-     ] )
-  ] [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "org-org" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/oralhealthoffices"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/oralhealthoffices>
-       ] ;
-       fhir:value [ fhir:v "3456" ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "provider-1" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/oralhealthproviders"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/oralhealthproviders>
-       ] ;
-       fhir:value [ fhir:v "123456789" ]
-     ] )
-  ] [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "patient-1" ] ;
-     fhir:name ( [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:family [ fhir:v "Donald" ] ;
-       fhir:given ( [ fhir:v "Duck" ] )
-     ] ) ;
-     fhir:gender [ fhir:v "male" ] ;
-     fhir:birthDate [ fhir:v "1986-05-17"^^xsd:date ] ;
-     fhir:address ( [
-       fhir:use [ fhir:v "home" ] ;
-       fhir:line ( [ fhir:v "1234 Main Street" ] ) ;
-       fhir:city [ fhir:v "Vancouver" ] ;
-       fhir:postalCode [ fhir:v "V2H1Y3" ] ;
-       fhir:country [ fhir:v "CAD" ]
-     ] )
-  ] [
-     a fhir:Coverage ;
-     fhir:id [ fhir:v "coverage-1" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://benefitsinc.com/certificate"^^xsd:anyURI ;
-         fhir:l <http://benefitsinc.com/certificate>
-       ] ;
-       fhir:value [ fhir:v "12345" ]
-     ] ) ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:kind [ fhir:v "insurance" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-         ] ;
-         fhir:code [ fhir:v "EHCPOL" ]
-       ] )
-     ] ;
-     fhir:subscriber [
-       fhir:l <#patient-1> ;
-       fhir:reference [ fhir:v "#patient-1" ]
-     ] ;
-     fhir:beneficiary [
-       fhir:l <#patient-1> ;
-       fhir:reference [ fhir:v "#patient-1" ]
-     ] ;
-     fhir:dependent [ fhir:v "1" ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:code [ fhir:v "self" ]
-       ] )
-     ] ;
-     fhir:insurer [
-       fhir:identifier [
-         fhir:system [
-           fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
-           fhir:l <http://www.bindb.com/bin>
-         ] ;
-         fhir:value [ fhir:v "123456" ]
-       ]
-     ] ;
-     fhir:class ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
-           ] ;
-           fhir:code [ fhir:v "plan" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "CBI35" ]
-       ] ;
-       fhir:name [ fhir:v "Corporate Baker's Inc. Plan#35" ]
-     ] [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
-           ] ;
-           fhir:code [ fhir:v "subplan" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "123" ]
-       ] ;
-       fhir:name [ fhir:v "Trainee Part-time Benefits" ]
-     ] [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
-           ] ;
-           fhir:code [ fhir:v "sequence" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "1" ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Claim/100152#org-insurer> <http://hl7.org/fhir/Claim/100152#org-org> <http://hl7.org/fhir/Claim/100152#provider-1> <http://hl7.org/fhir/Claim/100152#patient-1> <http://hl7.org/fhir/Claim/100152#coverage-1> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://happyvalley.com/claim"^^xsd:anyURI ;
@@ -177,11 +44,11 @@
   fhir:use [ fhir:v "claim"] ; # 
   fhir:created [ fhir:v "2014-08-16"^^xsd:date] ; # 
   fhir:insurer [
-     fhir:l <#org-insurer> ;
+     fhir:l <http://hl7.org/fhir/Claim/100152#org-insurer> ;
      fhir:reference [ fhir:v "#org-insurer" ]
   ] ; # 
   fhir:provider [
-     fhir:l <#org-org> ;
+     fhir:l <http://hl7.org/fhir/Claim/100152#org-org> ;
      fhir:reference [ fhir:v "#org-org" ]
   ] ; # 
   fhir:priority [
@@ -199,7 +66,7 @@
   fhir:careTeam ( [
      fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
      fhir:provider [
-       fhir:l <#provider-1> ;
+       fhir:l <http://hl7.org/fhir/Claim/100152#provider-1> ;
        fhir:reference [ fhir:v "#provider-1" ]
      ]
   ] ) ; # 
@@ -210,7 +77,7 @@
      fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
      fhir:focal [ fhir:v true ] ;
      fhir:coverage [
-       fhir:l <#coverage-1> ;
+       fhir:l <http://hl7.org/fhir/Claim/100152#coverage-1> ;
        fhir:reference [ fhir:v "#coverage-1" ]
      ]
   ] ) ; # 
@@ -233,6 +100,139 @@
      fhir:net [
        fhir:value [ fhir:v 135.57 ] ;
        fhir:currency [ fhir:v "USD" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/100152#org-insurer> a fhir:Organization ;
+  fhir:id [ fhir:v "org-insurer"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
+       fhir:l <http://www.bindb.com/bin>
+     ] ;
+     fhir:value [ fhir:v "123456" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/100152#org-org> a fhir:Organization ;
+  fhir:id [ fhir:v "org-org"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/oralhealthoffices"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/oralhealthoffices>
+     ] ;
+     fhir:value [ fhir:v "3456" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/100152#provider-1> a fhir:Practitioner ;
+  fhir:id [ fhir:v "provider-1"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/oralhealthproviders"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/oralhealthproviders>
+     ] ;
+     fhir:value [ fhir:v "123456789" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/100152#patient-1> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-1"] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Donald" ] ;
+     fhir:given ( [ fhir:v "Duck" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1986-05-17"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "1234 Main Street" ] ) ;
+     fhir:city [ fhir:v "Vancouver" ] ;
+     fhir:postalCode [ fhir:v "V2H1Y3" ] ;
+     fhir:country [ fhir:v "CAD" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/100152#coverage-1> a fhir:Coverage ;
+  fhir:id [ fhir:v "coverage-1"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://benefitsinc.com/certificate"^^xsd:anyURI ;
+       fhir:l <http://benefitsinc.com/certificate>
+     ] ;
+     fhir:value [ fhir:v "12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "insurance"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "EHCPOL" ]
+     ] )
+  ] ; # 
+  fhir:subscriber [
+     fhir:l <http://hl7.org/fhir/Claim/100152#patient-1> ;
+     fhir:reference [ fhir:v "#patient-1" ]
+  ] ; # 
+  fhir:beneficiary [
+     fhir:l <http://hl7.org/fhir/Claim/100152#patient-1> ;
+     fhir:reference [ fhir:v "#patient-1" ]
+  ] ; # 
+  fhir:dependent [ fhir:v "1"] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:code [ fhir:v "self" ]
+     ] )
+  ] ; # 
+  fhir:insurer [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
+         fhir:l <http://www.bindb.com/bin>
+       ] ;
+       fhir:value [ fhir:v "123456" ]
+     ]
+  ] ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
+         ] ;
+         fhir:code [ fhir:v "plan" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "CBI35" ]
+     ] ;
+     fhir:name [ fhir:v "Corporate Baker's Inc. Plan#35" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
+         ] ;
+         fhir:code [ fhir:v "subplan" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "123" ]
+     ] ;
+     fhir:name [ fhir:v "Trainee Part-time Benefits" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
+         ] ;
+         fhir:code [ fhir:v "sequence" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "1" ]
      ]
   ] ) . # 
 

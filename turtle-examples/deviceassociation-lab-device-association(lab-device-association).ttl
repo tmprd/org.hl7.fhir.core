@@ -20,42 +20,42 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "repair-tech" ]
-  ] [
-     a fhir:Device ;
-     fhir:id [ fhir:v "lab-analyzer" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:name ( [
-       fhir:value [ fhir:v "Beckman AU5800" ] ;
-       fhir:type [ ]
-     ] ) ;
-     fhir:type ( [
-       a sct:11987000 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "11987000" ] ;
-         fhir:display [ fhir:v "Clinical chemistry analyzer" ]
-       ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/DeviceAssociation/lab-device-association#repair-tech> <http://hl7.org/fhir/DeviceAssociation/lab-device-association#lab-analyzer> ) ; # 
   fhir:device [
-     fhir:l <#lab-analyzer> ;
+     fhir:l <http://hl7.org/fhir/DeviceAssociation/lab-device-association#lab-analyzer> ;
      fhir:reference [ fhir:v "#lab-analyzer" ]
   ] ; # 
   fhir:status [] ; # 
   fhir:subject [
-     fhir:l <#repair-tech> ;
+     fhir:l <http://hl7.org/fhir/DeviceAssociation/lab-device-association#repair-tech> ;
      fhir:reference [ fhir:v "#repair-tech" ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2025-07-10T10:00:00Z"^^xsd:dateTime ] ;
      fhir:end [ fhir:v "2025-07-10T12:00:00Z"^^xsd:dateTime ]
   ] . # 
+
+<http://hl7.org/fhir/DeviceAssociation/lab-device-association#repair-tech> a fhir:Practitioner ;
+  fhir:id [ fhir:v "repair-tech"] . # 
+
+<http://hl7.org/fhir/DeviceAssociation/lab-device-association#lab-analyzer> a fhir:Device ;
+  fhir:id [ fhir:v "lab-analyzer"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name ( [
+     fhir:value [ fhir:v "Beckman AU5800" ] ;
+     fhir:type [ ]
+  ] ) ; # 
+  fhir:type ( [
+     a sct:11987000 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "11987000" ] ;
+       fhir:display [ fhir:v "Clinical chemistry analyzer" ]
+     ] )
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

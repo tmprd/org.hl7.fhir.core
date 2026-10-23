@@ -26,13 +26,13 @@
        fhir:v "https://example.com/base/DiagnosticReport/f202"^^xsd:anyURI ;
        fhir:l <https://example.com/base/DiagnosticReport/f202>
      ] ;
-     fhir:resource ( <https://example.com/base/DiagnosticReport/f202> )
+     fhir:resource <https://example.com/base/DiagnosticReport/f202>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/ServiceRequest/req"^^xsd:anyURI ;
        fhir:l <https://example.com/base/ServiceRequest/req>
      ] ;
-     fhir:resource ( <https://example.com/base/ServiceRequest/req> )
+     fhir:resource <https://example.com/base/ServiceRequest/req>
   ] ) . # 
 
 <https://example.com/base/DiagnosticReport/f202> a fhir:DiagnosticReport ;
@@ -42,7 +42,7 @@
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport f202</b></p><a name=\"f202\"> </a><a name=\"hcf202\"> </a><h2><span title=\"Codes:{http://snomed.info/sct 104177005}\">Blood culture for bacteria, including anaerobic screen</span> (<span title=\"Codes:{http://snomed.info/sct 15220000}, {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory test</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Roel(official) Male, DoB: 1960-03-13 ( BSN: 123456789 (use: official, ))</td></tr><tr><td>Reported</td><td>2013-03-11T10:28:00+01:00</td></tr><tr><td>Performer</td><td> <a href=\"organization-example-f201-aumc.html\">AUMC</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href=\"observation-example-f206-staphylococcus.html\"><span title=\"Codes:{http://acmelabs.org 104177}, {http://loinc.org 600-7}\">Blood culture</span></a></td><td><span title=\"Codes:{http://snomed.info/sct 3092008}\">Staphylococcus aureus</span></td><td>Final, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation POS}\">Positive</span></td></tr></table><div><p>Blood culture tested positive on staphylococcus aureus</p>\n</div><p><b>Coded Conclusions:</b></p><ul><li><span title=\"Codes:{http://snomed.info/sct 428763004}\">Bacteremia caused by Staphylococcus aureus</span></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:basedOn ( [
-     fhir:l <http://hl7.org/fhir/ServiceRequest/req> ;
+     fhir:l <https://example.com/base/ServiceRequest/req> ;
      fhir:reference [ fhir:v "ServiceRequest/req" ]
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
@@ -75,31 +75,23 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:l <https://example.com/base/Patient/f201> ;
      fhir:reference [ fhir:v "Patient/f201" ] ;
      fhir:display [ fhir:v "Roel" ]
   ] ; # 
   fhir:issued [ fhir:v "2013-03-11T10:28:00+01:00"^^xsd:dateTime] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/f201> ;
+     fhir:l <https://example.com/base/Organization/f201> ;
      fhir:reference [ fhir:v "Organization/f201" ] ;
      fhir:display [ fhir:v "AUMC" ]
   ] ) ; # 
   fhir:result ( [
-     fhir:l <http://hl7.org/fhir/Observation/f206> ;
+     fhir:l <https://example.com/base/Observation/f206> ;
      fhir:reference [ fhir:v "Observation/f206" ] ;
      fhir:display [ fhir:v "Results for staphylococcus analysis on Roel's blood culture" ]
   ] ) ; # 
   fhir:conclusion [ fhir:v "Blood culture tested positive on staphylococcus aureus"] ; # 
   fhir:conclusionCode ( [] ) . # 
-
-<http://hl7.org/fhir/ServiceRequest/req> a fhir:ServiceRequest .
-
-<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
-
-<http://hl7.org/fhir/Organization/f201> a fhir:Organization .
-
-<http://hl7.org/fhir/Observation/f206> a fhir:Observation .
 
 <https://example.com/base/ServiceRequest/req> a fhir:ServiceRequest ;
   fhir:id [ fhir:v "req"] ; # 
@@ -123,24 +115,20 @@
      ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:l <https://example.com/base/Patient/f201> ;
      fhir:reference [ fhir:v "Patient/f201" ] ;
      fhir:display [ fhir:v "Roel" ]
   ] ; # 
   fhir:encounter [
-     fhir:l <http://hl7.org/fhir/Encounter/f203> ;
+     fhir:l <https://example.com/base/Encounter/f203> ;
      fhir:reference [ fhir:v "Encounter/f203" ] ;
      fhir:display [ fhir:v "Roel's encounter on March elevanth 2013" ]
   ] ; # 
   fhir:requester [
-     fhir:l <http://hl7.org/fhir/Practitioner/f201> ;
+     fhir:l <https://example.com/base/Practitioner/f201> ;
      fhir:reference [ fhir:v "Practitioner/f201" ] ;
      fhir:display [ fhir:v "Dokter Bronsig" ]
   ] . # 
-
-<http://hl7.org/fhir/Encounter/f203> a fhir:Encounter .
-
-<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
 
 # -------------------------------------------------------------------------------------
 

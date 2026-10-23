@@ -26,14 +26,14 @@
        fhir:v "http://example.org/fhir/Patient/example"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/Patient/example>
      ] ;
-     fhir:resource ( <http://example.org/fhir/Patient/example> ) ;
+     fhir:resource <http://example.org/fhir/Patient/example> ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "2c2fb771-6c4b-4df8-89b2-47a1178e7c" ] ;
        fhir:meta [
@@ -53,7 +53,7 @@
            fhir:v "http://test.fhir.org/r5/Condition/example"^^xsd:anyURI ;
            fhir:l <http://test.fhir.org/r5/Condition/example>
          ] ;
-         fhir:resource ( <http://test.fhir.org/r5/Condition/example> ) ;
+         fhir:resource <http://test.fhir.org/r5/Condition/example> ;
          fhir:search [
            fhir:mode [ fhir:v "match" ]
          ]
@@ -62,7 +62,7 @@
            fhir:v "http://test.fhir.org/r5/Condition/example2"^^xsd:anyURI ;
            fhir:l <http://test.fhir.org/r5/Condition/example2>
          ] ;
-         fhir:resource ( <http://test.fhir.org/r5/Condition/example2> ) ;
+         fhir:resource <http://test.fhir.org/r5/Condition/example2> ;
          fhir:search [
            fhir:mode [ fhir:v "match" ]
          ]
@@ -71,7 +71,7 @@
            fhir:v "http://test.fhir.org/r5/Condition/family-history"^^xsd:anyURI ;
            fhir:l <http://test.fhir.org/r5/Condition/family-history>
          ] ;
-         fhir:resource ( <http://test.fhir.org/r5/Condition/family-history> ) ;
+         fhir:resource <http://test.fhir.org/r5/Condition/family-history> ;
          fhir:search [
            fhir:mode [ fhir:v "match" ]
          ]
@@ -80,19 +80,19 @@
            fhir:v "http://test.fhir.org/r5/Condition/stroke"^^xsd:anyURI ;
            fhir:l <http://test.fhir.org/r5/Condition/stroke>
          ] ;
-         fhir:resource ( <http://test.fhir.org/r5/Condition/stroke> ) ;
+         fhir:resource <http://test.fhir.org/r5/Condition/stroke> ;
          fhir:search [
            fhir:mode [ fhir:v "match" ]
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "86846953-60dd-47ba-b37a-7e7d7e3312" ] ;
        fhir:meta [
@@ -107,14 +107,14 @@
            fhir:l <http://test.fhir.org/r5/MedicationStatement?_format=application/fhir+xml&search-id=0f08b401-5120-4444-9a83-3fd21d33df&&patient=example&_sort=_id>
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
        fhir:lastModified [ fhir:v "2018-11-12T03:35:20.717Z"^^xsd:dateTime ]
      ]
   ] [
-     fhir:resource ( [
+     fhir:resource [
        a fhir:Bundle ;
        fhir:id [ fhir:v "4bafe9c4-ba53-4d7b-89d0-d92ee0859a" ] ;
        fhir:meta [
@@ -129,7 +129,7 @@
            fhir:l <http://test.fhir.org/r5/Observation?_format=application/fhir+xml&search-id=50df0414-1375-48a4-ba1e-66f580360a&&patient=example&code=http%3A//loinc.org%7C55284%2D4&date=ge2015%2D01%2D01&_sort=_id>
          ]
        ] )
-     ] ) ;
+     ] ;
      fhir:response [
        fhir:status [ fhir:v "200" ] ;
        fhir:etag [ fhir:v "W/1" ] ;
@@ -285,11 +285,9 @@
      ]
   ] ) ; # 
   fhir:managingOrganization [
-     fhir:l <http://hl7.org/fhir/Organization/1> ;
+     fhir:l <http://example.org/fhir/Organization/1> ;
      fhir:reference [ fhir:v "Organization/1" ]
   ] . # 
-
-<http://hl7.org/fhir/Organization/1> a fhir:Organization .
 
 <http://test.fhir.org/r5/Condition/example> a fhir:Condition ;
   fhir:id [ fhir:v "example"] ; # 
@@ -361,15 +359,13 @@
      fhir:text [ fhir:v "Burnt Ear" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:l <http://test.fhir.org/r5/Patient/example> ;
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:onset [
      a fhir:DateTime ;
      fhir:v "2012-05-24"^^xsd:date
   ] . # 
-
-<http://hl7.org/fhir/Patient/example> a fhir:Patient .
 
 <http://test.fhir.org/r5/Condition/example2> a fhir:Condition ;
   fhir:id [ fhir:v "example2"] ; # 
@@ -424,7 +420,7 @@
      fhir:text [ fhir:v "Asthma" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:l <http://test.fhir.org/r5/Patient/example> ;
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:onset [
@@ -473,7 +469,7 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:l <http://test.fhir.org/r5/Patient/example> ;
      fhir:reference [ fhir:v "Patient/example" ]
   ] . # 
 
@@ -528,7 +524,7 @@
      fhir:text [ fhir:v "Stroke" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:l <http://test.fhir.org/r5/Patient/example> ;
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:onset [

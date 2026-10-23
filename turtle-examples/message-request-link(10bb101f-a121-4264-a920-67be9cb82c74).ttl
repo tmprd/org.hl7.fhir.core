@@ -33,19 +33,19 @@
        fhir:v "urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b"^^xsd:anyURI ;
        fhir:l <urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b>
      ] ;
-     fhir:resource ( <urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b> )
+     fhir:resource <urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b>
   ] [
      fhir:fullUrl [
        fhir:v "http://acme.com/ehr/fhir/Patient/pat1"^^xsd:anyURI ;
        fhir:l <http://acme.com/ehr/fhir/Patient/pat1>
      ] ;
-     fhir:resource ( <http://acme.com/ehr/fhir/Patient/pat1> )
+     fhir:resource <http://acme.com/ehr/fhir/Patient/pat1>
   ] [
      fhir:fullUrl [
        fhir:v "http://acme.com/ehr/fhir/Patient/pat2"^^xsd:anyURI ;
        fhir:l <http://acme.com/ehr/fhir/Patient/pat2>
      ] ;
-     fhir:resource ( <http://acme.com/ehr/fhir/Patient/pat2> )
+     fhir:resource <http://acme.com/ehr/fhir/Patient/pat2>
   ] ) . # 
 
 <urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b> a fhir:MessageHeader ;
@@ -128,18 +128,16 @@
        ] )
      ] ) ;
      fhir:organization [
-       fhir:l <http://hl7.org/fhir/Organization/1> ;
+       fhir:l <http://acme.com/ehr/fhir/Organization/1> ;
        fhir:reference [ fhir:v "Organization/1" ] ;
        fhir:display [ fhir:v "Walt Disney Corporation" ]
      ]
   ] ) ; # 
   fhir:managingOrganization [
-     fhir:l <http://hl7.org/fhir/Organization/1> ;
+     fhir:l <http://acme.com/ehr/fhir/Organization/1> ;
      fhir:reference [ fhir:v "Organization/1" ] ;
      fhir:display [ fhir:v "ACME Healthcare, Inc" ]
   ] . # 
-
-<http://hl7.org/fhir/Organization/1> a fhir:Organization .
 
 <http://acme.com/ehr/fhir/Patient/pat2> a fhir:Patient ;
   fhir:id [ fhir:v "pat2"] ; # 
@@ -191,7 +189,7 @@
      ] )
   ] ; # 
   fhir:managingOrganization [
-     fhir:l <http://hl7.org/fhir/Organization/1> ;
+     fhir:l <http://acme.com/ehr/fhir/Organization/1> ;
      fhir:reference [ fhir:v "Organization/1" ] ;
      fhir:display [ fhir:v "ACME Healthcare, Inc" ]
   ] . # 

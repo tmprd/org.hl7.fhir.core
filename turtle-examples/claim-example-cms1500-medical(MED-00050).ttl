@@ -23,88 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of a CMS 1500 Claim</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "patient-1" ] ;
-     fhir:name ( [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:family [ fhir:v "Ashcraft" ] ;
-       fhir:given ( [ fhir:v "Alvina" ] )
-     ] ) ;
-     fhir:gender [ fhir:v "female" ] ;
-     fhir:birthDate [ fhir:v "1954-06-11"^^xsd:date ] ;
-     fhir:address ( [
-       fhir:use [ fhir:v "home" ] ;
-       fhir:line ( [ fhir:v "123 Main Street" ] ) ;
-       fhir:city [ fhir:v "Portland" ] ;
-       fhir:state [ fhir:v "OR" ] ;
-       fhir:postalCode [ fhir:v "97125" ] ;
-       fhir:country [ fhir:v "USA" ]
-     ] )
-  ] [
-     a fhir:Coverage ;
-     fhir:id [ fhir:v "coverage-1" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://benefitsinc.com/certificate"^^xsd:anyURI ;
-         fhir:l <http://benefitsinc.com/certificate>
-       ] ;
-       fhir:value [ fhir:v "10138556" ]
-     ] ) ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:kind [ fhir:v "insurance" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-         ] ;
-         fhir:code [ fhir:v "HIP" ] ;
-         fhir:display [ fhir:v "health insurance plan policy" ]
-       ] )
-     ] ;
-     fhir:subscriber [
-       fhir:l <#patient-1> ;
-       fhir:reference [ fhir:v "#patient-1" ]
-     ] ;
-     fhir:beneficiary [
-       fhir:l <#patient-1> ;
-       fhir:reference [ fhir:v "#patient-1" ]
-     ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:code [ fhir:v "self" ]
-       ] )
-     ] ;
-     fhir:period [
-       fhir:start [ fhir:v "2015-01-01T00:00:00-07:00"^^xsd:dateTime ] ;
-       fhir:end [ fhir:v "2016-01-01T00:00:00-07:00"^^xsd:dateTime ]
-     ] ;
-     fhir:insurer [
-       fhir:identifier [
-         fhir:system [
-           fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
-           fhir:l <http://www.bindb.com/bin>
-         ] ;
-         fhir:value [ fhir:v "123456" ]
-       ] ;
-       fhir:display [ fhir:v "Humana Inc." ]
-     ] ;
-     fhir:class ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
-           ] ;
-           fhir:code [ fhir:v "group" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "80902206" ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Claim/MED-00050#patient-1> <http://hl7.org/fhir/Claim/MED-00050#coverage-1> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://CedarArmsMedicalCenter.com/claim"^^xsd:anyURI ;
@@ -233,7 +152,7 @@
        fhir:value [ fhir:v "MED-00050" ]
      ] ;
      fhir:coverage [
-       fhir:l <#coverage-1> ;
+       fhir:l <http://hl7.org/fhir/Claim/MED-00050#coverage-1> ;
        fhir:reference [ fhir:v "#coverage-1" ]
      ]
   ] ) ; # 
@@ -280,6 +199,87 @@
      fhir:value [ fhir:v 12500.00 ] ;
      fhir:currency [ fhir:v "USD" ]
   ] . # 
+
+<http://hl7.org/fhir/Claim/MED-00050#patient-1> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-1"] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Ashcraft" ] ;
+     fhir:given ( [ fhir:v "Alvina" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1954-06-11"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "123 Main Street" ] ) ;
+     fhir:city [ fhir:v "Portland" ] ;
+     fhir:state [ fhir:v "OR" ] ;
+     fhir:postalCode [ fhir:v "97125" ] ;
+     fhir:country [ fhir:v "USA" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/MED-00050#coverage-1> a fhir:Coverage ;
+  fhir:id [ fhir:v "coverage-1"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://benefitsinc.com/certificate"^^xsd:anyURI ;
+       fhir:l <http://benefitsinc.com/certificate>
+     ] ;
+     fhir:value [ fhir:v "10138556" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "insurance"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "HIP" ] ;
+       fhir:display [ fhir:v "health insurance plan policy" ]
+     ] )
+  ] ; # 
+  fhir:subscriber [
+     fhir:l <http://hl7.org/fhir/Claim/MED-00050#patient-1> ;
+     fhir:reference [ fhir:v "#patient-1" ]
+  ] ; # 
+  fhir:beneficiary [
+     fhir:l <http://hl7.org/fhir/Claim/MED-00050#patient-1> ;
+     fhir:reference [ fhir:v "#patient-1" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:code [ fhir:v "self" ]
+     ] )
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2015-01-01T00:00:00-07:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2016-01-01T00:00:00-07:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:insurer [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
+         fhir:l <http://www.bindb.com/bin>
+       ] ;
+       fhir:value [ fhir:v "123456" ]
+     ] ;
+     fhir:display [ fhir:v "Humana Inc." ]
+  ] ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
+         ] ;
+         fhir:code [ fhir:v "group" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "80902206" ]
+     ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Organization/1> a fhir:Organization .
 

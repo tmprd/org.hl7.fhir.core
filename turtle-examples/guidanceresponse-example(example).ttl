@@ -19,44 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Parameters ;
-     fhir:id [ fhir:v "outputParameters1" ] ;
-     fhir:parameter ( [
-       fhir:name [ fhir:v "score" ] ;
-       fhir:value [
-         a fhir:Decimal ;
-         fhir:v "7"^^xsd:decimal
-       ]
-     ] [
-       fhir:name [ fhir:v "item-assessed" ] ;
-       fhir:value [
-         a fhir:CodeableConcept ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
-             fhir:l <http://www.ama-assn.org/go/cpt>
-           ] ;
-           fhir:code [ fhir:v "70450" ] ;
-           fhir:display [ fhir:v "Computed tomography, head or brain; without contrast material" ]
-         ] )
-       ]
-     ] [
-       fhir:name [ fhir:v "device" ] ;
-       fhir:value [
-         a fhir:Reference ;
-         fhir:l <http://hl7.org/fhir/Device/software> ;
-         fhir:reference [ fhir:v "Device/software" ]
-       ]
-     ] [
-       fhir:name [ fhir:v "guideline-followed" ] ;
-       fhir:value [
-         a fhir:Uri ;
-         fhir:v "http://someguidelineprovider.org/radiology-appropriateness-guidelines.html"^^xsd:anyURI ;
-         fhir:l <http://someguidelineprovider.org/radiology-appropriateness-guidelines.html>
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/GuidanceResponse/example#outputParameters1> ) ; # 
   fhir:requestIdentifier [
      fhir:system [
        fhir:v "http://example.org"^^xsd:anyURI ;
@@ -96,9 +59,46 @@
      ]
   ] ) ; # 
   fhir:outputParameters [
-     fhir:l <#outputParameters1> ;
+     fhir:l <http://hl7.org/fhir/GuidanceResponse/example#outputParameters1> ;
      fhir:reference [ fhir:v "#outputParameters1" ]
   ] . # 
+
+<http://hl7.org/fhir/GuidanceResponse/example#outputParameters1> a fhir:Parameters ;
+  fhir:id [ fhir:v "outputParameters1"] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "score" ] ;
+     fhir:value [
+       a fhir:Decimal ;
+       fhir:v "7"^^xsd:decimal
+     ]
+  ] [
+     fhir:name [ fhir:v "item-assessed" ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+           fhir:l <http://www.ama-assn.org/go/cpt>
+         ] ;
+         fhir:code [ fhir:v "70450" ] ;
+         fhir:display [ fhir:v "Computed tomography, head or brain; without contrast material" ]
+       ] )
+     ]
+  ] [
+     fhir:name [ fhir:v "device" ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <http://hl7.org/fhir/Device/software> ;
+       fhir:reference [ fhir:v "Device/software" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "guideline-followed" ] ;
+     fhir:value [
+       a fhir:Uri ;
+       fhir:v "http://someguidelineprovider.org/radiology-appropriateness-guidelines.html"^^xsd:anyURI ;
+       fhir:l <http://someguidelineprovider.org/radiology-appropriateness-guidelines.html>
+     ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Device/software> a fhir:Device .
 

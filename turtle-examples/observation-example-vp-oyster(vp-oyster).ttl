@@ -21,35 +21,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Specimen ;
-     fhir:id [ fhir:v "bed1" ] ;
-     fhir:note ( [
-       fhir:text [ fhir:v "Live Oysters Acc#20171014-1234 from Bed 1" ]
-     ] )
-  ] [
-     a fhir:Specimen ;
-     fhir:id [ fhir:v "bed2" ] ;
-     fhir:note ( [
-       fhir:text [ fhir:v "Live Oysters Acc#20171014-1234 from Bed 2" ]
-     ] )
-  ] [
-     a fhir:Group ;
-     fhir:id [ fhir:v "group1" ] ;
-     fhir:type [ fhir:v "animal" ] ;
-     fhir:membership [ fhir:v "enumerated" ] ;
-     fhir:member ( [
-       fhir:entity [
-         fhir:l <#bed1> ;
-         fhir:reference [ fhir:v "#bed1" ]
-       ]
-     ] [
-       fhir:entity [
-         fhir:l <#bed2> ;
-         fhir:reference [ fhir:v "#bed2" ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Observation/vp-oyster#bed1> <http://hl7.org/fhir/Observation/vp-oyster#bed2> <http://hl7.org/fhir/Observation/vp-oyster#group1> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -125,11 +97,39 @@
      ] )
   ] ) ; # 
   fhir:specimen [
-     fhir:l <#group1> ;
+     fhir:l <http://hl7.org/fhir/Observation/vp-oyster#group1> ;
      fhir:reference [ fhir:v "#group1" ]
   ] ; # 
   fhir:referenceRange ( [
      fhir:text [ fhir:v "NEGATIVE" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/vp-oyster#bed1> a fhir:Specimen ;
+  fhir:id [ fhir:v "bed1"] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Live Oysters Acc#20171014-1234 from Bed 1" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/vp-oyster#bed2> a fhir:Specimen ;
+  fhir:id [ fhir:v "bed2"] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Live Oysters Acc#20171014-1234 from Bed 2" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Observation/vp-oyster#group1> a fhir:Group ;
+  fhir:id [ fhir:v "group1"] ; # 
+  fhir:type [ fhir:v "animal"] ; # 
+  fhir:membership [ fhir:v "enumerated"] ; # 
+  fhir:member ( [
+     fhir:entity [
+       fhir:l <http://hl7.org/fhir/Observation/vp-oyster#bed1> ;
+       fhir:reference [ fhir:v "#bed1" ]
+     ]
+  ] [
+     fhir:entity [
+       fhir:l <http://hl7.org/fhir/Observation/vp-oyster#bed2> ;
+       fhir:reference [ fhir:v "#bed2" ]
+     ]
   ] ) . # 
 
 <http://hl7.org/fhir/Practitioner/f005> a fhir:Practitioner .

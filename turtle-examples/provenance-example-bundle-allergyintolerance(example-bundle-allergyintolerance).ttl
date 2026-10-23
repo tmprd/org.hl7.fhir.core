@@ -34,7 +34,7 @@
        fhir:v "http://example.org/fhir/AllergyIntolerance/79613"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/AllergyIntolerance/79613>
      ] ;
-     fhir:resource ( <http://example.org/fhir/AllergyIntolerance/79613> ) ;
+     fhir:resource <http://example.org/fhir/AllergyIntolerance/79613> ;
      fhir:search [
        fhir:mode [ fhir:v "match" ]
      ]
@@ -43,7 +43,7 @@
        fhir:v "http://example.org/fhir/Provenance/79614"^^xsd:anyURI ;
        fhir:l <http://example.org/fhir/Provenance/79614>
      ] ;
-     fhir:resource ( <http://example.org/fhir/Provenance/79614> ) ;
+     fhir:resource <http://example.org/fhir/Provenance/79614> ;
      fhir:search [
        fhir:mode [ fhir:v "include" ]
      ]
@@ -95,7 +95,7 @@
      fhir:text [ fhir:v "Peanuts" ]
   ] ; # 
   fhir:patient [
-     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:l <http://example.org/fhir/Patient/example> ;
      fhir:reference [ fhir:v "Patient/example" ]
   ] ; # 
   fhir:onset [
@@ -120,8 +120,6 @@
      fhir:onset [ fhir:v "2017-06-09"^^xsd:date ]
   ] ) . # 
 
-<http://hl7.org/fhir/Patient/example> a fhir:Patient .
-
 <http://example.org/fhir/Provenance/79614> a fhir:Provenance ;
   fhir:id [ fhir:v "79614"] ; # 
   fhir:text [
@@ -129,7 +127,7 @@
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance 79614</b></p><a name=\"79614\"> </a><a name=\"hc79614\"> </a><p>Provenance for <a href=\"broken-link.html\">AllergyIntolerance/79613</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2019-07-09T15:26:23.217Z</td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type custodian}\">Custodian</span></td><td><a href=\"organization-example.html\">Organization ACME Health</a></td><td/></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"practitioner-example-f004-rb.html\">Practitioner Ronald Briet (official)</a></td><td><a href=\"organization-example.html\">Organization ACME Health</a></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:target ( [
-     fhir:l <http://hl7.org/fhir/AllergyIntolerance/79613/_history/1> ;
+     fhir:l <http://example.org/fhir/AllergyIntolerance/79613/_history/1> ;
      fhir:reference [ fhir:v "AllergyIntolerance/79613/_history/1" ]
   ] ) ; # 
   fhir:recorded [ fhir:v "2019-07-09T15:26:23.217+00:00"^^xsd:dateTime] ; # 
@@ -145,7 +143,7 @@
        ] )
      ] ;
      fhir:who [
-       fhir:l <http://hl7.org/fhir/Organization/example> ;
+       fhir:l <http://example.org/fhir/Organization/example> ;
        fhir:reference [ fhir:v "Organization/example" ]
      ]
   ] [
@@ -160,20 +158,14 @@
        ] )
      ] ;
      fhir:who [
-       fhir:l <http://hl7.org/fhir/Practitioner/f004> ;
+       fhir:l <http://example.org/fhir/Practitioner/f004> ;
        fhir:reference [ fhir:v "Practitioner/f004" ]
      ] ;
      fhir:onBehalfOf [
-       fhir:l <http://hl7.org/fhir/Organization/example> ;
+       fhir:l <http://example.org/fhir/Organization/example> ;
        fhir:reference [ fhir:v "Organization/example" ]
      ]
   ] ) . # 
-
-<http://hl7.org/fhir/AllergyIntolerance/79613/_history/1> a fhir:AllergyIntolerance .
-
-<http://hl7.org/fhir/Organization/example> a fhir:Organization .
-
-<http://hl7.org/fhir/Practitioner/f004> a fhir:Practitioner .
 
 # -------------------------------------------------------------------------------------
 

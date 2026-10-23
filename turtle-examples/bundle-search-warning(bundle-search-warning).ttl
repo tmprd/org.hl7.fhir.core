@@ -26,7 +26,7 @@
      fhir:relation [ fhir:v "self" ] ;
      fhir:url [
        fhir:v "https://example.org/fhir/Observation?patient.identifier=http://example.com/fhir/identifier/mrn|123456"^^xsd:anyURI ;
-       fhir:l <https://example.org/fhir/Observation?patient.identifier=http://example.com/fhir/identifier/mrn&version=123456>
+       fhir:l <https://example.org/fhir/Observation?patient.identifier=http://example.com/fhir/identifier/mrn%7C123456>
      ]
   ] ) ; # 
   fhir:entry ( [
@@ -34,7 +34,7 @@
        fhir:v "urn:uuid:2866af9c-137d-4458-a8a9-eeeec0ce5583"^^xsd:anyURI ;
        fhir:l <urn:uuid:2866af9c-137d-4458-a8a9-eeeec0ce5583>
      ] ;
-     fhir:resource ( <urn:uuid:2866af9c-137d-4458-a8a9-eeeec0ce5583> ) ;
+     fhir:resource <urn:uuid:2866af9c-137d-4458-a8a9-eeeec0ce5583> ;
      fhir:search [
        fhir:mode [ fhir:v "outcome" ] # this is not a match - it's about the search
      ]

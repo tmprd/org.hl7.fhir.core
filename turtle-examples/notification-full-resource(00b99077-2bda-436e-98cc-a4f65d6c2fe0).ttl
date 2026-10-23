@@ -26,13 +26,13 @@
        fhir:v "urn:uuid:d195d9b8-6f78-4d71-9d22-3c1a923bfea5"^^xsd:anyURI ;
        fhir:l <urn:uuid:d195d9b8-6f78-4d71-9d22-3c1a923bfea5>
      ] ;
-     fhir:resource ( <urn:uuid:d195d9b8-6f78-4d71-9d22-3c1a923bfea5> )
+     fhir:resource <urn:uuid:d195d9b8-6f78-4d71-9d22-3c1a923bfea5>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.org/FHIR/R5/Encounter/2"^^xsd:anyURI ;
        fhir:l <https://example.org/FHIR/R5/Encounter/2>
      ] ;
-     fhir:resource ( <https://example.org/FHIR/R5/Encounter/2> ) ;
+     fhir:resource <https://example.org/FHIR/R5/Encounter/2> ;
      fhir:request [
        fhir:method [ fhir:v "PUT" ] ;
        fhir:url [
@@ -92,11 +92,9 @@
      ] )
   ] ) ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/ABC> ;
+     fhir:l <https://example.org/FHIR/R5/Patient/ABC> ;
      fhir:reference [ fhir:v "Patient/ABC" ]
   ] . # 
-
-<http://hl7.org/fhir/Patient/ABC> a fhir:Patient .
 
 # -------------------------------------------------------------------------------------
 

@@ -19,59 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:SubstanceDefinition ;
-     fhir:id [ fhir:v "comp-quinoline-6-sulfonate" ] ;
-     fhir:classification ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://example.europa.eu/fhir/SubstanceType"^^xsd:anyURI ;
-           fhir:l <http://example.europa.eu/fhir/SubstanceType>
-         ] ;
-         fhir:code [ fhir:v "chemical" ] ;
-         fhir:display [ fhir:v "Chemical" ]
-       ] )
-     ] ) ;
-     fhir:name ( [
-       fhir:name [ fhir:v "Aluminum 2-(1,3-dioxo-2,3-dihydro-1H-inden-2-yl)quinoline-6-sulfonate" ] ;
-       fhir:preferred [ fhir:v true ]
-     ] )
-  ] [
-     a fhir:SubstanceDefinition ;
-     fhir:id [ fhir:v "comp-quinoline-8-sulfonate" ] ;
-     fhir:classification ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://example.europa.eu/fhir/SubstanceType"^^xsd:anyURI ;
-           fhir:l <http://example.europa.eu/fhir/SubstanceType>
-         ] ;
-         fhir:code [ fhir:v "chemical" ] ;
-         fhir:display [ fhir:v "Chemical" ]
-       ] )
-     ] ) ;
-     fhir:name ( [
-       fhir:name [ fhir:v "Aluminum 2-(1,3-dioxo-2,3-dihydro-1H-inden-2-yl)quinoline-8-sulfonate" ] ;
-       fhir:preferred [ fhir:v true ]
-     ] )
-  ] [
-     a fhir:SubstanceDefinition ;
-     fhir:id [ fhir:v "comp-substrate" ] ;
-     fhir:classification ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://example.europa.eu/fhir/SubstanceType"^^xsd:anyURI ;
-           fhir:l <http://example.europa.eu/fhir/SubstanceType>
-         ] ;
-         fhir:code [ fhir:v "chemical" ] ;
-         fhir:display [ fhir:v "Chemical" ]
-       ] )
-     ] ) ;
-     fhir:description [ fhir:v "The aluminum substrate onto which the dye is precipitated to form the lake. Unspecified in GSRS." ] ;
-     fhir:name ( [
-       fhir:name [ fhir:v "Unspecified aluminum substrate" ] ;
-       fhir:preferred [ fhir:v true ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-quinoline-6-sulfonate> <http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-quinoline-8-sulfonate> <http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-substrate> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://fdasis.nlm.nih.gov"^^xsd:anyURI ;
@@ -139,7 +87,7 @@
   fhir:relationship ( [
      fhir:substanceDefinition [
        a fhir:Reference ;
-       fhir:l <#comp-quinoline-6-sulfonate> ;
+       fhir:l <http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-quinoline-6-sulfonate> ;
        fhir:reference [ fhir:v "#comp-quinoline-6-sulfonate" ] ;
        fhir:display [ fhir:v "Aluminum quinoline-6-sulfonate isomer" ]
      ] ;
@@ -156,7 +104,7 @@
   ] [
      fhir:substanceDefinition [
        a fhir:Reference ;
-       fhir:l <#comp-quinoline-8-sulfonate> ;
+       fhir:l <http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-quinoline-8-sulfonate> ;
        fhir:reference [ fhir:v "#comp-quinoline-8-sulfonate" ] ;
        fhir:display [ fhir:v "Aluminum quinoline-8-sulfonate isomer" ]
      ] ;
@@ -173,7 +121,7 @@
   ] [
      fhir:substanceDefinition [
        a fhir:Reference ;
-       fhir:l <#comp-substrate> ;
+       fhir:l <http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-substrate> ;
        fhir:reference [ fhir:v "#comp-substrate" ] ;
        fhir:display [ fhir:v "Unspecified aluminum substrate" ]
      ] ;
@@ -187,6 +135,58 @@
          fhir:display [ fhir:v "Component" ]
        ] )
      ]
+  ] ) . # 
+
+<http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-quinoline-6-sulfonate> a fhir:SubstanceDefinition ;
+  fhir:id [ fhir:v "comp-quinoline-6-sulfonate"] ; # 
+  fhir:classification ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://example.europa.eu/fhir/SubstanceType"^^xsd:anyURI ;
+         fhir:l <http://example.europa.eu/fhir/SubstanceType>
+       ] ;
+       fhir:code [ fhir:v "chemical" ] ;
+       fhir:display [ fhir:v "Chemical" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:name [ fhir:v "Aluminum 2-(1,3-dioxo-2,3-dihydro-1H-inden-2-yl)quinoline-6-sulfonate" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] ) . # 
+
+<http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-quinoline-8-sulfonate> a fhir:SubstanceDefinition ;
+  fhir:id [ fhir:v "comp-quinoline-8-sulfonate"] ; # 
+  fhir:classification ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://example.europa.eu/fhir/SubstanceType"^^xsd:anyURI ;
+         fhir:l <http://example.europa.eu/fhir/SubstanceType>
+       ] ;
+       fhir:code [ fhir:v "chemical" ] ;
+       fhir:display [ fhir:v "Chemical" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:name [ fhir:v "Aluminum 2-(1,3-dioxo-2,3-dihydro-1H-inden-2-yl)quinoline-8-sulfonate" ] ;
+     fhir:preferred [ fhir:v true ]
+  ] ) . # 
+
+<http://hl7.org/fhir/SubstanceDefinition/dc-yellow-10-al-lake#comp-substrate> a fhir:SubstanceDefinition ;
+  fhir:id [ fhir:v "comp-substrate"] ; # 
+  fhir:classification ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://example.europa.eu/fhir/SubstanceType"^^xsd:anyURI ;
+         fhir:l <http://example.europa.eu/fhir/SubstanceType>
+       ] ;
+       fhir:code [ fhir:v "chemical" ] ;
+       fhir:display [ fhir:v "Chemical" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The aluminum substrate onto which the dye is precipitated to form the lake. Unspecified in GSRS."] ; # 
+  fhir:name ( [
+     fhir:name [ fhir:v "Unspecified aluminum substrate" ] ;
+     fhir:preferred [ fhir:v true ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

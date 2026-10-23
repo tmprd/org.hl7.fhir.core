@@ -26,73 +26,73 @@
        fhir:v "http://hl7.org/fhir/Endpoint/71"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/71>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/71> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/71>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/72"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/72>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/72> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/72>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/73"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/73>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/73> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/73>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/74"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/74>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/74> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/74>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/75"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/75>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/75> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/75>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/76"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/76>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/76> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/76>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/77"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/77>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/77> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/77>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/78"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/78>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/78> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/78>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/79"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/79>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/79> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/79>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/80"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/80>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/80> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/80>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/81"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/81>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/81> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/81>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/Endpoint/82"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/Endpoint/82>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/Endpoint/82> )
+     fhir:resource <http://hl7.org/fhir/Endpoint/82>
   ] ) . # 
 
 <http://hl7.org/fhir/Endpoint/71> a fhir:Endpoint ;
@@ -272,7 +272,7 @@
 #        </method>
   fhir:address [
      fhir:v "mailto:subscriptions@example.org"^^xsd:anyURI ;
-     fhir:l fhir:mailto:subscriptions@example.org
+     fhir:l <mailto:subscriptions@example.org>
   ] . # 
 
 <http://hl7.org/fhir/Endpoint/76> a fhir:Endpoint ;
@@ -344,7 +344,7 @@
 #        </method>
   fhir:address [
      fhir:v "mllp://127.0.0.1:4001"^^xsd:anyURI ;
-     fhir:l <http://hl7.org/fhir/mllp://127.0.0.1:4001>
+     fhir:l <mllp://127.0.0.1:4001>
   ] . # 
 
 <http://hl7.org/fhir/Endpoint/78> a fhir:Endpoint ;

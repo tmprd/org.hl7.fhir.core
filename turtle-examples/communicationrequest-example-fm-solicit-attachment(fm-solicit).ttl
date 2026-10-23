@@ -23,33 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Request for Accident Report</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "provider" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/provideroffices"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/provideroffices>
-       ] ;
-       fhir:value [ fhir:v "3456" ]
-     ] )
-  ] [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "payer" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://www.jurisdiction.com/insurer"^^xsd:anyURI ;
-         fhir:l <http://www.jurisdiction.com/insurer>
-       ] ;
-       fhir:value [ fhir:v "123456" ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "requester" ] ;
-     fhir:identifier ( [
-       fhir:value [ fhir:v "6789" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CommunicationRequest/fm-solicit#provider> <http://hl7.org/fhir/CommunicationRequest/fm-solicit#payer> <http://hl7.org/fhir/CommunicationRequest/fm-solicit#requester> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://www.jurisdiction.com/insurer/123456"^^xsd:anyURI ;
@@ -105,16 +79,42 @@
   ] ; # 
   fhir:authoredOn [ fhir:v "2016-06-10T11:01:10-08:00"^^xsd:dateTime] ; # 
   fhir:requester [
-     fhir:l <#requester> ;
+     fhir:l <http://hl7.org/fhir/CommunicationRequest/fm-solicit#requester> ;
      fhir:reference [ fhir:v "#requester" ]
   ] ; # 
   fhir:recipient ( [
-     fhir:l <#provider> ;
+     fhir:l <http://hl7.org/fhir/CommunicationRequest/fm-solicit#provider> ;
      fhir:reference [ fhir:v "#provider" ]
   ] ) ; # 
   fhir:informationProvider ( [
-     fhir:l <#payer> ;
+     fhir:l <http://hl7.org/fhir/CommunicationRequest/fm-solicit#payer> ;
      fhir:reference [ fhir:v "#payer" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CommunicationRequest/fm-solicit#provider> a fhir:Organization ;
+  fhir:id [ fhir:v "provider"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/provideroffices"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/provideroffices>
+     ] ;
+     fhir:value [ fhir:v "3456" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CommunicationRequest/fm-solicit#payer> a fhir:Organization ;
+  fhir:id [ fhir:v "payer"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://www.jurisdiction.com/insurer"^^xsd:anyURI ;
+       fhir:l <http://www.jurisdiction.com/insurer>
+     ] ;
+     fhir:value [ fhir:v "123456" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CommunicationRequest/fm-solicit#requester> a fhir:Practitioner ;
+  fhir:id [ fhir:v "requester"] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "6789" ]
   ] ) . # 
 
 <http://hl7.org/fhir/Encounter/example> a fhir:Encounter .

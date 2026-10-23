@@ -26,91 +26,91 @@
        fhir:v "http://hl7.org/fhir/PractitionerRole/f003-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f003-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f003-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f003-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/example-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/example-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/example-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/example-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/example-1"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/example-1>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/example-1> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/example-1>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/example-2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/example-2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/example-2> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/example-2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f007-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f007-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f007-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f007-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f004-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f004-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f004-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f004-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/xcda1-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/xcda1-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/xcda1-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/xcda1-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f202-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f202-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f202-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f202-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f201-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f201-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f201-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f201-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f203-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f203-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f203-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f203-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f005-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f005-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f005-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f005-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f006-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f006-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f006-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f006-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f001-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f001-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f001-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f001-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f002-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f002-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f002-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f002-0>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/PractitionerRole/f204-0"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/PractitionerRole/f204-0>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/PractitionerRole/f204-0> )
+     fhir:resource <http://hl7.org/fhir/PractitionerRole/f204-0>
   ] ) . # 
 
 <http://hl7.org/fhir/PractitionerRole/f003-0> a fhir:PractitionerRole ;

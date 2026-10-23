@@ -22,7 +22,7 @@
   fhir:identifier ( [
      fhir:system [
        fhir:v "http:/goodhealthhospital/identifier/devices"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/http:/goodhealthhospital/identifier/devices>
+       fhir:l <http:/goodhealthhospital/identifier/devices>
      ] ;
      fhir:value [ fhir:v "12345" ]
   ] ) ; # 

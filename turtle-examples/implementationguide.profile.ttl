@@ -3090,7 +3090,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ImplementationGuide.definition.page"^^xsd:anyURI ;
-         fhir:l <#ImplementationGuide.definition.page>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ImplementationGuide#ImplementationGuide.definition.page>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -5616,7 +5616,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ImplementationGuide.definition.page"^^xsd:anyURI ;
-         fhir:l <#ImplementationGuide.definition.page>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ImplementationGuide#ImplementationGuide.definition.page>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

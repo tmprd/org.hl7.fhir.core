@@ -23,93 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the CoverageEligibilityResponse.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Coverage ;
-     fhir:id [ fhir:v "coverage-1" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://benefitsinc.com/certificate"^^xsd:anyURI ;
-         fhir:l <http://benefitsinc.com/certificate>
-       ] ;
-       fhir:value [ fhir:v "12345" ]
-     ] ) ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:kind [ fhir:v "insurance" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-         ] ;
-         fhir:code [ fhir:v "EHCPOL" ]
-       ] )
-     ] ;
-     fhir:subscriber [
-       fhir:l <http://hl7.org/fhir/Patient/f201> ;
-       fhir:reference [ fhir:v "Patient/f201" ]
-     ] ;
-     fhir:beneficiary [
-       fhir:l <http://hl7.org/fhir/Patient/f201> ;
-       fhir:reference [ fhir:v "Patient/f201" ]
-     ] ;
-     fhir:dependent [ fhir:v "1" ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:code [ fhir:v "self" ]
-       ] )
-     ] ;
-     fhir:insurer [
-       fhir:identifier [
-         fhir:system [
-           fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
-           fhir:l <http://www.bindb.com/bin>
-         ] ;
-         fhir:value [ fhir:v "123456" ]
-       ]
-     ] ;
-     fhir:class ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-           ] ;
-           fhir:code [ fhir:v "EHCPOL" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "CBI35" ]
-       ] ;
-       fhir:name [ fhir:v "Corporate Baker's Inc. Plan#35" ]
-     ] [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
-           ] ;
-           fhir:code [ fhir:v "subplan" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "123" ]
-       ] ;
-       fhir:name [ fhir:v "Trainee Part-time Benefits" ]
-     ] [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
-           ] ;
-           fhir:code [ fhir:v "sequence" ]
-         ] )
-       ] ;
-       fhir:value [
-         fhir:value [ fhir:v "1" ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CoverageEligibilityResponse/E2502#coverage-1> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://www.BenefitsInc.com/fhir/coverageeligibilityresponse"^^xsd:anyURI ;
@@ -145,7 +59,7 @@
   ] ; # 
   fhir:insurance ( [
      fhir:coverage [
-       fhir:l <#coverage-1> ;
+       fhir:l <http://hl7.org/fhir/CoverageEligibilityResponse/E2502#coverage-1> ;
        fhir:reference [ fhir:v "#coverage-1" ]
      ] ;
      fhir:inforce [ fhir:v true ] ;
@@ -350,6 +264,92 @@
        fhir:code [ fhir:v "ELRSP/2017/01" ]
      ] )
   ] . # 
+
+<http://hl7.org/fhir/CoverageEligibilityResponse/E2502#coverage-1> a fhir:Coverage ;
+  fhir:id [ fhir:v "coverage-1"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://benefitsinc.com/certificate"^^xsd:anyURI ;
+       fhir:l <http://benefitsinc.com/certificate>
+     ] ;
+     fhir:value [ fhir:v "12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "insurance"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "EHCPOL" ]
+     ] )
+  ] ; # 
+  fhir:subscriber [
+     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ]
+  ] ; # 
+  fhir:beneficiary [
+     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ]
+  ] ; # 
+  fhir:dependent [ fhir:v "1"] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:code [ fhir:v "self" ]
+     ] )
+  ] ; # 
+  fhir:insurer [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://www.bindb.com/bin"^^xsd:anyURI ;
+         fhir:l <http://www.bindb.com/bin>
+       ] ;
+       fhir:value [ fhir:v "123456" ]
+     ]
+  ] ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+         ] ;
+         fhir:code [ fhir:v "EHCPOL" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "CBI35" ]
+     ] ;
+     fhir:name [ fhir:v "Corporate Baker's Inc. Plan#35" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
+         ] ;
+         fhir:code [ fhir:v "subplan" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "123" ]
+     ] ;
+     fhir:name [ fhir:v "Trainee Part-time Benefits" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/coverage-class>
+         ] ;
+         fhir:code [ fhir:v "sequence" ]
+       ] )
+     ] ;
+     fhir:value [
+       fhir:value [ fhir:v "1" ]
+     ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Patient/f201> a fhir:Patient .
 

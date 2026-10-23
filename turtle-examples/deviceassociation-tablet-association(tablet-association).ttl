@@ -20,45 +20,45 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "example-practitioner" ] ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Nguyen" ] ;
-       fhir:given ( [ fhir:v "Alex" ] )
-     ] )
-  ] [
-     a fhir:Device ;
-     fhir:id [ fhir:v "tablet-device" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:name ( [
-       fhir:value [ fhir:v "handPad Pro" ] ;
-       fhir:type [ ]
-     ] ) ;
-     fhir:type ( [
-       a sct:464572002 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "464572002" ] ;
-         fhir:display [ fhir:v "Palmtop computer" ]
-       ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/DeviceAssociation/tablet-association#example-practitioner> <http://hl7.org/fhir/DeviceAssociation/tablet-association#tablet-device> ) ; # 
   fhir:device [
-     fhir:l <#tablet-device> ;
+     fhir:l <http://hl7.org/fhir/DeviceAssociation/tablet-association#tablet-device> ;
      fhir:reference [ fhir:v "#tablet-device" ]
   ] ; # 
   fhir:status [] ; # 
   fhir:subject [
-     fhir:l <#example-practitioner> ;
+     fhir:l <http://hl7.org/fhir/DeviceAssociation/tablet-association#example-practitioner> ;
      fhir:reference [ fhir:v "#example-practitioner" ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2023-06-01"^^xsd:date ]
   ] . # 
+
+<http://hl7.org/fhir/DeviceAssociation/tablet-association#example-practitioner> a fhir:Practitioner ;
+  fhir:id [ fhir:v "example-practitioner"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Nguyen" ] ;
+     fhir:given ( [ fhir:v "Alex" ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/DeviceAssociation/tablet-association#tablet-device> a fhir:Device ;
+  fhir:id [ fhir:v "tablet-device"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name ( [
+     fhir:value [ fhir:v "handPad Pro" ] ;
+     fhir:type [ ]
+  ] ) ; # 
+  fhir:type ( [
+     a sct:464572002 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "464572002" ] ;
+       fhir:display [ fhir:v "Palmtop computer" ]
+     ] )
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

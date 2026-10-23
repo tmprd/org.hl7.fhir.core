@@ -27,7 +27,7 @@
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
        fhir:v "http:/happyvalley.com/task"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/http:/happyvalley.com/task>
+       fhir:l <http:/happyvalley.com/task>
      ] ;
      fhir:value [ fhir:v "20181012-006" ]
   ] ) ; # 

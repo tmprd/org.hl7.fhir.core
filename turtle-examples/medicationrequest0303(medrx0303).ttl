@@ -20,21 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0311" ] ;
-     fhir:code [
-       a sct:373994007 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "373994007" ] ;
-         fhir:display [ fhir:v "Prednisone 5 mg oral tablet" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0303#med0311> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -59,7 +45,7 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0311> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0303#med0311> ;
        fhir:reference [ fhir:v "#med0311" ]
      ] # Linked to a RESOURCE Medication
   ] ; # 
@@ -134,6 +120,20 @@
          fhir:display [ fhir:v "formulary policy" ]
        ] )
      ]
+  ] . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0303#med0311> a fhir:Medication ;
+  fhir:id [ fhir:v "med0311"] ; # 
+  fhir:code [
+     a sct:373994007 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "373994007" ] ;
+       fhir:display [ fhir:v "Prednisone 5 mg oral tablet" ]
+     ] )
   ] . # 
 
 <http://hl7.org/fhir/CarePlan/gpvisit> a fhir:CarePlan .

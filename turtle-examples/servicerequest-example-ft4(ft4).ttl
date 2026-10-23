@@ -20,32 +20,9 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:ServiceRequest ;
-     fhir:id [ fhir:v "tsh" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:intent [ fhir:v "original-order" ] ;
-     fhir:code [
-       fhir:concept [
-         a loinc:3016-3 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://loinc.org"^^xsd:anyURI ;
-             fhir:l <http://loinc.org>
-           ] ;
-           fhir:code [ fhir:v "3016-3" ] ;
-           fhir:display [ fhir:v "Thyrotropin [Units/volume] in Serum or Plasma" ]
-         ] ) ;
-         fhir:text [ fhir:v "TSH" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/pat2> ;
-       fhir:reference [ fhir:v "Patient/pat2" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/ServiceRequest/ft4#tsh> ) ; # 
   fhir:basedOn ( [
-     fhir:l <#tsh> ;
+     fhir:l <http://hl7.org/fhir/ServiceRequest/ft4#tsh> ;
      fhir:reference [ fhir:v "#tsh" ] ;
      fhir:display [ fhir:v "Original request for TSH test" ]
   ] ) ; # 
@@ -76,6 +53,29 @@
   fhir:requester [
      fhir:l <http://hl7.org/fhir/Practitioner/example> ;
      fhir:reference [ fhir:v "Practitioner/example" ]
+  ] . # 
+
+<http://hl7.org/fhir/ServiceRequest/ft4#tsh> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "tsh"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "original-order"] ; # 
+  fhir:code [
+     fhir:concept [
+       a loinc:3016-3 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "3016-3" ] ;
+         fhir:display [ fhir:v "Thyrotropin [Units/volume] in Serum or Plasma" ]
+       ] ) ;
+       fhir:text [ fhir:v "TSH" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:reference [ fhir:v "Patient/pat2" ]
   ] . # 
 
 <http://hl7.org/fhir/Patient/pat2> a fhir:Patient .

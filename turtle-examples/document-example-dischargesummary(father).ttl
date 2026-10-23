@@ -42,49 +42,49 @@
        fhir:v "http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/Practitioner/example"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/Practitioner/example>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/Practitioner/example> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/Practitioner/example>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/Patient/d1"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/Patient/d1>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/Patient/d1> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/Patient/d1>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/Encounter/doc-example"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/Encounter/doc-example>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/Encounter/doc-example> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/Encounter/doc-example>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/Observation/example1"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/Observation/example1>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/Observation/example1> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/Observation/example1>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/MedicationRequest/example2"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/MedicationRequest/example2>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/MedicationRequest/example2> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/MedicationRequest/example2>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/MedicationStatement/example3"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/MedicationStatement/example3>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/MedicationStatement/example3> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/MedicationStatement/example3>
   ] [
      fhir:fullUrl [
        fhir:v "http://fhir.healthintersections.com.au/open/AllergyIntolerance/example4"^^xsd:anyURI ;
        fhir:l <http://fhir.healthintersections.com.au/open/AllergyIntolerance/example4>
      ] ;
-     fhir:resource ( <http://fhir.healthintersections.com.au/open/AllergyIntolerance/example4> )
+     fhir:resource <http://fhir.healthintersections.com.au/open/AllergyIntolerance/example4>
   ] ) . # The Composition resource
 
 <http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57> a fhir:Composition ;
@@ -119,7 +119,7 @@
   ] ; # The Encounter resource. Points directly to an Encounter resource. Contains the dates of admission, specialtyu etc.
   fhir:date [ fhir:v "2013-02-01T12:30:02Z"^^xsd:dateTime] ; # 
   fhir:author ( [
-     fhir:l <http://hl7.org/fhir/Practitioner/example> ;
+     fhir:l <http://fhir.healthintersections.com.au/open/Practitioner/example> ;
      fhir:reference [ fhir:v "Practitioner/example" ] ;
      fhir:display [ fhir:v "Doctor Dave" ]
   ] ) ; # 
@@ -191,8 +191,6 @@
        fhir:reference [ fhir:v "http://fhir.healthintersections.com.au/open/AllergyIntolerance/example4" ]
      ] )
   ] ) . # 
-
-<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
 
 <http://fhir.healthintersections.com.au/open/Practitioner/example> a fhir:Practitioner ;
   fhir:id [ fhir:v "example"] ; # 
@@ -267,7 +265,7 @@
      fhir:text [ fhir:v "Orthopedic Admission" ]
   ] ) ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/d1> ;
+     fhir:l <http://fhir.healthintersections.com.au/open/Patient/d1> ;
      fhir:reference [ fhir:v "Patient/d1" ]
   ] ; # 
   fhir:actualPeriod [
@@ -279,8 +277,6 @@
        fhir:text [ fhir:v "Discharged to care of GP" ]
      ]
   ] . # 
-
-<http://hl7.org/fhir/Patient/d1> a fhir:Patient .
 
 <http://fhir.healthintersections.com.au/open/Observation/example1> a fhir:Observation ;
   fhir:id [ fhir:v "example1"] ; # 
@@ -348,7 +344,7 @@
      fhir:display [ fhir:v "Peter Patient" ]
   ] ; # 
   fhir:requester [
-     fhir:l <http://hl7.org/fhir/Practitioner/example> ;
+     fhir:l <http://fhir.healthintersections.com.au/open/Practitioner/example> ;
      fhir:reference [ fhir:v "Practitioner/example" ] ;
      fhir:display [ fhir:v "Peter Practitioner" ]
   ] ; # The prescriber details could also be within the bundle, but has the same options as patient

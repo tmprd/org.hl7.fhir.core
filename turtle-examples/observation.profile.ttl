@@ -3520,7 +3520,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#Observation.referenceRange"^^xsd:anyURI ;
-         fhir:l <#Observation.referenceRange>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -5490,7 +5490,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#Observation.referenceRange"^^xsd:anyURI ;
-         fhir:l <#Observation.referenceRange>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

@@ -28,7 +28,7 @@
        fhir:v "urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4"^^xsd:anyURI ;
        fhir:l <urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4>
      ] ;
-     fhir:resource ( <urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4> ) ;
+     fhir:resource <urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4> ;
      fhir:response [
        fhir:status [ fhir:v "201 Created" ] ;
        fhir:location [
@@ -37,7 +37,7 @@
        ] ;
        fhir:etag [ fhir:v "W/\"1\"" ] ;
        fhir:lastModified [ fhir:v "2025-03-20T15:38:01.1253032+00:00"^^xsd:dateTime ] ;
-       fhir:outcome ( [
+       fhir:outcome [
          a fhir:OperationOutcome ;
          fhir:id [ fhir:v "8cb1950b-0168-4340-8e96-53ec005c4dec" ] ;
          fhir:issue ( [
@@ -45,14 +45,14 @@
            fhir:code [ fhir:v "success" ] ;
            fhir:diagnostics [ fhir:v "Created Practitioner/64dcb23b-457c-4c51-96c8-942b3f1eebd6" ]
          ] )
-       ] )
+       ]
      ]
   ] [
      fhir:fullUrl [
        fhir:v "urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91"^^xsd:anyURI ;
        fhir:l <urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91>
      ] ;
-     fhir:resource ( <urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91> ) ;
+     fhir:resource <urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91> ;
      fhir:response [
        fhir:status [ fhir:v "201 Created" ] ;
        fhir:location [
@@ -61,7 +61,7 @@
        ] ;
        fhir:etag [ fhir:v "W/\"1\"" ] ;
        fhir:lastModified [ fhir:v "2025-03-20T15:38:01.1260451+00:00"^^xsd:dateTime ] ;
-       fhir:outcome ( [
+       fhir:outcome [
          a fhir:OperationOutcome ;
          fhir:id [ fhir:v "6b343b1f-dd97-4257-8e0f-2a4fe397d46a" ] ;
          fhir:issue ( [
@@ -69,14 +69,14 @@
            fhir:code [ fhir:v "success" ] ;
            fhir:diagnostics [ fhir:v "Created Patient/341408d6-02eb-4550-b27d-a48d6f8689be" ]
          ] )
-       ] )
+       ]
      ]
   ] [
      fhir:fullUrl [
        fhir:v "urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0"^^xsd:anyURI ;
        fhir:l <urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0>
      ] ;
-     fhir:resource ( <urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0> ) ;
+     fhir:resource <urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0> ;
      fhir:response [
        fhir:status [ fhir:v "201 Created" ] ;
        fhir:location [
@@ -85,7 +85,7 @@
        ] ;
        fhir:etag [ fhir:v "W/\"1\"" ] ;
        fhir:lastModified [ fhir:v "2025-03-20T15:38:01.1260976+00:00"^^xsd:dateTime ] ;
-       fhir:outcome ( [
+       fhir:outcome [
          a fhir:OperationOutcome ;
          fhir:id [ fhir:v "a7842b0a-eb96-42e3-9c9b-0e14c35afad7" ] ;
          fhir:issue ( [
@@ -93,14 +93,14 @@
            fhir:code [ fhir:v "success" ] ;
            fhir:diagnostics [ fhir:v "Created Encounter/eb4e8e54-2412-4386-b8a4-f3cf3c45f9f2" ]
          ] )
-       ] )
+       ]
      ]
   ] [
      fhir:fullUrl [
        fhir:v "urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4"^^xsd:anyURI ;
        fhir:l <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4>
      ] ;
-     fhir:resource ( <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4> ) ;
+     fhir:resource <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4> ;
      fhir:response [
        fhir:status [ fhir:v "201 Created" ] ;
        fhir:location [
@@ -109,7 +109,7 @@
        ] ;
        fhir:etag [ fhir:v "W/\"1\"" ] ;
        fhir:lastModified [ fhir:v "2025-03-20T15:38:01.1261802+00:00"^^xsd:dateTime ] ;
-       fhir:outcome ( [
+       fhir:outcome [
          a fhir:OperationOutcome ;
          fhir:id [ fhir:v "2c169b4a-9e66-4893-ab98-3b617ff22d0a" ] ;
          fhir:issue ( [
@@ -117,7 +117,7 @@
            fhir:code [ fhir:v "success" ] ;
            fhir:diagnostics [ fhir:v "Created Observation/7adbbf49-79cd-4184-ba6c-d7c8baf0cd7d" ]
          ] )
-       ] )
+       ]
      ]
   ] ) . # 
 

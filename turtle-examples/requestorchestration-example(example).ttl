@@ -23,35 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Example RequestOrchestration illustrating related actions to administer medications in sequence with time delay.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:MedicationRequest ;
-     fhir:id [ fhir:v "medicationrequest-1" ] ;
-     fhir:status [ fhir:v "unknown" ] ;
-     fhir:intent [ fhir:v "proposal" ] ;
-     fhir:medication [
-       fhir:concept [
-         fhir:text [ fhir:v "Medication 1" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ]
-  ] [
-     a fhir:MedicationRequest ;
-     fhir:id [ fhir:v "medicationrequest-2" ] ;
-     fhir:status [ fhir:v "unknown" ] ;
-     fhir:intent [ fhir:v "proposal" ] ;
-     fhir:medication [
-       fhir:concept [
-         fhir:text [ fhir:v "Medication 2" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/RequestOrchestration/example#medicationrequest-1> <http://hl7.org/fhir/RequestOrchestration/example#medicationrequest-2> ) ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "requestorchestration-1" ]
   ] ) ; # 
@@ -116,7 +88,7 @@
          ] )
        ] ;
        fhir:resource [
-         fhir:l <#medicationrequest-1> ;
+         fhir:l <http://hl7.org/fhir/RequestOrchestration/example#medicationrequest-1> ;
          fhir:reference [ fhir:v "#medicationrequest-1" ]
        ]
      ] [
@@ -142,13 +114,41 @@
          ] )
        ] ;
        fhir:resource [
-         fhir:l <#medicationrequest-2> ;
+         fhir:l <http://hl7.org/fhir/RequestOrchestration/example#medicationrequest-2> ;
          fhir:reference [ fhir:v "#medicationrequest-2" ]
        ]
      ] )
   ] ) . # 
 
+<http://hl7.org/fhir/RequestOrchestration/example#medicationrequest-1> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "medicationrequest-1"] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:text [ fhir:v "Medication 1" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
+
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/RequestOrchestration/example#medicationrequest-2> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "medicationrequest-2"] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:text [ fhir:v "Medication 2" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
 
 <http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
 

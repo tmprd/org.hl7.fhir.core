@@ -3755,7 +3755,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#DeviceDefinition.udiDeviceIdentifier"^^xsd:anyURI ;
-         fhir:l <#DeviceDefinition.udiDeviceIdentifier>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/DeviceDefinition#DeviceDefinition.udiDeviceIdentifier>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -3784,7 +3784,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#DeviceDefinition.packaging"^^xsd:anyURI ;
-         fhir:l <#DeviceDefinition.packaging>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/DeviceDefinition#DeviceDefinition.packaging>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -7646,7 +7646,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#DeviceDefinition.udiDeviceIdentifier"^^xsd:anyURI ;
-         fhir:l <#DeviceDefinition.udiDeviceIdentifier>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/DeviceDefinition#DeviceDefinition.udiDeviceIdentifier>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -7660,7 +7660,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#DeviceDefinition.packaging"^^xsd:anyURI ;
-         fhir:l <#DeviceDefinition.packaging>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/DeviceDefinition#DeviceDefinition.packaging>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

@@ -3698,7 +3698,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#Evidence.statistic.attributeEstimate"^^xsd:anyURI ;
-         fhir:l <#Evidence.statistic.attributeEstimate>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Evidence#Evidence.statistic.attributeEstimate>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4380,7 +4380,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#Evidence.statistic.attributeEstimate"^^xsd:anyURI ;
-         fhir:l <#Evidence.statistic.attributeEstimate>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Evidence#Evidence.statistic.attributeEstimate>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4760,7 +4760,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#Evidence.certainty"^^xsd:anyURI ;
-         fhir:l <#Evidence.certainty>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Evidence#Evidence.certainty>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6278,7 +6278,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#Evidence.statistic.attributeEstimate"^^xsd:anyURI ;
-         fhir:l <#Evidence.statistic.attributeEstimate>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Evidence#Evidence.statistic.attributeEstimate>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -6526,7 +6526,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#Evidence.statistic.attributeEstimate"^^xsd:anyURI ;
-         fhir:l <#Evidence.statistic.attributeEstimate>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Evidence#Evidence.statistic.attributeEstimate>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -6674,7 +6674,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#Evidence.certainty"^^xsd:anyURI ;
-         fhir:l <#Evidence.certainty>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Evidence#Evidence.certainty>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

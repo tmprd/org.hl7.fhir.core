@@ -27,243 +27,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Multidisciplinary diabetes management care team for a patient, with an endocrinologist, diabetes nurse educator, dietitian, podiatrist, ophthalmologist, and clinical pharmacist.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr1" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-           ] ;
-           fhir:code [ fhir:v "NPI" ] ;
-           fhir:display [ fhir:v "National provider identifier" ]
-         ] ) ;
-         fhir:text [ fhir:v "HPI-I" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
-         fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
-       ] ;
-       fhir:value [ fhir:v "8003619900015717" ]
-     ] ) ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Nguyen" ] ;
-       fhir:given ( [ fhir:v "Anh" ] ) ;
-       fhir:prefix ( [ fhir:v "Dr" ] )
-     ] ) ;
-     fhir:qualification ( [
-       fhir:code [
-         a sct:61894003 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "61894003" ] ;
-           fhir:display [ fhir:v "Endocrinologist (occupation)" ]
-         ] )
-       ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr2" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-           ] ;
-           fhir:code [ fhir:v "NPI" ] ;
-           fhir:display [ fhir:v "National provider identifier" ]
-         ] ) ;
-         fhir:text [ fhir:v "HPI-I" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
-         fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
-       ] ;
-       fhir:value [ fhir:v "8003619900024561" ]
-     ] ) ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Thompson" ] ;
-       fhir:given ( [ fhir:v "Sarah" ] ) ;
-       fhir:prefix ( [ fhir:v "RN" ] )
-     ] ) ;
-     fhir:qualification ( [
-       fhir:code [
-         a sct:224543004 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "224543004" ] ;
-           fhir:display [ fhir:v "Diabetic nurse (occupation)" ]
-         ] )
-       ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr3" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-           ] ;
-           fhir:code [ fhir:v "NPI" ] ;
-           fhir:display [ fhir:v "National provider identifier" ]
-         ] ) ;
-         fhir:text [ fhir:v "HPI-I" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
-         fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
-       ] ;
-       fhir:value [ fhir:v "8003619900033478" ]
-     ] ) ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Kowalski" ] ;
-       fhir:given ( [ fhir:v "Maria" ] ) ;
-       fhir:prefix ( [ fhir:v "APD" ] )
-     ] ) ;
-     fhir:qualification ( [
-       fhir:code [
-         a sct:159033005 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "159033005" ] ;
-           fhir:display [ fhir:v "Dietitian (occupation)" ]
-         ] )
-       ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr4" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-           ] ;
-           fhir:code [ fhir:v "NPI" ] ;
-           fhir:display [ fhir:v "National provider identifier" ]
-         ] ) ;
-         fhir:text [ fhir:v "HPI-I" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
-         fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
-       ] ;
-       fhir:value [ fhir:v "8003619900042391" ]
-     ] ) ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Harrison" ] ;
-       fhir:given ( [ fhir:v "James" ] )
-     ] ) ;
-     fhir:qualification ( [
-       fhir:code [
-         a sct:159034004 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "159034004" ] ;
-           fhir:display [ fhir:v "Podiatrist (occupation)" ]
-         ] )
-       ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr5" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-           ] ;
-           fhir:code [ fhir:v "NPI" ] ;
-           fhir:display [ fhir:v "National provider identifier" ]
-         ] ) ;
-         fhir:text [ fhir:v "HPI-I" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
-         fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
-       ] ;
-       fhir:value [ fhir:v "8003619900051284" ]
-     ] ) ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Patel" ] ;
-       fhir:given ( [ fhir:v "Priya" ] ) ;
-       fhir:prefix ( [ fhir:v "Dr" ] )
-     ] ) ;
-     fhir:qualification ( [
-       fhir:code [
-         a sct:422234006 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "422234006" ] ;
-           fhir:display [ fhir:v "Ophthalmologist (occupation)" ]
-         ] )
-       ]
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr6" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-           ] ;
-           fhir:code [ fhir:v "NPI" ] ;
-           fhir:display [ fhir:v "National provider identifier" ]
-         ] ) ;
-         fhir:text [ fhir:v "HPI-I" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
-         fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
-       ] ;
-       fhir:value [ fhir:v "8003619900060177" ]
-     ] ) ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Chen" ] ;
-       fhir:given ( [ fhir:v "David" ] )
-     ] ) ;
-     fhir:qualification ( [
-       fhir:code [
-         a sct:46255001 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "46255001" ] ;
-           fhir:display [ fhir:v "Pharmacist (occupation)" ]
-         ] )
-       ]
-     ] )
-  ] [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "org1" ] ;
-     fhir:name [ fhir:v "Metropolitan Diabetes Centre" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CareTeam/example2#pr1> <http://hl7.org/fhir/CareTeam/example2#pr2> <http://hl7.org/fhir/CareTeam/example2#pr3> <http://hl7.org/fhir/CareTeam/example2#pr4> <http://hl7.org/fhir/CareTeam/example2#pr5> <http://hl7.org/fhir/CareTeam/example2#pr6> <http://hl7.org/fhir/CareTeam/example2#org1> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://example.org/id/careteam"^^xsd:anyURI ;
@@ -306,7 +70,7 @@
        fhir:text [ fhir:v "Team Lead - Endocrinologist" ]
      ] ;
      fhir:member [
-       fhir:l <#pr1> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example2#pr1> ;
        fhir:reference [ fhir:v "#pr1" ] ;
        fhir:display [ fhir:v "Dr Anh Nguyen" ]
      ]
@@ -324,7 +88,7 @@
        fhir:text [ fhir:v "Diabetes Nurse Educator" ]
      ] ;
      fhir:member [
-       fhir:l <#pr2> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example2#pr2> ;
        fhir:reference [ fhir:v "#pr2" ] ;
        fhir:display [ fhir:v "Sarah Thompson" ]
      ]
@@ -342,7 +106,7 @@
        fhir:text [ fhir:v "Dietitian" ]
      ] ;
      fhir:member [
-       fhir:l <#pr3> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example2#pr3> ;
        fhir:reference [ fhir:v "#pr3" ] ;
        fhir:display [ fhir:v "Maria Kowalski" ]
      ]
@@ -360,7 +124,7 @@
        fhir:text [ fhir:v "Podiatrist - Diabetic Foot Care" ]
      ] ;
      fhir:member [
-       fhir:l <#pr4> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example2#pr4> ;
        fhir:reference [ fhir:v "#pr4" ] ;
        fhir:display [ fhir:v "James Harrison" ]
      ]
@@ -378,7 +142,7 @@
        fhir:text [ fhir:v "Ophthalmologist - Diabetic Retinal Screening" ]
      ] ;
      fhir:member [
-       fhir:l <#pr5> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example2#pr5> ;
        fhir:reference [ fhir:v "#pr5" ] ;
        fhir:display [ fhir:v "Dr Priya Patel" ]
      ]
@@ -396,7 +160,7 @@
        fhir:text [ fhir:v "Clinical Pharmacist - Medication Review" ]
      ] ;
      fhir:member [
-       fhir:l <#pr6> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example2#pr6> ;
        fhir:reference [ fhir:v "#pr6" ] ;
        fhir:display [ fhir:v "David Chen" ]
      ]
@@ -415,10 +179,246 @@
      ]
   ] ) ; # 
   fhir:managingOrganization ( [
-     fhir:l <#org1> ;
+     fhir:l <http://hl7.org/fhir/CareTeam/example2#org1> ;
      fhir:reference [ fhir:v "#org1" ] ;
      fhir:display [ fhir:v "Metropolitan Diabetes Centre" ]
   ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#pr1> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr1"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
+       fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
+     ] ;
+     fhir:value [ fhir:v "8003619900015717" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Nguyen" ] ;
+     fhir:given ( [ fhir:v "Anh" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       a sct:61894003 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "61894003" ] ;
+         fhir:display [ fhir:v "Endocrinologist (occupation)" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#pr2> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr2"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
+       fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
+     ] ;
+     fhir:value [ fhir:v "8003619900024561" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Thompson" ] ;
+     fhir:given ( [ fhir:v "Sarah" ] ) ;
+     fhir:prefix ( [ fhir:v "RN" ] )
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       a sct:224543004 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "224543004" ] ;
+         fhir:display [ fhir:v "Diabetic nurse (occupation)" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#pr3> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr3"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
+       fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
+     ] ;
+     fhir:value [ fhir:v "8003619900033478" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Kowalski" ] ;
+     fhir:given ( [ fhir:v "Maria" ] ) ;
+     fhir:prefix ( [ fhir:v "APD" ] )
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       a sct:159033005 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "159033005" ] ;
+         fhir:display [ fhir:v "Dietitian (occupation)" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#pr4> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr4"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
+       fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
+     ] ;
+     fhir:value [ fhir:v "8003619900042391" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Harrison" ] ;
+     fhir:given ( [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       a sct:159034004 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "159034004" ] ;
+         fhir:display [ fhir:v "Podiatrist (occupation)" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#pr5> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr5"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
+       fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
+     ] ;
+     fhir:value [ fhir:v "8003619900051284" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Patel" ] ;
+     fhir:given ( [ fhir:v "Priya" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       a sct:422234006 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "422234006" ] ;
+         fhir:display [ fhir:v "Ophthalmologist (occupation)" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#pr6> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr6"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ;
+       fhir:l <http://ns.electronichealth.net.au/id/hi/hpii/1.0>
+     ] ;
+     fhir:value [ fhir:v "8003619900060177" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Chen" ] ;
+     fhir:given ( [ fhir:v "David" ] )
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       a sct:46255001 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "46255001" ] ;
+         fhir:display [ fhir:v "Pharmacist (occupation)" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example2#org1> a fhir:Organization ;
+  fhir:id [ fhir:v "org1"] ; # 
+  fhir:name [ fhir:v "Metropolitan Diabetes Centre"] . # 
 
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
 

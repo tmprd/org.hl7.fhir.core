@@ -35,7 +35,7 @@
      fhir:endpoint [
        a fhir:Url ;
        fhir:v "llp:10.11.12.14:5432"^^xsd:anyURI ;
-       fhir:l fhir:llp:10.11.12.14:5432
+       fhir:l <llp:10.11.12.14:5432>
      ] ;
      fhir:name [ fhir:v "Acme Message Gateway" ] ;
      fhir:receiver [
@@ -47,7 +47,7 @@
      fhir:endpoint [
        a fhir:Url ;
        fhir:v "llp:10.11.12.13:5432"^^xsd:anyURI ;
-       fhir:l fhir:llp:10.11.12.13:5432
+       fhir:l <llp:10.11.12.13:5432>
      ] ;
      fhir:name [ fhir:v "Acme Central Patient Registry" ] ;
      fhir:software [ fhir:v "FooBar Patient Manager" ] ;

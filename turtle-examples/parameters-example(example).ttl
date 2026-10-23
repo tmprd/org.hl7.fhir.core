@@ -42,7 +42,7 @@
      ] )
   ] [
      fhir:name [ fhir:v "patient" ] ;
-     fhir:Parameters.parameter.resource ( [
+     fhir:Parameters.parameter.resource [
        a fhir:Patient ;
        fhir:id [ fhir:v "example" ] ;
        fhir:name ( [
@@ -50,7 +50,7 @@
          fhir:family [ fhir:v "Chalmers" ] ;
          fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
        ] )
-     ] )
+     ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

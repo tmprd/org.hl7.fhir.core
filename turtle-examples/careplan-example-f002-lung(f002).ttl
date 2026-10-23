@@ -20,75 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:CareTeam ;
-     fhir:id [ fhir:v "careteam" ] ;
-     fhir:participant ( [
-       fhir:member [
-         fhir:l <http://hl7.org/fhir/Practitioner/f003> ;
-         fhir:reference [ fhir:v "Practitioner/f003" ] ;
-         fhir:display [ fhir:v "M.I.M. Versteegh" ]
-       ]
-     ] )
-  ] [
-     a fhir:Goal ;
-     fhir:id [ fhir:v "goal" ] ;
-     fhir:lifecycleStatus [ fhir:v "completed" ] ;
-     fhir:achievementStatus [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/goal-achievement"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/goal-achievement>
-         ] ;
-         fhir:code [ fhir:v "achieved" ] ;
-         fhir:display [ fhir:v "Achieved" ]
-       ] ) ;
-       fhir:text [ fhir:v "Achieved" ]
-     ] ;
-     fhir:description [
-       fhir:text [ fhir:v "succesful surgery on lung of patient" ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/f001> ;
-       fhir:reference [ fhir:v "Patient/f001" ] ;
-       fhir:display [ fhir:v "P. van de Heuvel" ]
-     ] ;
-     fhir:note ( [
-       fhir:text [ fhir:v "goal accomplished with minor complications" ]
-     ] )
-  ] [
-     a fhir:ServiceRequest ;
-     fhir:id [ fhir:v "activity" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:intent [ fhir:v "order" ] ;
-     fhir:code [
-       fhir:concept [
-         a sct:359615001 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "359615001" ] ;
-           fhir:display [ fhir:v "Partial lobectomy of lung" ]
-         ] )
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/f001> ;
-       fhir:reference [ fhir:v "Patient/f001" ] ;
-       fhir:display [ fhir:v "P. van de Heuvel" ]
-     ] ;
-     fhir:occurrence [
-       a fhir:DateTime ;
-       fhir:v "2011-07-07T09:30:10+01:00"^^xsd:dateTime
-     ] ;
-     fhir:performer ( [
-       fhir:l <http://hl7.org/fhir/Practitioner/f003> ;
-       fhir:reference [ fhir:v "Practitioner/f003" ] ;
-       fhir:display [ fhir:v "M.I.M. Versteegh" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CarePlan/f002#careteam> <http://hl7.org/fhir/CarePlan/f002#goal> <http://hl7.org/fhir/CarePlan/f002#activity> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -109,7 +41,7 @@
      fhir:end [ fhir:v "2013-07-07"^^xsd:date ]
   ] ; # 
   fhir:careTeam ( [
-     fhir:l <#careteam> ;
+     fhir:l <http://hl7.org/fhir/CarePlan/f002#careteam> ;
      fhir:reference [ fhir:v "#careteam" ]
   ] ) ; # 
   fhir:addresses ( [
@@ -120,12 +52,12 @@
      ]
   ] ) ; # 
   fhir:goal ( [
-     fhir:l <#goal> ;
+     fhir:l <http://hl7.org/fhir/CarePlan/f002#goal> ;
      fhir:reference [ fhir:v "#goal" ]
   ] ) ; # 
   fhir:activity ( [
      fhir:plannedActivityReference [
-       fhir:l <#activity> ;
+       fhir:l <http://hl7.org/fhir/CarePlan/f002#activity> ;
        fhir:reference [ fhir:v "#activity" ]
      ]
   ] ) . # moved to contained
@@ -147,9 +79,77 @@
 #      </performer>
 #    </plannedActivityDetail>
 
+<http://hl7.org/fhir/CarePlan/f002#careteam> a fhir:CareTeam ;
+  fhir:id [ fhir:v "careteam"] ; # 
+  fhir:participant ( [
+     fhir:member [
+       fhir:l <http://hl7.org/fhir/Practitioner/f003> ;
+       fhir:reference [ fhir:v "Practitioner/f003" ] ;
+       fhir:display [ fhir:v "M.I.M. Versteegh" ]
+     ]
+  ] ) . # 
+
 <http://hl7.org/fhir/Practitioner/f003> a fhir:Practitioner .
 
+<http://hl7.org/fhir/CarePlan/f002#goal> a fhir:Goal ;
+  fhir:id [ fhir:v "goal"] ; # 
+  fhir:lifecycleStatus [ fhir:v "completed"] ; # 
+  fhir:achievementStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/goal-achievement"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/goal-achievement>
+       ] ;
+       fhir:code [ fhir:v "achieved" ] ;
+       fhir:display [ fhir:v "Achieved" ]
+     ] ) ;
+     fhir:text [ fhir:v "Achieved" ]
+  ] ; # 
+  fhir:description [
+     fhir:text [ fhir:v "succesful surgery on lung of patient" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/f001> ;
+     fhir:reference [ fhir:v "Patient/f001" ] ;
+     fhir:display [ fhir:v "P. van de Heuvel" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "goal accomplished with minor complications" ]
+  ] ) . # 
+
 <http://hl7.org/fhir/Patient/f001> a fhir:Patient .
+
+<http://hl7.org/fhir/CarePlan/f002#activity> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "activity"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:concept [
+       a sct:359615001 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "359615001" ] ;
+         fhir:display [ fhir:v "Partial lobectomy of lung" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/f001> ;
+     fhir:reference [ fhir:v "Patient/f001" ] ;
+     fhir:display [ fhir:v "P. van de Heuvel" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:DateTime ;
+     fhir:v "2011-07-07T09:30:10+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://hl7.org/fhir/Practitioner/f003> ;
+     fhir:reference [ fhir:v "Practitioner/f003" ] ;
+     fhir:display [ fhir:v "M.I.M. Versteegh" ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Condition/f201> a fhir:Condition .
 

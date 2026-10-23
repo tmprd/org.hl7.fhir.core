@@ -2218,7 +2218,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ArtifactAssessment.relatesTo"^^xsd:anyURI ;
-         fhir:l <#ArtifactAssessment.relatesTo>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ArtifactAssessment#ArtifactAssessment.relatesTo>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2279,7 +2279,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ArtifactAssessment.content"^^xsd:anyURI ;
-         fhir:l <#ArtifactAssessment.content>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ArtifactAssessment#ArtifactAssessment.content>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -3341,7 +3341,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ArtifactAssessment.relatesTo"^^xsd:anyURI ;
-         fhir:l <#ArtifactAssessment.relatesTo>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ArtifactAssessment#ArtifactAssessment.relatesTo>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -3372,7 +3372,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ArtifactAssessment.content"^^xsd:anyURI ;
-         fhir:l <#ArtifactAssessment.content>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ArtifactAssessment#ArtifactAssessment.content>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

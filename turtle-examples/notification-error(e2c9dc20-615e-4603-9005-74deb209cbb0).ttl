@@ -26,7 +26,7 @@
        fhir:v "urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae"^^xsd:anyURI ;
        fhir:l <urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae>
      ] ;
-     fhir:resource ( <urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae> )
+     fhir:resource <urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae>
   ] ) . # 
 
 <urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae> a fhir:SubscriptionStatus ;

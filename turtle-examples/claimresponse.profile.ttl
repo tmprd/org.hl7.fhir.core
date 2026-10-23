@@ -3687,7 +3687,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -3716,7 +3716,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4010,7 +4010,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4039,7 +4039,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -5433,7 +5433,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -5462,7 +5462,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6102,7 +6102,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6131,7 +6131,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6771,7 +6771,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6800,7 +6800,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6830,7 +6830,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -10456,7 +10456,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -10470,7 +10470,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -10562,7 +10562,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -10576,7 +10576,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11311,7 +11311,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11325,7 +11325,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11643,7 +11643,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11657,7 +11657,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11975,7 +11975,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.reviewOutcome"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.reviewOutcome>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.reviewOutcome>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -11989,7 +11989,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -12004,7 +12004,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClaimResponse.item.adjudication"^^xsd:anyURI ;
-         fhir:l <#ClaimResponse.item.adjudication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClaimResponse#ClaimResponse.item.adjudication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

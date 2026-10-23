@@ -23,54 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n            Comorbidity? YES\n              Cardial Comorbidity? YES\n                Angina? YES\n                MI? NO\n              Vascular Comorbidity?\n                (no answers)\n              ...\n            Histopathology\n              Abdominal\n                pT category: 1a\n              ...\n          </pre>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "patsub" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://cancer.questionnaire.org/systems/id/patientnr"^^xsd:anyURI ;
-         fhir:l <http://cancer.questionnaire.org/systems/id/patientnr>
-       ] ;
-       fhir:value [ fhir:v "A34442332" ]
-     ] [
-       fhir:type [
-         fhir:text [ fhir:v "Dutch BSN" ]
-       ] ;
-       fhir:system [
-         fhir:v "urn:oid:2.16.840.1.113883.2.4.6.3"^^xsd:anyURI ;
-         fhir:l <urn:oid:2.16.840.1.113883.2.4.6.3>
-       ] ;
-       fhir:value [ fhir:v "188912345" ]
-     ] ) ;
-     fhir:gender [ fhir:v "male" ] ;
-     fhir:birthDate [ fhir:v "1972-11-30"^^xsd:date ]
-  ] [
-     a fhir:ServiceRequest ;
-     fhir:id [ fhir:v "order" ] ;
-     fhir:status [ fhir:v "unknown" ] ;
-     fhir:intent [ fhir:v "order" ] ;
-     fhir:subject [
-       fhir:l <#patsub> ;
-       fhir:reference [ fhir:v "#patsub" ]
-     ] ;
-     fhir:requester [
-       fhir:l <http://hl7.org/fhir/Practitioner/example> ;
-       fhir:reference [ fhir:v "Practitioner/example" ]
-     ]
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "questauth" ] ;
-     fhir:identifier ( [
-       fhir:type [
-         fhir:text [ fhir:v "AUMC, Den Helder" ]
-       ] ;
-       fhir:system [
-         fhir:v "http://cancer.questionnaire.org/systems/id/org"^^xsd:anyURI ;
-         fhir:l <http://cancer.questionnaire.org/systems/id/org>
-       ] ;
-       fhir:value [ fhir:v "AUMC" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/QuestionnaireResponse/3141#patsub> <http://hl7.org/fhir/QuestionnaireResponse/3141#order> <http://hl7.org/fhir/QuestionnaireResponse/3141#questauth> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://example.org/fhir/NamingSystem/questionnaire-ids"^^xsd:anyURI ;
@@ -106,7 +59,7 @@
 #    </Observation>
 #  </contained>
   fhir:basedOn ( [
-     fhir:l <#order> ;
+     fhir:l <http://hl7.org/fhir/QuestionnaireResponse/3141#order> ;
      fhir:reference [ fhir:v "#order" ]
   ] ) ; # 
   fhir:partOf ( [
@@ -119,7 +72,7 @@
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:subject [
-     fhir:l <#patsub> ;
+     fhir:l <http://hl7.org/fhir/QuestionnaireResponse/3141#patsub> ;
      fhir:reference [ fhir:v "#patsub" ]
   ] ; # 
   fhir:encounter [
@@ -128,7 +81,7 @@
   ] ; # 
   fhir:authored [ fhir:v "2013-02-19T14:15:00-05:00"^^xsd:dateTime] ; # 
   fhir:author [
-     fhir:l <#questauth> ;
+     fhir:l <http://hl7.org/fhir/QuestionnaireResponse/3141#questauth> ;
      fhir:reference [ fhir:v "#questauth" ]
   ] ; # 
   fhir:item ( [
@@ -189,7 +142,54 @@
      ] )
   ] ) . # 
 
+<http://hl7.org/fhir/QuestionnaireResponse/3141#patsub> a fhir:Patient ;
+  fhir:id [ fhir:v "patsub"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://cancer.questionnaire.org/systems/id/patientnr"^^xsd:anyURI ;
+       fhir:l <http://cancer.questionnaire.org/systems/id/patientnr>
+     ] ;
+     fhir:value [ fhir:v "A34442332" ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "Dutch BSN" ]
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.840.1.113883.2.4.6.3"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.840.1.113883.2.4.6.3>
+     ] ;
+     fhir:value [ fhir:v "188912345" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1972-11-30"^^xsd:date] . # 
+
+<http://hl7.org/fhir/QuestionnaireResponse/3141#order> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "order"] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/QuestionnaireResponse/3141#patsub> ;
+     fhir:reference [ fhir:v "#patsub" ]
+  ] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.org/fhir/Practitioner/example> ;
+     fhir:reference [ fhir:v "Practitioner/example" ]
+  ] . # 
+
 <http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+<http://hl7.org/fhir/QuestionnaireResponse/3141#questauth> a fhir:Practitioner ;
+  fhir:id [ fhir:v "questauth"] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:text [ fhir:v "AUMC, Den Helder" ]
+     ] ;
+     fhir:system [
+       fhir:v "http://cancer.questionnaire.org/systems/id/org"^^xsd:anyURI ;
+       fhir:l <http://cancer.questionnaire.org/systems/id/org>
+     ] ;
+     fhir:value [ fhir:v "AUMC" ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Procedure/f201> a fhir:Procedure .
 

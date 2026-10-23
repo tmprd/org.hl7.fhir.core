@@ -2927,7 +2927,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#OperationDefinition.parameter"^^xsd:anyURI ;
-         fhir:l <#OperationDefinition.parameter>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/OperationDefinition#OperationDefinition.parameter>
        ] ;
        fhir:condition ( [ fhir:v "opd-1" ] ) ;
        fhir:constraint ( [
@@ -4562,7 +4562,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#OperationDefinition.parameter"^^xsd:anyURI ;
-         fhir:l <#OperationDefinition.parameter>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/OperationDefinition#OperationDefinition.parameter>
        ] ;
        fhir:condition ( [ fhir:v "opd-1" ] ) ;
        fhir:mustSupport [ fhir:v false ] ;

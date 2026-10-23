@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -19,56 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "citalopramMedication" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "200371" ]
-       ] ) ;
-       fhir:text [ fhir:v "citalopram" ]
-     ] ;
-     fhir:doseForm [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "385055001" ] ;
-         fhir:display [ fhir:v "Tablet (basic dose form)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Tablet dose form" ]
-     ] ;
-     fhir:ingredient ( [
-       fhir:item [
-         fhir:concept [
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-               fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-             ] ;
-             fhir:code [ fhir:v "2556" ]
-           ] ) ;
-           fhir:text [ fhir:v "citalopram" ]
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "20"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "mg" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "{tbl}" ]
-         ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/ActivityDefinition/citalopramPrescription#citalopramMedication> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
@@ -291,13 +243,13 @@
      fhir:type [ fhir:v "composed-of" ] ;
      fhir:resource [
        fhir:v "#citalopramMedication"^^xsd:anyURI ;
-       fhir:l <#citalopramMedication>
+       fhir:l <http://hl7.org/fhir/ActivityDefinition/citalopramPrescription#citalopramMedication>
      ]
   ] ) ; # 
   fhir:kind [ fhir:v "MedicationRequest"] ; # 
   fhir:product [
      a fhir:Reference ;
-     fhir:l <#citalopramMedication> ;
+     fhir:l <http://hl7.org/fhir/ActivityDefinition/citalopramPrescription#citalopramMedication> ;
      fhir:reference [ fhir:v "#citalopramMedication" ]
   ] ; # 
   fhir:dynamicValue ( [
@@ -313,6 +265,56 @@
        fhir:description [ fhir:v "dispenseRequest.quantity is thirty (30) tablets" ] ;
        fhir:language [ fhir:v "text/cql-expression" ] ;
        fhir:expression [ fhir:v "30 '{tbl}'" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/ActivityDefinition/citalopramPrescription#citalopramMedication> a fhir:Medication ;
+  fhir:id [ fhir:v "citalopramMedication"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "200371" ]
+     ] ) ;
+     fhir:text [ fhir:v "citalopram" ]
+  ] ; # 
+  fhir:doseForm [
+     a sct:385055001 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet (basic dose form)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Tablet dose form" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       fhir:concept [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+           ] ;
+           fhir:code [ fhir:v "2556" ]
+         ] ) ;
+         fhir:text [ fhir:v "citalopram" ]
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "20"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "{tbl}" ]
+       ]
      ]
   ] ) . # 
 

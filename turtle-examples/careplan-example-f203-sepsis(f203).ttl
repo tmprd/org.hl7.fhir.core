@@ -20,81 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:CareTeam ;
-     fhir:id [ fhir:v "careteam" ] ;
-     fhir:participant ( [
-       fhir:role [
-         a sct:425268008 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "425268008" ] ;
-           fhir:display [ fhir:v "Review of care plan" ]
-         ] )
-       ] ;
-       fhir:member [
-         fhir:l <http://hl7.org/fhir/Practitioner/f201> ;
-         fhir:reference [ fhir:v "Practitioner/f201" ] ;
-         fhir:display [ fhir:v "Dokter Bronsig" ]
-       ]
-     ] [
-       fhir:role [
-         a sct:278110001 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "278110001" ] ;
-           fhir:display [ fhir:v "Radiographic imaging" ]
-         ] )
-       ] ;
-       fhir:member [
-         fhir:l <http://hl7.org/fhir/Practitioner/f202> ;
-         fhir:reference [ fhir:v "Practitioner/f202" ] ;
-         fhir:display [ fhir:v "Luigi Maas" ]
-       ]
-     ] )
-  ] [
-     a fhir:Goal ;
-     fhir:id [ fhir:v "goal" ] ;
-     fhir:lifecycleStatus [ fhir:v "cancelled" ] ;
-     fhir:description [
-       fhir:text [ fhir:v "Check whether further treatment of sepsis/pulmonary abcess is required" ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/f201> ;
-       fhir:reference [ fhir:v "Patient/f201" ] ;
-       fhir:display [ fhir:v "Roel" ]
-     ]
-  ] [
-     a fhir:ServiceRequest ;
-     fhir:id [ fhir:v "activity" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:intent [ fhir:v "order" ] ;
-     fhir:doNotPerform [ fhir:v false ] ;
-     fhir:code [
-       fhir:concept [
-         a sct:241541005 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "241541005" ] ;
-           fhir:display [ fhir:v "High resolution computed tomography of lungs" ]
-         ] )
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/f201> ;
-       fhir:reference [ fhir:v "Patient/f201" ] ; # It entails Roel's careplan
-       fhir:display [ fhir:v "Roel" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CarePlan/f203#careteam> <http://hl7.org/fhir/CarePlan/f203#goal> <http://hl7.org/fhir/CarePlan/f203#activity> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:intent [ fhir:v "plan"] ; # 
   fhir:subject [
@@ -107,7 +33,7 @@
      fhir:end [ fhir:v "2013-04-21"^^xsd:date ]
   ] ; # 
   fhir:careTeam ( [
-     fhir:l <#careteam> ;
+     fhir:l <http://hl7.org/fhir/CarePlan/f203#careteam> ;
      fhir:reference [ fhir:v "#careteam" ]
   ] ) ; # 
   fhir:addresses ( [
@@ -118,12 +44,12 @@
      ]
   ] ) ; # 
   fhir:goal ( [
-     fhir:l <#goal> ;
+     fhir:l <http://hl7.org/fhir/CarePlan/f203#goal> ;
      fhir:reference [ fhir:v "#goal" ]
   ] ) ; # 
   fhir:activity ( [
      fhir:plannedActivityReference [
-       fhir:l <#activity> ;
+       fhir:l <http://hl7.org/fhir/CarePlan/f203#activity> ;
        fhir:reference [ fhir:v "#activity" ]
      ]
   ] ) . # moved to contained
@@ -140,11 +66,85 @@
 #      <doNotPerform value="false"/>
 #    </plannedActivityDetail>
 
+<http://hl7.org/fhir/CarePlan/f203#careteam> a fhir:CareTeam ;
+  fhir:id [ fhir:v "careteam"] ; # 
+  fhir:participant ( [
+     fhir:role [
+       a sct:425268008 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "425268008" ] ;
+         fhir:display [ fhir:v "Review of care plan" ]
+       ] )
+     ] ;
+     fhir:member [
+       fhir:l <http://hl7.org/fhir/Practitioner/f201> ;
+       fhir:reference [ fhir:v "Practitioner/f201" ] ;
+       fhir:display [ fhir:v "Dokter Bronsig" ]
+     ]
+  ] [
+     fhir:role [
+       a sct:278110001 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "278110001" ] ;
+         fhir:display [ fhir:v "Radiographic imaging" ]
+       ] )
+     ] ;
+     fhir:member [
+       fhir:l <http://hl7.org/fhir/Practitioner/f202> ;
+       fhir:reference [ fhir:v "Practitioner/f202" ] ;
+       fhir:display [ fhir:v "Luigi Maas" ]
+     ]
+  ] ) . # 
+
 <http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
 
 <http://hl7.org/fhir/Practitioner/f202> a fhir:Practitioner .
 
+<http://hl7.org/fhir/CarePlan/f203#goal> a fhir:Goal ;
+  fhir:id [ fhir:v "goal"] ; # 
+  fhir:lifecycleStatus [ fhir:v "cancelled"] ; # 
+  fhir:description [
+     fhir:text [ fhir:v "Check whether further treatment of sepsis/pulmonary abcess is required" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ] ;
+     fhir:display [ fhir:v "Roel" ]
+  ] . # 
+
 <http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/CarePlan/f203#activity> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "activity"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:doNotPerform [ fhir:v false] ; # 
+  fhir:code [
+     fhir:concept [
+       a sct:241541005 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "241541005" ] ;
+         fhir:display [ fhir:v "High resolution computed tomography of lungs" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ] ; # It entails Roel's careplan
+     fhir:display [ fhir:v "Roel" ]
+  ] . # 
 
 <http://hl7.org/fhir/Condition/f203> a fhir:Condition .
 

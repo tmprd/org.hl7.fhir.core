@@ -19,20 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0314" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "308047" ] ;
-         fhir:display [ fhir:v "alprazolam 0.25 MG Oral Tablet" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0305#med0314> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -45,7 +32,7 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0314> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0305#med0314> ;
        fhir:reference [ fhir:v "#med0314" ]
      ] # Linked to a RESOURCE Medication
   ] ; # 
@@ -106,6 +93,19 @@
          fhir:display [ fhir:v "formulary policy" ]
        ] )
      ]
+  ] . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0305#med0314> a fhir:Medication ;
+  fhir:id [ fhir:v "med0314"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "308047" ] ;
+       fhir:display [ fhir:v "alprazolam 0.25 MG Oral Tablet" ]
+     ] )
   ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .

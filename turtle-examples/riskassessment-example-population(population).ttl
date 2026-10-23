@@ -23,17 +23,17 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Todo - e.g. probable number of infections in a given region over a time period for a given disease based on vaccination rates and other factors</p>\n    </div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Group ;
-     fhir:id [ fhir:v "group1" ] ;
-     fhir:type [ fhir:v "person" ] ;
-     fhir:membership [ fhir:v "enumerated" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/RiskAssessment/population#group1> ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:subject [
-     fhir:l <#group1> ;
+     fhir:l <http://hl7.org/fhir/RiskAssessment/population#group1> ;
      fhir:reference [ fhir:v "#group1" ]
   ] . # 
+
+<http://hl7.org/fhir/RiskAssessment/population#group1> a fhir:Group ;
+  fhir:id [ fhir:v "group1"] ; # 
+  fhir:type [ fhir:v "person"] ; # 
+  fhir:membership [ fhir:v "enumerated"] . # 
 
 # -------------------------------------------------------------------------------------
 

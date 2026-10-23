@@ -23,13 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the Vision Claim for Glasses</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Device ;
-     fhir:id [ fhir:v "device-frame" ]
-  ] [
-     a fhir:Device ;
-     fhir:id [ fhir:v "device-lens" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Claim/660152#device-frame> <http://hl7.org/fhir/Claim/660152#device-lens> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://happysight.com/claim"^^xsd:anyURI ;
@@ -212,7 +206,7 @@
          fhir:currency [ fhir:v "USD" ]
        ] ; # 10% surcharge for out of hours work
        fhir:udi ( [
-         fhir:l <#device-frame> ;
+         fhir:l <http://hl7.org/fhir/Claim/660152#device-frame> ;
          fhir:reference [ fhir:v "#device-frame" ]
        ] )
      ] [
@@ -328,7 +322,7 @@
            fhir:currency [ fhir:v "USD" ]
          ] ; # 10% surchage for out of hours work
          fhir:udi ( [
-           fhir:l <#device-lens> ;
+           fhir:l <http://hl7.org/fhir/Claim/660152#device-lens> ;
            fhir:reference [ fhir:v "#device-lens" ]
          ] )
        ] [
@@ -478,6 +472,12 @@
        ]
      ] )
   ] ) . # 
+
+<http://hl7.org/fhir/Claim/660152#device-frame> a fhir:Device ;
+  fhir:id [ fhir:v "device-frame"] . # 
+
+<http://hl7.org/fhir/Claim/660152#device-lens> a fhir:Device ;
+  fhir:id [ fhir:v "device-lens"] . # 
 
 <http://hl7.org/fhir/Organization/2> a fhir:Organization .
 

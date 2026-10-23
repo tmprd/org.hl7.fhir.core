@@ -19,31 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Group ;
-     fhir:id [ fhir:v "group" ] ;
-     fhir:type [ fhir:v "person" ] ;
-     fhir:membership [ fhir:v "definitional" ] ;
-     fhir:characteristic ( [
-       fhir:code [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://ema.europa.eu/example/characteristic"^^xsd:anyURI ;
-             fhir:l <http://ema.europa.eu/example/characteristic>
-           ] ;
-           fhir:code [ fhir:v "age-range" ]
-         ] )
-       ] ;
-       fhir:value [
-         a fhir:Range ;
-         fhir:low [
-           fhir:value [ fhir:v "18"^^xsd:decimal ] ;
-           fhir:unit [ fhir:v "a" ]
-         ]
-       ] ;
-       fhir:exclude [ fhir:v false ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/ClinicalUseDefinition/example-indication#group> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
@@ -95,8 +71,32 @@
      ]
   ] ; # example product is indicated for Prevention of venous thromboembolic events
   fhir:population ( [
-     fhir:l <#group> ;
+     fhir:l <http://hl7.org/fhir/ClinicalUseDefinition/example-indication#group> ;
      fhir:reference [ fhir:v "#group" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/ClinicalUseDefinition/example-indication#group> a fhir:Group ;
+  fhir:id [ fhir:v "group"] ; # 
+  fhir:type [ fhir:v "person"] ; # 
+  fhir:membership [ fhir:v "definitional"] ; # 
+  fhir:characteristic ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://ema.europa.eu/example/characteristic"^^xsd:anyURI ;
+           fhir:l <http://ema.europa.eu/example/characteristic>
+         ] ;
+         fhir:code [ fhir:v "age-range" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Range ;
+       fhir:low [
+         fhir:value [ fhir:v "18"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "a" ]
+       ]
+     ] ;
+     fhir:exclude [ fhir:v false ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

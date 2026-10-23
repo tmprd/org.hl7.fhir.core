@@ -19,21 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0322" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/sid/ndc>
-         ] ;
-         fhir:code [ fhir:v "0067-2091-03" ] ;
-         fhir:display [ fhir:v "Vagistat-3, 1 KIT in 1 CARTON (0067-2091-03) * 3 SUPPOSITORY in 1 BLISTER PACK * 1 TUBE in 1 CARTON > 9 g in 1 TUBE (package)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Vagistat-3" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0339#med0322> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -58,7 +44,7 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0322> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0339#med0322> ;
        fhir:reference [ fhir:v "#med0322" ]
      ] # Linked to a RESOURCE Medication
   ] ; # 
@@ -117,6 +103,20 @@
          fhir:display [ fhir:v "formulary policy" ]
        ] )
      ]
+  ] . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0339#med0322> a fhir:Medication ;
+  fhir:id [ fhir:v "med0322"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/ndc>
+       ] ;
+       fhir:code [ fhir:v "0067-2091-03" ] ;
+       fhir:display [ fhir:v "Vagistat-3, 1 KIT in 1 CARTON (0067-2091-03) * 3 SUPPOSITORY in 1 BLISTER PACK * 1 TUBE in 1 CARTON > 9 g in 1 TUBE (package)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Vagistat-3" ]
   ] . # 
 
 <http://hl7.org/fhir/CarePlan/gpvisit> a fhir:CarePlan .

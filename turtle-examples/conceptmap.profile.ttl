@@ -4000,7 +4000,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ConceptMap.group.element.target.dependsOn"^^xsd:anyURI ;
-         fhir:l <#ConceptMap.group.element.target.dependsOn>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ConceptMap#ConceptMap.group.element.target.dependsOn>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6264,7 +6264,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ConceptMap.group.element.target.dependsOn"^^xsd:anyURI ;
-         fhir:l <#ConceptMap.group.element.target.dependsOn>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ConceptMap#ConceptMap.group.element.target.dependsOn>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

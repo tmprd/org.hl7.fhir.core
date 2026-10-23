@@ -27,17 +27,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "in-author" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "email" ] ;
-       fhir:value [ fhir:v "JohnMoehrke@gmail.com" ]
-     ] )
-  ] [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "in-patient" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/DocumentReference/example-comprehensive#in-author> <http://hl7.org/fhir/DocumentReference/example-comprehensive#in-patient> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/documentreference-sourcepatient"^^xsd:anyURI ;
@@ -45,7 +35,7 @@
      ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:l <#in-patient> ;
+       fhir:l <http://hl7.org/fhir/DocumentReference/example-comprehensive#in-patient> ;
        fhir:reference [ fhir:v "#in-patient" ]
      ]
   ] ) ; # 
@@ -138,7 +128,7 @@
   ] ; # 
   fhir:date [ fhir:v "2020-12-31T23:50:50-05:00"^^xsd:dateTime] ; # 
   fhir:author ( [
-     fhir:l <#in-author> ;
+     fhir:l <http://hl7.org/fhir/DocumentReference/example-comprehensive#in-author> ;
      fhir:reference [ fhir:v "#in-author" ]
   ] ) ; # 
   fhir:attester ( [
@@ -152,7 +142,7 @@
        ] )
      ] ;
      fhir:party [
-       fhir:l <#in-author> ;
+       fhir:l <http://hl7.org/fhir/DocumentReference/example-comprehensive#in-author> ;
        fhir:reference [ fhir:v "#in-author" ]
      ]
   ] ) ; # 
@@ -205,6 +195,16 @@
        ]
      ] )
   ] ) . # 
+
+<http://hl7.org/fhir/DocumentReference/example-comprehensive#in-author> a fhir:Practitioner ;
+  fhir:id [ fhir:v "in-author"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "JohnMoehrke@gmail.com" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/DocumentReference/example-comprehensive#in-patient> a fhir:Patient ;
+  fhir:id [ fhir:v "in-patient"] . # 
 
 <http://hl7.org/fhir/Patient/xcda> a fhir:Patient .
 

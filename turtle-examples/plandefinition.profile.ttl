@@ -6687,7 +6687,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#PlanDefinition.action"^^xsd:anyURI ;
-         fhir:l <#PlanDefinition.action>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/PlanDefinition#PlanDefinition.action>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -10095,7 +10095,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#PlanDefinition.action"^^xsd:anyURI ;
-         fhir:l <#PlanDefinition.action>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/PlanDefinition#PlanDefinition.action>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

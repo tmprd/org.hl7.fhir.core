@@ -20,21 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0321" ] ;
-     fhir:code [
-       a sct:108761006 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "108761006" ] ;
-         fhir:display [ fhir:v "Product containing capecitabine (medicinal product)" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0309#med0321> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -47,7 +33,7 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0321> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0309#med0321> ;
        fhir:reference [ fhir:v "#med0321" ]
      ]
   ] ; # 
@@ -68,6 +54,20 @@
      fhir:display [ fhir:v "Patrick Pump" ]
   ] ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0309#med0321> a fhir:Medication ;
+  fhir:id [ fhir:v "med0321"] ; # 
+  fhir:code [
+     a sct:108761006 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "108761006" ] ;
+       fhir:display [ fhir:v "Product containing capecitabine (medicinal product)" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

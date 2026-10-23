@@ -42,7 +42,7 @@
   ] ) ; # 
   fhir:address [
      fhir:v "mllp:acme.org:2360"^^xsd:anyURI ;
-     fhir:l fhir:mllp:acme.org:2360
+     fhir:l <mllp:acme.org:2360>
   ] . # 
 
 # -------------------------------------------------------------------------------------

@@ -19,40 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:MedicationRequest ;
-     fhir:id [ fhir:v "rx" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:intent [ fhir:v "order" ] ;
-     fhir:medication [
-       fhir:concept [
-         fhir:text [ fhir:v "Pulmicort Turbuhaler 400 microgram/actuation inhalation (budesonide)" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/pat1> ;
-       fhir:reference [ fhir:v "Patient/pat1" ] ;
-       fhir:display [ fhir:v "Donald Duck" ]
-     ] ;
-     fhir:authoredOn [ fhir:v "2026-03-02"^^xsd:date ] ;
-     fhir:requester [
-       fhir:l <http://hl7.org/fhir/Practitioner/f007> ;
-       fhir:reference [ fhir:v "Practitioner/f007" ]
-     ] ;
-     fhir:dosageInstruction ( [ ] ) ;
-     fhir:dispenseRequest [
-       fhir:numberOfRepeatsAllowed [ fhir:v "5"^^xsd:nonNegativeInteger ] ;
-       fhir:quantity [
-         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-         fhir:unit [ fhir:v "inhaler" ] ;
-         fhir:system [
-           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-           fhir:l <http://unitsofmeasure.org>
-         ] ;
-         fhir:code [ fhir:v "{inhaler}" ]
-       ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationDispense/meddisp0337#rx> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:concept [
@@ -71,7 +38,7 @@
      ]
   ] ) ; # 
   fhir:authorizingPrescription ( [
-     fhir:l <#rx> ;
+     fhir:l <http://hl7.org/fhir/MedicationDispense/meddisp0337#rx> ;
      fhir:reference [ fhir:v "#rx" ]
   ] ) ; # 
   fhir:type [
@@ -107,6 +74,39 @@
      fhir:text [ fhir:v "Third supply against the prescription: the original supply and the 2nd of the 5 authorized repeats. 3 repeats remain." ]
   ] ) ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0337#rx> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "rx"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:text [ fhir:v "Pulmicort Turbuhaler 400 microgram/actuation inhalation (budesonide)" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/pat1> ;
+     fhir:reference [ fhir:v "Patient/pat1" ] ;
+     fhir:display [ fhir:v "Donald Duck" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2026-03-02"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.org/fhir/Practitioner/f007> ;
+     fhir:reference [ fhir:v "Practitioner/f007" ]
+  ] ; # 
+  fhir:dosageInstruction ( [] ) ; # 
+  fhir:dispenseRequest [
+     fhir:numberOfRepeatsAllowed [ fhir:v "5"^^xsd:nonNegativeInteger ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "inhaler" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "{inhaler}" ]
+     ]
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

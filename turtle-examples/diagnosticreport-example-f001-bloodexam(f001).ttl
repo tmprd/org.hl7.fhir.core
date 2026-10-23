@@ -27,13 +27,13 @@
        fhir:v "https://example.com/base/DiagnosticReport/f001"^^xsd:anyURI ;
        fhir:l <https://example.com/base/DiagnosticReport/f001>
      ] ;
-     fhir:resource ( <https://example.com/base/DiagnosticReport/f001> )
+     fhir:resource <https://example.com/base/DiagnosticReport/f001>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/ServiceRequest/req"^^xsd:anyURI ;
        fhir:l <https://example.com/base/ServiceRequest/req>
      ] ;
-     fhir:resource ( <https://example.com/base/ServiceRequest/req> )
+     fhir:resource <https://example.com/base/ServiceRequest/req>
   ] ) . # 
 
 <https://example.com/base/DiagnosticReport/f001> a fhir:DiagnosticReport ;
@@ -51,7 +51,7 @@
      fhir:value [ fhir:v "nr1239044" ]
   ] ) ; # 
   fhir:basedOn ( [
-     fhir:l <http://hl7.org/fhir/ServiceRequest/req> ;
+     fhir:l <https://example.com/base/ServiceRequest/req> ;
      fhir:reference [ fhir:v "ServiceRequest/req" ]
   ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
@@ -84,49 +84,33 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/f001> ;
+     fhir:l <https://example.com/base/Patient/f001> ;
      fhir:reference [ fhir:v "Patient/f001" ] ;
      fhir:display [ fhir:v "P. van den Heuvel" ]
   ] ; # 
   fhir:issued [ fhir:v "2013-05-15T19:32:52+01:00"^^xsd:dateTime] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/f001> ;
+     fhir:l <https://example.com/base/Organization/f001> ;
      fhir:reference [ fhir:v "Organization/f001" ] ;
      fhir:display [ fhir:v "Burgers University Medical Centre" ]
   ] ) ; # 
   fhir:result ( [
-     fhir:l <http://hl7.org/fhir/Observation/f001> ;
+     fhir:l <https://example.com/base/Observation/f001> ;
      fhir:reference [ fhir:v "Observation/f001" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/f002> ;
+     fhir:l <https://example.com/base/Observation/f002> ;
      fhir:reference [ fhir:v "Observation/f002" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/f003> ;
+     fhir:l <https://example.com/base/Observation/f003> ;
      fhir:reference [ fhir:v "Observation/f003" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/f004> ;
+     fhir:l <https://example.com/base/Observation/f004> ;
      fhir:reference [ fhir:v "Observation/f004" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/f005> ;
+     fhir:l <https://example.com/base/Observation/f005> ;
      fhir:reference [ fhir:v "Observation/f005" ]
   ] ) ; # 
   fhir:conclusion [ fhir:v "Core lab"] . # 
-
-<http://hl7.org/fhir/ServiceRequest/req> a fhir:ServiceRequest .
-
-<http://hl7.org/fhir/Patient/f001> a fhir:Patient .
-
-<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
-
-<http://hl7.org/fhir/Observation/f001> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/f002> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/f003> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/f004> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/f005> a fhir:Observation .
 
 <https://example.com/base/ServiceRequest/req> a fhir:ServiceRequest ;
   fhir:id [ fhir:v "req"] ; # 
@@ -174,26 +158,22 @@
      ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/f001> ;
+     fhir:l <https://example.com/base/Patient/f001> ;
      fhir:reference [ fhir:v "Patient/f001" ] ;
      fhir:display [ fhir:v "P. van den Heuvel" ]
   ] ; # 
   fhir:encounter [
-     fhir:l <http://hl7.org/fhir/Encounter/f001> ;
+     fhir:l <https://example.com/base/Encounter/f001> ;
      fhir:reference [ fhir:v "Encounter/f001" ]
   ] ; # 
   fhir:requester [
-     fhir:l <http://hl7.org/fhir/Practitioner/f001> ;
+     fhir:l <https://example.com/base/Practitioner/f001> ;
      fhir:reference [ fhir:v "Practitioner/f001" ] ;
      fhir:display [ fhir:v "E.van den Broek" ]
   ] ; # 
   fhir:note ( [
      fhir:text [ fhir:v "patient almost fainted during procedure" ]
   ] ) . # 
-
-<http://hl7.org/fhir/Encounter/f001> a fhir:Encounter .
-
-<http://hl7.org/fhir/Practitioner/f001> a fhir:Practitioner .
 
 # -------------------------------------------------------------------------------------
 

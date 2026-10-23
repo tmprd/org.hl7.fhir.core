@@ -1,5 +1,4 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,133 +18,133 @@
        fhir:v "http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/provenance-relevant-history"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/provenance-relevant-history>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/provenance-relevant-history> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/provenance-relevant-history>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/vitalsigns"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/vitalsigns>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/vitalsigns> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/vitalsigns>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/vitalspanel"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/vitalspanel>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/vitalspanel> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/vitalspanel>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/resprate"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/resprate>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/resprate> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/resprate>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/oxygensat"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/oxygensat>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/oxygensat> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/oxygensat>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/heartrate"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/heartrate>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/heartrate> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/heartrate>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/headcircum"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/headcircum>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/headcircum> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/headcircum>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/bp"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/bp>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/bp> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/bp>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/bodyweight"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/bodyweight>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/bodyweight> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/bodyweight>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/bodytemp"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/bodytemp>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/bodytemp> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/bodytemp>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/bodyheight"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/bodyheight>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/bodyheight> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/bodyheight>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/bmi"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/bmi>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/bmi> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/bmi>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/catalog"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/catalog>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/catalog> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/catalog>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/history-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/history-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/history-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/history-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/search-set-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/search-set-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/search-set-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/search-set-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/subscription-notification-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/subscription-notification-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/subscription-notification-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/subscription-notification-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/batch-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/batch-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/batch-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/batch-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/batch-response-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/batch-response-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/batch-response-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/batch-response-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/transaction-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/transaction-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/transaction-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/transaction-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/transaction-response-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/transaction-response-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/transaction-response-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/transaction-response-bundle>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/StructureDefinition/document-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/StructureDefinition/document-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/StructureDefinition/document-bundle> )
+     fhir:resource <http://hl7.org/fhir/StructureDefinition/document-bundle>
   ] ) . # 
 
 <http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic> a fhir:StructureDefinition ;
@@ -10171,7 +10170,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:85353-1 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -12414,7 +12413,7 @@
        fhir:definition [ fhir:v "Vital Signs Panel" ] ;
        fhir:alias ( [ fhir:v "Panel Name" ] [ fhir:v "Panel Code" ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:85353-1 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -13837,7 +13836,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:9279-1 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -16164,7 +16163,7 @@
        fhir:short [ fhir:v "Respiratory Rate" ] ;
        fhir:definition [ fhir:v "Respiratory Rate" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:9279-1 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -17607,7 +17606,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:2708-6 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -19934,7 +19933,7 @@
        fhir:short [ fhir:v "Oxygen Saturation" ] ;
        fhir:definition [ fhir:v "Oxygen Saturation" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:2708-6 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -21377,7 +21376,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8867-4 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -23704,7 +23703,7 @@
        fhir:short [ fhir:v "Heart Rate" ] ;
        fhir:definition [ fhir:v "Heart Rate" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8867-4 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -25147,7 +25146,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:9843-4 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -27474,7 +27473,7 @@
        fhir:short [ fhir:v "Head Circumference" ] ;
        fhir:definition [ fhir:v "Head Circumference" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:9843-4 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -28912,7 +28911,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:85354-9 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -31339,7 +31338,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8480-6 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -31880,7 +31879,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8462-4 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -32240,7 +32239,7 @@
        fhir:short [ fhir:v "Blood Pressure" ] ;
        fhir:definition [ fhir:v "Blood Pressure" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:85354-9 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -32307,7 +32306,7 @@
        fhir:short [ fhir:v "Systolic Blood Pressure" ] ;
        fhir:definition [ fhir:v "Systolic Blood Pressure" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8480-6 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -32409,7 +32408,7 @@
        fhir:short [ fhir:v "Diastolic Blood Pressure" ] ;
        fhir:definition [ fhir:v "Diastolic Blood Pressure" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8462-4 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -33870,7 +33869,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:29463-7 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -36197,7 +36196,7 @@
        fhir:short [ fhir:v "Body Weight" ] ;
        fhir:definition [ fhir:v "Body Weight" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:29463-7 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -37640,7 +37639,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8310-5 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -39967,7 +39966,7 @@
        fhir:short [ fhir:v "Body Temperature" ] ;
        fhir:definition [ fhir:v "Body Temperature" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8310-5 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -41410,7 +41409,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8302-2 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -43737,7 +43736,7 @@
        fhir:short [ fhir:v "Body Height" ] ;
        fhir:definition [ fhir:v "Body Height" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:8302-2 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -45180,7 +45179,7 @@
          ]
        ] ) ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:39156-5 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;
@@ -47507,7 +47506,7 @@
        fhir:short [ fhir:v "Body Mass Index (BMI)" ] ;
        fhir:definition [ fhir:v "Body Mass Index (BMI)" ] ;
        fhir:pattern [
-         a fhir:CodeableConcept, loinc:39156-5 ;
+         a fhir:CodeableConcept ;
          fhir:coding ( [
            fhir:system [
              fhir:v "http://loinc.org"^^xsd:anyURI ;

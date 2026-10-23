@@ -26,7 +26,7 @@
        fhir:v "urn:uuid:c144782b-da2f-4125-a9e2-9fa4b9085a40"^^xsd:anyURI ;
        fhir:l <urn:uuid:c144782b-da2f-4125-a9e2-9fa4b9085a40>
      ] ;
-     fhir:resource ( <urn:uuid:c144782b-da2f-4125-a9e2-9fa4b9085a40> )
+     fhir:resource <urn:uuid:c144782b-da2f-4125-a9e2-9fa4b9085a40>
   ] [
      fhir:fullUrl [
        fhir:v "http://example.org/FHIR/R5/Encounter/2"^^xsd:anyURI ;

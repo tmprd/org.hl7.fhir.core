@@ -19,20 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med03302" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "74169" ] ;
-         fhir:display [ fhir:v "piperacillin / tazobactam" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medicationrequest0349#med03302> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -46,7 +33,7 @@
   fhir:doNotPerform [ fhir:v true] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med03302> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medicationrequest0349#med03302> ;
        fhir:reference [ fhir:v "#med03302" ] ;
        fhir:display [ fhir:v "Piperacillin/Tazobactam" ]
      ]
@@ -69,6 +56,19 @@
        fhir:display [ fhir:v "Allergy to penicillins (e.g., amoxicillin)" ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/MedicationRequest/medicationrequest0349#med03302> a fhir:Medication ;
+  fhir:id [ fhir:v "med03302"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "74169" ] ;
+       fhir:display [ fhir:v "piperacillin / tazobactam" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

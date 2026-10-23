@@ -23,53 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Administer gemcitabine and carboplatin.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:MedicationRequest ;
-     fhir:id [ fhir:v "1111" ] ;
-     fhir:status [ fhir:v "unknown" ] ;
-     fhir:intent [ fhir:v "proposal" ] ;
-     fhir:medication [
-       fhir:concept [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-           ] ;
-           fhir:code [ fhir:v "12574" ] ;
-           fhir:display [ fhir:v "gemcitabine" ]
-         ] ) ;
-         fhir:text [ fhir:v "gemcitabine" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:dosageInstruction ( [ ] )
-  ] [
-     a fhir:MedicationRequest ;
-     fhir:id [ fhir:v "2222" ] ;
-     fhir:status [ fhir:v "unknown" ] ;
-     fhir:intent [ fhir:v "proposal" ] ;
-     fhir:medication [
-       fhir:concept [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-             fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-           ] ;
-           fhir:code [ fhir:v "40048" ] ;
-           fhir:display [ fhir:v "Carboplatin" ]
-         ] ) ;
-         fhir:text [ fhir:v "CARBOplatin" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:dosageInstruction ( [ ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/RequestOrchestration/kdn5-example#1111> <http://hl7.org/fhir/RequestOrchestration/kdn5-example#2222> ) ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "requestorchestration-kdn5" ]
   ] ) ; # 
@@ -140,7 +94,7 @@
              ] ) ;
              fhir:textEquivalent [ fhir:v "Gemcitabine 1250 mg/m² IV over 30 minutes on days 1 and 8" ] ;
              fhir:resource [
-               fhir:l <#1111> ;
+               fhir:l <http://hl7.org/fhir/RequestOrchestration/kdn5-example#1111> ;
                fhir:reference [ fhir:v "#1111" ]
              ]
            ] [
@@ -167,7 +121,7 @@
                fhir:relationship [ fhir:v "concurrent-with-start" ]
              ] ) ;
              fhir:resource [
-               fhir:l <#2222> ;
+               fhir:l <http://hl7.org/fhir/RequestOrchestration/kdn5-example#2222> ;
                fhir:reference [ fhir:v "#2222" ]
              ]
            ] ) # list of regimen entry references for this regimen part, references would duplicated in each cycle definition option\n          (see codesystem-action-grouping-behavior.html#sentence-group)
@@ -176,7 +130,53 @@
      ] ) # end of regimen parts
   ] ) . # end of regimen options
 
+<http://hl7.org/fhir/RequestOrchestration/kdn5-example#1111> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "1111"] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+         ] ;
+         fhir:code [ fhir:v "12574" ] ;
+         fhir:display [ fhir:v "gemcitabine" ]
+       ] ) ;
+       fhir:text [ fhir:v "gemcitabine" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:dosageInstruction ( [] ) . # 
+
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/RequestOrchestration/kdn5-example#2222> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "2222"] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:medication [
+     fhir:concept [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+         ] ;
+         fhir:code [ fhir:v "40048" ] ;
+         fhir:display [ fhir:v "Carboplatin" ]
+       ] ) ;
+       fhir:text [ fhir:v "CARBOplatin" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:dosageInstruction ( [] ) . # 
 
 <http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
 

@@ -21,59 +21,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:ServiceRequest ;
-     fhir:id [ fhir:v "liver-biopsy-request" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:intent [ fhir:v "order" ] ;
-     fhir:code [
-       fhir:concept [
-         a loinc:11529-5 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://loinc.org"^^xsd:anyURI ;
-             fhir:l <http://loinc.org>
-           ] ;
-           fhir:code [ fhir:v "11529-5" ] ;
-           fhir:display [ fhir:v "Surgical pathology study" ]
-         ] ) ;
-         fhir:text [ fhir:v "Surgical pathology study of liver tissue" ]
-       ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ]
-  ] [
-     a fhir:Procedure ;
-     fhir:id [ fhir:v "liver-biopsy-procedure" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:code [
-       a sct:287489008 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "287489008" ] ;
-         fhir:display [ fhir:v "Percutaneous needle biopsy of liver" ]
-       ] )
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:occurrence [
-       a fhir:DateTime ;
-       fhir:v "2024-03-15T09:45:00Z"^^xsd:dateTime
-     ] ;
-     fhir:performer ( [
-       fhir:actor [
-         fhir:l <http://hl7.org/fhir/Practitioner/gastroenterologist> ;
-         fhir:reference [ fhir:v "Practitioner/gastroenterologist" ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Specimen/liver-biopsy#liver-biopsy-request> <http://hl7.org/fhir/Specimen/liver-biopsy#liver-biopsy-procedure> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://lab.acme.org/specimens/2024"^^xsd:anyURI ;
@@ -116,7 +64,7 @@
   ] ; # 
   fhir:receivedTime [ fhir:v "2024-03-15T10:30:00Z"^^xsd:dateTime] ; # 
   fhir:request ( [
-     fhir:l <#liver-biopsy-request> ;
+     fhir:l <http://hl7.org/fhir/Specimen/liver-biopsy#liver-biopsy-request> ;
      fhir:reference [ fhir:v "#liver-biopsy-request" ] ;
      fhir:display [ fhir:v "Surgical pathology study of liver tissue" ]
   ] ) ; # 
@@ -150,7 +98,7 @@
        ] )
      ] ;
      fhir:procedure [
-       fhir:l <#liver-biopsy-procedure> ;
+       fhir:l <http://hl7.org/fhir/Specimen/liver-biopsy#liver-biopsy-procedure> ;
        fhir:reference [ fhir:v "#liver-biopsy-procedure" ]
      ]
   ] ; # 
@@ -185,7 +133,59 @@
      fhir:text [ fhir:v "Core biopsy specimen obtained for evaluation of hepatic steatosis and fibrosis. Adequate tissue for histopathological assessment." ]
   ] ) . # 
 
+<http://hl7.org/fhir/Specimen/liver-biopsy#liver-biopsy-request> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "liver-biopsy-request"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:concept [
+       a loinc:11529-5 ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "11529-5" ] ;
+         fhir:display [ fhir:v "Surgical pathology study" ]
+       ] ) ;
+       fhir:text [ fhir:v "Surgical pathology study of liver tissue" ]
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] . # 
+
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Specimen/liver-biopsy#liver-biopsy-procedure> a fhir:Procedure ;
+  fhir:id [ fhir:v "liver-biopsy-procedure"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     a sct:287489008 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "287489008" ] ;
+       fhir:display [ fhir:v "Percutaneous needle biopsy of liver" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:DateTime ;
+     fhir:v "2024-03-15T09:45:00Z"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:l <http://hl7.org/fhir/Practitioner/gastroenterologist> ;
+       fhir:reference [ fhir:v "Practitioner/gastroenterologist" ]
+     ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Practitioner/gastroenterologist> a fhir:Practitioner .
 

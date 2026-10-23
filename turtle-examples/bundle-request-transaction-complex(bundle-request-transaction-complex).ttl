@@ -28,7 +28,7 @@
        fhir:v "urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4"^^xsd:anyURI ;
        fhir:l <urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4>
      ] ;
-     fhir:resource ( <urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4> ) ;
+     fhir:resource <urn:uuid:a008e191-0dfa-3ab3-b035-49d7d2e69cb4> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -42,7 +42,7 @@
        fhir:v "urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91"^^xsd:anyURI ;
        fhir:l <urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91>
      ] ;
-     fhir:resource ( <urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91> ) ;
+     fhir:resource <urn:uuid:dbc4a3f7-9c69-4435-3ce3-4e1988ab6b91> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -55,7 +55,7 @@
        fhir:v "urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0"^^xsd:anyURI ;
        fhir:l <urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0>
      ] ;
-     fhir:resource ( <urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0> ) ;
+     fhir:resource <urn:uuid:eaeb9228-4420-5e9c-b217-4c1a98ff9fe0> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -68,7 +68,7 @@
        fhir:v "urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4"^^xsd:anyURI ;
        fhir:l <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4>
      ] ;
-     fhir:resource ( <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4> ) ;
+     fhir:resource <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4> ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
        fhir:url [
@@ -318,7 +318,7 @@
      fhir:display [ fhir:v "Mrs. Ada662 Sari509 Balistreri607" ]
   ] ; # 
   fhir:serviceProvider [
-     fhir:l fhir:Organization?identifier=urn:ietf:rfc:3986|urn:oid:2.16.840.1.113883.19.5 ;
+     fhir:l <http://hl7.org/fhir/Organization?identifier=urn:ietf:rfc:3986%7Curn:oid:2.16.840.1.113883.19.5> ;
      fhir:reference [ fhir:v "Organization?identifier=urn:ietf:rfc:3986|urn:oid:2.16.840.1.113883.19.5" ] ;
      fhir:display [ fhir:v "Good Health Clinic" ]
   ] ; # 
@@ -339,13 +339,11 @@
        fhir:end [ fhir:v "2015-09-05T22:48:16+00:00"^^xsd:dateTime ]
      ] ;
      fhir:actor [
-       fhir:l <http://hl7.org/fhir/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999947796> ;
+       fhir:l <http://hl7.org/fhir/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi%7C9999947796> ;
        fhir:reference [ fhir:v "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999947796" ] ;
        fhir:display [ fhir:v "Dr. Francisco472 Gusikowski974" ]
      ]
   ] ) . # 
-
-<http://hl7.org/fhir/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999947796> a fhir:Practitioner?identifier=http: .
 
 <urn:uuid:f5030c53-c71d-9dd6-a85f-6647c09c34b4> a fhir:Observation ;
   fhir:id [ fhir:v "f5030c53-c71d-9dd6-a85f-6647c09c34b4"] ; # 

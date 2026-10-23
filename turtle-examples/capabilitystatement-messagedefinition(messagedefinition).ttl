@@ -72,7 +72,7 @@
        ] ;
        fhir:address [
          fhir:v "mllp:10.1.1.10:9234"^^xsd:anyURI ;
-         fhir:l fhir:mllp:10.1.1.10:9234
+         fhir:l <mllp:10.1.1.10:9234>
        ] # LLP server at 10.1.1.10 on port 9234
      ] ) ;
      fhir:reliableCache [ fhir:v "30"^^xsd:nonNegativeInteger ] ;

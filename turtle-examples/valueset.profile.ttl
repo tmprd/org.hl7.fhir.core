@@ -3041,7 +3041,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.compose.include.filter"^^xsd:anyURI ;
-         fhir:l <#ValueSet.compose.include.filter>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.compose.include.filter>
        ] ;
        fhir:condition ( [ fhir:v "vsd-13" ] ) ;
        fhir:constraint ( [
@@ -3152,7 +3152,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.compose.include"^^xsd:anyURI ;
-         fhir:l <#ValueSet.compose.include>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.compose.include>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4409,7 +4409,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.compose.include.concept.designation"^^xsd:anyURI ;
-         fhir:l <#ValueSet.compose.include.concept.designation>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.compose.include.concept.designation>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4999,7 +4999,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.expansion.contains"^^xsd:anyURI ;
-         fhir:l <#ValueSet.expansion.contains>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.expansion.contains>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6291,7 +6291,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.compose.include.filter"^^xsd:anyURI ;
-         fhir:l <#ValueSet.compose.include.filter>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.compose.include.filter>
        ] ;
        fhir:condition ( [ fhir:v "vsd-13" ] ) ;
        fhir:mustSupport [ fhir:v false ] ;
@@ -6357,7 +6357,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.compose.include"^^xsd:anyURI ;
-         fhir:l <#ValueSet.compose.include>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.compose.include>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -6792,7 +6792,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.compose.include.concept.designation"^^xsd:anyURI ;
-         fhir:l <#ValueSet.compose.include.concept.designation>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.compose.include.concept.designation>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -7023,7 +7023,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ValueSet.expansion.contains"^^xsd:anyURI ;
-         fhir:l <#ValueSet.expansion.contains>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ValueSet#ValueSet.expansion.contains>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

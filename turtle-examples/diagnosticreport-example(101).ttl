@@ -26,109 +26,109 @@
        fhir:v "https://example.com/base/DiagnosticReport/101"^^xsd:anyURI ;
        fhir:l <https://example.com/base/DiagnosticReport/101>
      ] ;
-     fhir:resource ( <https://example.com/base/DiagnosticReport/101> )
+     fhir:resource <https://example.com/base/DiagnosticReport/101>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r1"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r1>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r1> )
+     fhir:resource <https://example.com/base/Observation/r1>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r2"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r2>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r2> )
+     fhir:resource <https://example.com/base/Observation/r2>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r3"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r3>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r3> )
+     fhir:resource <https://example.com/base/Observation/r3>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r4"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r4>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r4> )
+     fhir:resource <https://example.com/base/Observation/r4>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r5"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r5>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r5> )
+     fhir:resource <https://example.com/base/Observation/r5>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r6"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r6>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r6> )
+     fhir:resource <https://example.com/base/Observation/r6>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r7"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r7>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r7> )
+     fhir:resource <https://example.com/base/Observation/r7>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r8"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r8>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r8> )
+     fhir:resource <https://example.com/base/Observation/r8>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r9"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r9>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r9> )
+     fhir:resource <https://example.com/base/Observation/r9>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r10"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r10>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r10> )
+     fhir:resource <https://example.com/base/Observation/r10>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r11"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r11>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r11> )
+     fhir:resource <https://example.com/base/Observation/r11>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r12"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r12>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r12> )
+     fhir:resource <https://example.com/base/Observation/r12>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r13"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r13>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r13> )
+     fhir:resource <https://example.com/base/Observation/r13>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r14"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r14>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r14> )
+     fhir:resource <https://example.com/base/Observation/r14>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r15"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r15>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r15> )
+     fhir:resource <https://example.com/base/Observation/r15>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r16"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r16>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r16> )
+     fhir:resource <https://example.com/base/Observation/r16>
   ] [
      fhir:fullUrl [
        fhir:v "https://example.com/base/Observation/r17"^^xsd:anyURI ;
        fhir:l <https://example.com/base/Observation/r17>
      ] ;
-     fhir:resource ( <https://example.com/base/Observation/r17> )
+     fhir:resource <https://example.com/base/Observation/r17>
   ] ) . # 
 
 <https://example.com/base/DiagnosticReport/101> a fhir:DiagnosticReport ;
@@ -180,11 +180,11 @@
      fhir:text [ fhir:v "Complete Blood Count" ]
   ] ; # first, various administrative/context stuff
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:encounter [
-     fhir:l <http://hl7.org/fhir/Encounter/example> ;
+     fhir:l <https://example.com/base/Encounter/example> ;
      fhir:reference [ fhir:v "Encounter/example" ]
   ] ; # 
   fhir:effective [
@@ -193,60 +193,60 @@
   ] ; # 
   fhir:issued [ fhir:v "2011-03-04T11:45:33+11:00"^^xsd:dateTime] ; # all this report is final
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
   fhir:result ( [
-     fhir:l <http://hl7.org/fhir/Observation/r1> ;
+     fhir:l <https://example.com/base/Observation/r1> ;
      fhir:reference [ fhir:v "Observation/r1" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r2> ;
+     fhir:l <https://example.com/base/Observation/r2> ;
      fhir:reference [ fhir:v "Observation/r2" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r3> ;
+     fhir:l <https://example.com/base/Observation/r3> ;
      fhir:reference [ fhir:v "Observation/r3" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r4> ;
+     fhir:l <https://example.com/base/Observation/r4> ;
      fhir:reference [ fhir:v "Observation/r4" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r5> ;
+     fhir:l <https://example.com/base/Observation/r5> ;
      fhir:reference [ fhir:v "Observation/r5" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r6> ;
+     fhir:l <https://example.com/base/Observation/r6> ;
      fhir:reference [ fhir:v "Observation/r6" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r7> ;
+     fhir:l <https://example.com/base/Observation/r7> ;
      fhir:reference [ fhir:v "Observation/r7" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r8> ;
+     fhir:l <https://example.com/base/Observation/r8> ;
      fhir:reference [ fhir:v "Observation/r8" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r9> ;
+     fhir:l <https://example.com/base/Observation/r9> ;
      fhir:reference [ fhir:v "Observation/r9" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r10> ;
+     fhir:l <https://example.com/base/Observation/r10> ;
      fhir:reference [ fhir:v "Observation/r10" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r11> ;
+     fhir:l <https://example.com/base/Observation/r11> ;
      fhir:reference [ fhir:v "Observation/r11" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r12> ;
+     fhir:l <https://example.com/base/Observation/r12> ;
      fhir:reference [ fhir:v "Observation/r12" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r13> ;
+     fhir:l <https://example.com/base/Observation/r13> ;
      fhir:reference [ fhir:v "Observation/r13" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r14> ;
+     fhir:l <https://example.com/base/Observation/r14> ;
      fhir:reference [ fhir:v "Observation/r14" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r15> ;
+     fhir:l <https://example.com/base/Observation/r15> ;
      fhir:reference [ fhir:v "Observation/r15" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r16> ;
+     fhir:l <https://example.com/base/Observation/r16> ;
      fhir:reference [ fhir:v "Observation/r16" ]
   ] [
-     fhir:l <http://hl7.org/fhir/Observation/r17> ;
+     fhir:l <https://example.com/base/Observation/r17> ;
      fhir:reference [ fhir:v "Observation/r17" ]
   ] ) ; # now the atomic results
   fhir:presentedForm ( [
@@ -258,46 +258,6 @@
 #    A consuming application could choose to display either the
 #	html version above, or the pdf version - they both need to convey the
 #	same information
-
-<http://hl7.org/fhir/Patient/pat2> a fhir:Patient .
-
-<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
-
-<http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> a fhir:Organization .
-
-<http://hl7.org/fhir/Observation/r1> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r2> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r3> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r4> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r5> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r6> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r7> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r8> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r9> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r10> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r11> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r12> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r13> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r14> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r15> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r16> a fhir:Observation .
-
-<http://hl7.org/fhir/Observation/r17> a fhir:Observation .
 
 <https://example.com/base/Observation/r1> a fhir:Observation ;
   fhir:id [ fhir:v "r1"] ; # all the data items (= Observations) are bundled along with this
@@ -324,11 +284,11 @@
      fhir:text [ fhir:v "Haemoglobin" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -383,11 +343,11 @@
      fhir:text [ fhir:v "Red Cell Count" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -442,11 +402,11 @@
      fhir:text [ fhir:v "Haematocrit" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -495,11 +455,11 @@
      fhir:text [ fhir:v "Mean Cell Volume" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -563,11 +523,11 @@
      fhir:text [ fhir:v "Mean Cell Haemoglobin" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -631,11 +591,11 @@
      fhir:text [ fhir:v "Platelet Count" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -690,11 +650,11 @@
      fhir:text [ fhir:v "White Cell Count" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -749,11 +709,11 @@
      fhir:text [ fhir:v "Neutrophils" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -788,11 +748,11 @@
      fhir:text [ fhir:v "Neutrophils" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -856,11 +816,11 @@
      fhir:text [ fhir:v "Lymphocytes" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -895,11 +855,11 @@
      fhir:text [ fhir:v "Lymphocytes" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -963,11 +923,11 @@
      fhir:text [ fhir:v "Monocytes" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -1002,11 +962,11 @@
      fhir:text [ fhir:v "Monocytes" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -1061,11 +1021,11 @@
      fhir:text [ fhir:v "Eosinophils" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -1100,11 +1060,11 @@
      fhir:text [ fhir:v "Eosinophils" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -1168,11 +1128,11 @@
      fhir:text [ fhir:v "Basophils" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 
@@ -1207,11 +1167,11 @@
      fhir:text [ fhir:v "Basophils" ]
   ] ; # 
   fhir:subject [
-     fhir:l <http://hl7.org/fhir/Patient/pat2> ;
+     fhir:l <https://example.com/base/Patient/pat2> ;
      fhir:reference [ fhir:v "Patient/pat2" ]
   ] ; # 
   fhir:performer ( [
-     fhir:l <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
+     fhir:l <https://example.com/base/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ;
      fhir:reference [ fhir:v "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f" ] ;
      fhir:display [ fhir:v "Acme Laboratory, Inc" ]
   ] ) ; # 

@@ -23,7 +23,7 @@
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
        fhir:v "http:/goodhealth.org/identifiers"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/http:/goodhealth.org/identifiers>
+       fhir:l <http:/goodhealth.org/identifiers>
      ] ;
      fhir:value [ fhir:v "20170201-001" ]
   ] ) ; # 
@@ -34,7 +34,7 @@
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
        fhir:v "http:/goodhealth.org/accession/identifiers"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/http:/goodhealth.org/accession/identifiers>
+       fhir:l <http:/goodhealth.org/accession/identifiers>
      ] ;
      fhir:value [ fhir:v "G20170201-001" ]
   ] ; # 

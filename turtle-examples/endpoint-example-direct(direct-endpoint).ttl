@@ -44,7 +44,7 @@
   ] ) ; # 
   fhir:address [
      fhir:v "mailto:MARTIN.SMIETANKA@directnppes.com"^^xsd:anyURI ;
-     fhir:l fhir:mailto:MARTIN.SMIETANKA@directnppes.com
+     fhir:l <mailto:MARTIN.SMIETANKA@directnppes.com>
   ] . # 
 
 <http://hl7.org/fhir/Organization/f201> a fhir:Organization .

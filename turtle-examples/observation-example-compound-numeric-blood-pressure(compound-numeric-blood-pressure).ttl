@@ -28,13 +28,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "patientExample-1" ]
-  ] [
-     a fhir:Device ;
-     fhir:id [ fhir:v "phd-711000FEFF5F49B0.B0495F001071" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#patientExample-1> <http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#phd-711000FEFF5F49B0.B0495F001071> ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
      fhir:coding ( [
@@ -73,7 +67,7 @@
      fhir:text [ fhir:v "Blood pressure" ]
   ] ; # 
   fhir:subject [
-     fhir:l <#patientExample-1> ;
+     fhir:l <http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#patientExample-1> ;
      fhir:reference [ fhir:v "#patientExample-1" ]
   ] ; # 
   fhir:effective [
@@ -81,11 +75,11 @@
      fhir:v "2018-11-11T11:38:15-05:00"^^xsd:dateTime
   ] ; # 
   fhir:performer ( [
-     fhir:l <#patientExample-1> ;
+     fhir:l <http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#patientExample-1> ;
      fhir:reference [ fhir:v "#patientExample-1" ]
   ] ) ; # 
   fhir:device [
-     fhir:l <#phd-711000FEFF5F49B0.B0495F001071> ;
+     fhir:l <http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#phd-711000FEFF5F49B0.B0495F001071> ;
      fhir:reference [ fhir:v "#phd-711000FEFF5F49B0.B0495F001071" ]
   ] ; # 
   fhir:component ( [
@@ -185,6 +179,12 @@
        fhir:code [ fhir:v "mm[Hg]" ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#patientExample-1> a fhir:Patient ;
+  fhir:id [ fhir:v "patientExample-1"] . # 
+
+<http://hl7.org/fhir/Observation/compound-numeric-blood-pressure#phd-711000FEFF5F49B0.B0495F001071> a fhir:Device ;
+  fhir:id [ fhir:v "phd-711000FEFF5F49B0.B0495F001071"] . # 
 
 # -------------------------------------------------------------------------------------
 

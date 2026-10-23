@@ -4703,7 +4703,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#CapabilityStatement.rest.resource.searchParam"^^xsd:anyURI ;
-         fhir:l <#CapabilityStatement.rest.resource.searchParam>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement.rest.resource.searchParam>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4733,7 +4733,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#CapabilityStatement.rest.resource.operation"^^xsd:anyURI ;
-         fhir:l <#CapabilityStatement.rest.resource.operation>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement.rest.resource.operation>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -7801,7 +7801,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#CapabilityStatement.rest.resource.searchParam"^^xsd:anyURI ;
-         fhir:l <#CapabilityStatement.rest.resource.searchParam>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement.rest.resource.searchParam>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -7816,7 +7816,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#CapabilityStatement.rest.resource.operation"^^xsd:anyURI ;
-         fhir:l <#CapabilityStatement.rest.resource.operation>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement.rest.resource.operation>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

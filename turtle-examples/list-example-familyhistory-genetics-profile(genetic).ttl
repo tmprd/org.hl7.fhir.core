@@ -20,264 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "1" ] ;
-     fhir:extension ( [
-       fhir:url [
-         fhir:v "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent>
-       ] ;
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "type"^^xsd:anyURI ;
-           fhir:l fhir:type
-         ] ;
-         fhir:value [
-           a fhir:CodeableConcept ;
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-               fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-             ] ;
-             fhir:code [ fhir:v "FTH" ] ;
-             fhir:display [ fhir:v "father" ]
-           ] )
-         ]
-       ] [
-         fhir:url [
-           fhir:v "reference"^^xsd:anyURI ;
-           fhir:l fhir:reference
-         ] ;
-         fhir:value [
-           a fhir:Reference ;
-           fhir:l <#2> ;
-           fhir:reference [ fhir:v "#2" ] ;
-           fhir:display [ fhir:v "maternal grandfather" ]
-         ]
-       ] )
-     ] ) ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:name [ fhir:v "Dave" ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "FTH" ] ;
-         fhir:display [ fhir:v "father" ]
-       ] )
-     ]
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "2" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "MGRFTH" ] ;
-         fhir:display [ fhir:v "maternal grandfather" ]
-       ] )
-     ]
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "3" ] ;
-     fhir:extension ( [
-       fhir:url [
-         fhir:v "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent>
-       ] ;
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "type"^^xsd:anyURI ;
-           fhir:l fhir:type
-         ] ;
-         fhir:value [
-           a fhir:CodeableConcept ;
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-               fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-             ] ;
-             fhir:code [ fhir:v "MTH" ] ;
-             fhir:display [ fhir:v "mother" ]
-           ] )
-         ]
-       ] [
-         fhir:url [
-           fhir:v "reference"^^xsd:anyURI ;
-           fhir:l fhir:reference
-         ] ;
-         fhir:value [
-           a fhir:Reference ;
-           fhir:l <#2> ;
-           fhir:reference [ fhir:v "#2" ] ;
-           fhir:display [ fhir:v "maternal grandfather" ]
-         ]
-       ] )
-     ] ) ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "MTH" ] ;
-         fhir:display [ fhir:v "mother" ]
-       ] )
-     ]
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "4" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "PGRMTH" ] ;
-         fhir:display [ fhir:v "paternal grandmother" ]
-       ] )
-     ]
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "5" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:name [ fhir:v "Eve" ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "PAUNT" ] ;
-         fhir:display [ fhir:v "paternal aunt" ]
-       ] )
-     ] # relationship>\n        <coding>\n          <system value=\"http:\/\/terminology.hl7.org\/CodeSystem\/v3-RoleCode\"\/>\n          <code value=\"38048003\"\/>\n          <display value=\"maternal uncle\"\/>\n        <\/coding>\n      <\/relationship
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "6" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "MUNCLE" ] ;
-         fhir:display [ fhir:v "maternal uncle" ]
-       ] )
-     ]
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "7" ] ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "NSIS" ] ;
-         fhir:display [ fhir:v "natural sister" ]
-       ] )
-     ]
-  ] [
-     a fhir:FamilyMemberHistory ;
-     fhir:id [ fhir:v "8" ] ;
-     fhir:extension ( [
-       fhir:url [
-         fhir:v "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent>
-       ] ;
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "type"^^xsd:anyURI ;
-           fhir:l fhir:type
-         ] ;
-         fhir:value [
-           a fhir:CodeableConcept ;
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-               fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-             ] ;
-             fhir:code [ fhir:v "MTH" ] ;
-             fhir:display [ fhir:v "mother" ]
-           ] )
-         ]
-       ] [
-         fhir:url [
-           fhir:v "reference"^^xsd:anyURI ;
-           fhir:l fhir:reference
-         ] ;
-         fhir:value [
-           a fhir:Reference ;
-           fhir:l <#2> ;
-           fhir:reference [ fhir:v "#2" ] ;
-           fhir:display [ fhir:v "maternal grandfather" ]
-         ]
-       ] )
-     ] ) ;
-     fhir:status [ fhir:v "completed" ] ;
-     fhir:patient [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ] ;
-       fhir:display [ fhir:v "Peter Patient" ]
-     ] ;
-     fhir:name [ fhir:v "Alice" ] ;
-     fhir:relationship [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-         ] ;
-         fhir:code [ fhir:v "MCOUSN" ] ;
-         fhir:display [ fhir:v "maternal cousin" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/List/genetic#1> <http://hl7.org/fhir/List/genetic#2> <http://hl7.org/fhir/List/genetic#3> <http://hl7.org/fhir/List/genetic#4> <http://hl7.org/fhir/List/genetic#5> <http://hl7.org/fhir/List/genetic#6> <http://hl7.org/fhir/List/genetic#7> <http://hl7.org/fhir/List/genetic#8> ) ; # 
   fhir:status [ fhir:v "current"] ; # 
   fhir:mode [ fhir:v "snapshot"] ; # 
   fhir:code [
@@ -298,42 +41,42 @@
   ] ) ; # 
   fhir:entry ( [
      fhir:item [
-       fhir:l <#1> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#1> ;
        fhir:reference [ fhir:v "#1" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#2> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#2> ;
        fhir:reference [ fhir:v "#2" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#3> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#3> ;
        fhir:reference [ fhir:v "#3" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#4> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#4> ;
        fhir:reference [ fhir:v "#4" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#5> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#5> ;
        fhir:reference [ fhir:v "#5" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#6> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#6> ;
        fhir:reference [ fhir:v "#6" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#7> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#7> ;
        fhir:reference [ fhir:v "#7" ]
      ]
   ] [
      fhir:item [
-       fhir:l <#8> ;
+       fhir:l <http://hl7.org/fhir/List/genetic#8> ;
        fhir:reference [ fhir:v "#8" ]
      ]
   ] [
@@ -344,7 +87,270 @@
      ]
   ] ) . # 
 
+<http://hl7.org/fhir/List/genetic#1> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "1"] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent>
+     ] ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+           ] ;
+           fhir:code [ fhir:v "FTH" ] ;
+           fhir:display [ fhir:v "father" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "reference"^^xsd:anyURI ;
+         fhir:l fhir:reference
+       ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:l <http://hl7.org/fhir/List/genetic#2> ;
+         fhir:reference [ fhir:v "#2" ] ;
+         fhir:display [ fhir:v "maternal grandfather" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:name [ fhir:v "Dave"] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "FTH" ] ;
+       fhir:display [ fhir:v "father" ]
+     ] )
+  ] . # 
+
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/List/genetic#2> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "2"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "MGRFTH" ] ;
+       fhir:display [ fhir:v "maternal grandfather" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/List/genetic#3> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "3"] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent>
+     ] ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+           ] ;
+           fhir:code [ fhir:v "MTH" ] ;
+           fhir:display [ fhir:v "mother" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "reference"^^xsd:anyURI ;
+         fhir:l fhir:reference
+       ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:l <http://hl7.org/fhir/List/genetic#2> ;
+         fhir:reference [ fhir:v "#2" ] ;
+         fhir:display [ fhir:v "maternal grandfather" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "MTH" ] ;
+       fhir:display [ fhir:v "mother" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/List/genetic#4> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "4"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "PGRMTH" ] ;
+       fhir:display [ fhir:v "paternal grandmother" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/List/genetic#5> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "5"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:name [ fhir:v "Eve"] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "PAUNT" ] ;
+       fhir:display [ fhir:v "paternal aunt" ]
+     ] )
+  ] . # relationship>
+#        <coding>
+#          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+#          <code value="38048003"/>
+#          <display value="maternal uncle"/>
+#        </coding>
+#      </relationship
+
+<http://hl7.org/fhir/List/genetic#6> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "6"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "MUNCLE" ] ;
+       fhir:display [ fhir:v "maternal uncle" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/List/genetic#7> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "7"] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "NSIS" ] ;
+       fhir:display [ fhir:v "natural sister" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/List/genetic#8> a fhir:FamilyMemberHistory ;
+  fhir:id [ fhir:v "8"] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/family-member-history-genetics-parent>
+     ] ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+           ] ;
+           fhir:code [ fhir:v "MTH" ] ;
+           fhir:display [ fhir:v "mother" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "reference"^^xsd:anyURI ;
+         fhir:l fhir:reference
+       ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:l <http://hl7.org/fhir/List/genetic#2> ;
+         fhir:reference [ fhir:v "#2" ] ;
+         fhir:display [ fhir:v "maternal grandfather" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:patient [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ] ;
+     fhir:display [ fhir:v "Peter Patient" ]
+  ] ; # 
+  fhir:name [ fhir:v "Alice"] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "MCOUSN" ] ;
+       fhir:display [ fhir:v "maternal cousin" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Condition/family-history> a fhir:Condition .
 

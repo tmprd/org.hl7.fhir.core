@@ -20,11 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "mmanu" ] ;
-     fhir:name [ fhir:v "Medication Manufacturer" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Medication/med0301#mmanu> ) ; # 
   fhir:identifier ( [
      fhir:id [ fhir:v "123456789" ]
   ] ) ; # 
@@ -41,7 +37,7 @@
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:marketingAuthorizationHolder [
-     fhir:l <#mmanu> ;
+     fhir:l <http://hl7.org/fhir/Medication/med0301#mmanu> ;
      fhir:reference [ fhir:v "#mmanu" ]
   ] ; # 
   fhir:doseForm [
@@ -89,6 +85,10 @@
        ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Medication/med0301#mmanu> a fhir:Organization ;
+  fhir:id [ fhir:v "mmanu"] ; # 
+  fhir:name [ fhir:v "Medication Manufacturer"] . # 
 
 # -------------------------------------------------------------------------------------
 

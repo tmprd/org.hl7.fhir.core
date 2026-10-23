@@ -3251,7 +3251,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.process"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.process>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.process>
        ] ;
        fhir:orderMeaning [ fhir:v "The order in which these elements appear is the order in which they are expected to be rendered (in a table, in a diagram, etc.)" ] ;
        fhir:constraint ( [
@@ -3782,7 +3782,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.instance.containedInstance"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.instance.containedInstance>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.instance.containedInstance>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -3811,7 +3811,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.instance.containedInstance"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.instance.containedInstance>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.instance.containedInstance>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4092,7 +4092,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.process.step"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.process.step>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.process.step>
        ] ;
        fhir:orderMeaning [ fhir:v "The order in which these elements appear is the order in which they are expected to be rendered (in a table, in a diagram, etc.).  It also indicates the order in which the events occur." ] ;
        fhir:constraint ( [
@@ -5490,7 +5490,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.process"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.process>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.process>
        ] ;
        fhir:orderMeaning [ fhir:v "The order in which these elements appear is the order in which they are expected to be rendered (in a table, in a diagram, etc.)" ] ;
        fhir:mustSupport [ fhir:v false ] ;
@@ -5730,7 +5730,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.instance.containedInstance"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.instance.containedInstance>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.instance.containedInstance>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -5744,7 +5744,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.instance.containedInstance"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.instance.containedInstance>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.instance.containedInstance>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -5839,7 +5839,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ExampleScenario.process.step"^^xsd:anyURI ;
-         fhir:l <#ExampleScenario.process.step>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ExampleScenario#ExampleScenario.process.step>
        ] ;
        fhir:orderMeaning [ fhir:v "The order in which these elements appear is the order in which they are expected to be rendered (in a table, in a diagram, etc.).  It also indicates the order in which the events occur." ] ;
        fhir:mustSupport [ fhir:v false ] ;

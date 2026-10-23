@@ -19,25 +19,11 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0351" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/sid/ndc>
-         ] ;
-         fhir:code [ fhir:v "0056-0172-70" ] ;
-         fhir:display [ fhir:v "COUMADIN, 1 BOTTLE in 1 CARTON (0056-0172-70) > 100 TABLET in 1 BOTTLE (package)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Coumadin 5mg tablet" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationDispense/meddisp0330#med0351> ) ; # 
   fhir:status [ fhir:v "in-progress"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0351> ;
+       fhir:l <http://hl7.org/fhir/MedicationDispense/meddisp0330#med0351> ;
        fhir:reference [ fhir:v "#med0351" ] ;
        fhir:display [ fhir:v "Coumadin 5mg tablet" ]
      ] # Linked to a RESOURCE Medication
@@ -86,6 +72,20 @@
   ] ; # 
   fhir:whenPrepared [ fhir:v "2015-01-15T10:20:00Z"^^xsd:dateTime] ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0330#med0351> a fhir:Medication ;
+  fhir:id [ fhir:v "med0351"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/ndc>
+       ] ;
+       fhir:code [ fhir:v "0056-0172-70" ] ;
+       fhir:display [ fhir:v "COUMADIN, 1 BOTTLE in 1 CARTON (0056-0172-70) > 100 TABLET in 1 BOTTLE (package)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Coumadin 5mg tablet" ]
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

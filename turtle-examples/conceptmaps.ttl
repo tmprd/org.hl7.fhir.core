@@ -18,121 +18,121 @@
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-address-type-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-address-type-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-address-type-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-address-type-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-address-use-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-address-use-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-address-use-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-address-use-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-document-reference-status-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-document-reference-status-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-document-reference-status-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-document-reference-status-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-name-use-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-name-use-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-name-use-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-name-use-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-contact-point-use-v2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-contact-point-system-v2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-contact-point-system-v2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-contact-point-system-v2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-contact-point-system-v2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-name-use-v2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-name-use-v2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-name-use-v2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-name-use-v2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-administrative-gender-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-composition-status-v3"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-composition-status-v3>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-composition-status-v3> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-composition-status-v3>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/cm-address-use-v2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/cm-address-use-v2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/cm-address-use-v2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/cm-address-use-v2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/101"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/101>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/101> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/101>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/103"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/103>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/103> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/103>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/102"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/102>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/102> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/102>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/example2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/example2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/example2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/example2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/example-metadata"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/example-metadata>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/example-metadata> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/example-metadata>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/example-metadata-2"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/example-metadata-2>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/example-metadata-2> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/example-metadata-2>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/example-priority"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/example-priority>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/example-priority> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/example-priority>
   ] [
      fhir:fullUrl [
        fhir:v "http://hl7.org/fhir/ConceptMap/message-adt-a04-to-bundle"^^xsd:anyURI ;
        fhir:l <http://hl7.org/fhir/ConceptMap/message-adt-a04-to-bundle>
      ] ;
-     fhir:resource ( <http://hl7.org/fhir/ConceptMap/message-adt-a04-to-bundle> )
+     fhir:resource <http://hl7.org/fhir/ConceptMap/message-adt-a04-to-bundle>
   ] ) . # 
 
 <http://hl7.org/fhir/ConceptMap/cm-address-type-v3> a fhir:ConceptMap ;

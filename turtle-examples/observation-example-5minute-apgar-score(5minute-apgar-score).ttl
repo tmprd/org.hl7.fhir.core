@@ -21,36 +21,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "newborn" ] ;
-     fhir:identifier ( [
-       fhir:system [
-         fhir:v "http://acmehealthcare/org/mrns"^^xsd:anyURI ;
-         fhir:l <http://acmehealthcare/org/mrns>
-       ] ;
-       fhir:value [ fhir:v "12345" ]
-     ] ) ; # MRN assigned by ACME healthcare on
-     fhir:active [ fhir:v true ] ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Chalmers" ] ;
-       fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
-     ] ) ; # Peter James Chalmers
-     fhir:gender [ fhir:v "male" ] ; # use FHIR code system for male \/ female
-     fhir:birthDate [
-       fhir:v "2016-05-18"^^xsd:date ;
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthTime"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/StructureDefinition/patient-birthTime>
-         ] ;
-         fhir:value [
-           a fhir:DateTime ;
-           fhir:v "2016-05-18T10:28:45Z"^^xsd:dateTime
-         ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Observation/5minute-apgar-score#newborn> ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
      fhir:coding ( [
@@ -83,7 +54,7 @@
      fhir:text [ fhir:v "5 minute Apgar Score" ]
   ] ; # 
   fhir:subject [
-     fhir:l <#newborn> ;
+     fhir:l <http://hl7.org/fhir/Observation/5minute-apgar-score#newborn> ;
      fhir:reference [ fhir:v "#newborn" ]
   ] ; # 
   fhir:effective [
@@ -337,6 +308,35 @@
        fhir:text [ fhir:v "2. Good, strong cry; normal rate and effort of breathing" ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Observation/5minute-apgar-score#newborn> a fhir:Patient ;
+  fhir:id [ fhir:v "newborn"] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://acmehealthcare/org/mrns"^^xsd:anyURI ;
+       fhir:l <http://acmehealthcare/org/mrns>
+     ] ;
+     fhir:value [ fhir:v "12345" ]
+  ] ) ; # MRN assigned by ACME healthcare on
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Chalmers" ] ;
+     fhir:given ( [ fhir:v "Peter" ] [ fhir:v "James" ] )
+  ] ) ; # Peter James Chalmers
+  fhir:gender [ fhir:v "male"] ; # use FHIR code system for male / female
+  fhir:birthDate [
+     fhir:v "2016-05-18"^^xsd:date ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthTime"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/patient-birthTime>
+       ] ;
+       fhir:value [
+         a fhir:DateTime ;
+         fhir:v "2016-05-18T10:28:45Z"^^xsd:dateTime
+       ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
 

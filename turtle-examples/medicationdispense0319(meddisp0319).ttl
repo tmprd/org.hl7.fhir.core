@@ -19,25 +19,11 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0320" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/sid/ndc>
-         ] ;
-         fhir:code [ fhir:v "33261-141-20" ] ;
-         fhir:display [ fhir:v "PROCHLORPERAZINE MALEATE, 20 TABLET in 1 BOTTLE, PLASTIC (33261-141-20) (package)" ]
-       ] ) ;
-       fhir:text [ fhir:v "Azithromycin 250mg tablet, film coated (Aidarex Pharmaceuticals LLC)" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationDispense/meddisp0319#med0320> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0320> ;
+       fhir:l <http://hl7.org/fhir/MedicationDispense/meddisp0319#med0320> ;
        fhir:reference [ fhir:v "#med0320" ] ;
        fhir:display [ fhir:v "Azithromycin (as azithromycin dihydrate) 250 mg oral capsule" ]
      ]
@@ -90,6 +76,20 @@
      fhir:text [ fhir:v "Patient told to take with food" ]
   ] ) ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0319#med0320> a fhir:Medication ;
+  fhir:id [ fhir:v "med0320"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/ndc>
+       ] ;
+       fhir:code [ fhir:v "33261-141-20" ] ;
+       fhir:display [ fhir:v "PROCHLORPERAZINE MALEATE, 20 TABLET in 1 BOTTLE, PLASTIC (33261-141-20) (package)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Azithromycin 250mg tablet, film coated (Aidarex Pharmaceuticals LLC)" ]
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

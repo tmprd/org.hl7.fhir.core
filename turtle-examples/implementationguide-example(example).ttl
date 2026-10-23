@@ -108,14 +108,14 @@
      fhir:page [
        fhir:name [
          fhir:v "patient-example.html"^^xsd:anyURI ;
-         fhir:l fhir:patient-example.html
+         fhir:l <http://hl7.org/fhir/patient-example.html>
        ] ;
        fhir:title [ fhir:v "Example Patient Page" ] ;
        fhir:generation [ fhir:v "html" ] ;
        fhir:page ( [
          fhir:name [
            fhir:v "list.html"^^xsd:anyURI ;
-           fhir:l fhir:list.html
+           fhir:l <http://hl7.org/fhir/list.html>
          ] ;
          fhir:title [ fhir:v "Value Set Page" ] ;
          fhir:generation [ fhir:v "html" ]
@@ -148,7 +148,7 @@
        ] ) ;
        fhir:relativePath [
          fhir:v "patient-example.html"^^xsd:anyURI ;
-         fhir:l fhir:patient-example.html
+         fhir:l <http://hl7.org/fhir/patient-example.html>
        ]
      ] ) ;
      fhir:page ( [

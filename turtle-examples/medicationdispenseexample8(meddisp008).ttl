@@ -19,24 +19,11 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "medexample015" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
-           fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
-         ] ;
-         fhir:code [ fhir:v "213293" ] ;
-         fhir:display [ fhir:v "capecitabine 500 MG Oral Tablet [Xeloda]" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationDispense/meddisp008#medexample015> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#medexample015> ;
+       fhir:l <http://hl7.org/fhir/MedicationDispense/meddisp008#medexample015> ;
        fhir:reference [ fhir:v "#medexample015" ]
      ]
   ] ; # 
@@ -56,6 +43,19 @@
      fhir:reference [ fhir:v "MedicationRequest/medrx0309" ]
   ] ) ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationDispense/meddisp008#medexample015> a fhir:Medication ;
+  fhir:id [ fhir:v "medexample015"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "213293" ] ;
+       fhir:display [ fhir:v "capecitabine 500 MG Oral Tablet [Xeloda]" ]
+     ] )
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

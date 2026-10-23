@@ -53,7 +53,7 @@
        fhir:method [ fhir:v "GET" ] ;
        fhir:url [
          fhir:v "/Observation?patient=example&code=http://loinc.org|55284-4&date=ge2015-01-01"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir//Observation?patient=example&code=http://loinc.org&version=55284-4&date=ge2015-01-01>
+         fhir:l <http://hl7.org/fhir//Observation?patient=example&code=http://loinc.org%7C55284-4&date=ge2015-01-01>
        ]
      ]
   ] ) . # Each entry is used to represent a RESTful API request

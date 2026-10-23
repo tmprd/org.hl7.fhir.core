@@ -23,24 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">This example assumes a national health care scheme where patients, providers and organizations have known business identifiers.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "patient-1" ] ;
-     fhir:name ( [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:family [ fhir:v "Donald" ] ;
-       fhir:given ( [ fhir:v "Duck" ] )
-     ] ) ;
-     fhir:gender [ fhir:v "male" ] ;
-     fhir:birthDate [ fhir:v "1986-05-17"^^xsd:date ] ;
-     fhir:address ( [
-       fhir:use [ fhir:v "home" ] ;
-       fhir:line ( [ fhir:v "1234 Main Street" ] ) ;
-       fhir:city [ fhir:v "Vancouver" ] ;
-       fhir:postalCode [ fhir:v "V2H1Y3" ] ;
-       fhir:country [ fhir:v "CAD" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Claim/100155#patient-1> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://happyvalley.com/claim"^^xsd:anyURI ;
@@ -133,6 +116,23 @@
        fhir:value [ fhir:v 135.57 ] ;
        fhir:currency [ fhir:v "USD" ]
      ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Claim/100155#patient-1> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-1"] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Donald" ] ;
+     fhir:given ( [ fhir:v "Duck" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1986-05-17"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "1234 Main Street" ] ) ;
+     fhir:city [ fhir:v "Vancouver" ] ;
+     fhir:postalCode [ fhir:v "V2H1Y3" ] ;
+     fhir:country [ fhir:v "CAD" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

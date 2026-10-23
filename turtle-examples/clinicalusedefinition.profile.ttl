@@ -1702,7 +1702,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClinicalUseDefinition.undesirableEffect"^^xsd:anyURI ;
-         fhir:l <#ClinicalUseDefinition.undesirableEffect>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition#ClinicalUseDefinition.undesirableEffect>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2392,7 +2392,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClinicalUseDefinition.indication"^^xsd:anyURI ;
-         fhir:l <#ClinicalUseDefinition.indication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition#ClinicalUseDefinition.indication>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2510,7 +2510,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#ClinicalUseDefinition.indication.otherTherapy"^^xsd:anyURI ;
-         fhir:l <#ClinicalUseDefinition.indication.otherTherapy>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition#ClinicalUseDefinition.indication.otherTherapy>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -4267,7 +4267,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClinicalUseDefinition.undesirableEffect"^^xsd:anyURI ;
-         fhir:l <#ClinicalUseDefinition.undesirableEffect>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition#ClinicalUseDefinition.undesirableEffect>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -4568,7 +4568,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClinicalUseDefinition.indication"^^xsd:anyURI ;
-         fhir:l <#ClinicalUseDefinition.indication>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition#ClinicalUseDefinition.indication>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
@@ -4641,7 +4641,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#ClinicalUseDefinition.indication.otherTherapy"^^xsd:anyURI ;
-         fhir:l <#ClinicalUseDefinition.indication.otherTherapy>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/ClinicalUseDefinition#ClinicalUseDefinition.indication.otherTherapy>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

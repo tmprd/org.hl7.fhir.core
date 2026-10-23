@@ -20,41 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Device ;
-     fhir:id [ fhir:v "catheter" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:name ( [
-       fhir:value [ fhir:v "Triple lumen central venous catheter" ] ;
-       fhir:type [ ]
-     ] ) ;
-     fhir:type ( [
-       a sct:397970004 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "397970004" ] ;
-         fhir:display [ fhir:v "Triple lumen catheter" ]
-       ] )
-     ] )
-  ] [
-     a fhir:Device ;
-     fhir:id [ fhir:v "port" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:name ( [
-       fhir:value [ fhir:v "Distal port" ] ;
-       fhir:type [ ]
-     ] ) ;
-     fhir:type ( [
-       fhir:text [ fhir:v "Catheter port (distal lumen)" ]
-     ] ) ;
-     fhir:parent [
-       fhir:l <#catheter> ;
-       fhir:reference [ fhir:v "#catheter" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationAdministration/medadmin0314#catheter> <http://hl7.org/fhir/MedicationAdministration/medadmin0314#port> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:concept [
@@ -84,7 +50,7 @@
   ] ) ; # 
   fhir:device ( [
      fhir:reference [
-       fhir:l <#port> ;
+       fhir:l <http://hl7.org/fhir/MedicationAdministration/medadmin0314#port> ;
        fhir:reference [ fhir:v "#port" ]
      ]
   ] ) ; # 
@@ -110,6 +76,40 @@
        ] ;
        fhir:code [ fhir:v "g" ]
      ]
+  ] . # 
+
+<http://hl7.org/fhir/MedicationAdministration/medadmin0314#catheter> a fhir:Device ;
+  fhir:id [ fhir:v "catheter"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name ( [
+     fhir:value [ fhir:v "Triple lumen central venous catheter" ] ;
+     fhir:type [ ]
+  ] ) ; # 
+  fhir:type ( [
+     a sct:397970004 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "397970004" ] ;
+       fhir:display [ fhir:v "Triple lumen catheter" ]
+     ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/MedicationAdministration/medadmin0314#port> a fhir:Device ;
+  fhir:id [ fhir:v "port"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name ( [
+     fhir:value [ fhir:v "Distal port" ] ;
+     fhir:type [ ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:text [ fhir:v "Catheter port (distal lumen)" ]
+  ] ) ; # 
+  fhir:parent [
+     fhir:l <http://hl7.org/fhir/MedicationAdministration/medadmin0314#catheter> ;
+     fhir:reference [ fhir:v "#catheter" ]
   ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .

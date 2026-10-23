@@ -1059,7 +1059,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#Bundle.link"^^xsd:anyURI ;
-         fhir:l <#Bundle.link>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Bundle#Bundle.link>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2467,7 +2467,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#Bundle.link"^^xsd:anyURI ;
-         fhir:l <#Bundle.link>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/Bundle#Bundle.link>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

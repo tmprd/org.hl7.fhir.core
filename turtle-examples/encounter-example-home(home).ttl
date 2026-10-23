@@ -23,12 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Encounter with patient @example who is at home</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Location ;
-     fhir:id [ fhir:v "home" ] ;
-     fhir:description [ fhir:v "Client's home" ] ;
-     fhir:mode [ fhir:v "kind" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Encounter/home#home> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:class ( [
      fhir:coding ( [
@@ -75,7 +70,7 @@
   ] ; # 
   fhir:location ( [
      fhir:location [
-       fhir:l <#home> ;
+       fhir:l <http://hl7.org/fhir/Encounter/home#home> ;
        fhir:reference [ fhir:v "#home" ] ;
        fhir:display [ fhir:v "Client's home" ]
      ] ;
@@ -85,6 +80,11 @@
        fhir:end [ fhir:v "2015-01-17T16:30:00+10:00"^^xsd:dateTime ]
      ]
   ] ) . # 
+
+<http://hl7.org/fhir/Encounter/home#home> a fhir:Location ;
+  fhir:id [ fhir:v "home"] ; # 
+  fhir:description [ fhir:v "Client's home"] ; # 
+  fhir:mode [ fhir:v "kind"] . # 
 
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
 

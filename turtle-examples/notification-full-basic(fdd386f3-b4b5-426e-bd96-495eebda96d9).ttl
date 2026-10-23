@@ -26,13 +26,13 @@
        fhir:v "urn:uuid:ce762452-8aed-43eb-bc03-2a024c49248f"^^xsd:anyURI ;
        fhir:l <urn:uuid:ce762452-8aed-43eb-bc03-2a024c49248f>
      ] ;
-     fhir:resource ( <urn:uuid:ce762452-8aed-43eb-bc03-2a024c49248f> )
+     fhir:resource <urn:uuid:ce762452-8aed-43eb-bc03-2a024c49248f>
   ] [
      fhir:fullUrl [
        fhir:v "http://example.org/FHIR/Basic/AD-11220"^^xsd:anyURI ;
        fhir:l <http://example.org/FHIR/Basic/AD-11220>
      ] ;
-     fhir:resource ( <http://example.org/FHIR/Basic/AD-11220> )
+     fhir:resource <http://example.org/FHIR/Basic/AD-11220>
   ] ) . # 
 
 <urn:uuid:ce762452-8aed-43eb-bc03-2a024c49248f> a fhir:SubscriptionStatus ;
@@ -91,7 +91,7 @@
        ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <http://hl7.org/fhir/Patient/ABC> ;
+         fhir:l <http://example.org/FHIR/Patient/ABC> ;
          fhir:reference [ fhir:v "Patient/ABC" ]
        ]
      ] [
@@ -101,7 +101,7 @@
        ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <http://hl7.org/fhir/Group/XYZ> ;
+         fhir:l <http://example.org/FHIR/Group/XYZ> ;
          fhir:reference [ fhir:v "Group/XYZ" ]
        ]
      ] )
@@ -116,10 +116,6 @@
        fhir:display [ fhir:v "Admission Notification" ]
      ] )
   ] . # 
-
-<http://hl7.org/fhir/Patient/ABC> a fhir:Patient .
-
-<http://hl7.org/fhir/Group/XYZ> a fhir:Group .
 
 # -------------------------------------------------------------------------------------
 

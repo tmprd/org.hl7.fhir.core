@@ -20,16 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:ImagingStudy ;
-     fhir:id [ fhir:v "is1" ] ;
-     fhir:status [ fhir:v "available" ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/f201> ;
-       fhir:reference [ fhir:v "Patient/f201" ]
-     ] ;
-     fhir:description [ fhir:v "HEAD and NECK CT DICOM imaging study" ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/DiagnosticReport/f201#is1> ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
      a sct:394914008 ;
@@ -76,11 +67,20 @@
      fhir:display [ fhir:v "Blijdorp MC" ]
   ] ) ; # 
   fhir:study ( [
-     fhir:l <#is1> ;
+     fhir:l <http://hl7.org/fhir/DiagnosticReport/f201#is1> ;
      fhir:reference [ fhir:v "#is1" ]
   ] ) ; # The actual CT imagenot available -  following reference used to demonstrate the usage of the element
   fhir:conclusion [ fhir:v "CT brains: large tumor sphenoid/clivus."] ; # 
   fhir:conclusionCode ( [] ) . # 
+
+<http://hl7.org/fhir/DiagnosticReport/f201#is1> a fhir:ImagingStudy ;
+  fhir:id [ fhir:v "is1"] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/f201> ;
+     fhir:reference [ fhir:v "Patient/f201" ]
+  ] ; # 
+  fhir:description [ fhir:v "HEAD and NECK CT DICOM imaging study"] . # 
 
 <http://hl7.org/fhir/Patient/f201> a fhir:Patient .
 

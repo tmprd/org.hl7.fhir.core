@@ -3484,7 +3484,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#CodeSystem.concept"^^xsd:anyURI ;
-         fhir:l <#CodeSystem.concept>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/CodeSystem#CodeSystem.concept>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -5053,7 +5053,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#CodeSystem.concept"^^xsd:anyURI ;
-         fhir:l <#CodeSystem.concept>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/CodeSystem#CodeSystem.concept>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

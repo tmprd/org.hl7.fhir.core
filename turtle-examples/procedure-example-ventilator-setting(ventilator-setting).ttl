@@ -21,110 +21,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Device ;
-     fhir:id [ fhir:v "vent-device-1" ] ;
-     fhir:manufacturer [ fhir:v "Medtronic, Inc" ] ;
-     fhir:lotNumber [ fhir:v "1234-9876" ] ;
-     fhir:type ( [
-       a sct:40617009 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "40617009" ]
-       ] ) ;
-       fhir:text [ fhir:v "Ventilator, device" ]
-     ] )
-  ] [
-     a fhir:Observation ;
-     fhir:id [ fhir:v "tidal-volume-obs" ] ;
-     fhir:status [ fhir:v "final" ] ;
-     fhir:code [
-       a loinc:76222-9 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:code [ fhir:v "76222-9" ]
-       ] ) ;
-       fhir:text [ fhir:v "Tidal volume Ventilator" ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:value [
-       a fhir:Quantity ;
-       fhir:value [ fhir:v "500"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "mL" ] ;
-       fhir:system [
-         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-         fhir:l <http://unitsofmeasure.org>
-       ] ;
-       fhir:code [ fhir:v "mL" ]
-     ]
-  ] [
-     a fhir:Observation ;
-     fhir:id [ fhir:v "fio2-obs" ] ;
-     fhir:status [ fhir:v "final" ] ;
-     fhir:code [
-       a loinc:3150-0 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:code [ fhir:v "3150-0" ]
-       ] ) ;
-       fhir:text [ fhir:v "Inhaled oxygen concentration" ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:value [
-       a fhir:Quantity ;
-       fhir:value [ fhir:v "40"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "%" ] ;
-       fhir:system [
-         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-         fhir:l <http://unitsofmeasure.org>
-       ] ;
-       fhir:code [ fhir:v "%" ]
-     ]
-  ] [
-     a fhir:Observation ;
-     fhir:id [ fhir:v "peep-obs" ] ;
-     fhir:status [ fhir:v "final" ] ;
-     fhir:code [
-       a loinc:76248-4 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://loinc.org"^^xsd:anyURI ;
-           fhir:l <http://loinc.org>
-         ] ;
-         fhir:code [ fhir:v "76248-4" ]
-       ] ) ;
-       fhir:text [ fhir:v "PEEP Ventilator" ]
-     ] ;
-     fhir:subject [
-       fhir:l <http://hl7.org/fhir/Patient/example> ;
-       fhir:reference [ fhir:v "Patient/example" ]
-     ] ;
-     fhir:value [
-       a fhir:Quantity ;
-       fhir:value [ fhir:v "5"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "cm[H2O]" ] ;
-       fhir:system [
-         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-         fhir:l <http://unitsofmeasure.org>
-       ] ;
-       fhir:code [ fhir:v "cm[H2O]" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/Procedure/ventilator-setting#vent-device-1> <http://hl7.org/fhir/Procedure/ventilator-setting#tidal-volume-obs> <http://hl7.org/fhir/Procedure/ventilator-setting#fio2-obs> <http://hl7.org/fhir/Procedure/ventilator-setting#peep-obs> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:code [
      a sct:1258985005 ;
@@ -176,12 +73,115 @@
        ] )
      ] ;
      fhir:manipulated [
-       fhir:l <#vent-device-1> ;
+       fhir:l <http://hl7.org/fhir/Procedure/ventilator-setting#vent-device-1> ;
        fhir:reference [ fhir:v "#vent-device-1" ]
      ]
   ] ) . # 
 
+<http://hl7.org/fhir/Procedure/ventilator-setting#vent-device-1> a fhir:Device ;
+  fhir:id [ fhir:v "vent-device-1"] ; # 
+  fhir:manufacturer [ fhir:v "Medtronic, Inc"] ; # 
+  fhir:lotNumber [ fhir:v "1234-9876"] ; # 
+  fhir:type ( [
+     a sct:40617009 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "40617009" ]
+     ] ) ;
+     fhir:text [ fhir:v "Ventilator, device" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/Procedure/ventilator-setting#tidal-volume-obs> a fhir:Observation ;
+  fhir:id [ fhir:v "tidal-volume-obs"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     a loinc:76222-9 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "76222-9" ]
+     ] ) ;
+     fhir:text [ fhir:v "Tidal volume Ventilator" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mL" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mL" ]
+  ] . # 
+
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Procedure/ventilator-setting#fio2-obs> a fhir:Observation ;
+  fhir:id [ fhir:v "fio2-obs"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     a loinc:3150-0 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "3150-0" ]
+     ] ) ;
+     fhir:text [ fhir:v "Inhaled oxygen concentration" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "40"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "%" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "%" ]
+  ] . # 
+
+<http://hl7.org/fhir/Procedure/ventilator-setting#peep-obs> a fhir:Observation ;
+  fhir:id [ fhir:v "peep-obs"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     a loinc:76248-4 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "76248-4" ]
+     ] ) ;
+     fhir:text [ fhir:v "PEEP Ventilator" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.org/fhir/Patient/example> ;
+     fhir:reference [ fhir:v "Patient/example" ]
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "cm[H2O]" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "cm[H2O]" ]
+  ] . # 
 
 <http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
 

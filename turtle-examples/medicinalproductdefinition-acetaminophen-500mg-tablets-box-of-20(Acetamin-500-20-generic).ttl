@@ -19,41 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:PackagedProductDefinition ;
-     fhir:id [ fhir:v "Acetamin-pack-20" ] ;
-     fhir:packageFor ( [
-       fhir:l <#> ;
-       fhir:reference [ fhir:v "#" ]
-     ] ) ;
-     fhir:packaging [
-       fhir:type [
-         fhir:coding ( [
-           fhir:code [ fhir:v "cardboard box" ]
-         ] )
-       ] ;
-       fhir:containedItem ( [
-         fhir:item [
-           fhir:reference [
-             fhir:l <#Acetamin-tab-500> ;
-             fhir:reference [ fhir:v "#Acetamin-tab-500" ]
-           ]
-         ] ;
-         fhir:amount [
-           fhir:value [ fhir:v "20"^^xsd:decimal ]
-         ]
-       ] ) # the item contained in the pack (note this is a different concept to a \"contained\" resource, above)
-     ]
-  ] [
-     a fhir:ManufacturedItemDefinition ;
-     fhir:id [ fhir:v "Acetamin-tab-500" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:manufacturedDoseForm [
-       fhir:coding ( [
-         fhir:code [ fhir:v "tablet" ]
-       ] )
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicinalProductDefinition/Acetamin-500-20-generic#Acetamin-pack-20> <http://hl7.org/fhir/MedicinalProductDefinition/Acetamin-500-20-generic#Acetamin-tab-500> ) ; # 
   fhir:identifier ( [
      fhir:system [
        fhir:v "http://example.nation.org/drugs"^^xsd:anyURI ;
@@ -100,6 +66,40 @@
   fhir:name ( [
      fhir:productName [ fhir:v "Acetaminophen 500 mg tablets [generic]" ]
   ] ) . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/Acetamin-500-20-generic#Acetamin-pack-20> a fhir:PackagedProductDefinition ;
+  fhir:id [ fhir:v "Acetamin-pack-20"] ; # 
+  fhir:packageFor ( [
+     fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/Acetamin-500-20-generic> ;
+     fhir:reference [ fhir:v "#" ]
+  ] ) ; # 
+  fhir:packaging [
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "cardboard box" ]
+       ] )
+     ] ;
+     fhir:containedItem ( [
+       fhir:item [
+         fhir:reference [
+           fhir:l <http://hl7.org/fhir/MedicinalProductDefinition/Acetamin-500-20-generic#Acetamin-tab-500> ;
+           fhir:reference [ fhir:v "#Acetamin-tab-500" ]
+         ]
+       ] ;
+       fhir:amount [
+         fhir:value [ fhir:v "20"^^xsd:decimal ]
+       ]
+     ] ) # the item contained in the pack (note this is a different concept to a \"contained\" resource, above)
+  ] . # 
+
+<http://hl7.org/fhir/MedicinalProductDefinition/Acetamin-500-20-generic#Acetamin-tab-500> a fhir:ManufacturedItemDefinition ;
+  fhir:id [ fhir:v "Acetamin-tab-500"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:manufacturedDoseForm [
+     fhir:coding ( [
+       fhir:code [ fhir:v "tablet" ]
+     ] )
+  ] . # 
 
 # -------------------------------------------------------------------------------------
 

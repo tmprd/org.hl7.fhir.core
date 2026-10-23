@@ -20,122 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0319" ] ;
-     fhir:doseForm [
-       a sct:385101003 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "385101003" ] ;
-         fhir:display [ fhir:v "Ointment" ]
-       ] ) ;
-       fhir:text [ fhir:v "Ointment" ]
-     ] ;
-     fhir:ingredient ( [
-       fhir:item [
-         fhir:concept [
-           a sct:387253001 ;
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-               fhir:l <http://snomed.info/sct>
-             ] ;
-             fhir:code [ fhir:v "387253001" ] ;
-             fhir:display [ fhir:v "Salicylic acid (substance)" ]
-           ] )
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "5"^^xsd:decimal ] ;
-           fhir:system [
-             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-             fhir:l <http://unitsofmeasure.org>
-           ] ;
-           fhir:code [ fhir:v "g" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "100"^^xsd:decimal ] ;
-           fhir:system [
-             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-             fhir:l <http://unitsofmeasure.org>
-           ] ;
-           fhir:code [ fhir:v "g" ]
-         ]
-       ]
-     ] [
-       fhir:item [
-         fhir:concept [
-           a sct:396458002 ;
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-               fhir:l <http://snomed.info/sct>
-             ] ;
-             fhir:code [ fhir:v "396458002" ] ;
-             fhir:display [ fhir:v "Hydrocortisone (substance)" ]
-           ] )
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "1"^^xsd:decimal ] ;
-           fhir:system [
-             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-             fhir:l <http://unitsofmeasure.org>
-           ] ;
-           fhir:code [ fhir:v "g" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "100"^^xsd:decimal ] ;
-           fhir:system [
-             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-             fhir:l <http://unitsofmeasure.org>
-           ] ;
-           fhir:code [ fhir:v "g" ]
-         ]
-       ]
-     ] [
-       fhir:item [
-         fhir:concept [
-           a sct:126066007 ;
-           fhir:coding ( [
-             fhir:system [
-               fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-               fhir:l <http://snomed.info/sct>
-             ] ;
-             fhir:code [ fhir:v "126066007" ] ;
-             fhir:display [ fhir:v "White petroleum (substance)" ]
-           ] )
-         ]
-       ] ;
-       fhir:strength [
-         a fhir:Ratio ;
-         fhir:numerator [
-           fhir:value [ fhir:v "94"^^xsd:decimal ] ;
-           fhir:system [
-             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-             fhir:l <http://unitsofmeasure.org>
-           ] ;
-           fhir:code [ fhir:v "g" ]
-         ] ;
-         fhir:denominator [
-           fhir:value [ fhir:v "100"^^xsd:decimal ] ;
-           fhir:system [
-             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
-             fhir:l <http://unitsofmeasure.org>
-           ] ;
-           fhir:code [ fhir:v "g" ]
-         ]
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0329#med0319> ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [
@@ -148,7 +33,7 @@
   fhir:intent [ fhir:v "order"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0319> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0329#med0319> ;
        fhir:reference [ fhir:v "#med0319" ]
      ]
   ] ; # 
@@ -189,6 +74,121 @@
        fhir:code [ fhir:v "d" ]
      ]
   ] . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0329#med0319> a fhir:Medication ;
+  fhir:id [ fhir:v "med0319"] ; # 
+  fhir:doseForm [
+     a sct:385101003 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385101003" ] ;
+       fhir:display [ fhir:v "Ointment" ]
+     ] ) ;
+     fhir:text [ fhir:v "Ointment" ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       fhir:concept [
+         a sct:387253001 ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+             fhir:l <http://snomed.info/sct>
+           ] ;
+           fhir:code [ fhir:v "387253001" ] ;
+           fhir:display [ fhir:v "Salicylic acid (substance)" ]
+         ] )
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "g" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "g" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       fhir:concept [
+         a sct:396458002 ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+             fhir:l <http://snomed.info/sct>
+           ] ;
+           fhir:code [ fhir:v "396458002" ] ;
+           fhir:display [ fhir:v "Hydrocortisone (substance)" ]
+         ] )
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "g" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "g" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       fhir:concept [
+         a sct:126066007 ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+             fhir:l <http://snomed.info/sct>
+           ] ;
+           fhir:code [ fhir:v "126066007" ] ;
+           fhir:display [ fhir:v "White petroleum (substance)" ]
+         ] )
+       ]
+     ] ;
+     fhir:strength [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "94"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "g" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "g" ]
+       ]
+     ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

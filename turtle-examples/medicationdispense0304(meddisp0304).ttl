@@ -19,25 +19,11 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Medication ;
-     fhir:id [ fhir:v "med0302" ] ;
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/sid/ndc>
-         ] ;
-         fhir:code [ fhir:v "0206-8862-02" ] ;
-         fhir:display [ fhir:v "Zosyn in Galaxy Containers, 12 BAG in 1 BOX (0206-8862-02) > 100 mL in 1 BAG (0206-8862-01) (package)" ]
-       ] ) ; # Zosyn (piperacillin\/tazobactam) 4.5gm injection
-       fhir:text [ fhir:v "Zosyn (piperacillin/tazobactam) 4.5gm injection" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationDispense/meddisp0304#med0302> ) ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      fhir:reference [
-       fhir:l <#med0302> ;
+       fhir:l <http://hl7.org/fhir/MedicationDispense/meddisp0304#med0302> ;
        fhir:reference [ fhir:v "#med0302" ] ;
        fhir:display [ fhir:v "Zosyn (piperacillin/tazobactam) 4.5gm injection" ]
      ] # Linked to a RESOURCE Medication
@@ -87,6 +73,20 @@
   fhir:whenPrepared [ fhir:v "2015-06-25T07:13:00+05:00"^^xsd:dateTime] ; # 
   fhir:whenHandedOver [ fhir:v "2015-06-26T07:13:00+05:00"^^xsd:dateTime] ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationDispense/meddisp0304#med0302> a fhir:Medication ;
+  fhir:id [ fhir:v "med0302"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/ndc>
+       ] ;
+       fhir:code [ fhir:v "0206-8862-02" ] ;
+       fhir:display [ fhir:v "Zosyn in Galaxy Containers, 12 BAG in 1 BOX (0206-8862-02) > 100 mL in 1 BAG (0206-8862-01) (package)" ]
+     ] ) ; # Zosyn (piperacillin\/tazobactam) 4.5gm injection
+     fhir:text [ fhir:v "Zosyn (piperacillin/tazobactam) 4.5gm injection" ]
+  ] . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

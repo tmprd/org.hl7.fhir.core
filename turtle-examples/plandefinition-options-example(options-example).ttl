@@ -23,25 +23,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">[Put rendering here]</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "activitydefinition-medicationrequest-1" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:kind [ fhir:v "MedicationRequest" ] ;
-     fhir:product [
-       a fhir:CodeableConcept ;
-       fhir:text [ fhir:v "Medication 1" ]
-     ]
-  ] [
-     a fhir:ActivityDefinition ;
-     fhir:id [ fhir:v "activitydefinition-medicationrequest-2" ] ;
-     fhir:status [ fhir:v "draft" ] ;
-     fhir:kind [ fhir:v "MedicationRequest" ] ;
-     fhir:product [
-       a fhir:CodeableConcept ;
-       fhir:text [ fhir:v "Medication 2" ]
-     ]
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/PlanDefinition/options-example#activitydefinition-medicationrequest-1> <http://hl7.org/fhir/PlanDefinition/options-example#activitydefinition-medicationrequest-2> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
@@ -79,7 +61,7 @@
        fhir:definition [
          a fhir:Canonical ;
          fhir:v "#activitydefinition-medicationrequest-1"^^xsd:anyURI ;
-         fhir:l <#activitydefinition-medicationrequest-1>
+         fhir:l <http://hl7.org/fhir/PlanDefinition/options-example#activitydefinition-medicationrequest-1>
        ]
      ] [
        fhir:id [ fhir:v "medication-action-2" ] ;
@@ -101,10 +83,28 @@
        fhir:definition [
          a fhir:Canonical ;
          fhir:v "#activitydefinition-medicationrequest-2"^^xsd:anyURI ;
-         fhir:l <#activitydefinition-medicationrequest-2>
+         fhir:l <http://hl7.org/fhir/PlanDefinition/options-example#activitydefinition-medicationrequest-2>
        ]
      ] )
   ] ) . # 
+
+<http://hl7.org/fhir/PlanDefinition/options-example#activitydefinition-medicationrequest-1> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "activitydefinition-medicationrequest-1"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:product [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "Medication 1" ]
+  ] . # 
+
+<http://hl7.org/fhir/PlanDefinition/options-example#activitydefinition-medicationrequest-2> a fhir:ActivityDefinition ;
+  fhir:id [ fhir:v "activitydefinition-medicationrequest-2"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "MedicationRequest"] ; # 
+  fhir:product [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "Medication 2" ]
+  ] . # 
 
 # -------------------------------------------------------------------------------------
 

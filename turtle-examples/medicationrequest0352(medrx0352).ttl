@@ -20,27 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:DeviceDefinition ;
-     fhir:id [ fhir:v "nasal-cannula" ] ;
-     fhir:deviceName ( [
-       fhir:name [ fhir:v "Oxygen nasal cannula" ] ;
-       fhir:type [ ]
-     ] ) ;
-     fhir:classification ( [
-       fhir:type [
-         a sct:336623009 ;
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-             fhir:l <http://snomed.info/sct>
-           ] ;
-           fhir:code [ fhir:v "336623009" ] ;
-           fhir:display [ fhir:v "Oxygen nasal cannula" ]
-         ] )
-       ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MedicationRequest/medrx0352#nasal-cannula> ) ; # 
   fhir:groupIdentifier [
      fhir:system [
        fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
@@ -75,7 +55,7 @@
   ] ; # 
   fhir:device ( [
      fhir:reference [
-       fhir:l <#nasal-cannula> ;
+       fhir:l <http://hl7.org/fhir/MedicationRequest/medrx0352#nasal-cannula> ;
        fhir:reference [ fhir:v "#nasal-cannula" ]
      ]
   ] ) ; # 
@@ -93,6 +73,25 @@
      ]
   ] ) ; # 
   fhir:dosageInstruction ( [] ) . # 
+
+<http://hl7.org/fhir/MedicationRequest/medrx0352#nasal-cannula> a fhir:DeviceDefinition ;
+  fhir:id [ fhir:v "nasal-cannula"] ; # 
+  fhir:deviceName ( [
+     fhir:name [ fhir:v "Oxygen nasal cannula" ] ;
+     fhir:type [ ]
+  ] ) ; # 
+  fhir:classification ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "336623009" ] ;
+         fhir:display [ fhir:v "Oxygen nasal cannula" ]
+       ] )
+     ]
+  ] ) . # 
 
 <http://hl7.org/fhir/Patient/pat1> a fhir:Patient .
 

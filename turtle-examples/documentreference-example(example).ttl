@@ -20,14 +20,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "a2" ] ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Smitty" ] ;
-       fhir:given ( [ fhir:v "Gerald" ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/DocumentReference/example#a2> ) ; # 
   fhir:extension ( [
      fhir:url [
        fhir:v "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"^^xsd:anyURI ;
@@ -147,7 +140,7 @@
      fhir:l <http://hl7.org/fhir/Practitioner/xcda1> ;
      fhir:reference [ fhir:v "Practitioner/xcda1" ]
   ] [
-     fhir:l <#a2> ;
+     fhir:l <http://hl7.org/fhir/DocumentReference/example#a2> ;
      fhir:reference [ fhir:v "#a2" ]
   ] ) ; # 
   fhir:attester ( [
@@ -219,6 +212,13 @@
          fhir:display [ fhir:v "History and Physical Specification" ]
        ]
      ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/DocumentReference/example#a2> a fhir:Practitioner ;
+  fhir:id [ fhir:v "a2"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Smitty" ] ;
+     fhir:given ( [ fhir:v "Gerald" ] )
   ] ) . # 
 
 <http://hl7.org/fhir/Patient/xcda> a fhir:Patient .

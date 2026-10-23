@@ -19,24 +19,7 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "patient-new" ] ;
-     fhir:name ( [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:family [ fhir:v "Donald" ] ;
-       fhir:given ( [ fhir:v "Duck" ] )
-     ] ) ;
-     fhir:gender [ fhir:v "male" ] ;
-     fhir:birthDate [ fhir:v "1976-05-17"^^xsd:date ] ;
-     fhir:address ( [
-       fhir:use [ fhir:v "home" ] ;
-       fhir:line ( [ fhir:v "1234 Main Street" ] ) ;
-       fhir:city [ fhir:v "DC" ] ;
-       fhir:postalCode [ fhir:v "20001" ] ;
-       fhir:country [ fhir:v "USA" ]
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/MeasureReport/general-example-of-report#patient-new> ) ; # 
   fhir:status [ fhir:v "complete"] ; # 
   fhir:type [ fhir:v "individual"] ; # 
   fhir:measure [
@@ -44,7 +27,7 @@
      fhir:l <http://ohie.org/Measure/hiv-indicators>
   ] ; # 
   fhir:subject [
-     fhir:l <#patient-new> ;
+     fhir:l <http://hl7.org/fhir/MeasureReport/general-example-of-report#patient-new> ;
      fhir:reference [ fhir:v "#patient-new" ]
   ] ; # 
   fhir:period [
@@ -135,6 +118,23 @@
          ]
        ] )
      ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/MeasureReport/general-example-of-report#patient-new> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-new"] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Donald" ] ;
+     fhir:given ( [ fhir:v "Duck" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1976-05-17"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "1234 Main Street" ] ) ;
+     fhir:city [ fhir:v "DC" ] ;
+     fhir:postalCode [ fhir:v "20001" ] ;
+     fhir:country [ fhir:v "USA" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

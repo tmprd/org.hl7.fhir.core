@@ -1795,7 +1795,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#BodyStructure.includedStructure"^^xsd:anyURI ;
-         fhir:l <#BodyStructure.includedStructure>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/BodyStructure#BodyStructure.includedStructure>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -2614,7 +2614,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#BodyStructure.includedStructure"^^xsd:anyURI ;
-         fhir:l <#BodyStructure.includedStructure>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/BodyStructure#BodyStructure.includedStructure>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;

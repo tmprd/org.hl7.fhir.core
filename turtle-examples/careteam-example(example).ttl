@@ -24,14 +24,7 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Peter James Charlmers Care Team for Inpatient Encounter with one member.</div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:contained ( [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "pr1" ] ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Dietician" ] ;
-       fhir:given ( [ fhir:v "Dorothy" ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/CareTeam/example#pr1> ) ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "12345" ]
   ] ) ; # 
@@ -70,7 +63,7 @@
        fhir:text [ fhir:v "adviser" ]
      ] ;
      fhir:member [
-       fhir:l <#pr1> ;
+       fhir:l <http://hl7.org/fhir/CareTeam/example#pr1> ;
        fhir:reference [ fhir:v "#pr1" ] ;
        fhir:display [ fhir:v "Dorothy Dietition" ]
      ] ;
@@ -87,6 +80,13 @@
   fhir:managingOrganization ( [
      fhir:l <http://hl7.org/fhir/Organization/f001> ;
      fhir:reference [ fhir:v "Organization/f001" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/CareTeam/example#pr1> a fhir:Practitioner ;
+  fhir:id [ fhir:v "pr1"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Dietician" ] ;
+     fhir:given ( [ fhir:v "Dorothy" ] )
   ] ) . # 
 
 <http://hl7.org/fhir/Patient/example> a fhir:Patient .

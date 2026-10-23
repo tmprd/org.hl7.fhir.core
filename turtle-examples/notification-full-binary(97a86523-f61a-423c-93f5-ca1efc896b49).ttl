@@ -26,13 +26,13 @@
        fhir:v "urn:uuid:7472c5f7-bdff-4229-a977-a0a60d5e7cfc"^^xsd:anyURI ;
        fhir:l <urn:uuid:7472c5f7-bdff-4229-a977-a0a60d5e7cfc>
      ] ;
-     fhir:resource ( <urn:uuid:7472c5f7-bdff-4229-a977-a0a60d5e7cfc> )
+     fhir:resource <urn:uuid:7472c5f7-bdff-4229-a977-a0a60d5e7cfc>
   ] [
      fhir:fullUrl [
        fhir:v "http://example.org/FHIR/Binary/AD-337"^^xsd:anyURI ;
        fhir:l <http://example.org/FHIR/Binary/AD-337>
      ] ;
-     fhir:resource ( <http://example.org/FHIR/Binary/AD-337> )
+     fhir:resource <http://example.org/FHIR/Binary/AD-337>
   ] ) . # 
 
 <urn:uuid:7472c5f7-bdff-4229-a977-a0a60d5e7cfc> a fhir:SubscriptionStatus ;

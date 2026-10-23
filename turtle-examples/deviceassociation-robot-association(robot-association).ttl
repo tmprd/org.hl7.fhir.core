@@ -20,53 +20,53 @@
        fhir:display [ fhir:v "test health data" ]
      ] )
   ] ; # 
-  fhir:contained ( [
-     a fhir:Patient ;
-     fhir:id [ fhir:v "example-patient" ] ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Doe" ] ;
-       fhir:given ( [ fhir:v "John" ] )
-     ] )
-  ] [
-     a fhir:Practitioner ;
-     fhir:id [ fhir:v "example-practitioner" ] ;
-     fhir:name ( [
-       fhir:family [ fhir:v "Nguyen" ] ;
-       fhir:given ( [ fhir:v "Alex" ] )
-     ] )
-  ] [
-     a fhir:Device ;
-     fhir:id [ fhir:v "surgical-robot" ] ;
-     fhir:status [ fhir:v "active" ] ;
-     fhir:name ( [
-       fhir:value [ fhir:v "Da Vinci Xi" ] ;
-       fhir:type [ ]
-     ] ) ;
-     fhir:type ( [
-       a sct:466893009 ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-           fhir:l <http://snomed.info/sct>
-         ] ;
-         fhir:code [ fhir:v "466893009" ] ;
-         fhir:display [ fhir:v "Robotic surgical system" ]
-       ] )
-     ] )
-  ] ) ; # 
+  fhir:contained ( <http://hl7.org/fhir/DeviceAssociation/robot-association#example-patient> <http://hl7.org/fhir/DeviceAssociation/robot-association#example-practitioner> <http://hl7.org/fhir/DeviceAssociation/robot-association#surgical-robot> ) ; # 
   fhir:device [
-     fhir:l <#surgical-robot> ;
+     fhir:l <http://hl7.org/fhir/DeviceAssociation/robot-association#surgical-robot> ;
      fhir:reference [ fhir:v "#surgical-robot" ]
   ] ; # 
   fhir:status [] ; # 
   fhir:subject [
-     fhir:l <#example-patient> ;
+     fhir:l <http://hl7.org/fhir/DeviceAssociation/robot-association#example-patient> ;
      fhir:reference [ fhir:v "#example-patient" ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2025-07-01T08:00:00Z"^^xsd:dateTime ] ;
      fhir:end [ fhir:v "2025-07-01T12:00:00Z"^^xsd:dateTime ]
   ] . # 
+
+<http://hl7.org/fhir/DeviceAssociation/robot-association#example-patient> a fhir:Patient ;
+  fhir:id [ fhir:v "example-patient"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Doe" ] ;
+     fhir:given ( [ fhir:v "John" ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/DeviceAssociation/robot-association#example-practitioner> a fhir:Practitioner ;
+  fhir:id [ fhir:v "example-practitioner"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Nguyen" ] ;
+     fhir:given ( [ fhir:v "Alex" ] )
+  ] ) . # 
+
+<http://hl7.org/fhir/DeviceAssociation/robot-association#surgical-robot> a fhir:Device ;
+  fhir:id [ fhir:v "surgical-robot"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name ( [
+     fhir:value [ fhir:v "Da Vinci Xi" ] ;
+     fhir:type [ ]
+  ] ) ; # 
+  fhir:type ( [
+     a sct:466893009 ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "466893009" ] ;
+       fhir:display [ fhir:v "Robotic surgical system" ]
+     ] )
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

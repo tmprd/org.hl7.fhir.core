@@ -4391,7 +4391,7 @@
        ] ;
        fhir:contentReference [
          fhir:v "#RequestOrchestration.action"^^xsd:anyURI ;
-         fhir:l <#RequestOrchestration.action>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/RequestOrchestration#RequestOrchestration.action>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -6420,7 +6420,7 @@
        fhir:max [ fhir:v "*" ] ;
        fhir:contentReference [
          fhir:v "#RequestOrchestration.action"^^xsd:anyURI ;
-         fhir:l <#RequestOrchestration.action>
+         fhir:l <http://hl7.org/fhir/StructureDefinition/RequestOrchestration#RequestOrchestration.action>
        ] ;
        fhir:mustSupport [ fhir:v false ] ;
        fhir:isModifier [ fhir:v false ] ;
